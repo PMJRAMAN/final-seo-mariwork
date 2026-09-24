@@ -267,11 +267,19 @@ def fetch_evidence(row):
                             stack.extend(x.values())
                         elif isinstance(x,list): stack.extend(x)
                 except Exception: pass
+            internal=[urljoin(cur,x) for x in p.links if urlparse(urljoin(cur,x)).hostname in ("www.mariwork.ir","mariwork.ir")]
+            stripped=re.sub(r"<script[^>]*>.*?</script>|<style[^>]*>.*?</style>"," ",text,flags=re.I|re.S)
+            stripped=re.sub(r"<[^>]+>"," ",stripped); stripped=" ".join(stripped.split())
+            headings=[]
+            for hm in re.finditer(r"<(h[1-3])[^>]*>(.*?)</\\1>",text,re.I|re.S):
+                clean=" ".join(re.sub(r"<[^>]+>"," ",hm.group(2)).split())[:400]
+                if clean: headings.append({"tag":hm.group(1).lower(),"text":clean})
+                if len(headings)>=20: break
             rec.update({"title":" ".join("".join(p.title).split())[:500],"meta_description":(p.meta_desc[0] if p.meta_desc else "")[:1000],
-                "meta_robots":p.meta_robots[:4],"canonical":p.canonicals[:4],"h1":" ".join("".join(p.h1).split())[:1000],
-                "schema_types":sorted(set(schemas))[:40],"internal_link_count":sum(1 for x in p.links if urlparse(urljoin(cur,x)).hostname in ("www.mariwork.ir","mariwork.ir")),
-                "image_count":len(p.images),"images_missing_alt":sum(1 for x in p.images if not x.get("alt","").strip()),
-                "lazy_images":sum(1 for x in p.images if x.get("loading","").lower()=="lazy"),"html_sha256":hashlib.sha256(body).hexdigest()})
+                "meta_robots":p.meta_robots[:4],"canonical":p.canonicals[:4],"h1":" ".join("".join(p.h1).split())[:1000],"headings":headings,
+                "schema_types":sorted(set(schemas))[:40],"internal_link_count":len(internal),"internal_links":internal[:30],
+                "image_count":len(p.images),"images_missing_alt":sum(1 for x in p.images if not x.get("alt","").strip()),"image_samples":p.images[:12],
+                "lazy_images":sum(1 for x in p.images if x.get("loading","").lower()=="lazy"),"text_excerpt":stripped[:2400],"html_sha256":hashlib.sha256(body).hexdigest()})
     except (URLError,TimeoutError,OSError) as e: rec.update({"status":"UNKNOWN_NEEDS_VERIFICATION","error":type(e).__name__})
     except Exception as e: rec.update({"status":"UNKNOWN_NEEDS_VERIFICATION","error":type(e).__name__})
     return rec
