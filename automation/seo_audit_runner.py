@@ -19,7 +19,9 @@ EXPECTED_HOME=Path("/home/seo-audit")
 EXPECTED_CODEX_HOME=EXPECTED_HOME/".codex"
 EVIDENCE_FILE=Path("data/normalized/round1-page-evidence.jsonl")
 EVIDENCE_SUMMARY=Path("data/normalized/round1-evidence-summary.json")
-EVIDENCE_VERSION="2.0"
+FOUNDATION_CONTEXT=Path("data/normalized/round1-foundation-context.json")
+EVIDENCE_VERSION="2.1"
+DEFAULT_MODEL="gpt-6-luna"
 DEFAULT_BATCH_SIZE=15
 MAX_HTML_BYTES=1500000
 SENSITIVE_ENV_NAME=re.compile(r"(?i)(?:PASSWORD|PASSWD|DATABASE_URL|DB_HOST|DB_USER|DB_PASS|MYSQL|GH_TOKEN|GITHUB_TOKEN|OPENAI_API_KEY|CODEX_API_KEY|ACCESS_TOKEN|AUTHORIZATION|COOKIE|SECRET)")
@@ -122,9 +124,9 @@ def drop_worktree(r,wt):
 def codex_args(effort_override=None):
     a=["codex","exec","--json","--sandbox","workspace-write",
        "-c",'approval_policy="never"',"-c","sandbox_workspace_write.network_access=false"]
-    model=os.environ.get("MARIWORK_CODEX_MODEL","").strip()
+    model=os.environ.get("MARIWORK_CODEX_MODEL",DEFAULT_MODEL).strip() or DEFAULT_MODEL
     effort=(effort_override or os.environ.get("MARIWORK_CODEX_REASONING","medium")).strip() or "medium"
-    if model: a+=["--model",model]
+    a+=["--model",model]
     a+=["-c",f'model_reasoning_effort="{effort}"']
     return a+["-"]
 
@@ -195,7 +197,7 @@ ALLOWED WRITES:
 REQUIRED OUTPUT:
 {rf}
 
-Read only task-relevant repository sources; do not reread the whole repository by default.\nFor A-013 and sitewide synthesis, read data/normalized/round1-evidence-summary.json plus A-010..A-012 outputs first. Read individual JSONL evidence only for targeted examples, never as a mandatory full-file pass.\nDo not recrawl/re-fetch evidence already present. Network is fallback-only for one material gap.\nDo not edit MASTER-TODO.md; the runner marks completion after validation.\nInitial recommendations are NOT approved implementation. Missing evidence must be documented, never invented.
+Read only task-relevant repository sources; do not reread the whole repository by default.\nFor A-013 and sitewide synthesis, use data/normalized/round1-foundation-context.json and data/normalized/round1-evidence-summary.json as the PRIMARY inputs. Do NOT read registry/URL-INVENTORY.csv in full. Do NOT read A-011 or A-012 in full; use targeted grep/section excerpts only when the compact context leaves a material gap. Read individual JSONL evidence only for targeted examples, never as a mandatory full-file pass.\nFor A-018 synthesis, prefer normalized GSC outputs + compact sitewide reports; do not reopen raw inventories or large ledgers unless a specific evidence gap requires it.\nDo not recrawl/re-fetch evidence already present. Codex network is disabled; deterministic repository evidence is authoritative for Round-1 synthesis.\nDo not edit MASTER-TODO.md; the runner marks completion after validation.\nInitial recommendations are NOT approved implementation. Missing evidence must be documented, never invented.
 """
 
 class EvidenceHTMLParser(HTMLParser):
@@ -306,7 +308,44 @@ def build_evidence_snapshot(wt):
             cans=rec.get("canonical") or []
             if cans and cans[0].rstrip("/")!=str(rec.get("final_url") or "").rstrip("/"): issues["canonical_differs"]+=1
         if isinstance(rec.get("status"),int) and rec["status"]>=400: issues["http_error"]+=1
-    (wt/EVIDENCE_SUMMARY).write_text(json.dumps({"evidence_version":EVIDENCE_VERSION,"entities":len(out),"status_counts":status,"schema_counts":schema,"issue_counts":issues},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    summary={"evidence_version":EVIDENCE_VERSION,"entities":len(out),"status_counts":status,"schema_counts":schema,"issue_counts":issues}
+    (wt/EVIDENCE_SUMMARY).write_text(json.dumps(summary,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+    # Compact, deterministic context for Foundation model calls. This avoids feeding
+    # the 2.7MB inventory and large A-011/A-012 ledgers back into Codex.
+    rows_all=inv(wt); families={}; types={}; dispositions={}; sitemap={}; samples={}
+    for row in rows_all:
+        fam=(row.get("family") or "UNKNOWN").strip() or "UNKNOWN"
+        typ=(row.get("type") or "UNKNOWN").strip() or "UNKNOWN"
+        disp=(row.get("final_disposition") or "UNKNOWN").strip() or "UNKNOWN"
+        sm=(row.get("sitemap") or "UNKNOWN").strip() or "UNKNOWN"
+        families[fam]=families.get(fam,0)+1; types[typ]=types.get(typ,0)+1
+        dispositions[disp]=dispositions.get(disp,0)+1; sitemap[sm]=sitemap.get(sm,0)+1
+        bucket=samples.setdefault(fam,[])
+        if len(bucket)<3:
+            bucket.append({
+                "entity_id":row.get("entity_id"),"type":typ,"url":row.get("current_url"),
+                "canonical":row.get("canonical_url"),"status":row.get("actual_status"),"sitemap":sm
+            })
+    context={
+        "context_version":"1.0",
+        "purpose":"Compact deterministic input for Foundation synthesis; use targeted source excerpts only for unresolved material gaps.",
+        "inventory_rows":len(rows_all),
+        "family_counts":dict(sorted(families.items())),
+        "type_counts":dict(sorted(types.items())),
+        "final_disposition_counts":dict(sorted(dispositions.items())),
+        "sitemap_value_counts":dict(sorted(sitemap.items())),
+        "model_page_candidates":sum(1 for row in rows_all if model_page_eligible(row)),
+        "family_policy_or_system_rows":sum(1 for row in rows_all if not model_page_eligible(row)),
+        "representative_samples":dict(sorted(samples.items())),
+        "deterministic_page_evidence_summary":summary,
+        "heavy_sources":{
+            "inventory":"registry/URL-INVENTORY.csv — targeted lookup only, never full-read in model synthesis",
+            "a011":"audits/sitewide/A-011-content-types-taxonomies.md — targeted section lookup only",
+            "a012":"audits/sitewide/A-012-legacy-url-map.md — targeted section lookup only"
+        }
+    }
+    (wt/FOUNDATION_CONTEXT).write_text(json.dumps(context,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
     return len(out)
 
 def evidence_map(r):
@@ -319,7 +358,7 @@ def evidence_map(r):
     return out
 
 def ensure_evidence_snapshot(r,push,s):
-    if (r/EVIDENCE_FILE).exists() and (r/EVIDENCE_SUMMARY).exists(): return True
+    if (r/EVIDENCE_FILE).exists() and (r/EVIDENCE_SUMMARY).exists() and (r/FOUNDATION_CONTEXT).exists(): return True
     wt=add_worktree(r,"deterministic-evidence")
     try:
         n=build_evidence_snapshot(wt); validate_sensitive_outputs(wt,[str(EVIDENCE_FILE)])
@@ -345,13 +384,17 @@ def dstatus(path):
     return m.group(1) if m else None
 
 def priority(row,batch):
-    e=row.get("entity_id",""); s=((row.get("type") or "")+" "+(row.get("family") or "")).lower()
-    u=(row.get("current_url") or "").rstrip("/")
+    e=(row.get("entity_id") or "").strip()
+    typ=(row.get("type") or "").lower(); fam=(row.get("family") or "").lower()
+    s=(typ+" "+fam).replace("-","_"); u=(row.get("current_url") or "").rstrip("/")
     pilot=bool(e and e in batch)
     if pilot: b=0
-    elif any(k in s for k in ("product","shop","woocommerce")): b=10
+    elif fam=="shop" or typ=="shop": b=9
+    elif typ=="product" or fam=="products" or "/shop/" in u: b=10
+    elif "product_cat" in s or "product_category" in s: b=12
+    elif any(k in s for k in ("product","woocommerce")): b=14
     elif "homepage" in s or u in ("https://www.mariwork.ir","https://mariwork.ir"): b=20
-    elif (row.get("type") or "").lower() in ("page","static") or "static" in s: b=30
+    elif typ in ("page","static") or "static" in s: b=30
     elif any(k in s for k in ("article","blog","post")): b=40
     elif any(k in s for k in ("academy","education","course","lesson")): b=50
     elif any(k in s for k in ("artist","history","interview")): b=60
@@ -378,14 +421,28 @@ def next_pages(r,s,batch_size=DEFAULT_BATCH_SIZE):
         dossier=(row.get("dossier") or "").strip() or f"pages/{slug(row.get('family') or row.get('type'))}/{slug(e)}.md"
         if dstatus(r/dossier) in DONE_STATUSES: continue
         fam=(row.get("family") or row.get("type") or "other").lower()
-        c.append((0 if e and e in pilot else 1,fam,e,row,dossier))
-    c.sort(key=lambda x:(x[0],x[1],x[2]))
+        pr=priority(row,pilot)
+        c.append((pr[0],pr[1],fam,e,row,dossier))
+    c.sort(key=lambda x:(x[0],x[1],x[2],x[3]))
     if not c: return []
-    pilot_rows=[x for x in c if x[0]==0]
-    if pilot_rows: return [(x[3],x[4]) for x in pilot_rows[:5]]
-    fam=c[0][1]; same=[x for x in c if x[1]==fam]
-    chosen=(same if len(same)>=min(5,batch_size) else c)[:max(1,batch_size)]
-    return [(x[3],x[4]) for x in chosen]
+    if c[0][0]==0:
+        return [(x[4],x[5]) for x in c if x[0]==0][:5]
+    band=c[0][0]; fam=c[0][2]
+    same=[x for x in c if x[0]==band and x[2]==fam]
+    chosen=(same if len(same)>=min(5,batch_size) else [x for x in c if x[0]==band])[:max(1,batch_size)]
+    return [(x[4],x[5]) for x in chosen]
+
+def compact_page_evidence(rec):
+    if not isinstance(rec,dict): return {"status":"MISSING"}
+    keys=("evidence_version","status","final_url","redirect_chain","x_robots_tag","content_type","title",
+          "meta_description","meta_robots","canonical","h1","schema_types","internal_link_count",
+          "image_count","images_missing_alt","lazy_images","html_sha256","error")
+    out={k:rec.get(k) for k in keys if k in rec}
+    out["headings"]=(rec.get("headings") or [])[:10]
+    out["internal_links"]=(rec.get("internal_links") or [])[:10]
+    out["image_samples"]=(rec.get("image_samples") or [])[:5]
+    if rec.get("text_excerpt"): out["text_excerpt"]=str(rec.get("text_excerpt"))[:1600]
+    return out
 
 def page_batch_prompt(items,evidence):
     payload=[]
@@ -394,8 +451,8 @@ def page_batch_prompt(items,evidence):
         e=(row.get("entity_id") or "").strip()
         compact_row={k:row.get(k) for k in keep_fields}
         notes=(row.get("notes") or "").strip()
-        if notes: compact_row["notes_excerpt"]=notes[:1200]
-        payload.append({"inventory":compact_row,"dossier":dossier,"evidence":evidence.get(e,{"status":"MISSING"})})
+        if notes: compact_row["notes_excerpt"]=notes[:600]
+        payload.append({"inventory":compact_row,"dossier":dossier,"evidence":compact_page_evidence(evidence.get(e,{"status":"MISSING"}))})
     return f"""{COMMON}
 TASK TYPE: LOW-COST BATCH FIRST-PASS PAGE AUDIT. BATCH SIZE: {len(payload)}
 INPUT: {json.dumps(payload,ensure_ascii=False,separators=(",",":"))}
@@ -562,7 +619,7 @@ def do_page_batch(r,items,push,s,max_retries):
 def show_status(r,p,s):
     todo=(r/"MASTER-TODO.md").read_text(encoding="utf-8")
     print("runner_version: 2.0-low-consumption")
-    print("configured_model:",os.environ.get("MARIWORK_CODEX_MODEL","") or "account-default")
+    print("configured_model:",os.environ.get("MARIWORK_CODEX_MODEL",DEFAULT_MODEL) or DEFAULT_MODEL)
     print("foundation_reasoning: medium")
     print("page_reasoning: low")
     print("page_batch_default:",DEFAULT_BATCH_SIZE)
@@ -583,6 +640,7 @@ def show_status(r,p,s):
     print("family_policy_entities_remaining:",policy_remaining)
     print("estimated_model_page_calls_at_batch_15:",(model_remaining+14)//15)
     print("deterministic_evidence_ready:",(r/EVIDENCE_FILE).exists())
+    print("compact_foundation_context_ready:",(r/FOUNDATION_CONTEXT).exists())
     print("runner_blocked_pages:",sum(1 for v in s.get("page_failures",{}).values() if v.get("blocked")))
 
 def preflight(r):

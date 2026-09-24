@@ -1,6 +1,6 @@
 {
-  "version": "2.0-low-consumption",
-  "purpose": "Autonomous Round-1 with deterministic evidence, grouped Foundation synthesis, and batched page audits. No Production writes.",
+  "version": "2.1-low-consumption",
+  "purpose": "Autonomous Round-1 with GPT-6 Luna pinned by default, deterministic compact evidence/context, grouped Foundation synthesis, Store-first batched page audits, and no Production writes.",
   "foundation_jobs": [
     {
       "id": "A-010",
@@ -50,7 +50,7 @@
       "required_files": [
         "audits/sitewide/A-013-technical-baseline.md"
       ],
-      "instructions": "Execute docs/SITEWIDE-TECHNICAL-AUDIT-SPEC.md read-only: crawl/index controls, sitemaps, redirects/errors, canonical/duplicate URL spaces, facets, JS/AJAX discoverability, internal links, structured data, Woo architecture, images, performance/mobile evidence and crawler access. Create initial systemic findings when evidence supports them. Treat Product Tag and Blog Tag archive spaces as explicit decommission candidates: collect current crawl/index/sitemap/canonical/internal-link behavior and migration risks, but make no Production changes. Reuse the deterministic round1 page evidence and A-010/A-012 reports. Network access is disabled for Codex; do not recrawl."
+      "instructions": "Execute docs/SITEWIDE-TECHNICAL-AUDIT-SPEC.md read-only: crawl/index controls, sitemaps, redirects/errors, canonical/duplicate URL spaces, facets, JS/AJAX discoverability, internal links, structured data, Woo architecture, images, performance/mobile evidence and crawler access. Create initial systemic findings when evidence supports them. Treat Product Tag and Blog Tag archive spaces as explicit decommission candidates: collect current crawl/index/sitemap/canonical/internal-link behavior and migration risks, but make no Production changes. Reuse the deterministic round1 page evidence and A-010/A-012 reports. Network access is disabled for Codex; do not recrawl. PRIMARY INPUTS: data/normalized/round1-foundation-context.json and round1-evidence-summary.json. Do not full-read registry/URL-INVENTORY.csv, A-011, or A-012; use targeted excerpts only for unresolved material gaps."
     },
     {
       "id": "A-014",
@@ -111,7 +111,7 @@
         "registry/SYSTEMIC-FINDINGS.md",
         "audits/sitewide/A-020-systemic-findings-bootstrap.md"
       ],
-      "instructions": "In one compact synthesis, complete A-018, A-019 and A-020 from existing GSC/sitewide evidence. Do not infer Page+Query attribution. Build initial Query/Intent Map and Content Architecture, consolidate FAMILY/SITEWIDE findings, and treat Product Tags and Blog Tags as planned family-level decommission programs rather than per-tag model audits."
+      "instructions": "In one compact synthesis, complete A-018, A-019 and A-020 from existing GSC/sitewide evidence. Do not infer Page+Query attribution. Build initial Query/Intent Map and Content Architecture, consolidate FAMILY/SITEWIDE findings, and treat Product Tags and Blog Tags as planned family-level decommission programs rather than per-tag model audits. Use compact/normalized evidence first. Do not full-read registry/URL-INVENTORY.csv or large evidence ledgers."
     },
     {
       "id": "A-021",

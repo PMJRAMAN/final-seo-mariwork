@@ -25,6 +25,7 @@ echo "[4/6] Pin low-consumption Foundation default"
 mkdir -p /etc/systemd/system/mariwork-seo-audit.service.d
 cat >/etc/systemd/system/mariwork-seo-audit.service.d/20-low-consumption-v2.conf <<'EOF'
 [Service]
+Environment=MARIWORK_CODEX_MODEL=gpt-6-luna
 Environment=MARIWORK_CODEX_REASONING=medium
 EOF
 systemctl daemon-reload

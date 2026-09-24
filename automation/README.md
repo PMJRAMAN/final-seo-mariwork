@@ -1,4 +1,4 @@
-# Autonomous Round-1 SEO Runner v2 — Low Consumption
+# Autonomous Round-1 SEO Runner v2.1 — Low Consumption
 
 Round 1 remains strictly read-only on Production and can advance only to CODEX_AUDITED.
 
@@ -7,6 +7,10 @@ Round 1 remains strictly read-only on Production and can advance only to CODEX_A
 The runner now separates deterministic collection from model reasoning:
 
 - Python collects reusable public HTTP/HTML evidence once.
+- The autonomous model defaults explicitly to `gpt-6-luna` instead of an account-default model; Foundation uses medium reasoning and page batches use low reasoning.
+- A compact deterministic Foundation context pack prevents full rereads of the ~2.7MB inventory and large A-011/A-012 ledgers.
+- Page-batch evidence is trimmed before prompting (representative links/images/headings/text only).
+- Store-first priority is enforced after the five-page pilot.
 - Codex network access is disabled during analysis.
 - A-014 + A-015 are grouped into one model call.
 - A-016 + A-017 use no model call.

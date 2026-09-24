@@ -85,3 +85,8 @@ Runner v2 is now present in the repository and must be deployed before A-013 res
 - disabled Codex network during analysis to prevent duplicate crawling.
 
 Current paused A-013 state should be resumed only after A-009B deployment.
+
+
+## Low-consumption v2.1 hardening
+
+Pre-resume review added four safeguards: explicit `gpt-6-luna` default, compact deterministic Foundation context (no full inventory/ledger rereads), trimmed page-batch evidence payloads, and enforced Store-first page ordering. Foundation remains medium reasoning; repetitive page batches remain low reasoning. No authority or Production-write rule changed.
