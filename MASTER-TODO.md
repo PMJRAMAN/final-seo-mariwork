@@ -33,7 +33,7 @@
 - [x] A-008 Rank Math-first SEO ownership rule
 - [x] A-009 Autonomous Round-1 Audit Orchestration — deploy/verify runner; no Production writes
 - [x] A-010 Build complete URL/Entity Inventory
-- [ ] A-011 Map all current page types / taxonomies / custom post types
+- [x] A-011 Map all current page types / taxonomies / custom post types
 - [ ] A-012 Map legacy URLs from Search Console and redirects
 - [ ] A-013 Sitewide Technical SEO Baseline
 - [ ] A-014 Rank Math Configuration & Ownership Audit
