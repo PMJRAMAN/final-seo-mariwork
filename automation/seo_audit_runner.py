@@ -228,6 +228,7 @@ def next_page(r,s):
     c=[]
     for row in inv(r):
         e=(row.get("entity_id") or "").strip(); u=(row.get("current_url") or "").strip()
+        if (row.get("type") or "").strip().lower() in {"url_space","unverified_url"}: continue
         if not e or not u or s.get("page_failures",{}).get(e,{}).get("blocked"): continue
         dossier=(row.get("dossier") or "").strip() or f"pages/{slug(row.get('family') or row.get('type'))}/{slug(e)}.md"
         if dstatus(r/dossier) in DONE_STATUSES: continue
