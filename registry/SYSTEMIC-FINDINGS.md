@@ -118,6 +118,17 @@ google_basis: GOOGLE_RECOMMENDED · google_reference: https://developers.google.
 seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION · seo_owner_target: CONTENT for image ALT decisions; RANK_MATH only for metadata concerns it actually owns
 rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Rank Math configuration and image/template ownership unavailable.
 
+### SYS-011 — Academy/Education image ALT coverage gaps in supplied batch
+
+id: SYS-011 · severity: P2 · scope: FAMILY · family: academy + education · status: CONFIRMED · evidence_class: MEASURED · confidence: HIGH
+source_refs: supplied batch evidence for URL-547bd294fbdd, WP-32714, WP-32844–WP-32856.
+impact: Across the supplied Academy/Education pages, 74 of 170 reported images lack ALT (archive/course/lesson totals); image purpose and decorative status were not independently inspected.
+recommendation: INITIAL — review the family image inventory by role; use descriptive ALT for informative images and empty ALT for decorative images. Do not invent image facts or use ALT as a keyword field.
+acceptance_criteria: Family regression sample records every image's informative/decorative decision and resulting ALT, with no fabricated descriptions; implementation requires Second Review and approval.
+google_basis: GOOGLE_RECOMMENDED · google_reference: https://developers.google.com/search/docs/appearance/google-images
+seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION · seo_owner_target: CONTENT for ALT decisions; Rank Math only for concerns it actually owns
+rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Production Rank Math configuration and image/template ownership unavailable.
+
 ## Handoff
 
 Product Tags and Blog Tags remain family-level migration programs. Query targets, title standard, internal-link rules and technical policies remain initial candidates or blockers. No finding authorizes Production, database, WordPress, WooCommerce, Rank Math, sitemap, redirect, taxonomy or raw-export writes.
