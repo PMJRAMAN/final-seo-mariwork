@@ -1,0 +1,150 @@
+{
+  "version": "1.0",
+  "purpose": "Autonomous Round-1 research only. No Production writes and no human approval states.",
+  "foundation_jobs": [
+    {
+      "id": "A-010",
+      "title": "Complete URL/Entity Inventory",
+      "allowed_globs": [
+        "registry/URL-INVENTORY.csv",
+        "audits/sitewide/A-010-inventory-notes.md"
+      ],
+      "required_files": [
+        "registry/URL-INVENTORY.csv",
+        "audits/sitewide/A-010-inventory-notes.md"
+      ],
+      "instructions": "Build the most complete SEO-relevant URL/entity inventory possible from live sitemaps/crawlable navigation, WordPress/Woo read-only evidence when safely available, raw GSC exports, and existing repository knowledge. Include canonical content entities plus URL-space representatives/policies for machine-generated spaces. Do not collect customer/order data."
+    },
+    {
+      "id": "A-011",
+      "title": "Map page types, taxonomies and CPTs",
+      "allowed_globs": [
+        "audits/sitewide/A-011-content-types-taxonomies.md",
+        "registry/URL-INVENTORY.csv"
+      ],
+      "required_files": [
+        "audits/sitewide/A-011-content-types-taxonomies.md"
+      ],
+      "instructions": "Map all current WordPress/Woo page types, product types, taxonomies, archives and custom post types; reconcile them against inventory and identify missing families."
+    },
+    {
+      "id": "A-012",
+      "title": "Map legacy URLs",
+      "allowed_globs": [
+        "audits/sitewide/A-012-legacy-url-map.md",
+        "registry/URL-INVENTORY.csv"
+      ],
+      "required_files": [
+        "audits/sitewide/A-012-legacy-url-map.md"
+      ],
+      "instructions": "Map legacy URLs using GSC historical pages, current redirects/canonicals and safe read-only evidence. Preserve entity identity and explicitly record unproven mappings."
+    },
+    {
+      "id": "A-013",
+      "title": "Sitewide Technical SEO Baseline",
+      "allowed_globs": [
+        "audits/sitewide/A-013-technical-baseline.md",
+        "registry/URL-INVENTORY.csv",
+        "registry/SYSTEMIC-FINDINGS.md"
+      ],
+      "required_files": [
+        "audits/sitewide/A-013-technical-baseline.md"
+      ],
+      "instructions": "Execute docs/SITEWIDE-TECHNICAL-AUDIT-SPEC.md read-only: crawl/index controls, sitemaps, redirects/errors, canonical/duplicate URL spaces, facets, JS/AJAX discoverability, internal links, structured data, Woo architecture, images, performance/mobile evidence and crawler access. Create initial systemic findings when evidence supports them."
+    },
+    {
+      "id": "A-014",
+      "title": "Rank Math Configuration & Ownership Audit",
+      "allowed_globs": [
+        "audits/sitewide/A-014-rank-math-ownership.md",
+        "registry/SYSTEMIC-FINDINGS.md"
+      ],
+      "required_files": [
+        "audits/sitewide/A-014-rank-math-ownership.md"
+      ],
+      "instructions": "Verify installed Rank Math edition/version/modules and current ownership for titles/meta/robots/canonical/sitemaps/schema/Woo/redirections/robots.txt plus relevant custom hooks. Use safe read-only server evidence or a sanitized setup snapshot. Do not expose secrets."
+    },
+    {
+      "id": "A-015",
+      "title": "Detect duplicate SEO owners/output",
+      "allowed_globs": [
+        "audits/sitewide/A-015-duplicate-seo-owners.md",
+        "registry/SYSTEMIC-FINDINGS.md"
+      ],
+      "required_files": [
+        "audits/sitewide/A-015-duplicate-seo-owners.md"
+      ],
+      "instructions": "Find duplicate/conflicting generators for title/meta/canonical/robots/schema/sitemap/redirect behavior across Rank Math, theme, plugins and custom code/output. Record owner_before and recommended target owner without implementing."
+    },
+    {
+      "id": "A-016",
+      "title": "Normalize Search Console baseline",
+      "allowed_globs": [
+        "data/normalized/**",
+        "audits/sitewide/A-016-gsc-baseline.md"
+      ],
+      "required_files": [
+        "audits/sitewide/A-016-gsc-baseline.md"
+      ],
+      "instructions": "Create reproducible derived summaries from immutable GSC exports. Preserve source/date/dimensions and do not mutate raw files. Do not create false Page+Query joins."
+    },
+    {
+      "id": "A-017",
+      "title": "Obtain or document Page+Query evidence",
+      "allowed_globs": [
+        "data/page-query/**",
+        "audits/sitewide/A-017-page-query.md"
+      ],
+      "required_files": [
+        "audits/sitewide/A-017-page-query.md"
+      ],
+      "instructions": "Determine whether joined Page+Query evidence is available. If available, store only safe derived SEO data with provenance. If unavailable, document exact limitation and acceptable alternatives; do not fabricate a join."
+    },
+    {
+      "id": "A-018",
+      "title": "Initial Query/Intent Map",
+      "allowed_globs": [
+        "strategy/QUERY-MAP.md"
+      ],
+      "required_files": [
+        "strategy/QUERY-MAP.md"
+      ],
+      "instructions": "Build the initial evidence-backed query/intent map from GSC and current site architecture. Clearly mark hypotheses where page-query attribution is not proven."
+    },
+    {
+      "id": "A-019",
+      "title": "Initial Content Architecture",
+      "allowed_globs": [
+        "strategy/CONTENT-ARCHITECTURE.md"
+      ],
+      "required_files": [
+        "strategy/CONTENT-ARCHITECTURE.md"
+      ],
+      "instructions": "Build initial content architecture: families, hubs/support relationships, product↔education opportunities, overlap/cannibalization hypotheses and gaps. No final rewrite decisions."
+    },
+    {
+      "id": "A-020",
+      "title": "Bootstrap Systemic Findings Registry",
+      "allowed_globs": [
+        "registry/SYSTEMIC-FINDINGS.md",
+        "audits/sitewide/A-020-systemic-findings-bootstrap.md"
+      ],
+      "required_files": [
+        "registry/SYSTEMIC-FINDINGS.md",
+        "audits/sitewide/A-020-systemic-findings-bootstrap.md"
+      ],
+      "instructions": "Consolidate evidence-backed FAMILY/SITEWIDE findings from A-010..A-019 into the registry, deduplicate them, preserve evidence classes/confidence and add initial recommendations only."
+    },
+    {
+      "id": "A-021",
+      "title": "Freeze Pilot Batch 001 selection",
+      "allowed_globs": [
+        "batches/BATCH-001.md"
+      ],
+      "required_files": [
+        "batches/BATCH-001.md"
+      ],
+      "instructions": "Select five representative Store/Woo entities for the first audit batch using GSC opportunity plus family/edge-case diversity. Selection is for audit sequencing only; do not approve changes."
+    }
+  ]
+}

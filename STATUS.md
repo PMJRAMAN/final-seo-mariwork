@@ -64,3 +64,8 @@ Current priority:
 قانون جدید:
 - Google official documentation = SEO standard
 - Rank Math = first technical owner for supported WordPress SEO concerns
+
+
+## Round-1 automation
+
+Runner و server-deployment task در repo تعریف شده‌اند. تا وقتی A-009 روی سرور deploy/verify نشده، automation زیرساخت آماده در repo ولی فعال‌شده روی Production environment محسوب نمی‌شود. Autonomous authority فقط تا CODEX_AUDITED است.

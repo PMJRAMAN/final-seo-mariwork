@@ -230,3 +230,14 @@ Inventory می‌تواند child task جدید ایجاد کند ولی ترت�
 - owner فنی concern ثبت شود؛
 - اگر Rank Math capability دارد، target owner = RANK_MATH؛
 - اگر ندارد، دلیل و extension/platform architecture ثبت شود.
+
+
+## Autonomous Round-1 Orchestration
+
+Phase 1 تا 6 می‌توانند توسط runner به‌صورت serial/resumable خودکار شوند، مشروط به حفظ تمام gateهای framework.
+
+Autonomous Round 1 شامل inventory، technical/data/strategy baselines، Codex page audits، findings و initial recommendations است و فقط تا `CODEX_AUDITED` اختیار دارد.
+
+**اولین mandatory human decision gate = Phase 7 / ChatGPT Second Review.** از این نقطه تصمیم‌های نهایی title/meta/content/internal linking/schema/redirect/disposition و هر Production implementation با مشارکت کاربر انجام می‌شود.
+
+Automation حق تغییر authority model را ندارد و limit/auth interruption باید stateful pause/resume باشد.

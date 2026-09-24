@@ -203,3 +203,9 @@ Custom code موازی، snippet پراکنده و output duplicate برای tit
 پروژه تا زمانی کامل نیست که تمام URL/entityهای کشف‌شده سایت disposition نهایی داشته باشند.
 
 ترتیب اجرای برنامه در `MASTER-TODO.md` مرجع رسمی task planning است. Store اولویت اول، سپس Homepage، سایر صفحات ثابت، Blog/Articles، Academy/Education و سایر families است.
+
+
+### M-24 — Autonomous Round-1 Boundary
+Codex می‌تواند Phaseهای تحقیق اولیه را به‌صورت autonomous اجرا کند و بدون دخالت روزمره کاربر تا `CODEX_AUDITED` پیش برود: inventory، baseline، evidence collection، findings و initial recommendations.
+
+این autonomy authority را تغییر نمی‌دهد: Codex حق `SECOND_REVIEWED`، `APPROVED`، final content/SEO decision یا هیچ Production write را ندارد. اولین human decision gate الزامی، ChatGPT Second Review است. Rate/usage-limit باید pause/resume شود و کار تکمیل‌شده از بین نرود.

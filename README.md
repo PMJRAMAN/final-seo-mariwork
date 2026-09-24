@@ -157,3 +157,8 @@ pages/products/product-12544-gray-122.md
 10. Continuous monitoring
 
 [docs/SEO-OWNERSHIP.md](docs/SEO-OWNERSHIP.md) قانون Rank Math-first و Google-basis را تعریف می‌کند.
+
+
+## Autonomous Round 1
+
+`automation/seo_audit_runner.py` می‌تواند Foundation و Codex Audit اولیه را بدون دخالت روزمره کاربر اجرا کند، evidence/finding/initial recommendation بسازد و در limit به‌صورت resumable pause شود. سقف اختیار این automation فقط `CODEX_AUDITED` است؛ Second Review و همه تصمیم‌های نهایی/Production همچنان انسانی و gated هستند. راهنما: `automation/README.md`.

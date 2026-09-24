@@ -122,3 +122,11 @@ Codex draft به‌تنهایی Production-ready نیست. Target content/facts 
 **Scope:** PROCESS
 
 `MASTER-TODO.md` مرجع ترتیب familyها و پوشش کامل سایت است. همه URL/entityهای inventory باید disposition نهایی داشته باشند.
+
+
+## SEO-016 — Autonomous Round-1 Audit Orchestration
+**Status:** Accepted  
+**Date:** 2026-09-24  
+**Scope:** PROCESS / OPERATIONS
+
+Phaseهای تحقیق اولیه و Codex Audit می‌توانند توسط runner به‌صورت autonomous و resumable اجرا شوند تا `CODEX_AUDITED`. این یک extension سازگار با Framework v1.0 است و lifecycle یا authority را تغییر نمی‌دهد. ChatGPT Second Review نخستین human decision gate باقی می‌ماند و Production write قبل از APPROVED همچنان ممنوع است.

@@ -286,3 +286,16 @@ Codex حق ندارد:
 - سپس audit را ادامه بده.
 
 هیچ URL کشف‌شده صرفاً به‌خاطر نبودن در لیست اولیه نادیده گرفته نمی‌شود.
+
+
+## 18. Autonomous Round-1 Mode
+
+وقتی task توسط `automation/seo_audit_runner.py` اجرا می‌شود:
+- می‌توانی بدون توقف برای تأیید کاربر evidence جمع کنی، dossier بسازی، finding ثبت کنی و initial recommendation بدهی؛
+- Production همچنان READ-ONLY است؛
+- فقط allowlist فایل اعلام‌شده توسط runner قابل write است؛
+- recommendation اولیه تصمیم نهایی نیست؛
+- حداکثر lifecycle authority = `CODEX_AUDITED`؛
+- `SECOND_REVIEWED` و `APPROVED` و Production implementation ممنوع است؛
+- اگر evidence ناقص است unknown/blocker را ثبت کن و fact نساز؛
+- usage/rate-limit را دور نزن؛ runner باید pause شود و بعداً resume کند.
