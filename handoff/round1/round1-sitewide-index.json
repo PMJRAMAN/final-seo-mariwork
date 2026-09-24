@@ -1,0 +1,124 @@
+[
+  {
+    "audit_id": "A-010",
+    "direct_extracts": [
+      "**Task:** A-010 · **Program:** FOUNDATION / STORE-FIRST · **Framework/schema:** v1.0 (existing 13-column inventory schema preserved)",
+      "**Audit date:** 2026-09-24 · **Task lifecycle:** CODEX_AUDITED · **Completeness:** best available inventory with explicit gaps; not an exhaustive database census.",
+      "**Authority:** INITIAL research only. No final SEO dispositions, Second Review, approval, or Production implementation. Individual records are inventoried, not page-audited."
+    ],
+    "references": [],
+    "source_file": "audits/sitewide/A-010-inventory-notes.md",
+    "status": "COMPLETED",
+    "title": "Complete URL/Entity Inventory: Round-1 evidence"
+  },
+  {
+    "audit_id": "A-011",
+    "direct_extracts": [
+      "**Task:** A-011 · **Program:** FOUNDATION / STORE-FIRST · **Framework:** 1.0 · **Dossier schema:** NOT_APPLICABLE (sitewide report; frozen 13-column inventory preserved).",
+      "**Date:** 2026-09-24 · **Lifecycle:** CODEX_AUDITED · **Completeness:** public census with explicit access blockers, not an exhaustive WordPress database census.",
+      "**Authority:** INITIAL research and recommendations only. No Production change, tag removal, final disposition, or approval. MASTER-TODO and systemic registry are outside this task’s write allowlist."
+    ],
+    "references": [
+      "A-011-F001",
+      "A-011-F002",
+      "A-011-F003"
+    ],
+    "source_file": "audits/sitewide/A-011-content-types-taxonomies.md",
+    "status": "COMPLETED",
+    "title": "Content types, taxonomies and archive map"
+  },
+  {
+    "audit_id": "A-012",
+    "direct_extracts": [
+      "**Task:** A-012 · **Program:** FOUNDATION / STORE-FIRST · **Framework:** 1.0 · **Schema:** existing 13-column inventory, sitewide dossier schema NOT_APPLICABLE.",
+      "**Date:** 2026-09-24 · **Lifecycle:** CODEX_AUDITED · **Authority:** INITIAL research and recommendations only; no final redirect, canonical, content or disposition decision.",
+      "Mapped **375 distinct source URLs**: all **368 historical GSC URLs**, plus **7 other URLs with redirects recorded by A-010**. Fresh safe checks reached **302 HTTP 200 destinations and 68 HTTP 404 destinations**; **5 add-to-cart URLs were retained but never requested**. **144 source URLs redirect**: 143 have one hop and one has two hops. All observed redirect hops are 301; two redirect chains terminate at 404. Counts refer to source URLs, not unique destination entities or indexed pages."
+    ],
+    "references": [
+      "A-012-F001",
+      "A-012-F002",
+      "A-012-F003"
+    ],
+    "source_file": "audits/sitewide/A-012-legacy-url-map.md",
+    "status": "COMPLETED",
+    "title": "Legacy URL map"
+  },
+  {
+    "audit_id": "A-013",
+    "direct_extracts": [
+      "**Task:** A-013 · **Program:** FOUNDATION / STORE-FIRST",
+      "**Framework/schema:** v1.0 (frozen)",
+      "**Audit date:** 2026-09-24"
+    ],
+    "references": [
+      "SYS-001",
+      "SYS-002",
+      "SYS-003",
+      "SYS-004",
+      "SYS-005"
+    ],
+    "source_file": "audits/sitewide/A-013-technical-baseline.md",
+    "status": "COMPLETED",
+    "title": "Sitewide Technical SEO Baseline"
+  },
+  {
+    "audit_id": "A-014",
+    "direct_extracts": [
+      "**Task:** A-014 · **Program:** FOUNDATION / STORE-FIRST · **Framework/schema:** v1.0 (frozen)",
+      "**Audit date:** 2026-09-24 · **Lifecycle:** `CODEX_AUDITED`",
+      "**Authority:** Round-1 evidence and initial recommendations only. No Second Review, approval, implementation, or Production change."
+    ],
+    "references": [
+      "A-014-F001"
+    ],
+    "source_file": "audits/sitewide/A-014-rank-math-ownership.md",
+    "status": "COMPLETED",
+    "title": "Rank Math Configuration & Ownership Audit"
+  },
+  {
+    "audit_id": "A-015",
+    "direct_extracts": [
+      "**Task:** A-015 · **Program:** FOUNDATION / STORE-FIRST · **Framework/schema:** v1.0 (frozen)",
+      "**Audit date:** 2026-09-24 · **Lifecycle:** `CODEX_AUDITED`",
+      "**Authority:** Round-1 evidence and initial recommendations only. No Second Review, approval, implementation, or Production change."
+    ],
+    "references": [
+      "A-015-F001"
+    ],
+    "source_file": "audits/sitewide/A-015-duplicate-seo-owners.md",
+    "status": "COMPLETED",
+    "title": "Duplicate SEO Owners / Output Audit"
+  },
+  {
+    "audit_id": "A-016",
+    "direct_extracts": [
+      "Deterministically normalized **368** page rows from the immutable export. Separate Page and Query dimensions were not joined."
+    ],
+    "references": [],
+    "source_file": "audits/sitewide/A-016-gsc-baseline.md",
+    "status": "COMPLETED",
+    "title": "GSC baseline"
+  },
+  {
+    "audit_id": "A-017",
+    "direct_extracts": [
+      "No verified joined Page+Query dataset is currently available in the repository. **Page-query relationship is not proven by the current export.** Separate Pages.csv and Queries.csv must not be joined semantically."
+    ],
+    "references": [],
+    "source_file": "audits/sitewide/A-017-page-query.md",
+    "status": "COMPLETED",
+    "title": "Page+Query evidence"
+  },
+  {
+    "audit_id": "A-020",
+    "direct_extracts": [
+      "**Task:** A-020 · **Program:** FOUNDATION / STORE-FIRST · **Framework:** v1.0",
+      "**Date:** 2026-09-24 · **Lifecycle:** CODEX_AUDITED",
+      "**Authority:** Round-1 evidence and initial recommendations only. No Second Review, approval, implementation or Production change."
+    ],
+    "references": [],
+    "source_file": "audits/sitewide/A-020-systemic-findings-bootstrap.md",
+    "status": "COMPLETED",
+    "title": "Systemic Findings Bootstrap"
+  }
+]

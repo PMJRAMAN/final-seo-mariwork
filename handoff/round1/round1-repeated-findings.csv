@@ -1,0 +1,438 @@
+group_id,signature_type,representative_finding,occurrence_count,families,entity_ids,urls,second_review_label
+R001,normalized-exact-match,"#### WP-27051-F002 — SEO ownership and indexability decision are not verified
+
+severity: P1; scope: PAGE; status: BLOCKED; evidence_class: OBSERVED; confidence: HIGH
+source_refs: task supplied evidence (status/robots/canonical); SYS-001; SYS-006
+impact: The page appears indexable, but intended/actual indexability and exclusive owners for robots/canonical/title/schema/sitemap are not fully verified.
+recommendation: INITIAL — verify Rank Math version/modules and current owners before proposing metadata, robots, canonical, schema or sitemap changes.
+acceptance_criteria: Current/target owner, capability check, conflict check and approved indexability decision are recorded.
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where supported; otherwise UNKNOWN_NEEDS_VERIFICATION
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Production configuration is unavailable in Round 1.",15,products,WP-27051;WP-27054;WP-27142;WP-27149;WP-27328;WP-27333;WP-27369;WP-27378;WP-27384;WP-27386;WP-27396;WP-27506;WP-27512;WP-27621;WP-27680,https://www.mariwork.ir/shop/cyan-mariwork-fabric-color-code132/;https://www.mariwork.ir/shop/glitter-set-mariwork-fabric-medium/;https://www.mariwork.ir/shop/green-grass-mariwork-fabric-color-code133/;https://www.mariwork.ir/shop/lemon-mariwork-fabric-color-code134/;https://www.mariwork.ir/shop/light-salmon-mariwork-fabric-color-code135/;https://www.mariwork.ir/shop/mariwork-golden-glitter-code212/;https://www.mariwork.ir/shop/mariwork-lightening-medium-code213/;https://www.mariwork.ir/shop/mariwork-rainbow-glitter-code210/;https://www.mariwork.ir/shop/mariwork-silver-glitter-code211/;https://www.mariwork.ir/shop/mariwork-thickening-medium-code214/;https://www.mariwork.ir/shop/mariwork-totakali-glue-code205/;https://www.mariwork.ir/shop/pearl-mariwork-fabric-color-code137/;https://www.mariwork.ir/shop/silver-mariwork-fabric-color-code136/;https://www.mariwork.ir/shop/sky-blue-mariwork-fabric-color-code131/;https://www.mariwork.ir/shop/totakali-sheet-mariwork-code304/,repeated Round-1 finding candidate
+R002,normalized-exact-match,"#### WP-32857-F001 — Structured-data output is not evidenced in the supplied snapshot
+
+```yaml
+severity: P2
+scope: PAGE
+status: BLOCKED
+evidence_class: OBSERVED
+confidence: HIGH
+source_refs: supplied evidence: WP-32857 evidence.schema_types; registry/SYSTEMIC-FINDINGS.md SYS-004
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where capability is verified
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Production Rank Math configuration and schema ownership were not supplied
+```
+
+**Evidence:** The supplied initial-HTML snapshot reports schema_types: []. This establishes that no parsed schema type was evidenced in the supplied extraction; it does not prove that all rendered or non-parsed structured data is absent.
+
+**Impact:** Structured-data eligibility and visible/schema consistency cannot be assessed from this snapshot; no rich-result or ranking loss is claimed.
+
+**Recommendation:** Initial — verify rendered/public structured data and the family schema policy before any change; if implementation is later approved, use the verified Rank Math owner and avoid duplicate output.
+
+**Acceptance criteria:** Independent verification records actual public schema, visible consistency, current/target owner, Rank Math capability, and a family regression set.",15,education,WP-32857;WP-32858;WP-32859;WP-32860;WP-32861;WP-32862;WP-32863;WP-32864;WP-32866;WP-32867;WP-32868;WP-32869;WP-32870;WP-32871;WP-32872,https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/bandana-and-shiburi-technique/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/batik-painting/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/light-shadow-painting/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/macrome-yarn-dyeing-method/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/monoprint-printing-leaf-printing-on-fabric/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/painting-on-a-tshirt/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/painting-on-jeans/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/painting-with-base-coat-on-dark-fabric/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/print-on-towels/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/salt-technique-on-fabric/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/silk-screen-print/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/simple-printing-printing-with-sponge-stamp/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/simultaneous-painting-on-silk-and-linen/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/staining-restoration-of-clothing-color/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/use-medium-base-coat-on-silk/,repeated Round-1 finding candidate
+R003,normalized-exact-match,"- id: WP-12009-F002
+  severity: P2
+  scope: FAMILY
+  status: OPEN
+  evidence_class: MEASURED
+  confidence: MEDIUM
+  source_refs: [INPUT:evidence:WP-12009, SYS-008]
+  impact: The page uses the repeated fabric-color product heading/navigation pattern; naming consistency and differentiated information gain across the family are not yet measured.
+  recommendation: INITIAL — assess the complete fabric-color family before any title, H1, copy or link edits.
+  acceptance_criteria: Family inventory records meaningful distinctions, approved naming rules, exceptions and a regression set.
+  google_basis: GOOGLE_CONSISTENT
+  google_reference: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+  seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION
+  seo_owner_target: CONTENT for visible headings; RANK_MATH for approved metadata where capable
+  rank_math_capability_checked: BLOCKED_BY_ACCESS
+  rank_math_path_or_reason_not_used: Ownership/configuration was unavailable.",15,products,WP-12009;WP-12471;WP-12475;WP-12479;WP-12484;WP-12488;WP-12492;WP-12498;WP-12502;WP-12506;WP-12511;WP-12516;WP-12520;WP-12524;WP-12528,https://www.mariwork.ir/shop/black-mariwork-fabric-color-code117/;https://www.mariwork.ir/shop/blue-mariwork-fabric-color-code118/;https://www.mariwork.ir/shop/darkbrown-mariwork-fabric-color-code113/;https://www.mariwork.ir/shop/darkgold-115/;https://www.mariwork.ir/shop/green-mariwork-fabric-color-code106/;https://www.mariwork.ir/shop/lightgold-mariwork-fabric-color-code111/;https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/;https://www.mariwork.ir/shop/ochre-mariwork-fabric-color-code108/;https://www.mariwork.ir/shop/olivegreen-mariwork-fabric-color-code110/;https://www.mariwork.ir/shop/orange-mariwork-fabric-color-code112/;https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/;https://www.mariwork.ir/shop/redbrown-mariwork-fabric-color-code105/;https://www.mariwork.ir/shop/saddlebrown-mariwork-fabric-color-code109/;https://www.mariwork.ir/shop/turquoseblue-mariwork-fabric-color-code114/;https://www.mariwork.ir/shop/violet-mariwork-fabric-color-code107/,repeated Round-1 finding candidate
+R004,normalized-exact-match,"- id: WP-12009-F003
+  severity: P2
+  scope: PAGE
+  status: BLOCKED
+  evidence_class: OBSERVED
+  confidence: HIGH
+  source_refs: [INPUT:inventory:WP-12009, docs/DATA-SOURCES.md]
+  impact: Page-query relationship, live index status and current WP/Woo values are not present in the supplied batch evidence.
+  recommendation: INITIAL — obtain joined Page+Query or direct filtered evidence and read-only WP/Woo verification in Second Review; do not attribute queries to this page.
+  acceptance_criteria: Any query or indexability conclusion has joined/direct evidence with date range and dimension disclosed.
+  google_basis: PROJECT_DECISION
+  google_reference: https://support.google.com/webmasters/answer/7576553
+  seo_owner_current: NOT_APPLICABLE_FOR_ATTRIBUTION
+  seo_owner_target: CONTENT after Second Review
+  rank_math_capability_checked: NOT_APPLICABLE_FOR_ATTRIBUTION
+  rank_math_path_or_reason_not_used: This is an evidence limitation, not a metadata implementation concern.",15,products,WP-12009;WP-12471;WP-12475;WP-12479;WP-12484;WP-12488;WP-12492;WP-12498;WP-12502;WP-12506;WP-12511;WP-12516;WP-12520;WP-12524;WP-12528,https://www.mariwork.ir/shop/black-mariwork-fabric-color-code117/;https://www.mariwork.ir/shop/blue-mariwork-fabric-color-code118/;https://www.mariwork.ir/shop/darkbrown-mariwork-fabric-color-code113/;https://www.mariwork.ir/shop/darkgold-115/;https://www.mariwork.ir/shop/green-mariwork-fabric-color-code106/;https://www.mariwork.ir/shop/lightgold-mariwork-fabric-color-code111/;https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/;https://www.mariwork.ir/shop/ochre-mariwork-fabric-color-code108/;https://www.mariwork.ir/shop/olivegreen-mariwork-fabric-color-code110/;https://www.mariwork.ir/shop/orange-mariwork-fabric-color-code112/;https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/;https://www.mariwork.ir/shop/redbrown-mariwork-fabric-color-code105/;https://www.mariwork.ir/shop/saddlebrown-mariwork-fabric-color-code109/;https://www.mariwork.ir/shop/turquoseblue-mariwork-fabric-color-code114/;https://www.mariwork.ir/shop/violet-mariwork-fabric-color-code107/,repeated Round-1 finding candidate
+R005,normalized-exact-match,"#### WP-12532-F001
+- severity: P1
+- scope: PAGE
+- status: CONFIRMED
+- evidence_class: MEASURED
+- confidence: MEDIUM
+- source_refs: [INPUT:evidence:WP-12532, registry:SYS-004]
+- impact: No schema type was parsed from supplied initial HTML; Product/Offer/variant identity, price/currency, availability, image and visible-data consistency remain unverified.
+- recommendation: INITIAL — validate rendered/source structured data and current Woo values; use one verified Rank Math/schema owner and preserve only real visible values.
+- acceptance_criteria: Structured-data output, owner and variant/offer values are evidenced and consistent; no unsupported claims are introduced.
+- google_basis: GOOGLE_RECOMMENDED
+- google_reference: https://developers.google.com/search/docs/appearance/structured-data/product
+- seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+- seo_owner_target: RANK_MATH where capable; otherwise documented central integration
+- rank_math_capability_checked: BLOCKED_BY_ACCESS (SYS-001)
+- rank_math_path_or_reason_not_used: Production Rank Math version/modules and output pipeline inaccessible.",13,products,WP-12532;WP-12536;WP-12541;WP-12544;WP-12548;WP-12581;WP-12585;WP-12588;WP-12591;WP-12594;WP-14446;WP-14448;WP-14449,https://www.mariwork.ir/shop/copper-119/;https://www.mariwork.ir/shop/fleshtint-123/;https://www.mariwork.ir/shop/gray_122/;https://www.mariwork.ir/shop/green_fluorescent_102/;https://www.mariwork.ir/shop/magenta-mariwork-fabric-color-code120/;https://www.mariwork.ir/shop/mariwork-fabric-base-coat-code208/;https://www.mariwork.ir/shop/mariwork-fabric-fixative-medium-code204/;https://www.mariwork.ir/shop/mariwork-fabric-glitter-glue-code203/;https://www.mariwork.ir/shop/mariwork-golden-corona-powder-code201/;https://www.mariwork.ir/shop/mariwork-silver-corona-powder-code202/;https://www.mariwork.ir/shop/orange_fluorescent_101/;https://www.mariwork.ir/shop/white-mariwork-fabric-color-code121/;https://www.mariwork.ir/shop/yellow_fluorescent_100/,repeated Round-1 finding candidate
+R006,normalized-exact-match,"- id: WP-12009-F001
+  severity: P1
+  scope: PAGE
+  status: CONFIRMED
+  evidence_class: MEASURED
+  confidence: MEDIUM
+  source_refs: [INPUT:evidence:WP-12009, SYS-004]
+  impact: No schema types were parsed from the supplied initial HTML; Product/Offer/variant consistency and rich-result eligibility remain unverified.
+  recommendation: INITIAL — validate rendered/source structured data and WooCommerce variant values, then use one verified Rank Math/schema owner.
+  acceptance_criteria: Product and Offer output, price/currency, availability, image and variant identity are evidenced and consistent with visible content.
+  google_basis: GOOGLE_RECOMMENDED
+  google_reference: https://developers.google.com/search/docs/appearance/structured-data/product
+  seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+  seo_owner_target: RANK_MATH where capable; otherwise documented central integration
+  rank_math_capability_checked: BLOCKED_BY_ACCESS
+  rank_math_path_or_reason_not_used: Rank Math configuration and module capability were inaccessible.",12,products,WP-12009;WP-12471;WP-12475;WP-12479;WP-12484;WP-12488;WP-12492;WP-12498;WP-12516;WP-12520;WP-12524;WP-12528,https://www.mariwork.ir/shop/black-mariwork-fabric-color-code117/;https://www.mariwork.ir/shop/blue-mariwork-fabric-color-code118/;https://www.mariwork.ir/shop/darkgold-115/;https://www.mariwork.ir/shop/green-mariwork-fabric-color-code106/;https://www.mariwork.ir/shop/lightgold-mariwork-fabric-color-code111/;https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/;https://www.mariwork.ir/shop/ochre-mariwork-fabric-color-code108/;https://www.mariwork.ir/shop/olivegreen-mariwork-fabric-color-code110/;https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/;https://www.mariwork.ir/shop/redbrown-mariwork-fabric-color-code105/;https://www.mariwork.ir/shop/saddlebrown-mariwork-fabric-color-code109/;https://www.mariwork.ir/shop/violet-mariwork-fabric-color-code107/,repeated Round-1 finding candidate
+R007,normalized-exact-match,"- id: TERM-category-18-F001
+  severity: P1
+  scope: FAMILY
+  status: BLOCKED
+  evidence_class: MEASURED
+  confidence: HIGH
+  source_refs: [supplied inventory TERM-category-18, pages/category/TERM-category-18.md, registry/SYSTEMIC-FINDINGS.md#SYS-012]
+  impact: The URL is publicly reachable but presents no category items; its current noindex/no-canonical policy and lifecycle are not tied to an approved family decision.
+  recommendation: INITIAL — resolve the category-family policy from taxonomy identity, assignments, internal links, historical evidence, and intended user value; then use one approved family-level path. Do not mass-change controls from this audit.
+  acceptance_criteria: Complete category-family inventory records item count, intended indexability, canonical/robots/sitemap behavior, replacement mapping where needed, Rank Math ownership, and regression examples.
+  google_basis: GOOGLE_CONSISTENT
+  google_reference: https://developers.google.com/search/docs/crawling-indexing/soft-404-errors
+  seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+  seo_owner_target: RANK_MATH where capability is verified; otherwise UNKNOWN_NEEDS_VERIFICATION
+  rank_math_capability_checked: BLOCKED_BY_ACCESS
+  rank_math_path_or_reason_not_used: Installed Rank Math version/modules and taxonomy owner were not supplied.",9,category,TERM-category-18;TERM-category-1955;TERM-category-1956;TERM-category-1957;TERM-category-1982;TERM-category-1983;TERM-category-1984;TERM-category-1985;TERM-category-73,https://www.mariwork.ir/mag/artists/;https://www.mariwork.ir/mag/cultural/;https://www.mariwork.ir/mag/education/;https://www.mariwork.ir/mag/free/;https://www.mariwork.ir/mag/general/;https://www.mariwork.ir/mag/guides/;https://www.mariwork.ir/mag/literature/;https://www.mariwork.ir/mag/paid/;https://www.mariwork.ir/mag/uncategorized/,repeated Round-1 finding candidate
+R008,normalized-exact-match,"#### WP-12532-F002
+- severity: P2
+- scope: FAMILY
+- status: OPEN
+- evidence_class: MEASURED
+- confidence: MEDIUM
+- source_refs: [INPUT:evidence:WP-12532, registry:SYS-008]
+- impact: Repeated family pattern observed; fabric-color naming consistency and differentiated information gain is not measured in this batch.
+- recommendation: INITIAL — inventory the complete family before title, H1, copy or link edits; do not mass-edit from this batch.
+- acceptance_criteria: Family inventory records distinctions, approved naming/content rules, exceptions and regression set; Second Review complete.
+- google_basis: GOOGLE_CONSISTENT
+- google_reference: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+- seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION
+- seo_owner_target: CONTENT for visible content; RANK_MATH for approved metadata where capable
+- rank_math_capability_checked: BLOCKED_BY_ACCESS (SYS-001)
+- rank_math_path_or_reason_not_used: Ownership/configuration unavailable.",8,products,WP-12532;WP-12536;WP-12541;WP-12544;WP-12548;WP-14446;WP-14448;WP-14449,https://www.mariwork.ir/shop/copper-119/;https://www.mariwork.ir/shop/fleshtint-123/;https://www.mariwork.ir/shop/gray_122/;https://www.mariwork.ir/shop/green_fluorescent_102/;https://www.mariwork.ir/shop/magenta-mariwork-fabric-color-code120/;https://www.mariwork.ir/shop/orange_fluorescent_101/;https://www.mariwork.ir/shop/white-mariwork-fabric-color-code121/;https://www.mariwork.ir/shop/yellow_fluorescent_100/,repeated Round-1 finding candidate
+R009,normalized-exact-match,"#### WP-28610-F001 — No parsed structured-data types in supplied initial HTML evidence
+```yaml
+severity: P1
+scope: PAGE
+status: CONFIRMED
+evidence_class: OBSERVED
+confidence: HIGH
+source_refs: [""input.evidence.schema_types"", ""registry/SYSTEMIC-FINDINGS.md#SYS-004""]
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where capability is verified; otherwise UNKNOWN_NEEDS_VERIFICATION
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Production configuration and responsible output owner were not supplied.
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+```
+**Evidence:** `schema_types: []`; no schema payload was identified. **Impact:** Bundle structured-data eligibility/consistency is unverified; no ranking or rich-result causation is claimed. **Recommendation:** INITIAL — verify output and ownership, then compare bundle/Offer facts with visible contents. **Acceptance criteria:** Owner, current output, verified facts, conflicts and regression cases are recorded before any decision.",8,products,WP-28610;WP-28623;WP-28627;WP-33318;WP-33319;WP-33320;WP-33322;WP-33323,https://www.mariwork.ir/shop/%D8%B3%D8%AA-5-%D8%B1%D9%86%DA%AF-%D9%81%D9%84%D9%88%D8%B1%D8%B3%D9%86%D8%AA-%D9%85%D8%A7%D8%B1%DB%8C-%D9%88%D8%B1%DA%A9-30ml/;https://www.mariwork.ir/shop/24color-set-30ml/;https://www.mariwork.ir/shop/40color-set/;https://www.mariwork.ir/shop/a30-color-and-additives-set-30ml/;https://www.mariwork.ir/shop/eight-color-set-30ml/;https://www.mariwork.ir/shop/six-color-set-30ml/;https://www.mariwork.ir/shop/whole-colors-and-mediumes-set/;https://www.mariwork.ir/shop/whole-mediumes-set/,repeated Round-1 finding candidate
+R010,normalized-exact-match,"#### WP-22192-F001 — Article-family structured-data and ownership evidence gap
+```yaml
+severity: P2
+scope: FAMILY
+status: OPEN
+evidence_class: OBSERVED
+confidence: HIGH
+source_refs: [""WP-22192 supplied evidence"", ""SYS-004""]
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where capability is verified; otherwise UNKNOWN_NEEDS_VERIFICATION
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Production Rank Math configuration/modules unavailable
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+```
+**Evidence:** `schema_types: []`; owner/configuration unavailable.
+**Impact:** Schema and ownership are unverified.
+**Recommendation:** INITIAL — verify family schema and Rank Math ownership before changes.
+**Acceptance criteria:** Schema, consistency, owner, capability, and conflicts are recorded.",6,articles,WP-22192;WP-22193;WP-22194;WP-22196;WP-22197;WP-26387,https://www.mariwork.ir/mag/articles/characteristics-of-good-fabric-color-and-its-difference-with-bad-fabric-color01/;https://www.mariwork.ir/mag/articles/history-of-painting-on-fabric/;https://www.mariwork.ir/mag/articles/pattern-on-fabric/;https://www.mariwork.ir/mag/articles/stencil-printing-history/;https://www.mariwork.ir/mag/articles/tips-on-pigment-fabric-color/;https://www.mariwork.ir/mag/articles/types-of-colors/,repeated Round-1 finding candidate
+R011,normalized-exact-match,"#### WP-27034-F002 — Product structured-data output is not evidenced
+
+```yaml
+severity: P1
+scope: FAMILY
+status: BLOCKED
+evidence_class: MEASURED
+confidence: HIGH
+source_refs: [input.evidence.schema_types, registry/SYSTEMIC-FINDINGS.md#SYS-004]
+impact: Product/variant structured-data consistency cannot be assessed.
+recommendation: INITIAL — validate schema and one owner on representative color variants.
+acceptance_criteria: Identity, variants, price/currency, availability, brand, images and schema agree.
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/appearance/structured-data/product-snippet
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where capable
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Installed capability/output owner unavailable.
+```",6,products,WP-27034;WP-27037;WP-27039;WP-27041;WP-27043;WP-27046,https://www.mariwork.ir/shop/fluorescent-purple-mariwork-fabric-color-code129/;https://www.mariwork.ir/shop/lavender-mariwork-fabric-color-code130/;https://www.mariwork.ir/shop/light-pink-mariwork-fabric-color-code126/;https://www.mariwork.ir/shop/lilac-mariwork-fabric-color-code128/;https://www.mariwork.ir/shop/papaya-mariwork-fabric-color-code127/;https://www.mariwork.ir/shop/permanet-rose-mariwork-fabric-color-code125/,repeated Round-1 finding candidate
+R012,normalized-exact-match,"#### WP-32860-F002 — Informative/decorative image ALT coverage is unresolved
+
+```yaml
+severity: P2
+scope: PAGE
+status: BLOCKED
+evidence_class: MEASURED
+confidence: HIGH
+source_refs: supplied evidence: WP-32860 evidence.image_count, evidence.images_missing_alt; registry/SYSTEMIC-FINDINGS.md SYS-011
+google_basis: GOOGLE_RECOMMENDED
+google_reference: https://developers.google.com/search/docs/appearance/google-images
+seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: CONTENT for image-purpose decisions
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: ALT ownership and production configuration were not supplied
+```
+
+**Evidence:** The supplied snapshot reports 5 images and 3 images missing ALT. Image purpose/decorative status and appropriate text were not independently inspected.
+
+**Impact:** Image accessibility and image-search interpretation may be incomplete; no traffic causation is claimed.
+
+**Recommendation:** Initial — review each image by role; use descriptive ALT only for informative images and empty ALT for decorative images. Do not invent visual facts or use ALT as a keyword field.
+
+**Acceptance criteria:** Second Review or approved family work records the informative/decorative decision and resulting ALT for every image, with no fabricated descriptions.
+
+**Audit outcome:** Supplied Round-1 evidence is sufficient for technical observations and initial recommendations. Search Console Page+Query relationship, complete legacy redirect history, rendered structured-data verification, current WordPress/Rank Math ownership, and image-purpose review remain UNKNOWN_NEEDS_VERIFICATION or BLOCKED_BY_ACCESS. No Production change is authorized.",6,education,WP-32860;WP-32861;WP-32868;WP-32869;WP-32870;WP-32872,https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/batik-painting/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/painting-on-jeans/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/painting-with-base-coat-on-dark-fabric/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/print-on-towels/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/silk-screen-print/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/use-medium-base-coat-on-silk/,repeated Round-1 finding candidate
+R013,normalized-exact-match,"#### WP-12541-F003
+- severity: P2
+- scope: PAGE
+- status: CONFIRMED
+- evidence_class: OBSERVED
+- confidence: HIGH
+- source_refs: [INPUT:inventory:WP-12541]
+- impact: Legacy URL redirects to current entity; source mapping is evidenced, but historical value transfer/final migration disposition is not.
+- recommendation: INITIAL — retain history and verify source identity, canonical destination and direct-chain behavior before any URL decision; do not infer performance transfer.
+- acceptance_criteria: Legacy URL, status, destination, entity mapping and canonical are rechecked with source/date context; no Round-1 redirect change.
+- google_basis: GOOGLE_CONSISTENT
+- google_reference: https://developers.google.com/search/docs/crawling-indexing/301-redirects
+- seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+- seo_owner_target: RANK_MATH if supported; otherwise PLATFORM/server owner
+- rank_math_capability_checked: BLOCKED_BY_ACCESS (SYS-001)
+- rank_math_path_or_reason_not_used: Redirect ownership/table inaccessible.",5,products,WP-12541;WP-12585;WP-12588;WP-12591;WP-12594,https://www.mariwork.ir/shop/mariwork-fabric-base-coat-code208/;https://www.mariwork.ir/shop/mariwork-fabric-fixative-medium-code204/;https://www.mariwork.ir/shop/mariwork-fabric-glitter-glue-code203/;https://www.mariwork.ir/shop/mariwork-golden-corona-powder-code201/;https://www.mariwork.ir/shop/white-mariwork-fabric-color-code121/,repeated Round-1 finding candidate
+R014,normalized-exact-match,"#### WP-12581-F002
+- severity: P2
+- scope: FAMILY
+- status: OPEN
+- evidence_class: MEASURED
+- confidence: MEDIUM
+- source_refs: [INPUT:evidence:WP-12581, registry:SYS-008]
+- impact: Repeated family pattern observed; medium/glitter differentiation and usage evidence is not measured in this batch.
+- recommendation: INITIAL — inventory the complete family before title, H1, copy or link edits; do not mass-edit from this batch.
+- acceptance_criteria: Family inventory records distinctions, approved naming/content rules, exceptions and regression set; Second Review complete.
+- google_basis: GOOGLE_CONSISTENT
+- google_reference: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+- seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION
+- seo_owner_target: CONTENT for visible content; RANK_MATH for approved metadata where capable
+- rank_math_capability_checked: BLOCKED_BY_ACCESS (SYS-001)
+- rank_math_path_or_reason_not_used: Ownership/configuration unavailable.",5,products,WP-12581;WP-12585;WP-12588;WP-12591;WP-12594,https://www.mariwork.ir/shop/mariwork-fabric-base-coat-code208/;https://www.mariwork.ir/shop/mariwork-fabric-fixative-medium-code204/;https://www.mariwork.ir/shop/mariwork-fabric-glitter-glue-code203/;https://www.mariwork.ir/shop/mariwork-golden-corona-powder-code201/;https://www.mariwork.ir/shop/mariwork-silver-corona-powder-code202/,repeated Round-1 finding candidate
+R015,normalized-exact-match,"#### WP-27037-F001 — Legacy variant URL mapping needs direct verification
+
+```yaml
+severity: P2
+scope: PAGE
+status: UNKNOWN_NEEDS_VERIFICATION
+evidence_class: OBSERVED
+confidence: MEDIUM
+source_refs: [input.inventory.notes_excerpt, input.evidence.redirect_chain, input.evidence.canonical]
+impact: Supplied history reports a 301 from a 60ml URL, but current redirect behavior and variant mapping are not independently verified.
+recommendation: INITIAL — verify source, destination, canonical and variant identity; preserve historical metrics separately.
+acceptance_criteria: Direct mapping and entity/variant confidence are documented.
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/crawling-indexing/301-redirects
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: PLATFORM/server for redirect; RANK_MATH where supported for canonical
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Redirect/configuration unavailable.
+```",5,products,WP-27037;WP-27039;WP-27041;WP-27043;WP-27046,https://www.mariwork.ir/shop/fluorescent-purple-mariwork-fabric-color-code129/;https://www.mariwork.ir/shop/lavender-mariwork-fabric-color-code130/;https://www.mariwork.ir/shop/light-pink-mariwork-fabric-color-code126/;https://www.mariwork.ir/shop/lilac-mariwork-fabric-color-code128/;https://www.mariwork.ir/shop/papaya-mariwork-fabric-color-code127/,repeated Round-1 finding candidate
+R016,normalized-exact-match,"#### WP-28232-F001 — No parsed structured-data types in supplied initial HTML evidence
+```yaml
+severity: P1
+scope: PAGE
+status: CONFIRMED
+evidence_class: OBSERVED
+confidence: HIGH
+source_refs: [""input.evidence.schema_types"", ""registry/SYSTEMIC-FINDINGS.md#SYS-004""]
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where capability is verified; otherwise UNKNOWN_NEEDS_VERIFICATION
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Production configuration and responsible output owner were not supplied.
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+```
+**Evidence:** `schema_types: []`; no schema payload was identified. **Impact:** Product structured-data eligibility/consistency is unverified; no ranking or rich-result causation is claimed. **Recommendation:** INITIAL — verify output and Rank Math/theme/plugin ownership, then compare Product/Offer facts with visible content. **Acceptance criteria:** Owner, current output, verified facts, conflicts and regression cases are recorded before any decision.",4,products,WP-28232;WP-28239;WP-28242;WP-28244,https://www.mariwork.ir/shop/mariwork-golden-shine-code206/;https://www.mariwork.ir/shop/mariwork-silver-shine-code207/;https://www.mariwork.ir/shop/mocha-mousse-mariwork-fabric-color-code138/;https://www.mariwork.ir/shop/teal-mariwork-fabric-color-code139/,repeated Round-1 finding candidate
+R017,normalized-exact-match,"#### WP-33325-F001 — Product structured-data output is not evidenced in the supplied extraction
+
+```yaml
+severity: P1
+scope: PAGE
+status: BLOCKED
+evidence_class: OBSERVED
+confidence: MEDIUM
+source_refs: [""INPUT:evidence.WP-33325.schema_types"", ""SYS-004"", ""SYS-006""]
+impact: Product rich-result eligibility and consistency of price, identity and offer data cannot be assessed; no ranking or rich-result causation is claimed.
+recommendation: INITIAL — inspect complete output and verify the current Rank Math/WooCommerce schema owner before deciding whether any change is needed; do not add parallel schema.
+acceptance_criteria: One verified schema owner; Product/Offer fields agree with visible/WooCommerce facts; representative set regression passes.
+google_basis: GOOGLE_RECOMMENDED
+google_reference: https://developers.google.com/search/docs/appearance/structured-data/product-snippet
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where installed capability supports Product/WooCommerce schema
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Installed version/modules and current owner were not supplied.
+```
+
+**Evidence:** `schema_types: []` in the supplied extraction; this does not prove absence from every rendered state.
+
+**Impact:** Structured-data consistency remains unverified.
+
+**Recommendation:** Initial verification only; no Production change is authorized.
+
+**Acceptance criteria:** As stated above.",3,products,WP-33325;WP-33326;WP-33327,https://www.mariwork.ir/shop/40color-set-30ml/;https://www.mariwork.ir/shop/whole-colors-and-mediumes-set-30ml/;https://www.mariwork.ir/shop/whole-mediumes-set-30ml/,repeated Round-1 finding candidate
+R018,normalized-exact-match,"- id: WP-12502-F001
+  severity: P2
+  scope: PAGE
+  status: CONFIRMED
+  evidence_class: OBSERVED
+  confidence: HIGH
+  source_refs: [INPUT:evidence:WP-12502]
+  impact: The supplied meta description appears to end mid-construction at «انتخاب»; no schema types were parsed from the supplied initial HTML, so Product/Offer/variant consistency also remains unverified.
+  recommendation: INITIAL — review the description in the approved content/Rank Math owner and validate rendered/source structured data with WooCommerce variant values; no replacement copy is drafted in Round 1.
+  acceptance_criteria: Complete description and consistent Product/Offer output, price/currency, availability, image and variant identity are evidenced in the final owner output and family regression set.
+  google_basis: GOOGLE_CONSISTENT
+  google_reference: https://developers.google.com/search/docs/appearance/snippet
+  seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+  seo_owner_target: RANK_MATH if capability is verified
+  rank_math_capability_checked: BLOCKED_BY_ACCESS
+  rank_math_path_or_reason_not_used: Installed version/modules and current metadata owner were unavailable.",3,products,WP-12502;WP-12506;WP-12511,https://www.mariwork.ir/shop/darkbrown-mariwork-fabric-color-code113/;https://www.mariwork.ir/shop/orange-mariwork-fabric-color-code112/;https://www.mariwork.ir/shop/turquoseblue-mariwork-fabric-color-code114/,repeated Round-1 finding candidate
+R019,normalized-exact-match,"#### TERM-product_cat-220-F002 — Batch-level structured data and sitemap verification gaps
+
+```yaml
+severity: P1
+scope: FAMILY
+status: BLOCKED
+evidence_class: MEASURED
+confidence: HIGH
+source_refs: [""INPUT:evidence.schema_types"", ""INPUT:inventory.sitemap"", ""SYS-001"", ""SYS-004""]
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where capability is verified
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Installed modules/settings unavailable.
+```
+**Evidence:** `schema_types: []`; sitemap is not present in observed sitemaps; page is 200/index-follow.
+**Impact:** Family technical policy and schema ownership are unresolved.
+**Recommendation:** INITIAL — validate family-level output and Rank Math ownership before any change.
+**Acceptance criteria:** Regression sample verifies canonical, robots, sitemap and rendered schema.",2,product_cat,TERM-product_cat-220;TERM-product_cat-28,https://www.mariwork.ir/product/accessories/;https://www.mariwork.ir/product/fabric-printing-medium/,repeated Round-1 finding candidate
+R020,normalized-exact-match,"#### WP-12597-F001
+- severity: P1
+- scope: PAGE
+- status: CONFIRMED
+- evidence_class: MEASURED
+- confidence: MEDIUM
+- source_refs: [INPUT:evidence:WP-12597, registry:SYS-004]
+- impact: No schema type was parsed from supplied initial HTML; Product/Offer/bundle identity, price/currency, availability, image and visible-data consistency remain unverified.
+- recommendation: INITIAL — validate rendered/source structured data and current Woo values; use one verified Rank Math/schema owner and preserve only real visible values.
+- acceptance_criteria: Structured-data output, owner and set contents values are evidenced and consistent; no unsupported claims are introduced.
+- google_basis: GOOGLE_RECOMMENDED
+- google_reference: https://developers.google.com/search/docs/appearance/structured-data/product
+- seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+- seo_owner_target: RANK_MATH where capable; otherwise documented central integration
+- rank_math_capability_checked: BLOCKED_BY_ACCESS (SYS-001)
+- rank_math_path_or_reason_not_used: Production Rank Math version/modules and output pipeline inaccessible.",2,products,WP-12597;WP-12605,https://www.mariwork.ir/shop/%D8%B3%D8%AA-5-%D8%B1%D9%86%DA%AF-%D9%81%D9%84%D9%88%D8%B1%D8%B3%D9%86%D8%AA-%D9%85%D8%A7%D8%B1%DB%8C-%D9%88%D8%B1%DA%A9/;https://www.mariwork.ir/shop/eight-color-set/,repeated Round-1 finding candidate
+R021,normalized-exact-match,"#### WP-12597-F002
+- severity: P2
+- scope: FAMILY
+- status: OPEN
+- evidence_class: MEASURED
+- confidence: MEDIUM
+- source_refs: [INPUT:evidence:WP-12597, registry:SYS-008]
+- impact: Repeated family pattern observed; set/bundle contents and offer consistency is not measured in this batch.
+- recommendation: INITIAL — inventory the complete family before title, H1, copy or link edits; do not mass-edit from this batch.
+- acceptance_criteria: Family inventory records distinctions, approved naming/content rules, exceptions and regression set; Second Review complete.
+- google_basis: GOOGLE_CONSISTENT
+- google_reference: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+- seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION
+- seo_owner_target: CONTENT for visible content; RANK_MATH for approved metadata where capable
+- rank_math_capability_checked: BLOCKED_BY_ACCESS (SYS-001)
+- rank_math_path_or_reason_not_used: Ownership/configuration unavailable.",2,products,WP-12597;WP-12605,https://www.mariwork.ir/shop/%D8%B3%D8%AA-5-%D8%B1%D9%86%DA%AF-%D9%81%D9%84%D9%88%D8%B1%D8%B3%D9%86%D8%AA-%D9%85%D8%A7%D8%B1%DB%8C-%D9%88%D8%B1%DA%A9/;https://www.mariwork.ir/shop/eight-color-set/,repeated Round-1 finding candidate
+R022,normalized-exact-match,"#### WP-13320-F002 — Missing image ALT values
+```yaml
+severity: P2
+scope: PAGE
+status: CONFIRMED
+evidence_class: MEASURED
+confidence: HIGH
+source_refs: [""WP-13320 supplied evidence""]
+google_basis: GOOGLE_RECOMMENDED
+google_reference: https://developers.google.com/search/docs/appearance/google-images
+```
+**Evidence:** 7 of 11 images are reported missing ALT.
+**Impact:** Image context/accessibility is incomplete.
+**Recommendation:** INITIAL — review image purpose and record evidence-based ALT decisions.
+**Acceptance criteria:** Meaningful images have descriptive ALT decisions; decorative images are handled appropriately.",2,articles,WP-13320;WP-22192,https://www.mariwork.ir/mag/articles/fabric-preparation/;https://www.mariwork.ir/mag/articles/tips-on-pigment-fabric-color/,repeated Round-1 finding candidate
+R023,normalized-exact-match,"#### WP-27893-F001 — No parsed structured-data types in supplied initial HTML evidence
+
+```yaml
+severity: P1
+scope: PAGE
+status: CONFIRMED
+evidence_class: OBSERVED
+confidence: HIGH
+source_refs: [""input.evidence.schema_types"", ""registry/SYSTEMIC-FINDINGS.md#SYS-004""]
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where capability is verified; otherwise UNKNOWN_NEEDS_VERIFICATION
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Production configuration and responsible output owner were not supplied.
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+```
+
+**Evidence:** `schema_types: []`; no schema payload was identified in the supplied snapshot. Product visible content includes title, variants and price range, but schema consistency cannot be assessed.
+**Impact:** Eligibility or consistency for product structured data is unverified; no rich-result or ranking causation is claimed.
+**Recommendation:** INITIAL — verify rendered structured-data output and Rank Math/theme/plugin ownership, then assess Product/Offer/variant consistency against visible facts before any change.
+**Acceptance criteria:** A representative product-family check records current output, owner, verified facts, conflicts, and regression cases; Second Review decides whether action is warranted.",2,products,WP-27893;WP-27901,https://www.mariwork.ir/shop/mariwork-glossy-varnish-code215/;https://www.mariwork.ir/shop/mariwork-semi-matte-varnish-code216/,repeated Round-1 finding candidate
+R024,normalized-exact-match,"#### WP-32862-F002 — Informative/decorative image ALT coverage is unresolved
+
+```yaml
+severity: P2
+scope: PAGE
+status: BLOCKED
+evidence_class: MEASURED
+confidence: HIGH
+source_refs: supplied evidence: WP-32862 evidence.image_count, evidence.images_missing_alt; registry/SYSTEMIC-FINDINGS.md SYS-011
+google_basis: GOOGLE_RECOMMENDED
+google_reference: https://developers.google.com/search/docs/appearance/google-images
+seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: CONTENT for image-purpose decisions
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: ALT ownership and production configuration were not supplied
+```
+
+**Evidence:** The supplied snapshot reports 7 images and 5 images missing ALT. Image purpose/decorative status and appropriate text were not independently inspected.
+
+**Impact:** Image accessibility and image-search interpretation may be incomplete; no traffic causation is claimed.
+
+**Recommendation:** Initial — review each image by role; use descriptive ALT only for informative images and empty ALT for decorative images. Do not invent visual facts or use ALT as a keyword field.
+
+**Acceptance criteria:** Second Review or approved family work records the informative/decorative decision and resulting ALT for every image, with no fabricated descriptions.
+
+**Audit outcome:** Supplied Round-1 evidence is sufficient for technical observations and initial recommendations. Search Console Page+Query relationship, complete legacy redirect history, rendered structured-data verification, current WordPress/Rank Math ownership, and image-purpose review remain UNKNOWN_NEEDS_VERIFICATION or BLOCKED_BY_ACCESS. No Production change is authorized.",2,education,WP-32862;WP-32864,https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/salt-technique-on-fabric/;https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/simultaneous-painting-on-silk-and-linen/,repeated Round-1 finding candidate

@@ -1,0 +1,48 @@
+{
+  "blocked_entities": 0,
+  "duplicate_entity_ids": 0,
+  "expected_model_entities": 167,
+  "family_counts": {
+    "academy": 2,
+    "articles": 12,
+    "category": 12,
+    "education": 37,
+    "homepage": 1,
+    "ld_course_category": 2,
+    "product_cat": 7,
+    "products": 83,
+    "shop": 1,
+    "static": 10
+  },
+  "finding_count": 324,
+  "indexed_model_entities": 167,
+  "malformed_dossiers": 0,
+  "missing_dossiers": 0,
+  "model_remaining": 0,
+  "repeated_finding_candidate_count": 24,
+  "review_group_counts": {
+    "ACADEMY": 39,
+    "ARCHIVES / SYSTEM / TAXONOMIES": 21,
+    "BLOG / ARTICLES": 12,
+    "HOMEPAGE": 1,
+    "STATIC PAGES": 10,
+    "STORE / SHOP": 84
+  },
+  "round1_complete": true,
+  "sitewide_audit_count": 9,
+  "source_evidence_summary": "data/normalized/round1-evidence-summary.json",
+  "source_foundation_context": "data/normalized/round1-foundation-context.json",
+  "source_head": "7ca04b5f0001ed5b9295353200dc805f3b63d1bc",
+  "type_counts": {
+    "archive": 2,
+    "page": 11,
+    "post": 12,
+    "product": 83,
+    "sfwd-courses": 1,
+    "sfwd-lessons": 37,
+    "taxonomy": 21
+  },
+  "workflow_status_counts": {
+    "CODEX_AUDITED": 167
+  }
+}
