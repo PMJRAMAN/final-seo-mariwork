@@ -618,7 +618,7 @@ def do_page_batch(r,items,push,s,max_retries):
 
 def show_status(r,p,s):
     todo=(r/"MASTER-TODO.md").read_text(encoding="utf-8")
-    print("runner_version: 2.0-low-consumption")
+    print("runner_version: 2.1-low-consumption")
     print("configured_model:",os.environ.get("MARIWORK_CODEX_MODEL",DEFAULT_MODEL) or DEFAULT_MODEL)
     print("foundation_reasoning: medium")
     print("page_reasoning: low")
@@ -650,6 +650,8 @@ def preflight(r):
     except KeyError: raise RuntimeError("runtime UID has no account entry")
     if account.pw_name!=EXPECTED_USER: raise RuntimeError("refusing autonomous execution outside seo-audit account")
     if os.environ.get("MARIWORK_SEO_ISOLATED_RUNTIME")!="1": raise RuntimeError("required hardened systemd runtime marker is missing")
+    configured_model=os.environ.get("MARIWORK_CODEX_MODEL",DEFAULT_MODEL).strip() or DEFAULT_MODEL
+    if configured_model!=DEFAULT_MODEL: raise RuntimeError(f"autonomous Round-1 is pinned to {DEFAULT_MODEL}; refusing configured model {configured_model}")
     if os.environ.get("HOME")!=str(EXPECTED_HOME) or os.environ.get("CODEX_HOME")!=str(EXPECTED_CODEX_HOME): raise RuntimeError("unexpected runtime or Codex home")
     if set(os.getgroups())-{account.pw_gid}: raise RuntimeError("unexpected supplementary group access")
     if any(SENSITIVE_ENV_NAME.search(k) for k in os.environ): raise RuntimeError("sensitive environment variable name present; values not logged")
