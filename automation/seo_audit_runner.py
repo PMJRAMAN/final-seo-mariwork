@@ -18,6 +18,7 @@ EXPECTED_USER="seo-audit"
 EXPECTED_HOME=Path("/home/seo-audit")
 EXPECTED_CODEX_HOME=EXPECTED_HOME/".codex"
 EVIDENCE_FILE=Path("data/normalized/round1-page-evidence.jsonl")
+EVIDENCE_SUMMARY=Path("data/normalized/round1-evidence-summary.json")
 EVIDENCE_VERSION="2.0"
 DEFAULT_BATCH_SIZE=15
 MAX_HTML_BYTES=1500000
@@ -194,7 +195,7 @@ ALLOWED WRITES:
 REQUIRED OUTPUT:
 {rf}
 
-Read only task-relevant repository sources; do not reread the whole repository by default.\nFor A-013 and later, reuse A-010..A-012 outputs and data/normalized/round1-page-evidence.jsonl.\nDo not recrawl/re-fetch evidence already present. Network is fallback-only for one material gap.\nDo not edit MASTER-TODO.md; the runner marks completion after validation.\nInitial recommendations are NOT approved implementation. Missing evidence must be documented, never invented.
+Read only task-relevant repository sources; do not reread the whole repository by default.\nFor A-013 and sitewide synthesis, read data/normalized/round1-evidence-summary.json plus A-010..A-012 outputs first. Read individual JSONL evidence only for targeted examples, never as a mandatory full-file pass.\nDo not recrawl/re-fetch evidence already present. Network is fallback-only for one material gap.\nDo not edit MASTER-TODO.md; the runner marks completion after validation.\nInitial recommendations are NOT approved implementation. Missing evidence must be documented, never invented.
 """
 
 class EvidenceHTMLParser(HTMLParser):
@@ -293,6 +294,19 @@ def build_evidence_snapshot(wt):
     out.sort(key=lambda x:x.get("entity_id","")); p=wt/EVIDENCE_FILE; p.parent.mkdir(parents=True,exist_ok=True)
     with p.open("w",encoding="utf-8") as f:
         for rec in out: f.write(json.dumps(rec,ensure_ascii=False,separators=(",",":"))+"\n")
+    status={}; schema={}; issues={"missing_title":0,"missing_meta":0,"missing_h1":0,"noindex":0,"canonical_differs":0,"http_error":0}
+    for rec in out:
+        k=str(rec.get("status")); status[k]=status.get(k,0)+1
+        for t in rec.get("schema_types") or []: schema[t]=schema.get(t,0)+1
+        if rec.get("status")==200:
+            if not rec.get("title"): issues["missing_title"]+=1
+            if not rec.get("meta_description"): issues["missing_meta"]+=1
+            if not rec.get("h1"): issues["missing_h1"]+=1
+            if "noindex" in " ".join(rec.get("meta_robots") or []).lower(): issues["noindex"]+=1
+            cans=rec.get("canonical") or []
+            if cans and cans[0].rstrip("/")!=str(rec.get("final_url") or "").rstrip("/"): issues["canonical_differs"]+=1
+        if isinstance(rec.get("status"),int) and rec["status"]>=400: issues["http_error"]+=1
+    (wt/EVIDENCE_SUMMARY).write_text(json.dumps({"evidence_version":EVIDENCE_VERSION,"entities":len(out),"status_counts":status,"schema_counts":schema,"issue_counts":issues},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     return len(out)
 
 def evidence_map(r):
@@ -305,7 +319,7 @@ def evidence_map(r):
     return out
 
 def ensure_evidence_snapshot(r,push,s):
-    if (r/EVIDENCE_FILE).exists(): return True
+    if (r/EVIDENCE_FILE).exists() and (r/EVIDENCE_SUMMARY).exists(): return True
     wt=add_worktree(r,"deterministic-evidence")
     try:
         n=build_evidence_snapshot(wt); validate_sensitive_outputs(wt,[str(EVIDENCE_FILE)])
