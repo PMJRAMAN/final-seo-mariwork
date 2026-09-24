@@ -19,7 +19,7 @@ EXPECTED_HOME=Path("/home/seo-audit")
 EXPECTED_CODEX_HOME=EXPECTED_HOME/".codex"
 EVIDENCE_FILE=Path("data/normalized/round1-page-evidence.jsonl")
 EVIDENCE_VERSION="2.0"
-DEFAULT_BATCH_SIZE=10
+DEFAULT_BATCH_SIZE=15
 MAX_HTML_BYTES=1500000
 SENSITIVE_ENV_NAME=re.compile(r"(?i)(?:PASSWORD|PASSWD|DATABASE_URL|DB_HOST|DB_USER|DB_PASS|MYSQL|GH_TOKEN|GITHUB_TOKEN|OPENAI_API_KEY|CODEX_API_KEY|ACCESS_TOKEN|AUTHORIZATION|COOKIE|SECRET)")
 SENSITIVE_PATTERNS=(
@@ -120,7 +120,7 @@ def drop_worktree(r,wt):
 
 def codex_args(effort_override=None):
     a=["codex","exec","--json","--sandbox","workspace-write",
-       "-c",'approval_policy="never"',"-c","sandbox_workspace_write.network_access=true"]
+       "-c",'approval_policy="never"',"-c","sandbox_workspace_write.network_access=false"]
     model=os.environ.get("MARIWORK_CODEX_MODEL","").strip()
     effort=(effort_override or os.environ.get("MARIWORK_CODEX_REASONING","medium")).strip() or "medium"
     if model: a+=["--model",model]
@@ -336,17 +336,31 @@ def priority(row,batch):
     else: b=70
     return (b,0 if pilot else 1,e)
 
+def model_page_eligible(row):
+    e=(row.get("entity_id") or "").strip(); u=(row.get("current_url") or "").strip()
+    if not e or not u: return False
+    hay=(" ".join(str(row.get(k) or "") for k in ("type","family","current_url"))).lower().replace("-","_")
+    policy=("product_tag","post_tag","blog_tag","tag_archive","attribute","attachment","feed","url_space","unverified_url","cart","checkout","my_account","search_result","author_archive","date_archive")
+    return not any(x in hay for x in policy)
+
 def next_pages(r,s,batch_size=DEFAULT_BATCH_SIZE):
     batchp=r/"batches/BATCH-001.md"; pilot=batchp.read_text(encoding="utf-8",errors="replace") if batchp.exists() else ""
     c=[]
     for row in inv(r):
-        e=(row.get("entity_id") or "").strip(); u=(row.get("current_url") or "").strip()
-        if (row.get("type") or "").strip().lower() in {"url_space","unverified_url"}: continue
-        if not e or not u or s.get("page_failures",{}).get(e,{}).get("blocked"): continue
+        if not model_page_eligible(row): continue
+        e=(row.get("entity_id") or "").strip()
+        if s.get("page_failures",{}).get(e,{}).get("blocked"): continue
         dossier=(row.get("dossier") or "").strip() or f"pages/{slug(row.get('family') or row.get('type'))}/{slug(e)}.md"
         if dstatus(r/dossier) in DONE_STATUSES: continue
-        c.append((row,dossier))
-    c.sort(key=lambda x:priority(x[0],pilot)); return c[:max(1,batch_size)]
+        fam=(row.get("family") or row.get("type") or "other").lower()
+        c.append((0 if e and e in pilot else 1,fam,e,row,dossier))
+    c.sort(key=lambda x:(x[0],x[1],x[2]))
+    if not c: return []
+    pilot_rows=[x for x in c if x[0]==0]
+    if pilot_rows: return [(x[3],x[4]) for x in pilot_rows[:5]]
+    fam=c[0][1]; same=[x for x in c if x[1]==fam]
+    chosen=(same if len(same)>=min(5,batch_size) else c)[:max(1,batch_size)]
+    return [(x[3],x[4]) for x in chosen]
 
 def page_batch_prompt(items,evidence):
     payload=[]
@@ -356,7 +370,8 @@ def page_batch_prompt(items,evidence):
 TASK TYPE: LOW-COST BATCH FIRST-PASS PAGE AUDIT. BATCH SIZE: {len(payload)}
 INPUT: {json.dumps(payload,ensure_ascii=False,separators=(",",":"))}
 ALLOWED WRITES: listed dossier paths + registry/SYSTEMIC-FINDINGS.md only.
-EFFICIENCY: deterministic INPUT is primary. Do NOT re-fetch every page, reread the whole repo, or broadly research the web. Network is fallback-only for one material gap. Read PAGE-DOSSIER template once if needed. Reuse existing A-010..A-016 evidence selectively. Analyze shared family/template issues once and reference one SYS finding. Keep dossiers concise.
+EFFICIENCY: deterministic INPUT is primary. Network access is disabled. Do NOT re-fetch pages, reread the whole repo, or perform broad research. Read PAGE-DOSSIER template once only if needed. Analyze shared family/template issues once and reference one SYS finding.
+OUTPUT DISCIPLINE: keep each dossier compact; maximum 4 material findings per entity; do not draft full replacement page copy, final titles or final metadata. Low-value checklist noise should be omitted.
 FOR EACH ENTITY: preserve identity/history limits; evaluate evidence; record evidence-supported findings and explicit gaps; initial recommendations only; final_disposition stays NOT_DECIDED unless formally decided; set workflow_status CODEX_AUDITED when sufficient for ChatGPT Second Review. Do not edit URL-INVENTORY.csv.
 """
 
@@ -418,24 +433,73 @@ def update_inv_dossier(wt,entity,dossier):
     with p.open("w",encoding="utf-8",newline="") as f:
         w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(rows)
 
+def job_tasks(job):
+    return job.get("completes") or [job["id"]]
+
 def foundation_complete(r,p):
     todo=(r/"MASTER-TODO.md").read_text(encoding="utf-8")
-    return all(done(todo,j["id"]) for j in p["foundation_jobs"])
+    return all(done(todo,t) for j in p["foundation_jobs"] for t in job_tasks(j))
 
 def next_foundation(r,p):
     todo=(r/"MASTER-TODO.md").read_text(encoding="utf-8")
-    return next((j for j in p["foundation_jobs"] if not done(todo,j["id"])),None)
+    return next((j for j in p["foundation_jobs"] if not all(done(todo,t) for t in job_tasks(j))),None)
 
-def do_foundation(r,job,push,s):
+def deterministic_foundation(r,job,push):
     wt=add_worktree(r,job["id"])
     try:
-        rc,out,log=run_codex(wt,foundation_prompt(job),job["id"])
-        s["last_job"]={"type":"foundation","id":job["id"],"log":str(log)}; save_state(s)
+        mode=job.get("mode")
+        if mode=="deterministic_gsc":
+            files=list(wt.glob("*Performance-on-Search*/Pages.csv"))
+            report=wt/"audits/sitewide/A-016-gsc-baseline.md"; report.parent.mkdir(parents=True,exist_ok=True)
+            pq=wt/"audits/sitewide/A-017-page-query.md"
+            if files:
+                with files[0].open(encoding="utf-8-sig",newline="") as f: rows=list(csv.DictReader(f))
+                out=wt/"data/normalized"; out.mkdir(parents=True,exist_ok=True)
+                (out/"gsc-pages.json").write_text(json.dumps(rows,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+                report.write_text(f"# A-016 — GSC baseline\n\nDeterministically normalized **{len(rows)}** page rows from the immutable export. Separate Page and Query dimensions were not joined.\n",encoding="utf-8")
+            else:
+                report.write_text("# A-016 — GSC baseline\n\nBLOCKED_BY_ACCESS: Pages.csv not found.\n",encoding="utf-8")
+            pq.write_text("# A-017 — Page+Query evidence\n\nNo verified joined Page+Query dataset is currently available in the repository. **Page-query relationship is not proven by the current export.** Separate Pages.csv and Queries.csv must not be joined semantically.\n",encoding="utf-8")
+        elif mode=="deterministic_pilot":
+            g={}
+            files=list(wt.glob("*Performance-on-Search*/Pages.csv"))
+            if files:
+                with files[0].open(encoding="utf-8-sig",newline="") as f:
+                    for rr in csv.DictReader(f):
+                        u=(rr.get("Top pages") or rr.get("Page") or rr.get("Pages") or next(iter(rr.values()),"")).strip()
+                        if u: g[u]=rr
+            cand=[]
+            for row in inv(wt):
+                hay=((row.get("type") or "")+" "+(row.get("family") or "")).lower()
+                if "product" not in hay or any(x in hay for x in ("tag","attribute","category")): continue
+                u=(row.get("current_url") or "").strip(); gr=g.get(u,{})
+                try: imp=float(str(gr.get("Impressions") or "0").replace(",",""))
+                except Exception: imp=0
+                cand.append((imp,row.get("entity_id"),u))
+            cand.sort(reverse=True); out=wt/"batches/BATCH-001.md"; out.parent.mkdir(parents=True,exist_ok=True)
+            out.write_text("# BATCH-001 — Product pilot\n\nDeterministic audit selection only; no SEO change is approved.\n\n"+"\n".join(f"- {e} — {u} — historical impressions: {int(i)}" for i,e,u in cand[:5])+"\n",encoding="utf-8")
+        else:
+            raise RuntimeError("unknown deterministic foundation mode: "+str(mode))
+        for t in job_tasks(job): mark_done(wt/"MASTER-TODO.md",t)
+        files=changes(wt); bad=[x for x in files if not allowed(x,job["allowed_globs"]+["MASTER-TODO.md"])]
+        if bad: raise RuntimeError(f"unauthorized deterministic changes: {bad}")
+        sha=commit_ff(r,wt,f"{job['id']}: deterministic low-consumption foundation",push)
+        print("PASS DETERMINISTIC",job["id"],sha); return True
+    finally: drop_worktree(r,wt)
+
+def do_foundation(r,job,push,s):
+    if str(job.get("mode","model")).startswith("deterministic_"):
+        return deterministic_foundation(r,job,push)
+    wt=add_worktree(r,job["id"])
+    try:
+        rc,out,log=run_codex(wt,foundation_prompt(job),job["id"],"medium")
+        s["last_job"]={"type":"foundation","id":job["id"],"completes":job_tasks(job),"log":str(log)}; save_state(s)
         if rc:
             k=failure_kind(out); s["paused"]=True; s["pause_reason"]=f"{k}:{job['id']}"; save_state(s)
             print(f"PAUSED {k} {job['id']} log={log}"); return False
-        validate_foundation(wt,job); mark_done(wt/"MASTER-TODO.md",job["id"])
-        sha=commit_ff(r,wt,f"{job['id']}: autonomous round-1 baseline",push)
+        validate_foundation(wt,job)
+        for t in job_tasks(job): mark_done(wt/"MASTER-TODO.md",t)
+        sha=commit_ff(r,wt,f"{job['id']}: compact autonomous round-1 baseline",push)
         s["paused"]=False; s["pause_reason"]=None; save_state(s); print(f"PASS {job['id']} {sha}"); return True
     except Exception as e:
         s["paused"]=True; s["pause_reason"]=f"VALIDATION_OR_RUNNER:{job['id']}:{e}"; save_state(s)
@@ -467,17 +531,29 @@ def do_page_batch(r,items,push,s,max_retries):
 
 def show_status(r,p,s):
     todo=(r/"MASTER-TODO.md").read_text(encoding="utf-8")
+    print("runner_version: 2.0-low-consumption")
+    print("configured_model:",os.environ.get("MARIWORK_CODEX_MODEL","") or "account-default")
+    print("foundation_reasoning: medium")
+    print("page_reasoning: low")
+    print("page_batch_default:",DEFAULT_BATCH_SIZE)
     print(f"paused: {s.get('paused')}\npause_reason: {s.get('pause_reason')}\nlast_job: {json.dumps(s.get('last_job'),ensure_ascii=False)}")
-    for j in p["foundation_jobs"]: print(f"{'DONE' if done(todo,j['id']) else 'TODO'} {j['id']} {j['title']}")
-    rows=inv(r); total=aud=0
+    for j in p["foundation_jobs"]:
+        print(("DONE" if all(done(todo,t) for t in job_tasks(j)) else "TODO"),j["id"],"+".join(job_tasks(j)),j.get("mode","model"))
+    rows=inv(r); total=aud=model_remaining=policy_remaining=0
     for row in rows:
         e=(row.get("entity_id") or "").strip(); u=(row.get("current_url") or "").strip()
         if not e or not u: continue
         total+=1; dossier=(row.get("dossier") or "").strip()
         if dossier and dstatus(r/dossier) in DONE_STATUSES: aud+=1
-    blocked=[e for e,v in s.get("page_failures",{}).items() if v.get("blocked")]
-    print(f"page_entities: {total}\ncodex_audited_or_later: {aud}\nremaining: {max(total-aud,0)}\nrunner_blocked_pages: {len(blocked)}")
-    for e in blocked: print("  - "+e)
+        elif model_page_eligible(row): model_remaining+=1
+        else: policy_remaining+=1
+    print("inventory_entities:",total)
+    print("codex_audited_or_later:",aud)
+    print("model_page_entities_remaining:",model_remaining)
+    print("family_policy_entities_remaining:",policy_remaining)
+    print("estimated_model_page_calls_at_batch_15:",(model_remaining+14)//15)
+    print("deterministic_evidence_ready:",(r/EVIDENCE_FILE).exists())
+    print("runner_blocked_pages:",sum(1 for v in s.get("page_failures",{}).values() if v.get("blocked")))
 
 def preflight(r):
     ensure_clean(r)
