@@ -130,3 +130,24 @@ Codex draft به‌تنهایی Production-ready نیست. Target content/facts 
 **Scope:** PROCESS / OPERATIONS
 
 Phaseهای تحقیق اولیه و Codex Audit می‌توانند توسط runner به‌صورت autonomous و resumable اجرا شوند تا `CODEX_AUDITED`. این یک extension سازگار با Framework v1.0 است و lifecycle یا authority را تغییر نمی‌دهد. ChatGPT Second Review نخستین human decision gate باقی می‌ماند و Production write قبل از APPROVED همچنان ممنوع است.
+
+
+## SEO-017 — Low-Consumption Round-1 Execution
+**Status:** Accepted  
+**Date:** 2026-09-24  
+**Scope:** PROCESS / OPERATIONS
+
+Round-1 evidence collection is deterministic by default and Codex is reserved for material synthesis/judgment.
+
+- public HTTP/HTML/meta/canonical/schema/link evidence is collected once by Python and reused;
+- A-014 + A-015 are one model synthesis;
+- A-016 + A-017 are deterministic and use no model call;
+- A-018 + A-019 + A-020 are one model synthesis;
+- A-021 is deterministic;
+- the five-page pilot remains capped at five entities; later page audits default to 15 entities per model execution;
+- Product Tags, Blog Tags, attributes, attachments and other policy/system URL spaces are handled at FAMILY/SITEWIDE level rather than one model call per URL where appropriate;
+- Foundation reasoning defaults to medium and repetitive page-batch reasoning to low;
+- Codex network access is disabled in autonomous analysis so it must reuse repository evidence instead of recrawling;
+- raw Codex JSONL is retained privately for observability.
+
+This is an execution-efficiency change only. Dual Audit, complete-site coverage, Production read-only rules and human/ChatGPT approval authority are unchanged.
