@@ -77,4 +77,26 @@ export MARIWORK_CODEX_REASONING="high"
 - autonomous worker باید تحت حساب/credentialی اجرا شود که Production write و DB-write در اختیارش نباشد.
 - secrets/PII نباید وارد repo یا log prompt شوند.
 
+## Hardened systemd runtime
+
+The host-specific units in `automation/systemd/` run as `seo-audit`, deny
+access to `/home/mariwork`, `/root`, and local database paths, and expose only
+the SEO repository, Codex runtime, and external runner state as writable paths.
+They are oneshot services with no automatic restart loop. Install/update them
+as an administrator only after reviewing the paths and runtime isolation:
+
+```bash
+sudo install -o root -g root -m 0644 automation/systemd/mariwork-seo-audit-*.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start mariwork-seo-audit-smoke.service
+sudo journalctl -u mariwork-seo-audit-smoke.service
+sudo systemctl start mariwork-seo-audit.service
+```
+
+After a usage/rate-limit pause is resolved, use
+`mariwork-seo-audit-resume.service`. A nonzero exit does not trigger a restart.
+Logs in the service journal and runner JSONL contain job metadata only; raw
+Codex JSONL output is not persisted. Runner state and restricted logs live in
+`/home/seo-audit/.local/state/mariwork-seo-runner/`.
+
 جزئیات setup سرور در `tasks/A-009-ROUND1-AUTOMATION.md`.

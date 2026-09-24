@@ -1,0 +1,39 @@
+[Unit]
+Description=Resume Mariwork autonomous SEO Round-1 queue
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=seo-audit
+Group=seo-audit
+WorkingDirectory=/home/seo-audit/Final-SEO-Codex
+Environment=HOME=/home/seo-audit
+Environment=CODEX_HOME=/home/seo-audit/.codex
+Environment=MARIWORK_SEO_RUNNER_STATE=/home/seo-audit/.local/state/mariwork-seo-runner
+Environment=MARIWORK_SEO_ISOLATED_RUNTIME=1
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=LANG=C.UTF-8
+UMask=0077
+ExecStart=/usr/bin/python3 /home/seo-audit/Final-SEO-Codex/automation/seo_audit_runner.py resume --push
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ProtectKernelLogs=true
+ProtectClock=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+IPAddressDeny=127.0.0.0/8 ::1/128
+IPAddressAllow=127.0.0.53/32
+InaccessiblePaths=/home/mariwork /root /run/mysqld /var/lib/mysql /etc/mysql
+ReadWritePaths=/home/seo-audit/Final-SEO-Codex /home/seo-audit/.local/state/mariwork-seo-runner /home/seo-audit/.codex
+TimeoutStartSec=infinity
+StandardOutput=journal
+StandardError=journal
+

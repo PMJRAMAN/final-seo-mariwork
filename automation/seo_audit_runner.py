@@ -1,11 +1,36 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, csv, fnmatch, json, os, re, shutil, subprocess, sys, time
+import argparse, csv, fnmatch, json, os, pwd, re, shutil, subprocess, sys, time
 from pathlib import Path
 
 LIMIT_PATTERNS=("rate limit","usage limit","quota","too many requests","429","limit reached","you've hit","retry after")
 AUTH_PATTERNS=("authentication","unauthorized","login required","not logged in","invalid api key","expired token")
 DONE_STATUSES={"CODEX_AUDITED","SECOND_REVIEWED","APPROVED","IMPLEMENTING","IMPLEMENTED","CODEX_QA_PASSED","FINAL_QA_PASSED","MONITORING","COMPLETE"}
+PRODUCTION_ROOT=Path("/home/mariwork/web/mariwork.ir")
+WP_CONFIG=PRODUCTION_ROOT/"public_html/wp-config.php"
+DB_SOCKET=Path("/run/mysqld/mysqld.sock")
+EXPECTED_USER="seo-audit"
+EXPECTED_HOME=Path("/home/seo-audit")
+EXPECTED_CODEX_HOME=EXPECTED_HOME/".codex"
+SENSITIVE_ENV_NAME=re.compile(r"(?i)(?:PASSWORD|PASSWD|DATABASE_URL|DB_HOST|DB_USER|DB_PASS|MYSQL|GH_TOKEN|GITHUB_TOKEN|OPENAI_API_KEY|CODEX_API_KEY|ACCESS_TOKEN|AUTHORIZATION|COOKIE|SECRET)")
+SENSITIVE_PATTERNS=(
+    ("private_key",re.compile(r"-----BEGIN (?:[A-Z0-9 ]+ )?PRIVATE KEY-----")),
+    ("github_token",re.compile(r"\b(?:github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,})\b")),
+    ("openai_token",re.compile(r"\bsk-(?:proj-)?[A-Za-z0-9_-]{24,}\b")),
+    ("slack_token",re.compile(r"\bxox[baprs]-[A-Za-z0-9-]{20,}\b")),
+    ("aws_key",re.compile(r"\b(?:AKIA|ASIA)[A-Z0-9]{16}\b")),
+    ("google_api_key",re.compile(r"\bAIza[0-9A-Za-z_-]{35}\b")),
+    ("bearer_token",re.compile(r"(?i)\bBearer\s+[A-Za-z0-9._~+/-]{20,}={0,2}")),
+    ("authorization_header",re.compile(r"(?im)^\s*(?:Proxy-)?Authorization\s*:\s*\S+\s+\S+")),
+    ("session_cookie",re.compile(r"(?im)^\s*(?:Set-Cookie|Cookie)\s*:\s*[^;\s=]+=[^;\r\n]+")),
+    ("credential_url",re.compile(r"(?i)\b(?:mysql|mariadb|postgres(?:ql)?|mongodb(?:\+srv)?)://[^\s/@:]+:[^\s/@]+@[^\s]+")),
+    ("db_password_assignment",re.compile(r"(?i)\b(?:DB_PASSWORD|DB_PASS|MYSQL_PASSWORD|DATABASE_PASSWORD)\b\s*(?:=|:)\s*['\"]?(?!\[?(?:REDACTED|YOUR_PASSWORD|CHANGE_ME|EXAMPLE)\]?\b)[^\s,;\"'#]{4,}")),
+    ("wp_db_password",re.compile(r"(?i)define\s*\(\s*['\"]DB_PASSWORD['\"]\s*,\s*['\"][^'\"]{1,}['\"]")),
+    ("wp_auth_salt",re.compile(r"(?i)define\s*\(\s*['\"](?:AUTH_KEY|SECURE_AUTH_KEY|LOGGED_IN_KEY|NONCE_KEY|AUTH_SALT|SECURE_AUTH_SALT|LOGGED_IN_SALT|NONCE_SALT)['\"]\s*,\s*['\"](?!put your unique phrase here)[^'\"]{20,}['\"]")),
+    ("secret_assignment",re.compile(r"(?i)\b(?:OPENAI_API_KEY|GH_TOKEN|GITHUB_TOKEN|GITHUB_PAT|CODEX_API_KEY|API_KEY|ACCESS_TOKEN|REFRESH_TOKEN|CLIENT_SECRET|PASSWORD)\b\s*[:=]\s*['\"]?(?!\[?(?:REDACTED|YOUR_[A-Z_]+|CHANGE_ME|EXAMPLE)\]?\b)[A-Za-z0-9_./+=:-]{8,}")),
+    ("customer_order_field",re.compile(r"(?i)(?:billing|shipping)_(?:first_name|last_name|company|address_1|address_2|city|postcode|phone|email)\s*[\"']?\s*[:=]\s*[\"']?(?!null\b|\[?REDACTED\]?\b)[^\s,;\"'}]{2,}")),
+    ("customer_contact_field",re.compile(r"(?i)customer_(?:name|email|phone|address)\s*[\"']?\s*[:=]\s*[\"']?(?!null\b|\[?REDACTED\]?\b)[^\s,;\"'}]{2,}")),
+)
 
 def cmd(args,cwd=None,check=True,stdin=None):
     p=subprocess.run(args,cwd=str(cwd) if cwd else None,input=stdin,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
@@ -18,7 +43,8 @@ def root():
 
 def state_dir():
     p=Path(os.environ.get("MARIWORK_SEO_RUNNER_STATE",Path.home()/".local/state/mariwork-seo-runner")).expanduser()
-    (p/"logs").mkdir(parents=True,exist_ok=True); (p/"worktrees").mkdir(parents=True,exist_ok=True)
+    (p/"logs").mkdir(parents=True,exist_ok=True,mode=0o700); (p/"worktrees").mkdir(parents=True,exist_ok=True,mode=0o700)
+    os.chmod(p,0o700); os.chmod(p/"logs",0o700); os.chmod(p/"worktrees",0o700)
     return p
 
 def load_state():
@@ -29,7 +55,9 @@ def load_state():
 
 def save_state(s):
     p=state_dir()/"state.json"; t=p.with_suffix(".tmp")
-    t.write_text(json.dumps(s,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); t.replace(p)
+    fd=os.open(t,os.O_WRONLY|os.O_CREAT|os.O_TRUNC,0o600)
+    with os.fdopen(fd,"w",encoding="utf-8") as f: f.write(json.dumps(s,ensure_ascii=False,indent=2)+"\n")
+    t.replace(p); os.chmod(p,0o600)
 
 def ensure_clean(r):
     out=cmd(["git","status","--porcelain=v1","--untracked-files=all"],cwd=r)[1].strip()
@@ -68,7 +96,7 @@ def drop_worktree(r,wt):
 
 def codex_args():
     a=["codex","exec","--json","--sandbox","workspace-write",
-       "-c","sandbox_workspace_write.network_access=true"]
+       "-c",'approval_policy="never"',"-c","sandbox_workspace_write.network_access=true"]
     model=os.environ.get("MARIWORK_CODEX_MODEL","").strip()
     effort=os.environ.get("MARIWORK_CODEX_REASONING","").strip()
     if model: a+=["--model",model]
@@ -77,15 +105,20 @@ def codex_args():
 
 def run_codex(wt,prompt,label):
     log=state_dir()/"logs"/f"{int(time.time())}-{re.sub(r'[^A-Za-z0-9._-]+','-',label)}.jsonl"
-    p=subprocess.Popen(codex_args(),cwd=str(wt),stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,bufsize=1)
+    child_env={"HOME":str(EXPECTED_HOME),"CODEX_HOME":str(EXPECTED_CODEX_HOME),"PATH":"/usr/local/bin:/usr/bin:/bin","LANG":"C.UTF-8"}
+    p=subprocess.Popen(codex_args(),cwd=str(wt),env=child_env,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,bufsize=1)
     assert p.stdin and p.stdout
     p.stdin.write(prompt); p.stdin.close()
     buf=[]
-    with log.open("w",encoding="utf-8") as f:
+    output_chars=0
+    fd=os.open(log,os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
+    with os.fdopen(fd,"w",encoding="utf-8") as f:
+        f.write(json.dumps({"event":"codex_started","job":label,"cwd":str(wt)},ensure_ascii=False)+"\n"); f.flush()
         for line in p.stdout:
-            buf.append(line); f.write(line); f.flush()
-            if sys.stdout.isatty(): print(line.rstrip())
-    return p.wait(),"".join(buf),log
+            buf.append(line); output_chars+=len(line)
+        rc=p.wait()
+        f.write(json.dumps({"event":"codex_finished","job":label,"exit_code":rc,"output_chars":output_chars},ensure_ascii=False)+"\n")
+    return rc,"".join(buf),log
 
 def failure_kind(text):
     low=text.lower()
@@ -94,6 +127,7 @@ def failure_kind(text):
     return "ERROR"
 
 def commit_ff(r,wt,message,push):
+    validate_sensitive_outputs(wt,changes(wt))
     cmd(["git","add","-A"],cwd=wt)
     if not cmd(["git","diff","--cached","--name-only"],cwd=wt)[1].strip(): raise RuntimeError("no changes to commit")
     cmd(["git","-c","user.name=Mariwork SEO Audit Runner","-c","user.email=seo-audit-runner@localhost","commit","-m",message],cwd=wt)
@@ -231,6 +265,35 @@ def validate_foundation(wt,job):
         p=wt/rel
         if not p.exists() or p.stat().st_size==0: raise RuntimeError(f"missing output: {rel}")
 
+def validate_sensitive_outputs(wt,files):
+    findings=[]
+    for rel in files:
+        p=wt/rel
+        if p.is_symlink():
+            findings.append((rel,"symlink_output")); continue
+        if not p.is_file(): continue
+        if p.stat().st_size>100*1024*1024:
+            findings.append((rel,"oversized_output")); continue
+        raw=p.read_bytes()
+        if b"\x00" in raw:
+            findings.append((rel,"binary_output")); continue
+        try: content=raw.decode("utf-8")
+        except UnicodeDecodeError:
+            findings.append((rel,"non_utf8_output")); continue
+        for label,pattern in SENSITIVE_PATTERNS:
+            if pattern.search(content): findings.append((rel,label))
+    if findings:
+        details=sorted({f"{path}:{label}" for path,label in findings})
+        # Remove rejected generated outputs from the disposable job worktree.
+        # Keep diagnostics limited to paths/categories; never log matched text.
+        for rel,_ in findings:
+            p=wt/rel
+            try:
+                if p.is_file() and not p.is_symlink(): p.unlink()
+            except OSError:
+                pass
+        raise RuntimeError("sensitive-output scan blocked commit; categories only: "+", ".join(details))
+
 def validate_page(wt,dossier):
     files=changes(wt); ok={dossier,"registry/SYSTEMIC-FINDINGS.md"}
     bad=[x for x in files if x not in ok]
@@ -312,7 +375,24 @@ def show_status(r,p,s):
     for e in blocked: print("  - "+e)
 
 def preflight(r):
-    ensure_clean(r); cmd(["codex","--version"])
+    ensure_clean(r)
+    if os.geteuid()==0: raise RuntimeError("refusing autonomous execution as root")
+    try: account=pwd.getpwuid(os.geteuid())
+    except KeyError: raise RuntimeError("runtime UID has no account entry")
+    if account.pw_name!=EXPECTED_USER: raise RuntimeError("refusing autonomous execution outside seo-audit account")
+    if os.environ.get("MARIWORK_SEO_ISOLATED_RUNTIME")!="1": raise RuntimeError("required hardened systemd runtime marker is missing")
+    if os.environ.get("HOME")!=str(EXPECTED_HOME) or os.environ.get("CODEX_HOME")!=str(EXPECTED_CODEX_HOME): raise RuntimeError("unexpected runtime or Codex home")
+    if set(os.getgroups())-{account.pw_gid}: raise RuntimeError("unexpected supplementary group access")
+    if any(SENSITIVE_ENV_NAME.search(k) for k in os.environ): raise RuntimeError("sensitive environment variable name present; values not logged")
+    sudo=shutil.which("sudo")
+    if sudo and subprocess.run([sudo,"-n","-l"],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0:
+        raise RuntimeError("refusing autonomous execution with sudo privileges")
+    state=state_dir().resolve()
+    if state==r or r in state.parents: raise RuntimeError("runtime state must be outside the repository")
+    if PRODUCTION_ROOT.exists() or os.access(PRODUCTION_ROOT,os.W_OK): raise RuntimeError("Production path is visible or writable in autonomous runtime")
+    if WP_CONFIG.exists() or os.access(WP_CONFIG,os.R_OK): raise RuntimeError("Production wp-config.php is visible in autonomous runtime")
+    if DB_SOCKET.exists(): raise RuntimeError("Production database socket is visible in autonomous runtime")
+    cmd(["codex","--version"])
     for p in ("MANIFEST.md","AGENTS.md","MASTER-TODO.md","automation/round1_plan.json"):
         if not (r/p).exists(): raise RuntimeError("missing "+p)
 
