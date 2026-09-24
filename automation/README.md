@@ -40,3 +40,16 @@ The runtime state remains outside Git at:
     ~/.local/state/mariwork-seo-runner/
 
 Do not run the autonomous worker as root.
+
+
+## Always load the latest runner before autonomous work
+
+Use `automation/run_latest.sh` for `auto`, `resume`, and `prepare`. It fast-forwards `main`, compiles the exact updated runner, and only then starts Python. This avoids the self-update trap where a long-running Python process pulls a newer runner file but continues executing the old in-memory code.
+
+Examples:
+
+    automation/run_latest.sh prepare --push
+    automation/run_latest.sh resume --push
+    automation/run_latest.sh auto --push
+
+The systemd oneshot ExecStart is also pinned to this launcher by the v2 installer.
