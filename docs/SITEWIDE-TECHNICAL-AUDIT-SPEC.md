@@ -141,8 +141,12 @@ Sitewide generators/plugins/custom filters:
 - WAF/CDN blocks to search crawlers if evidence available
 - accidental auth
 - bot access logs where useful
+- Googlebot access where relevant
+- اگر هدف حضور در ChatGPT Search است: OAI-SearchBot robots/access/IP behavior جداگانه بررسی شود
+- GPTBot (training control) با OAI-SearchBot (Search) یکی فرض نشود
+- ChatGPT-User نیز crawler خودکار Search محسوب نشود
 
-این بخش security audit کامل سرور نیست.
+این بخش security audit کامل سرور نیست و سیاست training نباید به‌اشتباه به‌عنوان سیاست Search گزارش شود.
 
 ## M. Output
 

@@ -41,6 +41,12 @@
 - [AI features and your website](https://developers.google.com/search/docs/appearance/ai-features)
 - [Optimizing for generative AI features](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
 
+## OpenAI Search Crawlers
+
+- [OpenAI Crawlers](https://developers.openai.com/api/docs/bots)
+
+نکته: OAI-SearchBot برای Search و GPTBot برای training controls کاربردهای مستقل دارند؛ قبل از هر تصمیم robots.txt مستندات جاری دوباره بررسی شود.
+
 ## Search Console API
 
 - [Search Analytics query](https://developers.google.com/webmaster-tools/v1/searchanalytics/query)

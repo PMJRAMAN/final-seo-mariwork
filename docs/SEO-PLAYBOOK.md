@@ -104,6 +104,8 @@ Accepted baseline:
 - structured sections
 - visible content and structured data consistent
 - no invented facts
+- Search crawler access و training crawler policy دو موضوع جدا هستند
+- اگر ChatGPT Search در scope باشد، OAI-SearchBot accessibility مستقلاً audit می‌شود؛ GPTBot policy جای آن را نمی‌گیرد
 
 ## 17. Content Automation
 

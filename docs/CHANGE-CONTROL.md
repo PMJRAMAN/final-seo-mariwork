@@ -49,3 +49,12 @@
 دارد.
 
 پرونده قدیمی صرفاً برای cosmetic update migrate نمی‌شود.
+
+
+## 6. Concurrent Changes
+
+برای جلوگیری از attribution و regression مبهم:
+- روی یک family/subsystem هم‌زمان چند systemic implementation مستقل اجرا نشود مگر coordination صریح وجود داشته باشد.
+- هر active systemic change باید ID و status داشته باشد.
+- implementation جدید باید active changes همان family/template/plugin را بررسی کند.
+- تغییرهای unrelated که measurement یکدیگر را مخدوش می‌کنند تا حد امکان جدا شوند.
