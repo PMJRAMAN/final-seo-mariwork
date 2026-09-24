@@ -271,7 +271,7 @@ def fetch_evidence(row):
             stripped=re.sub(r"<script[^>]*>.*?</script>|<style[^>]*>.*?</style>"," ",text,flags=re.I|re.S)
             stripped=re.sub(r"<[^>]+>"," ",stripped); stripped=" ".join(stripped.split())
             headings=[]
-            for hm in re.finditer(r"<(h[1-3])[^>]*>(.*?)</\\1>",text,re.I|re.S):
+            for hm in re.finditer(r"<(h[1-3])[^>]*>(.*?)</\1>",text,re.I|re.S):
                 clean=" ".join(re.sub(r"<[^>]+>"," ",hm.group(2)).split())[:400]
                 if clean: headings.append({"tag":hm.group(1).lower(),"text":clean})
                 if len(headings)>=20: break
