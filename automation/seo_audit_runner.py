@@ -105,7 +105,7 @@ def codex_args():
 
 def run_codex(wt,prompt,label):
     log=state_dir()/"logs"/f"{int(time.time())}-{re.sub(r'[^A-Za-z0-9._-]+','-',label)}.jsonl"
-    child_env={"HOME":str(EXPECTED_HOME),"CODEX_HOME":str(EXPECTED_CODEX_HOME),"PATH":"/usr/local/bin:/usr/bin:/bin","LANG":"C.UTF-8"}
+    child_env={"HOME":str(EXPECTED_HOME),"CODEX_HOME":str(EXPECTED_CODEX_HOME),"PATH":"/usr/local/bin:/usr/bin:/bin","LANG":"C.UTF-8","PYTHONDONTWRITEBYTECODE":"1"}
     p=subprocess.Popen(codex_args(),cwd=str(wt),env=child_env,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,bufsize=1)
     assert p.stdin and p.stdout
     p.stdin.write(prompt); p.stdin.close()

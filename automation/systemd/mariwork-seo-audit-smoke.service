@@ -14,6 +14,7 @@ Environment=MARIWORK_SEO_RUNNER_STATE=/home/seo-audit/.local/state/mariwork-seo-
 Environment=MARIWORK_SEO_ISOLATED_RUNTIME=1
 Environment=PATH=/usr/local/bin:/usr/bin:/bin
 Environment=LANG=C.UTF-8
+Environment=PYTHONDONTWRITEBYTECODE=1
 UMask=0077
 ExecStart=/usr/bin/python3 /home/seo-audit/Final-SEO-Codex/automation/seo_audit_runner.py auto --max-jobs 1 --push
 NoNewPrivileges=true
@@ -36,4 +37,3 @@ ReadWritePaths=/home/seo-audit/Final-SEO-Codex /home/seo-audit/.local/state/mari
 TimeoutStartSec=infinity
 StandardOutput=journal
 StandardError=journal
-
