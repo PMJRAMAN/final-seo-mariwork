@@ -118,11 +118,11 @@ def drop_worktree(r,wt):
     cmd(["git","worktree","remove","--force",str(wt)],cwd=r,check=False)
     shutil.rmtree(wt,ignore_errors=True)
 
-def codex_args():
+def codex_args(effort_override=None):
     a=["codex","exec","--json","--sandbox","workspace-write",
        "-c",'approval_policy="never"',"-c","sandbox_workspace_write.network_access=true"]
     model=os.environ.get("MARIWORK_CODEX_MODEL","").strip()
-    effort=os.environ.get("MARIWORK_CODEX_REASONING","medium").strip() or "medium"
+    effort=(effort_override or os.environ.get("MARIWORK_CODEX_REASONING","medium")).strip() or "medium"
     if model: a+=["--model",model]
     a+=["-c",f'model_reasoning_effort="{effort}"']
     return a+["-"]
@@ -133,16 +133,16 @@ def safe_log_line(line):
             return json.dumps({"event":"redacted_sensitive_codex_event"},ensure_ascii=False)+"\n"
     return line if line.endswith("\n") else line+"\n"
 
-def run_codex(wt,prompt,label):
+def run_codex(wt,prompt,label,effort_override=None):
     log=state_dir()/"logs"/f"{int(time.time())}-{re.sub(r'[^A-Za-z0-9._-]+','-',label)}.jsonl"
     child_env={"HOME":str(EXPECTED_HOME),"CODEX_HOME":str(EXPECTED_CODEX_HOME),"PATH":"/usr/local/bin:/usr/bin:/bin","LANG":"C.UTF-8","PYTHONDONTWRITEBYTECODE":"1"}
-    p=subprocess.Popen(codex_args(),cwd=str(wt),env=child_env,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,bufsize=1)
+    p=subprocess.Popen(codex_args(effort_override),cwd=str(wt),env=child_env,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,bufsize=1)
     assert p.stdin and p.stdout
     p.stdin.write(prompt); p.stdin.close()
     buf=[]; output_chars=0
     fd=os.open(log,os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
     with os.fdopen(fd,"w",encoding="utf-8") as f:
-        f.write(json.dumps({"event":"runner_meta","phase":"started","job":label,"reasoning":os.environ.get("MARIWORK_CODEX_REASONING","medium") or "medium"},ensure_ascii=False)+"\n"); f.flush()
+        f.write(json.dumps({"event":"runner_meta","phase":"started","job":label,"reasoning":effort_override or os.environ.get("MARIWORK_CODEX_REASONING","medium") or "medium"},ensure_ascii=False)+"\n"); f.flush()
         for line in p.stdout:
             buf.append(line); output_chars+=len(line); f.write(safe_log_line(line)); f.flush()
         rc=p.wait()
@@ -445,7 +445,7 @@ def do_foundation(r,job,push,s):
 def do_page_batch(r,items,push,s,max_retries):
     ids=[(row.get("entity_id") or "").strip() for row,_ in items]; label="batch-"+ids[0]+"-"+str(len(ids)); wt=add_worktree(r,label)
     try:
-        rc,out,log=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label)
+        rc,out,log=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"low")
         s["last_job"]={"type":"page_batch","ids":ids,"count":len(ids),"log":str(log)}; save_state(s)
         if rc:
             k=failure_kind(out)
