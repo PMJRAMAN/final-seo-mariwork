@@ -32,7 +32,7 @@
 - [x] A-007 Google official-reference rule
 - [x] A-008 Rank Math-first SEO ownership rule
 - [ ] A-009 Autonomous Round-1 Audit Orchestration — deploy/verify runner; no Production writes
-- [ ] A-010 Build complete URL/Entity Inventory
+- [x] A-010 Build complete URL/Entity Inventory
 - [ ] A-011 Map all current page types / taxonomies / custom post types
 - [ ] A-012 Map legacy URLs from Search Console and redirects
 - [ ] A-013 Sitewide Technical SEO Baseline
