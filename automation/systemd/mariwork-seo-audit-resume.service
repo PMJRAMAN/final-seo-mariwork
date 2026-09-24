@@ -15,8 +15,10 @@ Environment=MARIWORK_SEO_ISOLATED_RUNTIME=1
 Environment=PATH=/usr/local/bin:/usr/bin:/bin
 Environment=LANG=C.UTF-8
 Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=MARIWORK_CODEX_REASONING=medium
+Environment=MARIWORK_EVIDENCE_WORKERS=6
 UMask=0077
-ExecStart=/usr/bin/python3 /home/seo-audit/Final-SEO-Codex/automation/seo_audit_runner.py resume --push
+ExecStart=/usr/bin/python3 /home/seo-audit/Final-SEO-Codex/automation/seo_audit_runner.py resume --push --batch-size 10
 NoNewPrivileges=true
 PrivateTmp=true
 PrivateDevices=true
@@ -29,7 +31,7 @@ ProtectKernelLogs=true
 ProtectClock=true
 RestrictSUIDSGID=true
 LockPersonality=true
-RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
 IPAddressDeny=127.0.0.0/8 ::1/128
 IPAddressAllow=127.0.0.53/32
 InaccessiblePaths=/home/mariwork /root /run/mysqld /var/lib/mysql /etc/mysql
