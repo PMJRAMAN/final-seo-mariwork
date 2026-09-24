@@ -81,6 +81,8 @@ Manifest، rules، templates، change control و specs تثبیت می‌شون�
 - cannibalization risks
 - hub/support relationships
 - product ↔ education linking opportunities
+- Internal Link Requirement Matrix with CORE/MANDATORY, FAMILY-SPECIFIC and CONTEXTUAL/OPTIONAL rules
+- consistency coverage so equivalent products do not randomly miss required educational links
 
 Query Map داده را جایگزین نمی‌کند؛ فقط تصمیم مستند بر اساس evidence است.
 

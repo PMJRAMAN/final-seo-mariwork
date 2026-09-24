@@ -71,6 +71,11 @@
 - [ ] B0-013 Store internal-link baseline
 - [ ] B0-014 Store schema ownership baseline
 - [ ] B0-015 Store Rank Math settings baseline
+- [ ] B0-016 Build Internal Link Requirement Matrix for Store ↔ Academy/Blog relationships
+- [ ] B0-017 Classify links by rule: CORE/MANDATORY, FAMILY-SPECIFIC, CONTEXTUAL/OPTIONAL
+- [ ] B0-018 Audit every product family for missing mandatory links and inconsistent link coverage
+- [ ] B0-019 Define reverse links from Academy/Articles to relevant Product/Category destinations
+- [ ] B0-020 Approve target internal-link architecture before mass page implementation
 
 ## B1 — Product pilot
 
@@ -356,6 +361,8 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 - [ ] I-006 sitemap validation
 - [ ] I-007 robots/meta/X-Robots
 - [ ] I-008 internal linking/orphans
+- [ ] I-008A validate mandatory-link coverage against the approved Internal Link Requirement Matrix
+- [ ] I-008B validate no family has inconsistent core-link coverage without a documented exception
 - [ ] I-009 structured-data regression
 - [ ] I-010 Rank Math ownership regression
 - [ ] I-011 duplicate title/meta review
