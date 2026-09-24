@@ -20,6 +20,7 @@ EXPECTED_CODEX_HOME=EXPECTED_HOME/".codex"
 EVIDENCE_FILE=Path("data/normalized/round1-page-evidence.jsonl")
 EVIDENCE_SUMMARY=Path("data/normalized/round1-evidence-summary.json")
 FOUNDATION_CONTEXT=Path("data/normalized/round1-foundation-context.json")
+USAGE_REPORT=Path("data/telemetry/round1-usage.json")
 EVIDENCE_VERSION="2.2"
 DEFAULT_MODEL="gpt-5.6-luna"
 DEFAULT_BATCH_SIZE=15
@@ -178,6 +179,31 @@ def record_usage(state,label,job_type,usage):
     agg["uncached_input_tokens"]=max(0,agg["input_tokens"]-agg["cached_input_tokens"])
     agg["cache_hit_ratio"]=round(agg["cached_input_tokens"]/agg["input_tokens"],4) if agg["input_tokens"] else 0.0
     state["last_usage"]=entry
+
+
+def write_usage_snapshot(wt,state):
+    """Write non-sensitive aggregate/job token telemetry for GitHub-side monitoring."""
+    hist=[]
+    for x in state.get("usage_history",[]):
+        hist.append({k:x.get(k) for k in (
+            "ts","label","job_type","turns","input_tokens","cached_input_tokens",
+            "uncached_input_tokens","cache_write_input_tokens","output_tokens",
+            "reasoning_output_tokens","cache_hit_ratio","reported_total_tokens","rate_limits"
+        ) if k in x})
+    payload={
+        "telemetry_version":"1",
+        "runner_version":"2.3-low-consumption-telemetry",
+        "model":DEFAULT_MODEL,
+        "reasoning":"medium",
+        "scope":"Autonomous Round-1 model calls observed since telemetry deployment only",
+        "updated_at":int(time.time()),
+        "totals":state.get("usage_totals",{}),
+        "last_job":state.get("last_usage"),
+        "jobs":hist,
+        "note":"Token telemetry only. No prompts, responses, session IDs, credentials or customer data are stored here."
+    }
+    p=wt/USAGE_REPORT; p.parent.mkdir(parents=True,exist_ok=True)
+    p.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
 def run_codex(wt,prompt,label,effort_override=None):
     log=state_dir()/"logs"/f"{int(time.time())}-{re.sub(r'[^A-Za-z0-9._-]+','-',label)}.jsonl"
@@ -508,7 +534,7 @@ FOR EACH ENTITY: preserve identity/history limits; evaluate evidence; record evi
 
 def validate_foundation(wt,job):
     files=changes(wt)
-    bad=[x for x in files if not allowed(x,job["allowed_globs"])]
+    bad=[x for x in files if x!=str(USAGE_REPORT) and not allowed(x,job["allowed_globs"])]
     if bad: raise RuntimeError(f"unauthorized changes: {bad}")
     if not files: raise RuntimeError("no repository changes")
     for rel in job.get("required_files",[]):
@@ -545,7 +571,7 @@ def validate_sensitive_outputs(wt,files):
         raise RuntimeError("sensitive-output scan blocked commit; categories only: "+", ".join(details))
 
 def validate_pages(wt,items):
-    dossiers={d for _,d in items}; ok=dossiers|{"registry/SYSTEMIC-FINDINGS.md"}; files=changes(wt)
+    dossiers={d for _,d in items}; ok=dossiers|{"registry/SYSTEMIC-FINDINGS.md",str(USAGE_REPORT)}; files=changes(wt)
     bad=[x for x in files if x not in ok]
     if bad: raise RuntimeError(f"unauthorized page-audit changes: {bad}")
     for _,dossier in items:
@@ -629,6 +655,7 @@ def do_foundation(r,job,push,s):
         if rc:
             k=failure_kind(out); s["paused"]=True; s["pause_reason"]=f"{k}:{job['id']}"; save_state(s)
             print(f"PAUSED {k} {job['id']} log={log}"); return False
+        write_usage_snapshot(wt,s)
         validate_foundation(wt,job)
         for t in job_tasks(job): mark_done(wt/"MASTER-TODO.md",t)
         sha=commit_ff(r,wt,f"{job['id']}: compact autonomous round-1 baseline",push)
@@ -651,6 +678,7 @@ def do_page_batch(r,items,push,s,max_retries):
             for entity in ids:
                 f=s.setdefault("page_failures",{}).setdefault(entity,{"attempts":0,"blocked":False,"last_error":""}); f["attempts"]+=1; f["last_error"]=f"CODEX_BATCH_EXIT_{rc}"; f["blocked"]=f["attempts"]>=max_retries
             save_state(s); return True
+        write_usage_snapshot(wt,s)
         validate_pages(wt,items)
         for row,dossier in items: update_inv_dossier(wt,(row.get("entity_id") or "").strip(),dossier)
         sha=commit_ff(r,wt,f"Audit batch {ids[0]}..: {len(ids)} autonomous Codex round-1 dossiers",push)

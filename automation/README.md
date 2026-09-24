@@ -77,3 +77,10 @@ Use:
 to inspect the current telemetry.
 
 Telemetry starts when v2.3 is deployed; it cannot reconstruct exact token usage for earlier jobs from repository history alone.
+
+
+A non-sensitive Git-tracked summary is also written after each successful model job to:
+
+    data/telemetry/round1-usage.json
+
+This allows remote monitoring of token trends without exposing prompts, response bodies, session IDs or credentials. Failed/limit-interrupted jobs remain available in the private runtime state/logs even if no repository commit is produced.
