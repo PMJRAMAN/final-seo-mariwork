@@ -62,7 +62,7 @@ Model در repo hard-code نشده است:
 
 ```bash
 export MARIWORK_CODEX_MODEL="MODEL_ID"
-export MARIWORK_CODEX_REASONING="high"
+export MARIWORK_CODEX_REASONING="medium"
 ```
 
 اگر unset باشد، تنظیم فعلی Codex استفاده می‌شود.
@@ -101,3 +101,16 @@ Codex JSONL output is not persisted. Runner state and restricted logs live in
 `/home/seo-audit/.local/state/mariwork-seo-runner/`.
 
 جزئیات setup سرور در `tasks/A-009-ROUND1-AUTOMATION.md`.
+
+
+## Low-cost v2 execution
+
+از 2026-09-24، Round 1 از الگوی کم‌مصرف استفاده می‌کند:
+- reasoning پیش‌فرض Codex = `medium`؛
+- evidence عمومی صفحات یک‌بار با collector قطعی Python جمع می‌شود و در `data/normalized/round1-page-evidence.jsonl` ذخیره می‌شود؛
+- A-013 و audit صفحات evidence موجود را reuse می‌کنند و broad recrawl توسط مدل ممنوع است؛
+- page audits به‌صورت پیش‌فرض batch ده‌تایی اجرا می‌شوند، ولی برای هر entity dossier مستقل ساخته می‌شود؛
+- JSONL واقعی Codex برای usage/diagnostics خارج repo نگه‌داری می‌شود و خطوطی که secret/PII scanner را trigger کنند redacted می‌شوند؛
+- limit/auth همچنان queue را pause می‌کند. deterministic snapshot قبل از synthesis commit می‌شود تا با limit از دست نرود.
+
+Batch size را در صورت نیاز می‌توان با `--batch-size N` تغییر داد. مقدار پیش‌فرض 10 است.

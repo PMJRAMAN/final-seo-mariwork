@@ -15,8 +15,10 @@ Environment=MARIWORK_SEO_ISOLATED_RUNTIME=1
 Environment=PATH=/usr/local/bin:/usr/bin:/bin
 Environment=LANG=C.UTF-8
 Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=MARIWORK_CODEX_REASONING=medium
+Environment=MARIWORK_EVIDENCE_WORKERS=6
 UMask=0077
-ExecStart=/usr/bin/python3 /home/seo-audit/Final-SEO-Codex/automation/seo_audit_runner.py auto --push
+ExecStart=/usr/bin/python3 /home/seo-audit/Final-SEO-Codex/automation/seo_audit_runner.py auto --push --batch-size 10
 NoNewPrivileges=true
 PrivateTmp=true
 PrivateDevices=true
