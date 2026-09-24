@@ -29,8 +29,11 @@ Manifest، rules، templates، change control و specs تثبیت می‌شون�
 - sitemap
 - legacy URL
 - dossier path
+- final disposition (در ابتدا NOT_DECIDED)
 
 در `registry/URL-INVENTORY.csv`.
+
+برای صفحات محتوایی/canonical entityها disposition فردی ثبت می‌شود. برای URL spaceهای ماشینی مثل facet combinations، policy سراسری/خانوادگی می‌تواند کل space را پوشش دهد و لازم نیست برای هر ترکیب بی‌نهایت dossier جدا ساخته شود.
 
 ## Phase 2 — Sitewide Technical Baseline
 

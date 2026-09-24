@@ -9,6 +9,7 @@ current_url:
 canonical_url:
 legacy_urls: []
 workflow_status: DISCOVERED
+final_disposition: NOT_DECIDED
 blocked: false
 blockers: []
 priority:
@@ -28,6 +29,7 @@ last_updated:
 ## 0. State
 
 - Workflow status:
+- Final disposition: NOT_DECIDED / OPTIMIZE / KEEP_AS_IS / REDIRECT / NOINDEX / CANONICALIZE / REMOVE_410 / BLOCKED_NEEDS_DECISION
 - Blocked:
 - Framework/schema:
 
