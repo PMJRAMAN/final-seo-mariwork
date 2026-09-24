@@ -4,31 +4,31 @@
   "model": "gpt-5.6-luna",
   "reasoning": "medium",
   "scope": "Autonomous Round-1 model calls observed since telemetry deployment only",
-  "updated_at": 1790285661,
+  "updated_at": 1790286033,
   "totals": {
-    "input_tokens": 11469631,
-    "cached_input_tokens": 10211840,
+    "input_tokens": 12901491,
+    "cached_input_tokens": 11501312,
     "cache_write_input_tokens": 0,
-    "output_tokens": 200028,
-    "reasoning_output_tokens": 24594,
-    "turns": 19,
-    "jobs": 19,
-    "uncached_input_tokens": 1257791,
-    "cache_hit_ratio": 0.8903
+    "output_tokens": 218507,
+    "reasoning_output_tokens": 28670,
+    "turns": 21,
+    "jobs": 21,
+    "uncached_input_tokens": 1400179,
+    "cache_hit_ratio": 0.8915
   },
   "last_job": {
-    "ts": 1790285661,
-    "label": "batch-URL-547bd294fbdd-15",
+    "ts": 1790286033,
+    "label": "batch-WP-32857-15",
     "job_type": "page_batch",
-    "input_tokens": 683020,
-    "cached_input_tokens": 612608,
+    "input_tokens": 897073,
+    "cached_input_tokens": 821760,
     "cache_write_input_tokens": 0,
-    "output_tokens": 11423,
-    "reasoning_output_tokens": 1364,
+    "output_tokens": 10625,
+    "reasoning_output_tokens": 2358,
     "turns": 1,
-    "uncached_input_tokens": 70412,
-    "cache_hit_ratio": 0.8969,
-    "reported_total_tokens": 694443
+    "uncached_input_tokens": 75313,
+    "cache_hit_ratio": 0.916,
+    "reported_total_tokens": 907698
   },
   "jobs": [
     {
@@ -296,6 +296,34 @@
       "reasoning_output_tokens": 1364,
       "cache_hit_ratio": 0.8969,
       "reported_total_tokens": 694443
+    },
+    {
+      "ts": 1790285819,
+      "label": "batch-WP-32857-15",
+      "job_type": "page_batch",
+      "turns": 1,
+      "input_tokens": 534787,
+      "cached_input_tokens": 467712,
+      "uncached_input_tokens": 67075,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 7854,
+      "reasoning_output_tokens": 1718,
+      "cache_hit_ratio": 0.8746,
+      "reported_total_tokens": 542641
+    },
+    {
+      "ts": 1790286033,
+      "label": "batch-WP-32857-15",
+      "job_type": "page_batch",
+      "turns": 1,
+      "input_tokens": 897073,
+      "cached_input_tokens": 821760,
+      "uncached_input_tokens": 75313,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 10625,
+      "reasoning_output_tokens": 2358,
+      "cache_hit_ratio": 0.916,
+      "reported_total_tokens": 907698
     }
   ],
   "note": "Token telemetry only. No prompts, responses, session IDs, credentials or customer data are stored here."
