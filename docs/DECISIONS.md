@@ -151,3 +151,20 @@ Round-1 evidence collection is deterministic by default and Codex is reserved fo
 - raw Codex JSONL is retained privately for observability.
 
 This is an execution-efficiency change only. Dual Audit, complete-site coverage, Production read-only rules and human/ChatGPT approval authority are unchanged.
+
+
+## SEO-018 — GPT-5.6 Luna Medium for Autonomous Round-1
+**Status:** Accepted
+**Date:** 2026-09-24
+**Scope:** PROCESS / OPERATIONS
+**Supersedes:** SEO-017 only for autonomous model selection and page-batch reasoning level
+
+All autonomous Round-1 model calls are pinned to `gpt-5.6-luna` with `medium` reasoning.
+
+- Foundation synthesis uses `gpt-5.6-luna` / medium.
+- Page-audit batches also use `gpt-5.6-luna` / medium.
+- Deterministic/no-model jobs remain deterministic.
+- The runner must refuse a different configured model during autonomous execution.
+- Evidence reuse, grouped calls, batch sizing, Production read-only rules and human approval gates remain unchanged.
+
+This is an execution-model decision only and does not change SEO authority, lifecycle, audit coverage or Production permissions.

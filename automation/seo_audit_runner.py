@@ -20,8 +20,8 @@ EXPECTED_CODEX_HOME=EXPECTED_HOME/".codex"
 EVIDENCE_FILE=Path("data/normalized/round1-page-evidence.jsonl")
 EVIDENCE_SUMMARY=Path("data/normalized/round1-evidence-summary.json")
 FOUNDATION_CONTEXT=Path("data/normalized/round1-foundation-context.json")
-EVIDENCE_VERSION="2.1"
-DEFAULT_MODEL="gpt-6-luna"
+EVIDENCE_VERSION="2.2"
+DEFAULT_MODEL="gpt-5.6-luna"
 DEFAULT_BATCH_SIZE=15
 MAX_HTML_BYTES=1500000
 SENSITIVE_ENV_NAME=re.compile(r"(?i)(?:PASSWORD|PASSWD|DATABASE_URL|DB_HOST|DB_USER|DB_PASS|MYSQL|GH_TOKEN|GITHUB_TOKEN|OPENAI_API_KEY|CODEX_API_KEY|ACCESS_TOKEN|AUTHORIZATION|COOKIE|SECRET)")
@@ -596,7 +596,7 @@ def do_foundation(r,job,push,s):
 def do_page_batch(r,items,push,s,max_retries):
     ids=[(row.get("entity_id") or "").strip() for row,_ in items]; label="batch-"+ids[0]+"-"+str(len(ids)); wt=add_worktree(r,label)
     try:
-        rc,out,log=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"low")
+        rc,out,log=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"medium")
         s["last_job"]={"type":"page_batch","ids":ids,"count":len(ids),"log":str(log)}; save_state(s)
         if rc:
             k=failure_kind(out)
@@ -618,10 +618,10 @@ def do_page_batch(r,items,push,s,max_retries):
 
 def show_status(r,p,s):
     todo=(r/"MASTER-TODO.md").read_text(encoding="utf-8")
-    print("runner_version: 2.1-low-consumption")
+    print("runner_version: 2.2-low-consumption")
     print("configured_model:",os.environ.get("MARIWORK_CODEX_MODEL",DEFAULT_MODEL) or DEFAULT_MODEL)
     print("foundation_reasoning: medium")
-    print("page_reasoning: low")
+    print("page_reasoning: medium")
     print("page_batch_default:",DEFAULT_BATCH_SIZE)
     print(f"paused: {s.get('paused')}\npause_reason: {s.get('pause_reason')}\nlast_job: {json.dumps(s.get('last_job'),ensure_ascii=False)}")
     for j in p["foundation_jobs"]:

@@ -1,6 +1,6 @@
 {
-  "version": "2.1-low-consumption",
-  "purpose": "Autonomous Round-1 with GPT-6 Luna pinned by default, deterministic compact evidence/context, grouped Foundation synthesis, Store-first batched page audits, and no Production writes.",
+  "version": "2.2-low-consumption",
+  "purpose": "Autonomous Round-1 with GPT-5.6 Luna pinned for all model calls at medium reasoning, deterministic compact evidence/context, grouped Foundation synthesis, Store-first batched page audits, and no Production writes.",
   "foundation_jobs": [
     {
       "id": "A-010",

@@ -12,8 +12,12 @@ fi
 git fetch origin main
 git merge --ff-only origin/main
 
-# Compile the exact runner revision that will be executed. This is intentionally
-# outside Python so self-updates are applied before the interpreter loads code.
-python3 -m py_compile automation/seo_audit_runner.py
+# Validate the exact runner revision without writing __pycache__. This is intentionally
+# outside the runner so self-updates are applied before the interpreter loads code.
+python3 - <<'PY'
+from pathlib import Path
+p=Path("automation/seo_audit_runner.py")
+compile(p.read_text(encoding="utf-8"), str(p), "exec")
+PY
 
 exec python3 automation/seo_audit_runner.py "$@"

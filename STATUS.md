@@ -87,6 +87,8 @@ Runner v2 is now present in the repository and must be deployed before A-013 res
 Current paused A-013 state should be resumed only after A-009B deployment.
 
 
-## Low-consumption v2.1 hardening
+## Low-consumption v2.2 model policy
 
-Pre-resume review added four safeguards: explicit `gpt-6-luna` default, compact deterministic Foundation context (no full inventory/ledger rereads), trimmed page-batch evidence payloads, and enforced Store-first page ordering. Foundation remains medium reasoning; repetitive page batches remain low reasoning. No authority or Production-write rule changed.
+Pre-resume review now pins all autonomous Round-1 model calls to `gpt-5.6-luna` with `medium` reasoning, per project decision. Compact deterministic Foundation context, trimmed page-batch evidence payloads, Store-first ordering and disabled model network remain unchanged.
+
+The launcher/installer were also hardened so syntax validation does not create `__pycache__` artifacts that can trip the clean-repository guard, and repository updates are performed as the dedicated `seo-audit` user. No authority or Production-write rule changed.
