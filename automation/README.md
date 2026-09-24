@@ -72,6 +72,7 @@ export MARIWORK_CODEX_REASONING="high"
 - هر job در Git worktree موقت اجرا می‌شود.
 - Codex فقط مسیرهای allowlist همان job را می‌تواند تغییر دهد؛ validator تغییر خارج scope را رد می‌کند.
 - repo اصلی قبل از هر job باید clean باشد.
+- پیش از هر job، runner در branch `main` از `origin/main` fetch می‌کند و فقط fast-forward را می‌پذیرد؛ خطای احراز هویت یا divergence صف را pause می‌کند.
 - هر job موفق commit مستقل دارد.
 - `--push` بعد از هر commit موفق branch فعلی را push می‌کند.
 - autonomous worker باید تحت حساب/credentialی اجرا شود که Production write و DB-write در اختیارش نباشد.

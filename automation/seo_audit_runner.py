@@ -70,6 +70,14 @@ def ensure_clean(r):
     out=cmd(["git","status","--porcelain=v1","--untracked-files=all"],cwd=r)[1].strip()
     if out: raise RuntimeError("runner requires a clean repository:\n"+out)
 
+def sync_latest(r):
+    ensure_clean(r)
+    branch=cmd(["git","branch","--show-current"],cwd=r)[1].strip()
+    if branch!="main": raise RuntimeError("autonomous jobs require the main branch")
+    cmd(["git","fetch","origin","main"],cwd=r)
+    cmd(["git","merge","--ff-only","FETCH_HEAD"],cwd=r)
+    ensure_clean(r)
+
 def done(todo,task_id):
     return re.search(rf"^- \[x\] {re.escape(task_id)}\b",todo,re.M) is not None
 
@@ -420,6 +428,10 @@ def main():
     while a.max_jobs==0 or count<a.max_jobs:
         if s.get("paused"):
             print("PAUSED: "+str(s.get("pause_reason"))); print("resolve cause then run: python3 automation/seo_audit_runner.py resume --push"); return 75
+        try: sync_latest(r)
+        except Exception:
+            s["paused"]=True; s["pause_reason"]="REMOTE_SYNC_FAILED"; save_state(s)
+            print("PAUSED REMOTE_SYNC_FAILED; resolve Git fetch/fast-forward, then resume"); return 75
         if a.action in ("auto","resume","foundation") and not foundation_complete(r,p):
             j=next_foundation(r,p)
             if not j: break
