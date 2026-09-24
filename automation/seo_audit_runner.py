@@ -583,9 +583,24 @@ def main():
     for name in ("auto","foundation","pages","resume"):
         p=sp.add_parser(name); p.add_argument("--max-jobs",type=int,default=0); p.add_argument("--push",action="store_true"); p.add_argument("--max-retries",type=int,default=2); p.add_argument("--batch-size",type=int,default=DEFAULT_BATCH_SIZE)
     sp.add_parser("status")
+    pp=sp.add_parser("prepare"); pp.add_argument("--push",action="store_true"); pp.add_argument("--refresh",action="store_true")
     rp=sp.add_parser("retry-page"); rp.add_argument("entity_id")
     a=ap.parse_args(); r=root(); p=plan(r); s=load_state()
     if a.action=="status": show_status(r,p,s); return 0
+    if a.action=="prepare":
+        preflight(r); sync_latest(r)
+        if a.refresh and (r/EVIDENCE_FILE).exists():
+            wt=add_worktree(r,"refresh-evidence")
+            try:
+                pth=wt/EVIDENCE_FILE
+                if pth.exists(): pth.unlink()
+                build_evidence_snapshot(wt)
+                sha=commit_ff(r,wt,"Refresh deterministic Round-1 evidence snapshot",a.push)
+                print("PASS EVIDENCE REFRESH",sha)
+            finally: drop_worktree(r,wt)
+        else:
+            if not ensure_evidence_snapshot(r,a.push,s): return 75
+        show_status(r,p,s); return 0
     if a.action=="retry-page":
         s.get("page_failures",{}).pop(a.entity_id,None); save_state(s); print("cleared "+a.entity_id); return 0
     if a.action=="resume": s["paused"]=False; s["pause_reason"]=None; save_state(s)
