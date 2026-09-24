@@ -4,31 +4,31 @@
   "model": "gpt-5.6-luna",
   "reasoning": "medium",
   "scope": "Autonomous Round-1 model calls observed since telemetry deployment only",
-  "updated_at": 1790283949,
+  "updated_at": 1790284147,
   "totals": {
-    "input_tokens": 6631170,
-    "cached_input_tokens": 5871104,
+    "input_tokens": 7579652,
+    "cached_input_tokens": 6745856,
     "cache_write_input_tokens": 0,
-    "output_tokens": 115549,
-    "reasoning_output_tokens": 13234,
-    "turns": 11,
-    "jobs": 11,
-    "uncached_input_tokens": 760066,
-    "cache_hit_ratio": 0.8854
+    "output_tokens": 124745,
+    "reasoning_output_tokens": 15123,
+    "turns": 12,
+    "jobs": 12,
+    "uncached_input_tokens": 833796,
+    "cache_hit_ratio": 0.89
   },
   "last_job": {
-    "ts": 1790283949,
-    "label": "batch-WP-14450-15",
+    "ts": 1790284147,
+    "label": "batch-WP-27051-15",
     "job_type": "page_batch",
-    "input_tokens": 742924,
-    "cached_input_tokens": 673792,
+    "input_tokens": 948482,
+    "cached_input_tokens": 874752,
     "cache_write_input_tokens": 0,
-    "output_tokens": 15298,
-    "reasoning_output_tokens": 1320,
+    "output_tokens": 9196,
+    "reasoning_output_tokens": 1889,
     "turns": 1,
-    "uncached_input_tokens": 69132,
-    "cache_hit_ratio": 0.9069,
-    "reported_total_tokens": 758222
+    "uncached_input_tokens": 73730,
+    "cache_hit_ratio": 0.9223,
+    "reported_total_tokens": 957678
   },
   "jobs": [
     {
@@ -184,6 +184,20 @@
       "reasoning_output_tokens": 1320,
       "cache_hit_ratio": 0.9069,
       "reported_total_tokens": 758222
+    },
+    {
+      "ts": 1790284147,
+      "label": "batch-WP-27051-15",
+      "job_type": "page_batch",
+      "turns": 1,
+      "input_tokens": 948482,
+      "cached_input_tokens": 874752,
+      "uncached_input_tokens": 73730,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9196,
+      "reasoning_output_tokens": 1889,
+      "cache_hit_ratio": 0.9223,
+      "reported_total_tokens": 957678
     }
   ],
   "note": "Token telemetry only. No prompts, responses, session IDs, credentials or customer data are stored here."
