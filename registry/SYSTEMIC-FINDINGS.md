@@ -107,6 +107,17 @@ google_basis: GOOGLE_CONSISTENT · google_reference: https://developers.google.c
 seo_owner_current: UNKNOWN_NEEDS_VERIFICATION · seo_owner_target: RANK_MATH where supported; otherwise documented owner
 rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Production configuration and installed modules unavailable.
 
+### SYS-010 — Article image ALT coverage gaps in supplied batch
+
+id: SYS-010 · severity: P2 · scope: FAMILY · family: articles · status: OPEN · evidence_class: MEASURED · confidence: HIGH
+source_refs: Round-1 supplied evidence for WP-13295, WP-13305, WP-13312, WP-13316, WP-13318, WP-13320, WP-22192, WP-22193, WP-22194, WP-22196, WP-22197, WP-26387.
+impact: The supplied batch reports 83 images missing ALT out of 133 images; image purpose and decorative status were not independently inspected.
+recommendation: INITIAL — review article images as a family, assign descriptive ALT only when the image conveys useful page information, and retain empty ALT for decorative images; do not invent image facts.
+acceptance_criteria: Article-family regression sample records each image's meaningful/decorative decision, ALT output, and no duplicate or invented descriptions.
+google_basis: GOOGLE_RECOMMENDED · google_reference: https://developers.google.com/search/docs/appearance/google-images
+seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION · seo_owner_target: CONTENT for image ALT decisions; RANK_MATH only for metadata concerns it actually owns
+rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Rank Math configuration and image/template ownership unavailable.
+
 ## Handoff
 
 Product Tags and Blog Tags remain family-level migration programs. Query targets, title standard, internal-link rules and technical policies remain initial candidates or blockers. No finding authorizes Production, database, WordPress, WooCommerce, Rank Math, sitemap, redirect, taxonomy or raw-export writes.
