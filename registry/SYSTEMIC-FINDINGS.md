@@ -129,6 +129,17 @@ google_basis: GOOGLE_RECOMMENDED · google_reference: https://developers.google.
 seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION · seo_owner_target: CONTENT for ALT decisions; Rank Math only for concerns it actually owns
 rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Production Rank Math configuration and image/template ownership unavailable.
 
+### SYS-012 — Empty blog category archives expose a repeated unresolved lifecycle
+
+id: SYS-012 · severity: P1 · scope: FAMILY · family: blog categories · status: BLOCKED · evidence_class: MEASURED · confidence: HIGH
+source_refs: supplied Round-1 evidence for TERM-category-18, TERM-category-1955, TERM-category-1956, TERM-category-1957, TERM-category-1982, TERM-category-1983, TERM-category-1984, TERM-category-1985; pages/category/* corresponding dossiers.
+impact: Eight category URLs return 200 with an empty/no-result archive, `follow, noindex`, no canonical, and no observed sitemap membership. The supplied evidence does not establish whether these are intentionally retained taxonomies, obsolete terms, or candidates for consolidation; no replacement mapping is proven.
+recommendation: INITIAL — complete the category-family inventory (term identity, post assignments, internal links, historical/GSC evidence and intended user value), then define one approved lifecycle policy. Any redirect, removal, indexability, canonical or sitemap change requires Second Review, Rank Math ownership verification and a migration/regression plan.
+acceptance_criteria: Every in-scope category has evidence-backed identity, item count, current status/robots/canonical/sitemap, disposition or blocker, replacement mapping where applicable, and family regression examples; no bulk Production change occurs before approval.
+google_basis: GOOGLE_CONSISTENT · google_reference: https://developers.google.com/search/docs/crawling-indexing/soft-404-errors
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION · seo_owner_target: RANK_MATH where supported; otherwise documented owner
+rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Installed Rank Math version/modules and taxonomy settings were not supplied.
+
 ## Handoff
 
 Product Tags and Blog Tags remain family-level migration programs. Query targets, title standard, internal-link rules and technical policies remain initial candidates or blockers. No finding authorizes Production, database, WordPress, WooCommerce, Rank Math, sitemap, redirect, taxonomy or raw-export writes.
