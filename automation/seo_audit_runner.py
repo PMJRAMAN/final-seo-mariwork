@@ -386,8 +386,13 @@ def next_pages(r,s,batch_size=DEFAULT_BATCH_SIZE):
 
 def page_batch_prompt(items,evidence):
     payload=[]
+    keep_fields=("entity_id","wp_id","type","family","current_url","canonical_url","intended_indexability","actual_status","sitemap","final_disposition")
     for row,dossier in items:
-        e=(row.get("entity_id") or "").strip(); payload.append({"inventory":row,"dossier":dossier,"evidence":evidence.get(e,{"status":"MISSING"})})
+        e=(row.get("entity_id") or "").strip()
+        compact_row={k:row.get(k) for k in keep_fields}
+        notes=(row.get("notes") or "").strip()
+        if notes: compact_row["notes_excerpt"]=notes[:1200]
+        payload.append({"inventory":compact_row,"dossier":dossier,"evidence":evidence.get(e,{"status":"MISSING"})})
     return f"""{COMMON}
 TASK TYPE: LOW-COST BATCH FIRST-PASS PAGE AUDIT. BATCH SIZE: {len(payload)}
 INPUT: {json.dumps(payload,ensure_ascii=False,separators=(",",":"))}
