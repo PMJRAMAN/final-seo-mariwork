@@ -1,0 +1,18 @@
+{
+  "evidence_version": "2.2",
+  "entities": 501,
+  "status_counts": {
+    "404": 58,
+    "200": 440,
+    "SKIPPED_SAFETY": 3
+  },
+  "schema_counts": {},
+  "issue_counts": {
+    "missing_title": 0,
+    "missing_meta": 289,
+    "missing_h1": 271,
+    "noindex": 286,
+    "canonical_differs": 2,
+    "http_error": 58
+  }
+}
