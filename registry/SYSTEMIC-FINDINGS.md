@@ -96,6 +96,17 @@ seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION for visible titles/links; 
 seo_owner_target: CONTENT for visible policy; RANK_MATH for approved title/meta output where capable
 rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Installed capability/current owner unavailable.
 
+### SYS-009 — Product-category sitemap membership and indexability policy are unresolved
+
+id: SYS-009 · severity: P1 · scope: FAMILY · family: product_cat · status: BLOCKED · evidence_class: OBSERVED · confidence: HIGH
+source_refs: batch TERM-product_cat-1902/1991/1992/1993/220/28 supplied evidence; MASTER-TODO B7.
+impact: All six sampled category URLs return 200 with `index, follow` and self-canonical signals, but are marked `NOT_PRESENT_IN_OBSERVED_SITEMAPS`; intended indexability and complete sitemap membership are not verified.
+recommendation: INITIAL — verify the complete sitemap set, Coverage/URL Inspection and taxonomy policy; then document the family decision and Rank Math owner before any inclusion, exclusion or robots/canonical change.
+acceptance_criteria: Family policy records intended indexability, current sitemap membership, canonical/robots output, source evidence, Rank Math capability/owner, and a regression set; no Production change occurs before approval.
+google_basis: GOOGLE_CONSISTENT · google_reference: https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION · seo_owner_target: RANK_MATH where supported; otherwise documented owner
+rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Production configuration and installed modules unavailable.
+
 ## Handoff
 
 Product Tags and Blog Tags remain family-level migration programs. Query targets, title standard, internal-link rules and technical policies remain initial candidates or blockers. No finding authorizes Production, database, WordPress, WooCommerce, Rank Math, sitemap, redirect, taxonomy or raw-export writes.

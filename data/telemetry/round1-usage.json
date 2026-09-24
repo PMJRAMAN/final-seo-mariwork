@@ -4,31 +4,31 @@
   "model": "gpt-5.6-luna",
   "reasoning": "medium",
   "scope": "Autonomous Round-1 model calls observed since telemetry deployment only",
-  "updated_at": 1790284522,
+  "updated_at": 1790284712,
   "totals": {
-    "input_tokens": 8515591,
-    "cached_input_tokens": 7570432,
+    "input_tokens": 8881850,
+    "cached_input_tokens": 7887616,
     "cache_write_input_tokens": 0,
-    "output_tokens": 143644,
-    "reasoning_output_tokens": 17591,
-    "turns": 14,
-    "jobs": 14,
-    "uncached_input_tokens": 945159,
-    "cache_hit_ratio": 0.889
+    "output_tokens": 153260,
+    "reasoning_output_tokens": 18690,
+    "turns": 15,
+    "jobs": 15,
+    "uncached_input_tokens": 994234,
+    "cache_hit_ratio": 0.8881
   },
   "last_job": {
-    "ts": 1790284522,
-    "label": "batch-WP-33324-4",
+    "ts": 1790284712,
+    "label": "batch-TERM-product_cat-1902-6",
     "job_type": "page_batch",
-    "input_tokens": 347892,
-    "cached_input_tokens": 301824,
+    "input_tokens": 366259,
+    "cached_input_tokens": 317184,
     "cache_write_input_tokens": 0,
-    "output_tokens": 8805,
-    "reasoning_output_tokens": 970,
+    "output_tokens": 9616,
+    "reasoning_output_tokens": 1099,
     "turns": 1,
-    "uncached_input_tokens": 46068,
-    "cache_hit_ratio": 0.8676,
-    "reported_total_tokens": 356697
+    "uncached_input_tokens": 49075,
+    "cache_hit_ratio": 0.866,
+    "reported_total_tokens": 375875
   },
   "jobs": [
     {
@@ -226,6 +226,20 @@
       "reasoning_output_tokens": 970,
       "cache_hit_ratio": 0.8676,
       "reported_total_tokens": 356697
+    },
+    {
+      "ts": 1790284712,
+      "label": "batch-TERM-product_cat-1902-6",
+      "job_type": "page_batch",
+      "turns": 1,
+      "input_tokens": 366259,
+      "cached_input_tokens": 317184,
+      "uncached_input_tokens": 49075,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9616,
+      "reasoning_output_tokens": 1099,
+      "cache_hit_ratio": 0.866,
+      "reported_total_tokens": 375875
     }
   ],
   "note": "Token telemetry only. No prompts, responses, session IDs, credentials or customer data are stored here."
