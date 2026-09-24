@@ -67,7 +67,7 @@ def drop_worktree(r,wt):
     shutil.rmtree(wt,ignore_errors=True)
 
 def codex_args():
-    a=["codex","exec","--json","--sandbox","workspace-write","--ask-for-approval","never",
+    a=["codex","exec","--json","--sandbox","workspace-write",
        "-c","sandbox_workspace_write.network_access=true"]
     model=os.environ.get("MARIWORK_CODEX_MODEL","").strip()
     effort=os.environ.get("MARIWORK_CODEX_REASONING","").strip()
