@@ -241,3 +241,16 @@ Autonomous Round 1 شامل inventory، technical/data/strategy baselines، Code
 **اولین mandatory human decision gate = Phase 7 / ChatGPT Second Review.** از این نقطه تصمیم‌های نهایی title/meta/content/internal linking/schema/redirect/disposition و هر Production implementation با مشارکت کاربر انجام می‌شود.
 
 Automation حق تغییر authority model را ندارد و limit/auth interruption باید stateful pause/resume باشد.
+
+
+### Low-consumption Round-1 execution
+
+Autonomous Round 1 separates **collection** from **reasoning**.
+
+Deterministic collectors should gather reusable HTTP/HTML, metadata, canonical, schema, image/link and exact-page GSC evidence once. Codex must consume this evidence rather than repeatedly crawling the same URLs.
+
+A logical SEO batch is not necessarily one model call. The first pilot remains five entities, but after that multiple entities from the same family may be analyzed in one model execution while still producing independent canonical dossiers.
+
+Taxonomy/system URL spaces such as Product Tags and Blog Tags planned for decommission may be covered by FAMILY/SITEWIDE policy analysis rather than repetitive per-URL model reasoning. Complete-site disposition coverage remains mandatory.
+
+Model calls should use the lowest reasoning level that preserves audit quality. Escalation to stronger reasoning is reserved for anomalous/complex cases.
