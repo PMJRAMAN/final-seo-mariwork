@@ -69,3 +69,19 @@ Current priority:
 ## Round-1 automation
 
 Runner و server-deployment task در repo تعریف شده‌اند. تا وقتی A-009 روی سرور deploy/verify نشده، automation زیرساخت آماده در repo ولی فعال‌شده روی Production environment محسوب نمی‌شود. Autonomous authority فقط تا CODEX_AUDITED است.
+
+
+## Low-consumption v2 migration
+
+Runner v1 consumed the short-window Codex allowance during A-013 after A-010, A-011 and A-012 completed. Those completed outputs remain valid.
+
+Runner v2 is now present in the repository and must be deployed before A-013 resumes. It uses:
+- deterministic evidence collection with no model call;
+- grouped remaining Foundation work;
+- no-model A-016/A-017/A-021;
+- batched page audits (pilot 5, then default 15);
+- FAMILY/SITEWIDE handling for repetitive taxonomy/system spaces;
+- medium Foundation reasoning and low page-batch reasoning;
+- disabled Codex network during analysis to prevent duplicate crawling.
+
+Current paused A-013 state should be resumed only after A-009B deployment.
