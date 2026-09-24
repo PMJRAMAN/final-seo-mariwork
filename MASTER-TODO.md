@@ -39,8 +39,8 @@
 - [x] A-013 Sitewide Technical SEO Baseline
 - [x] A-014 Rank Math Configuration & Ownership Audit
 - [x] A-015 Detect duplicate SEO owners/output
-- [ ] A-016 Normalize Search Console baseline
-- [ ] A-017 Obtain/derive Page+Query data where possible
+- [x] A-016 Normalize Search Console baseline
+- [x] A-017 Obtain/derive Page+Query data where possible
 - [ ] A-018 Build initial Query/Intent Map
 - [ ] A-019 Build initial Content Architecture
 - [ ] A-020 Create first Systemic Findings registry
