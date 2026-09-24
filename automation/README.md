@@ -84,3 +84,10 @@ A non-sensitive Git-tracked summary is also written after each successful model 
     data/telemetry/round1-usage.json
 
 This allows remote monitoring of token trends without exposing prompts, response bodies, session IDs or credentials. Failed/limit-interrupted jobs remain available in the private runtime state/logs even if no repository commit is produced.
+
+
+## Sandbox AF_NETLINK requirement
+
+The hardened systemd runtime allows `AF_NETLINK` in addition to UNIX/INET address families because Codex/bubblewrap requires a NETLINK_ROUTE socket for local sandbox namespace/route setup. This does **not** enable model web access: autonomous Codex analysis still runs with `sandbox_workspace_write.network_access=false`, and Production/DB paths remain inaccessible.
+
+If a job fails with `bwrap` / `NETLINK_ROUTE` / `Address family not supported`, deploy the current systemd policy before retrying the job.

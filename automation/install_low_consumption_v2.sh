@@ -26,6 +26,10 @@ cat >/etc/systemd/system/mariwork-seo-audit.service.d/20-low-consumption-v2.conf
 [Service]
 Environment=MARIWORK_CODEX_MODEL=gpt-5.6-luna
 Environment=MARIWORK_CODEX_REASONING=medium
+# bubblewrap/Codex sandbox needs AF_NETLINK for local namespace/route setup.
+# This does not enable model networking; Codex remains network_access=false.
+RestrictAddressFamilies=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
 ExecStart=
 ExecStart=/home/seo-audit/Final-SEO-Codex/automation/run_latest.sh auto --push
 EOF

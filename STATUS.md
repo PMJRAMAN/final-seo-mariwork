@@ -100,3 +100,10 @@ The runner now records exact Codex JSON token usage per autonomous model job and
 input, cached input, derived uncached input, output, reasoning output when exposed, and cache-hit ratio. Status also separates Foundation and page-batch averages.
 
 Rate-limit percentages are recorded only when the installed Codex CLI exposes them; the runner does not estimate an account quota from token counts alone. This telemetry is intended to verify whether compact evidence, grouped Foundation jobs and batched page audits materially reduce model consumption.
+
+
+## A-013 sandbox compatibility fix
+
+The first v2.3 A-013 attempt paused safely because the hardened systemd service allowed only AF_UNIX/AF_INET/AF_INET6 while Codex bubblewrap requires AF_NETLINK/NETLINK_ROUTE for local sandbox setup. The service policy now adds AF_NETLINK only. Codex model networking remains disabled, and Production/DB isolation is unchanged.
+
+The failed attempt must not be treated as an SEO failure or completed A-013 output; retry A-013 only after the updated service policy is deployed.
