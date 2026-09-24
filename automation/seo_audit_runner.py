@@ -361,8 +361,11 @@ def priority(row,batch):
 def model_page_eligible(row):
     e=(row.get("entity_id") or "").strip(); u=(row.get("current_url") or "").strip()
     if not e or not u: return False
+    raw_type=(row.get("type") or "").strip().lower()
+    raw_family=(row.get("family") or "").strip().lower()
     hay=(" ".join(str(row.get(k) or "") for k in ("type","family","current_url"))).lower().replace("-","_")
     policy=("product_tag","post_tag","blog_tag","tag_archive","attribute","attachment","feed","url_space","unverified_url","cart","checkout","my_account","search_result","author_archive","date_archive")
+    if raw_type.startswith("pa_") or raw_family.startswith("pa_"): return False
     return not any(x in hay for x in policy)
 
 def next_pages(r,s,batch_size=DEFAULT_BATCH_SIZE):
