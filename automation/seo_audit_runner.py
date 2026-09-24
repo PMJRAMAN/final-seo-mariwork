@@ -514,6 +514,110 @@ def compact_page_evidence(rec):
     if rec.get("text_excerpt"): out["text_excerpt"]=str(rec.get("text_excerpt"))[:1600]
     return out
 
+def ensure_dossier_skeletons(wt,items):
+    for row,dossier in items:
+        p=wt/dossier
+        if p.exists(): continue
+        p.parent.mkdir(parents=True,exist_ok=True)
+        entity=(row.get("entity_id") or "").strip()
+        wp_id=(row.get("wp_id") or "").strip()
+        typ=(row.get("type") or "").strip()
+        fam=(row.get("family") or "").strip()
+        url=(row.get("current_url") or "").strip()
+        canonical=(row.get("canonical_url") or "").strip()
+        p.write_text(f"""---
+framework_version: "1.0"
+dossier_schema_version: "1.0"
+entity_id: "{entity}"
+wp_id: "{wp_id}"
+type: "{typ}"
+family: "{fam}"
+current_url: "{url}"
+canonical_url: "{canonical}"
+workflow_status: DISCOVERED
+final_disposition: NOT_DECIDED
+blocked: false
+blockers: []
+---
+
+# Page Dossier — {entity}
+
+## 0. State
+
+- Workflow status: DISCOVERED
+- Final disposition: NOT_DECIDED
+
+## 1. Identity
+
+- Entity: {entity}
+- Current URL: {url}
+- Canonical: {canonical}
+
+## 2. URL History
+
+Round-1 evidence only.
+
+## 3. Baseline
+
+Use supplied evidence only.
+
+## 4. Current Page Snapshot
+
+Populate concise observations.
+
+## 5. Search / Content Research
+
+Keep hypotheses separate from evidence.
+
+## 6. Codex Audit
+
+- Mode: READ-ONLY
+
+### Findings
+
+<!-- Replace this placeholder with an explicit evidence-backed audit outcome. -->
+
+## 7. ChatGPT Independent Second Review
+
+Pending.
+
+## 8. Final Approved Findings
+
+Pending.
+
+## 9. Target State
+
+NOT APPROVED in Round 1.
+
+## 10. Implementation Plan
+
+Not authorized.
+
+## 11. Implementation Result
+
+Not started.
+
+## 12. Codex QA
+
+Not started.
+
+## 13. ChatGPT Final Acceptance QA
+
+Not started.
+
+## 14. Monitoring
+
+Not started.
+
+## 15. Change Log
+
+Pending.
+
+## 16. SEO Basis / Ownership Record
+
+Round-1 only.
+""",encoding="utf-8")
+
 def page_batch_prompt(items,evidence):
     payload=[]
     keep_fields=("entity_id","wp_id","type","family","current_url","canonical_url","intended_indexability","actual_status","sitemap","final_disposition")
@@ -526,8 +630,7 @@ def page_batch_prompt(items,evidence):
     return f"""{COMMON}
 TASK TYPE: LOW-COST BATCH FIRST-PASS PAGE AUDIT. BATCH SIZE: {len(payload)}
 INPUT: {json.dumps(payload,ensure_ascii=False,separators=(",",":"))}
-ALLOWED WRITES: listed dossier paths + registry/SYSTEMIC-FINDINGS.md only.
-EFFICIENCY: deterministic INPUT is primary. Network access is disabled. Do NOT re-fetch pages, reread the whole repo, or perform broad research. Read PAGE-DOSSIER template once only if needed. Analyze shared family/template issues once and reference one SYS finding.
+ALLOWED WRITES: listed dossier paths + registry/SYSTEMIC-FINDINGS.md only.\nDOSSIER CONTRACT: every dossier is pre-created with canonical framework structure. Edit it in place. Preserve frontmatter, ## 6. Codex Audit, and ### Findings. Replace the Findings placeholder and set workflow_status: CODEX_AUDITED only after recording an explicit audit outcome.\nEFFICIENCY: deterministic INPUT is primary. Network access is disabled. Do NOT re-fetch pages, reread the whole repo, or perform broad research. Read PAGE-DOSSIER template once only if needed. Analyze shared family/template issues once and reference one SYS finding.
 OUTPUT DISCIPLINE: keep each dossier compact; maximum 4 material findings per entity; do not draft full replacement page copy, final titles or final metadata. Low-value checklist noise should be omitted.
 FOR EACH ENTITY: preserve identity/history limits; evaluate evidence; record evidence-supported findings and explicit gaps; initial recommendations only; final_disposition stays NOT_DECIDED unless formally decided; set workflow_status CODEX_AUDITED when sufficient for ChatGPT Second Review. Do not edit URL-INVENTORY.csv.
 """
@@ -667,8 +770,7 @@ def do_foundation(r,job,push,s):
 
 def do_page_batch(r,items,push,s,max_retries):
     ids=[(row.get("entity_id") or "").strip() for row,_ in items]; label="batch-"+ids[0]+"-"+str(len(ids)); wt=add_worktree(r,label)
-    try:
-        rc,out,log,usage=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"medium")
+    try:\n        ensure_dossier_skeletons(wt,items)\n        rc,out,log,usage=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"medium")
         record_usage(s,label,"page_batch",usage)
         s["last_job"]={"type":"page_batch","ids":ids,"count":len(ids),"log":str(log),"usage":usage}; save_state(s)
         if rc:
