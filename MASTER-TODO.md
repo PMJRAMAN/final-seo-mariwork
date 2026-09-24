@@ -37,8 +37,8 @@
 - [x] A-011 Map all current page types / taxonomies / custom post types
 - [x] A-012 Map legacy URLs from Search Console and redirects
 - [x] A-013 Sitewide Technical SEO Baseline
-- [ ] A-014 Rank Math Configuration & Ownership Audit
-- [ ] A-015 Detect duplicate SEO owners/output
+- [x] A-014 Rank Math Configuration & Ownership Audit
+- [x] A-015 Detect duplicate SEO owners/output
 - [ ] A-016 Normalize Search Console baseline
 - [ ] A-017 Obtain/derive Page+Query data where possible
 - [ ] A-018 Build initial Query/Intent Map

@@ -155,3 +155,27 @@ seo_owner_target: RANK_MATH for supported controls; PLATFORM for server controls
 rank_math_capability_checked: BLOCKED_BY_ACCESS
 rank_math_path_or_reason_not_used: Settings unavailable; investigation only.
 ```
+
+### SYS-006 — Duplicate SEO owner/output risk remains unclosed
+
+```yaml
+id: SYS-006
+severity: P1
+scope: SITEWIDE
+status: BLOCKED
+evidence_class: INFERRED
+confidence: MEDIUM
+first_seen: 2026-09-24
+related_pages: A-014, A-015, SYS-001
+change_ref: NOT_APPLICABLE_ROUND1
+source_refs: [data/normalized/round1-foundation-context.json, data/normalized/round1-evidence-summary.json, audits/sitewide/A-010-inventory-notes.md:34,140-147, audits/sitewide/A-013-technical-baseline.md:34,39,44,50-70]
+impact: Current source ownership and duplicate-output status for title/meta, canonical, robots, schema, sitemap, and redirects cannot be confirmed. The public sitemap marker attributes output to Rank Math, but exclusive pipeline ownership is not proven; `/shop/` appears in both page and product sitemap outputs.
+recommendation: INITIAL — build a concern-by-concern ownership matrix from verified configuration and representative public output. Use Rank Math wherever installed capability supports the concern; do not add or remove competing output until an approved change dossier defines exact scope, rollback, canary, and regression evidence.
+acceptance_criteria: Each concern has one evidenced current owner, one target owner, output location, Rank Math capability/module path, conflict status, and representative regression tests; sitemap membership and redirect chains are separately validated.
+google_basis: GOOGLE_CONSISTENT
+google_reference: https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: RANK_MATH where capability is verified; PLATFORM for server-only redirect behavior; otherwise UNKNOWN_NEEDS_VERIFICATION
+rank_math_capability_checked: BLOCKED_BY_ACCESS
+rank_math_path_or_reason_not_used: Production configuration, hooks, theme/custom-plugin code, redirect table, and server configuration are inaccessible; no broader access requested.
+```
