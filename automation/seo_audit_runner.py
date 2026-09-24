@@ -770,7 +770,9 @@ def do_foundation(r,job,push,s):
 
 def do_page_batch(r,items,push,s,max_retries):
     ids=[(row.get("entity_id") or "").strip() for row,_ in items]; label="batch-"+ids[0]+"-"+str(len(ids)); wt=add_worktree(r,label)
-    try:\n        ensure_dossier_skeletons(wt,items)\n        rc,out,log,usage=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"medium")
+    try:
+        ensure_dossier_skeletons(wt,items)
+        rc,out,log,usage=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"medium")
         record_usage(s,label,"page_batch",usage)
         s["last_job"]={"type":"page_batch","ids":ids,"count":len(ids),"log":str(log),"usage":usage}; save_state(s)
         if rc:
