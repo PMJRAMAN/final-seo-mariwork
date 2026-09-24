@@ -1,0 +1,64 @@
+{
+  "telemetry_version": "1",
+  "runner_version": "2.3-low-consumption-telemetry",
+  "model": "gpt-5.6-luna",
+  "reasoning": "medium",
+  "scope": "Autonomous Round-1 model calls observed since telemetry deployment only",
+  "updated_at": 1790280874,
+  "totals": {
+    "input_tokens": 723260,
+    "cached_input_tokens": 608512,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 12172,
+    "reasoning_output_tokens": 1840,
+    "turns": 2,
+    "jobs": 2,
+    "uncached_input_tokens": 114748,
+    "cache_hit_ratio": 0.8413
+  },
+  "last_job": {
+    "ts": 1790280874,
+    "label": "A-013",
+    "job_type": "foundation",
+    "input_tokens": 568169,
+    "cached_input_tokens": 483584,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9883,
+    "reasoning_output_tokens": 1241,
+    "turns": 1,
+    "uncached_input_tokens": 84585,
+    "cache_hit_ratio": 0.8511,
+    "reported_total_tokens": 578052
+  },
+  "jobs": [
+    {
+      "ts": 1790280385,
+      "label": "A-013",
+      "job_type": "foundation",
+      "turns": 1,
+      "input_tokens": 155091,
+      "cached_input_tokens": 124928,
+      "uncached_input_tokens": 30163,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2289,
+      "reasoning_output_tokens": 599,
+      "cache_hit_ratio": 0.8055,
+      "reported_total_tokens": 157380
+    },
+    {
+      "ts": 1790280874,
+      "label": "A-013",
+      "job_type": "foundation",
+      "turns": 1,
+      "input_tokens": 568169,
+      "cached_input_tokens": 483584,
+      "uncached_input_tokens": 84585,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9883,
+      "reasoning_output_tokens": 1241,
+      "cache_hit_ratio": 0.8511,
+      "reported_total_tokens": 578052
+    }
+  ],
+  "note": "Token telemetry only. No prompts, responses, session IDs, credentials or customer data are stored here."
+}

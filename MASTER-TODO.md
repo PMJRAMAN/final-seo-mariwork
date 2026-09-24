@@ -36,7 +36,7 @@
 - [x] A-010 Build complete URL/Entity Inventory
 - [x] A-011 Map all current page types / taxonomies / custom post types
 - [x] A-012 Map legacy URLs from Search Console and redirects
-- [ ] A-013 Sitewide Technical SEO Baseline
+- [x] A-013 Sitewide Technical SEO Baseline
 - [ ] A-014 Rank Math Configuration & Ownership Audit
 - [ ] A-015 Detect duplicate SEO owners/output
 - [ ] A-016 Normalize Search Console baseline
