@@ -1,83 +1,82 @@
-# Content Architecture
+# Content Architecture — Round 1
 
-Status: INITIAL
+**Tasks:** A-018 / A-019 · **Status:** CODEX_AUDITED · **Authority:** initial candidates only
+**Framework:** v1.0 · **Date:** 2026-09-24
 
-هدف:
-- نقش Product / Category / Education / Article را تفکیک کند؛
-- overlap و cannibalization را کاهش دهد؛
-- internal links معنادار بسازد؛
-- از تولید صفحات تکراری جلوگیری کند.
+## Evidence baseline
 
-## Families
+The compact foundation contains 555 inventory rows, 167 model-page candidates and 25 policy/system spaces. Evidence contains 501 entities: 440 HTTP 200, 58 HTTP 404 and 3 safety-skipped. Public census: 83 products, 12 posts, 37 Academy lessons, 2 Academy/course rows, 7 product categories, 3 product-volume attributes, 275 product tags and 53 post-tag rows. The GSC export is page-only; **Page-query relationship is not proven by the current export.**
 
-### Products
-TBD
+## Durable page roles
 
-### Product Categories / Shop
-TBD
+| Family | Role / decision | Keep distinct from | Useful modules only when verified |
+|---|---|---|---|
+| Shop | commercial entry and discovery | product detail; generated facets | orientation, durable category links |
+| Product category | family comparison/navigation | product detail; tag archives | family definition, products, volume/set paths, education |
+| Fabric-color product | exact color/code/volume selection | generic article; sibling duplicates | decision summary, specs, volume, limitations, siblings, education |
+| Sets/bundles | multi-item selection | individual colors; tag archives | verified contents, volume comparison, components |
+| Mediums/tools | supporting-material selection | generic technique pages | verified function, limitations, relevant technique |
+| Academy/course/lesson | structured learning | product detail; generic article | prerequisites, steps, materials, next lesson |
+| Article | durable reference/comparison | same-intent lesson; tag archives | answer-first explanation, evidence, comparison, next decision |
+| Artists/trust | verified entity/context | product and technique intent | only verified profile/source material |
+| Product Tags / Blog Tags | transitional taxonomy spaces | categories/products/articles | migration evidence only; no per-tag content model |
 
-### Education
-TBD
+## Internal-link requirement candidates (not final)
 
-### Articles
-TBD
+### CORE / MANDATORY candidates
 
-### Artists / Trust Content
-TBD
+| Source | Destination | Purpose |
+|---|---|---|
+| Product | Shop + relevant durable category | commercial parent and family context |
+| Product | Relevant Academy/article | answer real preparation/technique questions |
+| Category/Shop | Products + relevant education hub | discovery and decision support |
+| Academy/article | Relevant product/category | explicit commercial next step when justified |
+| Course/lesson | Parent course/Academy | preserve learning hierarchy |
+| Academy/article | Relevant sibling/hub | maintain learning navigation |
 
-## Cross-link Rules
-Detailed rules live in `strategy/INTERNAL-LINK-ARCHITECTURE.md`.
+### FAMILY-SPECIFIC candidates
 
-The final model must distinguish:
-- CORE / MANDATORY links that every relevant entity in a family should contain;
-- FAMILY-SPECIFIC links required only for a defined product/content family;
-- CONTEXTUAL / OPTIONAL links used only when the page topic makes them genuinely useful.
+- Fabric-color product: volume siblings, related colors, category, preparation/fixation/technique education.
+- Set/bundle: verified components, sibling volumes, set category and use education.
+- Medium: compatible product family and lessons that explicitly use it.
+- Tool/accessory: technique lesson/article only when genuinely relevant.
+- Academy lesson: required materials/category, next/previous lesson, related technique article.
+- Article: topic hub, distinct Academy lesson, durable category/product family.
+- Category: subfamily/volume paths and selected education hub; do not use tag archives as architecture.
 
-The architecture must be bidirectional where useful:
-Product/Category → Academy/Article, and Academy/Article → relevant Product/Category.
+### CONTEXTUAL / OPTIONAL candidates
 
-TBD after sitewide link audit and first batches.
+Color comparisons, individual siblings, article-paragraph links, store-address/about links and cross-family recommendations belong only where the visible topic and user decision justify them. Automated related links are not proof of relevance.
 
+## Bidirectional relationships
 
-## Product Title Naming Standard
+1. Product/Category → Academy/Article: exact lesson/article for preparation, technique, fixation, fabric choice or comparison.
+2. Academy/Article → Product/Category: durable family destination when a material/tool is actually named and sold/verified; do not invent availability.
+3. Category ↔ Academy/Article: education hubs for comparison/selection while keeping reference and lesson roles distinct.
+4. Sets ↔ components: only after bundle contents and identity are verified; variation/bundle completeness is currently blocked.
 
-**Status:** INITIAL / NOT APPROVED
+## Architecture risks
 
-The Store requires an evidence-backed naming standard for each product family rather than ad-hoc title cleanup.
+- Initial HTML reports 289 missing meta descriptions, 271 missing H1s and no parsed schema types; this is an output/ownership audit issue, not a reason to add repetitive copy.
+- Product pages show shared navigation and related blocks, but complete rendered link coverage and relevance are not proven.
+- Product tags contain redundant color/volume/brand/type dimensions; Blog Tags show separate behavior. Both are family-level decommission programs.
+- Historical /articles/ and /education/ sources coexist with current /mag/articles/ and /academy/ families; transport does not prove identity.
+- No content target, word count, FAQ volume or rewrite is approved.
 
-Round 1 must inventory current title patterns and inconsistencies. Round 2 will approve the final standard after query/intent and family review.
+## Product Title Naming Standard — candidate only
 
-The review must explicitly determine:
-- whether «ماری ورک» / Mariwork is mandatory, optional or omitted for each family;
-- ordering of product type, descriptive name/color, brand and product code;
-- product-code formatting;
-- size/volume placement where it belongs in the canonical product title;
-- rules for single colors, mediums, sets/bundles, tools/accessories and other products;
-- duplicate or near-duplicate title patterns;
-- inconsistencies between product title, H1 and entity identity;
-- documented exceptions;
-- legacy title/slug history when a title change could affect continuity.
+Observed patterns include:
 
-Do not bulk-rename products from an assumed template. The naming standard must be approved before implementation.
+- Fabric colors often use product type + color + Mariwork + code, but some H1s omit brand, some use a pipe before code, and Persian/Latin code digits vary.
+- Sets vary in count/description/volume ordering; “includes” clauses are inconsistent.
+- Mediums/tools use different type-first patterns; some titles include «ماری ورک» while H1s omit it.
+- Volume appears as 30 میل, 60 میل, 250 میل, 30ml or 30میل, with inconsistent placement.
+- Code forms vary: کد 105, کد ۱۰۵ and code-311. This is an observed consistency issue, not proof any code is wrong.
 
+Candidate pattern for Second Review:
 
-## External Amplification
+[product type] [specific product/color/name] [brand token if required] [verified code] [size/volume when distinguishing the offer]
 
-External PR / advertorial activity must follow the approved internal architecture rather than define it.
+Review separately for fabric colors, sets/bundles, mediums and tools: determine whether «ماری ورک»/Mariwork is mandatory, optional or omitted; code/separator/numeral convention; volume placement; title/H1 relationship; exceptions; and legacy title history. No bulk rename is authorized. Rank Math title ownership is UNKNOWN_NEEDS_VERIFICATION.
 
-For every external article:
-- choose a durable landing page based on intent and page role;
-- ensure that landing page has a deliberate internal path to relevant products, categories, Academy lessons or articles;
-- avoid sending all placements to the homepage or arbitrary products;
-- use `strategy/EXTERNAL-PR-STRATEGY.md` for campaign planning and measurement.
-
-
-## Visual, Video and Brand Architecture
-
-Three cross-cutting programs are core to the final SEO architecture:
-
-- `strategy/VISUAL-IMAGE-SEO.md` — image, visual and multimodal discoverability;
-- `strategy/VIDEO-SEO.md` — all public site videos;
-- `strategy/BRAND-ENTITY-SEARCH.md` — branded search and Mariwork entity consistency.
-
-These programs must use the same approved Query Map, page roles and internal-link architecture rather than creating parallel SEO targets.
+**Google basis:** GOOGLE_CONSISTENT for useful accessible non-duplicative content and descriptive links; PROJECT_DECISION for family roles and title candidates. References: [people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), [SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), [structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data).

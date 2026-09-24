@@ -4,31 +4,31 @@
   "model": "gpt-5.6-luna",
   "reasoning": "medium",
   "scope": "Autonomous Round-1 model calls observed since telemetry deployment only",
-  "updated_at": 1790281003,
+  "updated_at": 1790281503,
   "totals": {
-    "input_tokens": 1170453,
-    "cached_input_tokens": 988672,
+    "input_tokens": 2991035,
+    "cached_input_tokens": 2664704,
     "cache_write_input_tokens": 0,
-    "output_tokens": 17965,
-    "reasoning_output_tokens": 2563,
-    "turns": 3,
-    "jobs": 3,
-    "uncached_input_tokens": 181781,
-    "cache_hit_ratio": 0.8447
+    "output_tokens": 42257,
+    "reasoning_output_tokens": 3622,
+    "turns": 4,
+    "jobs": 4,
+    "uncached_input_tokens": 326331,
+    "cache_hit_ratio": 0.8909
   },
   "last_job": {
-    "ts": 1790281003,
-    "label": "A-014",
+    "ts": 1790281503,
+    "label": "A-018",
     "job_type": "foundation",
-    "input_tokens": 447193,
-    "cached_input_tokens": 380160,
+    "input_tokens": 1820582,
+    "cached_input_tokens": 1676032,
     "cache_write_input_tokens": 0,
-    "output_tokens": 5793,
-    "reasoning_output_tokens": 723,
+    "output_tokens": 24292,
+    "reasoning_output_tokens": 1059,
     "turns": 1,
-    "uncached_input_tokens": 67033,
-    "cache_hit_ratio": 0.8501,
-    "reported_total_tokens": 452986
+    "uncached_input_tokens": 144550,
+    "cache_hit_ratio": 0.9206,
+    "reported_total_tokens": 1844874
   },
   "jobs": [
     {
@@ -72,6 +72,20 @@
       "reasoning_output_tokens": 723,
       "cache_hit_ratio": 0.8501,
       "reported_total_tokens": 452986
+    },
+    {
+      "ts": 1790281503,
+      "label": "A-018",
+      "job_type": "foundation",
+      "turns": 1,
+      "input_tokens": 1820582,
+      "cached_input_tokens": 1676032,
+      "uncached_input_tokens": 144550,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 24292,
+      "reasoning_output_tokens": 1059,
+      "cache_hit_ratio": 0.9206,
+      "reported_total_tokens": 1844874
     }
   ],
   "note": "Token telemetry only. No prompts, responses, session IDs, credentials or customer data are stored here."

@@ -41,9 +41,9 @@
 - [x] A-015 Detect duplicate SEO owners/output
 - [x] A-016 Normalize Search Console baseline
 - [x] A-017 Obtain/derive Page+Query data where possible
-- [ ] A-018 Build initial Query/Intent Map
-- [ ] A-019 Build initial Content Architecture
-- [ ] A-020 Create first Systemic Findings registry
+- [x] A-018 Build initial Query/Intent Map
+- [x] A-019 Build initial Content Architecture
+- [x] A-020 Create first Systemic Findings registry
 - [ ] A-021 Freeze Batch 001 selection
 
 **Gate:** Store page audits شروع نمی‌شوند تا A-010 تا A-020 کامل یا blocker آن‌ها صریحاً ثبت شده باشد.
