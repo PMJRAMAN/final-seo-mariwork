@@ -275,3 +275,37 @@ This phase covers:
 The goal is not indiscriminate backlink acquisition. Paid external articles/advertorials are treated as a brand, referral, discovery and authority-development program aligned with the site's approved SEO architecture.
 
 Primary strategy document: `strategy/EXTERNAL-PR-STRATEGY.md`.
+
+
+## Phase 16 — Visual / Image / Multimodal SEO — Core
+
+This is a core cross-cutting program, not an optional post-project enhancement. It may run alongside Store, Blog, Academy and Homepage work once enough inventory/strategy evidence exists.
+
+Primary strategy document: `strategy/VISUAL-IMAGE-SEO.md`.
+
+Required outputs include complete image coverage by important family, ALT/context rules, representative-image standards, technical delivery review, multimodal opportunity mapping, implementation targets and regression QA.
+
+## Phase 17 — Video SEO — Core
+
+All public site videos are in scope. No discovered public video may be silently excluded because it is embedded inside Academy, Articles, Products or another content type.
+
+Primary strategy document: `strategy/VIDEO-SEO.md`.
+
+The program covers video inventory, host-page mapping, discoverability, metadata, thumbnails, structured data where eligible, transcripts/context, internal links, implementation and final all-video QA.
+
+## Phase 18 — Brand / Entity Search Strategy — Core
+
+Treat Mariwork's branded search presence and entity consistency as a core SEO workstream.
+
+Primary strategy document: `strategy/BRAND-ENTITY-SEARCH.md`.
+
+This program reconciles branded queries, Homepage/About/trust content, Organization/WebSite/entity schema, canonical brand facts, off-site evidence and external PR strategy. Unsupported entity claims are prohibited.
+
+## Phase 19 — SEO Expansion Reviews
+
+Maintain explicit review tasks for:
+- Merchant Center / Free Listings;
+- product-feed / variant architecture for external search surfaces;
+- genuine reviews / social proof and eligible structured data.
+
+These are reminders/reviews until evidence supports opening a dedicated implementation program. They must not be forgotten or assumed complete merely because related Store/schema work exists.

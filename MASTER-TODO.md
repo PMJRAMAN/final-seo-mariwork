@@ -379,6 +379,9 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 - [ ] I-015 unresolved P0/P1 = zero or formally accepted exception
 - [ ] I-016 final Search Console baseline comparison
 - [ ] I-017 final project coverage report
+- [ ] I-018 visual/image/multimodal SEO regression against approved L-program rules
+- [ ] I-019 all-video SEO coverage/regression against M-program inventory
+- [ ] I-020 brand/entity consistency regression against N-program target state
 
 ---
 
@@ -417,6 +420,95 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 - [ ] K-015 Periodic external-authority / PR strategy review as the site and content architecture evolve
 
 **Rule:** هیچ رپورتاژ یا مقاله خارجی نباید صرفاً به‌دلیل DA/DR یا امکان دریافت لینک انتخاب شود. موضوع، رسانه، مخاطب و landing page باید با معماری و evidence نهایی پروژه هم‌راستا باشند.
+
+---
+
+
+# L. VISUAL / IMAGE / MULTIMODAL SEO — CORE WORKSTREAM
+
+این برنامه جزو کارهای اصلی پروژه است و نباید به‌عنوان enhancement اختیاری در انتهای کار رها شود. Audit و implementation آن باید با Store / Blog / Academy / Homepage هماهنگ باشد.
+
+- [ ] L-001 Build complete SEO-relevant image inventory by page/entity/family
+- [ ] L-002 Audit primary product images and gallery-image discoverability
+- [ ] L-003 Audit images across Category / Article / Academy / Homepage / trust content
+- [ ] L-004 Define ALT policy by content type and image role; avoid keyword stuffing and decorative-image noise
+- [ ] L-005 Define image filename / media naming policy for new assets
+- [ ] L-006 Define primary-image consistency and representative-image rules by product/content family
+- [ ] L-007 Map Google Images / visual / multimodal opportunities to approved query and content architecture
+- [ ] L-008 Audit image context: surrounding copy, captions where useful, linked-image behavior and duplicate/reused media
+- [ ] L-009 Review image technical delivery: dimensions, formats, lazy loading, accessibility and representative performance impact
+- [ ] L-010 Produce implementation-ready image SEO rules by family
+- [ ] L-011 Implement approved image/ALT/context changes
+- [ ] L-012 Final image / visual SEO regression and coverage report
+- [ ] L-013 Monitor image-search / multimodal visibility where data is available
+
+**Completion invariant:** every important indexable family has an approved image policy and every priority image has an explicit SEO/accessibility disposition.
+
+---
+
+# M. VIDEO SEO — CORE WORKSTREAM
+
+**Project rule:** تمام ویدیوهای سایت باید در برنامه SEO قرار بگیرند. Video SEO یک کار اصلی است، نه optional enhancement.
+
+- [ ] M-001 Build complete video inventory across all public pages, Academy, Articles, Products and other content
+- [ ] M-002 Map every video to its host page/entity, purpose, topic and search/user intent
+- [ ] M-003 Audit crawlability/discoverability of every video and its host page
+- [ ] M-004 Audit video titles, descriptions, surrounding text and page context
+- [ ] M-005 Define VideoObject / video structured-data ownership and implementation strategy where eligible
+- [ ] M-006 Define thumbnail quality, uniqueness, dimensions and representative-thumbnail policy
+- [ ] M-007 Define video transcript / summary / key instructional text policy where useful
+- [ ] M-008 Define video naming and reusable metadata standards
+- [ ] M-009 Map video ↔ Academy / Article / Product / Category internal-link relationships
+- [ ] M-010 Identify duplicate, weakly embedded, orphaned or context-poor videos
+- [ ] M-011 Create per-video or family-level approved target states
+- [ ] M-012 Implement approved Video SEO changes for ALL in-scope videos
+- [ ] M-013 Validate video structured data / thumbnails / host-page indexability after implementation
+- [ ] M-014 Final all-video SEO coverage report
+- [ ] M-015 Monitor video-search/discovery performance where data is available
+
+**Completion invariant:** every discovered public video has an inventory record, host-page relationship, SEO disposition and QA outcome.
+
+---
+
+# N. BRAND / ENTITY SEARCH STRATEGY — CORE WORKSTREAM
+
+این برنامه نیز جزو کارهای اصلی پروژه است و باید با Homepage، About/Trust content، schema، external PR و branded-query monitoring هماهنگ شود.
+
+- [ ] N-001 Build Mariwork brand/entity baseline
+- [ ] N-002 Audit branded Search results and branded query families
+- [ ] N-003 Audit Organization / WebSite / relevant entity schema ownership and consistency
+- [ ] N-004 Audit Homepage / About / founder / history / contact / trust signals as entity-supporting content
+- [ ] N-005 Audit brand naming consistency across titles, content, structured data and public profiles/evidence
+- [ ] N-006 Map important off-site brand/entity references that can be verified without inventing relationships
+- [ ] N-007 Identify brand/entity content and evidence gaps
+- [ ] N-008 Define target Brand / Entity Search Strategy and canonical brand facts
+- [ ] N-009 Connect external PR / advertorial strategy to approved brand/entity goals
+- [ ] N-010 Implement approved entity-supporting site changes
+- [ ] N-011 Final brand/entity consistency QA
+- [ ] N-012 Monitor branded queries, branded landing pages and SERP changes over time
+
+**Rule:** no fabricated credentials, awards, reviews, relationships or entity claims may be added for SEO.
+
+---
+
+# O. REQUIRED SEO EXPANSION REVIEWS / REMINDERS
+
+این موارد فعلاً به‌عنوان review/reminder ثبت می‌شوند تا بعد از آماده‌شدن داده و معماری اصلی بررسی شوند. نتیجه هر review می‌تواند به یک برنامه اجرایی مستقل تبدیل شود.
+
+## Merchant Center / Free Listings
+- [ ] O-001 Review Google Merchant Center / Free Listings opportunity and eligibility
+- [ ] O-002 Audit product-data readiness: identifiers, price, availability, images, landing pages and consistency
+- [ ] O-003 Decide whether a Merchant Center / product-feed implementation program should be opened
+
+## Product Feed / Variant Architecture
+- [ ] O-004 Review product feed architecture against current Woo variable products / sets / mediums
+- [ ] O-005 Review variant identity, SKU/ID, Product/ProductGroup-style representation, canonical and landing-page consistency
+- [ ] O-006 Reconcile feed requirements with B0 variant architecture and structured-data ownership before implementation
+
+## Reviews / Social Proof
+- [ ] O-007 Review current review/social-proof availability and quality
+- [ ] O-008 Define compliant collection/display/schema policy using only genuine reviews
+- [ ] O-009 Decide whether review/social-proof improvements warrant an implementation program
 
 ---
 

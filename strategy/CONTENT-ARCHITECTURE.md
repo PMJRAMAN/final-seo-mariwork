@@ -70,3 +70,14 @@ For every external article:
 - ensure that landing page has a deliberate internal path to relevant products, categories, Academy lessons or articles;
 - avoid sending all placements to the homepage or arbitrary products;
 - use `strategy/EXTERNAL-PR-STRATEGY.md` for campaign planning and measurement.
+
+
+## Visual, Video and Brand Architecture
+
+Three cross-cutting programs are core to the final SEO architecture:
+
+- `strategy/VISUAL-IMAGE-SEO.md` — image, visual and multimodal discoverability;
+- `strategy/VIDEO-SEO.md` — all public site videos;
+- `strategy/BRAND-ENTITY-SEARCH.md` — branded search and Mariwork entity consistency.
+
+These programs must use the same approved Query Map, page roles and internal-link architecture rather than creating parallel SEO targets.
