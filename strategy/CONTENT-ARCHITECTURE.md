@@ -37,3 +37,25 @@ The architecture must be bidirectional where useful:
 Product/Category → Academy/Article, and Academy/Article → relevant Product/Category.
 
 TBD after sitewide link audit and first batches.
+
+
+## Product Title Naming Standard
+
+**Status:** INITIAL / NOT APPROVED
+
+The Store requires an evidence-backed naming standard for each product family rather than ad-hoc title cleanup.
+
+Round 1 must inventory current title patterns and inconsistencies. Round 2 will approve the final standard after query/intent and family review.
+
+The review must explicitly determine:
+- whether «ماری ورک» / Mariwork is mandatory, optional or omitted for each family;
+- ordering of product type, descriptive name/color, brand and product code;
+- product-code formatting;
+- size/volume placement where it belongs in the canonical product title;
+- rules for single colors, mediums, sets/bundles, tools/accessories and other products;
+- duplicate or near-duplicate title patterns;
+- inconsistencies between product title, H1 and entity identity;
+- documented exceptions;
+- legacy title/slug history when a title change could affect continuity.
+
+Do not bulk-rename products from an assumed template. The naming standard must be approved before implementation.

@@ -76,6 +76,11 @@
 - [ ] B0-018 Audit every product family for missing mandatory links and inconsistent link coverage
 - [ ] B0-019 Define reverse links from Academy/Articles to relevant Product/Category destinations
 - [ ] B0-020 Approve target internal-link architecture before mass page implementation
+- [ ] B0-021 Audit current product-title patterns across all Store families and identify inconsistencies
+- [ ] B0-022 Define approved Product Title Naming Standard by family: product type/name/color, «ماری ورک»/Mariwork, code, size/volume ordering, required/optional tokens and exceptions
+- [ ] B0-023 Verify consistent use of «ماری ورک» / Mariwork in product titles according to the approved family standard
+- [ ] B0-024 Normalize product titles only after ChatGPT Second Review + approval; preserve product identity, intent and legacy URL history
+- [ ] B0-025 Final product-title consistency regression across all published products
 
 ## B1 — Product pilot
 
@@ -84,7 +89,7 @@
 - [ ] B1-002 Codex Audit همه ۵ صفحه
 - [ ] B1-003 ChatGPT Second Review همه ۵ صفحه
 - [ ] B1-004 استخراج FAMILY/SITEWIDE findings
-- [ ] B1-005 Content/Title/Meta/Schema/ALT rules candidates
+- [ ] B1-005 Content/Title/Meta/Schema/ALT rules candidates, including Product Title Naming Standard candidates
 - [ ] B1-006 Systemic fixes before mass page edits
 - [ ] B1-007 Canary implementation
 - [ ] B1-008 Codex QA
@@ -366,6 +371,8 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 - [ ] I-009 structured-data regression
 - [ ] I-010 Rank Math ownership regression
 - [ ] I-011 duplicate title/meta review
+- [ ] I-011A validate all published product titles against the approved Product Title Naming Standard
+- [ ] I-011B validate brand token, product type/name/color, product code and size/volume consistency; only documented exceptions may differ
 - [ ] I-012 content cannibalization review
 - [ ] I-013 mobile/CWV representative templates
 - [ ] I-014 OAI-SearchBot/Googlebot access check where applicable
