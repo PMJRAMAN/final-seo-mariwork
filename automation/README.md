@@ -53,3 +53,27 @@ Examples:
     automation/run_latest.sh auto --push
 
 The systemd oneshot ExecStart is also pinned to this launcher by the v2 installer.
+
+
+## Token and limit telemetry
+
+Runner v2.3 records model usage from Codex `exec --json` `turn.completed.usage` events in the private runtime state file, outside Git.
+
+Tracked per job and cumulatively:
+- input tokens;
+- cached input tokens;
+- uncached input tokens (derived);
+- output tokens;
+- reasoning output tokens when exposed by the installed Codex CLI;
+- cache-hit ratio;
+- Foundation versus page-batch averages.
+
+If the CLI exposes rate-limit metadata in the JSON stream, the runner preserves that metadata as well. The runner does not invent a quota percentage when the CLI does not expose one.
+
+Use:
+
+    python3 automation/seo_audit_runner.py status
+
+to inspect the current telemetry.
+
+Telemetry starts when v2.3 is deployed; it cannot reconstruct exact token usage for earlier jobs from repository history alone.

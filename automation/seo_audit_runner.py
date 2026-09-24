@@ -136,6 +136,49 @@ def safe_log_line(line):
             return json.dumps({"event":"redacted_sensitive_codex_event"},ensure_ascii=False)+"\n"
     return line if line.endswith("\n") else line+"\n"
 
+
+def parse_codex_usage(text):
+    """Extract machine-readable Codex token/rate telemetry from exec --json output."""
+    totals={"input_tokens":0,"cached_input_tokens":0,"cache_write_input_tokens":0,
+            "output_tokens":0,"reasoning_output_tokens":0}
+    turns=0; rate_limits=None
+    for line in text.splitlines():
+        try: obj=json.loads(line)
+        except Exception: continue
+        if obj.get("type")=="turn.completed" and isinstance(obj.get("usage"),dict):
+            u=obj["usage"]; turns+=1
+            for k in totals:
+                try: totals[k]+=int(u.get(k,0) or 0)
+                except Exception: pass
+        # Future/current CLI versions may surface rate-limit metadata on JSON events.
+        rl=obj.get("rate_limits")
+        if isinstance(rl,dict) and rl: rate_limits=rl
+        payload=obj.get("payload")
+        if isinstance(payload,dict) and isinstance(payload.get("rate_limits"),dict) and payload.get("rate_limits"):
+            rate_limits=payload.get("rate_limits")
+    totals["turns"]=turns
+    totals["uncached_input_tokens"]=max(0,totals["input_tokens"]-totals["cached_input_tokens"])
+    totals["cache_hit_ratio"]=round(totals["cached_input_tokens"]/totals["input_tokens"],4) if totals["input_tokens"] else 0.0
+    totals["reported_total_tokens"]=totals["input_tokens"]+totals["output_tokens"]
+    if rate_limits is not None: totals["rate_limits"]=rate_limits
+    return totals
+
+def record_usage(state,label,job_type,usage):
+    hist=state.setdefault("usage_history",[])
+    entry={"ts":int(time.time()),"label":label,"job_type":job_type,**usage}
+    hist.append(entry)
+    # Keep enough local history for comparison without unbounded state growth.
+    if len(hist)>250: del hist[:-250]
+    agg=state.setdefault("usage_totals",{"input_tokens":0,"cached_input_tokens":0,
+        "cache_write_input_tokens":0,"output_tokens":0,"reasoning_output_tokens":0,
+        "turns":0,"jobs":0})
+    for k in ("input_tokens","cached_input_tokens","cache_write_input_tokens","output_tokens","reasoning_output_tokens","turns"):
+        agg[k]=int(agg.get(k,0) or 0)+int(usage.get(k,0) or 0)
+    agg["jobs"]=int(agg.get("jobs",0) or 0)+1
+    agg["uncached_input_tokens"]=max(0,agg["input_tokens"]-agg["cached_input_tokens"])
+    agg["cache_hit_ratio"]=round(agg["cached_input_tokens"]/agg["input_tokens"],4) if agg["input_tokens"] else 0.0
+    state["last_usage"]=entry
+
 def run_codex(wt,prompt,label,effort_override=None):
     log=state_dir()/"logs"/f"{int(time.time())}-{re.sub(r'[^A-Za-z0-9._-]+','-',label)}.jsonl"
     child_env={"HOME":str(EXPECTED_HOME),"CODEX_HOME":str(EXPECTED_CODEX_HOME),"PATH":"/usr/local/bin:/usr/bin:/bin","LANG":"C.UTF-8","PYTHONDONTWRITEBYTECODE":"1"}
@@ -150,7 +193,8 @@ def run_codex(wt,prompt,label,effort_override=None):
             buf.append(line); output_chars+=len(line); f.write(safe_log_line(line)); f.flush()
         rc=p.wait()
         f.write(json.dumps({"event":"runner_meta","phase":"finished","job":label,"exit_code":rc,"output_chars":output_chars},ensure_ascii=False)+"\n")
-    return rc,"".join(buf),log
+    output="".join(buf)
+    return rc,output,log,parse_codex_usage(output)
 
 def failure_kind(text):
     low=text.lower()
@@ -579,8 +623,9 @@ def do_foundation(r,job,push,s):
         return deterministic_foundation(r,job,push)
     wt=add_worktree(r,job["id"])
     try:
-        rc,out,log=run_codex(wt,foundation_prompt(job),job["id"],"medium")
-        s["last_job"]={"type":"foundation","id":job["id"],"completes":job_tasks(job),"log":str(log)}; save_state(s)
+        rc,out,log,usage=run_codex(wt,foundation_prompt(job),job["id"],"medium")
+        record_usage(s,job["id"],"foundation",usage)
+        s["last_job"]={"type":"foundation","id":job["id"],"completes":job_tasks(job),"log":str(log),"usage":usage}; save_state(s)
         if rc:
             k=failure_kind(out); s["paused"]=True; s["pause_reason"]=f"{k}:{job['id']}"; save_state(s)
             print(f"PAUSED {k} {job['id']} log={log}"); return False
@@ -596,8 +641,9 @@ def do_foundation(r,job,push,s):
 def do_page_batch(r,items,push,s,max_retries):
     ids=[(row.get("entity_id") or "").strip() for row,_ in items]; label="batch-"+ids[0]+"-"+str(len(ids)); wt=add_worktree(r,label)
     try:
-        rc,out,log=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"medium")
-        s["last_job"]={"type":"page_batch","ids":ids,"count":len(ids),"log":str(log)}; save_state(s)
+        rc,out,log,usage=run_codex(wt,page_batch_prompt(items,evidence_map(wt)),label,"medium")
+        record_usage(s,label,"page_batch",usage)
+        s["last_job"]={"type":"page_batch","ids":ids,"count":len(ids),"log":str(log),"usage":usage}; save_state(s)
         if rc:
             k=failure_kind(out)
             if k in ("LIMIT","AUTH"):
@@ -618,7 +664,7 @@ def do_page_batch(r,items,push,s,max_retries):
 
 def show_status(r,p,s):
     todo=(r/"MASTER-TODO.md").read_text(encoding="utf-8")
-    print("runner_version: 2.2-low-consumption")
+    print("runner_version: 2.3-low-consumption-telemetry")
     print("configured_model:",os.environ.get("MARIWORK_CODEX_MODEL",DEFAULT_MODEL) or DEFAULT_MODEL)
     print("foundation_reasoning: medium")
     print("page_reasoning: medium")
@@ -642,6 +688,23 @@ def show_status(r,p,s):
     print("deterministic_evidence_ready:",(r/EVIDENCE_FILE).exists())
     print("compact_foundation_context_ready:",(r/FOUNDATION_CONTEXT).exists())
     print("runner_blocked_pages:",sum(1 for v in s.get("page_failures",{}).values() if v.get("blocked")))
+    ut=s.get("usage_totals",{})
+    print("usage_jobs_observed:",ut.get("jobs",0))
+    print("usage_input_tokens:",ut.get("input_tokens",0))
+    print("usage_cached_input_tokens:",ut.get("cached_input_tokens",0))
+    print("usage_uncached_input_tokens:",ut.get("uncached_input_tokens",0))
+    print("usage_output_tokens:",ut.get("output_tokens",0))
+    print("usage_reasoning_output_tokens:",ut.get("reasoning_output_tokens",0))
+    print("usage_cache_hit_ratio:",ut.get("cache_hit_ratio",0.0))
+    print("last_job_usage:",json.dumps(s.get("last_usage"),ensure_ascii=False))
+    hist=s.get("usage_history",[])
+    for kind in ("foundation","page_batch"):
+        hs=[x for x in hist if x.get("job_type")==kind]
+        if hs:
+            print(f"{kind}_usage_jobs:",len(hs))
+            print(f"{kind}_avg_input_tokens:",sum(int(x.get("input_tokens",0) or 0) for x in hs)//len(hs))
+            print(f"{kind}_avg_uncached_input_tokens:",sum(int(x.get("uncached_input_tokens",0) or 0) for x in hs)//len(hs))
+            print(f"{kind}_avg_output_tokens:",sum(int(x.get("output_tokens",0) or 0) for x in hs)//len(hs))
 
 def preflight(r):
     ensure_clean(r)

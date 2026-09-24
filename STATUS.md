@@ -92,3 +92,11 @@ Current paused A-013 state should be resumed only after A-009B deployment.
 Pre-resume review now pins all autonomous Round-1 model calls to `gpt-5.6-luna` with `medium` reasoning, per project decision. Compact deterministic Foundation context, trimmed page-batch evidence payloads, Store-first ordering and disabled model network remain unchanged.
 
 The launcher/installer were also hardened so syntax validation does not create `__pycache__` artifacts that can trip the clean-repository guard, and repository updates are performed as the dedicated `seo-audit` user. No authority or Production-write rule changed.
+
+
+## Low-consumption v2.3 usage telemetry
+
+The runner now records exact Codex JSON token usage per autonomous model job and cumulative usage in private runtime state:
+input, cached input, derived uncached input, output, reasoning output when exposed, and cache-hit ratio. Status also separates Foundation and page-batch averages.
+
+Rate-limit percentages are recorded only when the installed Codex CLI exposes them; the runner does not estimate an account quota from token counts alone. This telemetry is intended to verify whether compact evidence, grouped Foundation jobs and batched page audits materially reduce model consumption.
