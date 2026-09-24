@@ -32,7 +32,12 @@ EOF
 systemctl daemon-reload
 
 echo "[5/6] Build deterministic evidence now — no Codex model call"
-runuser -u seo-audit -g seo-audit -- env   HOME=/home/seo-audit   CODEX_HOME=/home/seo-audit/.codex   MARIWORK_SEO_RUNNER_STATE=/home/seo-audit/.local/state/mariwork-seo-runner   MARIWORK_SEO_ISOLATED_RUNTIME=1   PATH=/usr/local/bin:/usr/bin:/bin   LANG=C.UTF-8   PYTHONDONTWRITEBYTECODE=1   bash -c 'cd /home/seo-audit/Final-SEO-Codex && automation/run_latest.sh prepare --push'
+install -o root -g root -m 0644 \
+  "$REPO/automation/systemd/mariwork-seo-audit-prepare.service" \
+  /etc/systemd/system/mariwork-seo-audit-prepare.service
+systemctl daemon-reload
+systemd-analyze verify /etc/systemd/system/mariwork-seo-audit-prepare.service
+systemctl start mariwork-seo-audit-prepare.service
 
 echo "[6/6] Show status"
 runuser -u seo-audit -g seo-audit -- env HOME=/home/seo-audit   bash -c 'cd /home/seo-audit/Final-SEO-Codex && python3 automation/seo_audit_runner.py status'
