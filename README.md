@@ -1,31 +1,70 @@
 # Final SEO Mariwork
 
-این مخزن **مرجع اصلی (Source of Truth)** پروژه SEO ماری‌ورک است. هدف آن فقط نگهداری گزارش نیست؛ بلکه ثبت کامل وضعیت هر صفحه، داده‌های تصمیم‌گیری، دو مرحله audit، تصمیم‌های استانداردسازی، تسک‌های اجرایی، نتیجه اجرا و پایش بعد از تغییر است.
+این مخزن **Source of Truth** پروژه SEO ماری‌ورک است. هدف آن نگهداری گزارش نیست؛ هدف ایجاد یک سیستم پایدار برای تحقیق، تصمیم‌گیری، اجرا، QA و اندازه‌گیری تمام تغییرات SEO سایت است.
 
-## اصل مرکزی پروژه
+**Framework version: 1.0 — FROZEN BEFORE PAGE AUDITS**
 
-هیچ صفحه‌ای صرفاً بر اساس یک audit بهینه‌سازی نمی‌شود.
+## مدل اصلی پروژه
 
-برای هر صفحه دو بررسی مستقل الزامی است:
+هیچ صفحه‌ای با یک audit یا یک پیشنهاد مستقیم وارد اجرا نمی‌شود.
 
-1. **Codex Audit** — بر اساس تسکی که ChatGPT برای Codex تعریف می‌کند؛ با بررسی داده‌های سرور، HTML، ساختار وردپرس/ووکامرس، اسکیما، تصاویر، لینک‌ها، Search Console و سایر شواهد.
-2. **ChatGPT Second Review** — ChatGPT گزارش Codex را می‌خواند، همان صفحه را مستقلاً بررسی می‌کند، یافته‌ها را تأیید/رد/تکمیل می‌کند و نتیجه نهایی را در پرونده صفحه ثبت می‌کند.
+مسیر استاندارد هر صفحه:
 
-تا زمانی که مرحله دوم انجام نشده و نتیجه به وضعیت `APPROVED` نرسیده باشد، پیشنهادهای audit مجوز اجرا روی Production نیستند.
+```text
+DISCOVERED
+→ BASELINED
+→ CODEX_AUDITED
+→ SECOND_REVIEWED
+→ APPROVED
+→ IMPLEMENTING
+→ IMPLEMENTED
+→ CODEX_QA_PASSED
+→ FINAL_QA_PASSED
+→ MONITORING
+→ COMPLETE
+```
 
-## اسناد حاکم
+اگر صفحه در هر مرحله blocker داشته باشد، `blocked: true` و دلیل آن در dossier ثبت می‌شود؛ وضعیت‌های اصلی حذف یا دور زده نمی‌شوند.
 
-به ترتیب اهمیت:
+### دو Audit اجباری
 
-1. [MANIFEST.md](MANIFEST.md) — هدف، اصول و قواعد غیرقابل‌مذاکره پروژه
-2. [AGENTS.md](AGENTS.md) — دستور کار Codex/Agent روی سرور
-3. [docs/WORKFLOW.md](docs/WORKFLOW.md) — چرخه کامل تحلیل تا اجرا و پایش
-4. [docs/AUDIT-SPEC.md](docs/AUDIT-SPEC.md) — استاندارد بررسی هر صفحه
-5. [docs/DATA-SOURCES.md](docs/DATA-SOURCES.md) — قوانین استفاده از داده و Search Console
-6. [docs/SEO-PLAYBOOK.md](docs/SEO-PLAYBOOK.md) — استانداردهای پذیرفته‌شده SEO سایت
-7. [docs/DECISIONS.md](docs/DECISIONS.md) — تصمیم‌های رسمی و تاریخچه آن‌ها
+1. **Codex Audit**  
+   بر اساس task نوشته‌شده توسط ChatGPT، با دسترسی read-only به Production و بررسی HTML، WordPress/WooCommerce، schema، images، links، Search Console، URL history و کد مسئول خروجی.
 
-در صورت تناقض، سند بالاتر اولویت دارد.
+2. **ChatGPT Second Review**  
+   بررسی مستقل URL زنده و intent/SEO/content، سپس خواندن و challenge کردن گزارش Codex و reconcile کردن یافته‌ها.
+
+Audit دوم خلاصه Audit اول نیست.
+
+### دو QA پس از اجرا
+
+1. **Codex Implementation QA** — بررسی فنی بلافاصله بعد از اجرا.
+2. **ChatGPT Final Acceptance QA** — بررسی مستقل خروجی عمومی، محتوای نهایی و نتیجه تغییر قبل از ورود به Monitoring.
+
+## قبل از auditهای صفحه
+
+قبل از Batch 001 این سه پایه باید ساخته شوند:
+
+1. **URL / Entity Inventory**
+2. **Sitewide Technical Baseline**
+3. **Search/Data Baseline**
+
+صفحه‌محور بودن audit نباید باعث نادیده گرفتن مشکلات سیستماتیک crawl، indexation، facets، schema، templates یا internal linking شود.
+
+## اسناد حاکم و ترتیب اولویت
+
+در صورت تناقض:
+
+1. [MANIFEST.md](MANIFEST.md)
+2. [docs/DECISIONS.md](docs/DECISIONS.md) — آخرین Decision پذیرفته‌شده و مرتبط
+3. [AGENTS.md](AGENTS.md) — محدودیت‌های عملیاتی Agent
+4. [docs/CHANGE-CONTROL.md](docs/CHANGE-CONTROL.md)
+5. [docs/WORKFLOW.md](docs/WORKFLOW.md)
+6. Specها: Audit / Technical / Content / Data / QA / Measurement
+7. [docs/SEO-PLAYBOOK.md](docs/SEO-PLAYBOOK.md)
+8. Templateها و READMEهای پوشه‌ها
+
+هیچ Decision نمی‌تواند Manifest را بدون تغییر رسمی Manifest نقض کند.
 
 ## ساختار مخزن
 
@@ -36,79 +75,66 @@
 ├── AGENTS.md
 ├── STATUS.md
 ├── docs/
-│   ├── WORKFLOW.md
-│   ├── AUDIT-SPEC.md
-│   ├── DATA-SOURCES.md
-│   ├── SEO-PLAYBOOK.md
-│   └── DECISIONS.md
 ├── templates/
-│   ├── PAGE-DOSSIER.md
-│   ├── CODEX-AUDIT-TASK.md
-│   ├── SECOND-REVIEW.md
-│   ├── IMPLEMENTATION-TASK.md
-│   └── BATCH.md
+├── registry/
+├── audits/sitewide/
+├── strategy/
+├── changes/
 ├── pages/
-│   └── README.md
 ├── batches/
-│   └── README.md
 ├── data/
-│   └── README.md
 ├── httpswww.mariwork.ir-Performance-on-Search-2026-09-24/
 └── httpswww.mariwork.ir-Coverage-2026-09-24/
 ```
 
-خروجی‌های فعلی Search Console در ریشه مخزن داده خام محسوب می‌شوند و **نباید ویرایش شوند**. مهاجرت یا سازمان‌دهی مجدد آن‌ها فقط با حفظ نسخه خام و ثبت تصمیم انجام می‌شود.
+### نقش مسیرها
+
+- `registry/` — URL inventory و findings سیستماتیک
+- `audits/sitewide/` — baselineهای فنی سراسری
+- `strategy/` — Query Map و Content Architecture
+- `changes/` — پرونده تغییرات FAMILY/SITEWIDE
+- `pages/` — dossier دائمی هر entity/page
+- `batches/` — مدیریت batchها، نه منبع نهایی حقیقت
+- `data/` — داده خام و derived آینده
 
 ## پرونده هر صفحه
 
-هر URL مهم یک پرونده دائمی در `pages/` دارد، نه مجموعه‌ای از گزارش‌های پراکنده. نام فایل برای صفحات دارای WordPress/Product ID باید شناسه پایدار را نگه دارد:
+برای entityهای WordPress/WooCommerce، شناسه پایدار در filename حفظ می‌شود:
 
 ```text
 pages/products/product-12544-gray-122.md
-pages/products/product-12471-redbrown-105.md
 ```
 
-تغییر slug یا URL باعث ساخت پرونده جدید نمی‌شود؛ URLهای قبلی در همان پرونده به‌عنوان `legacy_urls` ثبت می‌شوند.
+تغییر slug یا URL پرونده جدید نمی‌سازد. URL قبلی در `legacy_urls` ثبت می‌شود.
 
-## طبقه‌بندی یافته‌ها
+## Findings
 
-هر finding باید دارای `scope` باشد:
+هر finding باید دارای موارد زیر باشد:
 
-- `PAGE` — مختص همان صفحه
-- `FAMILY` — مربوط به یک خانواده صفحه، مثل همه رنگ‌های پارچه
-- `SITEWIDE` — مشکل یا قاعده سراسری
+- ID یکتا
+- severity: `P0/P1/P2/P3`
+- scope: `PAGE/FAMILY/SITEWIDE`
+- evidence class: `OBSERVED/MEASURED/INFERRED/HYPOTHESIS`
+- confidence: `HIGH/MEDIUM/LOW`
+- source/evidence
+- impact
+- recommendation
+- acceptance criteria
 
-و severity:
+یافته FAMILY/SITEWIDE باید در `registry/SYSTEMIC-FINDINGS.md` ثبت شود و در صورت اجرا، Change Dossier مستقل داشته باشد.
 
-- `P0` — خطای بحرانی/ریسک جدی
-- `P1` — اولویت بالا
-- `P2` — بهبود مهم
-- `P3` — بهبود کم‌ریسک/کم‌اولویت
+## اصول بنیادین
 
-یافته‌های FAMILY و SITEWIDE باید قبل از ساخت ده‌ها تسک تکراری، به راهکار سیستماتیک تبدیل شوند.
+- داده و شواهد مقدم بر حدس است.
+- واقعیت فعلی Production مقدم بر گزارش قدیمی است.
+- مشکل سیستماتیک با تغییر دستی ده‌ها صفحه حل نمی‌شود.
+- raw data ویرایش نمی‌شود.
+- اطلاعات محصول یا review/rating/spec ساختگی ممنوع است.
+- word count هدف SEO نیست.
+- LLM optimization سیستم جدا از SEO نیست.
+- تغییر URL بدون migration plan ممنوع است.
+- تغییرات غیرمرتبط در یک implementation bundle مخلوط نمی‌شوند.
+- هر تغییر باید قابل rollback و قابل اندازه‌گیری باشد.
+- customer data، secrets و credentialها هرگز وارد این repo نمی‌شوند.
 
-## وضعیت پرونده
-
-```text
-DISCOVERED
-→ CODEX_AUDITED
-→ SECOND_REVIEWED
-→ APPROVED
-→ IMPLEMENTING
-→ IMPLEMENTED
-→ QA_PASSED
-→ MONITORING
-→ COMPLETE
-```
-
-## فلسفه اجرا
-
-- داده و شواهد مقدم بر حدس هستند.
-- تغییر سیستماتیک مقدم بر اصلاح دستی تکراری است.
-- محتوای بیشتر لزوماً محتوای بهتر نیست.
-- اطلاعات محصول باید برای انسان، موتور جست‌وجو و LLM قابل‌استخراج، دقیق و سازگار باشد.
-- هیچ schema، review، rating، مشخصه فنی یا ادعای محصولی نباید ساخته یا حدس زده شود.
-- حفظ URL، تاریخچه و داده‌های قبلی اهمیت دارد.
-- هر تغییر باید قابل QA و در صورت نیاز قابل rollback باشد.
-
-برای شروع پروژه، ابتدا [STATUS.md](STATUS.md) و سپس [docs/WORKFLOW.md](docs/WORKFLOW.md) خوانده شود.
+برای شروع هر کار ابتدا [STATUS.md](STATUS.md) خوانده شود.

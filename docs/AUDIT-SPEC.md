@@ -1,206 +1,215 @@
-# Audit Specification
+# Page Audit Specification v1.0
 
-این سند حداقل بررسی اجباری هر صفحه را تعریف می‌کند. نوع صفحه می‌تواند موارد اضافه داشته باشد.
+این سند minimum contract برای audit هر page است. Sitewide audit سند جدا دارد.
 
-## 1. Identity
+## 1. Identity / State
 
+- framework_version
+- dossier_schema_version
+- entity ID
+- WP ID
+- type/family
 - current URL
-- WP/Post/Product ID
-- page type
-- family
-- public status
-- legacy URLs
-- redirect chain
 - canonical
-- sitemap presence
-- robots/indexability
+- legacy URLs
+- HTTP/redirect
+- sitemap
+- intended indexability
+- actual indexability signals
 
-## 2. Search / SERP Context
-
-در Second Review با دقت بیشتر:
+## 2. Search & Intent
 
 - primary intent
-- secondary intents
-- branded / non-branded
-- transactional / informational / mixed
-- SERP title/snippet observed where possible
-- competing page types
-- query cannibalization hypothesis
-- mismatch between page purpose and queries
+- secondary intent
+- branded/non-branded
+- transactional/informational/mixed
+- current SERP page types در Second Review
+- query/page mismatch
+- cannibalization hypothesis
+- target entity relationship در Query Map
 
-هیچ keyword صرفاً بر اساس حدس به صفحه تخصیص داده نمی‌شود.
+Query اختصاصی بدون evidence به صفحه تحمیل نمی‌شود.
 
 ## 3. Search Console
 
-ثبت snapshot date و range اجباری است.
+همیشه:
+- source snapshot
+- date range
+- dimension
+- current vs legacy URL
 
-حداقل:
+حداقل metrics در صورت وجود:
 - clicks
 - impressions
 - CTR
-- average position
-- device pattern در صورت مرتبط بودن
+- position
+- device
 - search appearance
-- current and legacy URL rows
 
-اگر Page+Query dataset وجود دارد:
-- top relevant queries
-- query intent groups
-- CTR opportunity
-- anomalous high-impression queries
+Page+Query:
+- YES / NO
+- اگر NO: query-to-page attribution ممنوع
 
-اگر وجود ندارد، relation ساخته نمی‌شود.
+## 4. Crawl / Index / Canonical
 
-## 4. Technical On-Page
-
-- status code
-- redirect
+- status
+- redirect chain
 - canonical
-- robots meta/header
+- robots meta
+- X-Robots
+- robots.txt accessibility
+- sitemap membership
+- canonical consistency
+- accidental parameter/duplicate URL
+
+robots.txt = crawl control، نه ابزار قابل‌اتکا برای noindex.
+
+## 5. Metadata / HTML Semantics
+
 - title
 - meta description
 - H1 count/content
-- heading hierarchy
-- lang/dir if relevant
-- Open Graph
-- duplicate boilerplate signals
-- HTML availability without interaction
-- JS/AJAX-dependent critical content
+- heading structure
+- lang/dir where relevant
+- OG/social
+- snippet-sensitive visible content
+- duplicate boilerplate pattern
 
-## 5. Content
+## 6. Content Accessibility
 
-### Usefulness
-- آیا کاربر می‌فهمد این صفحه چیست؟
-- آیا پاسخ تصمیم اصلی در بالای صفحه وجود دارد؟
-- آیا متن فقط کلی/قابل‌جایگزینی با محصولات دیگر است؟
-- چه Information Gain واقعی دارد؟
-- چه اطلاعات ضروری کم است؟
+- critical content in initial HTML
+- AJAX/JS-only content
+- crawlable links
+- hidden/interaction-gated critical facts
+- mobile-visible parity
+- content loaded only after click/scroll
+
+## 7. Content Quality
 
 ### Accuracy
-- تناقض short/long/meta/schema
-- حجم/قیمت/کد/نام/کاربرد
-- جملات ناقص یا قدیمی
-- ادعاهای بدون منبع
+- name/code/volume/price/application
+- short vs long vs schema consistency
+- outdated statements
+- incomplete sentences
+- unsupported claims
+
+### Usefulness
+- clear first-screen answer
+- purchase/learning decision support
+- Information Gain
+- limitations/tradeoffs where relevant
+- verified evidence/examples
+
+### Similarity
+- repeated headings
+- repeated paragraphs
+- family boilerplate
+- truly unique sections
 
 ### LLM Extractability
-- entity واضح
-- ویژگی‌ها نزدیک به entity
-- پاسخ کوتاه مستقیم
-- headingهای معنادار
-- جدول/لیست ساختاریافته در صورت مفید بودن
-- عدم دفن مشخصات حیاتی داخل UI صرفاً AJAX
-- consistency across visible text and structured data
+- explicit entity
+- factual attributes near entity
+- concise answer blocks
+- meaningful tables/lists
+- no important fact trapped only in interaction UI
+- visible/schema consistency
 
-## 6. Product-specific
+## 8. Product / WooCommerce
 
-برای WooCommerce Product:
-
+در product:
 - product type
-- variations
-- variation IDs
+- variations/variation IDs
 - SKU uniqueness
-- public price
-- sale/conditional price
-- currency/unit conversion
-- stock status
-- brand
 - attributes
-- variation URLs/preselection
+- price/public price/sale conditions
+- stock
+- brand
+- variation selection URLs
 - bundle contents
-- dimensions/weight if visible/structured
+- dimensions/weight only if real
 - purchasing path
 
-قیمت HTML، Woo data و schema باید مقایسه شوند.
+HTML/Woo/schema comparison اجباری برای price/availability در صفحه‌های مهم.
 
-## 7. Structured Data
+## 9. Structured Data
 
 - Product / ProductGroup / Offer / AggregateOffer
 - Breadcrumb
-- Organization relevance
-- required/recommended fields
-- visible-content consistency
-- URL
-- image
-- SKU/brand
-- variant relationship
+- Organization where relevant
+- identifiers
+- variants
 - price/currency
 - availability
-- reviews/ratings
-- shipping/returns where real
+- image
+- genuine ratings/reviews
+- shipping/returns only when real
+- initial HTML where relevant to fast-changing product data
+- Rich Results Test/URL Inspection when available in QA, not assumed from syntax alone
 
-Rich Results eligibility و schema syntax دو موضوع متفاوت‌اند.
+## 10. Images
 
-## 8. Images
-
-- unique images
 - main image relevance
-- alt accuracy
-- repeated/misleading alt
-- file naming as secondary concern
-- width/height
-- responsive image
-- lazy load
+- unique images
+- correct ALT
+- repeated/wrong volume ALT
+- dimensions/srcset
+- lazy loading
 - likely LCP
-- product evidence images
-- examples on real material when relevant
+- product evidence/sample imagery
+- file discoverability
 
-ALT برای توصیف تصویر است، نه تکرار keyword.
+ALT describes image; it is not a keyword field.
 
-## 9. Internal Linking
+## 11. Internal Linking
 
-- breadcrumbs
+- breadcrumb
 - parent/category
-- related products
-- complementary pages
-- academy/articles
+- complementary products
+- product ↔ education links
+- related content
 - orphan risk
-- reciprocal contextual opportunities
-- old URL links
+- crawlable `<a href>`
+- legacy internal URLs
+- anchor relevance
 
-## 10. Template Similarity
+## 12. Page Experience / Performance
 
-برای خانواده‌های بزرگ:
-- repeated headings
-- repeated paragraphs
-- repeated metadata patterns
-- near-duplicate text
-- truly product-specific sections
-
-هدف حذف اجزای مشترک مفید نیست؛ هدف جدا کردن boilerplate از اطلاعات اختصاصی است.
-
-## 11. Performance Signals
-
-Audit HTML به‌تنهایی Core Web Vitals را اثبات نمی‌کند.
+تفکیک:
+- field data
+- lab data
+- HTML observation
 
 بررسی:
-- obvious lazy-LCP risk
-- excessive initial HTML
-- blocking elements where measurable
-- mobile-first QA
+- Core Web Vitals data if available
+- likely LCP image lazy issue
+- mobile rendering
+- intrusive UI/interstitials
+- excessive layout shift causes when measurable
 
-ادعای CWV فقط با داده مناسب.
+یک lab score به‌تنهایی verdict SEO نیست.
 
-## 12. Finding Quality
+## 13. Trust / Evidence
 
-هر finding باید:
-- observable evidence داشته باشد؛
-- impact منطقی داشته باشد؛
-- recommendation مشخص؛
-- acceptance criteria آزمون‌پذیر.
+بدون ساخت score مصنوعی:
+- manufacturer/source clarity
+- real product examples
+- reviewer/editor identity where relevant
+- update dates only if real
+- first-hand evidence
 
-### Severity
+E-E-A-T به‌عنوان «امتیاز عددی داخلی» استفاده نشود.
 
-**P0** — خرابی/ریسک بحرانی مثل indexability اشتباه یا داده خرید بسیار خطرناک  
-**P1** — خطای مهم و مستقیم  
-**P2** — فرصت مهم برای بهبود  
-**P3** — polish / low priority
+## 14. Finding Contract
 
-### Scope
+هر finding:
+- unique ID
+- evidence class
+- confidence
+- severity
+- scope
+- source refs
+- impact
+- recommendation
+- acceptance criteria
 
-**PAGE** — فقط این entity  
-**FAMILY** — چند صفحه هم‌نوع  
-**SITEWIDE** — سیستم سایت
-
-## 13. Audit Output
-
-Audit نباید با score کلی مثل «SEO 82/100» جایگزین findings شود. هدف تشخیص و اقدام قابل سنجش است.
+Audit با score کلی جایگزین findings نمی‌شود.

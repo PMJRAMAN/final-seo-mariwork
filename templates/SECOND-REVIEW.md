@@ -1,45 +1,61 @@
-# ChatGPT Second Review Template
+# ChatGPT Second Review v1.0
 
-این review باید مستقل باشد و فقط خلاصه گزارش Codex نباشد.
+## Goal
 
-## Inputs
+یک audit مستقل + reconcile گزارش Codex.
 
-- Page dossier
-- Codex Audit
-- Live URL
-- Current Search Console/Coverage evidence
-- Relevant public web/SERP/doc sources where useful
+## Step A — Independent Review First
 
-## Procedure
+تا حد ممکن قبل از تکیه بر conclusions Codex:
 
-1. URL زنده را مستقیم بررسی کن.
-2. metadata/content/schema visible را مستقل بخوان.
-3. گزارش Codex را finding-by-finding بررسی کن.
-4. برای هر finding یکی از این تصمیم‌ها:
-   - CONFIRM
-   - MODIFY
-   - REJECT
-   - NEEDS_MORE_EVIDENCE
-5. Search intent را مستقلاً ارزیابی کن.
-6. usefulness و Information Gain را بررسی کن.
-7. LLM extractability را بررسی کن.
-8. مواردی که Codex ندیده اضافه کن.
-9. PAGE/FAMILY/SITEWIDE scope را بازبینی کن.
-10. Final Approved Findings را فقط پس از reconcile بنویس.
+- live URL
+- current HTML/metadata/schema
+- dossier identity/baseline
+- current SERP/intent where relevant
+- public evidence
 
-## Required Notes
+را بررسی و Independent Notes ثبت کن.
 
-- چه چیزی مستقیم مشاهده شد؟
-- چه چیزی از Codex تأیید شد؟
-- چه چیزی رد شد و چرا؟
-- چه finding جدیدی اضافه شد؟
-- چه مواردی هنوز hypothesis است؟
-- آیا systemic fix لازم است؟
+## Step B — Review Codex Findings
 
-## Gate
+گزارش Codex را کامل بخوان و برای هر finding:
 
-پس از تکمیل:
-`CODEX_AUDITED → SECOND_REVIEWED`
+- CONFIRM
+- MODIFY
+- REJECT
+- NEEDS_MORE_EVIDENCE
 
-فقط وقتی Final Findings و Target State به اندازه کافی روشن‌اند:
+ثبت کن.
+
+## Step C — Content / Intent Research
+
+طبق `docs/CONTENT-RESEARCH-SPEC.md`:
+- intent
+- query evidence
+- SERP composition
+- information gaps
+- unique value
+- cannibalization
+- LLM readability
+
+## Step D — Reconcile
+
+- additional findings
+- systemic refs
+- final severity/scope
+- acceptance criteria
+- Target State
+
+## Approval Gate
+
+فقط اگر:
+- evidence کافی
+- blockers روشن
+- Target State مشخص
+- facts verified
+- systemic dependencies identified
+
+آنگاه:
 `SECOND_REVIEWED → APPROVED`
+
+در غیر این صورت همان SECOND_REVIEWED + blocker باقی بماند.

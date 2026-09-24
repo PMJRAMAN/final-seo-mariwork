@@ -1,131 +1,185 @@
 # Manifest — Final SEO Mariwork
 
+**Framework version: 1.0**  
+**State: FROZEN BEFORE PAGE AUDITS**  
+**Frozen: 2026-09-24**
+
 ## 1. مأموریت
 
-این پروژه برای بهینه‌سازی اصولی، مستند، قابل‌اندازه‌گیری و بلندمدت SEO کل سایت ماری‌ورک ایجاد شده است.
+این پروژه برای SEO اصولی، مستند، قابل‌اندازه‌گیری و بلندمدت کل ماری‌ورک است.
 
-هدف «بالا بردن نمره یک افزونه SEO» یا «زیاد کردن متن صفحات» نیست. هدف ایجاد سیستمی است که:
+هدف پروژه:
+- شناخت وضعیت واقعی سایت؛
+- ساخت پرونده دائمی برای هر entity مهم؛
+- تحقیق فنی و محتوایی با شواهد؛
+- تبدیل یافته‌های تکراری به اصلاح سیستماتیک؛
+- تولید محتوای مفید، دقیق و متمایز؛
+- سازگاری داده visible، WooCommerce و structured data؛
+- قابل‌فهم بودن اطلاعات برای کاربر، Search و سیستم‌های AI/LLM؛
+- ثبت تأثیر واقعی تغییرات.
 
-- هر صفحه هویت و پرونده مشخص داشته باشد؛
-- وضعیت فعلی آن با داده واقعی ثبت شود؛
-- هر تصمیم SEO قابل ردیابی باشد؛
-- مشکلات تکراری در سطح خانواده یا سایت حل شوند؛
-- محتوا و ساختار برای Search، کاربران و LLMها واضح باشد؛
-- تأثیر تغییرات بعد از اجرا اندازه‌گیری شود.
+هدف پروژه «امتیاز افزونه SEO»، «تعداد کلمه» یا «تولید انبوه صفحه برای keyword» نیست.
 
 ## 2. قواعد غیرقابل‌مذاکره
 
-### M-01 — دو Audit مستقل
+### M-01 — Dual Audit
 هیچ صفحه‌ای با یک audit نهایی نمی‌شود.
 
-**Audit اول:** Codex، بر اساس تسک مشخص ChatGPT.
+**Audit 1 — Codex:** تحقیق فنی/داده‌ای read-only بر اساس task ChatGPT.
 
-**Audit دوم:** ChatGPT، شامل:
-- خواندن کامل گزارش Codex؛
-- بررسی مستقیم همان URL؛
-- بررسی شواهد مورد استفاده Codex؛
-- تأیید، رد یا اصلاح یافته‌ها؛
-- افزودن یافته‌های مستقل؛
-- تبدیل خروجی به Final Approved Findings.
+**Audit 2 — ChatGPT:** بررسی مستقل URL زنده و intent/content/SEO و سپس reconcile با گزارش Codex.
 
-Audit دوم نباید صرفاً خلاصه Audit اول باشد.
+Second Review باید یافته‌های Codex را `CONFIRM / MODIFY / REJECT / NEEDS_MORE_EVIDENCE` کند و یافته مستقل اضافه کند.
 
-### M-02 — تحلیل قبل از اجرا
-Codex در مرحله audit حق اصلاح Production ندارد. اجرا فقط پس از `APPROVED` شدن پرونده و صدور Implementation Task انجام می‌شود.
+### M-02 — Analysis Before Write
+تا قبل از `APPROVED` شدن dossier و صدور Implementation Task هیچ تغییر SEO روی Production مجاز نیست.
 
-### M-03 — پرونده دائمی برای هر صفحه
-هر صفحه یک پرونده canonical دارد. گزارش‌ها، review، target state، اجرا و monitoring همان‌جا ثبت می‌شوند. تغییر URL پرونده جدید نمی‌سازد مگر اینکه ماهیت صفحه واقعاً عوض شده باشد.
+### M-03 — Stable Page Dossier
+هر entity مهم فقط یک dossier canonical دارد. تغییر slug/URL باعث ساخت dossier جدید نمی‌شود مگر entity واقعاً عوض شده باشد.
 
-### M-04 — داده خام تغییرناپذیر است
-Exportهای Search Console، Coverage و سایر داده‌های خام ویرایش نمی‌شوند. هر transformation باید در derived data یا سند تحلیلی جدا ثبت شود.
+### M-04 — Immutable Raw Data
+Search Console، Coverage/Indexing، crawl export، log extract و سایر raw snapshotها ویرایش نمی‌شوند. Derived data باید منبع، تاریخ و transformation را ثبت کند.
 
-### M-05 — Search Console با محدودیت‌هایش تفسیر می‌شود
-اگر dataset فقط `Pages.csv` و `Queries.csv` جداگانه داشته باشد، یک query بدون داده ترکیبی Page+Query به یک URL خاص نسبت داده نمی‌شود.
+### M-05 — No False Page/Query Attribution
+Query و Page مستقل Search Console به هم نسبت داده نمی‌شوند مگر relation با Page+Query dataset/filter یا شواهد مستقیم اثبات شده باشد.
 
-### M-06 — واقعیت Production مهم‌تر از گزارش است
-اگر گزارش قدیمی با HTML/DB/رفتار فعلی Production ناسازگار باشد، وضعیت فعلی باید دوباره اندازه‌گیری و اختلاف ثبت شود.
+### M-06 — Production Reality Wins
+HTML، HTTP behavior، current WP/Woo data و code فعلی نسبت به گزارش تاریخی اولویت دارند. اختلاف باید ثبت شود، نه پنهان.
 
-### M-07 — مشکل تکراری، راهکار تکراری نمی‌خواهد
-یافته‌های مشترک ابتدا به PAGE / FAMILY / SITEWIDE طبقه‌بندی می‌شوند. اصلاح template، schema generator، title pattern یا component مقدم بر تغییر دستی ده‌ها صفحه است.
+### M-07 — Systemic Problems Get Systemic Fixes
+هر finding باید PAGE/FAMILY/SITEWIDE باشد. مشکلات FAMILY/SITEWIDE قبل از تکرار دستی به ریشه مشترک، change dossier و regression set تبدیل می‌شوند.
 
-### M-08 — محتوای ساختگی ممنوع
-هیچ داده فنی، نتیجه آزمایش، دوام، پوشش، دما، زمان، rating، review، GTIN، SKU، موجودی یا ادعای محصول نباید برای SEO اختراع شود.
+### M-08 — No Invented Facts
+هیچ spec، پوشش، دوام، زمان، دما، نتیجه آزمایش، SKU، GTIN، availability، review، rating یا ادعای محصول برای SEO اختراع نمی‌شود.
 
-### M-09 — محتوای مفید مقدم بر طول متن
-هدف صفحه پاسخ‌دادن به intent، تسهیل تصمیم خرید/یادگیری، ایجاد Information Gain و نمایش شواهد واقعی است؛ نه رسیدن به تعداد کلمه.
+### M-09 — People-First, Evidence-Rich Content
+طول متن هدف نیست. محتوا باید intent را حل کند، Information Gain داشته باشد و تا حد ممکن از تجربه/شواهد واقعی ماری‌ورک استفاده کند.
 
-### M-10 — LLM Optimization بخشی از SEO است، نه سیستم جدا
-محتوا باید:
-- پاسخ مستقیم داشته باشد؛
-- اصطلاحات و موجودیت‌ها روشن باشند؛
-- داده‌های محصول منسجم باشند؛
-- جداول/فهرست‌های معنادار قابل استخراج باشند؛
-- ادعاها با شواهد سازگار باشند.
+تولید انبوه متن template/AI با ارزش کم ممنوع است.
 
-فایل یا markup خیالی مخصوص «رتبه LLM» جایگزین SEO و محتوای واقعی نیست.
+### M-10 — LLM/AI Visibility Is Built on Search Fundamentals
+برای AI/LLM فایل یا schema خیالی ساخته نمی‌شود. اولویت:
+- crawl/index eligibility؛
+- محتوای متنی قابل‌دسترسی؛
+- entity واضح؛
+- داده دقیق و سازگار؛
+- internal links؛
+- structured sections؛
+- شواهد واقعی.
 
-### M-11 — تغییرات قابل ردیابی‌اند
-هر اجرای Production باید به:
-- پرونده صفحه یا finding سیستماتیک؛
-- Implementation Task؛
-- نتیجه اجرا؛
-- QA؛
-- تاریخ؛
-- commit/تغییر مرتبط در صورت وجود
+### M-11 — Traceability
+هر write روی Production باید به finding پذیرفته‌شده، Implementation Task، change reference، QA و تاریخ متصل باشد.
 
-قابل اتصال باشد.
+### M-12 — URL History Is Preserved
+legacy URL، redirect chain و canonical history حفظ می‌شود تا داده تاریخی GSC از entity جدا نشود.
 
-### M-12 — URL History حفظ می‌شود
-URLهای قدیمی Search Console، redirectها و canonicalهای قبلی باید در پرونده همان entity ثبت شوند تا داده تاریخی از صفحه فعلی جدا نشود.
+### M-13 — Sitewide Technical Baseline Before Page Batches
+قبل از audit گسترده صفحه‌ها، baseline سراسری حداقل برای crawl/indexation، URL spaces، facets، sitemap، redirects، canonical patterns، schema system، internal linking و performance/mobile ایجاد می‌شود.
+
+استثنا فقط task اضطراری مستندشده است.
+
+### M-14 — Independent Final QA
+`IMPLEMENTED` پایان کار نیست. Codex QA و سپس ChatGPT Final Acceptance Review اجباری است. فقط بعد از آن `FINAL_QA_PASSED`.
+
+### M-15 — Controlled Systemic Rollout
+تغییر FAMILY/SITEWIDE باید:
+- Change Dossier
+- exact scope
+- backup/rollback
+- canary یا نمونه محدود در صورت عملی
+- regression set
+- acceptance criteria
+- rollout result
+
+داشته باشد.
+
+### M-16 — Framework Freeze
+بعد از Framework v1.0 تغییر ساختار workflow یا schema پرونده‌ها فقط طبق `docs/CHANGE-CONTROL.md` مجاز است. تغییرات باید تا حد ممکن backwards-compatible باشند.
+
+### M-17 — Content Authority
+Final content target توسط ChatGPT در Second Review/Target State تأیید می‌شود.
+
+Codex می‌تواند فقط اگر task صریحاً خواست draft بسازد. Draft Codex قبل از approval محتوای قابل اجرا نیست و حق افزودن fact تأییدنشده ندارد.
+
+### M-18 — Measurement Discipline
+هر implementation باید تاریخ، baseline و change scope داشته باشد. رشد یا افت پس از تغییر بدون کنترل seasonality، query mix، قیمت/موجودی و تغییرات دیگر به‌عنوان causation قطعی گزارش نمی‌شود.
+
+### M-19 — Evidence Classes
+در گزارش‌ها تفاوت این موارد روشن است:
+- `OBSERVED` — مستقیم دیده شده
+- `MEASURED` — از داده/اندازه‌گیری
+- `INFERRED` — استنباط مستدل
+- `HYPOTHESIS` — نیازمند آزمایش
+- `DECISION` — تصمیم پروژه
+
+### M-20 — Data Minimization & Security
+SEO audit نباید customer PII، order details، credential، token، private key یا secret را وارد repo کند. فقط کمترین داده لازم خوانده/ثبت شود.
 
 ## 3. نقش‌ها
 
-### ChatGPT — SEO Lead / Second Reviewer
-مسئول:
-- طراحی taskهای Codex؛
-- انتخاب batchها؛
-- review دوم مستقل؛
-- تحلیل intent و SERP؛
-- reconcile یافته‌ها؛
-- ساخت Playbook؛
-- تعیین target state؛
-- نوشتن Implementation Task؛
-- اولویت‌بندی.
+### ChatGPT — SEO Lead / Independent Reviewer
+- طراحی task
+- انتخاب batch
+- تحقیق SERP/intent
+- Second Review مستقل
+- reconcile findings
+- تعیین Target State
+- تأیید محتوای نهایی
+- توسعه Playbook
+- نوشتن Implementation Task
+- Final Acceptance QA
+- اولویت‌بندی
 
-### Codex — Technical Auditor / Executor
-مسئول:
-- audit دقیق سرور و صفحات؛
-- استخراج داده؛
-- بررسی WordPress/WooCommerce؛
-- بررسی HTML/schema/metadata/images/links؛
-- اتصال داده Search Console موجود به پرونده، با رعایت محدودیت‌ها؛
-- اجرای تغییرات فقط با task اجرایی صریح؛
-- ثبت نتیجه و QA فنی.
+### Codex — Technical Auditor / Controlled Executor
+- read-only server/page audit
+- extraction و measurement
+- WordPress/WooCommerce/code analysis
+- schema/metadata/media/link analysis
+- ثبت finding
+- implementation فقط با task صریح
+- backup/rollback متناسب
+- Codex QA و مستندسازی
 
 ### Repository
-حافظه رسمی پروژه است. چیزی که فقط در chat گفته شده ولی در تصمیم نهایی پروژه اهمیت بلندمدت دارد باید در این مخزن ثبت شود.
+حافظه رسمی پروژه است. تصمیم مهمی که فقط در chat مانده، تا وقتی در repo ثبت نشده تصمیم پایدار پروژه محسوب نمی‌شود.
 
-## 4. Definition of Done برای هر صفحه
+## 4. Definition of Ready
+
+### برای Codex Audit
+- entity/URL مشخص
+- dossier یا template مشخص
+- snapshotهای داده موجود مشخص
+- mode = READ-ONLY
+- scope و batch روشن
+
+### برای APPROVED
+- Codex Audit کامل
+- Second Review مستقل
+- findings reconcile شده
+- blockerها مشخص
+- intent و Target State به اندازه کافی روشن
+- اگر rewrite بر query intent متکی است: Page+Query data موجود یا limitation + جایگزین پژوهشی ثبت شده
+
+### برای Implementation
+- dossier = APPROVED
+- exact approved finding IDs
+- exact write scope
+- backup/rollback
+- acceptance criteria
+- برای FAMILY/SITEWIDE: change dossier و rollout strategy
+
+## 5. Definition of Done
 
 صفحه زمانی `COMPLETE` است که:
+- baseline دارد؛
+- دو audit کامل است؛
+- target state ثبت شده؛
+- تغییرات لازم اجرا شده؛
+- Codex QA پاس شده؛
+- Final Acceptance QA پاس شده؛
+- monitoring انجام یا نتیجه/عدم امکان آن ثبت شده؛
+- blocker بحرانی باز ندارد.
 
-- Codex Audit انجام شده باشد؛
-- Second Review مستقل انجام شده باشد؛
-- اختلاف‌ها reconcile شده باشند؛
-- target state مشخص باشد؛
-- اصلاحات لازم اجرا شده باشند؛
-- QA فنی و محتوایی پاس شده باشد؛
-- snapshot قبل و بعد موجود باشد؛
-- دوره monitoring تعریف‌شده طی شده یا نتیجه آن ثبت شده باشد؛
-- unresolved item بحرانی باقی نمانده باشد.
+## 6. اصل احتیاط
 
-## 5. اصل احتیاط
-
-SEO پروژه تجربی و اندازه‌گیری‌محور است. هیچ تغییر، رشد رتبه یا CTR را تضمین نمی‌کند. تحلیل باید تفاوت میان:
-- مشاهده،
-- استنباط،
-- فرضیه،
-- پیشنهاد،
-- نتیجه اندازه‌گیری‌شده
-
-را روشن نگه دارد.
+هیچ best practice به‌تنهایی رتبه یا نمایش rich result/AI citation را تضمین نمی‌کند. پروژه تفاوت مشاهده، فرضیه، تصمیم و نتیجه اندازه‌گیری‌شده را حفظ می‌کند.

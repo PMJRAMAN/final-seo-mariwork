@@ -1,23 +1,22 @@
-# Codex Implementation Task Template
+# Codex Implementation Task v1.0
 
 ## Mode
+**IMPLEMENTATION — ONLY APPROVED WRITES**
 
-**IMPLEMENTATION — WRITES ALLOWED ONLY AS SPECIFIED**
-
-قبل از اجرا:
-- `MANIFEST.md`
-- `AGENTS.md`
-- `docs/SEO-PLAYBOOK.md`
-- پرونده APPROVED
-- این task
-
-را بخوان.
+## Required Reading
+- MANIFEST.md
+- docs/DECISIONS.md
+- AGENTS.md
+- docs/QA-SPEC.md
+- docs/SEO-PLAYBOOK.md
+- approved dossier
+- systemic change dossier if referenced
 
 ## Target
-
 Entity/Page:  
 Dossier:  
-Approved finding IDs:
+Approved finding IDs:  
+Change reference:
 
 ## Exact Changes
 
@@ -25,23 +24,44 @@ Approved finding IDs:
 2.
 3.
 
-هر چیزی خارج از این scope تغییر نکند.
+هر چیز خارج این scope تغییر نکند.
 
 ## Preconditions
 
-- [ ] dossier status = APPROVED
+- [ ] dossier = APPROVED
 - [ ] current state rechecked
-- [ ] dependency verified
-- [ ] backup/rollback مناسب آماده
+- [ ] target content/facts approved
+- [ ] dependencies verified
+- [ ] backup/rollback ready
 - [ ] no conflicting recent change
+- [ ] systemic change dossier exists if FAMILY/SITEWIDE
 
-## Constraints
+## Write Scope
 
-- URL را تغییر نده مگر صریحاً در task آمده باشد.
-- Product facts اختراع نکن.
-- unrelated refactor انجام نده.
-- systemic change فقط روی scope تعیین‌شده.
-- cache purge فقط در صورت نیاز و با scope حداقلی.
+- Files:
+- DB objects:
+- WP options/meta/content:
+- Cache action:
+- URLs affected:
+
+## Safety
+
+- unrelated refactor ممنوع
+- URL change فقط اگر task صریح
+- no invented facts
+- no secret/PII logging
+- bulk change: dry-run/sample where possible
+
+## Rollout
+
+For PAGE:
+- exact page only
+
+For FAMILY/SITEWIDE:
+- canary/sample:
+- regression set:
+- rollout trigger:
+- rollback trigger:
 
 ## Acceptance Criteria
 
@@ -49,31 +69,11 @@ Approved finding IDs:
 - [ ]
 - [ ]
 
-## QA
+## Codex QA
 
-بعد از اجرا:
-- public HTML
-- metadata
-- schema
-- canonical/indexability
-- relevant product behavior
-- mobile-visible result
-- links
-- no regression
-
-## Documentation
-
-پرونده را با:
-- changed objects
-- before/after
-- date
-- commit/reference
-- QA result
-- unresolved items
-
-به‌روزرسانی کن.
+طبق QA-SPEC اجرا و evidence ثبت شود.
 
 Status:
-`APPROVED → IMPLEMENTING → IMPLEMENTED`
+`APPROVED → IMPLEMENTING → IMPLEMENTED → CODEX_QA_PASSED`
 
-`QA_PASSED` فقط پس از پاس کامل QA.
+Codex `FINAL_QA_PASSED` تعیین نمی‌کند.

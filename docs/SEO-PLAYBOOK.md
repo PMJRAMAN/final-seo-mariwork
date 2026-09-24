@@ -1,120 +1,115 @@
 # SEO Playbook — Mariwork
 
-> این سند استانداردهای **پذیرفته‌شده** سایت را نگه می‌دارد. در Foundation عمداً skeleton است. Codex نباید قواعد دلخواه را به‌عنوان استاندارد قطعی به آن اضافه کند.
+**Framework:** v1.0  
+**Playbook state:** EVIDENCE-BUILDING
 
-## وضعیت سند
+این سند فقط قواعد پذیرفته‌شده سایت را نگه می‌دارد. Audit spec نیست و Codex اجازه ندارد rule دلخواه را ACCEPTED کند.
 
-Status: INITIAL / EVIDENCE-BUILDING
-
-## روش افزودن Rule
-
-هر rule باید:
-- ID داشته باشد؛
-- scope داشته باشد؛
-- منبع تصمیم داشته باشد؛
-- نمونه/شواهد داشته باشد؛
-- تاریخ پذیرش داشته باشد.
-
-قالب:
+## Rule Contract
 
 ```yaml
 rule_id: PLAY-XXX
 scope: FAMILY|SITEWIDE
 status: PROPOSED|ACCEPTED|SUPERSEDED
 decision_ref:
-evidence:
+evidence_refs:
 rule:
 exceptions:
 accepted_date:
 ```
 
----
-
 ## 1. URL Architecture
+TBD after inventory/sitewide crawl audit.
 
-TBD after inventory and migration mapping.
+## 2. Indexability / Facets
+TBD after sitewide technical baseline.
 
-## 2. Product Naming
+## 3. Product Naming
+TBD after product pilot batches.
 
-TBD after first product batches.
-
-## 3. SEO Title Patterns
-
+## 4. SEO Titles
 TBD.
 
-اصل اولیه غیرقطعی:
-- title باید متمایز، توصیفی و بدون boilerplate غیرضروری باشد.
-- title pattern باید family-level تصمیم‌گیری شود، نه دستی و متفاوت برای هر صفحه بدون دلیل.
+Baseline principle:
+- descriptive
+- concise
+- distinct
+- no unnecessary repeated boilerplate
 
-## 4. Meta Descriptions
-
+## 5. Meta Descriptions
 TBD.
 
-## 5. H1
+Meta is a candidate snippet source, not guaranteed displayed text.
 
+## 6. H1 / Headings
 TBD.
 
-## 6. Product Variants
+## 7. Product Variants
+TBD after variant audit.
 
-TBD after ProductGroup/variant audit.
+Baseline principle:
+- variant identities must be stable/unique where markup requires them
+- canonical/variant URL behavior must match chosen architecture
 
-## 7. Product Schema
-
+## 8. Product Structured Data
 TBD after systemic schema audit.
 
-## 8. Brand / SKU / Identifier
+Baseline principle:
+- structured data matches visible/current product facts
+- no fake ratings/reviews/specs
 
+## 9. Brand / SKU / Identifier
 TBD.
 
-## 9. Images & ALT
+## 10. Images / ALT
 
-اصل پذیرفته‌شده:
-- ALT تصویر را توصیف می‌کند؛ keyword stuffing ممنوع است.
-- ALT اشتباه یا volume نامرتبط باید اصلاح شود.
+Accepted baseline principles:
+- ALT describes the actual image
+- keyword stuffing ممنوع
+- wrong volume/product ALT must be corrected
+- hero/product evidence images should balance quality and performance
 
-جزئیات family pattern پس از audit.
-
-## 10. Product Content Architecture
-
+## 11. Product Content Architecture
 TBD after dual audit.
 
-بخش‌های احتمالی که باید با evidence تأیید شوند:
+Potential modules, only when useful:
 - decision summary
-- verified specifications
+- verified specs
 - volume comparison
 - use cases
-- real evidence/sample
-- usage/fixation links
-- relevant FAQ
+- real samples/evidence
+- usage/fixation guidance
+- relevant questions
 
-وجود این لیست به معنی اجبار همه بخش‌ها در همه صفحات نیست.
+No mandatory word count.
 
-## 11. Internal Linking
+## 12. Internal Linking
+TBD after crawl/link baseline.
 
+## 13. Category / Archive
 TBD.
 
-## 12. Category / Archive Pages
-
+## 14. Education / Articles
 TBD.
 
-## 13. Education / Articles
+## 15. Faceted Navigation
+TBD after URL-space audit.
 
-TBD.
+## 16. AI / LLM Readability
 
-## 14. Faceted Navigation
+Accepted baseline:
+- no special AI markup/files required for Google AI features
+- important content should be textual and accessible
+- entity/facts clear
+- structured sections
+- visible content and structured data consistent
+- no invented facts
 
-TBD after crawl/index audit.
+## 17. Content Automation
 
-## 15. LLM Readability
+Accepted baseline:
+- scaled low-value/template content ممنوع
+- automation may assist drafting/analysis but human/project approval and unique value are required
 
-اصول پایه:
-- factual consistency
-- explicit entity naming
-- concise answer blocks
-- structured factual sections
-- no invented claims
-- important data available in initial readable HTML when practical
-
-## 16. Monitoring Standards
-
-TBD after baseline setup.
+## 18. Monitoring
+TBD after first implementation cycle.

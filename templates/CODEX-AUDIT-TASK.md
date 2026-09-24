@@ -1,95 +1,80 @@
-# Codex Audit Task Template
+# Codex Page Audit Task v1.0
 
 ## Mode
-
 **AUDIT ONLY — PRODUCTION READ-ONLY**
 
-قبل از شروع:
-- `MANIFEST.md`
-- `AGENTS.md`
-- `docs/WORKFLOW.md`
-- `docs/AUDIT-SPEC.md`
-- `docs/DATA-SOURCES.md`
-- پرونده هر صفحه
-
-را بخوان.
+## Required Reading
+- MANIFEST.md
+- docs/DECISIONS.md
+- AGENTS.md
+- docs/WORKFLOW.md
+- docs/AUDIT-SPEC.md
+- docs/DATA-SOURCES.md
+- docs/SITEWIDE-TECHNICAL-AUDIT-SPEC.md
+- registry/SYSTEMIC-FINDINGS.md
+- relevant dossier(s)
 
 ## Batch
-
 Batch ID:  
-Pages:
+Type: PILOT / FAMILY / OPPORTUNITY / VALIDATION
 
+Pages:
 1.
 2.
 3.
 4.
 5.
 
-## هدف
+## Goal
 
-برای هر صفحه audit فنی و داده‌ای مستقل انجام بده و نتیجه را در پرونده همان page ثبت کن.
+برای هر page وضعیت واقعی را audit کن و dossier را تا `CODEX_AUDITED` تکمیل کن.
 
-هیچ تغییر Production انجام نده.
+**No Production writes.**
 
-## منابع اجباری
+## Mandatory Sources Where Available
 
-برای هر page در صورت دسترسی:
-
-- URL عمومی
-- HTML عمومی بدون login
-- WordPress/WooCommerce read-only data
+- public URL + initial HTML
+- redirect/canonical/index controls
+- WP/Woo read-only data
 - JSON-LD/microdata
-- metadata
-- media/images
+- images/media
 - internal links
-- Search Console snapshot
-- Coverage snapshot
-- legacy URL records
-- relevant code responsible for output
+- relevant server code
+- GSC snapshot
+- Coverage/Indexing snapshot
+- legacy URL evidence
+- sitewide systemic findings
 
-## Search Console Rule
+## Data Rule
 
-وجود جداگانه یک query و یک page رابطه آن‌ها را اثبات نمی‌کند.
+Queries.csv و Pages.csv را join معنایی نکن.
 
-اگر Page+Query dataset نداریم، این limitation را ثبت کن و query را به URL نسبت نده.
+اگر Page+Query نداریم:
+`Page-query relationship is not proven by the current export.`
 
-## خروجی هر صفحه
+## Findings
 
-پرونده را تکمیل کن:
+ID + severity + scope + evidence class + confidence + source refs + impact + recommendation + acceptance criteria.
 
-- Identity
-- URL history
-- baseline
-- current snapshot
-- Codex Audit findings
+اگر مشترک:
+- systemic registry reference/create
+- root cause candidate
+- no repeated manual fix strategy
 
-هر finding:
-- evidence
-- severity
-- scope PAGE/FAMILY/SITEWIDE
-- impact
-- recommendation
-- acceptance criteria
+## Content
 
-را داشته باشد.
+Audit کن، ولی Production copy ننویس/اعمال نکن مگر task جداگانه draft بخواهد.
 
-## Shared Findings
-
-اگر یک finding در بیش از یک page ریشه مشترک دارد:
-- برای هر page اشاره مختصر ثبت کن؛
-- یک finding FAMILY/SITEWIDE واضح تعریف کن؛
-- منشأ احتمالی مشترک را بررسی کن؛
-- پنج اصلاح دستی مشابه پیشنهاد نده.
+Fact اختراع نکن.
 
 ## Stop Conditions
 
-اگر برای نتیجه نیاز به write، خرید واقعی، تغییر config یا اقدام مخرب است:
-- انجام نده؛
-- آن را BLOCKED/NEEDS_EXECUTION_TEST ثبت کن.
+نیاز به write/purchase/destructive test → انجام نده؛ blocker/hypothesis ثبت کن.
 
 ## Completion
 
-در پایان:
-- status صفحات audited را `CODEX_AUDITED` کن؛
-- summary batch بنویس؛
-- هیچ page را APPROVED نکن.
+- dossier status = CODEX_AUDITED
+- batch summary
+- systemic findings update
+- no APPROVED status
+- no Production change

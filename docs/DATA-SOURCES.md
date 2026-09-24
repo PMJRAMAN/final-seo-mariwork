@@ -1,127 +1,128 @@
-# Data Sources & Evidence Rules
+# Data Sources & Evidence Rules v1.0
 
-## 1. سلسله مراتب شواهد
+## 1. Evidence Hierarchy — Current State
 
-برای وضعیت فعلی صفحه:
+1. public URL behavior
+2. initial HTML/rendered visible output
+3. current WP/Woo data
+4. code/template responsible
+5. current measured tooling
+6. Search Console/Coverage snapshots
+7. historical reports
 
-1. رفتار واقعی URL عمومی
-2. HTML/structured data فعلی
-3. WordPress/WooCommerce current data
-4. server/code responsible for output
-5. Search Console / Coverage snapshot
-6. گزارش‌های قدیمی
+برای historical performance، snapshot تاریخی خودش source اصلی آن بازه است.
 
-گزارش قدیمی برای تاریخچه مهم است ولی وضعیت فعلی را override نمی‌کند.
+## 2. Current Search Console Performance Snapshot
 
-## 2. Search Console Performance — snapshot فعلی
-
-پوشه فعلی:
-
+Path:
 `httpswww.mariwork.ir-Performance-on-Search-2026-09-24/`
 
-Metadata ثبت‌شده:
 - Search type: Web
 - Date: Last 16 months
-- Export date: 2026-09-24
+- Export: 2026-09-24
 
-فایل‌های مهم:
-- `Pages.csv`
-- `Queries.csv`
-- `Devices.csv`
-- `Search appearance.csv`
-- `Countries.csv`
-- `Chart.csv`
-- `Filters.csv`
+Files include:
+- Pages.csv
+- Queries.csv
+- Devices.csv
+- Search appearance.csv
+- Countries.csv
+- Chart.csv
+- Filters.csv
 
-### محدودیت حیاتی
+### Critical limitation
 
-`Pages.csv` و `Queries.csv` aggregationهای جدا هستند.
+`Pages.csv` و `Queries.csv` مستقل‌اند.
 
-بنابراین:
-- وجود query «رنگ موکا پارچه»
-- و وجود URL محصول موکا
+از شباهت معنایی query و URL join نساز.
 
-اثبات نمی‌کند تمام metrics آن query متعلق به همان page است.
+Page+Query relation نیازمند:
+- Search Analytics API dimensions/filter
+- export ترکیبی
+- یا evidence مستقیم معادل
 
-برای این رابطه باید dataset دارای dimension/filter `page + query` یا export/API معادل تهیه شود.
+است.
 
-## 3. Search Console Coverage / Indexing
+Search Console API نیز ممکن است همه rows را برنگرداند و top rows را در محدودیت‌های داخلی ارائه کند؛ این limitation در derived dataset ثبت شود.
 
-پوشه فعلی:
+## 3. Coverage / Indexing Snapshot
 
+Path:
 `httpswww.mariwork.ir-Coverage-2026-09-24/`
 
-این snapshot برای:
-- وضعیت کلی indexing
-- critical issues
-- روند تاریخی
+Filename تاریخی حفظ می‌شود. از آن برای snapshot indexing issues استفاده می‌شود؛ جای URL Inspection زنده را نمی‌گیرد.
 
-استفاده می‌شود.
+## 4. Raw / Derived Contract
 
-Coverage snapshot جای URL Inspection زنده را نمی‌گیرد.
+### Raw
+- immutable
+- no normalization in-place
+- no overwrite
+- checksum/commit history preserved by repo
 
-## 4. Raw vs Derived
-
-داده خام:
-- ویرایش نشود؛
-- overwrite نشود؛
-- normalize در همان فایل نشود.
-
-داده derived باید جدا باشد و شامل:
-- source snapshot
-- transformation
-- date
+### Derived
+هر derived output باید metadata داشته باشد:
+- source path/snapshot
+- generated date
+- method/script
+- filters
+- dimensions
 - assumptions
+- row limits/truncation
+- URL normalization rule
+
+## 5. Standard Missing Values
+
+- `NOT_AVAILABLE`
+- `NOT_APPLICABLE`
+- `UNKNOWN_NEEDS_VERIFICATION`
+- `BLOCKED_BY_ACCESS`
+
+## 6. URL History
+
+برای legacy URL:
+- historical metrics حفظ
+- current status verify
+- redirect chain
+- current entity mapping
+- canonical destination
+- mapping confidence
+
+Metrics URL قدیمی پاک یا به شکل خام merge نمی‌شود.
+
+## 7. Date Context
+
+هر metric:
+- date range
+- snapshot date
+- dimension
+- search type
+- device/filter if any
+
+مقایسه بدون این metadata معتبر نیست.
+
+## 8. Server / Logs
+
+Server evidence می‌تواند شامل:
+- WP/Woo values
+- responsible code
+- access logs
+- bot crawl evidence
 
 باشد.
 
-## 5. URL History
+فقط داده لازم استخراج شود؛ PII/credentials وارد repo نشود.
 
-GSC ممکن است URLهایی را نشان دهد که اکنون redirect شده‌اند.
+## 9. Public Web / SERP
 
-در تحلیل:
-- URL تاریخی حذف نمی‌شود؛
-- metrics تاریخی به entity مربوطه نگاشت می‌شود؛
-- current URL و legacy URL جدا ثبت می‌شوند؛
-- redirect باید verify شود.
+برای current intent و استاندارد:
+- Google Search Central و Search Console docs اولویت
+- schema.org برای vocabulary
+- Woo/WordPress/Rank Math official docs برای رفتار platform
+- competitor pages فقط برای مشاهده SERP/content gap، نه کپی متن
 
-## 6. Date Context
+## 10. Analytics / Business Data
 
-هر metric بدون:
-- بازه زمانی
-- snapshot date
-- dimension
+اگر Umami/Woo organic conversion data قابل‌اتکا و مجاز باشد، می‌تواند supplementary metric باشد.
 
-ناقص است.
-
-مقایسه قبل/بعد باید تا حد ممکن:
-- بازه هم‌طول
-- seasonality
-- تغییر قیمت/موجودی
-- migration
-- campaign
-- sitewide changes
-
-را در نظر بگیرد.
-
-## 7. Public Web / SERP
-
-برای تحلیل intent، رقبا یا مستندات جاری، web research مجاز و در Second Review مطلوب است.
-
-منابع ترجیحی برای استانداردها:
-- Google Search Central
-- Google Search Console documentation
-- schema.org در صورت نیاز
-- WooCommerce/WordPress/Rank Math official docs برای رفتار محصول
-
-ادعاهای رقبا یا بلاگ‌ها جای مستندات رسمی را نمی‌گیرند.
-
-## 8. Production Server
-
-Server audit برای واقعیت فنی مفید است:
-- WP data
-- plugin behavior
-- custom code
-- output sources
-
-اما write در audit ممنوع است.
+نباید بدون attribution درست با Search Console یکی فرض شود.

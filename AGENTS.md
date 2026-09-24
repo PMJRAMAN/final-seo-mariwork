@@ -1,175 +1,243 @@
-# AGENTS.md — دستور کار Codex برای پروژه Final SEO Mariwork
+# AGENTS.md — Codex Rules for Final SEO Mariwork
 
-این فایل برای Codex/Agentهایی است که روی سرور یا مخزن پروژه کار می‌کنند. قبل از هر task این فایل، `MANIFEST.md` و سند مرتبط با task باید خوانده شود.
+این فایل برای Codex/Agent روی سرور و repository است.
 
-## 1. نقش پیش‌فرض Codex
+قبل از هر task بخوان:
+1. `MANIFEST.md`
+2. آخرین تصمیم مرتبط در `docs/DECISIONS.md`
+3. این فایل
+4. سند workflow/spec مرتبط
+5. dossier/change dossier مربوطه
 
-نقش پیش‌فرض **Auditor Read-Only** است، نه Developer.
+## 1. Default Mode = AUDITOR / READ-ONLY
 
-تا زمانی که task صریحاً عبارت «اجرا / implementation / اعمال روی Production» را نداشته باشد:
+مگر task صریحاً `IMPLEMENTATION` باشد، Production فقط خواندنی است.
 
-- هیچ فایل Production را تغییر نده؛
-- WordPress option/meta/content را تغییر نده؛
-- URL/slug/canonical را تغییر نده؛
-- cache را purge نکن مگر task اجازه دهد؛
-- plugin/theme/config را تغییر نده؛
-- DB write انجام نده؛
-- redirect ایجاد نکن؛
-- schema را اصلاح نکن.
+در Audit ممنوع:
+- edit فایل Production
+- DB write
+- wp option/meta/content write
+- slug/canonical/redirect change
+- plugin/theme/config change
+- cache purge
+- checkout/order test واقعی
+- bulk action
+- schema modification
 
-گزارش و پرونده SEO در مخزن `final-seo-mariwork` قابل نوشتن است؛ Production در audit فقط خواندنی است.
+نوشتن گزارش در این repo مجاز است.
 
-## 2. محیط Production
+## 2. Production Safety
 
-سایت Production ماری‌ورک روی سرور قرار دارد. قبل از هر دسترسی، مسیر و محیط را verify کن و هرگز صرفاً از روی حدس مسیر را انتخاب نکن.
-
-در معماری فعلی مسیر اصلی سایت معمولاً:
-
+مسیر فعلی معمولاً:
 `/home/mariwork/web/mariwork.ir/public_html`
 
-است؛ ولی قبل از عملیات اجرایی وجود و تعلق آن را بررسی کن.
+اما قبل از استفاده verify کن.
 
-اگر task به Mariwork Core مربوط شد و فایل `MARIWORK_CORE_ARCHITECTURE.md` وجود داشت، قبل از تغییر کد آن را کامل بخوان.
+قبل از هر implementation:
+- environment/path را verify کن؛
+- تغییرات unrelated را لمس نکن؛
+- اگر git موجود است `git status`/وضعیت معادل را بررسی کن؛
+- backup/rollback متناسب تهیه کن؛
+- برای bulk operation در صورت امکان dry-run/sample اجرا کن؛
+- secret/credential/PII را log یا commit نکن.
 
-## 3. ترتیب اجباری Audit
+اگر `MARIWORK_CORE_ARCHITECTURE.md` مرتبط است، قبل از تغییر کد کامل خوانده شود.
 
-برای هر صفحه:
+## 3. Data Privacy
 
-1. پرونده موجود را پیدا کن؛ اگر وجود ندارد از `templates/PAGE-DOSSIER.md` بساز.
-2. Identity را تثبیت کن:
+برای SEO معمولاً customer/order PII لازم نیست.
+
+ممنوع در repo:
+- نام/شماره/آدرس مشتری
+- سفارش فردی
+- password
+- API key/token
+- private key
+- DB credential
+- session/cookie secret
+
+اگر داده خام به‌طور ناخواسته شامل PII شد، آن را commit نکن و blocker را گزارش کن.
+
+## 4. Audit Sequence — Page
+
+1. dossier را پیدا/از template بساز.
+2. framework/schema version را ثبت کن.
+3. identity:
+   - entity ID
+   - WP ID
+   - page type/family
    - current URL
-   - WP/Post/Product ID
-   - page type
-   - family
    - canonical
    - legacy URLs
-3. وضعیت HTTP و redirect chain را بررسی کن.
-4. HTML عمومی بدون login را بخوان.
-5. metadata / H1 / canonical / robots / Open Graph را ثبت کن.
-6. JSON-LD / microdata را استخراج و با محتوای visible و Woo data تطبیق بده.
-7. داده واقعی WordPress/WooCommerce مرتبط را read-only بررسی کن.
-8. images، alt، dimensions و رفتار lazy/LCP محتمل را بررسی کن.
-9. internal links / breadcrumbs / related content را بررسی کن.
-10. Search Console و Coverage snapshot موجود را برای همان URL/legacy URLs بررسی کن.
-11. محتوای صفحه را از نظر تناقض، تکرار template، نیاز تصمیم‌گیری و اطلاعات اختصاصی بررسی کن.
-12. findings را با severity و scope ثبت کن.
-13. موارد نامطمئن را به‌عنوان hypothesis علامت بزن، نه fact.
-14. Production را تغییر نده.
-15. status پرونده را به `CODEX_AUDITED` تغییر بده.
+4. HTTP status + redirect chain.
+5. robots/noindex/X-Robots/canonical/sitemap.
+6. public initial HTML بدون login.
+7. metadata/H1/headings/OG.
+8. JSON-LD/microdata و consistency با visible page.
+9. current WP/Woo data read-only.
+10. image/alt/dimensions/lazy behavior.
+11. internal links/breadcrumbs/related links.
+12. JS/AJAX dependence برای critical content.
+13. GSC/Coverage snapshot + legacy URL metrics.
+14. content usefulness/template similarity/contradictions.
+15. related systemic findings registry را بررسی کن.
+16. findings با ID یکتا ثبت کن.
+17. Production را تغییر نده.
+18. status = `CODEX_AUDITED`.
 
-## 4. قانون داده Search Console
+## 5. Finding Contract
 
-قبل از هر استناد به GSC، `docs/DATA-SOURCES.md` را بخوان.
+Page finding ID:
+`{entity_id}-F001`
 
-ممنوع:
-- نسبت دادن query موجود در `Queries.csv` به page موجود در `Pages.csv` صرفاً به دلیل شباهت معنایی؛
-- جمع زدن داده‌هایی که dimension یا بازه زمانی متفاوت دارند بدون توضیح؛
-- تفسیر URL قدیمی به‌عنوان URL فعلی بدون بررسی redirect/canonical.
+Systemic:
+`SYS-001` از registry.
 
-اگر Page+Query dataset موجود نیست، صریحاً بنویس:
-`Page-query relationship is not proven by the current export.`
-
-## 5. فرمت Finding
-
-هر finding باید حداقل این فیلدها را داشته باشد:
+حداقل:
 
 ```yaml
-id: F-XXX
+id:
 severity: P0|P1|P2|P3
 scope: PAGE|FAMILY|SITEWIDE
 status: OPEN|CONFIRMED|HYPOTHESIS|BLOCKED|RESOLVED
-evidence:
+evidence_class: OBSERVED|MEASURED|INFERRED|HYPOTHESIS
+confidence: HIGH|MEDIUM|LOW
+source_refs:
 impact:
 recommendation:
 acceptance_criteria:
 ```
 
-از کلمات قطعی مثل «باعث پنالتی است» یا «رتبه را افزایش می‌دهد» بدون مدرک استفاده نکن.
+ادعاهای «پنالتی»، «حتماً رتبه بهتر» یا causation بدون مدرک ممنوع.
 
-## 6. اصول محتوایی
+## 6. Search Console
+
+`docs/DATA-SOURCES.md` الزامی.
+
+ممنوع:
+- join معنایی `Queries.csv` و `Pages.csv`
+- مخلوط کردن date range/dimension متفاوت بدون disclosure
+- نسبت دادن legacy URL به current URL بدون redirect/canonical verification
+
+اگر Page+Query نداریم:
+`Page-query relationship is not proven by the current export.`
+
+## 7. Content Rules
 
 در audit:
-- متن جدید را به‌عنوان واقعیت محصول اختراع نکن؛
-- مشخصات فنی را حدس نزن؛
+- fact اختراع نکن؛
+- word count target نساز؛
 - keyword stuffing پیشنهاد نده؛
-- FAQ را صرفاً برای افزایش حجم نساز؛
-- محتوای مشترک خانواده را با اطلاعات اختصاصی صفحه تفکیک کن؛
-- Information Gain و usefulness را ارزیابی کن؛
-- تکرار paragraph/template بین محصولات را در صورت امکان اندازه‌گیری کن.
+- competitor copy بازنویسی نکن؛
+- FAQ مصنوعی برای حجم متن نساز؛
+- مشترک/اختصاصی خانواده را جدا کن؛
+- Information Gain را بررسی کن؛
+- تکرار template را در صورت امکان اندازه بگیر.
 
-## 7. اسکیما
+اگر task draft content می‌خواهد، خروجی `DRAFT — NOT APPROVED FOR PRODUCTION` است مگر متن از Target State تأییدشده عیناً اعمال شود.
 
-Schema باید انعکاس محتوای واقعی و visible باشد.
+## 8. Structured Data
 
-همیشه consistency را بررسی کن:
-- Product name
+بررسی consistency:
+- name
 - description
+- Product/ProductGroup relationship
+- unique variant IDs
 - price/currency
 - availability
 - brand
 - SKU/identifier
-- variants
-- image
-- rating/review اگر وجود دارد
-- shipping/return فقط اگر واقعی و معتبر است
+- images
+- reviews/ratings واقعی
+- shipping/returns فقط واقعی
 
-Schema جعلی یا داده‌ای که صفحه به کاربر نشان نمی‌دهد تولید نکن.
+Structured data نباید محتوای misleading یا غیرقابل‌مشاهده را جعل کند.
 
-## 8. URL و Migration
+## 9. URL / Crawl / Migration
 
-هر URL قدیمی که از GSC یا سایت پیدا می‌شود:
-- status فعلی؛
-- redirect destination؛
-- canonical destination؛
-- entity مرتبط
+هر legacy URL:
+- current status
+- redirect destination
+- redirect chain
+- canonical destination
+- entity
 
-باید ثبت شود.
+ثبت شود.
 
-Slug را فقط برای «زیباتر شدن» تغییر نده. تغییر URL باید دلیل، migration plan و rollback داشته باشد.
+URL change فقط با task صریح + migration plan + rollback.
 
-## 9. اجرای Production
+robots.txt را ابزار noindex تلقی نکن.
 
-فقط در task اجرایی صریح.
+## 10. FAMILY / SITEWIDE Findings
 
-قبل از اجرا:
-1. پرونده باید `APPROVED` باشد.
-2. Implementation Task باید acceptance criteria داشته باشد.
-3. scope دقیق تغییر را مشخص کن.
-4. backup/rollback متناسب با ریسک تهیه کن.
-5. کمترین تغییر لازم را اعمال کن.
-6. syntax/config/application check مرتبط را اجرا کن.
-7. public output را بعد از اجرا بررسی کن.
-8. نتیجه را در پرونده ثبت کن.
-9. status را فقط پس از اجرای واقعی به `IMPLEMENTED` ببر؛ `QA_PASSED` نیازمند QA کامل است.
+اگر مشکل مشترک است:
+- finding systemic را در registry ثبت/ارجاع کن؛
+- root cause را بررسی کن؛
+- change dossier پیشنهاد کن؛
+- regression set تعریف کن؛
+- ده‌ها تغییر دستی مشابه نساز.
 
-## 10. تغییرات سیستماتیک
+## 11. Implementation Mode
 
-اگر یک مشکل در چند صفحه مشاهده شد:
-- از ساخت task دستی برای هر صفحه خودداری کن؛
-- finding را `FAMILY` یا `SITEWIDE` کن؛
-- منشأ مشترک را پیدا کن؛
-- راهکار template/component/schema/filter را پیشنهاد بده؛
-- صفحات نمونه و regression set تعریف کن.
+فقط با `templates/IMPLEMENTATION-TASK.md` یا task هم‌ارز.
 
-## 11. Batch
+Preconditions:
+- dossier = APPROVED
+- finding IDs مشخص
+- current state rechecked
+- backup/rollback
+- scope دقیق
+- no conflicting recent change
 
-Batchهای اولیه حداکثر ۵ صفحه‌اند مگر task خلاف آن را بگوید.
+برای FAMILY/SITEWIDE:
+- Change Dossier
+- canary/sample اگر عملی
+- regression set
+- rollout/rollback trigger
 
-هر batch باید تا حد ممکن شامل ترکیبی از:
-- صفحه پربازدید/پرامپرشن؛
-- صفحه با عملکرد خوب به‌عنوان control؛
-- صفحه دارای legacy URL؛
-- یک family/type متفاوت در صورت هدف batch؛
-- صفحات با یافته احتمالی متفاوت
+اصل اجرا:
+- smallest necessary change
+- no unrelated refactor
+- no silent semantic change
+- preserve URLs unless task says otherwise
+- log exact changed objects
 
-باشد.
+## 12. Codex QA
 
-## 12. محدودیت اختیار
+بعد از implementation:
+- public output
+- HTTP/canonical/indexability
+- title/meta/H1
+- visible content
+- schema consistency
+- price/availability if applicable
+- variants/purchase path if applicable
+- images/alt
+- links
+- mobile output
+- regression set for systemic change
+
+اگر پاس:
+`IMPLEMENTED → CODEX_QA_PASSED`
+
+Codex حق `FINAL_QA_PASSED` دادن ندارد.
+
+## 13. Authority Limits
 
 Codex حق ندارد:
-- SEO Playbook را بر اساس سلیقه شخصی قطعی کند؛
-- finding خود را به‌جای Second Review نهایی تلقی کند؛
-- status را مستقیماً از `CODEX_AUDITED` به `APPROVED` ببرد؛
-- بدون task ChatGPT تغییر گسترده اجرا کند.
+- page را APPROVED کند؛
+- Final Acceptance QA را امضا کند؛
+- Playbook rule را خودسرانه ACCEPTED کند؛
+- framework structure را بدون Decision تغییر دهد؛
+- raw datasets را edit کند؛
+- Production تغییر خارج task انجام دهد.
 
-`APPROVED` نتیجه reconcile پس از Second Review است.
+## 14. Missing Data Values
+
+برای consistency از این مقادیر استفاده کن:
+- `NOT_AVAILABLE`
+- `NOT_APPLICABLE`
+- `UNKNOWN_NEEDS_VERIFICATION`
+- `BLOCKED_BY_ACCESS`
+
+فیلد مهم را بی‌دلیل خالی نگذار.

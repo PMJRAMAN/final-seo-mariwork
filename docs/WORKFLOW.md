@@ -1,185 +1,203 @@
-# Workflow — چرخه استاندارد SEO ماری‌ورک
+# Workflow — Final SEO Mariwork v1.0
 
-## Phase 0 — Foundation
+## Phase 0 — Framework Foundation
 
-اسناد حاکم، templateها، data rules و status lifecycle تثبیت می‌شوند.
+Manifest، rules، templates، change control و specs تثبیت می‌شوند.
 
-خروجی: `FOUNDATION_READY`
+**Gate:** `AUDIT_FRAMEWORK_READY`
 
-## Phase 1 — Site Inventory
+## Phase 1 — Site / Entity Inventory
 
-برای همه URLهای مهم:
-- URL
+تمام URL spaces شناسایی شوند:
+- products / variations
+- product/category/tag/attribute archives
+- shop
+- education/articles/artists/static
+- pagination
+- search URLs
+- faceted/filter/parameter URLs
+- feeds/attachments در صورت وجود
+- cart/checkout/account/system pages
+
+برای entityهای مهم:
 - entity ID
-- page type
-- family
+- WP ID
+- type/family
+- current URL
 - canonical
-- indexability
+- indexability intent
+- sitemap
 - legacy URL
-- sitemap presence
-- basic HTTP state
+- dossier path
 
-ثبت می‌شود.
+در `registry/URL-INVENTORY.csv`.
 
-در این مرحله audit محتوایی عمیق انجام نمی‌شود.
+## Phase 2 — Sitewide Technical Baseline
 
-## Phase 2 — Data Baseline
+قبل از batchهای صفحه، طبق `docs/SITEWIDE-TECHNICAL-AUDIT-SPEC.md` بررسی شود:
 
-برای هر entity، داده‌های تاریخی موجود از:
-- Search Console Performance
+- crawl/index controls
+- robots/meta/X-Robots
+- sitemaps
+- redirects/404/soft-404
+- canonical patterns
+- duplicate URL spaces
+- facets/parameters
+- pagination
+- JS/AJAX discoverability
+- internal link graph/orphans
+- schema architecture
+- Woo product/variant patterns
+- mobile/page experience/CWV data where available
+- image/media patterns
+
+خروجی در `audits/sitewide/` و findings در registry.
+
+**Audit only — no Production writes.**
+
+## Phase 3 — Data Baseline
+
+طبق `docs/DATA-SOURCES.md`:
+- GSC page metrics
+- legacy URL metrics
 - Coverage/Indexing
-- legacy URLها
-- redirectها
+- device/search appearance
+- Page+Query data در صورت دسترسی
+- derived URL mapping
 
-به پرونده متصل می‌شوند.
+هر page قبل از Codex Audit تا حد ممکن `BASELINED` می‌شود.
 
-اگر داده Page+Query موجود نیست، این خلأ ثبت می‌شود و query به صفحه نسبت داده نمی‌شود.
+## Phase 4 — Strategy Baseline
 
-## Phase 3 — Batch Selection
+`strategy/QUERY-MAP.md` و `strategy/CONTENT-ARCHITECTURE.md` به‌تدریج ساخته می‌شوند.
 
-Batch اولیه معمولاً ۵ صفحه است.
+هدف:
+- query clusters
+- intent
+- target entity
+- cannibalization risks
+- hub/support relationships
+- product ↔ education linking opportunities
 
-انتخاب فقط random نیست. اولویت با ترکیبی از:
-- اهمیت تجاری؛
-- impression/click؛
-- فرصت CTR/ranking؛
-- legacy/migration risk؛
-- نمایندگی خانواده‌های مختلف؛
-- وجود anomaly.
+Query Map داده را جایگزین نمی‌کند؛ فقط تصمیم مستند بر اساس evidence است.
 
-هر batch در `batches/` ثبت می‌شود.
+## Phase 5 — Batch Selection
 
-## Phase 4 — Codex Audit
+Batchها به‌طور پیش‌فرض ۵ صفحه‌ای در شروع.
 
-ChatGPT تسک را با `templates/CODEX-AUDIT-TASK.md` می‌نویسد.
+نوع batch:
+- `PILOT` — برای تثبیت روش
+- `FAMILY` — نمونه‌های یک خانواده
+- `OPPORTUNITY` — داده‌محور
+- `VALIDATION` — regression/control
+
+Selection rationale اجباری.
+
+## Phase 6 — Codex Audit
+
+ChatGPT task می‌نویسد.
 
 Codex:
-- صفحه را روی Production read-only بررسی می‌کند؛
-- داده سرور را می‌خواند؛
-- datasetهای موجود را بررسی می‌کند؛
-- پرونده را تکمیل می‌کند؛
-- findings را PAGE/FAMILY/SITEWIDE می‌کند؛
-- status = `CODEX_AUDITED`.
+- Production read-only
+- dossier را تکمیل
+- findings را ثبت
+- systemic refs را ثبت
+- status = `CODEX_AUDITED`
 
-## Phase 5 — ChatGPT Second Review
+## Phase 7 — ChatGPT Second Review
 
-ChatGPT برای **هر صفحه همان batch**:
+برای کاهش anchoring:
 
-1. گزارش Codex را کامل می‌خواند.
-2. URL زنده را مستقلاً بررسی می‌کند.
-3. در صورت نیاز SERP/منابع رسمی/رقبا را بررسی می‌کند.
-4. Search intent را مستقل تحلیل می‌کند.
-5. شواهد Codex را challenge می‌کند.
-6. findingها را CONFIRM / MODIFY / REJECT می‌کند.
-7. یافته‌های جدید اضافه می‌کند.
-8. نتیجه را در بخش Second Review ثبت می‌کند.
+1. Identity و raw evidence را بگیر.
+2. تا حد ممکن URL زنده را **مستقلاً** بررسی و independent notes بساز.
+3. سپس Codex findings را finding-by-finding بخوان.
+4. CONFIRM / MODIFY / REJECT / NEEDS_MORE_EVIDENCE.
+5. SERP/intent/content usefulness را بررسی.
+6. یافته مستقل اضافه کن.
+7. systemic scope را challenge کن.
+8. Final Approved Findings را آماده کن.
 
-status = `SECOND_REVIEWED`.
+Status:
+`CODEX_AUDITED → SECOND_REVIEWED`
 
-این مرحله check-box نیست و باید تحلیل مستقل داشته باشد.
-
-## Phase 6 — Reconciliation
-
-دو audit به Final Approved Findings تبدیل می‌شوند.
+## Phase 8 — Reconciliation / Target State
 
 برای هر finding:
-- واقعیت و evidence نهایی؛
-- scope؛
-- severity؛
-- target state؛
+- evidence نهایی
+- severity/scope
+- تصمیم
+- target state
 - acceptance criteria
 
-ثبت می‌شود.
+اگر content change لازم است، Content Brief یا متن نهایی تأییدشده ثبت شود.
 
-اگر finding سیستماتیک باشد، به Playbook یا تصمیم architecture مرتبط می‌شود.
+اگر systemic است:
+- registry update
+- Change Dossier
 
-status = `APPROVED`.
+وقتی Definition of Ready برقرار شد:
+`SECOND_REVIEWED → APPROVED`
 
-## Phase 7 — Playbook Consolidation
+## Phase 9 — Playbook Consolidation
 
-پس از چند پرونده:
-- patternهای عنوان؛
-- meta؛
-- schema؛
-- content modules؛
-- image/ALT؛
-- variant؛
-- internal links؛
-- URL؛
-- family rules
+بعد از evidence کافی، قواعد تکرارشونده در Playbook ثبت می‌شوند.
 
-به `SEO-PLAYBOOK.md` منتقل می‌شوند.
+Rule فقط با Decision/approval مناسب `ACCEPTED` می‌شود.
 
-قانون فقط زمانی وارد Playbook می‌شود که evidence کافی یا تصمیم صریح پروژه وجود داشته باشد.
+## Phase 10 — Systemic Changes First
 
-## Phase 8 — Systemic Fixes First
+برای root cause مشترک:
+- `changes/` dossier
+- canary/sample
+- regression set
+- backup/rollback
+- rollout criteria
 
-قبل از page-by-page edits بررسی شود که مشکل از:
-- template؛
-- plugin؛
-- Rank Math template؛
-- Woo schema؛
-- Blocksy component؛
-- custom plugin؛
-- content generator
+اول سیستم اصلاح می‌شود، بعد page-level exceptions.
 
-نیامده باشد.
+## Phase 11 — Page Implementation
 
-اگر منشأ مشترک است، یک اصلاح systemic با regression set اجرا می‌شود.
+Implementation Task فقط findings APPROVED را اجرا می‌کند.
 
-## Phase 9 — Page Implementation
+تغییرات unrelated در یک bundle ممنوع.
 
-ChatGPT بر اساس پرونده APPROVED تسک اجرایی می‌نویسد.
+`APPROVED → IMPLEMENTING → IMPLEMENTED`
 
-Codex فقط تغییرات تعیین‌شده را اجرا می‌کند.
+## Phase 12 — Codex QA
 
-status:
-`IMPLEMENTING → IMPLEMENTED`
+طبق `docs/QA-SPEC.md`.
 
-## Phase 10 — QA
+اگر pass:
+`IMPLEMENTED → CODEX_QA_PASSED`
 
-حداقل:
-- HTTP/canonical/robots
-- title/meta/H1
+## Phase 13 — ChatGPT Final Acceptance QA
+
+ChatGPT مستقل:
+- live output
+- approved target
 - visible content
-- schema consistency
-- price/availability if commerce
-- image/alt
-- mobile presentation
-- internal links
-- no regression
-- relevant cache behavior
+- core technical fields
+- systemic regression sample در صورت نیاز
 
-پس از قبولی:
-`QA_PASSED`.
+را مقایسه می‌کند.
 
-## Phase 11 — Monitoring
+اگر pass:
+`CODEX_QA_PASSED → FINAL_QA_PASSED`
 
-baseline و تاریخ تغییر ثبت می‌شود.
+اگر fail، remediation task و برگشت به implementation.
 
-بسته به page:
-- 28 day comparison
-- 56 day comparison
-- دوره‌های طولانی‌تر در صورت seasonality
+## Phase 14 — Monitoring
 
-بررسی:
-- clicks
-- impressions
-- CTR
-- position
-- relevant query mix اگر داده موجود باشد
-- organic conversion در صورت وجود measurement
+طبق `docs/MEASUREMENT-SPEC.md`:
+- change date annotation
+- 28d / 56d یا بازه مناسب
+- query mix در صورت وجود
+- CTR/position/click/impression
+- conversion/business metric اگر مجاز و قابل اتکا
+- seasonality/confounders
 
-هم‌زمانی تغییر و رشد به‌عنوان causation قطعی گزارش نمی‌شود.
+`FINAL_QA_PASSED → MONITORING → COMPLETE`
 
-status:
-`MONITORING → COMPLETE`
+## Emergency Exception
 
-## Change Gate
-
-هیچ اجرای Production قبل از این سه مورد:
-- Second Review
-- APPROVED findings
-- Implementation Task
-
-انجام نمی‌شود، مگر اصلاح اضطراری مستقل از SEO که خارج از این workflow است.
+رفع incident مستقل از SEO workflow ممکن است خارج این چرخه انجام شود، ولی اگر SEO-relevant بود باید بعداً dossier/decision را backfill کند.

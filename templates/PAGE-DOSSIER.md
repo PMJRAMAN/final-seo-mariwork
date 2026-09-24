@@ -1,4 +1,6 @@
 ---
+framework_version: "1.0"
+dossier_schema_version: "1.0"
 entity_id:
 wp_id:
 type:
@@ -6,17 +8,27 @@ family:
 current_url:
 canonical_url:
 legacy_urls: []
-status: DISCOVERED
+workflow_status: DISCOVERED
+blocked: false
+blockers: []
 priority:
+gsc_baseline:
 codex_audit:
 second_review:
 implementation:
-qa:
-gsc_baseline:
+codex_qa:
+final_qa:
+change_refs: []
 last_updated:
 ---
 
 # Page Dossier — [Entity]
+
+## 0. State
+
+- Workflow status:
+- Blocked:
+- Framework/schema:
 
 ## 1. Identity
 
@@ -26,22 +38,24 @@ last_updated:
 - Family:
 - Current URL:
 - Canonical:
-- Legacy URLs:
+- Intended indexability:
+- Actual indexability:
 - Sitemap:
-- Indexability:
+- Legacy URLs:
 
 ## 2. URL History
 
-| URL | Period/Source | Current behavior | Destination | Notes |
-|---|---|---|---|---|
+| URL | Source/period | HTTP/redirect | Canonical destination | Mapping confidence | Notes |
+|---|---|---|---|---|---|
 
-## 3. Data Baseline
+## 3. Baseline
 
 ### Search Console
 
-**Snapshot:**  
-**Date range:**  
-**Dimension:**  
+- Snapshot:
+- Range:
+- Dimension:
+- Current/legacy URL handling:
 
 | Metric | Value |
 |---|---:|
@@ -51,34 +65,41 @@ last_updated:
 | Position | |
 
 ### Page + Query
-
-Availability: YES / NO
-
-> اگر NO است، Queries.csv مستقل به این صفحه نسبت داده نشود.
+Availability: YES / NO / BLOCKED
 
 ### Coverage / Indexing
-
 - Snapshot:
 - Status:
 - Notes:
 
+### Other measurement
+- Device:
+- Search appearance:
+- Business metric if available:
+
 ## 4. Current Page Snapshot
+
+### HTTP / Crawl / Index
+- Status:
+- Redirect:
+- Robots:
+- X-Robots:
+- Canonical:
 
 ### Metadata
 - Title:
 - Meta:
 - H1:
-- Canonical:
-- Robots:
 - OG:
 
-### Product/Data
+### Product / Entity Data
 - Type:
 - Variants:
 - Price:
 - Stock:
 - SKU:
 - Brand:
+- Other verified facts:
 
 ### Content Structure
 
@@ -88,29 +109,39 @@ Availability: YES / NO
 
 ### Structured Data
 
-## 5. Search Intent
+### JS/AJAX / Initial HTML
 
-> بخش نهایی پس از Second Review تثبیت می‌شود.
+### Mobile / Performance observations
 
-- Primary:
+## 5. Search / Content Research
+
+- Primary intent:
 - Secondary:
-- Branded/non-branded:
+- Query evidence:
+- SERP page-type notes:
 - User decision/problem:
+- Cannibalization/overlap:
+- Information gaps:
+- Verified evidence available:
+- Query Map reference:
 
 ## 6. Codex Audit
 
-**Date:**  
-**Audit task:**  
-**Status:**  
+- Date:
+- Task:
+- Mode: READ-ONLY
 
 ### Findings
 
-#### F-001 — [Title]
+#### [ENTITY]-F001 — Title
 
 ```yaml
 severity:
 scope:
 status:
+evidence_class:
+confidence:
+source_refs:
 ```
 
 **Evidence:**  
@@ -118,28 +149,27 @@ status:
 **Recommendation:**  
 **Acceptance criteria:**  
 
-## 7. ChatGPT Second Review
+## 7. ChatGPT Independent Second Review
 
-**Date:**  
-**Live page independently checked:** YES/NO  
-**Codex report reviewed:** YES/NO
+- Date:
+- Independent live review completed:
+- Codex report reviewed after independent notes:
 
-### Finding Review
+### Independent Notes
 
-| Finding | Decision | Notes |
+### Codex Finding Decisions
+
+| Finding | Decision | Reason/evidence |
 |---|---|---|
-| F-001 | CONFIRM / MODIFY / REJECT | |
 
-### Independent Additional Findings
+### Additional Findings
 
-### Intent / SERP Notes
+### Systemic Finding References
 
 ## 8. Final Approved Findings
 
-> فقط یافته‌های reconcile شده.
-
-| ID | Severity | Scope | Final action |
-|---|---|---|---|
+| ID | Severity | Scope | Evidence class | Final action | Acceptance criteria |
+|---|---|---|---|---|---|
 
 ## 9. Target State
 
@@ -151,9 +181,9 @@ status:
 
 ### Short Description
 
-### Content Architecture
+### Content Architecture / Final Content Reference
 
-### Verified Product Facts
+### Verified Facts Allowed in Copy
 
 ### Images / ALT
 
@@ -163,15 +193,19 @@ status:
 
 ### URL / Variant Behavior
 
-### LLM-readable Facts
+### AI/LLM-readable Facts
+
+### Explicit No-Change Areas
 
 ## 10. Implementation Plan
 
-- Task:
-- Scope:
+- Approved finding IDs:
+- Page/systemic change refs:
+- Exact scope:
 - Dependencies:
 - Backup/rollback:
 - Acceptance criteria:
+- Change isolation notes:
 
 ## 11. Implementation Result
 
@@ -179,31 +213,49 @@ status:
 - Executor:
 - Changed objects:
 - Commit/reference:
+- Before/after:
 - Notes:
 
-## 12. QA
+## 12. Codex QA
 
+- Date:
+- Result:
+- Evidence:
+
+Checklist:
 - [ ] HTTP
-- [ ] Redirect/canonical
-- [ ] Indexability
-- [ ] Title/meta/H1
-- [ ] Visible content
-- [ ] Schema consistency
-- [ ] Product price/availability
-- [ ] Images/ALT
-- [ ] Internal links
-- [ ] Mobile
-- [ ] Regression check
+- [ ] redirect/canonical
+- [ ] indexability
+- [ ] title/meta/H1
+- [ ] visible content
+- [ ] schema
+- [ ] price/availability
+- [ ] variant/bundle behavior
+- [ ] images/ALT
+- [ ] links
+- [ ] mobile
+- [ ] regression
 
-## 13. Monitoring
+## 13. ChatGPT Final Acceptance QA
+
+- Date:
+- Result: PASS / FAIL
+- Approved findings resolved:
+- Unexpected regressions:
+- Notes:
+
+## 14. Monitoring
+
+### Change annotation
 
 ### 28 days
 
 ### 56 days
 
-### Later / seasonal notes
+### Outcome
+KEEP / ITERATE / ROLLBACK-CANDIDATE / INCONCLUSIVE
 
-## 14. Change Log
+## 15. Change Log
 
 | Date | Change | Reference |
 |---|---|---|

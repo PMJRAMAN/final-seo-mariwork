@@ -1,52 +1,45 @@
-# SEO Audit Batch
+# SEO Audit Batch v1.0
 
 Batch ID:  
 Created:  
+Type: PILOT / FAMILY / OPPORTUNITY / VALIDATION  
 Scope:  
 Status: PLANNED
 
-## Selection Rationale
+## Prerequisites
 
-این batch چرا انتخاب شده است؟
+- [ ] URL inventory available
+- [ ] sitewide technical baseline available or exception documented
+- [ ] data snapshot identified
+- [ ] relevant systemic findings reviewed
+
+## Selection Rationale
 
 ## Pages
 
-| # | Entity | URL | Family | Selection reason | Dossier |
-|---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-
-## Required Data
-
-- [ ] GSC page metrics
-- [ ] legacy URL check
-- [ ] Coverage snapshot
-- [ ] current live page
-- [ ] server/WP read-only data
+| # | Entity | URL | Family | Reason | Baseline ready | Dossier |
+|---:|---|---|---|---|---|---|
 
 ## Codex Audit
-
 Task reference:  
 Completed:
 
 ## ChatGPT Second Review
-
 Completed:
 
 ## Cross-page Findings
 
 ### FAMILY
-
 ### SITEWIDE
 
-## Decisions / Playbook Candidates
+## Query / Content Strategy Notes
+
+## Playbook Candidates
 
 ## Batch Outcome
 
-- Approved pages:
-- Blocked pages:
-- Systemic tasks:
-- Page-level tasks:
+- Approved:
+- Blocked:
+- Needs more evidence:
+- Systemic change dossiers:
+- Page-level implementation tasks:
