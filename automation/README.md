@@ -1,116 +1,38 @@
-# Autonomous Round-1 SEO Runner
+# Autonomous Round-1 SEO Runner v2 — Low Consumption
 
-این پوشه فقط راند اول تحقیق را خودکار می‌کند.
+Round 1 remains strictly read-only on Production and can advance only to CODEX_AUDITED.
 
-## مرز اختیار
+## Consumption model
 
-Runner/Codex می‌تواند:
-- inventory و baseline بسازد؛
-- live site و داده‌های مجاز را read-only بررسی کند؛
-- dossier بسازد؛
-- finding و systemic finding ثبت کند؛
-- پیشنهاد اولیه رفع مشکل بدهد؛
-- تا status = `CODEX_AUDITED` پیش برود.
+The runner now separates deterministic collection from model reasoning:
 
-Runner/Codex نمی‌تواند:
-- Production را تغییر دهد؛
-- تصمیم نهایی title/meta/content/internal links/schema/redirect بگیرد؛
-- dossier را SECOND_REVIEWED یا APPROVED کند؛
-- Playbook rule را خودکار ACCEPTED کند.
+- Python collects reusable public HTTP/HTML evidence once.
+- Codex network access is disabled during analysis.
+- A-014 + A-015 are grouped into one model call.
+- A-016 + A-017 use no model call.
+- A-018 + A-019 + A-020 are grouped into one model call.
+- A-021 uses no model call.
+- The first page pilot is max 5 entities.
+- Later page executions default to 15 entities, preferably from one family.
+- Product Tags, Blog Tags, attributes, attachments and system/policy URL spaces are excluded from repetitive page-model calls where FAMILY/SITEWIDE policy is the correct coverage mechanism.
+- Page batches use low reasoning; Foundation model synthesis uses medium reasoning.
 
-اولین human decision gate = ChatGPT Second Review.
+## Commands
 
-## اجرا
+Status:
 
-```bash
-python3 automation/seo_audit_runner.py status
-python3 automation/seo_audit_runner.py auto --push
-```
+    python3 automation/seo_audit_runner.py status
 
-برای اجرای محدود:
+Build deterministic evidence without consuming Codex model quota:
 
-```bash
-python3 automation/seo_audit_runner.py auto --max-jobs 5 --push
-```
+    python3 automation/seo_audit_runner.py prepare --push
 
-اگر Codex به usage/rate limit یا auth مشکل بخورد، runner state را بیرون repo نگه می‌دارد و pause می‌شود. بعد از رفع مشکل:
+After the Codex usage limit resets:
 
-```bash
-python3 automation/seo_audit_runner.py resume --push
-```
+    python3 automation/seo_audit_runner.py resume --push
 
-صفحه‌ای که دو بار به خطای غیر-limit بخورد در state داخلی runner blocked می‌شود و صف ادامه پیدا می‌کند:
+The runtime state remains outside Git at:
 
-```bash
-python3 automation/seo_audit_runner.py status
-python3 automation/seo_audit_runner.py retry-page ENTITY_ID
-```
+    ~/.local/state/mariwork-seo-runner/
 
-## State و logs
-
-پیش‌فرض:
-
-`~/.local/state/mariwork-seo-runner/`
-
-قابل override:
-
-```bash
-export MARIWORK_SEO_RUNNER_STATE=/safe/path
-```
-
-Model در repo hard-code نشده است:
-
-```bash
-export MARIWORK_CODEX_MODEL="MODEL_ID"
-export MARIWORK_CODEX_REASONING="medium"
-```
-
-اگر unset باشد، تنظیم فعلی Codex استفاده می‌شود.
-
-## Safety
-
-- هر job در Git worktree موقت اجرا می‌شود.
-- Codex فقط مسیرهای allowlist همان job را می‌تواند تغییر دهد؛ validator تغییر خارج scope را رد می‌کند.
-- repo اصلی قبل از هر job باید clean باشد.
-- پیش از هر job، runner در branch `main` از `origin/main` fetch می‌کند و فقط fast-forward را می‌پذیرد؛ خطای احراز هویت یا divergence صف را pause می‌کند.
-- هر job موفق commit مستقل دارد.
-- `--push` بعد از هر commit موفق branch فعلی را push می‌کند.
-- autonomous worker باید تحت حساب/credentialی اجرا شود که Production write و DB-write در اختیارش نباشد.
-- secrets/PII نباید وارد repo یا log prompt شوند.
-
-## Hardened systemd runtime
-
-The host-specific units in `automation/systemd/` run as `seo-audit`, deny
-access to `/home/mariwork`, `/root`, and local database paths, and expose only
-the SEO repository, Codex runtime, and external runner state as writable paths.
-They are oneshot services with no automatic restart loop. Install/update them
-as an administrator only after reviewing the paths and runtime isolation:
-
-```bash
-sudo install -o root -g root -m 0644 automation/systemd/mariwork-seo-audit-*.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl start mariwork-seo-audit-smoke.service
-sudo journalctl -u mariwork-seo-audit-smoke.service
-sudo systemctl start mariwork-seo-audit.service
-```
-
-After a usage/rate-limit pause is resolved, use
-`mariwork-seo-audit-resume.service`. A nonzero exit does not trigger a restart.
-Logs in the service journal and runner JSONL contain job metadata only; raw
-Codex JSONL output is not persisted. Runner state and restricted logs live in
-`/home/seo-audit/.local/state/mariwork-seo-runner/`.
-
-جزئیات setup سرور در `tasks/A-009-ROUND1-AUTOMATION.md`.
-
-
-## Low-cost v2 execution
-
-از 2026-09-24، Round 1 از الگوی کم‌مصرف استفاده می‌کند:
-- reasoning پیش‌فرض Codex = `medium`؛
-- evidence عمومی صفحات یک‌بار با collector قطعی Python جمع می‌شود و در `data/normalized/round1-page-evidence.jsonl` ذخیره می‌شود؛
-- A-013 و audit صفحات evidence موجود را reuse می‌کنند و broad recrawl توسط مدل ممنوع است؛
-- page audits به‌صورت پیش‌فرض batch ده‌تایی اجرا می‌شوند، ولی برای هر entity dossier مستقل ساخته می‌شود؛
-- JSONL واقعی Codex برای usage/diagnostics خارج repo نگه‌داری می‌شود و خطوطی که secret/PII scanner را trigger کنند redacted می‌شوند؛
-- limit/auth همچنان queue را pause می‌کند. deterministic snapshot قبل از synthesis commit می‌شود تا با limit از دست نرود.
-
-Batch size را در صورت نیاز می‌توان با `--batch-size N` تغییر داد. مقدار پیش‌فرض 10 است.
+Do not run the autonomous worker as root.
