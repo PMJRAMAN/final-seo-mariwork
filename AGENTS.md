@@ -8,6 +8,8 @@
 3. این فایل
 4. سند workflow/spec مرتبط
 5. dossier/change dossier مربوطه
+6. `MASTER-TODO.md` برای جایگاه task
+7. `docs/SEO-OWNERSHIP.md` برای هر task دارای تغییر SEO
 
 ## 1. Default Mode = AUDITOR / READ-ONLY
 
@@ -241,3 +243,46 @@ Codex حق ندارد:
 - `BLOCKED_BY_ACCESS`
 
 فیلد مهم را بی‌دلیل خالی نگذار.
+
+
+## 15. Google Documentation Basis
+
+برای هر finding/recommendation مهم SEO:
+- مستند رسمی فعلی Google را در صورت applicable پیدا/ثبت کن؛
+- `google_basis` را مشخص کن:
+  - GOOGLE_REQUIRED
+  - GOOGLE_RECOMMENDED
+  - GOOGLE_CONSISTENT
+  - PROJECT_DECISION
+  - EXPERIMENT
+- `google_reference` را ثبت کن.
+
+ممنوع است advice عمومی SEO یا توصیه vendor را به Google نسبت بدهی بدون مرجع رسمی.
+
+## 16. Rank Math Ownership Gate
+
+قبل از پیشنهاد یا اجرای title/meta/robots/canonical/schema/sitemap/redirection و هر concern SEO WordPress:
+
+1. نسخه و ماژول‌های Rank Math فعلی را verify کن.
+2. بررسی کن Rank Math capability مناسب دارد یا نه.
+3. owner فعلی output را پیدا کن.
+4. target owner را ثبت کن.
+5. اگر Rank Math پشتیبانی می‌کند، همان owner الزامی است.
+6. اگر نیاز به code extension است، کد پراکنده ممنوع؛ فقط integration مرکزی با Rank Math و approval.
+7. duplicate SEO output ممنوع.
+
+هر finding فنی باید در صورت مرتبط بودن این فیلدها را داشته باشد:
+- `seo_owner_current`
+- `seo_owner_target`
+- `rank_math_capability_checked`
+- `rank_math_path_or_reason_not_used`
+
+## 17. Master TODO
+
+هر task باید Task ID یا Program ID از `MASTER-TODO.md` داشته باشد.
+
+اگر entity جدیدی کشف شد:
+- ابتدا inventory و TODO را به‌روز کن؛
+- سپس audit را ادامه بده.
+
+هیچ URL کشف‌شده صرفاً به‌خاطر نبودن در لیست اولیه نادیده گرفته نمی‌شود.

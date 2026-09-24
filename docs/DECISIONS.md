@@ -100,3 +100,25 @@ Codex draft به‌تنهایی Production-ready نیست. Target content/facts 
 ### Consequences
 ### Exceptions
 ```
+
+
+## SEO-013 — Google Official Documentation Governs SEO Recommendations
+**Status:** Accepted  
+**Date:** 2026-09-24  
+**Scope:** PROCESS / CONTENT / OPERATIONS
+
+هر پیشنهاد فنی یا محتوایی SEO باید با مستندات رسمی فعلی Google Search سازگار باشد. توصیه vendor جای استاندارد Google را نمی‌گیرد.
+
+## SEO-014 — Rank Math First SEO Ownership
+**Status:** Accepted  
+**Date:** 2026-09-24  
+**Scope:** OPERATIONS
+
+هر concern SEO که نسخه نصب‌شده Rank Math واقعاً پشتیبانی می‌کند باید از همان مسیر مدیریت شود. Custom SEO PHP پراکنده و duplicate owner ممنوع است.
+
+## SEO-015 — Master TODO Is the Execution Authority
+**Status:** Accepted  
+**Date:** 2026-09-24  
+**Scope:** PROCESS
+
+`MASTER-TODO.md` مرجع ترتیب familyها و پوشش کامل سایت است. همه URL/entityهای inventory باید disposition نهایی داشته باشند.

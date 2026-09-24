@@ -138,3 +138,22 @@ pages/products/product-12544-gray-122.md
 - customer data، secrets و credentialها هرگز وارد این repo نمی‌شوند.
 
 برای شروع هر کار ابتدا [STATUS.md](STATUS.md) خوانده شود.
+
+
+## Master execution queue
+
+[MASTER-TODO.md](MASTER-TODO.md) — مرجع اصلی ترتیب اجرا و پوشش تمام URLهای سایت است. هیچ family یا URL space نباید فقط به‌دلیل تمام‌شدن یک batch فراموش شود.
+
+برنامه کلان:
+1. Pre-audit baseline
+2. کل فروشگاه و تمام محصولات/آرشیوها/فیلترها
+3. صفحه اصلی
+4. سایر صفحات ثابت
+5. Blog / Articles
+6. Academy / Education
+7. Artists / History / سایر custom content
+8. Taxonomies / archives / system URLs
+9. Final sitewide validation
+10. Continuous monitoring
+
+[docs/SEO-OWNERSHIP.md](docs/SEO-OWNERSHIP.md) قانون Rank Math-first و Google-basis را تعریف می‌کند.

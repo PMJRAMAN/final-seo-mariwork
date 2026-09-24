@@ -115,3 +115,13 @@ Accepted baseline:
 
 ## 18. Monitoring
 TBD after first implementation cycle.
+
+
+## 19. Technical Ownership
+
+Accepted:
+- Google documentation governs SEO rationale.
+- Rank Math is the default WordPress SEO technical owner where installed-version capability exists.
+- title/meta/robots/canonical/sitemap/schema/redirection ownership نباید بین چند implementation موازی پخش شود.
+- custom code فقط به‌صورت Rank Math Extension مرکزی و مستند، وقتی Rank Math native capability کافی نیست.
+- Platform ownership فقط با دلیل فنی و برای concern خارج از Rank Math.

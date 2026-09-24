@@ -53,3 +53,18 @@
 - [Search Analytics how-to](https://developers.google.com/webmaster-tools/v1/how-tos/search_analytics)
 
 References باید هنگام تصمیم‌های حساس دوباره بررسی شوند چون مستندات می‌توانند تغییر کنند.
+
+
+## Rank Math — Official Implementation References
+
+این منابع برای implementation mechanics هستند، نه جایگزین Google Search documentation:
+
+- [Titles & Meta](https://rankmath.com/kb/titles-and-meta/)
+- [Advanced Meta Box / Canonical](https://rankmath.com/kb/advanced-tab/)
+- [Configure Sitemaps](https://rankmath.com/kb/configure-sitemaps/)
+- [Product Schema](https://rankmath.com/kb/product-schema/)
+- [WooCommerce duplicate content/canonical controls](https://rankmath.com/kb/woocommerce-duplicate-content-issues/)
+- [Redirections](https://rankmath.com/kb/setting-up-redirections/)
+- [General Settings / robots.txt / WooCommerce modules](https://rankmath.com/kb/general-settings/)
+
+قبل از implementation، capability نسخه نصب‌شده سایت باید verify شود؛ صرف وجود feature در مستندات نسخه دیگر کافی نیست.

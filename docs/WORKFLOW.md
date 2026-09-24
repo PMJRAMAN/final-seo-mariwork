@@ -201,3 +201,29 @@ ChatGPT مستقل:
 ## Emergency Exception
 
 رفع incident مستقل از SEO workflow ممکن است خارج این چرخه انجام شود، ولی اگر SEO-relevant بود باید بعداً dossier/decision را backfill کند.
+
+
+## Program Order — Master TODO
+
+ترتیب family-level اجرای پروژه از `MASTER-TODO.md` می‌آید:
+
+1. Pre-audit baseline
+2. Store/WooCommerce — همه محصولات و URL spaces
+3. Homepage
+4. Other static/core pages
+5. Blog/Articles
+6. Academy/Education
+7. Artists/History/Other custom content
+8. Taxonomies/archives/system URLs
+9. Final sitewide validation
+10. Continuous monitoring
+
+Inventory می‌تواند child task جدید ایجاد کند ولی ترتیب کلان بدون Decision تغییر نمی‌کند.
+
+## Google/Rank Math Gate در هر Implementation
+
+قبل از APPROVED → IMPLEMENTING:
+- Google basis و reference ثبت شود؛
+- owner فنی concern ثبت شود؛
+- اگر Rank Math capability دارد، target owner = RANK_MATH؛
+- اگر ندارد، دلیل و extension/platform architecture ثبت شود.

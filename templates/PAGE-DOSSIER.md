@@ -19,6 +19,7 @@ implementation:
 codex_qa:
 final_qa:
 change_refs: []
+master_todo_refs: []
 last_updated:
 ---
 
@@ -259,3 +260,11 @@ KEEP / ITERATE / ROLLBACK-CANDIDATE / INCONCLUSIVE
 
 | Date | Change | Reference |
 |---|---|---|
+
+
+## 16. SEO Basis / Ownership Record
+
+برای هر تغییر SEO مهم:
+
+| Finding/Change | Google basis | Official Google reference | Current owner | Target owner | Rank Math capability checked/path |
+|---|---|---|---|---|---|

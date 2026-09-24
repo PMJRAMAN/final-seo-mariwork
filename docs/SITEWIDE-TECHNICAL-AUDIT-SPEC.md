@@ -155,3 +155,31 @@ Sitewide generators/plugins/custom filters:
 3. URL inventory updates
 4. recommended investigation order
 5. no Production changes
+
+
+## N. Rank Math Configuration & SEO Ownership Audit
+
+ثبت اجباری قبل از page implementations:
+
+- installed Rank Math version
+- Free/Pro
+- Advanced Mode
+- active modules
+- Titles & Meta settings
+- Products/Product Categories/Product Tags settings
+- sitemap ownership/settings
+- robots meta/canonical ownership
+- Schema/WooCommerce integration
+- 404/Redirections modules
+- robots.txt ownership
+- custom `rank_math/*` hooks/filters
+- theme/custom-plugin hooks affecting SEO output
+- duplicate title/meta/canonical/schema/robots/sitemap sources
+- owner_before و recommended owner_after
+
+هر recommendation این بخش باید:
+- Google basis/reference
+- Rank Math capability check
+- owner target
+
+داشته باشد.

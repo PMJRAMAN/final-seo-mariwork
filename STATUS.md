@@ -46,3 +46,21 @@
 ## تغییر Production
 
 تا این لحظه framework work فقط repository بوده است. هیچ تغییر SEO Production بخشی از این مرحله نیست.
+
+
+## Master execution program
+
+مرجع ترتیب کار: `MASTER-TODO.md`
+
+Current priority:
+1. A-010..A-020 Pre-audit baselines
+2. Store/WooCommerce complete coverage
+3. Homepage
+4. Static pages
+5. Blog/Articles
+6. Academy/Education
+7. Other content + archives/system URLs
+
+قانون جدید:
+- Google official documentation = SEO standard
+- Rank Math = first technical owner for supported WordPress SEO concerns

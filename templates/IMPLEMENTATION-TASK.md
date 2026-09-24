@@ -13,6 +13,7 @@
 - systemic change dossier if referenced
 
 ## Target
+Master TODO task ID:  
 Entity/Page:  
 Dossier:  
 Approved finding IDs:  
@@ -35,6 +36,10 @@ Change reference:
 - [ ] backup/rollback ready
 - [ ] no conflicting recent change
 - [ ] systemic change dossier exists if FAMILY/SITEWIDE
+- [ ] Google basis/reference recorded
+- [ ] installed Rank Math capability checked
+- [ ] SEO owner current/target recorded
+- [ ] if Rank Math supports the concern, implementation path uses Rank Math
 
 ## Write Scope
 
@@ -77,3 +82,14 @@ Status:
 `APPROVED → IMPLEMENTING → IMPLEMENTED → CODEX_QA_PASSED`
 
 Codex `FINAL_QA_PASSED` تعیین نمی‌کند.
+
+
+## SEO Ownership
+
+- Google basis:
+- Google reference:
+- Current SEO owner:
+- Target SEO owner: RANK_MATH / RANK_MATH_EXTENSION / PLATFORM / CONTENT
+- Rank Math version/module checked:
+- Rank Math UI/config path OR documented reason it cannot own this change:
+- Duplicate-output check:

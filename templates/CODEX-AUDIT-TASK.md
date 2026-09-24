@@ -25,6 +25,10 @@ Pages:
 4.
 5.
 
+## Planning Reference
+
+Master TODO task/program ID:  
+
 ## Goal
 
 برای هر page وضعیت واقعی را audit کن و dossier را تا `CODEX_AUDITED` تکمیل کن.
@@ -78,3 +82,13 @@ Fact اختراع نکن.
 - systemic findings update
 - no APPROVED status
 - no Production change
+
+
+## Google / Rank Math Requirements
+
+برای findings فنی/محتوایی مهم:
+- Google basis/reference ثبت کن.
+- توصیه vendor را به Google نسبت نده.
+- Rank Math capability و owner را برای concerns مرتبط audit کن.
+- اگر Rank Math capability دارد، recommendation باید Rank Math-first باشد.
+- custom PHP پراکنده پیشنهاد نده.

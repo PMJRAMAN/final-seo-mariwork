@@ -183,3 +183,23 @@ SEO audit نباید customer PII، order details، credential، token، private
 ## 6. اصل احتیاط
 
 هیچ best practice به‌تنهایی رتبه یا نمایش rich result/AI citation را تضمین نمی‌کند. پروژه تفاوت مشاهده، فرضیه، تصمیم و نتیجه اندازه‌گیری‌شده را حفظ می‌کند.
+
+
+### M-21 — Official Google Documentation Is the SEO Standard
+هر recommendation یا change فنی/محتوایی SEO باید با مستندات رسمی فعلی Google Search سازگار باشد.
+
+اگر Google برای جزئیات موردنظر rule صریح ندارد، آن پیشنهاد نباید به‌عنوان «الزام Google» گزارش شود و باید به‌صورت PROJECT_DECISION / GOOGLE_CONSISTENT / EXPERIMENT برچسب بخورد.
+
+مستندات vendorها از جمله Rank Math برای **implementation mechanics** هستند، نه جایگزین Google به‌عنوان مرجع SEO.
+
+### M-22 — Rank Math First Technical Ownership
+در WordPress ماری‌ورک، هر concern SEO که نسخه نصب‌شده Rank Math capability مناسب برای آن دارد باید از Rank Math مدیریت شود.
+
+Custom code موازی، snippet پراکنده و output duplicate برای title/meta/robots/canonical/schema/sitemap و سایر concerns تحت پوشش Rank Math ممنوع است.
+
+اگر Rank Math کافی نیست، فقط یک Rank Math Extension مرکزی و مستند یا Platform owner با دلیل صریح مجاز است. جزئیات در `docs/SEO-OWNERSHIP.md`.
+
+### M-23 — Complete-Site Coverage
+پروژه تا زمانی کامل نیست که تمام URL/entityهای کشف‌شده سایت disposition نهایی داشته باشند.
+
+ترتیب اجرای برنامه در `MASTER-TODO.md` مرجع رسمی task planning است. Store اولویت اول، سپس Homepage، سایر صفحات ثابت، Blog/Articles، Academy/Education و سایر families است.
