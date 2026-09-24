@@ -396,6 +396,30 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 
 ---
 
+# K. EXTERNAL PR / ADVERTORIAL STRATEGY
+
+این مرحله بعد از تثبیت Query Map، Content Architecture، Internal Link Architecture و صفحات هدف اجرا می‌شود. هدف، خرید صرف backlink نیست؛ هدف طراحی برنامه انتشار مقاله/رپورتاژ پولی و PR خارجی بر اساس داده و نقش واقعی هر landing page است.
+
+- [ ] K-001 Build External PR / Advertorial Strategy from final SEO evidence
+- [ ] K-002 Identify priority query/topic clusters that benefit from external amplification
+- [ ] K-003 Select the correct landing page for each campaign: Category / Article / Academy / Product / Brand page
+- [ ] K-004 Define supporting internal-link path from each external landing page into the site architecture
+- [ ] K-005 Classify publisher types: major general media, art/culture media, lifestyle/creative media, specialist publications
+- [ ] K-006 Define article angles by audience and publisher type; avoid duplicate/thin advertorial concepts
+- [ ] K-007 Define anchor/link policy, including sponsored/nofollow handling where applicable
+- [ ] K-008 Build publisher-evaluation criteria: topical relevance, real audience, editorial quality, visibility, referral potential, brand fit and publication permanence
+- [ ] K-009 Create campaign matrix: publisher type × topic × landing page × supporting pages × CTA × KPI
+- [ ] K-010 Prioritize campaigns by strategic value rather than domain metrics alone
+- [ ] K-011 Define measurement plan: referral traffic, assisted conversions where available, branded search, GSC landing-page movement and downstream internal navigation
+- [ ] K-012 Launch controlled pilot campaigns before scaling
+- [ ] K-013 Review pilot results and update publisher/topic/landing-page rules
+- [ ] K-014 Maintain external publication inventory with publication date, article URL, target page, link attributes, campaign purpose and measured outcome
+- [ ] K-015 Periodic external-authority / PR strategy review as the site and content architecture evolve
+
+**Rule:** هیچ رپورتاژ یا مقاله خارجی نباید صرفاً به‌دلیل DA/DR یا امکان دریافت لینک انتخاب شود. موضوع، رسانه، مخاطب و landing page باید با معماری و evidence نهایی پروژه هم‌راستا باشند.
+
+---
+
 # Task-writing rule
 
 ChatGPT هنگام نوشتن هر task Codex باید به این TODO استناد کند:

@@ -59,3 +59,14 @@ The review must explicitly determine:
 - legacy title/slug history when a title change could affect continuity.
 
 Do not bulk-rename products from an assumed template. The naming standard must be approved before implementation.
+
+
+## External Amplification
+
+External PR / advertorial activity must follow the approved internal architecture rather than define it.
+
+For every external article:
+- choose a durable landing page based on intent and page role;
+- ensure that landing page has a deliberate internal path to relevant products, categories, Academy lessons or articles;
+- avoid sending all placements to the homepage or arbitrary products;
+- use `strategy/EXTERNAL-PR-STRATEGY.md` for campaign planning and measurement.

@@ -256,3 +256,22 @@ A logical SEO batch is not necessarily one model call. The first pilot remains f
 Taxonomy/system URL spaces such as Product Tags and Blog Tags planned for decommission may be covered by FAMILY/SITEWIDE policy analysis rather than repetitive per-URL model reasoning. Complete-site disposition coverage remains mandatory.
 
 Model calls should use the lowest reasoning level that preserves audit quality. Escalation to stronger reasoning is reserved for anomalous/complex cases.
+
+
+## Phase 15 — External PR / Advertorial Strategy
+
+After the internal SEO architecture is stable enough to identify durable target pages, build an external publication strategy from the approved Query Map, Content Architecture, Internal Link Architecture and measured page opportunities.
+
+This phase covers:
+- topic/query clusters worth external amplification;
+- publisher/audience fit;
+- article angle and editorial usefulness;
+- correct landing page selection;
+- downstream internal-link path from the landing page;
+- anchor/link-attribute policy for paid placements;
+- campaign KPIs and attribution limits;
+- pilot → measure → refine → scale.
+
+The goal is not indiscriminate backlink acquisition. Paid external articles/advertorials are treated as a brand, referral, discovery and authority-development program aligned with the site's approved SEO architecture.
+
+Primary strategy document: `strategy/EXTERNAL-PR-STRATEGY.md`.
