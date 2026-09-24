@@ -25,7 +25,7 @@
       "required_files": [
         "audits/sitewide/A-011-content-types-taxonomies.md"
       ],
-      "instructions": "Map all current WordPress/Woo page types, product types, taxonomies, archives and custom post types; reconcile them against inventory and identify missing families."
+      "instructions": "Map all current WordPress/Woo page types, product types, taxonomies, archives and custom post types; reconcile them against inventory and identify missing families. Explicitly inventory Product Tags and Blog Tags, their assignments, public archive URL patterns and counts. These two tag systems are planned for controlled decommission; do not remove them in Round 1."
     },
     {
       "id": "A-012",
@@ -50,7 +50,7 @@
       "required_files": [
         "audits/sitewide/A-013-technical-baseline.md"
       ],
-      "instructions": "Execute docs/SITEWIDE-TECHNICAL-AUDIT-SPEC.md read-only: crawl/index controls, sitemaps, redirects/errors, canonical/duplicate URL spaces, facets, JS/AJAX discoverability, internal links, structured data, Woo architecture, images, performance/mobile evidence and crawler access. Create initial systemic findings when evidence supports them."
+      "instructions": "Execute docs/SITEWIDE-TECHNICAL-AUDIT-SPEC.md read-only: crawl/index controls, sitemaps, redirects/errors, canonical/duplicate URL spaces, facets, JS/AJAX discoverability, internal links, structured data, Woo architecture, images, performance/mobile evidence and crawler access. Create initial systemic findings when evidence supports them. Treat Product Tag and Blog Tag archive spaces as explicit decommission candidates: collect current crawl/index/sitemap/canonical/internal-link behavior and migration risks, but make no Production changes."
     },
     {
       "id": "A-014",
@@ -120,7 +120,7 @@
       "required_files": [
         "strategy/CONTENT-ARCHITECTURE.md"
       ],
-      "instructions": "Build initial content architecture: families, hubs/support relationships, product↔education opportunities, overlap/cannibalization hypotheses and gaps. No final rewrite decisions."
+      "instructions": "Build initial content architecture: families, hubs/support relationships, product↔education opportunities, overlap/cannibalization hypotheses and gaps. No final rewrite decisions. For the planned Product Tag and Blog Tag decommission, identify durable replacement navigation/landing destinations (categories, shop, articles or hubs) so tag removal does not create content or internal-link gaps."
     },
     {
       "id": "A-020",

@@ -162,14 +162,23 @@ Batchها ابتدا ۵تایی و پس از ثبات process حداکثر طب�
 - [ ] dual audit
 - [ ] implementation/QA if indexable
 
-## B8 — Product tags / attributes
+## B8 — Product tags decommission / attribute archives audit
 
-برای تمام tag/attribute archives:
-- [ ] KEEP INDEXED / NOINDEX / REDIRECT / CANONICAL decision
-- [ ] duplication/thin-value analysis
-- [ ] Rank Math robots/sitemap ownership
-- [ ] internal-link policy
-- [ ] QA
+**Project direction:** Product Tags برای معماری نهایی فروشگاه نیاز نیستند و هدف، حذف کنترل‌شده آن‌هاست. حذف مستقیم بدون تحلیل URL history، GSC، indexation، internal links و migration mapping مجاز نیست. Product Attributes مستقل از Tags هستند و صرفاً به‌دلیل این تصمیم حذف نمی‌شوند.
+
+### Product Tags — planned decommission
+- [ ] B8-001 Inventory all Product Tags, tag assignments and public tag archive URLs
+- [ ] B8-002 Analyze GSC/history, indexation, sitemap presence, internal links and any known inbound-link/value signals
+- [ ] B8-003 Map every tag URL to the best replacement: relevant Product Category / Shop / specific durable destination; use `REMOVE_410` only when no meaningful replacement exists and evidence supports it
+- [ ] B8-004 Prepare migration plan before deletion: redirects/410, internal-link cleanup, tag-assignment cleanup and rollback/verification scope
+- [ ] B8-005 Remove Product Tag usage/archive exposure only after approval; clean Rank Math sitemap/indexability ownership accordingly
+- [ ] B8-006 Implement approved 301/410 mapping without redirect chains or unrelated URL changes
+- [ ] B8-007 Crawl + sitemap + canonical + internal-link + GSC follow-up QA after decommission
+
+### Product Attributes — separate decision
+- [ ] B8-008 Audit attribute archives independently for KEEP INDEXED / NOINDEX / REDIRECT / CANONICALIZE
+- [ ] B8-009 Verify Rank Math robots/sitemap ownership and internal-link policy for attributes
+- [ ] B8-010 Attribute archive QA
 
 ## B9 — Store facets / filters / parameters
 
@@ -240,6 +249,16 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 - [ ] E0-004 query/content overlap with Academy
 - [ ] E0-005 article schema/author/date ownership
 - [ ] E0-006 Rank Math article settings
+
+### Blog Tags — planned decommission
+**Project direction:** Blog Tags نیز در معماری نهایی موردنیاز نیستند و هدف حذف کنترل‌شده آن‌هاست؛ Categories/Articles/Hubs باید قبل از حذف نقش مقصد و ناوبری لازم را پوشش دهند.
+
+- [ ] E0-007 Inventory all Blog Tags, assignments and public tag archive URLs
+- [ ] E0-008 Analyze GSC/history, indexation, sitemap presence, internal links and any known inbound-link/value signals
+- [ ] E0-009 Map every Blog Tag URL to the best durable replacement: relevant Category / Article / Content Hub; use `REMOVE_410` only when no meaningful replacement exists and evidence supports it
+- [ ] E0-010 Prepare migration plan: redirect/410 mapping, internal-link cleanup, tag-assignment cleanup, Rank Math sitemap/indexability cleanup and rollback scope
+- [ ] E0-011 Remove Blog Tag usage/archive exposure only after approval and implement the approved migration map
+- [ ] E0-012 Crawl + sitemap + canonical + internal-link + GSC follow-up QA after decommission
 
 ## E1 All articles
 برای **هر مقاله**:
