@@ -47,6 +47,13 @@ def state_dir():
     os.chmod(p,0o700); os.chmod(p/"logs",0o700); os.chmod(p/"worktrees",0o700)
     return p
 
+def path_visible(path):
+    try:
+        path.stat()
+        return True
+    except (FileNotFoundError,PermissionError):
+        return False
+
 def load_state():
     p=state_dir()/"state.json"
     if not p.exists(): return {"paused":False,"pause_reason":None,"page_failures":{},"last_job":None}
@@ -389,9 +396,9 @@ def preflight(r):
         raise RuntimeError("refusing autonomous execution with sudo privileges")
     state=state_dir().resolve()
     if state==r or r in state.parents: raise RuntimeError("runtime state must be outside the repository")
-    if PRODUCTION_ROOT.exists() or os.access(PRODUCTION_ROOT,os.W_OK): raise RuntimeError("Production path is visible or writable in autonomous runtime")
-    if WP_CONFIG.exists() or os.access(WP_CONFIG,os.R_OK): raise RuntimeError("Production wp-config.php is visible in autonomous runtime")
-    if DB_SOCKET.exists(): raise RuntimeError("Production database socket is visible in autonomous runtime")
+    if path_visible(PRODUCTION_ROOT) or os.access(PRODUCTION_ROOT,os.W_OK): raise RuntimeError("Production path is visible or writable in autonomous runtime")
+    if path_visible(WP_CONFIG) or os.access(WP_CONFIG,os.R_OK): raise RuntimeError("Production wp-config.php is visible in autonomous runtime")
+    if path_visible(DB_SOCKET): raise RuntimeError("Production database socket is visible in autonomous runtime")
     cmd(["codex","--version"])
     for p in ("MANIFEST.md","AGENTS.md","MASTER-TODO.md","automation/round1_plan.json"):
         if not (r/p).exists(): raise RuntimeError("missing "+p)
