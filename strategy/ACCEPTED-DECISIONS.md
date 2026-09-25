@@ -565,3 +565,20 @@ Rules:
 - Validate raw HTML, rendered DOM before interaction, network behavior, YITH reconciliation and Google-rendered output.
 - Sitewide AJAX/JS rules remain cross-referenced to DEC-080.
 - Rank Math remains primary Product schema owner.
+
+
+## DEC-037 — Academy / LearnDash Schema Ownership and Canary
+
+**Status:** ACCEPTED
+
+- Academy SEO/schema follows semantic role, not raw LearnDash post type.
+- Current WP-32714 is a guide collection, not a coherent Course.
+- Mariwork Core/UI already expresses this semantic distinction with `راهنما`, `شامل 37 راهنما`, and guide-oriented CTAs such as `دیدن راهنماها`; SEO/schema must mirror that same distinction.
+- WP-32714 targets CollectionPage semantics.
+- Its 37 children are individual guide/watch pages, not lessons of one single curriculum.
+- Future genuine curricula may use Course semantics and course-oriented UI such as `درس` / `شامل N درس` when true.
+- UI labels, CTAs, counts, metadata, internal hierarchy and structured data must remain semantically aligned.
+- Rank Math remains first owner; Mariwork Core may fill unsupported Academy nodes without a conflicting second graph.
+- Current canary: guide collection + two representative guide pages.
+- First future true Course requires a separate Course canary.
+- VideoObject remains under DEC-038; breadcrumbs under DEC-039.
