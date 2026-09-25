@@ -195,7 +195,7 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-040 | Approve CORE_MANDATORY / FAMILY_SPECIFIC / CONTEXTUAL_OPTIONAL model | PROPOSED | SR-005 §17; link matrix draft | Framework approved in Second Review; owner approval pending |
+| DEC-040 | Approve CORE_MANDATORY / FAMILY_SPECIFIC / CONTEXTUAL_OPTIONAL model | DISCUSSING | SR-005 §17; link matrix draft | Framework approved in Second Review; owner approval pending |
 | DEC-041 | Exact mandatory parent/hub links by family | OPEN | INTERNAL-LINK-REQUIREMENT-MATRIX-DRAFT | Requires exact durable destinations |
 | DEC-042 | Product → Academy/Article rules | OPEN | SR-004 SR-ST-009; current graph | Only real preparation/technique/care relevance |
 | DEC-043 | Academy/Lesson → Product/Category rules | OPEN | SR-004 SR-ST-009 | Only when material/tool is actually used |
