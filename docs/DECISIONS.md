@@ -315,3 +315,20 @@ Later title/meta/content/schema/internal-link/indexability decisions must preser
 - Shop should help users/crawlers discover durable Product Categories and Products.
 - Shop must not replace or intentionally compete with category-specific landing pages.
 - Any future category shortcuts or short introductory copy must support product discovery rather than displace the all-products listing.
+
+
+## DEC-004 — Cart / Checkout Transactional Utility Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SYSTEM-COMMERCE
+
+### Accepted target state
+
+- Cart and Checkout are transactional utility endpoints, not search landing pages.
+- Cart remains `noindex, follow`.
+- Checkout remains a non-search transactional endpoint; in the empty public state it may redirect to Cart.
+- Keep Cart/Checkout out of sitemap/index targets.
+- Do not add editorial SEO copy or independent commercial schema to these endpoints.
+- Do not introduce crawl blocking that would prevent the intended noindex directive from being seen.
+- Missing canonical on these noindex utility states is not, by itself, an implementation defect.
+- No Production change is required where current behavior already matches this policy.
