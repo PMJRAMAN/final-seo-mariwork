@@ -785,3 +785,15 @@ Rules:
 - Magazine categories form the navigational/content hierarchy beneath the hub.
 - The hub is not an ordinary Article or Category archive.
 - Final category taxonomy, names, and category-specific content strategy remain separate decisions.
+
+
+## DEC-052 — History / Artists Content Strategy
+
+**Status:** ACCEPTED
+
+- Historical and globally significant artists may be covered as Magazine Articles when editorially, artistically, or historically valuable.
+- Relevant History content belongs to the Magazine editorial architecture.
+- Artist-focused Magazine Articles are editorial content, not Mariwork Artist profiles.
+- `/artists/` and its profiles represent the separate Mariwork Artists directory/project.
+- Historical Artist URL migration remains governed by DEC-028 and is not reopened by DEC-052.
+- Artist selection, publishing volume, and detailed History editorial planning remain later content-strategy decisions.
