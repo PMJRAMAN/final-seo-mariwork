@@ -705,3 +705,15 @@ Rules:
 - Informational Articles may legitimately contain no commercial destination.
 - Do not add unrelated or generic commercial links merely to increase internal-link volume or SEO coverage.
 - Apply DEC-040 classification and maintain approved relationships in the Internal Link Requirement Matrix.
+
+
+## DEC-045 — Article to Article / Academy Linking Rules
+
+**Status:** ACCEPTED
+
+- Article → Article/Academy links require semantic relevance and a useful reader next step.
+- Valid relationships include continuation, deeper detail, prerequisite/background, complementary reference, or a practical Academy destination.
+- No fixed sitewide quota requires every Article to contain a specified number of Article or Academy links.
+- Related-content modules must not create random links solely from shared Category/Tag membership.
+- Automated and manual destinations follow the same relevance standard.
+- Approved relationships are governed by DEC-040 and the Internal Link Requirement Matrix.
