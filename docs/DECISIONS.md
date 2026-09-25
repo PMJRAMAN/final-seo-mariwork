@@ -2369,3 +2369,25 @@ Google requires Product structured-data images to represent the marked-up Produc
 - The 60 ml default image is preserved for fabric-color Products.
 - Variant-image switching remains part of the intended Product experience.
 - SEO QA may flag broken, inaccessible or factually mismatched Product images, but not gallery composition merely because a different merchandising arrangement might exist.
+
+
+## DEC-057 — Article / Academy Instructional Image Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MAGAZINE / ACADEMY / INSTRUCTIONAL IMAGERY
+
+### Accepted target state
+
+- There is no fixed SEO quota for the number of images in a Magazine Article or Academy page.
+- Mariwork Academy is video-first. Supplementary images are used only when they materially improve explanation of a step, tool, result, detail or concept.
+- Magazine/Article images are used when they improve understanding, documentation, artwork/artist/Product identification, technique illustration or editorial quality.
+- Do not add images merely so a page has images for SEO.
+- Instructional images must align with the actual lesson, Article and video context rather than functioning as generic filler.
+- A representative Featured Image may support an Article, but multiple in-body images are not an SEO requirement.
+- ALT behavior remains governed by DEC-054.
+
+### Consequences
+
+- Image count is determined by content need, not an SEO formula.
+- Academy remains video-first even when supporting images are present.
+- Magazine and Academy content QA evaluates image usefulness and factual relevance rather than raw image quantity.
