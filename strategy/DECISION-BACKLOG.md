@@ -56,8 +56,8 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-001 | Approve durable site-family roles: Homepage, Shop, Product Categories, Products, Academy, Magazine/Articles, durable Blog Categories, Static trust/support | DISCUSSING | SR-005 §4–15; CONTENT-ARCHITECTURE | Foundation for linking/content decisions |
-| DEC-002 | Decide final Homepage role and whether current title/H1/meta remain the baseline | PROPOSED | WP-63; SR-005 §4 | Current state is coherent; no rewrite required by audit |
+| DEC-001 | Approve durable site-family roles: Homepage, Shop, Product Categories, Products, Academy, Magazine/Articles, durable Blog Categories, Static trust/support | ACCEPTED | SR-005 §4–15; CONTENT-ARCHITECTURE | Accepted target: Homepage=brand/navigation root; Shop= broad commercial discovery hub; durable Product Categories=commercial category hubs; Products=transactional entities; Academy=structured learning; Magazine/Articles=informational/reference; durable Blog Categories=editorial hubs only where useful; Static=trust/support. Transitional/utility/legacy spaces remain governed by dedicated decisions. |
+| DEC-002 | Decide final Homepage role and whether current title/H1/meta remain the baseline | DISCUSSING | WP-63; SR-005 §4 | Current state is coherent; no rewrite required by audit |
 | DEC-003 | Decide Shop target state: H1, visible role, title/meta and relationship to Product Categories | PROPOSED | SR-004 SR-ST-001; WP-30918 | Required before Shop implementation |
 | DEC-004 | Cart / Checkout transactional utility-page policy | PROPOSED | SR-005 §6; WP-10/WP-30919 | Decide crawl/index role and state-safe behavior; no editorial optimization |
 | DEC-005 | Decide public role of current LearnDash Course Categories currently returning 404 | NEEDS_TARGETED_EVIDENCE | SR-005 §11; current SEO output | Verify whether terms are operationally needed before lifecycle decision |
