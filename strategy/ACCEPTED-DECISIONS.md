@@ -728,3 +728,14 @@ Rules:
 - Selected destinations must directly support understanding, selection, preparation, use, technique, or care for that Product Category.
 - Do not add generic sitewide education/reference links merely for internal-link coverage.
 - Category landing-page content structure and requirements require a separate content decision before implementation.
+
+
+## DEC-047 — Internal-Link Anchor Text Policy
+
+**Status:** ACCEPTED
+
+- Internal-link anchors must be concise, natural, descriptive, and contextually accurate.
+- Exact-match keyword repetition and fixed anchors across all source pages are not required.
+- Do not invent query-target anchors without supporting evidence.
+- Natural variation is allowed when the destination remains accurately described.
+- Avoid generic anchors when a meaningful descriptive phrase is naturally available.
