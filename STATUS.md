@@ -3,9 +3,26 @@
 **Project:** Final SEO Mariwork  
 **Framework:** v1.0  
 **Framework state:** FROZEN  
-**Phase:** FULL-SITE SECOND REVIEW / PRE-IMPLEMENTATION APPROVAL
-**Status:** SECOND_REVIEWED — HUMAN APPROVAL PENDING
+**Phase:** STRATEGY / DECISION PHASE
+**Status:** SECOND_REVIEWED — TARGET-STATE DECISIONS IN PROGRESS
 **Last framework review:** 2026-09-25
+
+## Strategy / Decision Phase — 2026-09-25
+
+The project does not move directly from audit findings to Production.
+
+Current planning authorities:
+
+- `MASTER-TODO.md` — complete-site coverage/program ordering.
+- `strategy/DECISION-BACKLOG.md` — owner + ChatGPT target-state decisions.
+- `tasks/EXECUTION-BACKLOG.md` — implementation packages unlocked only by accepted decisions.
+- `docs/DECISION-TO-EXECUTION-GOVERNANCE.md` — governing process.
+
+The Decision Backlog currently enumerates the target-state choices to work through incrementally, including titles/H1, metadata, taxonomies, sitemap, schema, internal links, content architecture, images/video, system URL policy and legacy migration.
+
+The Execution Backlog is intentionally locked. No Production Codex implementation task may be generated until the blocking Decision IDs are `ACCEPTED` and the related execution item is `READY_FOR_TASK`.
+
+Process decision: `SEO-019`.
 
 ## ChatGPT full-site Second Review — 2026-09-25
 
