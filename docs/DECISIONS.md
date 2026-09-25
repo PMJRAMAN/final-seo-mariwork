@@ -297,3 +297,21 @@ Later title/meta/content/schema/internal-link/indexability decisions must preser
 - H1 does not need to duplicate the full SEO title.
 - Future changes require materially better intent evidence, verified brand-fact changes, or a deliberate Homepage content-strategy change.
 - Brand factual claims such as «بیش از ۱۰ سال» remain subject to DEC-053 factual verification.
+
+
+## DEC-003 — Shop Target State
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SHOP / COMMERCIAL DISCOVERY
+
+### Accepted target state
+
+- `/shop/` remains indexable and self-canonical.
+- Shop remains Mariwork's broad commercial discovery hub and primary all-products listing.
+- Product grid/listing remains a primary part of the page; this decision does not require a layout redesign.
+- Add one visible H1: `فروشگاه ماری‌ورک`.
+- Use SEO title: `فروشگاه ماری‌ورک | رنگ پارچه، مدیوم، ست و ابزار`.
+- Replace the broken archive-generated meta description with a factual Shop-specific description.
+- Shop should help users/crawlers discover durable Product Categories and Products.
+- Shop must not replace or intentionally compete with category-specific landing pages.
+- Any future category shortcuts or short introductory copy must support product discovery rather than displace the all-products listing.
