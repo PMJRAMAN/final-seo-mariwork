@@ -310,3 +310,20 @@ Rules:
 - Tools: factual identity/specs/use/compatibility without false Mariwork branding.
 - No fixed word count, filler SEO copy, mandatory FAQ, or unsupported claims.
 - Exact copy and visual layout remain implementation-level.
+
+
+## DEC-021 — Product Category Visible Intro / Content Policy
+
+**Status:** ACCEPTED
+
+- Durable Product Categories are commercial discovery/product-selection pages.
+- Use concise useful intros; keep Product grid primary.
+- Add supplementary selection guidance only when genuinely useful.
+- No fixed word count or filler SEO copy.
+- Do not duplicate Product-page copy or Magazine/Academy educational content.
+- FAQ is optional.
+- Avoid keyword stuffing and boilerplate.
+- Child volume-set Categories require genuinely distinct explanatory value.
+- Use factual inventory/Product distinctions only.
+- Do not falsely brand third-party tools as Mariwork.
+- DEC-121–124 may later inform emphasis without artificial duplication.
