@@ -9,6 +9,81 @@
 
 See: `docs/DECISION-TO-EXECUTION-GOVERNANCE.md`.
 
+## Decision Discussion Pipeline
+
+This section defines the mandatory owner + ChatGPT workflow for every unresolved `DEC-###` item. It exists so the same decision method can continue across different chat sessions without relying on conversational memory.
+
+### Interaction format
+
+For each Decision, ChatGPT must:
+
+1. **Read current Mariwork evidence from this repository first.**
+   - Use the relevant dossier, audit, reconciliation, matrix, current-output evidence, and previously accepted Decisions.
+   - Do not infer current site state when repository evidence exists.
+
+2. **Check current official Google Search documentation before making the recommendation when the Decision involves SEO behavior.**
+   - Google Search Central / developers.google.com/search is the primary SEO authority.
+   - Vendor documentation may be used only for implementation capability, not as a substitute for Google's SEO guidance.
+   - If official Google documentation does not prescribe a specific choice, state that clearly and distinguish project judgment from Google requirements.
+
+3. **Explain the Decision to the owner in Persian.**
+   The explanation should normally include:
+   - what this Decision controls;
+   - current Mariwork state/evidence;
+   - concrete examples from the site when useful;
+   - relevant Google basis;
+   - the recommended Target State;
+   - important exceptions/dependencies;
+   - what this Decision does *not* change.
+
+4. **Provide the proposed GitHub Target State in English.**
+   - Keep it precise enough to become a durable implementation constraint.
+   - Preserve exact exceptions, dependencies, and boundaries.
+   - Do not record a proposal as accepted before owner approval.
+
+5. **Owner decision gate.**
+   The owner may:
+   - approve;
+   - modify;
+   - reject;
+   - request more evidence/research;
+   - defer the Decision for later.
+
+6. **After explicit owner approval only:**
+   - set the Decision to `ACCEPTED` in `strategy/DECISION-BACKLOG.md`;
+   - append/record the full accepted target state in `docs/DECISIONS.md`;
+   - update `strategy/ACCEPTED-DECISIONS.md`;
+   - preserve unresolved dependencies and implementation blockers;
+   - then move the next Decision to `DISCUSSING`.
+
+7. **If the owner defers a Decision:**
+   - set it to `DEFERRED`;
+   - record that no target state has been accepted;
+   - continue with the next independent Decision;
+   - return to the deferred item later before any dependent implementation.
+
+8. **No implementation during the strategy discussion phase.**
+   - Acceptance defines target state only.
+   - Production work waits for Strategy Lock, dependency reconciliation, Execution Backlog readiness, canary/rollback requirements, and the normal Codex + ChatGPT QA process.
+
+### Communication rule
+
+The user-facing explanation is in **Persian**.  
+The durable GitHub decision text is in **English**.
+
+### Default Decision response shape
+
+1. Decision title / scope  
+2. Current Mariwork state  
+3. Official Google basis  
+4. ChatGPT recommendation  
+5. Concrete examples / edge cases when useful  
+6. Persian Target State explanation  
+7. English Target State for GitHub  
+8. Owner approval / modification / defer gate
+
+Do not skip directly from audit evidence to implementation. The purpose of this pipeline is deliberate, topic-by-topic strategy agreement before execution.
+
 ## Coverage Freeze v1
 
 As of 2026-09-25, P-001 through P-004 found **zero unexplained material decision-domain gaps** after reconciliation.
@@ -73,8 +148,8 @@ After each discussion:
 | DEC-010 | Product Title Naming Standard — tools/accessories | ACCEPTED | SR-004 SR-ST-002 | Accepted: Product naming must reflect actual brand ownership. Third-party/generic tools use `[Exact Product Name] [Code if factually applicable]`; Mariwork-branded/manufactured tools use `[Exact Product Name] ماری ورک کد [NNN]`. Do not append Mariwork merely because the item is sold on mariwork.ir. Include only real brands/codes, remove decorative separators, exclude volume, include model/size only for genuinely distinct products, and do not change URLs solely from title normalization. |
 | DEC-011 | Decide relationship between visible Product H1/title and Rank Math SEO title template | ACCEPTED | SR-004 SR-ST-002; Rank Math ownership | Accepted: WooCommerce Product title/visible H1 is the primary Product identity source; default Rank Math Product SEO title template target is `%title%` rather than `%title% %sep% %sitename%`; page-specific SEO title exceptions require concise factual clarity, not keyword expansion or artificial branding. Global implementation remains blocked until DEC-008 is resolved; rollout requires regression checks for uniqueness, descriptiveness, and duplicate-brand removal. |
 | DEC-012 | Static/Core title and H1 policy | ACCEPTED | SR-005 §5; current SEO output | Accepted: concise page-specific SEO titles and clear primary H1s; repetitive `- رنگ پارچه ماری ورک` suffix is not required. Approved targets: About `درباره ماری‌ورک` / H1 same; Contact `تماس با ماری‌ورک` / H1 `با ماری‌ورک در تماس باشید`; Magazine `مجله ماری‌ورک`; Why `چرا ماری‌ورک؟` / H1 `چرا رنگ پارچه ماری‌ورک؟`; Stores `فروشگاه‌های ماری‌ورک` / H1 `فروشگاه‌های ماری‌ورک نزدیک شما`; FAQ `سوالات متداول ماری‌ورک` / H1 `سوالات متداول`. Title/H1 may differ but must describe same page role. |
-| DEC-013 | Article title/H1 conventions | DISCUSSING | 12 article dossiers; current output | Preserve natural informational titles; avoid mechanical keyword repetition |
-| DEC-014 | Academy course/lesson title/H1 conventions | OPEN | course + 37 lesson dossiers | Keep instructional clarity; decide brand suffix/template behavior |
+| DEC-013 | Article title/H1 conventions | ACCEPTED | 12 article dossiers; current output | Accepted: natural reader-facing Article titles based on actual subject; default Article SEO `<title>` = approved Article H1/title; remove repetitive `- رنگ پارچه ماری ورک` article suffix; use brand/product terms only when naturally relevant; no mechanical keyword/date/modifier injection; retain accurate existing titles; rewrite only when materially vague/inaccurate/misleading/verbose; no URL changes from title normalization; overlapping Articles handled separately by DEC-119. |
+| DEC-014 | Academy course/lesson title/H1 conventions | DISCUSSING | course + 37 lesson dossiers | Keep instructional clarity; decide brand suffix/template behavior |
 
 # Session 3 — Meta descriptions and visible content
 
