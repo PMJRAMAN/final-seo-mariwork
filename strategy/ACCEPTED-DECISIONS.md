@@ -376,3 +376,17 @@ Rules:
 - Course page is a concise educational hub for scope, video-learning format and Lesson navigation.
 - No generic long SEO copy or mandatory filler modules.
 - Overlap/cannibalization remains governed by DEC-119.
+
+
+## DEC-025 — Durable Product Category Set and Index / Sitemap Policy
+
+**Status:** ACCEPTED
+
+- Durable Product Categories: 1902 Fabric Colors, 28 Mediums/Glitters, 82 Sets root, 220 Tools/Accessories, and 1991/1992/1993 for 30/60/250 ml Sets.
+- Durable categories target: 200, index/follow, self-canonical, Product Category sitemap inclusion and crawlable internal navigation.
+- Parent Sets category may remain durable with zero direct assignments because it has a genuine child-category hub role.
+- Low Product count alone does not disqualify a Category; genuine browse value is required.
+- Historical categories 20 (60 ml colors) and 27 (250 ml colors) are not durable.
+- Remove 20/27 from SEO architecture/navigation/sitemap, preserve migration evidence, redirect/consolidate their historical URLs to the verified Fabric Colors Category, then delete the obsolete category terms after confirming no operational dependency.
+- Do not delete the legacy terms before URL disposition is secured.
+- `pa_volume` remains separate under DEC-026.
