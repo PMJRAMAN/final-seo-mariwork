@@ -407,13 +407,14 @@ Rules:
 
 ## DEC-027 — Product Tags Decommission and Historical URL Mapping Policy
 
-**Status:** ACCEPTED
+**Status:** ACCEPTED — AMENDED 2026-09-25
 
 - Delete/decommission all 275 current Product Tag terms; they have zero current Product assignments.
 - Product Tag archives are not durable SEO/navigation entities and stay out of sitemap/index targets.
-- Permanent redirect only when a genuine semantic successor exists.
-- Valid successor may be a Product, Product Category, Academy Lesson, Magazine Article, Static page, or other durable page when genuinely equivalent.
-- Do not redirect by slug/keyword similarity and do not mass-redirect to Homepage/Shop/broad unrelated categories.
-- If no meaningful replacement exists, return a proper 404 or 410; standard 404 is the default unless deliberate 410 is operationally useful.
+- Permanent redirect only when a genuine semantic successor exists inside the commerce/store architecture.
+- Allowed destinations: Product, Product Category, approved `pa_volume` landing page, or exceptionally Shop when it is genuinely the closest valid commercial replacement.
+- Do not redirect Product Tags to Magazine, Academy, Static pages, Homepage, or unrelated broad destinations.
+- Do not map by slug/keyword similarity and do not mass-redirect retired tags merely to avoid 404 responses.
+- If no meaningful commerce replacement exists, return a proper 404 or 410; standard 404 is the default unless deliberate 410 is operationally useful.
 - Preserve relevant historical evidence before deletion.
 - Remove internal remnants and QA redirects for chains/soft 404s.
