@@ -1,0 +1,12 @@
+[
+  {
+    "artifact_id": "QUERY-MAP",
+    "category": "FOUNDATION_STRATEGY",
+    "source_file": "strategy/QUERY-MAP.md"
+  },
+  {
+    "artifact_id": "CONTENT-ARCHITECTURE",
+    "category": "FOUNDATION_STRATEGY",
+    "source_file": "strategy/CONTENT-ARCHITECTURE.md"
+  }
+]

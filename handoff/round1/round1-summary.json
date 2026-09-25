@@ -15,6 +15,19 @@
     "static": 10
   },
   "finding_count": 324,
+  "foundation_strategy_artifact_count": 2,
+  "foundation_strategy_artifacts": [
+    {
+      "artifact_id": "QUERY-MAP",
+      "category": "FOUNDATION_STRATEGY",
+      "source_file": "strategy/QUERY-MAP.md"
+    },
+    {
+      "artifact_id": "CONTENT-ARCHITECTURE",
+      "category": "FOUNDATION_STRATEGY",
+      "source_file": "strategy/CONTENT-ARCHITECTURE.md"
+    }
+  ],
   "indexed_model_entities": 167,
   "malformed_dossiers": 0,
   "missing_dossiers": 0,
@@ -32,7 +45,7 @@
   "sitewide_audit_count": 9,
   "source_evidence_summary": "data/normalized/round1-evidence-summary.json",
   "source_foundation_context": "data/normalized/round1-foundation-context.json",
-  "source_head": "7ca04b5f0001ed5b9295353200dc805f3b63d1bc",
+  "source_head": "01b91a5a3a41bf7df45bd8fb5e35252beabeb61f",
   "type_counts": {
     "archive": 2,
     "page": 11,

@@ -232,6 +232,15 @@ def sitewide_index():
     return records
 
 
+def strategy_index():
+    """Expose the existing Foundation strategy artifacts without rewriting them."""
+    paths = [ROOT / "strategy/QUERY-MAP.md", ROOT / "strategy/CONTENT-ARCHITECTURE.md"]
+    return [
+        {"artifact_id": path.stem, "source_file": str(path.relative_to(ROOT)), "category": "FOUNDATION_STRATEGY"}
+        for path in paths if path.exists()
+    ]
+
+
 def main():
     inv = inventory()
     ev = evidence_map()
@@ -327,11 +336,13 @@ def main():
     csv_write(OUT / "round1-findings.csv", findings, finding_fields)
     csv_write(OUT / "round1-repeated-findings.csv", repeated_rows, repeated_fields)
     sitewide = sitewide_index()
-    summary = {"source_head": git_head(), "round1_complete": True, "expected_model_entities": EXPECTED, "indexed_model_entities": len(entity_rows), "missing_dossiers": len(missing), "malformed_dossiers": len(malformed), "duplicate_entity_ids": 0, "blocked_entities": 0, "model_remaining": 0, "workflow_status_counts": dict(Counter(x["workflow_status"] for x in entity_rows)), "type_counts": dict(Counter(x["type"] for x in entity_rows)), "family_counts": dict(Counter(x["family"] for x in entity_rows)), "review_group_counts": dict(Counter(x["review_group"] for x in entity_rows)), "finding_count": len(findings), "repeated_finding_candidate_count": len(repeated_rows), "sitewide_audit_count": len(sitewide), "source_evidence_summary": "data/normalized/round1-evidence-summary.json", "source_foundation_context": "data/normalized/round1-foundation-context.json"}
+    strategies = strategy_index()
+    summary = {"source_head": git_head(), "round1_complete": True, "expected_model_entities": EXPECTED, "indexed_model_entities": len(entity_rows), "missing_dossiers": len(missing), "malformed_dossiers": len(malformed), "duplicate_entity_ids": 0, "blocked_entities": 0, "model_remaining": 0, "workflow_status_counts": dict(Counter(x["workflow_status"] for x in entity_rows)), "type_counts": dict(Counter(x["type"] for x in entity_rows)), "family_counts": dict(Counter(x["family"] for x in entity_rows)), "review_group_counts": dict(Counter(x["review_group"] for x in entity_rows)), "finding_count": len(findings), "repeated_finding_candidate_count": len(repeated_rows), "sitewide_audit_count": len(sitewide), "foundation_strategy_artifact_count": len(strategies), "foundation_strategy_artifacts": strategies, "source_evidence_summary": "data/normalized/round1-evidence-summary.json", "source_foundation_context": "data/normalized/round1-foundation-context.json"}
     (OUT / "round1-review-index.json").write_text(json.dumps(entity_rows, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (OUT / "round1-findings.json").write_text(json.dumps(findings, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (OUT / "round1-repeated-findings.json").write_text(json.dumps(repeated_rows, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (OUT / "round1-sitewide-index.json").write_text(json.dumps(sitewide, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (OUT / "round1-foundation-strategy-index.json").write_text(json.dumps(strategies, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     (OUT / "round1-summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     top = sorted(entity_rows, key=lambda x: (-number(x.get("historical_impressions")), -number(x.get("historical_clicks")), x["entity_id"]))[:10]
     lines = ["# Mariwork SEO — Round 1 Handoff", "", "## Baseline", f"- Source HEAD: `{summary['source_head']}`", "- Generation is deterministic and timestamp-free; reruns from identical inputs are byte-stable.", "- Framework version: 1.0; dossier schema: 1.0.", "- Round-1 completion: 167/167 model-reviewed entities; page queue complete.", "", "## Integrity", f"- Expected/indexed entities: {EXPECTED}/{len(entity_rows)}", f"- Missing/malformed dossiers: {len(missing)}/{len(malformed)}", f"- CODEX_AUDITED or later: {sum(x['workflow_status'] in AUDITED for x in entity_rows)}", "- Blocked entities: 0", f"- NOT_DECIDED: {sum(x['final_disposition'] == 'NOT_DECIDED' for x in entity_rows)}", "", "## Entity Breakdown"]
@@ -342,6 +353,8 @@ def main():
     for row in repeated_rows[:15]: lines.append(f"- `{row['group_id']}` — {row['occurrence_count']} occurrences ({row['signature_type']}); families={row['families']}")
     lines += ["", "## Sitewide/Foundation Work"]
     for item in sitewide: lines.append(f"- `{item['audit_id']}` — {item['title']} — `{item['source_file']}`")
+    lines += ["", "## Foundation Strategy Artifacts"]
+    for item in strategies: lines.append(f"- `{item['artifact_id']}` — `{item['source_file']}`")
     lines += ["", "## Second Review Order", "1. Sitewide/Foundation index and systemic findings.", "2. Store/shop entities, then remaining review groups in `round1-review-index.csv` order.", "3. Page-specific findings in `round1-findings.csv`; original dossier paths are retained.", "", "Final dispositions remain `NOT_DECIDED` until independent human Second Review and approval. No Production implementation is authorized by this handoff."]
     (OUT / "ROUND1-HANDOFF.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     (OUT / "SECOND-REVIEW-START-HERE.md").write_text("\n".join(["# Second Review — Start Here", "", "Authoritative inputs are the 167 page dossiers under `pages/`, the sitewide audits under `audits/sitewide/`, `registry/URL-INVENTORY.csv`, and the deterministic indexes in this directory.", f"The handoff contains {len(entity_rows)} entities and {len(findings)} existing findings; repeated candidates are in `round1-repeated-findings.csv`.", "Review sitewide findings first, then Store/shop, then the remaining groups in `round1-review-index.csv` order.", "Round-1 findings are Codex findings awaiting independent Second Review; `final_disposition` remains `NOT_DECIDED` until human approval.", "GSC `Pages.csv` and `Queries.csv` are separate aggregations and must not be treated as page-query joined data.", "This handoff adds no SEO analysis, recommendations, or Production changes.", ""]) , encoding="utf-8")

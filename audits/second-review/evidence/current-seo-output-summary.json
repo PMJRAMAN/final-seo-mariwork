@@ -1,0 +1,137 @@
+{
+  "entities_checked": 167,
+  "errors": 5,
+  "generated_at": "2026-09-25T01:32:29+03:30",
+  "round1_parser_discrepancy": true,
+  "schema_family_summary": {
+    "academy": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 2,
+      "parse_errors": 0,
+      "schema_types": [
+        "CollectionPage",
+        "Organization",
+        "WebSite"
+      ],
+      "with_jsonld": 2,
+      "without_jsonld": 0
+    },
+    "articles": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 12,
+      "parse_errors": 0,
+      "schema_types": [
+        "BlogPosting",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebPage",
+        "WebSite"
+      ],
+      "with_jsonld": 12,
+      "without_jsonld": 0
+    },
+    "category": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 12,
+      "parse_errors": 0,
+      "schema_types": [
+        "CollectionPage",
+        "Organization",
+        "WebSite"
+      ],
+      "with_jsonld": 11,
+      "without_jsonld": 1
+    },
+    "education": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 37,
+      "parse_errors": 0,
+      "schema_types": [],
+      "with_jsonld": 37,
+      "without_jsonld": 0
+    },
+    "homepage": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 1,
+      "parse_errors": 0,
+      "schema_types": [
+        "ImageObject",
+        "Organization",
+        "SearchAction",
+        "WebPage",
+        "WebSite"
+      ],
+      "with_jsonld": 1,
+      "without_jsonld": 0
+    },
+    "ld_course_category": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 2,
+      "parse_errors": 0,
+      "schema_types": [],
+      "with_jsonld": 0,
+      "without_jsonld": 2
+    },
+    "product_cat": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 7,
+      "parse_errors": 0,
+      "schema_types": [
+        "BreadcrumbList",
+        "CollectionPage",
+        "ListItem",
+        "Organization",
+        "WebSite"
+      ],
+      "with_jsonld": 7,
+      "without_jsonld": 0
+    },
+    "products": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 83,
+      "parse_errors": 0,
+      "schema_types": [
+        "AggregateOffer",
+        "ImageObject",
+        "ItemPage",
+        "Offer",
+        "Organization",
+        "Product",
+        "QuantitativeValue",
+        "WebSite"
+      ],
+      "with_jsonld": 83,
+      "without_jsonld": 0
+    },
+    "shop": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 1,
+      "parse_errors": 0,
+      "schema_types": [
+        "CollectionPage",
+        "Organization",
+        "WebSite"
+      ],
+      "with_jsonld": 1,
+      "without_jsonld": 0
+    },
+    "static": {
+      "duplicate_jsonld_pages": 0,
+      "pages_checked": 10,
+      "parse_errors": 0,
+      "schema_types": [
+        "Article",
+        "CollectionPage",
+        "ImageObject",
+        "Organization",
+        "Person",
+        "WebPage",
+        "WebSite"
+      ],
+      "with_jsonld": 8,
+      "without_jsonld": 2
+    }
+  },
+  "source": "handoff/round1/round1-review-index.json"
+}

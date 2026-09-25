@@ -1,0 +1,98 @@
+[
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "Production Rank Math/configuration inaccessible in Round-1",
+    "finding_id": "SYS-001",
+    "new_evidence_obtained": "seo-ownership-matrix.json; public output matrix",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "PARTIALLY_READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "migration/value review remains",
+    "finding_id": "SYS-002",
+    "new_evidence_obtained": "sitemap-membership.json and ownership settings",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "PARTIALLY_READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "source-level disposition remains",
+    "finding_id": "SYS-003",
+    "new_evidence_obtained": "current output matrix and GSC summary",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "PARTIALLY_READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "Round-1 parser returned empty schema types",
+    "finding_id": "SYS-004",
+    "new_evidence_obtained": "current-seo-output-summary.json; 162/167 JSON-LD",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "parameter/facet policy evidence incomplete",
+    "finding_id": "SYS-005",
+    "new_evidence_obtained": "current output and sitemap walk only",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "STILL_BLOCKED"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "duplicate-owner runtime reconciliation incomplete",
+    "finding_id": "SYS-006",
+    "new_evidence_obtained": "ownership matrix and public output",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "PARTIALLY_READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "no joined Page+Query dataset",
+    "finding_id": "SYS-007",
+    "new_evidence_obtained": "PAGE_QUERY_DATASET=NOT_AVAILABLE",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "STILL_BLOCKED"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "independent link/title review pending",
+    "finding_id": "SYS-008",
+    "new_evidence_obtained": "handoff family ordering and output matrix",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "PARTIALLY_READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "category membership and policy unresolved",
+    "finding_id": "SYS-009",
+    "new_evidence_obtained": "sitemap membership plus tax sitemap settings",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "image-level article ALT review pending",
+    "finding_id": "SYS-010",
+    "new_evidence_obtained": "existing Round-1 findings only",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "PARTIALLY_READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "image-level academy ALT review pending",
+    "finding_id": "SYS-011",
+    "new_evidence_obtained": "existing Round-1 findings only",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "PARTIALLY_READY"
+  },
+  {
+    "current_status": "SEE registry/SYSTEMIC-FINDINGS.md",
+    "evidence_gap_before": "full blog-category lifecycle evidence pending",
+    "finding_id": "SYS-012",
+    "new_evidence_obtained": "sitemap walk and current category fetches",
+    "remaining_gap": "Independent Second Review and/or additional scoped evidence remains; no finding disposition made.",
+    "second_review_readiness": "PARTIALLY_READY"
+  }
+]

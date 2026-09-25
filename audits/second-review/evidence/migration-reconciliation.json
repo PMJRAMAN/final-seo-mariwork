@@ -1,0 +1,29 @@
+{
+  "labels": [
+    "CURRENT_VERIFIED",
+    "HISTORICAL_PRE_MIGRATION",
+    "TRANSITIONAL",
+    "STALE_INVALID_ASSUMPTION",
+    "UNKNOWN_NEEDS_VERIFICATION"
+  ],
+  "product_volume_architecture": {
+    "facts": [
+      "Product/volume modeling changed materially during migration.",
+      "30ml was introduced in the newer architecture.",
+      "Historical 60ml/250ml URLs must be reconciled against current parent/variation structure.",
+      "A redirect proves transport only and does not prove historical entity equivalence."
+    ],
+    "handling": "Preserve historical GSC metrics on original URLs and flag legacy interpretations that depend on pre-migration entity equivalence.",
+    "status": "TRANSITIONAL"
+  },
+  "source": "project-owner migration addendum supplied for SR-001 interpretation",
+  "yoast_to_rank_math": {
+    "facts": [
+      "Yoast was the previous SEO owner.",
+      "Yoast metadata/configuration was intentionally not migrated into Rank Math.",
+      "Rank Math is the intended current SEO owner where its capability is appropriate."
+    ],
+    "handling": "Do not classify missing current Rank Math fields as failed Yoast migration or recommend restoring old Yoast values solely because they existed.",
+    "status": "HISTORICAL_PRE_MIGRATION"
+  }
+}

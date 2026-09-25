@@ -1,0 +1,1805 @@
+{
+  "attribute_terms": [
+    {
+      "name": "ماری ورک | Mariwork",
+      "slug": "%d9%85%d8%a7%d8%b1%db%8c-%d9%88%d8%b1%da%a9-mariwork",
+      "taxonomy": "pa_brand",
+      "term_id": 1844
+    },
+    {
+      "name": "Beige",
+      "slug": "beige",
+      "taxonomy": "pa_color",
+      "term_id": 23
+    },
+    {
+      "name": "Black",
+      "slug": "black",
+      "taxonomy": "pa_color",
+      "term_id": 25
+    },
+    {
+      "name": "Brown",
+      "slug": "brown",
+      "taxonomy": "pa_color",
+      "term_id": 26
+    },
+    {
+      "name": "30 میل",
+      "slug": "30ml",
+      "taxonomy": "pa_volume",
+      "term_id": 1906
+    },
+    {
+      "name": "60 میل",
+      "slug": "60ml",
+      "taxonomy": "pa_volume",
+      "term_id": 1907
+    },
+    {
+      "name": "250 میل",
+      "slug": "250ml",
+      "taxonomy": "pa_volume",
+      "term_id": 1908
+    }
+  ],
+  "bundle_component_product_ids": "NOT_AVAILABLE_FROM_SAFE_AGGREGATE_QUERY",
+  "bundle_set_parent_ids": [
+    12597,
+    12602,
+    12605,
+    12608,
+    14465,
+    14466,
+    14471,
+    17265,
+    25397,
+    27396,
+    28610,
+    28623,
+    28627,
+    33318,
+    33319,
+    33320,
+    33322,
+    33323,
+    33324,
+    33325,
+    33326,
+    33327
+  ],
+  "post_status_counts": [
+    {
+      "count": "84",
+      "post_status": "publish",
+      "post_type": "product"
+    },
+    {
+      "count": "21",
+      "post_status": "trash",
+      "post_type": "product"
+    },
+    {
+      "count": "3",
+      "post_status": "private",
+      "post_type": "product_variation"
+    },
+    {
+      "count": "131",
+      "post_status": "publish",
+      "post_type": "product_variation"
+    },
+    {
+      "count": "6",
+      "post_status": "trash",
+      "post_type": "product_variation"
+    },
+    {
+      "count": "1",
+      "post_status": "publish",
+      "post_type": "sfwd-courses"
+    },
+    {
+      "count": "1",
+      "post_status": "draft",
+      "post_type": "sfwd-lessons"
+    },
+    {
+      "count": "37",
+      "post_status": "publish",
+      "post_type": "sfwd-lessons"
+    },
+    {
+      "count": "20",
+      "post_status": "trash",
+      "post_type": "sfwd-lessons"
+    }
+  ],
+  "product_taxonomy_assignments": [
+    {
+      "product_id": 12009,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12009,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12471,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12471,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12475,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12475,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12479,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12479,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12484,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12484,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12488,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12488,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12492,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12492,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12498,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12498,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12502,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12502,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12506,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12506,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12511,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12511,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12516,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12516,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12520,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12520,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12524,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12524,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12528,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12528,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12532,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12532,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12536,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12536,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12541,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml",
+        "1908:250ml"
+      ]
+    },
+    {
+      "product_id": 12541,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12544,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12544,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12548,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12548,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 12581,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12581,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 12585,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12585,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 12588,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12588,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 12591,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12591,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 12594,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 12594,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 12597,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 12602,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 12605,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 12608,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 14446,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 14446,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 14448,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 14448,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 14449,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 14449,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 14450,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 14450,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 14465,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 14466,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 14471,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 17265,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1993:fabric-color-set-250-ml"
+      ]
+    },
+    {
+      "product_id": 23912,
+      "taxonomy": "product_cat",
+      "terms": [
+        "220:accessories"
+      ]
+    },
+    {
+      "product_id": 24043,
+      "taxonomy": "product_cat",
+      "terms": [
+        "220:accessories"
+      ]
+    },
+    {
+      "product_id": 24183,
+      "taxonomy": "product_cat",
+      "terms": [
+        "220:accessories"
+      ]
+    },
+    {
+      "product_id": 24252,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 24252,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 25397,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 27025,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27025,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27034,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27034,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27037,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27037,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27039,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27039,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27041,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27041,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27043,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27043,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27046,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27046,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27051,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27051,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27054,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27054,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27142,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27142,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27149,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27149,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27328,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27328,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27333,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27333,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27369,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27369,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 27378,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27378,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27384,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27384,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27386,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27386,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27396,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 27506,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27506,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27512,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27512,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27621,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27621,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27680,
+      "taxonomy": "product_cat",
+      "terms": [
+        "220:accessories"
+      ]
+    },
+    {
+      "product_id": 27727,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27893,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27893,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27901,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 27901,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 27903,
+      "taxonomy": "product_cat",
+      "terms": [
+        "220:accessories"
+      ]
+    },
+    {
+      "product_id": 28232,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 28232,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 28239,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 28239,
+      "taxonomy": "product_cat",
+      "terms": [
+        "28:fabric-printing-medium"
+      ]
+    },
+    {
+      "product_id": 28242,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 28242,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 28244,
+      "taxonomy": "pa_volume",
+      "terms": [
+        "1906:30ml",
+        "1907:60ml"
+      ]
+    },
+    {
+      "product_id": 28244,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1902:fabric-colors"
+      ]
+    },
+    {
+      "product_id": 28610,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 28623,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 28627,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1992:fabric-color-set-60-ml"
+      ]
+    },
+    {
+      "product_id": 33318,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 33319,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 33320,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 33322,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 33323,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 33324,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 33325,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 33326,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    },
+    {
+      "product_id": 33327,
+      "taxonomy": "product_cat",
+      "terms": [
+        "1991:fabric-color-set-30-ml"
+      ]
+    }
+  ],
+  "product_type_counts": {
+    "simple": 2,
+    "variable": 60,
+    "yith_bundle": 22
+  },
+  "public_post_types": [
+    {
+      "has_archive": false,
+      "name": "attachment",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "ct_content_block",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "custom_css",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "customize_changeset",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": true,
+      "name": "groups",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "gspbstylebook",
+      "public": true,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "ld-coupon",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "ld-exam",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "ld-notification",
+      "public": false,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": true,
+      "name": "mariwork_artist",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "nav_menu_item",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "oembed_cache",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "page",
+      "public": true,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "post",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": true,
+      "name": "product",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "product_variation",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "revision",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "rm_content_editor",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "sfwd-assignment",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "sfwd-certificates",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": true,
+      "name": "sfwd-courses",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "sfwd-essays",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "sfwd-lessons",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "sfwd-question",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "sfwd-quiz",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "sfwd-topic",
+      "public": true,
+      "publicly_queryable": true
+    },
+    {
+      "has_archive": false,
+      "name": "shop_coupon",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "shop_order",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "shop_order_placehold",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "shop_order_refund",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "user_request",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "wp_block",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "wp_font_face",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "wp_font_family",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "wp_global_styles",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "wp_navigation",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "wp_template",
+      "public": false,
+      "publicly_queryable": false
+    },
+    {
+      "has_archive": false,
+      "name": "wp_template_part",
+      "public": false,
+      "publicly_queryable": false
+    }
+  ],
+  "public_taxonomies": [
+    {
+      "name": "category",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "ld_course_category",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "ld_course_tag",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "ld_group_category",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "ld_group_tag",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "ld_lesson_category",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "ld_lesson_tag",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "ld_topic_category",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "ld_topic_tag",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "link_category",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": true
+    },
+    {
+      "name": "nav_menu",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": false
+    },
+    {
+      "name": "pa_brand",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": true
+    },
+    {
+      "name": "pa_color",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": true
+    },
+    {
+      "name": "pa_volume",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "pos_product_visibility",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": false
+    },
+    {
+      "name": "post_format",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": false
+    },
+    {
+      "name": "post_tag",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "product_brand",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "product_cat",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "product_shipping_class",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": false
+    },
+    {
+      "name": "product_tag",
+      "public": true,
+      "publicly_queryable": true,
+      "show_ui": true
+    },
+    {
+      "name": "product_type",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": false
+    },
+    {
+      "name": "product_visibility",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": false
+    },
+    {
+      "name": "wp_pattern_category",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": true
+    },
+    {
+      "name": "wp_template_part_area",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": false
+    },
+    {
+      "name": "wp_theme",
+      "public": false,
+      "publicly_queryable": false,
+      "show_ui": false
+    }
+  ],
+  "published_product_count": 84,
+  "source": "read-only WP-CLI SQL and registration inspection",
+  "variable_parent_count": 60,
+  "variation_parent_counts": [
+    {
+      "count": 3,
+      "parent_id": 12009
+    },
+    {
+      "count": 2,
+      "parent_id": 12471
+    },
+    {
+      "count": 3,
+      "parent_id": 12475
+    },
+    {
+      "count": 3,
+      "parent_id": 12479
+    },
+    {
+      "count": 3,
+      "parent_id": 12484
+    },
+    {
+      "count": 2,
+      "parent_id": 12488
+    },
+    {
+      "count": 3,
+      "parent_id": 12492
+    },
+    {
+      "count": 2,
+      "parent_id": 12498
+    },
+    {
+      "count": 2,
+      "parent_id": 12502
+    },
+    {
+      "count": 2,
+      "parent_id": 12506
+    },
+    {
+      "count": 3,
+      "parent_id": 12511
+    },
+    {
+      "count": 2,
+      "parent_id": 12516
+    },
+    {
+      "count": 3,
+      "parent_id": 12520
+    },
+    {
+      "count": 3,
+      "parent_id": 12524
+    },
+    {
+      "count": 3,
+      "parent_id": 12528
+    },
+    {
+      "count": 2,
+      "parent_id": 12532
+    },
+    {
+      "count": 3,
+      "parent_id": 12536
+    },
+    {
+      "count": 3,
+      "parent_id": 12541
+    },
+    {
+      "count": 2,
+      "parent_id": 12544
+    },
+    {
+      "count": 2,
+      "parent_id": 12548
+    },
+    {
+      "count": 2,
+      "parent_id": 12581
+    },
+    {
+      "count": 2,
+      "parent_id": 12585
+    },
+    {
+      "count": 2,
+      "parent_id": 12588
+    },
+    {
+      "count": 2,
+      "parent_id": 12591
+    },
+    {
+      "count": 2,
+      "parent_id": 12594
+    },
+    {
+      "count": 2,
+      "parent_id": 14446
+    },
+    {
+      "count": 2,
+      "parent_id": 14448
+    },
+    {
+      "count": 2,
+      "parent_id": 14449
+    },
+    {
+      "count": 2,
+      "parent_id": 14450
+    },
+    {
+      "count": 2,
+      "parent_id": 23912
+    },
+    {
+      "count": 4,
+      "parent_id": 24183
+    },
+    {
+      "count": 2,
+      "parent_id": 24252
+    },
+    {
+      "count": 2,
+      "parent_id": 27025
+    },
+    {
+      "count": 2,
+      "parent_id": 27034
+    },
+    {
+      "count": 2,
+      "parent_id": 27037
+    },
+    {
+      "count": 2,
+      "parent_id": 27039
+    },
+    {
+      "count": 2,
+      "parent_id": 27041
+    },
+    {
+      "count": 2,
+      "parent_id": 27043
+    },
+    {
+      "count": 2,
+      "parent_id": 27046
+    },
+    {
+      "count": 2,
+      "parent_id": 27051
+    },
+    {
+      "count": 2,
+      "parent_id": 27054
+    },
+    {
+      "count": 2,
+      "parent_id": 27142
+    },
+    {
+      "count": 2,
+      "parent_id": 27149
+    },
+    {
+      "count": 2,
+      "parent_id": 27328
+    },
+    {
+      "count": 2,
+      "parent_id": 27333
+    },
+    {
+      "count": 2,
+      "parent_id": 27369
+    },
+    {
+      "count": 2,
+      "parent_id": 27378
+    },
+    {
+      "count": 2,
+      "parent_id": 27384
+    },
+    {
+      "count": 2,
+      "parent_id": 27386
+    },
+    {
+      "count": 2,
+      "parent_id": 27506
+    },
+    {
+      "count": 2,
+      "parent_id": 27512
+    },
+    {
+      "count": 2,
+      "parent_id": 27621
+    },
+    {
+      "count": 3,
+      "parent_id": 27680
+    },
+    {
+      "count": 2,
+      "parent_id": 27893
+    },
+    {
+      "count": 2,
+      "parent_id": 27901
+    },
+    {
+      "count": 2,
+      "parent_id": 27903
+    },
+    {
+      "count": 2,
+      "parent_id": 28232
+    },
+    {
+      "count": 2,
+      "parent_id": 28239
+    },
+    {
+      "count": 2,
+      "parent_id": 28242
+    },
+    {
+      "count": 2,
+      "parent_id": 28244
+    }
+  ]
+}

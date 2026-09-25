@@ -1,7 +1,7 @@
 # Mariwork SEO — Round 1 Handoff
 
 ## Baseline
-- Source HEAD: `7ca04b5f0001ed5b9295353200dc805f3b63d1bc`
+- Source HEAD: `01b91a5a3a41bf7df45bd8fb5e35252beabeb61f`
 - Generation is deterministic and timestamp-free; reruns from identical inputs are byte-stable.
 - Framework version: 1.0; dossier schema: 1.0.
 - Round-1 completion: 167/167 model-reviewed entities; page queue complete.
@@ -66,6 +66,10 @@ These are grouping aids, not Second Review conclusions.
 - `A-016` — GSC baseline — `audits/sitewide/A-016-gsc-baseline.md`
 - `A-017` — Page+Query evidence — `audits/sitewide/A-017-page-query.md`
 - `A-020` — Systemic Findings Bootstrap — `audits/sitewide/A-020-systemic-findings-bootstrap.md`
+
+## Foundation Strategy Artifacts
+- `QUERY-MAP` — `strategy/QUERY-MAP.md`
+- `CONTENT-ARCHITECTURE` — `strategy/CONTENT-ARCHITECTURE.md`
 
 ## Second Review Order
 1. Sitewide/Foundation index and systemic findings.

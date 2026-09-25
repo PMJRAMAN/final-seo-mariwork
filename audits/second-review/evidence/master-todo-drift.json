@@ -1,0 +1,30 @@
+{
+  "findings": [
+    {
+      "checkbox_checked": false,
+      "evidence": "batches/BATCH-001.md exists",
+      "machine_reconciliation": "appears complete by A-021/BATCH-001",
+      "task": "B1-001"
+    },
+    {
+      "checkbox_checked": false,
+      "evidence": "167 Round-1 dossiers are CODEX_AUDITED",
+      "machine_reconciliation": "appears complete for the five pilot pages and broader queue",
+      "task": "B1-002"
+    },
+    {
+      "checkbox_checked": false,
+      "evidence": "no SECOND_REVIEWED statuses; Second Review artifacts are pending",
+      "machine_reconciliation": "NOT completed",
+      "task": "B1-003"
+    },
+    {
+      "checkbox_checked": false,
+      "evidence": "no implementation/approval artifact",
+      "machine_reconciliation": "NOT completed",
+      "task": "B1-007"
+    }
+  ],
+  "instruction": "Report only; MASTER-TODO was not modified.",
+  "source": "MASTER-TODO.md and existing Round-1 artifacts"
+}
