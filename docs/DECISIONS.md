@@ -1112,3 +1112,60 @@ Where technically reliable, Product links from a volume landing page should pres
 Low relative Product count alone does not disqualify the 250 ml page while it retains genuine distinct browse value.
 
 Title/H1 policy is governed by DEC-116; visible landing content by DEC-117; parameter/facet handling remains separate.
+
+
+## DEC-027 — Product Tags Decommission and Historical URL Mapping Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT TAG / DECOMMISSION / REDIRECT / REMOVAL
+
+### Accepted target state
+
+The current WooCommerce Product Tag family is not part of Mariwork's durable SEO, navigation, or Product-discovery architecture.
+
+Current evidence shows 275 Product Tag terms with zero Product assignments.
+
+All current Product Tag terms are approved for controlled decommission and deletion.
+
+Rules:
+- Do not optimize, index, content-expand, or include Product Tag archives in XML sitemaps.
+- Do not use Product Tags as a future Mariwork SEO/navigation landing-page system.
+- Preserve relevant historical Search/backlink/migration evidence before term deletion.
+- Establish URL disposition before deleting terms where historical URLs matter.
+
+### Redirect rule
+
+Use a permanent redirect only when a genuine semantic successor or equivalent destination exists.
+
+A valid destination may be:
+- a Product;
+- a Product Category;
+- an Academy Lesson;
+- a Magazine Article;
+- a Static/support page;
+- or another durable page that genuinely replaces the retired tag's meaning.
+
+Do not infer mappings from keyword or slug similarity alone.
+
+Do not mass-redirect retired tags to the Homepage, Shop, or a broad unrelated Category merely to avoid 404 responses.
+
+### No-replacement rule
+
+When no meaningful replacement exists, the retired URL should return a proper HTTP `404` or `410`.
+
+Google accepts both for content that has been removed without a replacement. Mariwork does not require a special SEO preference between them; standard 404 is the default implementation unless a deliberate 410 is operationally useful.
+
+### Execution order
+
+1. freeze/export the Product Tag term + URL inventory;
+2. preserve relevant historical evidence;
+3. create only verified semantic redirect mappings;
+4. remove remaining internal references;
+5. establish approved redirects independently of term existence;
+6. delete obsolete Product Tag terms;
+7. allow unmapped retired URLs to return proper 404/410;
+8. run crawl/regression QA for redirect chains, soft 404s, sitemap leakage and internal-link remnants.
+
+The underlying WooCommerce `product_tag` capability does not need to be removed from WooCommerce core; it may remain unused.
+
+Blog Tags remain a separate lifecycle domain because they still have assigned Article relationships.
