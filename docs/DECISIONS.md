@@ -2212,3 +2212,24 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - DEC-050 does not authorize implementation or page reassignment by itself.
 - Ambiguous topics remain unresolved until the relevant research and ownership decisions are completed.
 - Later page-ownership work must preserve this role boundary unless a formally accepted decision changes it.
+
+
+## DEC-051 — Magazine Hub and Blog Category Hierarchy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** CONTENT ARCHITECTURE / MAGAZINE / NAVIGATION
+
+### Accepted target state
+
+- `/mag/` is the primary Magazine hub and discovery surface for Mariwork editorial content.
+- The Magazine hub provides structured access to Magazine categories and their content.
+- The hub may use category blocks, archive/list sections, latest-content modules, or other deliberate discovery components.
+- Magazine categories form the navigational and content hierarchy beneath the Magazine hub.
+- The Magazine hub is not treated as an ordinary Article or an ordinary Category archive.
+- DEC-051 does not define the final Magazine category taxonomy, category names, or category-specific content strategy.
+- Final category taxonomy and category-specific content roles require separate content decisions.
+
+### Consequences
+
+- Magazine navigation and discovery should preserve `/mag/` as the central editorial hub.
+- Category architecture may evolve without changing the hub role established by this decision.
