@@ -1,0 +1,1106 @@
+{
+  "artifact": "P-004 canonical decision coverage matrix",
+  "generated_at": "2026-09-25",
+  "baseline": "strategy/DECISION-BACKLOG.md after P-003",
+  "production_writes": 0,
+  "verdict": "ZERO_UNEXPLAINED_MATERIAL_GAPS",
+  "decision_count": 120,
+  "rows": [
+    {
+      "id": "P4-001",
+      "domain": "PROCESS",
+      "topic": "Repository/source-of-truth and no direct audit→implementation",
+      "authority_type": "RULE",
+      "authority_ref": "SEO-002, SEO-019, M-25",
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "material_gap": false
+    },
+    {
+      "id": "P4-002",
+      "domain": "PROCESS",
+      "topic": "Page→Query attribution boundary",
+      "authority_type": "RULE",
+      "authority_ref": "SEO-004, M-05",
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "material_gap": false
+    },
+    {
+      "id": "P4-003",
+      "domain": "TECHNICAL",
+      "topic": "Preferred host/protocol/trailing slash/future URL normalization",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-078",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-004",
+      "domain": "TECHNICAL",
+      "topic": "Sitewide canonical/duplicate URL architecture",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-079",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-005",
+      "domain": "TECHNICAL",
+      "topic": "Robots/indexability by family",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-004, DEC-025–031, DEC-059–062, DEC-074–075, DEC-107–109",
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "material_gap": false
+    },
+    {
+      "id": "P4-006",
+      "domain": "TECHNICAL",
+      "topic": "Sitemap membership by family",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-025, DEC-026, DEC-028–031",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-007",
+      "domain": "TECHNICAL",
+      "topic": "Sitemap lastmod validation",
+      "authority_type": "QA",
+      "authority_ref": "I-006 / future regression",
+      "classification": "QA_ONLY",
+      "material_gap": false
+    },
+    {
+      "id": "P4-008",
+      "domain": "TECHNICAL",
+      "topic": "Facets/sort/display parameters",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-059",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-009",
+      "domain": "TECHNICAL",
+      "topic": "Pagination / legacy product-page",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-060",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-010",
+      "domain": "TECHNICAL",
+      "topic": "Product search URLs",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-061",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-011",
+      "domain": "TECHNICAL",
+      "topic": "General internal search URLs",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-108",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-012",
+      "domain": "TECHNICAL",
+      "topic": "Feed URLs",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-107",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-013",
+      "domain": "TECHNICAL",
+      "topic": "Attachment/media URL public/index policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-031",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-014",
+      "domain": "TECHNICAL",
+      "topic": "404/soft-404/error lifecycle",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-109",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-015",
+      "domain": "TECHNICAL",
+      "topic": "Redirect ownership / implementation path",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-067",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-016",
+      "domain": "TECHNICAL",
+      "topic": "Critical JS/AJAX content and crawlable links",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-080",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-017",
+      "domain": "TECHNICAL",
+      "topic": "Search crawler access Googlebot/OAI-SearchBot",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-110",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-018",
+      "domain": "TECHNICAL",
+      "topic": "Mobile/CWV/Page Experience",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-111",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-019",
+      "domain": "TECHNICAL",
+      "topic": "Concern-by-concern SEO technical ownership",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-112",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-020",
+      "domain": "HOMEPAGE",
+      "topic": "Role/title/H1/meta baseline",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-002",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-021",
+      "domain": "HOMEPAGE",
+      "topic": "Visible content/CTA",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-114",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-022",
+      "domain": "HOMEPAGE",
+      "topic": "Organization/WebSite/WebPage schema",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-032",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-023",
+      "domain": "STATIC",
+      "topic": "Static/Core title/H1",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-012",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-024",
+      "domain": "STATIC",
+      "topic": "Static/Core meta",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-017",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-025",
+      "domain": "STATIC",
+      "topic": "Static/trust visible content",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-022",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-026",
+      "domain": "STATIC",
+      "topic": "Static/Core schema",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-033",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-027",
+      "domain": "STATIC",
+      "topic": "FAQ content/schema boundary",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-086",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-028",
+      "domain": "STATIC",
+      "topic": "Stores/NAP/local trust",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-087",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-029",
+      "domain": "SYSTEM",
+      "topic": "Cart/Checkout transactional policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-004",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-030",
+      "domain": "SYSTEM",
+      "topic": "Login/My Account auth/account policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-074",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-031",
+      "domain": "SYSTEM",
+      "topic": "Fast Buy role",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-075",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-032",
+      "domain": "STORE",
+      "topic": "Shop role/H1/title relationship",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-003",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-033",
+      "domain": "STORE",
+      "topic": "Shop metadata",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-016",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-034",
+      "domain": "PRODUCT",
+      "topic": "Fabric-color title standard",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-007",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-035",
+      "domain": "PRODUCT",
+      "topic": "Set/bundle title standard",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-008",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-036",
+      "domain": "PRODUCT",
+      "topic": "Medium/additive title standard",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-009",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-037",
+      "domain": "PRODUCT",
+      "topic": "Tools/accessories title standard",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-010",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-038",
+      "domain": "PRODUCT",
+      "topic": "Visible Product title/H1 vs SEO title template",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-011",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-039",
+      "domain": "PRODUCT",
+      "topic": "Product meta description",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-015",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-040",
+      "domain": "PRODUCT",
+      "topic": "Product visible content architecture",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-020",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-041",
+      "domain": "PRODUCT",
+      "topic": "Product identity source SKU/GTIN/MPN/brand",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-081",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-042",
+      "domain": "PRODUCT",
+      "topic": "Product commercial facts price/currency/sale/availability",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-082",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-043",
+      "domain": "PRODUCT",
+      "topic": "Shipping/returns facts and structured/feed data",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-113",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-044",
+      "domain": "PRODUCT",
+      "topic": "Out-of-stock vs discontinued lifecycle",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-083",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-045",
+      "domain": "PRODUCT",
+      "topic": "Future Product URL/slug changes",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-084",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-046",
+      "domain": "PRODUCT",
+      "topic": "ProductGroup/variant schema",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-035",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-047",
+      "domain": "PRODUCT",
+      "topic": "Bundle/set schema",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-036",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-048",
+      "domain": "TAXONOMY",
+      "topic": "Durable vs transitional taxonomy architecture",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-006",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-049",
+      "domain": "TAXONOMY",
+      "topic": "Durable Product Category index/sitemap lifecycle",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-025",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-050",
+      "domain": "TAXONOMY",
+      "topic": "Product Category title/H1",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-115",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-051",
+      "domain": "TAXONOMY",
+      "topic": "Product Category metadata",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-076",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-052",
+      "domain": "TAXONOMY",
+      "topic": "Product Category visible intro/content",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-021",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-053",
+      "domain": "TAXONOMY",
+      "topic": "pa_volume index/sitemap role",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-026",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-054",
+      "domain": "TAXONOMY",
+      "topic": "pa_volume title/H1",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-116",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-055",
+      "domain": "TAXONOMY",
+      "topic": "pa_volume metadata",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-077",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-056",
+      "domain": "TAXONOMY",
+      "topic": "pa_volume visible content",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-117",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-057",
+      "domain": "TAXONOMY",
+      "topic": "Product Tags lifecycle",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-027",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-058",
+      "domain": "BLOG",
+      "topic": "Blog Categories lifecycle",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-028",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-059",
+      "domain": "BLOG",
+      "topic": "Durable Blog Category presentation/content",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-118",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-060",
+      "domain": "BLOG",
+      "topic": "Blog Tags lifecycle",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-029",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-061",
+      "domain": "ARTICLE",
+      "topic": "Article title/H1",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-013",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-062",
+      "domain": "ARTICLE",
+      "topic": "Article meta",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-018",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-063",
+      "domain": "ARTICLE",
+      "topic": "Article freshness/fact-check",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-023",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-064",
+      "domain": "ARTICLE",
+      "topic": "Article schema",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-034",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-065",
+      "domain": "EDITORIAL",
+      "topic": "Author/reviewer/date/source/citation provenance",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-085",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-066",
+      "domain": "EDITORIAL",
+      "topic": "Informational commercial CTA boundary",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-088",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-067",
+      "domain": "EDITORIAL",
+      "topic": "Article vs Academy role boundary",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-049",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-068",
+      "domain": "EDITORIAL",
+      "topic": "Product vs Category vs Article role boundary",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-050",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-069",
+      "domain": "EDITORIAL",
+      "topic": "Content overlap/cannibalization resolution",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-119",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-070",
+      "domain": "MAGAZINE",
+      "topic": "Magazine hub / Blog Category hierarchy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-051",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-071",
+      "domain": "ACADEMY",
+      "topic": "Course/lesson title/H1",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-014",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-072",
+      "domain": "ACADEMY",
+      "topic": "Course/lesson meta",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-019",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-073",
+      "domain": "ACADEMY",
+      "topic": "Course/lesson content standard",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-024",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-074",
+      "domain": "ACADEMY",
+      "topic": "LearnDash schema owner/canary",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-037",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-075",
+      "domain": "ACADEMY",
+      "topic": "LearnDash Course Category lifecycle",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-005",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-076",
+      "domain": "SCHEMA",
+      "topic": "Breadcrumb structured-data policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-039",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-077",
+      "domain": "INTERNAL_LINK",
+      "topic": "Link class model",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-040",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-078",
+      "domain": "INTERNAL_LINK",
+      "topic": "Mandatory parent/hub links",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-041",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-079",
+      "domain": "INTERNAL_LINK",
+      "topic": "Product→education links",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-042",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-080",
+      "domain": "INTERNAL_LINK",
+      "topic": "Academy→commerce links",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-043",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-081",
+      "domain": "INTERNAL_LINK",
+      "topic": "Article→commerce links",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-044",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-082",
+      "domain": "INTERNAL_LINK",
+      "topic": "Article→Article/Academy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-045",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-083",
+      "domain": "INTERNAL_LINK",
+      "topic": "Category→education links",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-046",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-084",
+      "domain": "INTERNAL_LINK",
+      "topic": "Anchor-text policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-047",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-085",
+      "domain": "INTERNAL_LINK",
+      "topic": "Orphan/underlinked exceptions",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-048",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-086",
+      "domain": "INTERNAL_LINK",
+      "topic": "Global header/footer/navigation architecture",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-120",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-087",
+      "domain": "IMAGE",
+      "topic": "ALT by image role",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-054",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-088",
+      "domain": "IMAGE",
+      "topic": "Product image/gallery family policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-056, DEC-090",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-089",
+      "domain": "IMAGE",
+      "topic": "Article/Academy instructional image policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-057",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-090",
+      "domain": "IMAGE",
+      "topic": "Filename/new-media naming",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-089",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-091",
+      "domain": "IMAGE",
+      "topic": "Context/caption/linked-image behavior",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-091",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-092",
+      "domain": "IMAGE",
+      "topic": "Discovery/indexability/sitemap",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-092",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-093",
+      "domain": "IMAGE",
+      "topic": "Technical delivery/performance interaction",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-093, DEC-111",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-094",
+      "domain": "IMAGE",
+      "topic": "Representative visual sampling",
+      "authority_type": "QA",
+      "authority_ref": "DEC-055 superseded; operational visual QA",
+      "classification": "EVIDENCE_COLLECTION_ONLY",
+      "material_gap": false
+    },
+    {
+      "id": "P4-095",
+      "domain": "VIDEO",
+      "topic": "VideoObject eligibility/ownership",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-038",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-096",
+      "domain": "VIDEO",
+      "topic": "Host/fetchability/prominence/player",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-094",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-097",
+      "domain": "VIDEO",
+      "topic": "Title/description/naming",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-095",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-098",
+      "domain": "VIDEO",
+      "topic": "Thumbnail",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-096",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-099",
+      "domain": "VIDEO",
+      "topic": "Transcript/summary/key text",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-097",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-100",
+      "domain": "VIDEO",
+      "topic": "Duplicate/orphan lifecycle",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-098",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-101",
+      "domain": "VIDEO",
+      "topic": "Video inventory",
+      "authority_type": "EVIDENCE",
+      "authority_ref": "MASTER-TODO M-001/M-002",
+      "classification": "EVIDENCE_COLLECTION_ONLY",
+      "material_gap": false
+    },
+    {
+      "id": "P4-102",
+      "domain": "BRAND",
+      "topic": "Canonical brand facts/naming",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-053",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-103",
+      "domain": "BRAND",
+      "topic": "Brand/trust site-content role",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-099",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-104",
+      "domain": "BRAND",
+      "topic": "Branded query/landing role",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-100",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-105",
+      "domain": "BRAND",
+      "topic": "Off-site entity evidence boundary",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-101",
+      "classification": "INTENTIONALLY_DEFERRED",
+      "material_gap": false
+    },
+    {
+      "id": "P4-106",
+      "domain": "PR",
+      "topic": "External PR/advertorial program",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-071",
+      "classification": "INTENTIONALLY_DEFERRED",
+      "material_gap": false
+    },
+    {
+      "id": "P4-107",
+      "domain": "MERCHANT",
+      "topic": "Merchant Center/Free Listings entry",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-072",
+      "classification": "INTENTIONALLY_DEFERRED",
+      "material_gap": false
+    },
+    {
+      "id": "P4-108",
+      "domain": "MERCHANT",
+      "topic": "Product Feed architecture/data contract",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-105",
+      "classification": "INTENTIONALLY_DEFERRED",
+      "material_gap": false
+    },
+    {
+      "id": "P4-109",
+      "domain": "REVIEWS",
+      "topic": "Genuine review collection/display",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-073",
+      "classification": "INTENTIONALLY_DEFERRED",
+      "material_gap": false
+    },
+    {
+      "id": "P4-110",
+      "domain": "REVIEWS",
+      "topic": "Review/rating structured-data eligibility",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-106",
+      "classification": "INTENTIONALLY_DEFERRED",
+      "material_gap": false
+    },
+    {
+      "id": "P4-111",
+      "domain": "LEGACY",
+      "topic": "Legacy URL prioritization",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-063",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-112",
+      "domain": "LEGACY",
+      "topic": "Product-volume mappings",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-064",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-113",
+      "domain": "LEGACY",
+      "topic": "Education→Academy mappings",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-065",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-114",
+      "domain": "LEGACY",
+      "topic": "Artist/removed content mappings",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-066",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-115",
+      "domain": "MEASUREMENT",
+      "topic": "Canary size/rollout rules",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-068",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-116",
+      "domain": "MEASUREMENT",
+      "topic": "Monitoring windows/core metrics",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-069",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-117",
+      "domain": "MEASUREMENT",
+      "topic": "Release isolation/change annotations/baseline",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-102",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-118",
+      "domain": "MEASUREMENT",
+      "topic": "KEEP/ITERATE/ROLLBACK interpretation",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-103",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-119",
+      "domain": "MAINTENANCE",
+      "topic": "Plugin/Rank Math/Google/new URL/404/freshness triggers",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-104",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-120",
+      "domain": "ROLL_OUT",
+      "topic": "First Strategy Lock scope",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-070",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-121",
+      "domain": "LEGAL",
+      "topic": "Policy/terms/privacy page SEO role",
+      "authority_type": "N/A",
+      "authority_ref": "No current public policy pages in current census; revisit on discovery",
+      "classification": "NOT_APPLICABLE_TO_CURRENT_SITE",
+      "material_gap": false
+    }
+  ],
+  "unexplained_material_gaps": [],
+  "notes": [
+    "DEFERRED rows are intentionally gated and cannot unlock implementation.",
+    "SUPERSEDED DEC-055 and DEC-058 remain for traceability but do not unlock execution.",
+    "Evidence/QA-only rows are intentionally not promoted to target-state decisions.",
+    "Current-site NOT_APPLICABLE classifications must be revisited if new entities are discovered."
+  ]
+}
