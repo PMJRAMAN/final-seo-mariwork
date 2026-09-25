@@ -654,3 +654,18 @@ Rules:
 - Useful bidirectional Product/Category ↔ Academy/Article relationships are supported.
 - Commercial links from informational content must remain contextually justified and must not be forced to increase link count.
 - Exact destinations and family-level requirements remain governed by DEC-041 onward.
+
+
+## DEC-041 — Mandatory Parent/Hub Links by Family
+
+**Status:** ACCEPTED
+
+- Product → stable primary Product Category → Shop.
+- Child Product Category → real parent Product Category → Shop.
+- Current Guide → One-Minute Guides collection → Academy.
+- Future Lesson → genuine Course → Academy.
+- Article → stable primary Blog Category → Magazine.
+- Multi-parent entities use one deliberate stable primary hierarchy rather than random taxonomy selection.
+- The relationship may be supplied through breadcrumb/navigation/taxonomy UI or another appropriate crawlable component.
+- Do not force redundant boilerplate parent links into body copy when the hierarchy is already clearly and crawlably represented.
+- Cross-family educational/commercial links remain governed by DEC-042–DEC-046.
