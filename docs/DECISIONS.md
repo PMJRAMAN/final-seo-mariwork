@@ -2124,3 +2124,25 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Current listing-only Category archives do not require artificial educational-link modules.
 - Future Category landing-page content may create natural Category → Academy/Article relationships.
 - Category landing-page content requirements must be explicitly decided before implementation.
+
+
+## DEC-047 — Internal-Link Anchor Text Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SITEWIDE / INTERNAL LINKING / ANCHOR TEXT
+
+### Accepted target state
+
+- Internal-link anchor text must be concise, natural, descriptive, and contextually accurate to the destination.
+- Exact-match keyword repetition is not required.
+- Do not force one fixed anchor across all source pages linking to the same destination.
+- Do not invent query-target anchors without supporting evidence.
+- Natural anchor variation is allowed when each variant accurately describes the destination in its source context.
+- Avoid generic anchors such as “click here” when a meaningful descriptive phrase is naturally available.
+- Anchor wording must serve reader comprehension first and must not be distorted merely to repeat a target keyword.
+
+### Consequences
+
+- Internal-link QA evaluates anchor relevance and clarity rather than exact-match consistency.
+- Equivalent links may use different natural anchor wording across different source contexts.
+- Keyword/query evidence may inform anchor language but does not create a requirement for repetitive exact-match anchors.
