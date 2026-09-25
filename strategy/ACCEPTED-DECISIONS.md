@@ -280,3 +280,18 @@ Rules:
 - Claims needing substantive verification escalate to DEC-023.
 - This Decision governs metadata only, not substantive Article edits.
 - Cannibalization remains DEC-119.
+
+
+## DEC-019 — Academy Course / Lesson Meta Description Rule
+
+**Status:** ACCEPTED
+
+- Course/Lesson metas are page-specific.
+- Course metas summarize educational scope/purpose.
+- Lesson metas describe the specific technique/task/concept/learning outcome.
+- Classify existing metas as KEEP / REFINE / REWRITE / FACT-CHECK REQUIRED.
+- Resolve duplicate and mismatched metas.
+- Do not use a shared Academy family template or raw `%excerpt%` as the final strategy.
+- Avoid mechanical brand/keyword injection and fixed 150/160-character rules.
+- Verify technical/safety/performance claims before approval.
+- Visible content remains DEC-024; video/schema remains separate.
