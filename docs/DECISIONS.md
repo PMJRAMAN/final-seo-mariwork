@@ -2190,3 +2190,25 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Content placement is determined by the role and format of the content, not merely by topic overlap.
 - Magazine and Academy may cover related subjects without being treated as interchangeable page families.
 - Magazine → Academy is a natural editorial-to-practical progression when relevant; the reverse relationship is optional and context-dependent.
+
+
+## DEC-050 — Product vs Category vs Article Query / Content Role Boundary
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** CONTENT ARCHITECTURE / PAGE OWNERSHIP / SEARCH INTENT
+
+### Accepted target state
+
+- Product pages own specific-product intent.
+- Product Category or content-supported Category landing pages own product-family, browse, comparison-within-family, and choice intent.
+- Magazine Articles own informational/editorial intent where the user primarily needs to understand, explore, compare, or read about a subject rather than browse a product family.
+- Do not assign substantially the same primary intent to Product, Category, and Article pages without a deliberate documented reason.
+- Ambiguous intent boundaries require later keyword research, SERP research where needed, and explicit page ownership.
+- This decision defines the page-role boundary only.
+- Research methodology, Page Ownership Matrix rules, conflict resolution, and implementation are governed by later decisions and must not be inferred or executed from DEC-050 alone.
+
+### Consequences
+
+- DEC-050 does not authorize implementation or page reassignment by itself.
+- Ambiguous topics remain unresolved until the relevant research and ownership decisions are completed.
+- Later page-ownership work must preserve this role boundary unless a formally accepted decision changes it.
