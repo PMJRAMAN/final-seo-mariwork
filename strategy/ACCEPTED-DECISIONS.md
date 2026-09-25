@@ -681,3 +681,15 @@ Rules:
 - Do not mass-add educational links merely to increase internal-link count.
 - Maintain exact approved destinations and family coverage in the Internal Link Requirement Matrix.
 - Reverse education/content → commercial linking remains governed by DEC-043 and DEC-044.
+
+
+## DEC-043 — Academy / Lesson to Product / Category Linking Rules
+
+**Status:** ACCEPTED
+
+- Academy/Guide/Lesson → Product/Category links require actual instructional usefulness.
+- Link when the Product, material, tool or Product family is used, required, or provides a direct useful next step.
+- Prefer a specific Product when a specific item is involved.
+- Prefer the relevant Product Category when the user needs to choose among suitable products in a family.
+- Do not add generic or unrelated commercial links merely to increase internal-link volume.
+- Apply the DEC-040 classification model and maintain approved relationships in the Internal Link Requirement Matrix.
