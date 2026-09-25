@@ -2569,3 +2569,26 @@ Google requires Product structured-data images to represent the marked-up Produc
 - No Artist legacy redirect implementation should be finalized before the new Artists system launches and stabilizes.
 - The post-launch migration pass requires manual identity review and explicit per-URL disposition.
 - Non-Artist removed-content URLs are separated into DEC-128 rather than being decided under this Artist-specific decision.
+
+
+## DEC-067 — Redirect Technical Owner and Implementation Path
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** REDIRECTS / NGINX / TECHNICAL OWNERSHIP
+
+### Accepted target state
+
+- Nginx is the canonical technical owner for Mariwork HTTP redirects, including migration and legacy redirects.
+- Existing redirect rules already implemented at Nginx should remain there when they are correct.
+- New SEO/migration redirects should be implemented in the centralized, documented Nginx redirect layer unless a narrowly documented exception is explicitly approved.
+- Rank Math must not create or maintain a second redirect layer for the same source URL space.
+- Before any redirect change, verify the existing Nginx rule, source URL, destination URL, HTTP status code, redirect chain/loop behavior and conflicts.
+- Correct existing redirects should be preserved rather than recreated in WordPress or Rank Math.
+- Moving redirect ownership away from Nginx requires a separate explicit architecture decision plus rollback/regression planning.
+- The owner's performance preference for Nginx is a project architecture rationale; DEC-067 does not assert that Google requires Nginx redirects or that Nginx itself is a ranking factor.
+
+### Consequences
+
+- Redirect ownership is intentionally centralized at the server layer.
+- Rank Math remains the default SEO owner for supported metadata/schema/canonical/sitemap concerns, but redirects are an explicit Nginx-owned exception.
+- Future migration tasks must inspect current Nginx redirect state before proposing new redirect rules.
