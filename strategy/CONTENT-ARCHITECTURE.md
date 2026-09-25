@@ -1,6 +1,6 @@
 # Content Architecture — Round 1
 
-**Tasks:** A-018 / A-019 · **Status:** CODEX_AUDITED · **Authority:** initial candidates only
+**Tasks:** A-018 / A-019 · **Status:** CODEX_AUDITED / PRE-IMPLEMENTATION CLOSURE · **Authority:** initial candidates and closure reconciliation only
 **Framework:** v1.0 · **Date:** 2026-09-24
 
 ## Evidence baseline
@@ -80,3 +80,29 @@ Candidate pattern for Second Review:
 Review separately for fabric colors, sets/bundles, mediums and tools: determine whether «ماری ورک»/Mariwork is mandatory, optional or omitted; code/separator/numeral convention; volume placement; title/H1 relationship; exceptions; and legacy title history. No bulk rename is authorized. Rank Math title ownership is UNKNOWN_NEEDS_VERIFICATION.
 
 **Google basis:** GOOGLE_CONSISTENT for useful accessible non-duplicative content and descriptive links; PROJECT_DECISION for family roles and title candidates. References: [people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), [SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), [structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data).
+
+## Pre-implementation closure
+
+The current Store graph and cross-family relationships are reconciled in
+`strategy/INTERNAL-LINK-REQUIREMENT-MATRIX-DRAFT.md`. That artifact separates
+`CORE_MANDATORY`, `FAMILY_SPECIFIC` and `CONTEXTUAL_OPTIONAL` candidates across
+Homepage, Shop, Categories, Products, Academy, Lessons, Articles, Blog
+Categories and Static/Trust pages.
+
+The matrix is a draft only. It does not approve link destinations, query
+anchors, content rewrites, keyword auto-linking or Production changes.
+
+| Durable family | Role | Current evidence | Target-state gate |
+|---|---|---|---|
+| Homepage | brand/entity gateway and family hub | `pages/homepage/WP-63.md` + current SEO output | Second Review |
+| Shop / Product Categories | commercial discovery and comparison | Store matrices and SR-004 | human approval |
+| Products / sets / bundles / tools | transactional decision pages | 84-product dossier set and Store matrices | canary + approval |
+| Academy / courses / lessons | structured instruction | Academy architecture and 39 dossiers | Second Review |
+| Magazine / Articles / Categories | durable reference and comparison | article/category dossiers and current schema output | Second Review |
+| Static trust/support | brand, communication and task support | grouped static dossiers | Second Review |
+| Product Tags / Blog Tags | transitional taxonomy spaces | tag reconciliation | migration decision |
+| Cart / Checkout / My Account | utility/system endpoints | system-policy dossiers | system-policy review |
+
+No keyword target, word-count target, editorial rewrite or final disposition
+is invented by this closure. **Page-query relationship is not proven by the
+current export.**

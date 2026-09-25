@@ -31,8 +31,8 @@
 - [x] A-006 Framework change control
 - [x] A-007 Google official-reference rule
 - [x] A-008 Rank Math-first SEO ownership rule
-- [x] A-009 Autonomous Round-1 Audit Orchestration — deploy/verify runner; no Production writes
-- [x] A-009B Low-consumption Round-1 runner v2 — deploy deterministic evidence + grouped Foundation + batched page audits before resuming A-013
+- [ ] A-009 Autonomous Round-1 Audit Orchestration — deploy/verify runner; no Production writes
+- [ ] A-009B Low-consumption Round-1 runner v2 — deploy deterministic evidence + grouped Foundation + batched page audits before resuming A-013
 - [x] A-010 Build complete URL/Entity Inventory
 - [x] A-011 Map all current page types / taxonomies / custom post types
 - [x] A-012 Map legacy URLs from Search Console and redirects
@@ -48,6 +48,19 @@
 
 **Gate:** Store page audits شروع نمی‌شوند تا A-010 تا A-020 کامل یا blocker آن‌ها صریحاً ثبت شده باشد.
 
+## 0.1 — 2026-09-25 Full-site pre-implementation closure reconciliation
+
+`audits/sitewide/PRE-IMPLEMENTATION-COVERAGE-MATRIX.json` is the current
+coverage source. The checks marked complete below mean that the audit/inventory
+evidence exists; they do not mean that ChatGPT Second Review, approval,
+implementation or QA is complete. Combined items that include future decisions
+remain unchecked.
+
+`A-009` and `A-009B` remain unchecked because `audits/sitewide/A-009-deployment-
+blocker.md` records that the isolated runtime has not passed the no-write/no-
+credential deployment gate. This task used existing repository evidence and
+direct read-only checks; it did not resume autonomous execution.
+
 ---
 
 # B. STORE / WOOCOMMERCE — FIRST MAJOR PROGRAM
@@ -56,27 +69,27 @@
 
 ## B0 — Store architecture / non-page spaces
 
-- [ ] B0-001 Shop archive audit
+- [x] B0-001 Shop archive audit
 - [ ] B0-002 Product sitemap policy
-- [ ] B0-003 Product category inventory
-- [ ] B0-004 Product tag inventory
+- [x] B0-003 Product category inventory
+- [x] B0-004 Product tag inventory
 - [ ] B0-005 Product attribute archive inventory
-- [ ] B0-006 Filter/faceted URL inventory
-- [ ] B0-007 Sort/query parameter URL inventory
-- [ ] B0-008 Pagination behavior
-- [ ] B0-009 Product search URLs
+- [x] B0-006 Filter/faceted URL inventory
+- [x] B0-007 Sort/query parameter URL inventory
+- [x] B0-008 Pagination behavior
+- [x] B0-009 Product search URLs
 - [ ] B0-010 Variant URL architecture
-- [ ] B0-011 Bundle/set architecture
+- [x] B0-011 Bundle/set architecture
 - [ ] B0-012 Legacy product URL mapping
-- [ ] B0-013 Store internal-link baseline
-- [ ] B0-014 Store schema ownership baseline
-- [ ] B0-015 Store Rank Math settings baseline
-- [ ] B0-016 Build Internal Link Requirement Matrix for Store ↔ Academy/Blog relationships
-- [ ] B0-017 Classify links by rule: CORE/MANDATORY, FAMILY-SPECIFIC, CONTEXTUAL/OPTIONAL
+- [x] B0-013 Store internal-link baseline
+- [x] B0-014 Store schema ownership baseline
+- [x] B0-015 Store Rank Math settings baseline
+- [x] B0-016 Build Internal Link Requirement Matrix for Store ↔ Academy/Blog relationships
+- [x] B0-017 Classify links by rule: CORE/MANDATORY, FAMILY-SPECIFIC, CONTEXTUAL/OPTIONAL
 - [ ] B0-018 Audit every product family for missing mandatory links and inconsistent link coverage
-- [ ] B0-019 Define reverse links from Academy/Articles to relevant Product/Category destinations
+- [x] B0-019 Define reverse links from Academy/Articles to relevant Product/Category destinations
 - [ ] B0-020 Approve target internal-link architecture before mass page implementation
-- [ ] B0-021 Audit current product-title patterns across all Store families and identify inconsistencies
+- [x] B0-021 Audit current product-title patterns across all Store families and identify inconsistencies
 - [ ] B0-022 Define approved Product Title Naming Standard by family: product type/name/color, «ماری ورک»/Mariwork, code, size/volume ordering, required/optional tokens and exceptions
 - [ ] B0-023 Verify consistent use of «ماری ورک» / Mariwork in product titles according to the approved family standard
 - [ ] B0-024 Normalize product titles only after ChatGPT Second Review + approval; preserve product identity, intent and legacy URL history
@@ -215,16 +228,16 @@ Batchها ابتدا ۵تایی و پس از ثبات process حداکثر طب�
 
 # C. HOMEPAGE — SECOND PROGRAM
 
-- [ ] C-001 Homepage baseline
-- [ ] C-002 Codex technical/content audit
+- [x] C-001 Homepage baseline
+- [x] C-002 Codex technical/content audit
 - [ ] C-003 ChatGPT independent review
 - [ ] C-004 brand/search intent
 - [ ] C-005 title/meta/H1
-- [ ] C-006 Organization/WebSite/other relevant schema review
-- [ ] C-007 main navigation/internal links
+- [x] C-006 Organization/WebSite/other relevant schema review
+- [x] C-007 main navigation/internal links
 - [ ] C-008 image/LCP/ALT
 - [ ] C-009 content/CTA structure
-- [ ] C-010 Rank Math ownership
+- [x] C-010 Rank Math ownership
 - [ ] C-011 implementation
 - [ ] C-012 dual QA
 - [ ] C-013 monitoring
@@ -236,13 +249,13 @@ Batchها ابتدا ۵تایی و پس از ثبات process حداکثر طب�
 ابتدا inventory؛ سپس همه صفحات ثابت.
 
 حداقل موارد شناخته‌شده و هر مورد دیگری که کشف شود:
-- [ ] D-001 About / brand pages
-- [ ] D-002 Contact / communication pages
-- [ ] D-003 FAQ
-- [ ] D-004 Stores address
+- [x] D-001 About / brand pages
+- [x] D-002 Contact / communication pages
+- [x] D-003 FAQ
+- [x] D-004 Stores address
 - [ ] D-005 policy/terms/privacy pages — indexability decision
-- [ ] D-006 landing pages
-- [ ] D-007 other WordPress Pages
+- [x] D-006 landing pages
+- [x] D-007 other WordPress Pages
 
 برای هر صفحه:
 baseline → Codex Audit → ChatGPT Review → disposition → implementation → dual QA.
@@ -254,18 +267,18 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 تمام URLهای `articles` و blog-like content:
 
 ## E0 Architecture
-- [ ] E0-001 Article inventory
-- [ ] E0-002 Categories/tags inventory
-- [ ] E0-003 archive/indexability policy
-- [ ] E0-004 query/content overlap with Academy
-- [ ] E0-005 article schema/author/date ownership
-- [ ] E0-006 Rank Math article settings
+- [x] E0-001 Article inventory
+- [x] E0-002 Categories/tags inventory
+- [x] E0-003 archive/indexability policy
+- [x] E0-004 query/content overlap with Academy
+- [x] E0-005 article schema/author/date ownership
+- [x] E0-006 Rank Math article settings
 
 ### Blog Tags — planned decommission
 **Project direction:** Blog Tags نیز در معماری نهایی موردنیاز نیستند و هدف حذف کنترل‌شده آن‌هاست؛ Categories/Articles/Hubs باید قبل از حذف نقش مقصد و ناوبری لازم را پوشش دهند.
 
-- [ ] E0-007 Inventory all Blog Tags, assignments and public tag archive URLs
-- [ ] E0-008 Analyze GSC/history, indexation, sitemap presence, internal links and any known inbound-link/value signals
+- [x] E0-007 Inventory all Blog Tags, assignments and public tag archive URLs
+- [x] E0-008 Analyze GSC/history, indexation, sitemap presence, internal links and any known inbound-link/value signals
 - [ ] E0-009 Map every Blog Tag URL to the best durable replacement: relevant Category / Article / Content Hub; use `REMOVE_410` only when no meaningful replacement exists and evidence supports it
 - [ ] E0-010 Prepare migration plan: redirect/410 mapping, internal-link cleanup, tag-assignment cleanup, Rank Math sitemap/indexability cleanup and rollback scope
 - [ ] E0-011 Remove Blog Tag usage/archive exposure only after approval and implement the approved migration map
@@ -296,12 +309,12 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 تمام `education` pages/courses/lessons قابل crawl:
 
 ## F0 Architecture
-- [ ] F0-001 Education inventory
-- [ ] F0-002 taxonomy/archive inventory
-- [ ] F0-003 course/lesson relationship
-- [ ] F0-004 duplicate intent vs articles
-- [ ] F0-005 internal links to relevant products
-- [ ] F0-006 schema/content-type ownership
+- [x] F0-001 Education inventory
+- [x] F0-002 taxonomy/archive inventory
+- [x] F0-003 course/lesson relationship
+- [x] F0-004 duplicate intent vs articles
+- [x] F0-005 internal links to relevant products
+- [x] F0-006 schema/content-type ownership
 
 ## F1 All education pages
 برای هر صفحه همان dual-audit lifecycle کامل.
@@ -318,13 +331,13 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 
 # G. ARTISTS / HISTORY / OTHER CUSTOM CONTENT
 
-- [ ] G-001 Artists inventory
+- [x] G-001 Artists inventory
 - [ ] G-002 Interview/profile pages
 - [ ] G-003 History pages
-- [ ] G-004 any custom post type discovered
-- [ ] G-005 intent/indexability
+- [x] G-004 any custom post type discovered
+- [x] G-005 intent/indexability
 - [ ] G-006 dual audit every indexable entity
-- [ ] G-007 archive policy
+- [x] G-007 archive policy
 - [ ] G-008 structured data where appropriate
 - [ ] G-009 internal linking
 - [ ] G-010 implementation + dual QA
@@ -335,20 +348,20 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 
 تمام URLهایی که «محتوا» نیستند نیز باید تصمیم داشته باشند.
 
-- [ ] H-001 WordPress categories
-- [ ] H-002 tags
-- [ ] H-003 author archives
-- [ ] H-004 date archives
-- [ ] H-005 media attachment URLs
-- [ ] H-006 internal search result pages
-- [ ] H-007 feeds
-- [ ] H-008 pagination
-- [ ] H-009 cart
-- [ ] H-010 checkout
-- [ ] H-011 my-account
-- [ ] H-012 login/system endpoints relevant to crawl
-- [ ] H-013 404 behavior
-- [ ] H-014 any URL space discovered later
+- [x] H-001 WordPress categories
+- [x] H-002 tags
+- [x] H-003 author archives
+- [x] H-004 date archives
+- [x] H-005 media attachment URLs
+- [x] H-006 internal search result pages
+- [x] H-007 feeds
+- [x] H-008 pagination
+- [x] H-009 cart
+- [x] H-010 checkout
+- [x] H-011 my-account
+- [x] H-012 login/system endpoints relevant to crawl
+- [x] H-013 404 behavior
+- [x] H-014 any URL space discovered later
 
 هدف برای این بخش معمولاً `KEEP_AS_IS/NOINDEX/REDIRECT/CANONICALIZE` است، نه تولید محتوا.
 
@@ -358,7 +371,7 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 
 بعد از پوشش همه families:
 
-- [ ] I-001 Full URL inventory reconciliation
+- [x] I-001 Full URL inventory reconciliation
 - [ ] I-002 Every entity has dossier/disposition
 - [ ] I-003 Full crawl/indexability regression
 - [ ] I-004 redirects/404/soft-404
@@ -378,7 +391,7 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 - [ ] I-014 OAI-SearchBot/Googlebot access check where applicable
 - [ ] I-015 unresolved P0/P1 = zero or formally accepted exception
 - [ ] I-016 final Search Console baseline comparison
-- [ ] I-017 final project coverage report
+- [x] I-017 final project coverage report
 - [ ] I-018 visual/image/multimodal SEO regression against approved L-program rules
 - [ ] I-019 all-video SEO coverage/regression against M-program inventory
 - [ ] I-020 brand/entity consistency regression against N-program target state

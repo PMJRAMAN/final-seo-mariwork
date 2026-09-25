@@ -140,6 +140,42 @@ google_basis: GOOGLE_CONSISTENT · google_reference: https://developers.google.c
 seo_owner_current: UNKNOWN_NEEDS_VERIFICATION · seo_owner_target: RANK_MATH where supported; otherwise documented owner
 rank_math_capability_checked: BLOCKED_BY_ACCESS · rank_math_path_or_reason_not_used: Installed Rank Math version/modules and taxonomy settings were not supplied.
 
+### SYS-013 — Transactional system pages require policy treatment, not editorial optimization
+
+id: SYS-013 · severity: P2 · scope: FAMILY · family: system-commerce · status: OPEN · evidence_class: OBSERVED · confidence: HIGH
+source_refs: pages/static/WP-10.md; pages/static/WP-11.md; pages/static/WP-30919.md; audits/sitewide/SYSTEM-URL-SPACES-CLOSURE.md.
+impact: Cart, checkout and account endpoints are public utility pages with noindex/redirect behavior; treating them as normal editorial SEO targets could create privacy, state or commerce regressions.
+recommendation: Keep these endpoints in a system-policy queue and obtain Second Review of intended crawl/index behavior before any owner or output change. Do not add SEO copy.
+acceptance_criteria: Each endpoint has a role, HTTP/robots/canonical observation, owner boundary, non-mutating regression scope and explicit no-content-optimization disposition.
+google_basis: GOOGLE_RECOMMENDED · google_reference: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+seo_owner_current: RANK_MATH for observed robots/title output; WORDPRESS/WooCommerce or PLATFORM for transport/state
+seo_owner_target: RANK_MATH for supported metadata; WORDPRESS/WooCommerce or PLATFORM for transport/state
+rank_math_capability_checked: VERIFIED_INSTALLED_1.0.279 · rank_math_path_or_reason_not_used: No implementation or configuration write is authorized.
+
+### SYS-014 — URL-space evidence is bounded and must not be promoted to exhaustive crawl coverage
+
+id: SYS-014 · severity: P2 · scope: SITEWIDE · family: system-url-spaces · status: CONFIRMED · evidence_class: OBSERVED · confidence: HIGH
+source_refs: audits/sitewide/A-010-inventory-notes.md; registry/URL-INVENTORY.csv; audits/second-review/store/current-parameter-policy-evidence.json; audits/sitewide/SYSTEM-URL-SPACES-CLOSURE.md.
+impact: Parameterized, attachment, feed, archive and authenticated spaces remain bounded samples; missing discovery is not proof of absence or indexability.
+recommendation: Use family policy plus targeted representatives. Do not invent URLs or apply bulk dispositions from bounded samples alone.
+acceptance_criteria: Every machine space has a policy owner, sample evidence, explicit unknowns and a targeted next check where needed.
+google_basis: GOOGLE_CONSISTENT · google_reference: https://developers.google.com/crawling/docs/faceted-navigation
+seo_owner_current: UNKNOWN_NEEDS_VERIFICATION by space
+seo_owner_target: RANK_MATH for supported controls; PLATFORM where server controls are required
+rank_math_capability_checked: VERIFIED_INSTALLED_1.0.279 · rank_math_path_or_reason_not_used: No output change proposed.
+
+### SYS-015 — Image purpose and ALT quality are not closed by counts alone
+
+id: SYS-015 · severity: P2 · scope: FAMILY · family: images-alt · status: OPEN · evidence_class: MEASURED · confidence: HIGH
+source_refs: registry/SYSTEMIC-FINDINGS.md#SYS-010; registry/SYSTEMIC-FINDINGS.md#SYS-011; audits/sitewide/IMAGE-ALT-AUDIT-SUMMARY.md.
+impact: Measured missing-ALT counts identify candidates but do not establish whether an image is informative, decorative, duplicated or visually misdescribed.
+recommendation: Perform human visual review on representative high-value families and record role, factual description, repetition and delivery behavior before implementation.
+acceptance_criteria: A representative family matrix records image role and evidence-based ALT decision, with no invented visual facts or keyword stuffing. Implementation remains separately approved.
+google_basis: GOOGLE_RECOMMENDED · google_reference: https://developers.google.com/search/docs/appearance/google-images
+seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION
+seo_owner_target: CONTENT for image purpose and ALT; RANK_MATH only for supported metadata concerns
+rank_math_capability_checked: VERIFIED_INSTALLED_1.0.279 · rank_math_path_or_reason_not_used: ALT requires image/content judgment and no Production write is authorized.
+
 ## Handoff
 
 Product Tags and Blog Tags remain family-level migration programs. Query targets, title standard, internal-link rules and technical policies remain initial candidates or blockers. No finding authorizes Production, database, WordPress, WooCommerce, Rank Math, sitemap, redirect, taxonomy or raw-export writes.

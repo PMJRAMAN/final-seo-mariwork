@@ -3,9 +3,37 @@
 **Project:** Final SEO Mariwork  
 **Framework:** v1.0  
 **Framework state:** FROZEN  
-**Phase:** Pre-Audit Baseline  
-**Status:** AUDIT_FRAMEWORK_READY  
-**Last framework review:** 2026-09-24
+**Phase:** FULL-SITE PRE-IMPLEMENTATION AUDIT CLOSURE
+**Status:** CODEX_AUDITED — SECOND REVIEW PENDING
+**Last framework review:** 2026-09-25
+
+## Full-site closure — 2026-09-25
+
+The current Production census is reconciled against `registry/URL-INVENTORY.csv`,
+the existing 168 Round-1 dossiers, Store Second Review evidence, family-level
+reconciliations and machine/system URL-space policies.
+
+Closure artifacts:
+
+- `audits/sitewide/PRE-IMPLEMENTATION-COVERAGE-MATRIX.json`
+- `audits/sitewide/PRE-IMPLEMENTATION-AUDIT-CLOSURE.md`
+- `audits/sitewide/SYSTEM-URL-SPACES-CLOSURE.md`
+- `audits/sitewide/IMAGE-ALT-AUDIT-SUMMARY.md`
+- `strategy/INTERNAL-LINK-REQUIREMENT-MATRIX-DRAFT.md`
+- `handoff/FULL-SITE-PRE-IMPLEMENTATION-SECOND-REVIEW-HANDOFF-2026-09-25.md`
+
+Three missing current system-page dossiers were added for WP-10 Checkout,
+WP-11 My Account and WP-30919 Cart. They are policy-only dossiers; no editorial
+copy recommendation was made.
+
+Current entities: **502** (147 public post entities + 355 taxonomy terms).
+Existing dossiers reused: **168**. New dossiers: **3**. Production writes:
+**0**.
+
+Second Review, approval, implementation, Codex QA after implementation and
+ChatGPT Final QA remain pending. `NOT_DECIDED` inventory dispositions are
+intentional at this stage; this closure does not approve redirects, noindex,
+canonical, sitemap, taxonomy, content, schema or URL changes.
 
 ## Final pre-audit review
 

@@ -1,0 +1,259 @@
+{
+  "artifact": "PRE-IMPLEMENTATION-COVERAGE-MATRIX",
+  "generated_at": "2026-09-25",
+  "framework_version": "1.0",
+  "workflow_status": "CODEX_AUDITED",
+  "mode": "AUDIT_RECONCILIATION_ONLY",
+  "production_writes": 0,
+  "repository": {
+    "head_before": "904779f",
+    "head_after": "07f2f041cf9b9d7114f5fe191a70a433e6335331",
+    "expected_baseline": "07f2f041cf9b9d7114f5fe191a70a433e6335331",
+    "working_tree_before": "CLEAN",
+    "sync_note": "Local checkout was 74 commits behind origin/main; fast-forwarded only. No reset or destructive operation was used."
+  },
+  "production": {
+    "path": "/home/mariwork/web/mariwork.ir/public_html",
+    "path_verified_read_only": true,
+    "site_url": "https://www.mariwork.ir",
+    "rank_math": {
+      "plugin": "seo-by-rank-math",
+      "version": "1.0.279",
+      "active": true,
+      "pro_plugin_present": false,
+      "active_modules_evidence_ref": "audits/second-review/evidence/seo-ownership-matrix.json"
+    },
+    "woocommerce_system_pages": {
+      "shop": 30918,
+      "cart": 30919,
+      "checkout": 10,
+      "my_account": 11
+    }
+  },
+  "counts": {
+    "current_public_entities": 502,
+    "current_public_posts": 147,
+    "current_public_taxonomy_terms": 355,
+    "inventory_rows": 555,
+    "inventory_entity_or_unresolved_rows": 530,
+    "inventory_url_space_policy_rows": 25,
+    "observed_url_spellings_in_a010": 2104,
+    "existing_page_dossiers": 168,
+    "new_system_dossiers": 3,
+    "page_dossiers_after_this_task": 171,
+    "round1_model_entities": 167,
+    "round1_products": 83,
+    "current_products": 84,
+    "current_blog_categories": 12,
+    "current_blog_tags": 54,
+    "current_product_categories": 9,
+    "current_product_tags": 275,
+    "current_pa_volume_terms": 3,
+    "current_ld_course_categories": 2,
+    "current_courses": 1,
+    "current_lessons": 37,
+    "current_articles": 12,
+    "non_public_relevant_posts": 19
+  },
+  "source_contract": {
+    "current_census": "audits/second-review/reconciliation/current-entity-census.json",
+    "inventory": "registry/URL-INVENTORY.csv",
+    "round1_summary": "handoff/round1/round1-summary.json",
+    "current_seo_output": "audits/second-review/evidence/current-seo-output-summary.json",
+    "store_review": "audits/second-review/store/SR-004-CHATGPT-STORE-SECOND-REVIEW.md",
+    "migration_reconciliation": "audits/second-review/reconciliation/SR-002-CURRENT-STATE-RECONCILIATION.md",
+    "data_rule": "Page-query relationship is not proven by the current export."
+  },
+  "matrix": [
+    {
+      "family": "Homepage",
+      "scope": "FAMILY",
+      "current_entities": 1,
+      "dossiers": 1,
+      "existing_evidence": ["pages/homepage/WP-63.md", "audits/second-review/evidence/current-seo-output.jsonl", "audits/second-review/evidence/seo-ownership-matrix.json"],
+      "classification": "ROUND1_DOSSIER_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Independent intent/content review and final disposition remain pending; no page-query attribution."
+    },
+    {
+      "family": "Static/Core editorial pages",
+      "scope": "FAMILY",
+      "current_entities": 10,
+      "dossiers": 10,
+      "existing_evidence": ["pages/static/", "audits/second-review/evidence/current-seo-output-summary.json", "handoff/round1/round1-review-index.json"],
+      "classification": "ROUND1_DOSSIER_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Policy/privacy page inventory and independent intent review are separate from the 10 editorial/core pages."
+    },
+    {
+      "family": "System commerce pages",
+      "scope": "FAMILY",
+      "current_entities": 3,
+      "dossiers": 3,
+      "existing_evidence": ["pages/static/WP-10.md", "pages/static/WP-11.md", "pages/static/WP-30919.md", "audits/sitewide/SYSTEM-URL-SPACES-CLOSURE.md"],
+      "classification": "SYSTEM_POLICY_ONLY",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Human confirmation of system policy; no authenticated or transactional test was performed."
+    },
+    {
+      "family": "Shop",
+      "scope": "FAMILY",
+      "current_entities": 1,
+      "dossiers": 1,
+      "existing_evidence": ["pages/shop/WP-30918.md", "audits/second-review/store/SR-003-STORE-EVIDENCE-CLOSURE.md", "audits/second-review/store/SR-004-CHATGPT-STORE-SECOND-REVIEW.md"],
+      "classification": "CURRENT_EVIDENCE_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "SR-ST recommendations are pending human approval; implementation is not authorized."
+    },
+    {
+      "family": "Products",
+      "scope": "FAMILY",
+      "current_entities": 84,
+      "dossiers": 84,
+      "existing_evidence": ["pages/products/", "audits/second-review/store/current-title-h1-matrix.json", "audits/second-review/store/current-variable-schema-matrix.json", "audits/second-review/store/bundle-component-matrix.json"],
+      "classification": "CURRENT_EVIDENCE_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "WP-27727 is post-Round-1 supplemental coverage; variant stability and target-state decisions remain partial/pending."
+    },
+    {
+      "family": "Product Categories",
+      "scope": "FAMILY",
+      "current_entities": 9,
+      "dossiers": 7,
+      "existing_evidence": ["pages/product_cat/", "audits/second-review/reconciliation/tag-category-attribute-reconciliation.json", "audits/second-review/store/SR-004-CHATGPT-STORE-SECOND-REVIEW.md"],
+      "classification": "CURRENT_EVIDENCE_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Two migration-era zero-assignment categories are covered by family evidence; lifecycle decisions are pending approval."
+    },
+    {
+      "family": "pa_volume",
+      "scope": "FAMILY",
+      "current_entities": 3,
+      "dossiers": 0,
+      "existing_evidence": ["audits/second-review/reconciliation/current-volume-architecture.json", "audits/second-review/store/SR-004-CHATGPT-STORE-SECOND-REVIEW.md"],
+      "classification": "FAMILY_AUDIT_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Family-level evidence is intentional; no three duplicate dossiers are required."
+    },
+    {
+      "family": "Product Tags",
+      "scope": "FAMILY",
+      "current_entities": 275,
+      "dossiers": 0,
+      "existing_evidence": ["audits/second-review/reconciliation/tag-category-attribute-reconciliation.json", "audits/second-review/store/SR-004-CHATGPT-STORE-SECOND-REVIEW.md"],
+      "classification": "FAMILY_AUDIT_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Zero current assignments are evidenced; historical URL/value mapping and decommission decision remain separate."
+    },
+    {
+      "family": "Articles",
+      "scope": "FAMILY",
+      "current_entities": 12,
+      "dossiers": 12,
+      "existing_evidence": ["pages/articles/", "audits/second-review/evidence/current-seo-output-summary.json", "registry/SYSTEMIC-FINDINGS.md#SYS-010"],
+      "classification": "ROUND1_DOSSIER_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Article→commerce link review, freshness/accuracy review and image-purpose review remain; Page+Query is unavailable."
+    },
+    {
+      "family": "Blog Categories",
+      "scope": "FAMILY",
+      "current_entities": 12,
+      "dossiers": 12,
+      "existing_evidence": ["pages/category/", "audits/second-review/store/current-blog-category-matrix.json", "audits/second-review/store/SR-003-STORE-EVIDENCE-CLOSURE.md"],
+      "classification": "CURRENT_EVIDENCE_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Nine empty 200/noindex categories and one 404 require human lifecycle decisions; two durable non-empty/indexable categories are evidenced."
+    },
+    {
+      "family": "Blog Tags",
+      "scope": "FAMILY",
+      "current_entities": 54,
+      "dossiers": 0,
+      "existing_evidence": ["audits/second-review/reconciliation/tag-category-attribute-reconciliation.json", "audits/second-review/store/SR-004-CHATGPT-STORE-SECOND-REVIEW.md"],
+      "classification": "FAMILY_AUDIT_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Six assigned terms/39 assignments remain transitional; durable destinations and migration mapping are unresolved."
+    },
+    {
+      "family": "Academy / Courses / Lessons",
+      "scope": "FAMILY",
+      "current_entities": 39,
+      "dossiers": 39,
+      "existing_evidence": ["pages/academy/", "pages/education/", "audits/second-review/reconciliation/current-academy-architecture.json", "audits/second-review/reconciliation/education-academy-migration-map.json"],
+      "classification": "ROUND1_DOSSIER_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Current hierarchy is evidenced; 36 historical mappings are partial and 5 are unknown; no broad lesson re-audit is required."
+    },
+    {
+      "family": "LearnDash Course Categories",
+      "scope": "FAMILY",
+      "current_entities": 2,
+      "dossiers": 2,
+      "existing_evidence": ["pages/ld_course_category/", "audits/second-review/reconciliation/current-academy-architecture.json"],
+      "classification": "ROUND1_DOSSIER_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Taxonomy role and current indexability require Second Review; no implementation decision is made."
+    },
+    {
+      "family": "Historical / legacy URLs",
+      "scope": "FAMILY",
+      "current_entities": "NOT_APPLICABLE_HISTORICAL_URL_SPACE",
+      "observed_url_spellings": 2104,
+      "dossiers": 0,
+      "existing_evidence": ["audits/sitewide/A-012-legacy-url-map.md", "audits/second-review/reconciliation/education-academy-migration-map.json", "audits/second-review/reconciliation/legacy-volume-url-map.json"],
+      "classification": "HISTORICAL_ONLY",
+      "second_review_readiness": "PARTIAL — TARGETED EVIDENCE NEEDED",
+      "remaining": "Transport mappings are preserved, but 68 volume mappings are partial, 14 unknown, and historical entity equivalence is not inferred from redirects."
+    },
+    {
+      "family": "Non-public / draft / private content",
+      "scope": "FAMILY",
+      "current_entities": 19,
+      "dossiers": 0,
+      "existing_evidence": ["audits/second-review/reconciliation/current-entity-census.json", "audits/sitewide/A-011-content-types-taxonomies.md"],
+      "classification": "NON_PUBLIC",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "No content optimization is proposed; only accidental exposure, public URL behavior and historical retention need review if evidence changes."
+    },
+    {
+      "family": "System / archive / machine URL spaces",
+      "scope": "FAMILY",
+      "current_entities": 25,
+      "dossiers": 0,
+      "existing_evidence": ["registry/URL-INVENTORY.csv", "audits/sitewide/SYSTEM-URL-SPACES-CLOSURE.md", "audits/sitewide/A-010-inventory-notes.md"],
+      "classification": "SYSTEM_POLICY_ONLY",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "Policy-level evidence is complete for sampled spaces; exhaustive parameter expansion, authenticated behavior and server/log validation remain out of scope."
+    },
+    {
+      "family": "Images / ALT",
+      "scope": "FAMILY",
+      "current_entities": 1,
+      "dossiers": 0,
+      "existing_evidence": ["audits/sitewide/IMAGE-ALT-AUDIT-SUMMARY.md", "registry/SYSTEMIC-FINDINGS.md#SYS-010", "registry/SYSTEMIC-FINDINGS.md#SYS-011", "strategy/VISUAL-IMAGE-SEO.md"],
+      "classification": "NEEDS_TARGETED_REFRESH",
+      "second_review_readiness": "PARTIAL — TARGETED EVIDENCE NEEDED",
+      "remaining": "Reported missing ALT counts are measured; informative/decorative purpose and human visual review are not complete."
+    },
+    {
+      "family": "Cross-family internal linking",
+      "scope": "SITEWIDE",
+      "current_entities": 157,
+      "dossiers": 0,
+      "existing_evidence": ["audits/second-review/store/current-internal-link-graph.json", "strategy/INTERNAL-LINK-ARCHITECTURE.md", "strategy/INTERNAL-LINK-REQUIREMENT-MATRIX-DRAFT.md"],
+      "classification": "CURRENT_EVIDENCE_COMPLETE",
+      "second_review_readiness": "READY_FOR_SECOND_REVIEW",
+      "remaining": "The draft matrix is not approved; 13,668 graph unresolved destinations are resolver gaps, not a broken-link count."
+    }
+  ],
+  "known_gaps_and_blockers": [
+    "Page+Query relationship is not proven by the current export.",
+    "Current repository inventory retains NOT_DECIDED final dispositions; this task does not approve redirects, noindex, canonical, sitemap, content or taxonomy changes.",
+    "Historical entity equivalence is not established merely by a redirect; targeted mappings remain partial/unknown.",
+    "Image purpose/decorative classification and human visual review remain open.",
+    "No authenticated/session/order/checkout test was performed, by safety boundary.",
+    "A-009/A-009B autonomous runner deployment remains blocked by runtime isolation; this closure was completed manually.",
+    "ChatGPT Second Review, human approval and all implementation/QA gates remain pending."
+  ]
+}
