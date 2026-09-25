@@ -1,6 +1,6 @@
 # Brand / Entity Search Strategy
 
-**Status:** CORE / PLANNED
+**Status:** CORE / DEC-053 FACT REGISTRY ACCEPTED
 
 ## Objective
 
@@ -35,7 +35,7 @@ Never invent awards, credentials, founders, partnerships, reviews, locations, da
 
 ## DEC-053 Working Canonical Facts Registry
 
-**Status:** OWNER-CONFIRMED WORKING FACTS / DEC-053 NOT YET ACCEPTED
+**Status:** ACCEPTED UNDER DEC-053
 
 These facts were confirmed directly by the owner during DEC-053 discussion. They are the factual baseline for later brand/entity decisions. Do not expand them into stronger claims without separate evidence.
 
