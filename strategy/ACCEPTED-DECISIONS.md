@@ -816,3 +816,21 @@ Rules:
 - No public official physical brand address is currently defined.
 - Exact official social handles/URLs and phone/email/WhatsApp details remain deferred to DEC-127.
 - Do not infer or strengthen facts beyond the verified registry.
+
+
+## DEC-054 — ALT Policy by Image Role
+
+**Status:** ACCEPTED
+
+- ALT is based on image role and page context, not missing-count totals.
+- Informative images require concise factual ALT; truly decorative images use empty ALT.
+- Store/Product and Academy instructional imagery generally default to informative unless genuinely decorative.
+- Reused image files may use different factual ALT across pages when context differs.
+- Meaningful Magazine/Article/hero images require ALT; decorative textures, separators and ornament do not.
+- Historical/artwork/artist identity facts must be verified, not inferred from the image.
+- Homepage/Static/Category meaningful images require ALT; primary logo ALT is concise brand identity; redundant icons beside equivalent text are generally decorative.
+- Linked-image ALT should communicate image/link purpose when the image is the meaningful link content without keyword inflation.
+- Text-bearing images, infographics and instructional screenshots use concise purpose/meaning-oriented ALT; essential information should also be available in surrounding HTML/caption where appropriate.
+- Verified structured facts may generate ALT automatically when image role is deterministic; context-dependent imagery requires contextual judgment.
+- Automation must not invent unsupported visual facts or keyword-stuff ALT.
+- Product-gallery specifics remain DEC-056.
