@@ -403,3 +403,17 @@ Rules:
 - `?filter_volume=` Shop states remain faceted/filter URLs, not search landing pages.
 - Where reliable, links from volume pages should preselect the relevant Product variation.
 - Title/H1 and visible page copy are decided later under DEC-116 and DEC-117.
+
+
+## DEC-027 — Product Tags Decommission and Historical URL Mapping Policy
+
+**Status:** ACCEPTED
+
+- Delete/decommission all 275 current Product Tag terms; they have zero current Product assignments.
+- Product Tag archives are not durable SEO/navigation entities and stay out of sitemap/index targets.
+- Permanent redirect only when a genuine semantic successor exists.
+- Valid successor may be a Product, Product Category, Academy Lesson, Magazine Article, Static page, or other durable page when genuinely equivalent.
+- Do not redirect by slug/keyword similarity and do not mass-redirect to Homepage/Shop/broad unrelated categories.
+- If no meaningful replacement exists, return a proper 404 or 410; standard 404 is the default unless deliberate 410 is operationally useful.
+- Preserve relevant historical evidence before deletion.
+- Remove internal remnants and QA redirects for chains/soft 404s.
