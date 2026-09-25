@@ -2391,3 +2391,27 @@ Google requires Product structured-data images to represent the marked-up Produc
 - Image count is determined by content need, not an SEO formula.
 - Academy remains video-first even when supporting images are present.
 - Magazine and Academy content QA evaluates image usefulness and factual relevance rather than raw image quantity.
+
+
+## DEC-059 — Store Facets / Sort / Display Parameter Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** STORE / FACETS / SORT / DISPLAY PARAMETERS / VARIANT PRESELECTION
+
+### Accepted target state
+
+- Store filter, sort and display parameter states are user-interface states, not independent SEO landing pages.
+- This includes parameter families such as `filter_volume`, `orderby`, `per_page`, `per_row` and `shop_view`.
+- These parameter states must not be promoted as separate Search targets or XML sitemap entries.
+- They should consolidate canonically to the relevant base Shop page rather than compete as standalone Search pages.
+- Approved durable `pa_volume` landing pages such as `/volume/30ml`, `/volume/60ml` and `/volume/250ml` remain separate indexable SEO landing pages under DEC-026.
+- Product-level variation-preselection URLs using `attribute_pa_volume` are a separate mechanism and must remain available for direct variant selection.
+- Product variation-preselection URLs must not be treated as Shop facet URLs merely because they use query parameters.
+- Do not apply blanket robots blocking that could interfere with legitimate Product variant-selection behavior.
+
+### Consequences
+
+- Shop filters and sort/display controls remain usable for users without becoming separate SEO landing-page families.
+- Volume SEO ownership remains with the durable `pa_volume` landing pages accepted in DEC-026.
+- Product-level direct variant links remain available.
+- Technical implementation must distinguish Shop facet/query states from Product variation-preselection states.
