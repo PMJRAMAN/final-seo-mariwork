@@ -258,3 +258,25 @@ Rules:
 - No fixed 150/160-character rule.
 - Final copy must align with visible content and DEC-053 canonical brand facts.
 - Initial direction: About=story/activity/product focus; Contact=contact/support; Magazine=editorial/educational scope; Why Mariwork=features/use cases; Stores=physical points of sale; FAQ=common Product/educational questions.
+
+
+## DEC-018 — Article Meta Description Update Rule
+
+**Status:** ACCEPTED
+
+Classify each Article meta as:
+- `KEEP`
+- `SHORTEN / REFINE`
+- `REWRITE`
+- `FACT-CHECK REQUIRED`
+
+Rules:
+- Preserve accurate useful metas; do not blanket-rewrite all Articles.
+- Resolve duplicate descriptions.
+- Rewrite weak/generic/insufficient descriptions.
+- Refine verbose introduction-like descriptions.
+- No fixed 150/160-character rule.
+- Summarize the Article rather than copy paragraph one.
+- Claims needing substantive verification escalate to DEC-023.
+- This Decision governs metadata only, not substantive Article edits.
+- Cannibalization remains DEC-119.
