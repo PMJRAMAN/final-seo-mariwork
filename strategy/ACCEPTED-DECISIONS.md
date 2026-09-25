@@ -360,3 +360,19 @@ Rules:
 - Do not manipulate dates to create artificial freshness.
 - Magazine remains text-first explanatory/reference content; practical video demonstrations route to Academy.
 - Per-Article body-content review happens later as implementation-stage content QA under the accepted Article policies and related intent/linking/overlap Decisions.
+
+
+## DEC-024 — Academy Course / Lesson Visible Content Standard
+
+**Status:** ACCEPTED
+
+- Academy is video-first practical/instructional content.
+- Each Lesson functions as a dedicated watch page with the primary video as dominant content.
+- Use natural H1 + clear visible video-lesson context + concise Lesson-specific introduction.
+- Supporting modules are optional and practical only: materials/tools, preparation, key steps, practical notes/warnings, genuinely used products/tools, related next Lesson/reference.
+- Full transcripts are optional; default to concise summaries/notes for short videos.
+- Academy owns practical/demo intent; Magazine owns explanatory/reference text-first intent.
+- Supporting Lesson text must not duplicate long-form Magazine content.
+- Course page is a concise educational hub for scope, video-learning format and Lesson navigation.
+- No generic long SEO copy or mandatory filler modules.
+- Overlap/cannibalization remains governed by DEC-119.
