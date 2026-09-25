@@ -3,9 +3,28 @@
 **Project:** Final SEO Mariwork  
 **Framework:** v1.0  
 **Framework state:** FROZEN  
-**Phase:** FULL-SITE PRE-IMPLEMENTATION AUDIT CLOSURE
-**Status:** CODEX_AUDITED — SECOND REVIEW PENDING
+**Phase:** FULL-SITE SECOND REVIEW / PRE-IMPLEMENTATION APPROVAL
+**Status:** SECOND_REVIEWED — HUMAN APPROVAL PENDING
 **Last framework review:** 2026-09-25
+
+## ChatGPT full-site Second Review — 2026-09-25
+
+Independent Second Review is complete and recorded in:
+
+- `audits/second-review/sitewide/SR-005-CHATGPT-FULL-SITE-SECOND-REVIEW.md`
+
+Result:
+
+- broad full-site audit/discovery is closed; do not restart it;
+- Store SR-004 remains operative and is confirmed by SR-005;
+- human approval is still required before Production implementation;
+- targeted work remains for `pa_volume` index/sitemap policy, tag migration mappings, selected historical mappings, LearnDash schema/video canary, representative visual ALT review, exact internal-link destinations, and final changed copy;
+- Page+Query data remains unavailable but does not block unrelated technical implementation;
+- closure bookkeeping is corrected for forward planning to **8 current Static/Core pages + 2 historical 404 Static dossiers**, rather than treating all 10 dossiers as current pages;
+- SR-005 added systemic findings `SYS-016` through `SYS-018`;
+- Production writes during Second Review: **0**.
+
+Implementation remains **NOT AUTHORIZED** until the owner approves the target states.
 
 ## Full-site closure — 2026-09-25
 
@@ -30,7 +49,7 @@ Current entities: **502** (147 public post entities + 355 taxonomy terms).
 Existing dossiers reused: **168**. New dossiers: **3**. Production writes:
 **0**.
 
-Second Review, approval, implementation, Codex QA after implementation and
+Second Review is now complete. Human approval, implementation, Codex QA after implementation and
 ChatGPT Final QA remain pending. `NOT_DECIDED` inventory dispositions are
 intentional at this stage; this closure does not approve redirects, noindex,
 canonical, sitemap, taxonomy, content, schema or URL changes.
