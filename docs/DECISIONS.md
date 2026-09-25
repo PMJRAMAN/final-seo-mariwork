@@ -946,3 +946,80 @@ Rules:
 - Author/reviewer/source presentation remains governed by DEC-085.
 - Content overlap/cannibalization remains governed by DEC-119.
 - Detailed body-content review of each individual Article is an implementation-stage content QA task after strategy approval, constrained by DEC-013, DEC-018, DEC-023, DEC-044, DEC-045, DEC-049, DEC-050, DEC-085, DEC-119 and DEC-123. It does not require a new strategy Decision unless a new material policy choice emerges.
+
+
+## DEC-024 — Academy Course / Lesson Visible Content Standard
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** ACADEMY / COURSE / LESSON / VISIBLE CONTENT
+
+### Accepted target state
+
+Mariwork Academy is a video-first practical/instructional content family.
+
+### Lesson pages
+
+Each published Lesson containing its primary instructional video functions as a dedicated video watch page.
+
+Required content principles:
+- The natural Lesson H1 identifies the instructional subject.
+- Visible context clearly identifies the content as a video lesson.
+- The primary video remains the dominant/main content of the page and is readily accessible without unrelated content obscuring it.
+- Include a concise, Lesson-specific introduction explaining what the user will see or learn.
+- Supporting text adds practical user value rather than turning the Lesson into a duplicate long-form Article.
+
+Optional supporting modules, only where genuinely useful:
+- materials/tools used;
+- preparation requirements;
+- key execution steps;
+- important practical notes or warnings;
+- products/tools genuinely used in the demonstration;
+- relevant next Lesson or deeper reference content.
+
+No module is mandatory merely to satisfy an SEO template.
+
+### Transcript policy
+
+Full transcripts are optional, not mandatory for every Lesson.
+
+Default to concise summaries and useful practical notes for short video lessons.
+
+A full or substantial transcript may be provided when it materially improves accessibility, comprehension, or preservation of important spoken instructional information.
+
+Do not generate transcripts merely to increase text volume or keyword coverage.
+
+### Academy ↔ Magazine boundary
+
+Academy owns practical/demo/video-first intent: “show me how this is done.”
+
+Magazine owns explanatory/reference/text-first intent: “explain what this is, why it matters, its types, context, comparisons, or deeper theory.”
+
+Supporting Lesson text must not reproduce a long-form Magazine Article on the same topic.
+
+Where both families cover the same subject:
+- Academy focuses on execution/demonstration;
+- Magazine focuses on explanation/reference depth;
+- they may contextually link to each other where useful.
+
+Substantial same-intent/same-content overlap remains governed by DEC-119.
+
+### Course page
+
+The Course page functions as an educational hub, not as a watch page or long-form Article.
+
+It should:
+- explain the Course scope concisely;
+- make its video-learning format clear;
+- organize and expose its Lessons clearly;
+- help users move from the Course overview to the appropriate video Lesson.
+
+Do not add long generic SEO content merely to increase page length.
+
+### Cross-decision boundaries
+
+- Lesson title/H1 and video-format title signaling: DEC-014.
+- Course/Lesson meta descriptions: DEC-019.
+- Video structured data/indexability: DEC-038 and related schema decisions.
+- Academy→Product/internal-link rules: dedicated internal-link Decisions.
+- Academy↔Magazine overlap/cannibalization: DEC-119.
+- Exact visual layout remains an implementation/design concern rather than a strategy requirement.
