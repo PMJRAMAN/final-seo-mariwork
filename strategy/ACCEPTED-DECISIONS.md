@@ -472,3 +472,18 @@ Rules:
 - Required operational follow-up: inventory and safely remove genuinely unused/orphaned media only after proving no references remain across content, Product galleries/featured images, Academy, taxonomies/static content, schema/metadata, CSS/JS/theme/plugin/custom-field/template/runtime dependencies.
 - Media cleanup must be backup/rollback-capable and batch/canary verified.
 - Reconcile the current 626-returned vs 845-advertised attachment discrepancy before bulk cleanup.
+
+
+## DEC-032 — Homepage Organization / WebSite / WebPage Schema Target
+
+**Status:** ACCEPTED
+
+- Keep one coherent Homepage graph: Organization + WebSite + WebPage.
+- Keep ImageObject only when genuinely referenced by the graph.
+- Homepage must not be Article.
+- Rank Math remains the primary JSON-LD/schema owner where supported.
+- Remove SearchAction as routine cleanup; Google's sitelinks search box feature is retired.
+- Organization properties must be factual and verified; do not force an ecommerce subtype solely because products are sold.
+- Do not add a second independent JSON-LD emitter for the same entities.
+- Review theme microdata for factual/conflict consistency rather than removing harmless markup blindly.
+- Validate rendered structured-data output after implementation.
