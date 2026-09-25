@@ -779,3 +779,77 @@ Owner clarification materially changes the Academy metadata policy:
 - Unique metadata must describe the specific Lesson/video.
 - Metadata alone is not sufficient to resolve Academy↔Magazine overlap; visible-content differentiation is governed by DEC-024 and overlap/cannibalization policy by DEC-119.
 - The previously accepted DEC-019 wording is not the current final target until this amendment is approved by the owner.
+
+
+## DEC-014 Amendment — Video-First Academy Titles
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Supersedes:** the prior DEC-014 default equality between Lesson H1 and Lesson SEO title where video-format differentiation is needed.
+
+### Accepted amended target state
+
+Mariwork Academy is video-first.
+
+Course:
+- Visible H1 remains the natural Course name.
+- SEO `<title>` should explicitly communicate the video format where useful.
+- Current Course target example: `راهنماهای یک دقیقه‌ای ماری‌ورک | آموزش‌های ویدیویی`.
+
+Lesson:
+- Visible H1 remains the natural instructional title.
+- Default Lesson SEO title pattern: `[Lesson H1] | آموزش ویدیویی`.
+- Example: H1 `چاپ سیلک اسکرین`; SEO title `چاپ سیلک اسکرین | آموزش ویدیویی`.
+
+Rules:
+- Do not append the old repetitive `- رنگ پارچه ماری ورک` suffix.
+- The `آموزش ویدیویی` qualifier is an Academy identity/search-intent signal, not a requirement imposed by Google.
+- Include `ماری‌ورک` only when it naturally belongs to the subject or Course identity.
+- Preserve numeric sequence only for genuine multi-part instructional sequences.
+- Existing clear natural H1s should be retained.
+- Title normalization must not trigger URL/slug changes.
+- Video/schema names should remain semantically consistent with the approved visible Lesson identity; schema ownership/eligibility remains governed by DEC-037 and DEC-038.
+
+
+## DEC-019 — Academy Video-First Meta Description Rule — Final Amendment
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Supersedes:** the reopened/pre-amendment DEC-019 wording.
+
+### Accepted target state
+
+Every current Mariwork Academy Lesson contains a primary video. Academy is therefore a **video-first practical/instructional content family**.
+
+Magazine remains a **text-first explanatory/reference/editorial content family**.
+
+Course metadata:
+- Must be page-specific.
+- Must summarize the educational scope/purpose of the Course.
+- Should communicate the video-led nature of the Course when relevant.
+
+Lesson metadata:
+- Must be page-specific.
+- Should explicitly communicate that the page is a video lesson.
+- Must describe the specific technique, task, concept, demonstration, or learning outcome covered by that Lesson.
+- Must not reuse metadata from unrelated Lessons.
+
+Existing metadata classification:
+- `KEEP` — accurate, page-specific, and already communicates the Lesson correctly.
+- `REFINE` — accurate but insufficiently focused or insufficiently clear about the video/lesson purpose.
+- `REWRITE` — duplicated, mismatched, generic, misleading, or not representative of the Lesson/video.
+- `FACT-CHECK REQUIRED` — contains technical, durability, safety, compatibility, performance, or other claims needing verification.
+
+Academy↔Magazine boundary:
+- Academy = practical/demo/video-first intent: users primarily come to watch how something is done.
+- Magazine = explanatory/reference/text-first intent: users primarily come to read and understand the topic.
+- A topic may exist in both families only when the user intent and page content are materially differentiated.
+- Metadata wording alone does not solve substantial same-intent/same-content overlap.
+- DEC-024 governs visible Academy supporting content and must preserve the video-first role.
+- DEC-119 governs overlap/cannibalization, differentiation, merge, and redirect decisions.
+
+Additional rules:
+- Visible context near the primary video should make the video format clear (for example, `آموزش ویدیویی`).
+- Do not use raw `%excerpt%` or a shared generic Academy description as the final strategy.
+- Do not mechanically inject `رنگ پارچه`, Mariwork branding, or other SEO keywords.
+- Do not impose a fixed 150/160-character limit.
+- Do not mechanically copy transcripts or first paragraphs into metadata.
+- Google may generate snippets from visible page content; supplied meta descriptions are not guaranteed SERP snippets.
