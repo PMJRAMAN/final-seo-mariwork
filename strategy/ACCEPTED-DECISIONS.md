@@ -669,3 +669,15 @@ Rules:
 - The relationship may be supplied through breadcrumb/navigation/taxonomy UI or another appropriate crawlable component.
 - Do not force redundant boilerplate parent links into body copy when the hierarchy is already clearly and crawlably represented.
 - Cross-family educational/commercial links remain governed by DEC-042–DEC-046.
+
+
+## DEC-042 — Product to Academy / Article Linking Rules
+
+**Status:** ACCEPTED
+
+- Product → Academy/Article links require direct usefulness for selecting, preparing, using, applying, fixing/curing, caring for, or otherwise correctly working with the Product or Product family.
+- Classify approved relationships as CORE/MANDATORY, FAMILY-SPECIFIC, or CONTEXTUAL/OPTIONAL under DEC-040.
+- Broad topical similarity alone does not justify a Product-page link.
+- Do not mass-add educational links merely to increase internal-link count.
+- Maintain exact approved destinations and family coverage in the Internal Link Requirement Matrix.
+- Reverse education/content → commercial linking remains governed by DEC-043 and DEC-044.
