@@ -2029,3 +2029,39 @@ SR-005 §17 and the initial Internal Link Requirement Matrix established the nee
 ### Exceptions
 
 A family member may omit an otherwise mandatory link only when a documented, approved exception explains why the relationship is not valid for that entity.
+
+
+## DEC-041 — Mandatory Parent/Hub Links by Family
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SITEWIDE / INTERNAL LINKING / INFORMATION ARCHITECTURE
+
+### Decision
+
+Each durable page family must maintain crawlable internal-link access to its deliberate parent/hub hierarchy.
+
+Required hierarchy:
+- Product → stable primary Product Category → Shop.
+- Child Product Category → real parent Product Category → Shop.
+- Current Guide → One-Minute Guides collection → Academy.
+- Future Lesson → genuine Course → Academy.
+- Article → stable primary Blog Category → Magazine.
+
+When an entity has multiple possible taxonomy parents, one deliberate stable primary hierarchy must be used rather than random parent selection.
+
+The required parent/hub relationship may be supplied through breadcrumb UI, navigation, taxonomy UI, or another appropriate crawlable component. DEC-041 does not require artificial boilerplate parent links inside body copy when the relationship is already clearly and crawlably represented.
+
+### Evidence
+
+The Internal Link Requirement Matrix draft requires exact durable destinations for mandatory family-level relationships. DEC-037 and DEC-039 already establish the semantic distinction between current Guides and future genuine Courses and define the corresponding hierarchy.
+
+### Consequences
+
+- Family-level QA must verify that required parent/hub relationships are crawlable and consistent.
+- Multi-parent Products and Articles require stable primary hierarchy selection.
+- Breadcrumb implementation may satisfy part of this requirement where its visible crawlable trail matches the accepted hierarchy.
+- Exact cross-family Product/Category ↔ Academy/Article relationships remain outside DEC-041.
+
+### Exceptions
+
+Cross-family educational/commercial links are not mandatory parent/hub links under this Decision and remain governed by DEC-042 through DEC-046.
