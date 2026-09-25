@@ -171,3 +171,19 @@ Rules:
 - Third-party/generic Products must not receive Mariwork branding through the SEO-title template.
 - Global template implementation remains blocked until DEC-008 is resolved.
 - Rollout requires regression checks for uniqueness, descriptiveness and duplicate-brand removal.
+
+
+## DEC-012 — Static / Core Page Title and H1 Policy
+
+**Status:** ACCEPTED
+
+- Static/Core pages use concise, page-specific SEO titles and clear visible H1s.
+- Repetitive suffixes such as `- رنگ پارچه ماری ورک` are not required when the page is already clearly identified.
+- About: `درباره ماری‌ورک` / H1 same.
+- Contact: `تماس با ماری‌ورک` / H1 `با ماری‌ورک در تماس باشید`.
+- Magazine: `مجله ماری‌ورک` / H1 same.
+- Why Mariwork: `چرا ماری‌ورک؟` / H1 `چرا رنگ پارچه ماری‌ورک؟`.
+- Stores: `فروشگاه‌های ماری‌ورک` / H1 `فروشگاه‌های ماری‌ورک نزدیک شما`.
+- FAQ: `سوالات متداول ماری‌ورک` / H1 `سوالات متداول`.
+- SEO title and H1 may differ, but they must describe the same page role/topic.
+- Creative taglines may remain as supporting copy, not as a replacement for a clear page-identity H1.
