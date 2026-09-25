@@ -244,3 +244,17 @@ Rules:
 - Do not derive Shop meta from archive templates or `%excerpt%`.
 - Avoid keyword stuffing and volatile counts/prices/discounts/stock.
 - Product Category metadata remains a separate decision domain.
+
+
+## DEC-017 — Static / Core Meta Description Strategy
+
+**Status:** ACCEPTED
+
+- Important Static/Core pages use explicit page-specific meta descriptions.
+- Do not rely on generic templates or `%excerpt%`.
+- Each description must accurately summarize that page's real role and visible content.
+- Avoid keyword stuffing and unsupported claims.
+- Meta descriptions need not repeat Title/H1.
+- No fixed 150/160-character rule.
+- Final copy must align with visible content and DEC-053 canonical brand facts.
+- Initial direction: About=story/activity/product focus; Contact=contact/support; Magazine=editorial/educational scope; Why Mariwork=features/use cases; Stores=physical points of sale; FAQ=common Product/educational questions.
