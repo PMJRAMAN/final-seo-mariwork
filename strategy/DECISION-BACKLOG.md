@@ -182,8 +182,8 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-032 | Homepage Organization/WebSite/WebPage schema target | DISCUSSING | SR-005 §4; current SEO output | Keep one owner; SearchAction low priority / retired sitelinks-search-box relevance |
-| DEC-033 | Static/Core WordPress Page schema policy | PROPOSED | SYS-016; SR-005 §5 | Proposed: remove generic Article default where semantics do not fit |
+| DEC-032 | Homepage Organization/WebSite/WebPage schema target | ACCEPTED | SR-005 §4; current SEO output; owner approval 2026-09-25 | Accepted: Homepage keeps one coherent Organization + WebSite + WebPage graph, with ImageObject only when genuinely referenced. Rank Math remains primary JSON-LD/schema owner where supported. Do not classify Homepage as Article. Remove SearchAction as routine cleanup because Google's sitelinks search box feature is retired; removal is simplification, not a ranking intervention. Organization properties must be factual/verified; do not force an ecommerce subtype solely because products are sold. Avoid second independent JSON-LD emitters for the same entities; theme microdata is reviewed for factual/conflict consistency rather than removed blindly. Rendered-output validation required after implementation. |
+| DEC-033 | Static/Core WordPress Page schema policy | DISCUSSING | SYS-016; SR-005 §5 | Proposed: remove generic Article default where semantics do not fit |
 | DEC-034 | Article schema policy | PROPOSED | SR-005 §7; current BlogPosting output | Current BlogPosting generally coherent |
 | DEC-035 | Product variation ProductGroup/variant schema architecture | PROPOSED | SR-004 SR-ST-004; variable-schema matrix | Canary required; Rank Math extension only if Free lacks capability |
 | DEC-036 | Bundle/set schema and visible component representation | PROPOSED | SR-004 SR-ST-005; bundle matrix | Bundle remains Product/Offer, not ProductGroup |
