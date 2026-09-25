@@ -579,3 +579,32 @@ This is a general policy. Exact per-Product meta copy is not fixed by this Decis
 - Do not reconstruct or restore historical Yoast descriptions merely because they previously existed.
 - Google may generate the search snippet from visible page content instead of the meta description; the meta description is an eligible descriptive source, not a guaranteed SERP snippet.
 - Final per-Product meta copy remains subject to the existing content-approval gate before Production.
+
+
+## DEC-016 — Shop Metadata Strategy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SHOP / METADATA
+
+### Accepted target state
+
+`/shop/` uses explicit, Shop-specific Rank Math metadata rather than generic archive/excerpt templates.
+
+Approved SEO title from DEC-003:
+
+`فروشگاه ماری‌ورک | رنگ پارچه، مدیوم، ست و ابزار`
+
+Approved meta description:
+
+`فروشگاه ماری‌ورک؛ خرید رنگ پارچه، مدیوم‌ها، ست‌های رنگ و ابزارهای مرتبط برای نقاشی و چاپ روی پارچه.`
+
+Rules:
+- Shop metadata must be explicitly defined for the Shop landing page.
+- Do not derive the Shop meta description from a generic archive template, `%excerpt%`, or strings such as `محصولات Archive`.
+- Preserve the DEC-003 Shop SEO title as the explicit target.
+- The meta description should summarize the Shop's broad commercial-discovery role.
+- Do not stuff category lists or repetitive keywords into the description.
+- Do not hard-code volatile product counts, prices, discounts, or stock state.
+- Update Shop metadata only when the actual Shop role/product scope materially changes.
+- Google may generate a different search snippet from visible page content.
+- Product Category metadata is governed separately.
