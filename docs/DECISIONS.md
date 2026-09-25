@@ -168,3 +168,51 @@ All autonomous Round-1 model calls are pinned to `gpt-5.6-luna` with `medium` re
 - Evidence reuse, grouped calls, batch sizing, Production read-only rules and human approval gates remain unchanged.
 
 This is an execution-model decision only and does not change SEO authority, lifecycle, audit coverage or Production permissions.
+
+
+## SEO-019 — Decision Backlog Before Execution
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PROCESS / OPERATIONS / CONTENT
+
+### Decision
+
+After Codex Audit and ChatGPT Second Review, Mariwork SEO enters a deliberate Strategy / Decision Phase before Production implementation.
+
+The workflow has three separate authorities:
+
+1. `MASTER-TODO.md` = complete-project coverage and program ordering.
+2. `strategy/DECISION-BACKLOG.md` = unresolved and accepted target-state decisions.
+3. `tasks/EXECUTION-BACKLOG.md` = implementation packages generated only from accepted decisions.
+
+No audit finding, Second Review recommendation, MASTER-TODO checkbox, or Codex suggestion by itself authorizes a Production write.
+
+A Codex Production implementation task may be issued only when:
+- all blocking Decision IDs are `ACCEPTED`;
+- the corresponding Execution item is `READY_FOR_TASK`;
+- exact target state and write scope are known;
+- required Change Dossier/canary/rollback/QA gates are satisfied;
+- final visible content is approved where applicable.
+
+Codex cannot mark strategy decisions `ACCEPTED` and cannot infer unresolved business/editorial strategy from audit evidence.
+
+### Evidence
+
+- Full-site audit closure: `af0cd7d9436291047ed8925d8c3391f032910ead`
+- ChatGPT full-site Second Review: `audits/second-review/sitewide/SR-005-CHATGPT-FULL-SITE-SECOND-REVIEW.md`
+- Existing M-02, M-07, M-11, M-15 and M-17 gates.
+- Owner requirement to complete target-state decisions collaboratively before generating the final implementation TODO and Codex tasks.
+
+### Consequences
+
+- Strategy may be decided incrementally over multiple sessions.
+- GitHub preserves every durable decision between sessions.
+- Execution work is derived from accepted decisions rather than from raw findings.
+- Independent scopes may be implemented earlier only when unresolved decisions cannot materially change them.
+- Cross-family changes such as internal linking remain locked until dependent family decisions are sufficiently stable.
+
+### Compatibility
+
+This is a backwards-compatible clarification of the existing approval/implementation workflow. It does not add or remove lifecycle statuses, change dossier identity, or transfer approval authority.
+
+Detailed rule: `docs/DECISION-TO-EXECUTION-GOVERNANCE.md`.
