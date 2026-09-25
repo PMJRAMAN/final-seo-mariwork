@@ -280,3 +280,20 @@ Operational, evidence or QA mechanics must not be promoted into Decision IDs mer
 ### Consequence
 
 Later title/meta/content/schema/internal-link/indexability decisions must preserve these family roles unless a later accepted decision explicitly supersedes this architecture.
+
+
+## DEC-002 — Homepage Role and Metadata Baseline
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** HOMEPAGE
+
+### Accepted target state
+
+- Homepage remains Mariwork's Brand/Entity + top-level navigation page.
+- Keep current Title as baseline: `رنگ پارچه ماری‌ورک | تولیدکننده تخصصی رنگ پارچه`.
+- Keep current H1 as baseline: `رنگ پارچه ماری‌ورک`.
+- Keep current Meta Description as baseline.
+- Do not expand Homepage title with additional category/product keyword stuffing.
+- H1 does not need to duplicate the full SEO title.
+- Future changes require materially better intent evidence, verified brand-fact changes, or a deliberate Homepage content-strategy change.
+- Brand factual claims such as «بیش از ۱۰ سال» remain subject to DEC-053 factual verification.
