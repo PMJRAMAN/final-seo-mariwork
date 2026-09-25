@@ -446,3 +446,15 @@ Rules:
 - Do not map by tag name or slug similarity alone.
 - URLs without a meaningful editorial replacement return 404/410; standard 404 is the default.
 - Preserve relevant historical evidence and QA internal links, redirects, sitemap leakage and soft 404s.
+
+
+## DEC-030 — Sitewide Sitemap Membership Policy
+
+**Status:** ACCEPTED
+
+- XML sitemap mirrors the approved canonical Search architecture only.
+- Include intentional canonical/indexable targets: Homepage, Shop, indexable Products, durable Product Categories, approved `pa_volume`, durable Static/Trust, Articles, durable Blog Categories, public/indexable Academy Course/Lessons, and future public/indexable Artists URLs after launch.
+- Exclude noindex utilities, tags, retired/empty taxonomies, deprecated categories, empty LearnDash categories, search/facet/sort/display/variation-query URLs, pagination, redirects, 404/410, legacy URLs, non-canonical duplicates and non-public content.
+- Sitemap membership follows indexability/canonical decisions; it never determines them.
+- `lastmod` reflects meaningful changes only.
+- Sitemap QA is a dedicated implementation/release gate: validate every emitted URL for 200, indexability, canonical self-consistency, correct family eligibility, and absence of redirects/errors/retired entities; also verify all approved sitemap families are present.
