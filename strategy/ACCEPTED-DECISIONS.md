@@ -621,3 +621,21 @@ Rules:
 - M-program inventory + two-guide canary required before rollout.
 - Verify prominence, fetchability, rendered visibility, schema and Search Console video indexing.
 - Video sitemap only for verified eligible watch pages.
+
+
+## DEC-039 — Breadcrumb Structured-Data Policy Across Store, Academy and Content
+
+**Status:** ACCEPTED
+
+- Use breadcrumbs only where a meaningful site hierarchy exists.
+- Breadcrumb trails represent typical user/navigation hierarchy, not mechanical URL paths.
+- Store: Shop → durable Product Category → Product.
+- Child Set categories preserve approved hierarchy; approved volume landing pages belong under Store, with exact naming deferred to DEC-116.
+- Magazine: Magazine → durable primary Blog Category → Article.
+- Current Guides: Academy → One-Minute Guides collection → Guide, aligned with DEC-037 and never represented as Course/Lesson.
+- Future genuine Courses: Academy → Course → Lesson.
+- Homepage, generic Static/Core pages and utility/noindex endpoints do not receive artificial breadcrumbs solely for schema coverage.
+- Multi-parent pages use one deliberate stable primary hierarchy.
+- Visible breadcrumb UI and structured-data hierarchy must agree.
+- Duplicate emitters are only temporarily acceptable when they express the exact same factual trail; conflicting trails must be eliminated.
+- Validate representative Store, Magazine, Guide Collection/Guide and future Course templates through rendered output and Rich Results testing.
