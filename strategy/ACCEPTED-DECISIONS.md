@@ -882,3 +882,15 @@ Rules:
 - Historical `?product-page=N` URLs should consolidate to the corresponding `/shop/page/N/` URL.
 - Do not maintain parallel pagination URL systems for the same Shop result pages.
 - Product, `pa_volume`, Store facet/sort/display and Product variation-preselection behavior remain governed separately.
+
+
+## DEC-061 — Product Search URL Policy
+
+**Status:** ACCEPTED
+
+- Internal Product search-result URLs remain user-facing utility pages.
+- Keep them `noindex` and out of XML sitemaps.
+- Do not optimize them as standalone Search landing pages.
+- Keep search functionality available to users.
+- Do not block crawling in a way that prevents the `noindex` directive from being seen.
+- Durable Product, Category, `pa_volume` and other approved landing pages remain the intended Search targets.
