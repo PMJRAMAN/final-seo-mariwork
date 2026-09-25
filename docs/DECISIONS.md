@@ -2012,3 +2012,27 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Multi-parent Products and Articles require stable primary hierarchy selection.
 - Breadcrumb implementation may satisfy part of this requirement where its visible crawlable trail matches the accepted hierarchy.
 
+
+
+## DEC-042 — Product to Academy / Article Linking Rules
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / INTERNAL LINKING / EDUCATIONAL CONTENT
+
+### Accepted target state
+
+- Product pages link to Academy Guides/Lessons or Magazine Articles only when the destination directly helps the user select, prepare, use, apply, fix/cure, care for, or otherwise correctly work with that Product or Product family.
+- Approved Product → education relationships are classified under DEC-040 as CORE/MANDATORY, FAMILY-SPECIFIC, or CONTEXTUAL/OPTIONAL.
+- A guide that provides an essential instruction shared by an entire Product family may become CORE/MANDATORY for that family.
+- Content relevant only to a defined Product family may be FAMILY-SPECIFIC.
+- Content useful only in a particular page context remains CONTEXTUAL/OPTIONAL.
+- Broad topical similarity alone does not justify adding a Product-page internal link.
+- Educational links must not be mass-added merely to increase internal-link count.
+- Exact approved destinations and family coverage are maintained in the Internal Link Requirement Matrix.
+
+### Consequences
+
+- Product-family QA must compare implemented educational links against the approved matrix.
+- Equivalent Products must not randomly omit CORE/MANDATORY relationships.
+- Historical, inspirational, or broadly related Articles are not automatically Product-page link targets.
+- Reverse Academy/Article → Product/Category rules remain governed by DEC-043 and DEC-044.
