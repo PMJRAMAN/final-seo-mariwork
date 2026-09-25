@@ -797,3 +797,22 @@ Rules:
 - `/artists/` and its profiles represent the separate Mariwork Artists directory/project.
 - Historical Artist URL migration remains governed by DEC-028 and is not reopened by DEC-052.
 - Artist selection, publishing volume, and detailed History editorial planning remain later content-strategy decisions.
+
+
+## DEC-053 — Canonical Mariwork Facts and Naming-Consistency Registry
+
+**Status:** ACCEPTED
+
+- The owner-confirmed registry in `strategy/BRAND-ENTITY-SEARCH.md` is the factual baseline for Mariwork brand/entity naming, content and schema work.
+- Canonical names: `ماری‌ورک` and `Mariwork`; website: `mariwork.ir`.
+- Founder: `مریم مختاری` / `Maryam Mokhtari`; canonical title: Founder of Mariwork.
+- Start year: 1395 SH; owner-confirmed experience claim: more than 10 years.
+- Mariwork is an Iranian specialist brand/business in fabric colors and specialist products for fabric painting and hand printing.
+- Mariwork fabric colors are for painting/printing on fabric, not dyeing, and must not be represented as ordinary acrylic paint; detailed technical differences require separate evidence.
+- Formulation is performed in Iran by Iranian engineers using foreign-origin materials; production, mixing, filling and final preparation are performed in Iran.
+- Core products are Mariwork-manufactured; third-party Other Tools items must not inherit Mariwork brand/manufacturer identity merely from being sold on the site.
+- Education is a genuine brand activity and developing the art through education is a main goal.
+- Third-party physical outlets are `فروشگاه‌های عرضه‌کننده محصولات ماری‌ورک`, not official/exclusive representatives or branches by default.
+- No public official physical brand address is currently defined.
+- Exact official social handles/URLs and phone/email/WhatsApp details remain deferred to DEC-127.
+- Do not infer or strengthen facts beyond the verified registry.
