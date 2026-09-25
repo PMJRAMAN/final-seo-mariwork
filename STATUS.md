@@ -4,20 +4,39 @@
 **Framework:** v1.0  
 **Framework state:** FROZEN  
 **Phase:** STRATEGY / DECISION PHASE
-**Status:** SECOND_REVIEWED — TARGET-STATE DECISIONS IN PROGRESS
+**Status:** DECISION BACKLOG V1 FROZEN — TARGET-STATE DECISIONS IN PROGRESS
 **Last framework review:** 2026-09-25
+
+## Decision Backlog v1 coverage freeze — 2026-09-25
+
+P-001 through P-005 are complete.
+
+- Decision coverage audit: completed by Codex.
+- ChatGPT P-002 independent review: complete.
+- Authoritative reconciliation: complete.
+- Canonical coverage matrix: **121 rows / zero unexplained material gaps**.
+- Decision Backlog authoritative range: **DEC-001 through DEC-120**.
+- Existing Decision IDs renumbered: **0**.
+- Production writes: **0**.
+
+The freeze applies to **decision-domain coverage**, not to the target states themselves.
+
+No OPEN / PROPOSED / NEEDS_TARGETED_EVIDENCE decision is considered approved merely because the backlog structure is frozen.
+
+Execution remains locked. P-006/P-007 are intentionally pending until the Execution Backlog is reconciled against this frozen structure before any implementation package is promoted to READY_FOR_TASK.
 
 ## Decision Backlog coverage freeze
 
 Before the Decision Backlog is treated as exhaustive implementation governance, it must pass the P-program coverage freeze:
 
-- P-000 ChatGPT preliminary precheck: recorded.
-- P-001 independent Codex Decision Backlog coverage audit: pending.
-- P-002 ChatGPT review of P-001: pending.
-- P-003/P-004 reconciliation and coverage matrix closure: pending.
-- P-005 Decision Backlog v1 freeze: pending.
+- P-000 ChatGPT preliminary precheck: complete.
+- P-001 independent Codex Decision Backlog coverage audit: complete.
+- P-002 ChatGPT review of P-001: complete.
+- P-003/P-004 reconciliation and coverage matrix closure: complete.
+- P-005 Decision Backlog v1 coverage freeze: complete.
+- P-006/P-007 Execution Backlog reconciliation: pending.
 
-Current authoritative Decision Backlog remains usable for discussion, but is **not yet frozen as exhaustive**.
+Current authoritative Decision Backlog is **FROZEN_V1_COVERAGE** and may now be used as the canonical strategy queue.
 
 Task: `tasks/P-001-DECISION-BACKLOG-COVERAGE-AUDIT.md`  
 Precheck: `audits/strategy/P-000-CHATGPT-DECISION-BACKLOG-PRECHECK.md`
