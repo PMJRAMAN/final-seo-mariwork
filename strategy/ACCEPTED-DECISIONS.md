@@ -218,3 +218,17 @@ Rules:
 - Rewrite only when materially vague, inaccurate, misleading, excessively verbose, or inconsistent with content.
 - Do not change URLs/slugs solely because titles are normalized.
 - Schema/video naming follows visible Lesson identity; schema ownership/eligibility remains DEC-037/038.
+
+
+## DEC-015 — Product Meta Description Strategy
+
+**Status:** ACCEPTED — GENERAL POLICY
+
+- `%excerpt%` is not the final default Product meta-description strategy.
+- Product metas must be page-specific, factual, concise, and based on verified Product data.
+- Avoid generic/history copy, duplicate descriptions, keyword stuffing, unsupported claims, and artificial Mariwork branding.
+- Do not impose a fixed 150/160-character rule.
+- Manual or programmatic generation is allowed when output is accurate, human-readable, and meaningfully page-specific.
+- Avoid hard-coded volatile price/stock facts without reliable synchronization.
+- Do not restore historical Yoast metadata by default.
+- Exact per-Product meta copy is deferred to implementation/content QA.
