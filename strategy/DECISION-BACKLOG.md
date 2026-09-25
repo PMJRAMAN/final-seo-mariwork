@@ -361,7 +361,7 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-127 | Official Mariwork social-profile registry and sameAs eligibility | NEEDS_TARGETED_EVIDENCE | owner-confirmed platforms; exact profile handles/URLs to be provided later | Confirmed official platforms: Instagram, YouTube, Telegram and Aparat. Collect and verify the exact official handle/URL for each before using it in Organization schema, `sameAs`, About/Contact content or other entity references. Do not infer profile URLs from brand-name similarity. |
+| DEC-127 | Official Mariwork social-profile and contact-channel registry | NEEDS_TARGETED_EVIDENCE | owner-confirmed platforms and contact channels; exact profile handles/URLs and contact details to be provided later | Confirmed official social platforms: Instagram, YouTube, Telegram and Aparat. Mariwork also has official brand contact channels including phone, email and WhatsApp. Collect and verify the exact official handle/URL and exact contact detail for each before using them in Organization schema, `sameAs`, Contact/About content or other entity references. Do not infer profile URLs, phone numbers, email addresses or WhatsApp details from brand-name similarity, historical data or unverified site output. |
 
 
 # Global constraints that apply to every decision
