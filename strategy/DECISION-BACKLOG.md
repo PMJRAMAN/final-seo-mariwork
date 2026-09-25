@@ -5,6 +5,7 @@
 **Codex authority:** evidence collection only; Codex cannot mark decisions `ACCEPTED`  
 **Baseline:** SR-004 + SR-005 and current audit repository  
 **Production implementation authorized by this file:** NO
+**Freeze state:** NOT_READY — P-003/P-004 reconciliation in progress
 
 See: `docs/DECISION-TO-EXECUTION-GOVERNANCE.md`.
 
@@ -39,7 +40,7 @@ After each discussion:
 | DEC-001 | Approve durable site-family roles: Homepage, Shop, Product Categories, Products, Academy, Magazine/Articles, durable Blog Categories, Static trust/support | PROPOSED | SR-005 §4–15; CONTENT-ARCHITECTURE | Foundation for linking/content decisions |
 | DEC-002 | Decide final Homepage role and whether current title/H1/meta remain the baseline | PROPOSED | WP-63; SR-005 §4 | Current state is coherent; no rewrite required by audit |
 | DEC-003 | Decide Shop target state: H1, visible role, title/meta and relationship to Product Categories | PROPOSED | SR-004 SR-ST-001; WP-30918 | Required before Shop implementation |
-| DEC-004 | Decide utility-page policy for Login, Fast Buy, Cart, Checkout and My Account | PROPOSED | SR-005 §5–6; WP-10/11/30919 | Proposed: utility/noindex where current role requires it |
+| DEC-004 | Cart / Checkout transactional utility-page policy | PROPOSED | SR-005 §6; WP-10/WP-30919 | Decide crawl/index role and state-safe behavior; no editorial optimization |
 | DEC-005 | Decide public role of current LearnDash Course Categories currently returning 404 | NEEDS_TARGETED_EVIDENCE | SR-005 §11; current SEO output | Verify whether terms are operationally needed before lifecycle decision |
 | DEC-006 | Decide durable vs transitional taxonomy architecture at site level | PROPOSED | SR-005; tag/category reconciliation | Product Tags and Blog Tags proposed transitional |
 
@@ -61,7 +62,7 @@ After each discussion:
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
 | DEC-015 | Product meta-description strategy | PROPOSED | SR-004 SR-ST-003 | Proposed: explicit factual descriptions; no Yoast reconstruction; prioritize broken/repeated/long descriptions |
-| DEC-016 | Product Category / Shop / volume landing meta strategy | OPEN | SR-004 SR-ST-001/006/007 | Decide explicit metadata vs templates and content source |
+| DEC-016 | Shop metadata strategy | OPEN | SR-004 SR-ST-001; WP-30918 | Decide explicit title/meta source and template behavior for Shop only |
 | DEC-017 | Static/Core meta-description strategy | PROPOSED | SR-005 §5 | Magazine missing; several pages have weak generic descriptions |
 | DEC-018 | Article meta-description update rule | OPEN | current article output | Decide when to retain, shorten, fact-check or rewrite |
 | DEC-019 | Academy course/lesson meta-description rule | OPEN | current course/lesson output | Decide family template vs page-specific copy |
@@ -118,17 +119,17 @@ After each discussion:
 | DEC-050 | Product vs Category vs Article query/content role boundary | OPEN | CONTENT-ARCHITECTURE; SR-004 | Page+Query unavailable; use user intent + SERP research where needed |
 | DEC-051 | Magazine hub and Blog Category hierarchy | OPEN | WP-70; categories 71/142 | Decide Magazine role and category visibility/navigation |
 | DEC-052 | History / Artists content strategy | NEEDS_TARGETED_EVIDENCE | legacy map; category state; current census | Current historical Artist URLs are not current public entities |
-| DEC-053 | Brand/trust content and canonical Mariwork facts | OPEN | Homepage/About/Why Mariwork; MASTER-TODO N | Facts must be verified before entity/brand consistency work |
+| DEC-053 | Canonical Mariwork facts and naming-consistency registry | NEEDS_TARGETED_EVIDENCE | BRAND-ENTITY-SEARCH; Homepage/About/Why Mariwork | Verify canonical brand facts/spelling before schema/content/entity changes |
 
 # Session 8 — Images and video
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
 | DEC-054 | ALT policy by image role | PROPOSED | SYS-015; IMAGE-ALT-AUDIT-SUMMARY | Informative vs decorative first; no keyword stuffing |
-| DEC-055 | Family-level image sampling and rollout method | PROPOSED | SR-005 §18 | Start representative visual review rather than mass fill |
+| DEC-055 | SUPERSEDED — image sampling belongs to evidence/QA, not target-state strategy | SUPERSEDED | P-002; SR-005 §18 | Sampling remains required operationally; rollout governance is DEC-068 |
 | DEC-056 | Product image/gallery SEO policy | NEEDS_TARGETED_EVIDENCE | Store evidence + MASTER-TODO L | Requires visual/primary-image review |
 | DEC-057 | Article/Academy instructional image policy | NEEDS_TARGETED_EVIDENCE | SYS-010/011 | Visual-purpose review required |
-| DEC-058 | Video inventory, transcript/summary, thumbnail and host-page policy | NEEDS_TARGETED_EVIDENCE | MASTER-TODO M; SYS-017 | Full video inventory not yet strategy-locked |
+| DEC-058 | SUPERSEDED — broad video policy replaced by atomic video decisions | SUPERSEDED | P-002; MASTER-TODO M; SYS-017 | Video inventory is evidence; VideoObject remains DEC-038; atomic video policies are separate |
 
 # Session 9 — System URLs, facets and legacy migration
 
@@ -137,7 +138,7 @@ After each discussion:
 | DEC-059 | Store facets/sort/display parameter policy | PROPOSED | SR-004 SR-ST-008; SR-005 §16 | Separate crawl traps from variant preselection before any blocking |
 | DEC-060 | Shop pagination and legacy `product-page` policy | PROPOSED | parameter evidence | Keep normal pagination; stop/consolidate legacy alternate where approved |
 | DEC-061 | Product search URL policy | PROPOSED | SR-004 | Keep noindex |
-| DEC-062 | Author/date/feed/search/404 family policies | PROPOSED | SYSTEM-URL-SPACES-CLOSURE | Most are system-policy decisions, not content work |
+| DEC-062 | Author/date archive public/indexability policy | PROPOSED | SYSTEM-URL-SPACES-CLOSURE | Keep archive policy distinct from feed, internal search and 404/error lifecycle |
 | DEC-063 | Legacy URL prioritization rule | PROPOSED | SR-005 §19; A-012 | Prioritize URLs with meaningful historical evidence/value |
 | DEC-064 | Legacy product-volume mapping disposition | NEEDS_TARGETED_EVIDENCE | legacy-volume-url-map | 68 partial + 14 unknown remain |
 | DEC-065 | Historical Education → Academy mappings | NEEDS_TARGETED_EVIDENCE | education-academy-migration-map | 36 partial + 5 unknown remain |
@@ -149,11 +150,105 @@ After each discussion:
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
 | DEC-068 | Canary size and rollout rules by change class | OPEN | M-15; change templates | Define practical samples for metadata/schema/content/link changes |
-| DEC-069 | Monitoring windows and success metrics | OPEN | M-18; MASTER-TODO J | Separate technical correctness from ranking/business outcome |
+| DEC-069 | Monitoring windows and core success metrics | OPEN | M-18; MEASUREMENT-SPEC; MASTER-TODO J | Define 28/56-day defaults, comparable windows and core search/business metrics |
 | DEC-070 | Strategy Lock scope for first implementation wave | OPEN | governance + accepted decisions | Decide which accepted decisions form first coherent rollout |
 | DEC-071 | External PR / advertorial strategy | DEFERRED | MASTER-TODO K | Decide after internal architecture/landing pages stabilize |
-| DEC-072 | Merchant Center / product feed program | DEFERRED | MASTER-TODO O | Requires separate eligibility/feed review |
-| DEC-073 | Reviews/social-proof program | DEFERRED | MASTER-TODO O | Requires genuine review-data audit |
+| DEC-072 | Merchant Center / Free Listings program entry and eligibility | DEFERRED | MASTER-TODO O-001/O-003 | Keep separate from Product Feed architecture/data contract |
+| DEC-073 | Genuine reviews/social-proof collection and visible-display policy | DEFERRED | MASTER-TODO O-007/O-009 | Genuine-data policy only; structured-data eligibility is a separate decision |
+
+
+# Session 11 — System utility, metadata and URL architecture additions
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-074 | Login / My Account authentication/account-page policy | PROPOSED | SR-005 §5–6; current SEO output | Decide crawl/index role, privacy boundary and no-content-optimization policy |
+| DEC-075 | Fast Buy utility/landing-page policy | PROPOSED | current SEO output; WP-30991 | Decide whether Fast Buy remains utility/noindex or becomes a deliberate landing page |
+| DEC-076 | Durable Product Category metadata strategy | OPEN | SR-004 SR-ST-006; B7 | Separate from Shop and pa_volume metadata |
+| DEC-077 | pa_volume metadata strategy | OPEN | SR-004 SR-ST-007; DEC-026 | Only relevant if volume archives remain durable public targets |
+| DEC-078 | Preferred host/protocol, trailing-slash and future URL-normalization policy | OPEN | SITEWIDE-TECHNICAL-AUDIT-SPEC A/E; I-005/I-007 | Parent rule for future canonical/redirect consistency |
+| DEC-079 | Sitewide canonical and duplicate-URL architecture | OPEN | SITEWIDE-TECHNICAL-AUDIT-SPEC E; SYS-006 | Parent for alternate URL spaces; family exceptions remain separate |
+| DEC-080 | Critical JS/AJAX content and crawlable-link discoverability policy | NEEDS_TARGETED_EVIDENCE | SITEWIDE-TECHNICAL-AUDIT-SPEC G | Requires representative rendered/initial-HTML evidence before implementation |
+
+# Session 12 — Product facts, lifecycle and commercial data
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-081 | Product identity source of truth for SKU / GTIN / MPN / brand | NEEDS_TARGETED_EVIDENCE | SR-004 SR-ST-004; MASTER-TODO O | Precedes ProductGroup/Offer/feed identity implementation |
+| DEC-082 | Product commercial-fact source of truth for price / currency / sale / availability | NEEDS_TARGETED_EVIDENCE | SITEWIDE-TECHNICAL-AUDIT-SPEC H/I; Store evidence | Visible Woo facts and structured data must agree |
+| DEC-083 | Out-of-stock versus discontinued Product lifecycle | OPEN | SYS-003; Store/Product architecture | Decide indexability, availability, links and eventual removal/redirect behavior |
+| DEC-084 | Future Product URL/slug change and history-preservation policy | OPEN | SYS-003; B0-012 | Variant-preselection behavior is not part of this decision |
+| DEC-113 | Shipping / returns source-of-truth and structured-data/feed policy | NEEDS_TARGETED_EVIDENCE | SITEWIDE-TECHNICAL-AUDIT-SPEC H; MASTER-TODO O | Only implement factual policies/data actually supported by Woo/business rules |
+
+# Session 13 — Editorial trust and family-specific content semantics
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-085 | Editorial author / reviewer / date / source / citation provenance policy | OPEN | CONTENT-RESEARCH-SPEC §§8–9; E1/F1 | Applies where factual/technical claims need provenance; no invented credentials |
+| DEC-086 | FAQ visible-content versus structured-data boundary | OPEN | WP-32895; SR-005 §5 | Semantic correctness first; no rich-result promise |
+| DEC-087 | Stores/location/NAP and local-trust content role | NEEDS_TARGETED_EVIDENCE | WP-14760; BRAND-ENTITY-SEARCH | Requires verified store/address/contact facts |
+| DEC-088 | Informational Article/Academy commercial CTA policy | OPEN | CONTENT-RESEARCH-SPEC §7; DEC-042–046 | Separate useful CTA policy from mechanical internal linking |
+| DEC-114 | Homepage visible content and CTA structure | OPEN | C-009; WP-63; SR-005 §4 | Separate content/CTA structure from Homepage title/H1/meta baseline |
+| DEC-115 | Durable Product Category title/H1 naming standard | OPEN | B7; SR-004 SR-ST-006 | Separate from metadata and visible intro/content |
+| DEC-116 | pa_volume title/H1 naming standard | OPEN | DEC-026; SR-004 SR-ST-007 | Only relevant if archive role is retained |
+| DEC-117 | pa_volume visible landing-content standard | OPEN | DEC-026; SR-005 §13 | No artificial text; define useful distinct value if retained indexable |
+| DEC-118 | Durable Blog Category presentation/content standard | OPEN | DEC-028; current-blog-category-matrix | Covers title/H1/meta/visible hub treatment for durable categories only |
+| DEC-119 | Content overlap/cannibalization resolution policy | OPEN | CONTENT-RESEARCH-SPEC §4; I-012; DEC-049/050 | Differentiate/merge/redirect only with evidence; no Page→Query inference |
+
+# Session 14 — Image policy additions
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-089 | Image filename and media naming policy for new assets | OPEN | VISUAL-IMAGE-SEO; L-005 | No historical bulk rename implied |
+| DEC-090 | Primary/representative image, gallery consistency and duplicate/reuse policy | NEEDS_TARGETED_EVIDENCE | VISUAL-IMAGE-SEO; L-002/L-006/L-008 | Requires representative visual review |
+| DEC-091 | Image context, caption and linked-image behavior policy | OPEN | VISUAL-IMAGE-SEO; L-008 | Decide contextual text/link behavior separately from image discovery |
+| DEC-092 | Image discovery/indexability/sitemap treatment | NEEDS_TARGETED_EVIDENCE | SITEWIDE-TECHNICAL-AUDIT-SPEC J; L-007 | Only where an image-discovery mechanism is actually relevant |
+| DEC-093 | Image technical delivery policy: dimensions, formats, srcset, lazy loading and LCP interaction | NEEDS_TARGETED_EVIDENCE | VISUAL-IMAGE-SEO; L-009 | Coordinate with DEC-111; no performance claim without field/lab evidence |
+
+# Session 15 — Atomic Video SEO decisions
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-094 | Video host-page, fetchability, prominence and player/embed policy | NEEDS_TARGETED_EVIDENCE | VIDEO-SEO; M-002/M-003; SR-005 §10 | Precedes broad video structured-data implementation |
+| DEC-095 | Video title / description / reusable naming standard | OPEN | VIDEO-SEO; M-004/M-008 | Visible/contextual metadata, not VideoObject ownership |
+| DEC-096 | Video thumbnail quality, uniqueness and representative-thumbnail policy | OPEN | VIDEO-SEO; M-006 | Factual/representative thumbnails only |
+| DEC-097 | Video transcript / summary / key-text policy | OPEN | VIDEO-SEO; M-007 | Use when useful; no mandatory transcript for every video without reason |
+| DEC-098 | Duplicate / orphan / weak-context video lifecycle | OPEN | VIDEO-SEO; M-010/M-011 | Cross-family linking remains governed by DEC-040–048 |
+
+# Session 16 — Brand / Entity atomic decisions
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-099 | Brand/trust site-content and entity-supporting page strategy | OPEN | BRAND-ENTITY-SEARCH; Homepage/About/Why/Contact | Uses verified facts from DEC-053 |
+| DEC-100 | Branded query and landing-page role strategy | OPEN | BRAND-ENTITY-SEARCH; N-002/N-007 | Query ownership requires joined evidence or direct research |
+| DEC-101 | Verified off-site entity-reference and PR/entity evidence boundary | DEFERRED | BRAND-ENTITY-SEARCH; EXTERNAL-PR-STRATEGY | No invented relationships; coordinate with DEC-071 |
+
+# Session 17 — Measurement, maintenance and deferred expansion
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-102 | Release isolation, change annotation and comparable measurement-baseline policy | OPEN | MEASUREMENT-SPEC §§1–3 | Required before meaningful causal interpretation |
+| DEC-103 | Monitoring KEEP / ITERATE / ROLLBACK-CANDIDATE interpretation | OPEN | MEASUREMENT-SPEC §§4–7 | Separate from cadence and raw metrics |
+| DEC-104 | Maintenance triggers for updates, Google changes, new URLs/404s and freshness | OPEN | MASTER-TODO J-003–J-009 | Recurring triage policy |
+| DEC-105 | Product Feed identity/variant/data-contract architecture | DEFERRED | MASTER-TODO O-004–O-006; DEC-072 | Split further before implementation if one target state is still ambiguous |
+| DEC-106 | Review/rating structured-data eligibility and ownership | DEFERRED | MASTER-TODO O-007–O-009; DEC-073 | Requires genuine review data; no fabricated ratings |
+
+# Session 18 — System URL spaces, crawler access and page experience
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-107 | Feed URL crawl/index policy | OPEN | SYSTEM-URL-SPACES-CLOSURE; H-007 | Separate from author/date archives and internal search |
+| DEC-108 | General internal-search result URL policy | PROPOSED | SYSTEM-URL-SPACES-CLOSURE; H-006 | Product Search remains DEC-061 |
+| DEC-109 | 404 / soft-404 / error-page lifecycle policy | OPEN | SYS-003; SYSTEM-URL-SPACES-CLOSURE; I-004 | Separate source-level migration mapping from general error behavior |
+| DEC-110 | Search-crawler access policy for Googlebot / OAI-SearchBot and training-crawler separation | NEEDS_TARGETED_EVIDENCE | SITEWIDE-TECHNICAL-AUDIT-SPEC L; I-014 | WAF/CDN/server evidence required; GPTBot and ChatGPT-User are separate concerns |
+| DEC-111 | Mobile / Core Web Vitals / Page Experience remediation policy | NEEDS_TARGETED_EVIDENCE | SITEWIDE-TECHNICAL-AUDIT-SPEC K; I-013 | Field vs lab evidence hierarchy; no ranking guarantee |
+| DEC-112 | Concern-by-concern SEO technical-owner target matrix | OPEN | SEO-OWNERSHIP; current ownership matrix; SYS-001/SYS-006 reconciliation | Apply Rank-Math-first rule to title/meta/robots/canonical/sitemap/schema/redirect/server controls |
+
+# Session 19 — Navigation architecture completeness
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-120 | Global header/footer/navigation SEO link architecture | OPEN | current internal-link graph; Homepage navigation; INTERNAL-LINK-ARCHITECTURE | Define durable hub exposure separately from contextual body-link rules |
+
 
 ---
 
