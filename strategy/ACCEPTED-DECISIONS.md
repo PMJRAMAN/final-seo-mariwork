@@ -693,3 +693,15 @@ Rules:
 - Prefer the relevant Product Category when the user needs to choose among suitable products in a family.
 - Do not add generic or unrelated commercial links merely to increase internal-link volume.
 - Apply the DEC-040 classification model and maintain approved relationships in the Internal Link Requirement Matrix.
+
+
+## DEC-044 — Article to Product / Category Linking Rules
+
+**Status:** ACCEPTED
+
+- Article → Product/Category links require a directly relevant and useful commercial next step.
+- Prefer a specific Product for product-specific relevance and a Product Category when the reader reasonably needs to choose among a family.
+- There is no sitewide requirement for every Article to contain a commercial link.
+- Informational Articles may legitimately contain no commercial destination.
+- Do not add unrelated or generic commercial links merely to increase internal-link volume or SEO coverage.
+- Apply DEC-040 classification and maintain approved relationships in the Internal Link Requirement Matrix.
