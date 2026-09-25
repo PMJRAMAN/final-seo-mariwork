@@ -929,3 +929,14 @@ Rules:
 - Existing 301 behavior must be audited first; do not recreate redirects blindly.
 - Redirect owner, including possible Nginx ownership, must be verified rather than assumed.
 - Existing parent-Product redirects should be preserved or refined only where needed to retain the proven historical volume selection.
+
+
+## DEC-065 — Historical Education → Academy Mappings
+
+**Status:** ACCEPTED
+
+- Existing one-to-one 301 redirects from historical `/education/.../` lesson URLs to the corresponding Academy lessons are the intended target state when identity matches.
+- Current evidence already shows 36 such mappings; preserve them rather than rebuilding the migration.
+- Verify the current redirect owner before implementation changes.
+- Remaining archive/pagination/feed UNKNOWNs are separate from Lesson mappings and require their own disposition.
+- Do not infer destinations from slug similarity alone.
