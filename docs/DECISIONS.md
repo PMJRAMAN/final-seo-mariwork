@@ -216,3 +216,45 @@ Codex cannot mark strategy decisions `ACCEPTED` and cannot infer unresolved busi
 This is a backwards-compatible clarification of the existing approval/implementation workflow. It does not add or remove lifecycle statuses, change dossier identity, or transfer approval authority.
 
 Detailed rule: `docs/DECISION-TO-EXECUTION-GOVERNANCE.md`.
+
+
+## SEO-020 — Decision Backlog v1 Coverage Freeze
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PROCESS / STRATEGY
+
+### Decision
+
+The **coverage/structure** of the Mariwork SEO Decision Backlog is frozen as v1 after P-001 through P-004 reconciliation.
+
+Canonical decision range:
+
+`DEC-001`–`DEC-120`
+
+P-004 reports zero unexplained material decision-domain gaps.
+
+This freeze means the project may begin owner + ChatGPT decision sessions using the Decision Backlog as the canonical strategy queue.
+
+It does **not** accept the target state of any OPEN, PROPOSED or NEEDS_TARGETED_EVIDENCE item and does not authorize Production.
+
+### Evidence
+
+- `audits/strategy/DECISION-BACKLOG-COVERAGE-AUDIT.md`
+- `audits/strategy/P-002-CHATGPT-DECISION-COVERAGE-REVIEW.md`
+- `audits/strategy/P-003-DECISION-BACKLOG-RECONCILIATION.md`
+- `audits/strategy/P-004-CANONICAL-DECISION-COVERAGE-MATRIX.json`
+- `audits/strategy/P-004-DECISION-COVERAGE-CLOSURE.md`
+
+### Change rule
+
+New Decision IDs may be appended only when future discovery or platform/site changes introduce a genuinely new material target-state choice.
+
+Existing Decision IDs are never renumbered.
+
+Operational, evidence or QA mechanics must not be promoted into Decision IDs merely to increase coverage count.
+
+### Consequences
+
+- Decision sessions may now start.
+- Execution packages remain locked until their blocking decisions are ACCEPTED.
+- P-006/P-007 must reconcile Execution Backlog dependencies against the frozen v1 Decision range before an EXE item can become READY_FOR_TASK.
