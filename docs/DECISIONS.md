@@ -608,3 +608,31 @@ Rules:
 - Update Shop metadata only when the actual Shop role/product scope materially changes.
 - Google may generate a different search snippet from visible page content.
 - Product Category metadata is governed separately.
+
+
+## DEC-017 — Static / Core Meta Description Strategy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** STATIC / CORE / META DESCRIPTION
+
+### Accepted target state
+
+Important Static/Core pages use explicit, page-specific meta descriptions rather than generic templates or raw excerpts.
+
+Rules:
+- Write a dedicated meta description for each important Static/Core page.
+- The description must accurately summarize that page's actual role and visible content.
+- Do not rely on generic phrases, shared templates, or `%excerpt%`.
+- Avoid keyword stuffing and unsupported brand/product claims.
+- Meta descriptions do not need to repeat the SEO title or H1 verbatim.
+- Do not impose a fixed 150/160-character rule; prioritize concise and sufficiently descriptive copy.
+- Google may generate the search snippet from visible page content instead of the supplied meta description.
+- Final copy must remain factually aligned with the final visible page content and any canonical brand facts governed by DEC-053.
+
+Initial page-specific direction:
+- About: describe Mariwork's story, activity and product focus.
+- Contact: describe available contact/support purposes.
+- Magazine: describe the editorial/educational content scope.
+- Why Mariwork: describe the page's explanation of Mariwork fabric-paint features/use cases.
+- Stores: describe discovery of physical points of sale.
+- FAQ: describe answers to common Product and educational questions.
