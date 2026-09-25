@@ -2103,3 +2103,24 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Article-family QA evaluates editorial/educational links by relevance and usefulness rather than raw link count.
 - An Article may legitimately have no Article/Academy contextual link when no useful destination exists.
 - The execution matrix must identify approved mandatory/family-specific relationships separately from page-level contextual candidates.
+
+
+## DEC-046 — Category to Education / Reference Linking Rules
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT CATEGORY / INTERNAL LINKING / CONTENT LANDINGS
+
+### Accepted target state
+
+- Product Category archives are not required to add Academy or Article links while they remain product-listing-only archives.
+- Category → Academy/Article linking becomes appropriate when a Product Category is deliberately developed into a content-supported landing page.
+- On a content-supported Category landing page, selected educational/reference destinations must directly support understanding, selection, preparation, use, technique, or care for that Product Category.
+- Do not add generic sitewide education/reference link sets to Category archives solely to increase internal-link coverage.
+- A Category landing page may contain no educational/reference link when no sufficiently relevant destination exists.
+- The content structure, required sections, depth, and editorial requirements for Product Category landing pages are not defined by this decision and require a separate content decision before implementation.
+
+### Consequences
+
+- Current listing-only Category archives do not require artificial educational-link modules.
+- Future Category landing-page content may create natural Category → Academy/Article relationships.
+- Category landing-page content requirements must be explicitly decided before implementation.
