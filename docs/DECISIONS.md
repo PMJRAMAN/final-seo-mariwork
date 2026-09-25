@@ -365,3 +365,29 @@ Mariwork taxonomy architecture is intentionally selective.
 - Product Tags, Blog Tags, migration-era Product Categories, empty LearnDash categories, and other transitional or empty taxonomies are not durable SEO entities.
 - Transitional or empty taxonomies must not be promoted through sitemap membership, navigation, or SEO content merely because they exist in WordPress.
 - Every taxonomy family requires its own lifecycle and indexability decision before implementation.
+
+
+## DEC-007 — Fabric-Color Product Naming Standard
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / FABRIC COLORS
+
+### Accepted target state
+
+The canonical visible Product title/H1 pattern for Mariwork fabric-color products is:
+
+`رنگ پارچه [Color Name] ماری ورک کد [NNN]`
+
+Rules:
+- Start with the product type `رنگ پارچه`.
+- Follow with the exact factual color name.
+- Include the canonical Mariwork brand spelling.
+- End with the stable product code.
+- Do not use decorative separators such as `|` or `-` inside the visible Product title/H1.
+- Use one consistent numeral system for product codes; Latin digits are preferred for identifier consistency.
+- Do not add 30/60/250 ml volume tokens to the parent Product title when those volumes are variants of the same Product.
+- Visible-title normalization must not trigger mass Product URL/slug changes.
+- SEO `<title>` template behavior is governed separately by DEC-011.
+- Final Mariwork brand spelling follows DEC-053.
+- Persian half-space usage is a writing and brand-consistency standard, not a standalone SEO requirement.
+- Do not perform bulk URL or content changes solely to normalize half-space usage.
