@@ -1228,6 +1228,8 @@ Once the new Artists system is public and stable:
 
 Identity matching must be based on actual Artist identity, not slug similarity alone.
 
+**Amendment:** DEC-066 supersedes the fallback disposition for historical Artist URLs. Final per-URL disposition is deferred until the new `/artists/` system is public and stable; after launch, historical Artist URLs are reviewed manually and may receive a verified 301 or a proper 404. Unmatched Artist URLs are no longer precommitted to redirect to the Artists hub.
+
 ### Other empty Blog Categories
 
 All other empty Blog Categories are approved for controlled deletion, including current empty Education/video, Cultural, Guides, Literature, Uncategorized variants, Free, General, Paid, and other empty non-Artist terms.
@@ -2544,3 +2546,26 @@ Google requires Product structured-data images to represent the marked-up Produc
 
 - Current correct Education → Academy lesson redirects remain in place.
 - Implementation work is limited to verification, ownership identification, regression checks and resolving the small set of non-Lesson unknowns.
+
+
+## DEC-066 — Historical Artist URL Disposition Timing
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** ARTISTS / LEGACY URLS / POST-LAUNCH MIGRATION
+
+### Accepted target state
+
+- Final disposition of historical Artist URLs is deferred until the new `/artists/` system is public and stable.
+- After launch, historical Artist URLs are reviewed manually, URL by URL.
+- A historical Artist URL receives a 301 only when a genuine, verified semantic successor is established.
+- If no appropriate successor is established, the historical URL may remain or return a proper 404 according to the post-launch review.
+- Historical Artist URLs are not precommitted to redirect to the main Artists hub.
+- Do not infer Artist identity from slug or name similarity alone.
+- This decision supersedes only the historical-Artist redirect fallback previously stated in DEC-028 and referenced by DEC-052.
+- All other accepted Artist architecture, role and content decisions remain unchanged.
+
+### Consequences
+
+- No Artist legacy redirect implementation should be finalized before the new Artists system launches and stabilizes.
+- The post-launch migration pass requires manual identity review and explicit per-URL disposition.
+- Non-Artist removed-content URLs are separated into DEC-128 rather than being decided under this Artist-specific decision.
