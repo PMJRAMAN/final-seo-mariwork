@@ -258,3 +258,25 @@ Operational, evidence or QA mechanics must not be promoted into Decision IDs mer
 - Decision sessions may now start.
 - Execution packages remain locked until their blocking decisions are ACCEPTED.
 - P-006/P-007 must reconcile Execution Backlog dependencies against the frozen v1 Decision range before an EXE item can become READY_FOR_TASK.
+
+
+## DEC-001 — Durable Site-Family Roles
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SITEWIDE / INFORMATION ARCHITECTURE
+
+### Accepted target state
+
+- Homepage = brand/entity and primary navigation root.
+- Shop = broad commercial discovery hub.
+- Durable Product Categories = commercial category hubs for real stable product families.
+- Product pages = exact transactional entities.
+- Academy / Course / Lessons = structured educational content.
+- Magazine / Articles = informational/reference content.
+- Only genuinely useful, populated Blog Categories = editorial content hubs.
+- Static pages = trust/support entities such as About, Why Mariwork, Contact, Stores and FAQ.
+- Transitional, empty, utility, machine and legacy URL spaces are not promoted to durable content families by this decision; their dedicated DEC items govern them.
+
+### Consequence
+
+Later title/meta/content/schema/internal-link/indexability decisions must preserve these family roles unless a later accepted decision explicitly supersedes this architecture.
