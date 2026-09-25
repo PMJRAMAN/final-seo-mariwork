@@ -2233,3 +2233,24 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 
 - Magazine navigation and discovery should preserve `/mag/` as the central editorial hub.
 - Category architecture may evolve without changing the hub role established by this decision.
+
+
+## DEC-052 — History / Artists Content Strategy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MAGAZINE / HISTORY / ARTISTS BOUNDARY
+
+### Accepted target state
+
+- Historical and globally significant artists may be covered as Magazine Articles when they have genuine editorial, artistic, or historical value.
+- History content about art, fabric painting, hand printing, techniques, movements, and relevant artists belongs to the Magazine editorial architecture.
+- A Magazine Article about an artist is editorial content and is not an Artist profile merely because its subject is an artist.
+- The future `/artists/` hub and its profiles represent the separate Mariwork Artists directory/project.
+- Historical Artist URL migration remains governed by DEC-028: use one-to-one identity-matched redirects to new Artist profiles where a real match exists; otherwise use the main Artists hub as the approved fallback, and consolidate the old Artists archive to that hub after the new system is public and stable.
+- DEC-052 does not define which artists must be covered, publishing volume, or a detailed History editorial calendar.
+
+### Consequences
+
+- Magazine History/artist editorial content and Mariwork Artist profiles remain separate content families with separate roles.
+- DEC-052 does not supersede or reopen the Artists migration policy accepted in DEC-028.
+- Detailed History editorial planning remains a later content-strategy decision.
