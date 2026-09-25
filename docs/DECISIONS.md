@@ -1478,3 +1478,33 @@ SEO `<title>` relationship remains governed by DEC-011.
 ### DEC-011 dependency update
 
 DEC-008 is no longer deferred. The DEC-011 Product title-template rollout is no longer blocked by DEC-008; it remains subject to normal implementation QA and the other accepted Product naming decisions.
+
+
+## DEC-033 — Static/Core WordPress Page Schema Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** STATIC / CORE PAGES / STRUCTURED DATA / SCHEMA OWNERSHIP
+
+### Accepted target state
+
+The generic WordPress `page` post type must not automatically receive `Article` structured data.
+
+Structured data must reflect the actual role of each page rather than its CMS post type.
+
+Target:
+- About → `WebPage`
+- Contact → `WebPage`
+- Why Mariwork → `WebPage`
+- Stores → `WebPage`, with store/local entity treatment governed separately
+- FAQ → `WebPage`, with FAQ-specific schema governed separately by DEC-086
+- Login → utility `WebPage`, noindex
+- Fast Buy → utility `WebPage`, noindex
+- Magazine hub → retain appropriate `CollectionPage`
+
+Remove `Article` and Article-derived author `Person` nodes from generic Static/Core pages unless a page genuinely functions as an article or person/profile entity.
+
+Shared Organization/WebSite references may remain when they use the authoritative site entity IDs; do not emit conflicting duplicate entities per page.
+
+Rank Math remains the primary schema owner where supported.
+
+Roll out with representative canary pages and rendered JSON-LD regression validation before family-wide application.
