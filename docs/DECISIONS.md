@@ -2434,3 +2434,25 @@ Google requires Product structured-data images to represent the marked-up Produc
 
 - Shop pagination has one durable URL pattern.
 - Legacy `product-page` URLs become migration/consolidation concerns rather than a second active pagination family.
+
+
+## DEC-061 — Product Search URL Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** INTERNAL PRODUCT SEARCH / INDEXABILITY / UTILITY URLS
+
+### Accepted target state
+
+- Internal Product search result URLs remain available for users as utility pages.
+- They are not independent SEO landing pages.
+- Keep internal Product search result URLs `noindex`.
+- Exclude them from XML sitemaps.
+- Do not optimize internal search-result URLs as query-target landing pages.
+- Search functionality remains available to users.
+- Do not rely on robots.txt blocking in a way that prevents crawlers from seeing the `noindex` directive.
+- Product, Product Category, approved `pa_volume` and other durable landing pages remain the intended Search targets.
+
+### Consequences
+
+- Internal search remains a UX/navigation feature rather than an indexable landing-page family.
+- Search-result query combinations do not become a scalable source of low-value indexable URLs.
