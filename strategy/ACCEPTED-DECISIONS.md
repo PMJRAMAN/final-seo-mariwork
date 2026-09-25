@@ -916,3 +916,16 @@ Rules:
 - Low-evidence/unknown URLs receive lower review priority.
 - Age, slug similarity, traffic history or an existing redirect alone never proves semantic identity.
 - Every final redirect still requires a genuine evidence-backed semantic successor.
+
+
+## DEC-064 — Legacy Product-Volume Mapping Disposition
+
+**Status:** ACCEPTED
+
+- Proven historical volume-specific Product URLs map to the same current variable Product with the historical volume preselected when that variant still exists.
+- Do not infer identity from slug similarity.
+- Do not fabricate preselection for a volume that no longer exists.
+- UNKNOWN mappings remain blocked until identity is verified.
+- Existing 301 behavior must be audited first; do not recreate redirects blindly.
+- Redirect owner, including possible Nginx ownership, must be verified rather than assumed.
+- Existing parent-Product redirects should be preserved or refined only where needed to retain the proven historical volume selection.
