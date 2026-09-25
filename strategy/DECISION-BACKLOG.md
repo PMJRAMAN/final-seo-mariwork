@@ -5,9 +5,28 @@
 **Codex authority:** evidence collection only; Codex cannot mark decisions `ACCEPTED`  
 **Baseline:** SR-004 + SR-005 and current audit repository  
 **Production implementation authorized by this file:** NO
-**Freeze state:** NOT_READY — P-003/P-004 reconciliation in progress
+**Freeze state:** FROZEN_V1_COVERAGE — decision-domain structure complete; target-state decisions remain unresolved
 
 See: `docs/DECISION-TO-EXECUTION-GOVERNANCE.md`.
+
+## Coverage Freeze v1
+
+As of 2026-09-25, P-001 through P-004 found **zero unexplained material decision-domain gaps** after reconciliation.
+
+This freeze applies only to the **coverage/structure of the decision queue**.
+
+It does not accept any OPEN / PROPOSED / NEEDS_TARGETED_EVIDENCE item.
+
+Current authoritative range: `DEC-001`–`DEC-120`.
+
+If future site discovery, product architecture or platform changes introduce a genuinely new material choice, a new Decision ID may be appended through the existing governance process. Existing IDs are never renumbered.
+
+Coverage evidence:
+- `audits/strategy/P-002-CHATGPT-DECISION-COVERAGE-REVIEW.md`
+- `audits/strategy/P-003-DECISION-BACKLOG-RECONCILIATION.md`
+- `audits/strategy/P-004-CANONICAL-DECISION-COVERAGE-MATRIX.json`
+- `audits/strategy/P-004-DECISION-COVERAGE-CLOSURE.md`
+
 
 ## Status legend
 
