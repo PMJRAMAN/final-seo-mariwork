@@ -547,3 +547,21 @@ Rules:
 - If a clean single-owner graph cannot be achieved, stop for technical review rather than shipping duplicates.
 - Canary one 30/60/250 and one 30/60 Product, then verify non-volume variants separately.
 - Validate rendered graph, Offers, preselection, canonical, duplicates and rich-result output; regression-test after Rank Math/Woo updates.
+
+
+## DEC-036 — Bundle / Set Schema and Visible Component Representation
+
+**Status:** ACCEPTED
+
+- Every current YITH Bundle/Set is a standalone fixed-volume Product with one factual Offer.
+- Bundles do not use ProductGroup/hasVariant/isVariantOf.
+- Current Bundles do not mix volumes; 30/60/250 ml Bundle identity must reconcile with its component variations.
+- YITH/Woo composition is the canonical source for component identity, quantity and selected volume.
+- Long component lists stay in visible Product content, not the primary title.
+- Bundle price/currency/availability come from the actual purchasable Bundle.
+- Existing button/AJAX component lists require crawlability audit.
+- Search-visible component content must not require a user click. Prefer server-rendered component HTML with the UI button only toggling visibility.
+- If component content is fetched only after click, refactor before accepting it as Search-visible.
+- Validate raw HTML, rendered DOM before interaction, network behavior, YITH reconciliation and Google-rendered output.
+- Sitewide AJAX/JS rules remain cross-referenced to DEC-080.
+- Rank Math remains primary Product schema owner.
