@@ -149,6 +149,15 @@ def sitemap_membership():
     return json.loads(p.read_text(encoding="utf-8")).get("entity_membership", {}) if p.exists() else {}
 
 
+def sitemap_url_membership(url):
+    p = ROOT / "audits/second-review/evidence/sitemap-membership.json"
+    if not p.exists() or not url:
+        return []
+    obj = json.loads(p.read_text(encoding="utf-8"))
+    memberships = obj.get("sitemap_walk", {}).get("membership", {})
+    return memberships.get(url, memberships.get(url.rstrip("/"), []))
+
+
 def posts():
     expr = (
         "echo json_encode(array_map(function($p){return ['id'=>(int)$p->ID,'post_type'=>$p->post_type,'status'=>$p->post_status,"
@@ -282,7 +291,7 @@ def education(c, inv):
         old_row = old_rows[0] if len(old_rows) == 1 else None
         conf = "VERIFIED" if dest and old_row and old_row["title"] == dest["title"] else "PARTIAL" if dest else "UNKNOWN"
         confidence[conf] += 1
-        entries.append({"historical_url": src, "clicks": row["Clicks"], "impressions": row["Impressions"], "redirect_chain": response.get("redirect_chain", []), "current_academy_destination": response.get("final_url"), "current_entity_id": dest["entity_id"] if dest else None, "current_type": dest["post_type"] if dest else None, "current_http_status": response.get("status"), "current_canonical": (response.get("canonical") or [None])[0], "current_sitemap_membership": sm.get(dest["entity_id"], []) if dest else [], "old_wp_entity_id": old_row["id"] if old_row else None, "old_post_type": old_row["post_type"] if old_row else None, "old_post_status": old_row["status"] if old_row else None, "identity_confidence": conf, "reconciliation_label": "CURRENT_VERIFIED" if conf == "VERIFIED" else "TRANSITIONAL" if conf == "PARTIAL" else "UNKNOWN_NEEDS_VERIFICATION"})
+        entries.append({"historical_url": src, "clicks": row["Clicks"], "impressions": row["Impressions"], "redirect_chain": response.get("redirect_chain", []), "current_academy_destination": response.get("final_url"), "current_entity_id": dest["entity_id"] if dest else None, "current_type": dest["post_type"] if dest else None, "current_http_status": response.get("status"), "current_canonical": (response.get("canonical") or [None])[0], "current_sitemap_membership": sitemap_url_membership(response.get("final_url")) if dest else [], "old_wp_entity_id": old_row["id"] if old_row else None, "old_post_type": old_row["post_type"] if old_row else None, "old_post_status": old_row["status"] if old_row else None, "identity_confidence": conf, "reconciliation_label": "CURRENT_VERIFIED" if conf == "VERIFIED" else "TRANSITIONAL" if conf == "PARTIAL" else "UNKNOWN_NEEDS_VERIFICATION"})
     return {"historical_education_gsc_urls": len(entries), "mapped_to_academy": sum(bool(x["current_entity_id"]) for x in entries), "verified_identity": confidence["VERIFIED"], "partial_identity": confidence["PARTIAL"], "unknown_unmapped": confidence["UNKNOWN"], "old_source_records_draft": sum(x["old_post_status"] == "draft" for x in entries if x["old_post_status"]), "old_source_records_public": sum(x["old_post_status"] == "publish" for x in entries if x["old_post_status"]), "entries": entries}
 
 
@@ -374,7 +383,7 @@ def taxonomy_matrix(c):
         for x in [z for z in ts if z["taxonomy"] == tax]:
             r = fetched.get(x.get("url"), {})
             probed = x.get("url") in fetched
-            row = {**x, "http_status": r.get("status") if probed else "NOT_COLLECTED_LOW_PRIORITY", "canonical": r.get("canonical") if probed else None, "robots": r.get("robots") if probed else None, "archive_probe_scope": "FULL" if tax in {"product_cat", "pa_volume"} else "ASSIGNED_TERM_SAMPLE_15", "sitemap_membership": sm.get(x["entity_id"], []), "internal_links": "NOT_AVAILABLE_FROM_FROZEN_OUTPUT"}
+            row = {**x, "http_status": r.get("status") if probed else "NOT_COLLECTED_LOW_PRIORITY", "canonical": r.get("canonical") if probed else None, "robots": r.get("robots") if probed else None, "archive_probe_scope": "FULL" if tax in {"product_cat", "pa_volume"} else "ASSIGNED_TERM_SAMPLE_15", "sitemap_membership": sm.get(x["entity_id"], []) or sitemap_url_membership(x.get("url")), "internal_links": "NOT_AVAILABLE_FROM_FROZEN_OUTPUT"}
             if tax == "product_cat":
                 s = (x["slug"]+" "+x["name"]).lower()
                 row["architecture_role"] = "volume-specific migration category" if any(v in s for v in ["30ml","60ml","250ml","30-ml","60-ml","250-ml"]) else "set/bundle grouping" if ("set" in s or "bundle" in s) else "accessories/tools" if ("tool" in s or "accessor" in s) else "product family"
@@ -410,7 +419,7 @@ def main():
     p = next((x for x in c["posts"] if x["wp_id"] == 27727), None)
     purl = p["permalink"] if p else "https://www.mariwork.ir/?post_type=product&p=27727"
     p27727_out = public_get(purl)
-    p27727_out["sitemap_membership"] = sitemap_membership().get("WP-27727", [])
+    p27727_out["sitemap_membership"] = sitemap_membership().get("WP-27727", []) or sitemap_url_membership(purl)
     p27727_out["categories"] = product_cats().get(27727, [])
     p27727_out["attributes"] = [x for x in variations() if x["parent_id"] == 27727]
     write("product-universe-reconciliation.json", {"current_published_product_ids": sorted(current_products), "round1_reviewed_product_ids": sorted(round1_products), "current_missing_from_round1": sorted(current_products-round1_products), "round1_no_longer_current": sorted(round1_products-current_products), "product_27727": {**(p or {"wp_id":27727,"post_status":"NOT_FOUND"}), "public_output": p27727_out, "historical_numeric_url_evidence": a012_destination("https://www.mariwork.ir/?post_type=product&p=27727", inv), "architecture_role": "CURRENT_VERIFIED" if p and p["post_status"] == "publish" else "UNKNOWN_NEEDS_VERIFICATION"}})

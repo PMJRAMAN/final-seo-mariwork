@@ -169,7 +169,9 @@
       "robots": [
         "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
       ],
-      "sitemap_membership": [],
+      "sitemap_membership": [
+        "https://www.mariwork.ir/product-sitemap.xml"
+      ],
       "status": 200,
       "title": [
         "گلیتر نقره‌ای هفت رنگ ماری ورک | کد 217 | 60 میل - رنگ پارچه ماری ورک"
