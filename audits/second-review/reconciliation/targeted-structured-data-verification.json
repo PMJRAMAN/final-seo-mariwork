@@ -383,6 +383,52 @@
       "permalink": "https://www.mariwork.ir/shop/tampon/",
       "product_type": "simple",
       "volumes": []
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/silver-rainbow-glitter-mariwork-fabric-medium-code217/"
+      ],
+      "duplicate_parallel_output": false,
+      "entity_id": "WP-27727",
+      "http_status": 200,
+      "jsonld": [
+        {
+          "contexts": [
+            "https://schema.org"
+          ],
+          "top_level": [
+            "@context",
+            "@graph"
+          ],
+          "types": [
+            "ImageObject",
+            "ItemPage",
+            "Offer",
+            "Organization",
+            "Product",
+            "QuantitativeValue",
+            "WebSite"
+          ],
+          "valid_json": true
+        },
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 2,
+      "permalink": "https://www.mariwork.ir/shop/silver-rainbow-glitter-mariwork-fabric-medium-code217/",
+      "product_type": "simple",
+      "volumes": []
     }
+  ],
+  "requested_segments_without_deterministic_match": [
+    "tool/accessory"
   ]
 }

@@ -3,7 +3,7 @@
 Read-only reconciliation layer. Round-1 dossiers/evidence and Production were not changed.
 
 ## Current census
-- Source HEAD: 61d954788d12ce640033f03880e042d1aaa8d409
+- Source HEAD: 78b8bc1939393f5f0a9afece7bbe1cf9f37ca3e9
 - Current public post/taxonomy entities: 502
 - Published products: 84; Round-1 reviewed: 83
 - Current products missing from Round-1: [27727]

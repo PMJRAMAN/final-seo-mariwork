@@ -342,6 +342,9 @@ def targeted_schema(c):
         x = next((p for p in ps if p["wp_id"] not in {q["wp_id"] for q in chosen} and pred(p)), None)
         if x:
             chosen.append(x)
+    explicit_27727 = next((p for p in ps if p["wp_id"] == 27727), None)
+    if explicit_27727 and explicit_27727["wp_id"] not in {q["wp_id"] for q in chosen}:
+        chosen.append(explicit_27727)
     fetched = public_many([x["permalink"] for x in chosen] + [x["permalink"] for x in c["posts"] if x["post_type"] == "sfwd-lessons"][:5] + [x["permalink"] for x in c["posts"] if x["post_type"] == "sfwd-courses"][:1] + ["https://www.mariwork.ir/academy/"])
     products = []
     for p in chosen:
@@ -352,7 +355,7 @@ def targeted_schema(c):
         r = fetched.get(p["permalink"], {})
         academy.append({"entity_id": p["entity_id"], "type": p["post_type"], "url": p["permalink"], "status": r.get("status"), "jsonld_script_count": r.get("jsonld_script_count"), "jsonld": r.get("jsonld"), "interpretation": "SEO_SCHEMA" if any(x.get("valid_json") and x.get("types") for x in r.get("jsonld", [])) else "APPLICATION_OR_UNTYPED_JSON"})
     r = fetched.get("https://www.mariwork.ir/academy/", {})
-    return {"product_representatives": products, "academy_representatives": academy, "academy_archive": {"url": "https://www.mariwork.ir/academy/", "status": r.get("status"), "jsonld_script_count": r.get("jsonld_script_count"), "jsonld": r.get("jsonld"), "canonical": r.get("canonical"), "robots": r.get("robots")}}
+    return {"product_representatives": products, "requested_segments_without_deterministic_match": ["tool/accessory"] if not any("tool" in (p["title"]+" "+p["slug"]).lower() or "accessor" in (p["title"]+" "+p["slug"]).lower() for p in ps) else [], "academy_representatives": academy, "academy_archive": {"url": "https://www.mariwork.ir/academy/", "status": r.get("status"), "jsonld_script_count": r.get("jsonld_script_count"), "jsonld": r.get("jsonld"), "canonical": r.get("canonical"), "robots": r.get("robots")}}
 
 
 def taxonomy_matrix(c):
