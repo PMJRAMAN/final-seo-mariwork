@@ -529,3 +529,21 @@ Rules:
 - Rank Math remains primary schema owner; no duplicate BlogPosting emitter.
 - Do not auto-add unrelated FAQ/HowTo/Video schema.
 - Validate rendered structured data after rollout.
+
+
+## DEC-035 — Product Variation ProductGroup / Variant Schema Architecture
+
+**Status:** ACCEPTED
+
+- Use Google's single-page ProductGroup model for real WooCommerce variable Products.
+- Parent Product URL remains the single canonical ProductGroup URL.
+- Each purchasable variation becomes a variant Product with its own factual Offer and direct preselection URL.
+- Volume variation uses supported size semantics; non-volume variable Products use their real supported variation property.
+- Do not fabricate identifiers.
+- Rank Math Free remains the primary schema owner.
+- Do not purchase Rank Math PRO solely for this capability.
+- Implement through supported Rank Math server-side schema filters by mutating/replacing the existing Product node; never add a second independent Product/ProductGroup JSON-LD emitter.
+- Do not leave conflicting legacy AggregateOffer/Product representation in parallel.
+- If a clean single-owner graph cannot be achieved, stop for technical review rather than shipping duplicates.
+- Canary one 30/60/250 and one 30/60 Product, then verify non-volume variants separately.
+- Validate rendered graph, Offers, preselection, canonical, duplicates and rich-result output; regression-test after Rank Math/Woo updates.
