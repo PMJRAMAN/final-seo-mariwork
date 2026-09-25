@@ -209,3 +209,24 @@ Custom code موازی، snippet پراکنده و output duplicate برای tit
 Codex می‌تواند Phaseهای تحقیق اولیه را به‌صورت autonomous اجرا کند و بدون دخالت روزمره کاربر تا `CODEX_AUDITED` پیش برود: inventory، baseline، evidence collection، findings و initial recommendations.
 
 این autonomy authority را تغییر نمی‌دهد: Codex حق `SECOND_REVIEWED`، `APPROVED`، final content/SEO decision یا هیچ Production write را ندارد. اولین human decision gate الزامی، ChatGPT Second Review است. Rate/usage-limit باید pause/resume شود و کار تکمیل‌شده از بین نرود.
+
+
+### M-25 — Decision Before Execution
+After Audit and ChatGPT Second Review, material target-state choices must be resolved in the project Decision Backlog before Production implementation.
+
+Authoritative separation:
+- `MASTER-TODO.md` = coverage and program ordering;
+- `strategy/DECISION-BACKLOG.md` = strategy/target-state decisions;
+- `tasks/EXECUTION-BACKLOG.md` = implementation packages unlocked only by accepted decisions.
+
+No finding, recommendation, TODO checkbox or audit completion state is sufficient on its own to authorize a Production write.
+
+For any implementation scope:
+- all blocking Decision IDs must be `ACCEPTED`;
+- the related Execution item must be `READY_FOR_TASK`;
+- exact target state/write scope must be documented;
+- required change dossier, backup/rollback, canary/regression and QA gates remain mandatory.
+
+Codex cannot approve decisions or infer unresolved editorial/business strategy.
+
+This is a backwards-compatible clarification of M-02, M-07, M-11, M-15 and M-17; lifecycle statuses and authority remain unchanged. Detailed process: `docs/DECISION-TO-EXECUTION-GOVERNANCE.md`.
