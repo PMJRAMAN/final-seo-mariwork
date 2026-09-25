@@ -853,3 +853,50 @@ Additional rules:
 - Do not impose a fixed 150/160-character limit.
 - Do not mechanically copy transcripts or first paragraphs into metadata.
 - Google may generate snippets from visible page content; supplied meta descriptions are not guaranteed SERP snippets.
+
+
+## DEC-022 — Static / Trust Page Visible Content Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** STATIC / TRUST / VISIBLE CONTENT
+
+### Accepted target state
+
+Static/Trust pages remain purpose-specific, people-first support and trust entities. They must not be expanded with generic SEO copy merely to increase page length or keyword coverage.
+
+**About**
+- Answers: “Who is Mariwork?”
+- Contains verified brand history, identity, people, activity scope, experience, and relevant organization background.
+- Brand-history and experience claims require factual verification.
+- Must not become a duplicate commercial or educational landing page.
+
+**Why Mariwork**
+- Answers: “Why should a user consider Mariwork and its products?”
+- Focuses on verified, user-relevant differentiators and Product/brand characteristics.
+- Unsupported superiority, safety, quality, durability, or performance claims are prohibited.
+- Deep educational explanations belong in Magazine; practical demonstrations belong in Academy.
+
+**Contact**
+- Answers: “How can I contact Mariwork?”
+- Contains actionable, verified contact/support information.
+- Do not add unrelated editorial SEO copy.
+
+**Stores**
+- Answers: “Where can I purchase Mariwork products in person?”
+- Contains verified store/location identity, address, contact and operating information where available.
+- Do not create location-keyword filler, invented local claims, or unsupported inventory promises.
+
+**FAQ**
+- Provides concise answers to genuine recurring user questions.
+- Functions partly as a routing/support layer.
+- Detailed practical/how-to content should route to Academy video lessons.
+- Detailed explanatory/reference content should route to Magazine.
+- Product-specific commercial detail should route to the relevant Product/Category where appropriate.
+- Do not create artificial keyword-driven questions or duplicate full Academy/Magazine content.
+
+**Cross-family rules**
+- Static/Trust pages preserve distinct user purpose.
+- No fixed word-count target applies.
+- Avoid duplicated content across Static, Magazine, Academy and Commerce families.
+- Exact factual claims remain subject to DEC-053.
+- FAQ content is created for user support, not for pursuing FAQ rich results.
