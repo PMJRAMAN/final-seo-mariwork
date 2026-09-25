@@ -699,3 +699,41 @@ Rules:
 - Do not mechanically copy a transcript or the first content paragraph.
 - Factual technical/safety/performance claims require verification before final approval.
 - DEC-019 governs metadata only; Academy visible-content standards remain DEC-024 and video/schema concerns remain separate.
+
+
+## DEC-020 — Product-Page Visible Content Architecture
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / VISIBLE CONTENT
+
+### Accepted target state
+
+Mariwork Product pages use a people-first, family-specific content architecture. A shared family structure is allowed; mass-produced filler copy is not.
+
+Common Product core:
+- concise Product identity;
+- verified specifications;
+- applicable variants;
+- primary purpose/use;
+- necessary usage or handling guidance;
+- material limitations/warnings where relevant;
+- useful contextual links.
+
+Family-specific priorities:
+- Fabric colors: verified color identity, applicable surfaces/techniques, relevant variant/volume guidance, and verified preparation/fixation/washing guidance.
+- Mediums/additives: what the Product does, when/how it is used, verified usage conditions/ratios where available, compatibility and limitations.
+- Sets/bundles: bundle identity, current component composition, count/volume facts, intended use and meaningful differentiation. Current Woo/YITH data is the canonical component source. Naming remains DEC-008.
+- Tools/accessories: exact tool identity, factual specifications, intended use, compatibility and necessary usage instructions. Third-party products must not be represented as Mariwork-manufactured/branded without factual support.
+
+General rules:
+- No fixed word-count target.
+- Do not add long SEO copy merely to increase page length.
+- Family templates define information structure, not mandatory duplicated prose.
+- Avoid generic background/history unless directly useful to the purchaser.
+- FAQ is optional and only where genuine Product-specific questions warrant it.
+- Contextual links must be genuinely relevant.
+- Do not repeat benefits/summaries/keywords across sections solely for SEO.
+- Performance, durability, safety, compatibility, suitability, economy and usage claims require factual support before family-wide publication.
+- AI-assisted Product copy requires review for accuracy, relevance, duplication and unsupported claims.
+- Visible Product content and structured data must describe the same actual purchasable Product/variants.
+- This Decision does not define exact copy or visual layout.
