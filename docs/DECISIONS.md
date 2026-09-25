@@ -2081,3 +2081,25 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Missing commercial links are not defects when no relevant commercial next step exists.
 - Product-level links require product-specific relevance; category-level links are preferred when user choice across a family is more appropriate.
 - Article → Article / Academy relationships remain governed by DEC-045.
+
+
+## DEC-045 — Article to Article / Academy Linking Rules
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MAGAZINE / INTERNAL LINKING / EDITORIAL AND EDUCATIONAL DESTINATIONS
+
+### Accepted target state
+
+- Article → Article and Article → Academy links are based on semantic relevance and a useful next step for the reader.
+- Valid Article → Article relationships include genuine continuation, deeper detail, prerequisite/background material, or complementary reference content.
+- Article → Academy links are appropriate when a practical Guide/Lesson lets the reader apply or learn the article topic in a useful next step.
+- There is no sitewide quota requiring every Article to contain a fixed number of links to other Articles or Academy content.
+- Related-content modules must not create random links solely because pages share a Category, Tag, or broad keyword.
+- Automated or templated related-content destinations must satisfy the same relevance rule as manually selected links.
+- Approved relationships remain subject to DEC-040 and the Internal Link Requirement Matrix.
+
+### Consequences
+
+- Article-family QA evaluates editorial/educational links by relevance and usefulness rather than raw link count.
+- An Article may legitimately have no Article/Academy contextual link when no useful destination exists.
+- The execution matrix must identify approved mandatory/family-specific relationships separately from page-level contextual candidates.
