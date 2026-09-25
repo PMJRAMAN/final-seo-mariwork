@@ -2058,3 +2058,26 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Product-level links require real product-specific relevance.
 - Category-level links are preferred when the instructional need is category-wide or requires user choice.
 - Article → Product/Category rules remain governed separately by DEC-044.
+
+
+## DEC-044 — Article to Product / Category Linking Rules
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MAGAZINE / INTERNAL LINKING / COMMERCIAL DESTINATIONS
+
+### Accepted target state
+
+- Article pages link to a Product or Product Category only when the commercial destination directly supports the article topic and provides a useful next step for the reader.
+- Prefer a specific Product when the Article materially discusses, recommends in context, or uses that specific item.
+- Prefer the relevant Product Category when the reader reasonably needs to choose among a family of suitable products.
+- There is no sitewide requirement for every Article to contain a commercial link.
+- Historical, inspirational, artist-focused, reference, or other informational Articles may legitimately contain no commercial link when no useful commercial next step exists.
+- Do not add unrelated or generic Shop/Product links merely to increase internal-link volume or SEO coverage.
+- Approved relationships remain subject to DEC-040 and the Internal Link Requirement Matrix.
+
+### Consequences
+
+- Article-family QA evaluates commercial links by contextual usefulness rather than raw link presence.
+- Missing commercial links are not defects when no relevant commercial next step exists.
+- Product-level links require product-specific relevance; category-level links are preferred when user choice across a family is more appropriate.
+- Article → Article / Academy relationships remain governed by DEC-045.
