@@ -1445,3 +1445,36 @@ Do not introduce a second independent Organization/WebSite/WebPage JSON-LD emitt
 Existing theme microdata should be checked for factual/conflict consistency during implementation; do not remove harmless semantic markup merely for deduplication aesthetics.
 
 All Homepage schema changes require rendered-output validation after implementation.
+
+
+## DEC-008 — Product Title Naming Standard — Sets / Bundles
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / SET / BUNDLE / TITLE / H1
+
+### Accepted target state
+
+Set/Bundle visible Product titles and H1s should express the concise purchasable identity of the Set.
+
+Rules:
+- include the genuine Set/Bundle identity;
+- include count/type when it materially identifies the Set;
+- include volume when it materially distinguishes the Set identity;
+- use `ماری ورک` only for genuinely Mariwork-branded Sets;
+- do not force a Product code unless a real stable code exists;
+- long composition strings such as `شامل ...` belong in visible Product content, not the primary title/H1;
+- do not use decorative separator-heavy title construction;
+- normalize digit/separator treatment consistently;
+- title normalization must not trigger URL/slug changes.
+
+Examples of the intended direction:
+- concise identities such as a 5-color fluorescent Set, a 24-color Set, a complete colors-and-mediums Set, or a glitter Set may retain the identifying count/type and applicable volume;
+- detailed component lists belong in the Product body and must be reconciled against current YITH/Woo bundle composition evidence.
+
+Exact per-Set wording is finalized during implementation/content QA from current factual YITH/Woo data.
+
+SEO `<title>` relationship remains governed by DEC-011.
+
+### DEC-011 dependency update
+
+DEC-008 is no longer deferred. The DEC-011 Product title-template rollout is no longer blocked by DEC-008; it remains subject to normal implementation QA and the other accepted Product naming decisions.
