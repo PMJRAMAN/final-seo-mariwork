@@ -1400,3 +1400,48 @@ Deletion must be inventory-driven, backup/rollback-capable, and batch/canary ver
 Current evidence reports 626 returned attachment IDs versus 845 advertised records. This discrepancy must be reconciled before any bulk media deletion or bulk attachment-URL change.
 
 Detailed image naming, ALT/context, image discovery/sitemap, duplicate/reuse policy and technical delivery remain governed by the dedicated image Decisions.
+
+
+## DEC-032 — Homepage Organization / WebSite / WebPage Schema Target
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** HOMEPAGE / STRUCTURED DATA / ENTITY GRAPH / OWNERSHIP
+
+### Accepted target state
+
+The Mariwork Homepage should expose one coherent primary entity graph rather than accumulating independent or duplicate schema emitters.
+
+Retain:
+- `Organization` — Mariwork as the brand/business entity;
+- `WebSite` — `mariwork.ir` as the website entity;
+- `WebPage` — the Homepage document.
+
+Use `ImageObject` only where it represents a real image/logo entity referenced by the graph.
+
+Do not classify the Homepage as `Article`.
+
+### Organization
+
+The Homepage is the primary Organization structured-data location.
+
+Organization properties must use verified factual data only, including applicable name, canonical URL, logo, contact details and verified official `sameAs` identities.
+
+Do not invent properties merely to increase schema completeness.
+
+Use a more specific Organization subtype only when it accurately represents Mariwork's real business/entity model; do not force an ecommerce subtype solely because the site sells Products.
+
+### WebSite / SearchAction
+
+Retain a single authoritative `WebSite` entity for `mariwork.ir`.
+
+Remove the current `SearchAction` markup as routine cleanup. Google's sitelinks search box feature is retired; this removal is schema simplification, not a ranking intervention.
+
+### Ownership
+
+Rank Math remains the primary Homepage JSON-LD/schema owner where supported.
+
+Do not introduce a second independent Organization/WebSite/WebPage JSON-LD emitter.
+
+Existing theme microdata should be checked for factual/conflict consistency during implementation; do not remove harmless semantic markup merely for deduplication aesthetics.
+
+All Homepage schema changes require rendered-output validation after implementation.
