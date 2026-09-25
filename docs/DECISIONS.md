@@ -667,3 +667,35 @@ Rules:
 - Claims that require substantive source verification are escalated to DEC-023.
 - DEC-018 governs metadata only; it does not authorize substantive Article-content changes.
 - Article overlap/cannibalization remains governed separately by DEC-119.
+
+
+## DEC-019 — Academy Course / Lesson Meta Description Rule
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** ACADEMY / META DESCRIPTION
+
+### Accepted target state
+
+Academy Course and Lesson meta descriptions must be page-specific rather than generated from a shared generic family template.
+
+Course metadata should summarize the educational scope and purpose of the Course.
+
+Lesson metadata should clearly describe the specific technique, task, concept, or learning outcome covered by that Lesson.
+
+Classify existing metadata as:
+- `KEEP` — accurate and genuinely page-specific.
+- `REFINE` — accurate but insufficiently focused or descriptive.
+- `REWRITE` — duplicated, mismatched, generic, misleading, or otherwise not representative of the Lesson.
+- `FACT-CHECK REQUIRED` — contains technical, durability, safety, compatibility, performance, or other claims that require verification.
+
+Rules:
+- Do not use a shared Academy family description or raw `%excerpt%` as the final metadata strategy.
+- Each Lesson description must reflect that specific Lesson.
+- Duplicate metadata across distinct Lessons should be resolved.
+- Mismatched metadata must be rewritten.
+- Include Mariwork branding only where genuinely relevant to the educational subject.
+- Do not mechanically inject `رنگ پارچه`, brand terms, or SEO keywords.
+- Do not impose a fixed 150/160-character limit.
+- Do not mechanically copy a transcript or the first content paragraph.
+- Factual technical/safety/performance claims require verification before final approval.
+- DEC-019 governs metadata only; Academy visible-content standards remain DEC-024 and video/schema concerns remain separate.
