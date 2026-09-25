@@ -2477,3 +2477,25 @@ Google requires Product structured-data images to represent the marked-up Produc
 
 - Article and Category architecture remains the durable editorial search architecture.
 - Author/Date archive handling remains separate from feeds, internal search and general 404/error lifecycle decisions.
+
+
+## DEC-063 — Legacy URL Prioritization Rule
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** LEGACY URLS / MIGRATION PRIORITIZATION
+
+### Accepted target state
+
+- Prioritize Legacy URLs with meaningful historical evidence/value for earlier migration review.
+- Higher-priority evidence includes material historical GSC clicks/impressions, proven backlinks or important internal links where available, identifiable high-value Product/Article/Artist entities, and valuable URLs currently affected by 404s, incorrect redirects or redirect chains.
+- Low-evidence or identity-unknown historical URLs receive lower review priority.
+- Historical age alone does not justify a redirect.
+- Slug/name similarity alone does not establish semantic identity.
+- Historical traffic alone does not establish a replacement destination.
+- The existence of a current redirect proves transport behavior, not historical entity continuity.
+- Every redirect mapping still requires evidence that the proposed destination is a genuine semantic successor.
+
+### Consequences
+
+- Legacy migration review is value-prioritized rather than handled as an undifferentiated bulk list.
+- Prioritization changes review order only; it does not itself authorize redirect, restore, 404 or 410 outcomes.
