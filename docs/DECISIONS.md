@@ -737,3 +737,32 @@ General rules:
 - AI-assisted Product copy requires review for accuracy, relevance, duplication and unsupported claims.
 - Visible Product content and structured data must describe the same actual purchasable Product/variants.
 - This Decision does not define exact copy or visual layout.
+
+
+## DEC-021 — Product Category Visible Intro / Content Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT CATEGORY / VISIBLE CONTENT
+
+### Accepted target state
+
+Durable Product Category pages are primarily commercial discovery and product-selection pages, not long-form editorial articles.
+
+Target structure:
+- Provide a concise, useful visible introduction explaining what the category contains and the meaningful basis for choosing among its products.
+- Keep the Product listing/grid as the primary page function.
+- Add supplementary selection guidance only where it provides genuine user value.
+
+Rules:
+- Do not target a fixed word count.
+- Do not add long SEO copy merely to increase page length.
+- Category content should help users understand the category and choose among its products.
+- Do not duplicate Product-page descriptions across the Category.
+- Do not duplicate long-form educational content that belongs in Magazine or Academy.
+- FAQ content is optional, not a mandatory Category module.
+- Avoid keyword stuffing, repetitive commercial phrases and boilerplate.
+- Child Categories such as 30/60/250 ml Sets must have genuinely distinct explanatory value if retained as durable landing pages; do not create near-identical copy with only the volume token changed.
+- Product-category content must reflect actual current inventory and factual Product distinctions.
+- Third-party tools/accessories must not be described as Mariwork-manufactured merely because they appear in a Mariwork category.
+- Future semantic/value pillars from DEC-121–124 may inform Category emphasis, but must not create artificial or duplicated content.
+- Metadata remains governed by DEC-076; title/H1 by DEC-115; durable Category/indexability decisions by DEC-025.
