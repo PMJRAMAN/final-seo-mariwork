@@ -847,3 +847,16 @@ Rules:
 - Gallery count/diversity/composition/order are Product/design decisions, outside SEO unless a concrete discoverability, accessibility, factual-accuracy or Search issue exists.
 - ALT remains DEC-054.
 - SEO scope is primary/variant image consistency and technical discoverability, not gallery redesign.
+
+
+## DEC-057 — Article / Academy Instructional Image Policy
+
+**Status:** ACCEPTED
+
+- No fixed SEO image quota applies to Magazine Articles or Academy pages.
+- Academy is video-first; supporting images are used only when they materially improve instruction.
+- Magazine images are used when they add real explanatory, documentary, artistic, Product or technique value.
+- Do not add images merely to satisfy an SEO-image count.
+- Instructional imagery must match the actual content context, not act as generic filler.
+- Featured Images may represent Articles, but multiple in-body images are not required for SEO.
+- ALT remains governed by DEC-054.
