@@ -56,7 +56,7 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-001 | Approve durable site-family roles: Homepage, Shop, Product Categories, Products, Academy, Magazine/Articles, durable Blog Categories, Static trust/support | PROPOSED | SR-005 §4–15; CONTENT-ARCHITECTURE | Foundation for linking/content decisions |
+| DEC-001 | Approve durable site-family roles: Homepage, Shop, Product Categories, Products, Academy, Magazine/Articles, durable Blog Categories, Static trust/support | DISCUSSING | SR-005 §4–15; CONTENT-ARCHITECTURE | Foundation for linking/content decisions |
 | DEC-002 | Decide final Homepage role and whether current title/H1/meta remain the baseline | PROPOSED | WP-63; SR-005 §4 | Current state is coherent; no rewrite required by audit |
 | DEC-003 | Decide Shop target state: H1, visible role, title/meta and relationship to Product Categories | PROPOSED | SR-004 SR-ST-001; WP-30918 | Required before Shop implementation |
 | DEC-004 | Cart / Checkout transactional utility-page policy | PROPOSED | SR-005 §6; WP-10/WP-30919 | Decide crawl/index role and state-safe behavior; no editorial optimization |
