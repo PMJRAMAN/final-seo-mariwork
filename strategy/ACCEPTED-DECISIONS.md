@@ -109,3 +109,25 @@ Rules:
 ## Deferred / paused decisions
 
 - `DEC-008` — Set / Bundle Product Naming Standard — **DEFERRED by owner on 2026-09-25; return later.**
+
+
+## DEC-009 — Medium / Additive Product Naming Standard
+
+**Status:** ACCEPTED
+
+Canonical visible Product title/H1 pattern:
+
+`[Exact Product Name] ماری ورک کد [NNN]`
+
+Rules:
+- Use the exact factual Product identity.
+- Do not force the generic term `مدیوم`.
+- Preserve factual specific identities such as glitter, varnish, glue, shine, base coat, fixative, or medium.
+- Include the canonical Mariwork brand spelling.
+- End with the stable Product code.
+- No decorative `|` or `-`.
+- Use consistent Latin digits for Product codes.
+- Do not include volume in this family under any circumstance.
+- Do not change URLs/slugs solely because visible titles are normalized.
+- SEO `<title>` is governed separately by DEC-011.
+- Brand spelling/half-space conventions follow DEC-053.
