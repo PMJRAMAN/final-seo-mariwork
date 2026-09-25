@@ -1,0 +1,41 @@
+{
+  "blog_tag": {
+    "assigned_terms": 6,
+    "assignment_count": 39,
+    "terms": 54
+  },
+  "current_products_missing_from_round1": [
+    27727
+  ],
+  "current_public_entity_census_count": 502,
+  "current_published_products": 84,
+  "education": {
+    "historical_education_gsc_urls": 41,
+    "mapped_to_academy": 36,
+    "old_source_records_draft": 0,
+    "old_source_records_public": 0,
+    "partial_identity": 36,
+    "unknown_unmapped": 5,
+    "verified_identity": 0
+  },
+  "page_query_dataset": "NOT_AVAILABLE",
+  "product_tag": {
+    "assigned_terms": 0,
+    "assignment_count": 0,
+    "terms": 275
+  },
+  "round1_finding_relationship_counts": {
+    "CURRENTLY_SUPPORTED": 1,
+    "HISTORICAL_ONLY": 114,
+    "NEEDS_TARGETED_REVIEW": 132,
+    "PARTIALLY_SUPPORTED": 15,
+    "STALE_EVIDENCE_DEPENDENCY": 62
+  },
+  "round1_products_no_longer_current": [],
+  "round1_reviewed_products": 83,
+  "source_head": "61d954788d12ce640033f03880e042d1aaa8d409",
+  "volume_url_confidence_counts": {
+    "PARTIAL": 68,
+    "UNKNOWN": 14
+  }
+}

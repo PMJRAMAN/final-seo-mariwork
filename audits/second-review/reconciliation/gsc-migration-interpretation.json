@@ -1,0 +1,11 @@
+{
+  "classification_counts": {
+    "ARTICLE_PRE_MIGRATION": 34,
+    "CURRENT_DIRECT": 113,
+    "CURRENT_OTHER": 98,
+    "EDUCATION_PRE_MIGRATION": 41,
+    "PRODUCT_VOLUME_PRE_MIGRATION": 82
+  },
+  "page_query_dataset": "NOT_AVAILABLE",
+  "rule": "Metrics remain attached to exact historical URL; no destination transfer."
+}

@@ -1,0 +1,1130 @@
+{
+  "counts": {
+    "PARTIAL": 68,
+    "UNKNOWN": 14
+  },
+  "entries": [
+    {
+      "clicks": "1472",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12541,
+      "historical_url": "https://www.mariwork.ir/shop/white-mariwork-fabric-color-code121-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "30861",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/white-mariwork-fabric-color-code121/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "1109",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12591,
+      "historical_url": "https://www.mariwork.ir/shop/fixative-medium-204_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "15644",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-fabric-fixative-medium-code204/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "937",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27051,
+      "historical_url": "https://www.mariwork.ir/shop/sky-blue-mariwork-fabric-color-code131-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "126416",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/sky-blue-mariwork-fabric-color-code131/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "855",
+      "current_available_volumes": [],
+      "current_parent_id": 27903,
+      "historical_url": "https://www.mariwork.ir/shop/contouring-pot-mariwork-fabric-code-311-30ml/",
+      "historical_volume": "30ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "6705",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/contouring-pot-mariwork-fabric-code-311/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "790",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 14450,
+      "historical_url": "https://www.mariwork.ir/shop/pink_fluorescent_103_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "328501",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/pink_fluorescent_103/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "714",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12506,
+      "historical_url": "https://www.mariwork.ir/shop/darkbrown-mariwork-fabric-color-code113-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "56569",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/darkbrown-mariwork-fabric-color-code113/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "598",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12520,
+      "historical_url": "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "20786",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "526",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12524,
+      "historical_url": "https://www.mariwork.ir/shop/black-mariwork-fabric-color-code117-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "28988",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/black-mariwork-fabric-color-code117/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "503",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12544,
+      "historical_url": "https://www.mariwork.ir/shop/gray_122_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "56111",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/gray_122/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "493",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12594,
+      "historical_url": "https://www.mariwork.ir/shop/basecoat-208_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "5069",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-fabric-base-coat-code208/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "472",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12492,
+      "historical_url": "https://www.mariwork.ir/shop/olivegreen-mariwork-fabric-color-code110-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "42625",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/olivegreen-mariwork-fabric-color-code110/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "468",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 28242,
+      "historical_url": "https://www.mariwork.ir/shop/mocha-mousse-mariwork-fabric-color-code138-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "121098",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mocha-mousse-mariwork-fabric-color-code138/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "418",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12524,
+      "historical_url": "https://www.mariwork.ir/shop/black-mariwork-fabric-color-code117-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "6629",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/black-mariwork-fabric-color-code117/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "393",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12488,
+      "historical_url": "https://www.mariwork.ir/shop/saddlebrown-mariwork-fabric-color-code109-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "72565",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/saddlebrown-mariwork-fabric-color-code109/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "376",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/six-color-set-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "50257",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/six-color-set-60ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "311",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12588,
+      "historical_url": "https://www.mariwork.ir/shop/coronafixative-203_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "9582",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-fabric-glitter-glue-code203/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "265",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12502,
+      "historical_url": "https://www.mariwork.ir/shop/orange-mariwork-fabric-color-code112-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "45103",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/orange-mariwork-fabric-color-code112/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "236",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27142,
+      "historical_url": "https://www.mariwork.ir/shop/light-salmon-mariwork-fabric-color-code135-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "136318",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/light-salmon-mariwork-fabric-color-code135/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "224",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 28244,
+      "historical_url": "https://www.mariwork.ir/shop/teal-mariwork-fabric-color-code139-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "77643",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/teal-mariwork-fabric-color-code139/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "223",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12484,
+      "historical_url": "https://www.mariwork.ir/shop/ochre-mariwork-fabric-color-code108-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "45394",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/ochre-mariwork-fabric-color-code108/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "220",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27333,
+      "historical_url": "https://www.mariwork.ir/shop/silver-mariwork-fabric-color-code136-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "39992",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/silver-mariwork-fabric-color-code136/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "209",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 28232,
+      "historical_url": "https://www.mariwork.ir/shop/golden-color-shine-mariwork-fabric-medium-code206-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "11072",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-golden-shine-code206/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "208",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12498,
+      "historical_url": "https://www.mariwork.ir/shop/lightgold-mariwork-fabric-color-code111-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "13603",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/lightgold-mariwork-fabric-color-code111/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "181",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27041,
+      "historical_url": "https://www.mariwork.ir/shop/lilac-mariwork-fabric-color-code128-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "167540",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/lilac-mariwork-fabric-color-code128/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "181",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12536,
+      "historical_url": "https://www.mariwork.ir/shop/magenta-mariwork-fabric-color-code120_250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "79126",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/magenta-mariwork-fabric-color-code120/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "177",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12528,
+      "historical_url": "https://www.mariwork.ir/shop/blue-mariwork-fabric-color-code118-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "15941",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/blue-mariwork-fabric-color-code118/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "171",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12475,
+      "historical_url": "https://www.mariwork.ir/shop/green-mariwork-fabric-color-code106-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "15868",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/green-mariwork-fabric-color-code106/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "169",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12492,
+      "historical_url": "https://www.mariwork.ir/shop/olivegreen-mariwork-fabric-color-code110-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "38828",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/olivegreen-mariwork-fabric-color-code110/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "168",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27621,
+      "historical_url": "https://www.mariwork.ir/shop/totakali-glue-mariwork-fabric-medium-code205-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "4246",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-totakali-glue-code205/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "162",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27506,
+      "historical_url": "https://www.mariwork.ir/shop/lightening-medium-mariwork-fabric-medium-code213-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "5216",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-lightening-medium-code213/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "146",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12548,
+      "historical_url": "https://www.mariwork.ir/shop/fleshtint-123_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "10038",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/fleshtint-123/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "128",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12511,
+      "historical_url": "https://www.mariwork.ir/shop/turquoseblue-mariwork-fabric-color-code114-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "40138",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/turquoseblue-mariwork-fabric-color-code114/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "127",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/glitter-set-mariwork-fabric-medium-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "4541",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/glitter-set-mariwork-fabric-medium-30ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "115",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27037,
+      "historical_url": "https://www.mariwork.ir/shop/light-pink-mariwork-fabric-color-code126-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "18937",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/light-pink-mariwork-fabric-color-code126/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "114",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27512,
+      "historical_url": "https://www.mariwork.ir/shop/thickening-mariwork-fabric-medium-code214-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "4458",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-thickening-medium-code214/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "106",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12471,
+      "historical_url": "https://www.mariwork.ir/shop/redbrown-mariwork-fabric-color-code105-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "47983",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/redbrown-mariwork-fabric-color-code105/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "93",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27893,
+      "historical_url": "https://www.mariwork.ir/shop/glossy-varnish-mariwork-fabric-medium-code215-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1852",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-glossy-varnish-code215/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "91",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27039,
+      "historical_url": "https://www.mariwork.ir/shop/papaya-mariwork-fabric-color-code127-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "9984",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/papaya-mariwork-fabric-color-code127/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "82",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27369,
+      "historical_url": "https://www.mariwork.ir/shop/pearl-mariwork-fabric-color-code137-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "18521",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/pearl-mariwork-fabric-color-code137/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "81",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12479,
+      "historical_url": "https://www.mariwork.ir/shop/violet-mariwork-fabric-color-code107-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "9983",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/violet-mariwork-fabric-color-code107/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "77",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27901,
+      "historical_url": "https://www.mariwork.ir/shop/semi-matte-varnish-mariwork-fabric-medium-code216-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1016",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-semi-matte-varnish-code216/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "71",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12009,
+      "historical_url": "https://www.mariwork.ir/shop/yellow-mariwork-fabric-color-code104-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "6810",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "60",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/six-color-set-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "17967",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/six-color-set-250ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "59",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27328,
+      "historical_url": "https://www.mariwork.ir/shop/lemon-mariwork-fabric-color-code134-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "8981",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/lemon-mariwork-fabric-color-code134/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "56",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27025,
+      "historical_url": "https://www.mariwork.ir/shop/red-scarlet-mariwork-fabric-color-code124-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "10884",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/red-scarlet-mariwork-fabric-color-code124/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "53",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27384,
+      "historical_url": "https://www.mariwork.ir/shop/silver-glitter-mariwork-fabric-medium-code211-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1369",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-silver-glitter-code211/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "52",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 28239,
+      "historical_url": "https://www.mariwork.ir/shop/silver-color-shine-mariwork-fabric-medium-code207-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "4324",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-silver-shine-code207/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "51",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27046,
+      "historical_url": "https://www.mariwork.ir/shop/lavender-mariwork-fabric-color-code130-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "9685",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/lavender-mariwork-fabric-color-code130/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "49",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12532,
+      "historical_url": "https://www.mariwork.ir/shop/copper-119_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "8568",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/copper-119/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "46",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27378,
+      "historical_url": "https://www.mariwork.ir/shop/rainbow-glitter-mariwork-fabric-color-code210-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "3254",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-rainbow-glitter-code210/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "44",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27054,
+      "historical_url": "https://www.mariwork.ir/shop/cyan-mariwork-fabric-color-code132-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "10635",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/cyan-mariwork-fabric-color-code132/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "43",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 14448,
+      "historical_url": "https://www.mariwork.ir/shop/orange_fluorescent_101_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "19117",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/orange_fluorescent_101/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "33",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12511,
+      "historical_url": "https://www.mariwork.ir/shop/turquoseblue-mariwork-fabric-color-code114-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "8354",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/turquoseblue-mariwork-fabric-color-code114/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "28",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12520,
+      "historical_url": "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "5294",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "27",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12541,
+      "historical_url": "https://www.mariwork.ir/shop/white-mariwork-fabric-color-code121-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "4569",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/white-mariwork-fabric-color-code121/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "24",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12585,
+      "historical_url": "https://www.mariwork.ir/shop/goldencorona-201_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1440",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-golden-corona-powder-code201/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "24",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12516,
+      "historical_url": "https://www.mariwork.ir/shop/darkgold-115_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1284",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/darkgold-115/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "23",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12475,
+      "historical_url": "https://www.mariwork.ir/shop/green-mariwork-fabric-color-code106-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "3452",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/green-mariwork-fabric-color-code106/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "21",
+      "current_available_volumes": [],
+      "current_parent_id": 27727,
+      "historical_url": "https://www.mariwork.ir/shop/silver-rainbow-glitter-mariwork-fabric-medium-code217-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "761",
+      "observed_redirect_destination": "https://www.mariwork.ir/?post_type=product&p=27727",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "20",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27149,
+      "historical_url": "https://www.mariwork.ir/shop/green-grass-mariwork-fabric-color-code133-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "9342",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/green-grass-mariwork-fabric-color-code133/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "20",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 14449,
+      "historical_url": "https://www.mariwork.ir/shop/green_fluorescent_102_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "2938",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/green_fluorescent_102/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "19",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12536,
+      "historical_url": "https://www.mariwork.ir/shop/magenta-mariwork-fabric-color-code120_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "2201",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/magenta-mariwork-fabric-color-code120/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "13",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12528,
+      "historical_url": "https://www.mariwork.ir/shop/blue-mariwork-fabric-color-code118-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1614",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/blue-mariwork-fabric-color-code118/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "13",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27034,
+      "historical_url": "https://www.mariwork.ir/shop/permanet-rose-mariwork-fabric-color-code125-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1425",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/permanet-rose-mariwork-fabric-color-code125/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "12",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12484,
+      "historical_url": "https://www.mariwork.ir/shop/ochre-mariwork-fabric-color-code108-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "2289",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/ochre-mariwork-fabric-color-code108/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "12",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27386,
+      "historical_url": "https://www.mariwork.ir/shop/golden-glitter-mariwork-fabric-medium-code212-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "700",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-golden-glitter-code212/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "11",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 14446,
+      "historical_url": "https://www.mariwork.ir/shop/yellow_fluorescent_100_60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "2135",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/yellow_fluorescent_100/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "7",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12479,
+      "historical_url": "https://www.mariwork.ir/shop/violet-mariwork-fabric-color-code107-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "2205",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/violet-mariwork-fabric-color-code107/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "6",
+      "current_available_volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 12009,
+      "historical_url": "https://www.mariwork.ir/shop/yellow-mariwork-fabric-color-code104-250ml/",
+      "historical_volume": "250ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "6955",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "6",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 27043,
+      "historical_url": "https://www.mariwork.ir/shop/fluorescent-purple-mariwork-fabric-color-code129-60ml/",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1248",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/fluorescent-purple-mariwork-fabric-color-code129/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "2",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/whole-mediumes-set-30ml/",
+      "historical_volume": "30ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "106",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/whole-mediumes-set-30ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "1",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/eight-color-set-30ml/",
+      "historical_volume": "30ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "34",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/eight-color-set-30ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "1",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/24color-set-30ml/",
+      "historical_volume": "30ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "10",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/24color-set-30ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/a30-color-and-additives-set-30ml/",
+      "historical_volume": "30ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "20",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/a30-color-and-additives-set-30ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/totakali-glue-mariwork-fabric-medium-code205-60ml/?add-to-cart=12597",
+      "historical_volume": "60ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "18",
+      "observed_redirect_destination": "UNKNOWN_NEEDS_VERIFICATION",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/40color-set-30ml/",
+      "historical_volume": "30ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "9",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/40color-set-30ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/glitter-set-mariwork-fabric-medium-30ml/",
+      "historical_volume": "30ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "6",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/glitter-set-mariwork-fabric-medium-30ml/",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/gray_122_60ml/?add-to-cart=27025",
+      "historical_volume": "60ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "3",
+      "observed_redirect_destination": "UNKNOWN_NEEDS_VERIFICATION",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/pink_fluorescent_103_60ml/?add-to-cart=12520",
+      "historical_volume": "60ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "2",
+      "observed_redirect_destination": "UNKNOWN_NEEDS_VERIFICATION",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/green_fluorescent_102_60ml/?add-to-cart=14446",
+      "historical_volume": "60ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "2",
+      "observed_redirect_destination": "UNKNOWN_NEEDS_VERIFICATION",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [
+        "30ml",
+        "60ml"
+      ],
+      "current_parent_id": 28244,
+      "historical_url": "https://www.mariwork.ir/shop/teal-mariwork-fabric-color-code139-60ml/)",
+      "historical_volume": "60ml",
+      "identity_confidence": "PARTIAL",
+      "impressions": "1",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/teal-mariwork-fabric-color-code139/",
+      "reconciliation_label": "TRANSITIONAL"
+    },
+    {
+      "clicks": "0",
+      "current_available_volumes": [],
+      "current_parent_id": null,
+      "historical_url": "https://www.mariwork.ir/shop/six-color-set-60ml/،",
+      "historical_volume": "60ml",
+      "identity_confidence": "UNKNOWN",
+      "impressions": "1",
+      "observed_redirect_destination": "https://www.mariwork.ir/shop/six-color-set-60ml/%D8%8C",
+      "reconciliation_label": "UNKNOWN_NEEDS_VERIFICATION"
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "academy_archive": {
+    "canonical": [
+      "https://www.mariwork.ir/academy/"
+    ],
+    "jsonld": [
+      {
+        "contexts": [
+          "https://schema.org"
+        ],
+        "top_level": [
+          "@context",
+          "@graph"
+        ],
+        "types": [
+          "CollectionPage",
+          "Organization",
+          "WebSite"
+        ],
+        "valid_json": true
+      },
+      {
+        "contexts": [],
+        "top_level": [
+          "f",
+          "s",
+          "sandbox"
+        ],
+        "types": [],
+        "valid_json": true
+      }
+    ],
+    "jsonld_script_count": 2,
+    "robots": [
+      "index, follow"
+    ],
+    "status": 200,
+    "url": "https://www.mariwork.ir/academy/"
+  },
+  "academy_representatives": [
+    {
+      "entity_id": "WP-32844",
+      "interpretation": "APPLICATION_OR_UNTYPED_JSON",
+      "jsonld": [
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 1,
+      "status": 200,
+      "type": "sfwd-lessons",
+      "url": "https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/painting-method-on-fabric-or-leather-shoes/"
+    },
+    {
+      "entity_id": "WP-32845",
+      "interpretation": "APPLICATION_OR_UNTYPED_JSON",
+      "jsonld": [
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 1,
+      "status": 200,
+      "type": "sfwd-lessons",
+      "url": "https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/combining-painting-and-embroidery-on-fabric/"
+    },
+    {
+      "entity_id": "WP-32846",
+      "interpretation": "APPLICATION_OR_UNTYPED_JSON",
+      "jsonld": [
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 1,
+      "status": 200,
+      "type": "sfwd-lessons",
+      "url": "https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/painting-on-a-dry-background/"
+    },
+    {
+      "entity_id": "WP-32847",
+      "interpretation": "APPLICATION_OR_UNTYPED_JSON",
+      "jsonld": [
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 1,
+      "status": 200,
+      "type": "sfwd-lessons",
+      "url": "https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/stencil-printing-method-with-wreath/"
+    },
+    {
+      "entity_id": "WP-32848",
+      "interpretation": "APPLICATION_OR_UNTYPED_JSON",
+      "jsonld": [
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 1,
+      "status": 200,
+      "type": "sfwd-lessons",
+      "url": "https://www.mariwork.ir/academy/mariwork-one-minute-guides/lessons/working-with-the-wreath-and-its-glue/"
+    },
+    {
+      "entity_id": "WP-32714",
+      "interpretation": "APPLICATION_OR_UNTYPED_JSON",
+      "jsonld": [
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 1,
+      "status": 200,
+      "type": "sfwd-courses",
+      "url": "https://www.mariwork.ir/academy/mariwork-one-minute-guides/"
+    }
+  ],
+  "product_representatives": [
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/"
+      ],
+      "duplicate_parallel_output": false,
+      "entity_id": "WP-12009",
+      "http_status": 200,
+      "jsonld": [
+        {
+          "contexts": [
+            "https://schema.org"
+          ],
+          "top_level": [
+            "@context",
+            "@graph"
+          ],
+          "types": [
+            "AggregateOffer",
+            "ImageObject",
+            "ItemPage",
+            "Organization",
+            "Product",
+            "QuantitativeValue",
+            "WebSite"
+          ],
+          "valid_json": true
+        },
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 2,
+      "permalink": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/",
+      "product_type": "variable",
+      "volumes": [
+        "250ml",
+        "30ml",
+        "60ml"
+      ]
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/redbrown-mariwork-fabric-color-code105/"
+      ],
+      "duplicate_parallel_output": false,
+      "entity_id": "WP-12471",
+      "http_status": 200,
+      "jsonld": [
+        {
+          "contexts": [
+            "https://schema.org"
+          ],
+          "top_level": [
+            "@context",
+            "@graph"
+          ],
+          "types": [
+            "AggregateOffer",
+            "ImageObject",
+            "ItemPage",
+            "Organization",
+            "Product",
+            "QuantitativeValue",
+            "WebSite"
+          ],
+          "valid_json": true
+        },
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 2,
+      "permalink": "https://www.mariwork.ir/shop/redbrown-mariwork-fabric-color-code105/",
+      "product_type": "variable",
+      "volumes": [
+        "30ml",
+        "60ml"
+      ]
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/%d8%b3%d8%aa-5-%d8%b1%d9%86%da%af-%d9%81%d9%84%d9%88%d8%b1%d8%b3%d9%86%d8%aa-%d9%85%d8%a7%d8%b1%db%8c-%d9%88%d8%b1%da%a9/"
+      ],
+      "duplicate_parallel_output": false,
+      "entity_id": "WP-12597",
+      "http_status": 200,
+      "jsonld": [
+        {
+          "contexts": [
+            "https://schema.org"
+          ],
+          "top_level": [
+            "@context",
+            "@graph"
+          ],
+          "types": [
+            "ImageObject",
+            "ItemPage",
+            "Offer",
+            "Organization",
+            "Product",
+            "QuantitativeValue",
+            "WebSite"
+          ],
+          "valid_json": true
+        },
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 2,
+      "permalink": "https://www.mariwork.ir/shop/%d8%b3%d8%aa-5-%d8%b1%d9%86%da%af-%d9%81%d9%84%d9%88%d8%b1%d8%b3%d9%86%d8%aa-%d9%85%d8%a7%d8%b1%db%8c-%d9%88%d8%b1%da%a9/",
+      "product_type": "yith_bundle",
+      "volumes": []
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/mariwork-fabric-fixative-medium-code204/"
+      ],
+      "duplicate_parallel_output": false,
+      "entity_id": "WP-12591",
+      "http_status": 200,
+      "jsonld": [
+        {
+          "contexts": [
+            "https://schema.org"
+          ],
+          "top_level": [
+            "@context",
+            "@graph"
+          ],
+          "types": [
+            "AggregateOffer",
+            "ImageObject",
+            "ItemPage",
+            "Organization",
+            "Product",
+            "QuantitativeValue",
+            "WebSite"
+          ],
+          "valid_json": true
+        },
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 2,
+      "permalink": "https://www.mariwork.ir/shop/mariwork-fabric-fixative-medium-code204/",
+      "product_type": "variable",
+      "volumes": [
+        "30ml",
+        "60ml"
+      ]
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/tampon/"
+      ],
+      "duplicate_parallel_output": false,
+      "entity_id": "WP-24043",
+      "http_status": 200,
+      "jsonld": [
+        {
+          "contexts": [
+            "https://schema.org"
+          ],
+          "top_level": [
+            "@context",
+            "@graph"
+          ],
+          "types": [
+            "ImageObject",
+            "ItemPage",
+            "Offer",
+            "Organization",
+            "Product",
+            "WebSite"
+          ],
+          "valid_json": true
+        },
+        {
+          "contexts": [],
+          "top_level": [
+            "f",
+            "s",
+            "sandbox"
+          ],
+          "types": [],
+          "valid_json": true
+        }
+      ],
+      "jsonld_script_count": 2,
+      "permalink": "https://www.mariwork.ir/shop/tampon/",
+      "product_type": "simple",
+      "volumes": []
+    }
+  ]
+}

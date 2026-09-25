@@ -1,0 +1,16 @@
+{
+  "duplicate_parallel_output_possible": "Not from this module; exact repeated WooCommerce breadcrumb output is suppressed.",
+  "emits_independent_jsonld": false,
+  "filters_rank_math_output": false,
+  "hooks": [
+    {
+      "function": "mariwork_core_dedupe_woocommerce_breadcrumb_schema",
+      "name": "woocommerce_structured_data_breadcrumblist",
+      "role": "FILTERS_WOOCOMMERCE_OUTPUT"
+    }
+  ],
+  "product_families_affected": "WooCommerce breadcrumb schema",
+  "representative_public_duplication": "No duplicate parallel output observed in selected representatives",
+  "role": "FILTER",
+  "source_file": "wp-content/plugins/mariwork-core/modules/woocommerce/structured-data.php"
+}
