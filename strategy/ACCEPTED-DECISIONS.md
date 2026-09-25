@@ -487,3 +487,16 @@ Rules:
 - Do not add a second independent JSON-LD emitter for the same entities.
 - Review theme microdata for factual/conflict consistency rather than removing harmless markup blindly.
 - Validate rendered structured-data output after implementation.
+
+
+## DEC-008 — Product Title Naming Standard — Sets / Bundles
+
+**Status:** ACCEPTED
+
+- Set/Bundle titles/H1s use concise purchasable identity plus genuinely identifying count/type and volume where applicable.
+- Long `شامل ...` component strings move to Product content rather than the primary title.
+- Use Mariwork branding only for genuinely Mariwork-branded Sets.
+- Do not force Product codes without a real stable identifier.
+- Normalize separators/digits consistently; no URL/slug changes.
+- Exact per-Set wording is finalized from current YITH/Woo bundle composition during implementation/content QA.
+- DEC-011 is no longer blocked by deferred DEC-008.
