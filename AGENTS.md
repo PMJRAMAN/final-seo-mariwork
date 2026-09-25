@@ -10,6 +10,9 @@
 5. dossier/change dossier مربوطه
 6. `MASTER-TODO.md` برای جایگاه task
 7. `docs/SEO-OWNERSHIP.md` برای هر task دارای تغییر SEO
+8. `docs/DECISION-TO-EXECUTION-GOVERNANCE.md`
+9. `strategy/DECISION-BACKLOG.md` برای هر task وابسته به target-state decision
+10. `tasks/EXECUTION-BACKLOG.md` برای هر IMPLEMENTATION task
 
 ## 1. Default Mode = AUDITOR / READ-ONLY
 
@@ -299,3 +302,25 @@ Codex حق ندارد:
 - `SECOND_REVIEWED` و `APPROVED` و Production implementation ممنوع است؛
 - اگر evidence ناقص است unknown/blocker را ثبت کن و fact نساز؛
 - usage/rate-limit را دور نزن؛ runner باید pause شود و بعداً resume کند.
+
+
+## Decision-to-Execution Gate
+
+Audit evidence and Second Review recommendations are not direct implementation instructions.
+
+Before accepting or executing any task that writes to Production:
+
+1. Identify the relevant Decision IDs in `strategy/DECISION-BACKLOG.md`.
+2. Every blocking Decision ID must be `ACCEPTED`.
+3. Identify the corresponding Execution ID in `tasks/EXECUTION-BACKLOG.md`.
+4. The Execution item must be `READY_FOR_TASK`.
+5. The task must cite both the accepted Decision IDs and Execution ID.
+6. Re-check exact current Production state before write.
+7. For FAMILY/SITEWIDE work, require the existing Change Dossier / canary / rollback / regression gates.
+8. For visible copy, use only owner/ChatGPT-approved final text.
+
+If a blocking decision is `OPEN`, `DISCUSSING`, `PROPOSED` or `NEEDS_TARGETED_EVIDENCE`, do not implement that scope.
+
+Codex may perform a specifically authorized read-only evidence task to help close a `NEEDS_TARGETED_EVIDENCE` decision, but Codex cannot change the decision to `ACCEPTED`.
+
+`MASTER-TODO.md` remains the complete-project coverage authority, but an item being present or checked there does not itself authorize a Production write.
