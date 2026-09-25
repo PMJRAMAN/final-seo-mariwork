@@ -187,3 +187,18 @@ Rules:
 - FAQ: `سوالات متداول ماری‌ورک` / H1 `سوالات متداول`.
 - SEO title and H1 may differ, but they must describe the same page role/topic.
 - Creative taglines may remain as supporting copy, not as a replacement for a clear page-identity H1.
+
+
+## DEC-013 — Article Title / H1 Convention
+
+**Status:** ACCEPTED
+
+- Article titles are natural, reader-facing and based on the actual subject.
+- Default relationship: approved Article H1/title = SEO `<title>`.
+- Remove the repetitive `- رنگ پارچه ماری ورک` suffix from the default Article title template.
+- Include `رنگ پارچه`, `ماری ورک` or other terms only when naturally relevant to the Article.
+- Do not mechanically inject keywords, dates, “best”, “complete guide”, or similar modifiers for SEO.
+- Retain existing titles when accurate and useful.
+- Rewrite only when materially vague, inaccurate, misleading, excessively verbose, or inconsistent with the content.
+- Do not change URLs/slugs solely because Article titles are normalized.
+- Cannibalization/overlap is governed separately by DEC-119.
