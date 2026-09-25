@@ -751,3 +751,14 @@ Rules:
 - Do not define adequate linking with one universal minimum inbound-link count.
 - Utility, noindex, temporary, and deliberately non-search-target pages may be documented exceptions.
 - Broken URLs/404s are a separate issue.
+
+
+## DEC-049 — Magazine vs Academy Intent Boundary
+
+**Status:** ACCEPTED
+
+- Academy is Mariwork's video-education destination for practical demonstrations, techniques, step-by-step learning, and product/material/tool use.
+- Magazine is the broader editorial destination for fabric-painting and hand-printing art topics, reference/history, news, product introductions, and written tips or techniques.
+- A technique or instructional tip does not by itself make Magazine content an Academy item.
+- Magazine may link to Academy as a practical video next step; Academy → Magazine is not mandatory.
+- Editorial product introduction belongs in Magazine; practical video instruction for product use belongs in Academy.
