@@ -458,3 +458,17 @@ Rules:
 - Sitemap membership follows indexability/canonical decisions; it never determines them.
 - `lastmod` reflects meaningful changes only.
 - Sitemap QA is a dedicated implementation/release gate: validate every emitted URL for 200, indexability, canonical self-consistency, correct family eligibility, and absence of redirects/errors/retired entities; also verify all approved sitemap families are present.
+
+
+## DEC-031 — Attachment / Media Public and Index Policy
+
+**Status:** ACCEPTED
+
+- Attachment HTML pages are not durable Search landing pages and should not be index/sitemap targets.
+- Keep useful media asset files crawlable where required for rendering, Google Images and structured-data references.
+- Attachment HTML URLs redirect to a clear owning canonical page when one exists; otherwise may redirect to the retained media file when appropriate; otherwise 404/410.
+- Do not mass-redirect Attachment pages to unrelated destinations.
+- DEC-031 does not itself authorize Media Library/file deletion.
+- Required operational follow-up: inventory and safely remove genuinely unused/orphaned media only after proving no references remain across content, Product galleries/featured images, Academy, taxonomies/static content, schema/metadata, CSS/JS/theme/plugin/custom-field/template/runtime dependencies.
+- Media cleanup must be backup/rollback-capable and batch/canary verified.
+- Reconcile the current 626-returned vs 845-advertised attachment discrepancy before bulk cleanup.
