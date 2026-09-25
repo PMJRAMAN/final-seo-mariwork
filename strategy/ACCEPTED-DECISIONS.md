@@ -432,3 +432,17 @@ Rules:
 - All other empty Blog Categories are approved for controlled deletion.
 - Retired non-Artist category URLs redirect only when a genuine semantic successor exists; otherwise they return 404.
 - Remove obsolete internal references and preserve relevant migration evidence before deletion.
+
+
+## DEC-029 — Blog Tags Decommission and Mapping Policy
+
+**Status:** ACCEPTED
+
+- Fully delete/decommission all 54 current Blog Tag terms.
+- Remove all 39 current Article↔Tag assignments; Article content and durable Blog Category membership remain unchanged.
+- Blog Tag archives are not durable SEO/navigation entities and remain out of index/sitemap targets.
+- Redirect only when a genuine editorial successor exists: Magazine Category, specific Article, or equivalent Magazine hub.
+- Do not redirect Blog Tags to Store/Product destinations merely from keyword overlap.
+- Do not map by tag name or slug similarity alone.
+- URLs without a meaningful editorial replacement return 404/410; standard 404 is the default.
+- Preserve relevant historical evidence and QA internal links, redirects, sitemap leakage and soft 404s.
