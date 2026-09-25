@@ -894,3 +894,14 @@ Rules:
 - Keep search functionality available to users.
 - Do not block crawling in a way that prevents the `noindex` directive from being seen.
 - Durable Product, Category, `pa_volume` and other approved landing pages remain the intended Search targets.
+
+
+## DEC-062 — Author / Date Archive Public and Indexability Policy
+
+**Status:** ACCEPTED
+
+- Author and Date archives are not independent SEO landing-page families for Mariwork.
+- If publicly generated, keep them out of XML sitemaps and prevent them from becoming Search targets through the approved noindex/non-public path.
+- Magazine Articles and durable Blog Categories remain the primary editorial discovery/index surfaces.
+- Current Articles use the Mariwork Organization rather than individual author entities under DEC-034, so Author archives do not receive separate SEO ownership.
+- Do not invent Author/Date archive URLs; verify actual route existence during implementation.
