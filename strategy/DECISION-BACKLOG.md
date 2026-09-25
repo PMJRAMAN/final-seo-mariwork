@@ -279,7 +279,7 @@ After each discussion:
 |---|---|---|---|---|
 | DEC-085 | Editorial author / reviewer / date / source / citation provenance policy | OPEN | CONTENT-RESEARCH-SPEC §§8–9; E1/F1 | Applies where factual/technical claims need provenance; no invented credentials |
 | DEC-086 | FAQ visible-content versus structured-data boundary | OPEN | WP-32895; SR-005 §5 | Semantic correctness first; no rich-result promise |
-| DEC-087 | Stores/location/NAP and local-trust content role | NEEDS_TARGETED_EVIDENCE | WP-14760; BRAND-ENTITY-SEARCH | Requires verified store/address/contact facts |
+| DEC-087 | Stores/location/NAP and local-trust content role | NEEDS_TARGETED_EVIDENCE | WP-14760; BRAND-ENTITY-SEARCH | Owner-confirmed boundary: physical locations are stores that stock/sell Mariwork products, not official/exclusive representatives or branches by default. Canonical wording: `فروشگاه‌های عرضه‌کننده محصولات ماری‌ورک`. Requires verified store/address/contact facts and later review of Stores page naming to avoid implying ownership/representation. |
 | DEC-088 | Informational Article/Academy commercial CTA policy | OPEN | CONTENT-RESEARCH-SPEC §7; DEC-042–046 | Separate useful CTA policy from mechanical internal linking |
 | DEC-114 | Homepage visible content and CTA structure | OPEN | C-009; WP-63; SR-005 §4 | Separate content/CTA structure from Homepage title/H1/meta baseline |
 | DEC-115 | Durable Product Category title/H1 naming standard | OPEN | B7; SR-004 SR-ST-006 | Separate from metadata and visible intro/content |
