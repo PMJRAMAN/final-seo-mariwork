@@ -1169,3 +1169,33 @@ Google accepts both for content that has been removed without a replacement. Mar
 The underlying WooCommerce `product_tag` capability does not need to be removed from WooCommerce core; it may remain unused.
 
 Blog Tags remain a separate lifecycle domain because they still have assigned Article relationships.
+
+
+## DEC-027 Amendment — Commerce-Only Redirect Destinations
+**Status:** Accepted  
+**Date:** 2026-09-25
+
+The owner narrowed the Product Tag redirect policy.
+
+Historical Product Tag URLs may redirect only to a genuine semantic successor within Mariwork's commerce/store architecture.
+
+Allowed destination classes:
+- Product;
+- Product Category;
+- approved `pa_volume` landing page;
+- Shop only in exceptional cases where it is genuinely the closest valid commercial replacement.
+
+Disallowed destination classes for Product Tag migration:
+- Magazine Article;
+- Academy Course/Lesson;
+- Static/support pages;
+- Homepage;
+- unrelated broad destinations.
+
+All prior DEC-027 rules remain unchanged:
+- no mapping by slug/keyword similarity;
+- no mass redirects;
+- no-replacement URLs return proper 404/410;
+- standard 404 remains the default unless deliberate 410 is operationally useful;
+- preserve historical evidence before deletion;
+- perform redirect/internal-link/sitemap regression QA.
