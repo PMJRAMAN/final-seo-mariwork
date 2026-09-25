@@ -1023,3 +1023,57 @@ Do not add long generic SEO content merely to increase page length.
 - Academy→Product/internal-link rules: dedicated internal-link Decisions.
 - Academy↔Magazine overlap/cannibalization: DEC-119.
 - Exact visual layout remains an implementation/design concern rather than a strategy requirement.
+
+
+## DEC-025 — Durable Product Category Set and Index / Sitemap Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT CATEGORY / INDEXABILITY / SITEMAP / LIFECYCLE
+
+### Accepted target state
+
+Mariwork maintains a selective set of durable WooCommerce Product Category landing pages.
+
+Approved durable Product Categories:
+
+Top-level:
+- `TERM-product_cat-1902` — Fabric Colors
+- `TERM-product_cat-28` — Mediums / Glitters
+- `TERM-product_cat-82` — Fabric Color Sets
+- `TERM-product_cat-220` — Tools / Accessories
+
+Child Set categories:
+- `TERM-product_cat-1991` — 30 ml Sets
+- `TERM-product_cat-1992` — 60 ml Sets
+- `TERM-product_cat-1993` — 250 ml Sets
+
+Target state for durable categories:
+- HTTP 200;
+- `index,follow`;
+- self-canonical;
+- included in the Product Category XML sitemap;
+- reachable through durable crawlable internal navigation;
+- retain a genuine commercial browse/product-selection role.
+
+A parent Category does not require directly assigned Products when it provides a genuine hierarchy/hub role through useful child Categories.
+
+Low Product count alone does not disqualify a Category, but a thin keyword-variant page without genuine browse value is not durable.
+
+### Migration-era categories
+
+- `TERM-product_cat-20` — historical 60 ml Fabric Colors
+- `TERM-product_cat-27` — historical 250 ml Fabric Colors
+
+These are not durable search landing pages.
+
+Accepted lifecycle:
+1. remove them from the durable SEO architecture, navigation and sitemap target set;
+2. preserve historical/migration evidence;
+3. consolidate/redirect their historical URLs to the verified main Fabric Colors Category;
+4. after redirect/disposition is in place and operational dependency checks pass, delete the obsolete WooCommerce category terms themselves.
+
+Do not delete first and decide URL disposition afterward.
+
+`pa_volume` is a separate taxonomy and is governed by DEC-026.
+
+Product Category visible-content policy remains governed by DEC-021; metadata by DEC-076; title/H1 by DEC-115.
