@@ -2254,3 +2254,48 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Magazine History/artist editorial content and Mariwork Artist profiles remain separate content families with separate roles.
 - DEC-052 does not supersede or reopen the Artists migration policy accepted in DEC-028.
 - Detailed History editorial planning remains a later content-strategy decision.
+
+
+## DEC-053 — Canonical Mariwork Facts and Naming-Consistency Registry
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** BRAND / ENTITY / NAMING / FACTUAL CONSISTENCY
+
+### Accepted target state
+
+- The owner-confirmed canonical facts registry in `strategy/BRAND-ENTITY-SEARCH.md` is the factual baseline for Mariwork brand/entity naming, content and structured-data work.
+- Canonical Persian brand name: `ماری‌ورک`.
+- Canonical English brand name: `Mariwork`.
+- Official website: `mariwork.ir`.
+- Founder: `مریم مختاری`; canonical English name: `Maryam Mokhtari`.
+- Canonical founder title: Founder of Mariwork.
+- Start year: 1395 SH.
+- Owner-confirmed experience claim: more than 10 years.
+- Mariwork is an Iranian brand/business, not a company/legal entity label by default.
+- Preferred concise brand definition: `ماری‌ورک تولیدکننده رنگ‌های پارچه و محصولات تخصصی نقاشی و چاپ روی پارچه است.`
+- Mariwork specializes in fabric painting and hand printing.
+- Mariwork fabric colors are designed for painting and printing on fabric, not fabric dyeing.
+- Mariwork fabric colors must not be represented as ordinary acrylic paint or merely an equivalent/subtype of standard acrylic paint; detailed technical differences require separate factual evidence.
+- Products are formulated in Iran by Iranian engineers using foreign-origin materials.
+- Production, mixing, filling and final preparation are performed in Iran.
+- Primary market/activity geography: Iran.
+- Mariwork manufactures its core portfolio; a small number of Other Tools items are third-party products and must not be represented as Mariwork-branded/manufactured merely because they are sold on mariwork.ir.
+- Primary audience: artists, learners/students, and professional or educational users of fabric painting and hand printing.
+- Education is a real brand activity, and developing the art through education is one of Mariwork's main goals; Mariwork must not be reduced to an educational institute.
+- Existing English tagline: `add color to your life`; it is not a mandatory sitewide SEO/entity message.
+- Official logo wordmark text: `Mariwork`; there is no separate official Persian wordmark.
+- Official section labels include `آکادمی ماری‌ورک`, `مجله ماری‌ورک`, and `هنرمندان` for the `/artists/` project.
+- Shop navigation may use `فروشگاه`; `فروشگاه ماری‌ورک` may be used naturally in Titles/H1/prose where useful, but brand insertion is not mandatory.
+- Mariwork sells directly through its online store and is also stocked by third-party physical stores.
+- Canonical wording for those outlets is `فروشگاه‌های عرضه‌کننده محصولات ماری‌ورک`.
+- Mariwork currently has no official or exclusive representative/dealer network by default; do not label third-party outlets as official representatives, exclusive representatives, branches or Mariwork-owned stores without separate verification.
+- Mariwork has no public official physical brand address to publish as a canonical Organization/Contact location.
+- Official social presence exists on Instagram, YouTube, Telegram and Aparat, and official phone/email/WhatsApp contact channels exist; exact verified handles, URLs and contact details are deferred to DEC-127.
+- Do not infer or invent legal status, awards, credentials, technical Product mechanisms, addresses, social URLs, contact details or other entity facts beyond the verified registry.
+
+### Consequences
+
+- Future Homepage, About, Why Mariwork, Product, Article, Academy, Organization schema and brand-entity work must remain consistent with this registry unless a later accepted decision amends a fact.
+- Earlier uses of `ماری ورک` or `ماریورک` in visible naming are non-canonical and should be normalized during the appropriate implementation/content pass without changing URLs solely for spelling normalization.
+- Exact social/contact identity is not authorized by DEC-053 and remains blocked on DEC-127.
+- Stores/location/NAP treatment remains governed by DEC-087.
