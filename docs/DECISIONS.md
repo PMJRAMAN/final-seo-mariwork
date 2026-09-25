@@ -1988,3 +1988,44 @@ Current snapshot evidence showed BreadcrumbList coverage was inconsistent across
 - Homepage has no breadcrumb requirement.
 - Generic static/support pages without meaningful depth do not require artificial breadcrumbs.
 - Utility/noindex endpoints such as Login, Cart, Checkout, My Account and Fast Buy are not breadcrumb SEO targets.
+
+
+## DEC-040 — Internal-Link Classification Model
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SITEWIDE / INTERNAL LINKING / INFORMATION ARCHITECTURE
+
+### Decision
+
+Mariwork internal-link requirements use three rule classes:
+
+1. **CORE / MANDATORY** — links required across every relevant entity in a defined family.
+2. **FAMILY-SPECIFIC** — links required only for a defined product/content family.
+3. **CONTEXTUAL / OPTIONAL** — links used only when the source-page topic or user task makes them genuinely useful.
+
+Equivalent pages in the same family must not randomly differ in mandatory-link coverage.
+
+A missing mandatory link must either be corrected or recorded as an approved documented exception.
+
+The architecture may be bidirectional where useful:
+- Product → Academy / Article;
+- Category → Academy / Article;
+- Academy / Article → relevant Product;
+- Academy / Article → relevant Product Category.
+
+Commercial links from informational content must remain contextually useful rather than being forced merely to increase link count.
+
+### Evidence
+
+SR-005 §17 and the initial Internal Link Requirement Matrix established the need for consistent family-level coverage while preserving contextual relevance. The repository's internal-link architecture draft already separates mandatory, family-specific and optional relationships.
+
+### Consequences
+
+- The Internal Link Requirement Matrix must classify approved relationships using these three classes.
+- QA must compare equivalent family members against mandatory-link requirements.
+- Exact mandatory parent/hub destinations are not decided by DEC-040 and remain governed by DEC-041.
+- Product↔education, Article↔commercial and anchor-text rules remain governed by DEC-042 onward.
+
+### Exceptions
+
+A family member may omit an otherwise mandatory link only when a documented, approved exception explains why the relationship is not valid for that entity.
