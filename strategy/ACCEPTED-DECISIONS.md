@@ -871,3 +871,14 @@ Rules:
 - Durable `pa_volume` landing pages remain separate indexable SEO pages under DEC-026.
 - Product-level `attribute_pa_volume` URLs remain available for direct variant preselection and are not treated as Store facet URLs.
 - Avoid blanket robots blocking that could interfere with legitimate variant-selection behavior.
+
+
+## DEC-060 — Shop Pagination and Legacy `product-page` Policy
+
+**Status:** ACCEPTED
+
+- `/shop/page/N/` is the canonical Shop pagination architecture.
+- Legacy `?product-page=N` states must stop being generated.
+- Historical `?product-page=N` URLs should consolidate to the corresponding `/shop/page/N/` URL.
+- Do not maintain parallel pagination URL systems for the same Shop result pages.
+- Product, `pa_volume`, Store facet/sort/display and Product variation-preselection behavior remain governed separately.
