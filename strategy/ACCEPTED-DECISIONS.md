@@ -774,3 +774,14 @@ Rules:
 - Avoid assigning substantially the same primary intent across Product, Category, and Article without deliberate justification.
 - Ambiguous cases require later keyword/SERP research and explicit page ownership.
 - DEC-050 defines role boundaries only; research methodology, ownership mapping, conflict resolution, and implementation remain governed by later decisions.
+
+
+## DEC-051 — Magazine Hub and Blog Category Hierarchy
+
+**Status:** ACCEPTED
+
+- `/mag/` is Mariwork's primary Magazine hub and editorial discovery surface.
+- It provides structured access to Magazine categories and content through deliberate discovery components.
+- Magazine categories form the navigational/content hierarchy beneath the hub.
+- The hub is not an ordinary Article or Category archive.
+- Final category taxonomy, names, and category-specific content strategy remain separate decisions.
