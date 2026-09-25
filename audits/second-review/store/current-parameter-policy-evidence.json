@@ -1,0 +1,187 @@
+{
+  "representatives": [
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/"
+      ],
+      "content_identity_hash": "27616638cce0ff44942ef36839949cc0d1a74f1aeff76ae029276626ea806f50",
+      "h1": [],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "filter_volume",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/?filter_volume=30ml&query_type_volume=or",
+      "title": [
+        "فروشگاه - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/"
+      ],
+      "content_identity_hash": "e6b4435a41ed4f730767299dff8b65810e53522154c04aa90d2bdfaf24760585",
+      "h1": [],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "orderby",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/?orderby=price",
+      "title": [
+        "فروشگاه - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/"
+      ],
+      "content_identity_hash": "6c4a5a3939b195b507000977ec767dc64694d4a238f214fd77f9172985c61861",
+      "h1": [],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "per_page",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/?per_page=9",
+      "title": [
+        "فروشگاه - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/"
+      ],
+      "content_identity_hash": "42a5c2397c364cd61f6955f47a7ccbd7ee141476ff14e5e051fe94bf8b39cb3a",
+      "h1": [],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "per_row",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/?per_row=3",
+      "title": [
+        "فروشگاه - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/"
+      ],
+      "content_identity_hash": "708a332585d89a163aab2288cccb46ea685a8363a4892e0716afe020ab59b75e",
+      "h1": [],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "shop_view",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/?shop_view=list",
+      "title": [
+        "فروشگاه - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/page/2/"
+      ],
+      "content_identity_hash": "a784b75837ecdfc5e0a84e6d53211453e18e1b101dae04b6f332dd81a2701e23",
+      "h1": [],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "pagination",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/page/2/",
+      "title": [
+        "فروشگاه - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/"
+      ],
+      "content_identity_hash": "cba43e6c647c55e459ac01dbd11e13d555efa227872b4be3b79a164fd30568ed",
+      "h1": [],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "product-page",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/?product-page=2",
+      "title": [
+        "فروشگاه - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    },
+    {
+      "canonical": [],
+      "content_identity_hash": "d0daea8ec99630171c84d73908978ed6dbfa9262beaeb2d01478ec1b6fc1698e",
+      "h1": [
+        "نتایج جستجو برای fabric"
+      ],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "product_search",
+      "robots": [
+        "follow, noindex"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/?post_type=product&s=fabric",
+      "title": [
+        "fabric - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    },
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/"
+      ],
+      "content_identity_hash": "b0362afd885fcc053f5fc7e037516ea4f1f56b03997b6a38793544a8466fdd33",
+      "h1": [
+        "رنگ پارچه قرمز ماری ورک کد 116"
+      ],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "variation_selection",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/?attribute_pa_volume=30ml",
+      "title": [
+        "رنگ پارچه قرمز ماری ورک کد 116 - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    }
+  ],
+  "transactional_urls_requested": false
+}

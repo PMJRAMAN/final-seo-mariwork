@@ -1,0 +1,260 @@
+[
+  {
+    "canonical": null,
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-1",
+    "http_status": 404,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "دسته‌بندی نشده",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": null,
+    "sitemap_membership": [],
+    "slug": "%d8%af%d8%b3%d8%aa%d9%87%e2%80%8c%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87",
+    "taxonomy": "category",
+    "term_id": 1,
+    "url": "https://www.mariwork.ir/mag/%d8%af%d8%b3%d8%aa%d9%87%e2%80%8c%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-18",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "معرفی هنرمندان",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "artists",
+    "taxonomy": "category",
+    "term_id": 18,
+    "url": "https://www.mariwork.ir/mag/artists/"
+  },
+  {
+    "canonical": [
+      "https://www.mariwork.ir/mag/articles/"
+    ],
+    "count": 12,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-71",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "مقالات آموزشی",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    ],
+    "sitemap_membership": [
+      "https://www.mariwork.ir/category-sitemap.xml"
+    ],
+    "slug": "articles",
+    "taxonomy": "category",
+    "term_id": 71,
+    "url": "https://www.mariwork.ir/mag/articles/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-73",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "ویدیو آموزشی",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "education",
+    "taxonomy": "category",
+    "term_id": 73,
+    "url": "https://www.mariwork.ir/mag/education/"
+  },
+  {
+    "canonical": [
+      "https://www.mariwork.ir/mag/history/"
+    ],
+    "count": 3,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-142",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "تاریخچه",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    ],
+    "sitemap_membership": [
+      "https://www.mariwork.ir/category-sitemap.xml"
+    ],
+    "slug": "history",
+    "taxonomy": "category",
+    "term_id": 142,
+    "url": "https://www.mariwork.ir/mag/history/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-1955",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "Cultural",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "cultural",
+    "taxonomy": "category",
+    "term_id": 1955,
+    "url": "https://www.mariwork.ir/mag/cultural/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-1956",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "Guides",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "guides",
+    "taxonomy": "category",
+    "term_id": 1956,
+    "url": "https://www.mariwork.ir/mag/guides/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-1957",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "Literature",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "literature",
+    "taxonomy": "category",
+    "term_id": 1957,
+    "url": "https://www.mariwork.ir/mag/literature/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-1982",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "Uncategorized",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "uncategorized",
+    "taxonomy": "category",
+    "term_id": 1982,
+    "url": "https://www.mariwork.ir/mag/uncategorized/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-1983",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "Free",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "free",
+    "taxonomy": "category",
+    "term_id": 1983,
+    "url": "https://www.mariwork.ir/mag/free/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-1984",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "General",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "general",
+    "taxonomy": "category",
+    "term_id": 1984,
+    "url": "https://www.mariwork.ir/mag/general/"
+  },
+  {
+    "canonical": [],
+    "count": 0,
+    "current_classification": "CURRENT_VERIFIED",
+    "current_exists": true,
+    "entity_id": "TERM-category-1985",
+    "http_status": 200,
+    "migration_role": "UNKNOWN_NEEDS_VERIFICATION",
+    "name": "Paid",
+    "parent": 0,
+    "public": true,
+    "publicly_queryable": true,
+    "robots": [
+      "follow, noindex"
+    ],
+    "sitemap_membership": [],
+    "slug": "paid",
+    "taxonomy": "category",
+    "term_id": 1985,
+    "url": "https://www.mariwork.ir/mag/paid/"
+  }
+]

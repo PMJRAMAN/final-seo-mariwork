@@ -1,0 +1,1912 @@
+{
+  "product_categories": [
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/fabric-colors-60-ml/",
+      "entity_id": "TERM-product_cat-20",
+      "entity_type": "product_cat",
+      "h1": "رنگ‌های پارچه",
+      "html_title": "رنگ‌های پارچه - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ های پارچه 60 میلی لیتر"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/fabric-colors-250-ml/",
+      "entity_id": "TERM-product_cat-27",
+      "entity_type": "product_cat",
+      "h1": "رنگ‌های پارچه",
+      "html_title": "رنگ‌های پارچه - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ های پارچه 250 میلی لیتر"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/fabric-printing-medium/",
+      "entity_id": "TERM-product_cat-28",
+      "entity_type": "product_cat",
+      "h1": "مدیوم‌ها و اکلیل‌ها",
+      "html_title": "مدیوم‌ها و اکلیل‌ها - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "مدیوم‌ها و اکلیل‌ها"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/fabric-color-set/",
+      "entity_id": "TERM-product_cat-82",
+      "entity_type": "product_cat",
+      "h1": "ست های رنگ پارچه",
+      "html_title": "ست های رنگ پارچه - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "ست های رنگ پارچه"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/accessories/",
+      "entity_id": "TERM-product_cat-220",
+      "entity_type": "product_cat",
+      "h1": "سایر ابزارها",
+      "html_title": "سایر ابزارها - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "سایر ابزارها"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/fabric-colors/",
+      "entity_id": "TERM-product_cat-1902",
+      "entity_type": "product_cat",
+      "h1": "رنگ‌های پارچه",
+      "html_title": "رنگ‌های پارچه - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ‌های پارچه"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/fabric-color-set/fabric-color-set-30-ml/",
+      "entity_id": "TERM-product_cat-1991",
+      "entity_type": "product_cat",
+      "h1": "ست‌های ۳۰ میل",
+      "html_title": "ست‌های ۳۰ میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست‌های ۳۰ میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/fabric-color-set/fabric-color-set-60-ml/",
+      "entity_id": "TERM-product_cat-1992",
+      "entity_type": "product_cat",
+      "h1": "ست‌های ۶۰ میل",
+      "html_title": "ست‌های ۶۰ میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست‌های ۶۰ میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [],
+      "current_url": "https://www.mariwork.ir/product/fabric-color-set/fabric-color-set-250-ml/",
+      "entity_id": "TERM-product_cat-1993",
+      "entity_type": "product_cat",
+      "h1": "ست‌های ۲۵۰ میل",
+      "html_title": "ست‌های ۲۵۰ میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": null,
+      "product_type": null,
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست‌های ۲۵۰ میل"
+    }
+  ],
+  "products": [
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/",
+      "entity_id": "WP-12009",
+      "entity_type": "product",
+      "h1": "رنگ پارچه زرد ماری ورک کد 104",
+      "html_title": "رنگ پارچه زرد ماری ورک کد 104 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12009,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه زرد ماری ورک کد 104"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/redbrown-mariwork-fabric-color-code105/",
+      "entity_id": "WP-12471",
+      "entity_type": "product",
+      "h1": "رنگ پارچه آجری ماری ورک کد ۱۰۵",
+      "html_title": "رنگ پارچه آجری ماری ورک کد ۱۰۵ - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12471,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه آجری ماری ورک کد ۱۰۵"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/green-mariwork-fabric-color-code106/",
+      "entity_id": "WP-12475",
+      "entity_type": "product",
+      "h1": "رنگ پارچه سبز ماری ورک کد 106",
+      "html_title": "رنگ پارچه سبز ماری ورک کد 106 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12475,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه سبز ماری ورک کد 106"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/violet-mariwork-fabric-color-code107/",
+      "entity_id": "WP-12479",
+      "entity_type": "product",
+      "h1": "رنگ پارچه بنفش ماری ورک کد 107",
+      "html_title": "رنگ پارچه بنفش ماری ورک کد 107 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12479,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه بنفش ماری ورک کد 107"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/ochre-mariwork-fabric-color-code108/",
+      "entity_id": "WP-12484",
+      "entity_type": "product",
+      "h1": "رنگ پارچه اُکر ماری ورک کد 108",
+      "html_title": "رنگ پارچه اُکر ماری ورک کد 108 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12484,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه اُکر ماری ورک کد 108"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/saddlebrown-mariwork-fabric-color-code109/",
+      "entity_id": "WP-12488",
+      "entity_type": "product",
+      "h1": "رنگ پارچه قهوه ای شکلاتی ماری ورک کد 109",
+      "html_title": "رنگ پارچه قهوه ای شکلاتی ماری ورک کد 109 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12488,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه قهوه ای شکلاتی ماری ورک کد 109"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/olivegreen-mariwork-fabric-color-code110/",
+      "entity_id": "WP-12492",
+      "entity_type": "product",
+      "h1": "رنگ پارچه سبز زیتونی ماری ورک کد 110",
+      "html_title": "رنگ پارچه سبز زیتونی ماری ورک کد 110 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12492,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه سبز زیتونی ماری ورک کد 110"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/lightgold-mariwork-fabric-color-code111/",
+      "entity_id": "WP-12498",
+      "entity_type": "product",
+      "h1": "رنگ پارچه طلایی روشن ماری ورک کد 111",
+      "html_title": "رنگ پارچه طلایی روشن ماری ورک کد 111 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12498,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه طلایی روشن ماری ورک کد 111"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/orange-mariwork-fabric-color-code112/",
+      "entity_id": "WP-12502",
+      "entity_type": "product",
+      "h1": "رنگ پارچه نارنجی ماری ورک کد 112",
+      "html_title": "رنگ پارچه نارنجی ماری ورک کد 112 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12502,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه نارنجی ماری ورک کد 112"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/darkbrown-mariwork-fabric-color-code113/",
+      "entity_id": "WP-12506",
+      "entity_type": "product",
+      "h1": "رنگ پارچه قهوه ای تیره ماری ورک کد 113",
+      "html_title": "رنگ پارچه قهوه ای تیره ماری ورک کد 113 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12506,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه قهوه ای تیره ماری ورک کد 113"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/turquoseblue-mariwork-fabric-color-code114/",
+      "entity_id": "WP-12511",
+      "entity_type": "product",
+      "h1": "رنگ پارچه فیروزه ای ماری ورک کد 114",
+      "html_title": "رنگ پارچه فیروزه ای ماری ورک کد 114 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12511,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه فیروزه ای ماری ورک کد 114"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/darkgold-115/",
+      "entity_id": "WP-12516",
+      "entity_type": "product",
+      "h1": "رنگ پارچه طلایی تیره ماری ورک کد 115",
+      "html_title": "رنگ پارچه طلایی تیره ماری ورک کد 115 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12516,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه طلایی تیره ماری ورک کد 115"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/",
+      "entity_id": "WP-12520",
+      "entity_type": "product",
+      "h1": "رنگ پارچه قرمز ماری ورک کد 116",
+      "html_title": "رنگ پارچه قرمز ماری ورک کد 116 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12520,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه قرمز ماری ورک کد 116"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/black-mariwork-fabric-color-code117/",
+      "entity_id": "WP-12524",
+      "entity_type": "product",
+      "h1": "رنگ پارچه سیاه ماری ورک کد 117",
+      "html_title": "رنگ پارچه سیاه ماری ورک کد 117 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12524,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه سیاه ماری ورک کد 117"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/blue-mariwork-fabric-color-code118/",
+      "entity_id": "WP-12528",
+      "entity_type": "product",
+      "h1": "رنگ پارچه آبی ماری ورک | کد 118",
+      "html_title": "رنگ پارچه آبی ماری ورک | کد 118 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12528,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه آبی ماری ورک | کد 118"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/copper-119/",
+      "entity_id": "WP-12532",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | مسی کد 119",
+      "html_title": "رنگ پارچه | مسی کد 119 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12532,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه | مسی کد 119"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/magenta-mariwork-fabric-color-code120/",
+      "entity_id": "WP-12536",
+      "entity_type": "product",
+      "h1": "رنگ پارچه سرخ آبی ماری ورک | کد 120",
+      "html_title": "رنگ پارچه سرخ آبی ماری ورک | کد 120 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12536,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه سرخ آبی ماری ورک | کد 120"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/white-mariwork-fabric-color-code121/",
+      "entity_id": "WP-12541",
+      "entity_type": "product",
+      "h1": "رنگ پارچه سفید ماری ورک | کد 121",
+      "html_title": "رنگ پارچه سفید ماری ورک | کد 121 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12541,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه سفید ماری ورک | کد 121"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/gray_122/",
+      "entity_id": "WP-12544",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | خاکستری کد 122",
+      "html_title": "رنگ پارچه | خاکستری کد 122 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12544,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه | خاکستری کد 122"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/fleshtint-123/",
+      "entity_id": "WP-12548",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | رنگ پوست کد 123",
+      "html_title": "رنگ پارچه | رنگ پوست کد 123 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12548,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه | رنگ پوست کد 123"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-silver-corona-powder-code202/",
+      "entity_id": "WP-12581",
+      "entity_type": "product",
+      "h1": "اکلیل نقره ای کد 202",
+      "html_title": "اکلیل نقره ای کد 202 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12581,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "اکلیل نقره ای کد 202"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-golden-corona-powder-code201/",
+      "entity_id": "WP-12585",
+      "entity_type": "product",
+      "h1": "اکلیل طلایی کد 201",
+      "html_title": "اکلیل طلایی کد 201 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12585,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "اکلیل طلایی کد 201"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-fabric-glitter-glue-code203/",
+      "entity_id": "WP-12588",
+      "entity_type": "product",
+      "h1": "چسب اکلیل پارچه کد 203",
+      "html_title": "چسب اکلیل پارچه کد 203 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12588,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "چسب اکلیل پارچه کد 203"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-fabric-fixative-medium-code204/",
+      "entity_id": "WP-12591",
+      "entity_type": "product",
+      "h1": "ثبات دهنده رنگ پارچه (مدیوم فیکساتیو) کد 204",
+      "html_title": "ثبات دهنده رنگ پارچه (مدیوم فیکساتیو) کد 204 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12591,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "ثبات دهنده رنگ پارچه (مدیوم فیکساتیو) کد 204"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-fabric-base-coat-code208/",
+      "entity_id": "WP-12594",
+      "entity_type": "product",
+      "h1": "زیرساز پارچه (Base Coat) کد 208",
+      "html_title": "زیرساز پارچه (Base Coat) کد 208 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 12594,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "زیرساز پارچه (Base Coat) کد 208"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/%d8%b3%d8%aa-5-%d8%b1%d9%86%da%af-%d9%81%d9%84%d9%88%d8%b1%d8%b3%d9%86%d8%aa-%d9%85%d8%a7%d8%b1%db%8c-%d9%88%d8%b1%da%a9/",
+      "entity_id": "WP-12597",
+      "entity_type": "product",
+      "h1": "ست 5 رنگ فلورسنت ماری ورک | 60 میل",
+      "html_title": "ست 5 رنگ فلورسنت ماری ورک | 60 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 12597,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست 5 رنگ فلورسنت ماری ورک | 60 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/six-color-set-60ml/",
+      "entity_id": "WP-12602",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | ست 6 رنگ 60 میل | شامل رنگ های اصلی + سیاه، سفید و سبز",
+      "html_title": "رنگ پارچه | ست 6 رنگ 60 میل | شامل رنگ های اصلی + سیاه، سفید و سبز - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 12602,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "رنگ پارچه | ست 6 رنگ 60 میل | شامل رنگ های اصلی + سیاه، سفید و سبز"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/eight-color-set/",
+      "entity_id": "WP-12605",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | ست 8 رنگ 60 میل | شامل رنگ های اصلی + سیاه، سفید، سبز، نارنجی و بنفش",
+      "html_title": "رنگ پارچه | ست 8 رنگ 60 میل | شامل رنگ های اصلی + سیاه، سفید، سبز، نارنجی و بنفش - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 12605,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "رنگ پارچه | ست 8 رنگ 60 میل | شامل رنگ های اصلی + سیاه، سفید، سبز، نارنجی و بنفش"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/set-12-colors-mariwork-fabric-color/",
+      "entity_id": "WP-12608",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | ست 12 رنگ 60 میل",
+      "html_title": "رنگ پارچه | ست 12 رنگ 60 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 12608,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "رنگ پارچه | ست 12 رنگ 60 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/yellow_fluorescent_100/",
+      "entity_id": "WP-14446",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | زرد فلورسنت کد 100",
+      "html_title": "رنگ پارچه | زرد فلورسنت کد 100 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 14446,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه | زرد فلورسنت کد 100"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/orange_fluorescent_101/",
+      "entity_id": "WP-14448",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | نارنجی فلورسنت کد 101",
+      "html_title": "رنگ پارچه | نارنجی فلورسنت کد 101 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 14448,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه | نارنجی فلورسنت کد 101"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/green_fluorescent_102/",
+      "entity_id": "WP-14449",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | سبز فلورسنت کد 102",
+      "html_title": "رنگ پارچه | سبز فلورسنت کد 102 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 14449,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه | سبز فلورسنت کد 102"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/pink_fluorescent_103/",
+      "entity_id": "WP-14450",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | صورتی فلورسنت کد 103",
+      "html_title": "رنگ پارچه | صورتی فلورسنت کد 103 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 14450,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه | صورتی فلورسنت کد 103"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/24color-set/",
+      "entity_id": "WP-14465",
+      "entity_type": "product",
+      "h1": "ست 24 عددی رنگ های 60 میل ماری ورک",
+      "html_title": "ست 24 عددی رنگ های 60 میل ماری ورک - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 14465,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست 24 عددی رنگ های 60 میل ماری ورک"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/a30-color-and-additives-set/",
+      "entity_id": "WP-14466",
+      "entity_type": "product",
+      "h1": "ست 30 عددی رنگ های پارچه و افزودنی‌ های 60 میل | شامل 24 رنگ و 6 افزودنی",
+      "html_title": "ست 30 عددی رنگ های پارچه و افزودنی‌ های 60 میل | شامل 24 رنگ و 6 افزودنی - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 14466,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست 30 عددی رنگ های پارچه و افزودنی‌ های 60 میل | شامل 24 رنگ و 6 افزودنی"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/5colorset/",
+      "entity_id": "WP-14471",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | ست 5 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید",
+      "html_title": "رنگ پارچه | ست 5 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 14471,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "رنگ پارچه | ست 5 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-250-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/six-color-set-250ml/",
+      "entity_id": "WP-17265",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | ست 6 رنگ 250 میل | شامل رنگ های اصلی + سیاه، سفید و سبز",
+      "html_title": "رنگ پارچه | ست 6 رنگ 250 میل | شامل رنگ های اصلی + سیاه، سفید و سبز - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 17265,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "رنگ پارچه | ست 6 رنگ 250 میل | شامل رنگ های اصلی + سیاه، سفید و سبز"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "accessories"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/heatpen_301/",
+      "entity_id": "WP-23912",
+      "entity_type": "product",
+      "h1": "خودکار حرارتی",
+      "html_title": "خودکار حرارتی - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 23912,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "خودکار حرارتی"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "accessories"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/tampon/",
+      "entity_id": "WP-24043",
+      "entity_type": "product",
+      "h1": "تامپون",
+      "html_title": "تامپون - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 24043,
+      "product_type": "simple",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "تامپون"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "accessories"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/stencil-brush/",
+      "entity_id": "WP-24183",
+      "entity_type": "product",
+      "h1": "براش استنسیل",
+      "html_title": "براش استنسیل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 24183,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "براش استنسیل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-texture-medium-code209/",
+      "entity_id": "WP-24252",
+      "entity_type": "product",
+      "h1": "مدیوم پفکی کد 209",
+      "html_title": "مدیوم پفکی کد 209 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 24252,
+      "product_type": "variable",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "مدیوم پفکی کد 209"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/12colorset/",
+      "entity_id": "WP-25397",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | ست 12 تایی 30 میل | شامل رنگ های اصلی + سیاه، سفید",
+      "html_title": "رنگ پارچه | ست 12 تایی 30 میل | شامل رنگ های اصلی + سیاه، سفید - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 25397,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "رنگ پارچه | ست 12 تایی 30 میل | شامل رنگ های اصلی + سیاه، سفید"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/red-scarlet-mariwork-fabric-color-code124/",
+      "entity_id": "WP-27025",
+      "entity_type": "product",
+      "h1": "رنگ پارچه قرمز اسکارلت ماری ورک | کد 124",
+      "html_title": "رنگ پارچه قرمز اسکارلت ماری ورک | کد 124 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27025,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه قرمز اسکارلت ماری ورک | کد 124"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/permanet-rose-mariwork-fabric-color-code125/",
+      "entity_id": "WP-27034",
+      "entity_type": "product",
+      "h1": "رنگ پارچه صورتی پرمنت رز ماری ورک | کد 125",
+      "html_title": "رنگ پارچه صورتی پرمنت رز ماری ورک | کد 125 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27034,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه صورتی پرمنت رز ماری ورک | کد 125"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/light-pink-mariwork-fabric-color-code126/",
+      "entity_id": "WP-27037",
+      "entity_type": "product",
+      "h1": "رنگ پارچه صورتی روشن ماری ورک | کد 126",
+      "html_title": "رنگ پارچه صورتی روشن ماری ورک | کد 126 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27037,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه صورتی روشن ماری ورک | کد 126"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/papaya-mariwork-fabric-color-code127/",
+      "entity_id": "WP-27039",
+      "entity_type": "product",
+      "h1": "رنگ پارچه نارنجی پاپایا ماری ورک | کد 127",
+      "html_title": "رنگ پارچه نارنجی پاپایا ماری ورک | کد 127 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27039,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه نارنجی پاپایا ماری ورک | کد 127"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/lilac-mariwork-fabric-color-code128/",
+      "entity_id": "WP-27041",
+      "entity_type": "product",
+      "h1": "رنگ پارچه یاسی ماری ورک | کد 128",
+      "html_title": "رنگ پارچه یاسی ماری ورک | کد 128 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27041,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه یاسی ماری ورک | کد 128"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/fluorescent-purple-mariwork-fabric-color-code129/",
+      "entity_id": "WP-27043",
+      "entity_type": "product",
+      "h1": "رنگ پارچه بنفش فلورسنت ماری ورک | کد 129",
+      "html_title": "رنگ پارچه بنفش فلورسنت ماری ورک | کد 129 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27043,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه بنفش فلورسنت ماری ورک | کد 129"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/lavender-mariwork-fabric-color-code130/",
+      "entity_id": "WP-27046",
+      "entity_type": "product",
+      "h1": "رنگ پارچه بنفش لوندر ماری ورک | کد 130",
+      "html_title": "رنگ پارچه بنفش لوندر ماری ورک | کد 130 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27046,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه بنفش لوندر ماری ورک | کد 130"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/sky-blue-mariwork-fabric-color-code131/",
+      "entity_id": "WP-27051",
+      "entity_type": "product",
+      "h1": "رنگ پارچه آبی آسمانی ماری ورک | کد 131",
+      "html_title": "رنگ پارچه آبی آسمانی ماری ورک | کد 131 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27051,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه آبی آسمانی ماری ورک | کد 131"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/cyan-mariwork-fabric-color-code132/",
+      "entity_id": "WP-27054",
+      "entity_type": "product",
+      "h1": "رنگ پارچه آبی سایان ماری ورک | کد 132",
+      "html_title": "رنگ پارچه آبی سایان ماری ورک | کد 132 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27054,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه آبی سایان ماری ورک | کد 132"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/light-salmon-mariwork-fabric-color-code135/",
+      "entity_id": "WP-27142",
+      "entity_type": "product",
+      "h1": "رنگ پارچه گلبهی ماری ورک | کد 135",
+      "html_title": "رنگ پارچه گلبهی ماری ورک | کد 135 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27142,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه گلبهی ماری ورک | کد 135"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/green-grass-mariwork-fabric-color-code133/",
+      "entity_id": "WP-27149",
+      "entity_type": "product",
+      "h1": "رنگ پارچه سبز چمنی ماری ورک | کد 133",
+      "html_title": "رنگ پارچه سبز چمنی ماری ورک | کد 133 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27149,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه سبز چمنی ماری ورک | کد 133"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/lemon-mariwork-fabric-color-code134/",
+      "entity_id": "WP-27328",
+      "entity_type": "product",
+      "h1": "رنگ پارچه لیمویی ماری ورک | کد 134",
+      "html_title": "رنگ پارچه لیمویی ماری ورک | کد 134 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27328,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه لیمویی ماری ورک | کد 134"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/silver-mariwork-fabric-color-code136/",
+      "entity_id": "WP-27333",
+      "entity_type": "product",
+      "h1": "رنگ پارچه نقره‌ای ماری ورک | کد 136",
+      "html_title": "رنگ پارچه نقره‌ای ماری ورک | کد 136 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27333,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه نقره‌ای ماری ورک | کد 136"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/pearl-mariwork-fabric-color-code137/",
+      "entity_id": "WP-27369",
+      "entity_type": "product",
+      "h1": "رنگ پارچه صدفی ماری ورک | کد 137",
+      "html_title": "رنگ پارچه صدفی ماری ورک | کد 137 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27369,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه صدفی ماری ورک | کد 137"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-rainbow-glitter-code210/",
+      "entity_id": "WP-27378",
+      "entity_type": "product",
+      "h1": "گلیتر هفت رنگ ماری ورک | کد 210",
+      "html_title": "گلیتر هفت رنگ ماری ورک | کد 210 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27378,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "گلیتر هفت رنگ ماری ورک | کد 210"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-silver-glitter-code211/",
+      "entity_id": "WP-27384",
+      "entity_type": "product",
+      "h1": "گلیتر نقره‌ای ماری ورک | کد 211",
+      "html_title": "گلیتر نقره‌ای ماری ورک | کد 211 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27384,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "گلیتر نقره‌ای ماری ورک | کد 211"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-golden-glitter-code212/",
+      "entity_id": "WP-27386",
+      "entity_type": "product",
+      "h1": "گلیتر طلایی ماری ورک | کد 212",
+      "html_title": "گلیتر طلایی ماری ورک | کد 212 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27386,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "گلیتر طلایی ماری ورک | کد 212"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/glitter-set-mariwork-fabric-medium/",
+      "entity_id": "WP-27396",
+      "entity_type": "product",
+      "h1": "ست گلیتر ماری ورک | 60 میل",
+      "html_title": "ست گلیتر ماری ورک | 60 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 27396,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست گلیتر ماری ورک | 60 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-lightening-medium-code213/",
+      "entity_id": "WP-27506",
+      "entity_type": "product",
+      "h1": "مدیوم روشن کننده ماری ورک | کد 213",
+      "html_title": "مدیوم روشن کننده ماری ورک | کد 213 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27506,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "مدیوم روشن کننده ماری ورک | کد 213"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-thickening-medium-code214/",
+      "entity_id": "WP-27512",
+      "entity_type": "product",
+      "h1": "مدیوم غلظت دهنده ماری ورک | کد 214",
+      "html_title": "مدیوم غلظت دهنده ماری ورک | کد 214 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27512,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "مدیوم غلظت دهنده ماری ورک | کد 214"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-totakali-glue-code205/",
+      "entity_id": "WP-27621",
+      "entity_type": "product",
+      "h1": "چسب ورق توتکالی ماری ورک | کد 205",
+      "html_title": "چسب ورق توتکالی ماری ورک | کد 205 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27621,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "چسب ورق توتکالی ماری ورک | کد 205"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "accessories"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/totakali-sheet-mariwork-code304/",
+      "entity_id": "WP-27680",
+      "entity_type": "product",
+      "h1": "ورق توتکالی ماری ورک | کد 304",
+      "html_title": "ورق توتکالی ماری ورک | کد 304 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27680,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "ورق توتکالی ماری ورک | کد 304"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/silver-rainbow-glitter-mariwork-fabric-medium-code217/",
+      "entity_id": "WP-27727",
+      "entity_type": "product",
+      "h1": "گلیتر نقره‌ای هفت رنگ ماری ورک | کد 217 | 60 میل",
+      "html_title": "گلیتر نقره‌ای هفت رنگ ماری ورک | کد 217 | 60 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27727,
+      "product_type": "simple",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "گلیتر نقره‌ای هفت رنگ ماری ورک | کد 217 | 60 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-glossy-varnish-code215/",
+      "entity_id": "WP-27893",
+      "entity_type": "product",
+      "h1": "وارنیش براق ماری ورک | کد 215",
+      "html_title": "وارنیش براق ماری ورک | کد 215 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27893,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "وارنیش براق ماری ورک | کد 215"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-semi-matte-varnish-code216/",
+      "entity_id": "WP-27901",
+      "entity_type": "product",
+      "h1": "وارنیش نیمه مات ماری ورک | کد 216",
+      "html_title": "وارنیش نیمه مات ماری ورک | کد 216 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 27901,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "وارنیش نیمه مات ماری ورک | کد 216"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "accessories"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/contouring-pot-mariwork-fabric-code-311/",
+      "entity_id": "WP-27903",
+      "entity_type": "product",
+      "h1": "ظرف دورگیر (نازل) ماری ورک | 30میل",
+      "html_title": "ظرف دورگیر (نازل) ماری ورک | 30میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 27903,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ظرف دورگیر (نازل) ماری ورک | 30میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-golden-shine-code206/",
+      "entity_id": "WP-28232",
+      "entity_type": "product",
+      "h1": "شاین طلایی ماری ورک | کد 206",
+      "html_title": "شاین طلایی ماری ورک | کد 206 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 28232,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "شاین طلایی ماری ورک | کد 206"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-printing-medium"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mariwork-silver-shine-code207/",
+      "entity_id": "WP-28239",
+      "entity_type": "product",
+      "h1": "شاین نقره‌ای ماری ورک | کد 207",
+      "html_title": "شاین نقره‌ای ماری ورک | کد 207 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 28239,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "شاین نقره‌ای ماری ورک | کد 207"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/mocha-mousse-mariwork-fabric-color-code138/",
+      "entity_id": "WP-28242",
+      "entity_type": "product",
+      "h1": "رنگ پارچه موکا ماری ورک | کد 138",
+      "html_title": "رنگ پارچه موکا ماری ورک | کد 138 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 28242,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه موکا ماری ورک | کد 138"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-colors"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/teal-mariwork-fabric-color-code139/",
+      "entity_id": "WP-28244",
+      "entity_type": "product",
+      "h1": "رنگ پارچه کله غازی ماری ورک | کد 139",
+      "html_title": "رنگ پارچه کله غازی ماری ورک | کد 139 - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": true,
+      "product_id": 28244,
+      "product_type": "variable",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": false,
+      "wp_title": "رنگ پارچه کله غازی ماری ورک | کد 139"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/40color-set/",
+      "entity_id": "WP-28610",
+      "entity_type": "product",
+      "h1": "ست 40 رنگ رنگ‌های پارچه ماری‌ورک",
+      "html_title": "ست 40 رنگ رنگ‌های پارچه ماری‌ورک - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 28610,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": false,
+      "wp_title": "ست 40 رنگ رنگ‌های پارچه ماری‌ورک"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/whole-colors-and-mediumes-set/",
+      "entity_id": "WP-28623",
+      "entity_type": "product",
+      "h1": "ست کامل رنگ‌ها و مدیوم‌های پارچه ماری‌ورک | 60 میل",
+      "html_title": "ست کامل رنگ‌ها و مدیوم‌های پارچه ماری‌ورک | 60 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 28623,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست کامل رنگ‌ها و مدیوم‌های پارچه ماری‌ورک | 60 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-60-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/whole-mediumes-set/",
+      "entity_id": "WP-28627",
+      "entity_type": "product",
+      "h1": "ست کامل مدیوم‌های پارچه ماری‌ورک | 60 میل",
+      "html_title": "ست کامل مدیوم‌های پارچه ماری‌ورک | 60 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 28627,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست کامل مدیوم‌های پارچه ماری‌ورک | 60 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/%d8%b3%d8%aa-5-%d8%b1%d9%86%da%af-%d9%81%d9%84%d9%88%d8%b1%d8%b3%d9%86%d8%aa-%d9%85%d8%a7%d8%b1%db%8c-%d9%88%d8%b1%da%a9-30ml/",
+      "entity_id": "WP-33318",
+      "entity_type": "product",
+      "h1": "ست 5 رنگ فلورسنت ماری ورک | 30 میل",
+      "html_title": "ست 5 رنگ فلورسنت ماری ورک | 30 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33318,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست 5 رنگ فلورسنت ماری ورک | 30 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/six-color-set-30ml/",
+      "entity_id": "WP-33319",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | ست 6 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید و سبز",
+      "html_title": "رنگ پارچه | ست 6 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید و سبز - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33319,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "رنگ پارچه | ست 6 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید و سبز"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/eight-color-set-30ml/",
+      "entity_id": "WP-33320",
+      "entity_type": "product",
+      "h1": "رنگ پارچه | ست 8 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید، سبز، نارنجی و بنفش",
+      "html_title": "رنگ پارچه | ست 8 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید، سبز، نارنجی و بنفش - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33320,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "رنگ پارچه | ست 8 رنگ 30 میل | شامل رنگ های اصلی + سیاه، سفید، سبز، نارنجی و بنفش"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/24color-set-30ml/",
+      "entity_id": "WP-33322",
+      "entity_type": "product",
+      "h1": "ست 24 عددی رنگ های 30 میل ماری ورک",
+      "html_title": "ست 24 عددی رنگ های 30 میل ماری ورک - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33322,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست 24 عددی رنگ های 30 میل ماری ورک"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/a30-color-and-additives-set-30ml/",
+      "entity_id": "WP-33323",
+      "entity_type": "product",
+      "h1": "ست 30 عددی رنگ های پارچه و افزودنی‌ های 30 میل | شامل 24 رنگ و 6 افزودنی",
+      "html_title": "ست 30 عددی رنگ های پارچه و افزودنی‌ های 30 میل | شامل 24 رنگ و 6 افزودنی - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33323,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست 30 عددی رنگ های پارچه و افزودنی‌ های 30 میل | شامل 24 رنگ و 6 افزودنی"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/glitter-set-mariwork-fabric-medium-30ml/",
+      "entity_id": "WP-33324",
+      "entity_type": "product",
+      "h1": "ست گلیتر ماری ورک | 30 میل",
+      "html_title": "ست گلیتر ماری ورک | 30 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33324,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست گلیتر ماری ورک | 30 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/40color-set-30ml/",
+      "entity_id": "WP-33325",
+      "entity_type": "product",
+      "h1": "ست 40 رنگ رنگ‌های پارچه ماری‌ورک | 30 میل",
+      "html_title": "ست 40 رنگ رنگ‌های پارچه ماری‌ورک | 30 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33325,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست 40 رنگ رنگ‌های پارچه ماری‌ورک | 30 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/whole-colors-and-mediumes-set-30ml/",
+      "entity_id": "WP-33326",
+      "entity_type": "product",
+      "h1": "ست کامل رنگ‌ها و مدیوم‌های پارچه ماری‌ورک | 30 میل",
+      "html_title": "ست کامل رنگ‌ها و مدیوم‌های پارچه ماری‌ورک | 30 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33326,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست کامل رنگ‌ها و مدیوم‌های پارچه ماری‌ورک | 30 میل"
+    },
+    {
+      "brand_token_present": true,
+      "categories": [
+        "fabric-color-set-30-ml"
+      ],
+      "current_url": "https://www.mariwork.ir/shop/whole-mediumes-set-30ml/",
+      "entity_id": "WP-33327",
+      "entity_type": "product",
+      "h1": "ست کامل مدیوم‌های پارچه ماری‌ورک | 30 میل",
+      "html_title": "ست کامل مدیوم‌های پارچه ماری‌ورک | 30 میل - رنگ پارچه ماری ورک",
+      "http_status": 200,
+      "product_code_token_present": false,
+      "product_id": 33327,
+      "product_type": "yith_bundle",
+      "separator_forms": [
+        "-",
+        "|"
+      ],
+      "volume_token_present": true,
+      "wp_title": "ست کامل مدیوم‌های پارچه ماری‌ورک | 30 میل"
+    }
+  ],
+  "shop": {
+    "h1": null,
+    "http_status": 200,
+    "title": "فروشگاه - رنگ پارچه ماری ورک",
+    "url": "https://www.mariwork.ir/shop/"
+  }
+}

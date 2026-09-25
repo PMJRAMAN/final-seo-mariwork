@@ -1,0 +1,108 @@
+{
+  "architecture": "WooCommerce variation selection is exposed through attribute_pa_volume query parameters on safe GET; no transactional request was made.",
+  "canonical_observation": "The tested selector URL canonicalized to the parent URL.",
+  "representative_parents": [
+    {
+      "parent_product_id": 12009,
+      "parent_url": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/",
+      "selector_parameter": "attribute_pa_volume",
+      "selector_urls": [
+        {
+          "url": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/?attribute_pa_volume=250ml",
+          "variation_id": 30976,
+          "volume": "250ml"
+        },
+        {
+          "url": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/?attribute_pa_volume=30ml",
+          "variation_id": 30977,
+          "volume": "30ml"
+        },
+        {
+          "url": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/?attribute_pa_volume=60ml",
+          "variation_id": 30978,
+          "volume": "60ml"
+        }
+      ],
+      "variation_ids": [
+        {
+          "status": "publish",
+          "variation_id": 30976,
+          "volume": "250ml"
+        },
+        {
+          "status": "publish",
+          "variation_id": 30977,
+          "volume": "30ml"
+        },
+        {
+          "status": "publish",
+          "variation_id": 30978,
+          "volume": "60ml"
+        }
+      ],
+      "volumes": [
+        "30ml",
+        "60ml",
+        "250ml"
+      ]
+    },
+    {
+      "parent_product_id": 12009,
+      "parent_url": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/",
+      "selector_parameter": "attribute_pa_volume",
+      "selector_urls": [
+        {
+          "url": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/?attribute_pa_volume=30ml",
+          "variation_id": 30977,
+          "volume": "30ml"
+        },
+        {
+          "url": "https://www.mariwork.ir/shop/mariwork-yellow-fabric-paint-104/?attribute_pa_volume=60ml",
+          "variation_id": 30978,
+          "volume": "60ml"
+        }
+      ],
+      "variation_ids": [
+        {
+          "status": "publish",
+          "variation_id": 30977,
+          "volume": "30ml"
+        },
+        {
+          "status": "publish",
+          "variation_id": 30978,
+          "volume": "60ml"
+        }
+      ],
+      "volumes": [
+        "30ml",
+        "60ml"
+      ]
+    }
+  ],
+  "representatives": [
+    {
+      "canonical": [
+        "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/"
+      ],
+      "content_identity_hash": "b0362afd885fcc053f5fc7e037516ea4f1f56b03997b6a38793544a8466fdd33",
+      "h1": [
+        "رنگ پارچه قرمز ماری ورک کد 116"
+      ],
+      "http_status": 200,
+      "linked_from_current_html": null,
+      "parameter_family": "variation_selection",
+      "robots": [
+        "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "safe_get_only": true,
+      "sitemap_membership": [],
+      "source_url": "https://www.mariwork.ir/shop/red-mariwork-fabric-color-code116/?attribute_pa_volume=30ml",
+      "title": [
+        "رنگ پارچه قرمز ماری ورک کد 116 - رنگ پارچه ماری ورک"
+      ],
+      "x_robots": ""
+    }
+  ],
+  "stable_direct_variant_url": "PARTIAL"
+}

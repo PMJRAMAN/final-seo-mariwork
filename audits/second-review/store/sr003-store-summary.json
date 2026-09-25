@@ -1,0 +1,38 @@
+{
+  "blog_category_404": 1,
+  "blog_category_count": 12,
+  "blog_category_empty_200_noindex": 9,
+  "bundle_component_mappings": 22,
+  "bundle_parents_checked": 22,
+  "dossier_27727": "pages/products/WP-27727.md",
+  "finding_counts_after": {
+    "CURRENTLY_SUPPORTED": 15,
+    "HISTORICAL_ONLY": 2,
+    "NEEDS_TARGETED_REVIEW": 236,
+    "STALE_EVIDENCE_DEPENDENCY": 71
+  },
+  "finding_counts_before": {
+    "CURRENTLY_SUPPORTED": 1,
+    "HISTORICAL_ONLY": 114,
+    "NEEDS_TARGETED_REVIEW": 132,
+    "PARTIALLY_SUPPORTED": 15,
+    "STALE_EVIDENCE_DEPENDENCY": 62
+  },
+  "internal_edges": 16656,
+  "internal_entities_checked": 157,
+  "parameter_families_checked": [
+    "filter_volume",
+    "orderby",
+    "pagination",
+    "per_page",
+    "per_row",
+    "product-page",
+    "product_search",
+    "shop_view",
+    "variation_selection"
+  ],
+  "product_count": 84,
+  "source_head": "fa72845a021943add04b3b2450d24329f60372c7",
+  "unresolved_destinations": 13668,
+  "variable_parent_count": 60
+}
