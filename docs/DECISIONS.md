@@ -2522,3 +2522,25 @@ Google requires Product structured-data images to represent the marked-up Produc
 - Existing correct redirects should be retained rather than duplicated in a second redirect layer.
 - Where a proven legacy URL currently lands on the correct Product but loses the historical volume selection, implementation may refine the mapping to the approved same-volume preselection target.
 - Unproven mappings remain targeted migration work, not bulk automation.
+
+
+## DEC-065 — Historical Education → Academy Mappings
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** LEGACY EDUCATION URLS / ACADEMY MIGRATION / REDIRECT PRESERVATION
+
+### Accepted target state
+
+- Existing one-to-one 301 mappings from historical `/education/.../` lesson URLs to their corresponding current Academy lesson URLs are the intended target state when the content identity is the same.
+- Current reconciliation evidence already shows 36 such mappings.
+- This is primarily a verify-and-preserve migration rule, not a request to rebuild the migration from scratch.
+- Existing correct redirects should be retained rather than duplicated in another redirect layer.
+- Redirect ownership must be verified before any implementation change.
+- The remaining UNKNOWN Education archive/pagination/feed URLs are not Lesson mappings and require separate disposition.
+- Do not bulk-map old pagination/feed URLs to individual Academy lessons.
+- Do not infer Lesson identity or redirect destinations from slug similarity alone.
+
+### Consequences
+
+- Current correct Education → Academy lesson redirects remain in place.
+- Implementation work is limited to verification, ownership identification, regression checks and resolving the small set of non-Lesson unknowns.
