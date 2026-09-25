@@ -209,7 +209,7 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-049 | Article vs Academy intent boundary | OPEN | article + Academy dossiers; CONTENT-ARCHITECTURE | Decide when content stays reference vs structured lesson |
+| DEC-049 | Article vs Academy intent boundary | ACCEPTED | article + Academy dossiers; CONTENT-ARCHITECTURE; owner approval 2026-09-25 | Accepted: Academy is Mariwork's video-education destination for practical learning, demonstrations, techniques, step-by-step instruction, and how to use products/materials/tools. Magazine is the broader editorial destination for art topics related to fabric painting and hand printing, reference and historical content, news/editorial coverage, product introductions, and written tips or techniques. The presence of a technique or instructional tip does not by itself make Magazine content an Academy item. Magazine may naturally link to Academy when a practical video lesson is the useful next step; Academy is not required to link back to a Magazine Article. Product introduction/editorial coverage belongs in Magazine, while practical product-use instruction belongs in Academy. |
 | DEC-050 | Product vs Category vs Article query/content role boundary | OPEN | CONTENT-ARCHITECTURE; SR-004 | Page+Query unavailable; use user intent + SERP research where needed |
 | DEC-051 | Magazine hub and Blog Category hierarchy | OPEN | WP-70; categories 71/142 | Decide Magazine role and category visibility/navigation |
 | DEC-052 | History / Artists content strategy | NEEDS_TARGETED_EVIDENCE | legacy map; category state; current census | Current historical Artist URLs are not current public entities |
