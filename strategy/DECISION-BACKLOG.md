@@ -229,8 +229,8 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-059 | Store facets/sort/display parameter policy | DISCUSSING | SR-004 SR-ST-008; SR-005 §16 | Separate crawl traps from variant preselection before any blocking |
-| DEC-060 | Shop pagination and legacy `product-page` policy | PROPOSED | parameter evidence | Keep normal pagination; stop/consolidate legacy alternate where approved |
+| DEC-059 | Store facets/sort/display parameter policy | ACCEPTED | SR-004 SR-ST-008; SR-005 §16; owner approval 2026-09-25 | Accepted: Store filter/sort/display parameter states such as `filter_volume`, `orderby`, `per_page`, `per_row` and `shop_view` are user-interface states, not independent SEO landing pages. They must not be promoted as separate Search targets or sitemap entries and should consolidate canonically to the relevant base Shop page. Approved durable `pa_volume` landing pages such as `/volume/30ml`, `/volume/60ml` and `/volume/250ml` remain separate indexable SEO landing pages under DEC-026. Product-level variation-preselection URLs using `attribute_pa_volume` are a separate mechanism and must remain available for direct variant selection; they are not to be treated as Shop facet URLs. Do not apply blanket robots blocking that could interfere with legitimate variant-selection behavior. |
+| DEC-060 | Shop pagination and legacy `product-page` policy | DISCUSSING | parameter evidence | Keep normal pagination; stop/consolidate legacy alternate where approved |
 | DEC-061 | Product search URL policy | PROPOSED | SR-004 | Keep noindex |
 | DEC-062 | Author/date archive public/indexability policy | PROPOSED | SYSTEM-URL-SPACES-CLOSURE | Keep archive policy distinct from feed, internal search and 404/error lifecycle |
 | DEC-063 | Legacy URL prioritization rule | PROPOSED | SR-005 §19; A-012 | Prioritize URLs with meaningful historical evidence/value |
