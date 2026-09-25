@@ -2167,3 +2167,26 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Internal-link QA evaluates architectural coverage and required relationships rather than a generic link-count threshold.
 - Missing required family relationships must be corrected or documented as an approved exception.
 - Pages outside the intended search architecture do not require artificial links solely to avoid an orphan label.
+
+
+## DEC-049 — Magazine vs Academy Intent Boundary
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** CONTENT ARCHITECTURE / MAGAZINE / ACADEMY
+
+### Accepted target state
+
+- Academy is Mariwork's video-education destination.
+- Academy content is centered on practical learning: demonstrations, techniques, step-by-step instruction, and how to use products, materials, or tools.
+- Magazine is Mariwork's broader editorial destination for art topics related to fabric painting and hand printing, reference and historical content, news/editorial coverage, product introductions, and written tips or techniques.
+- The presence of a technique, tip, or limited instructional material does not by itself make Magazine content an Academy item.
+- Magazine may link to Academy when a practical video lesson is a useful next step for the reader.
+- Academy is not required to link back to a Magazine Article merely because the Article discusses a related topic.
+- Product introduction, editorial coverage, context, or discussion belongs in Magazine when editorial in nature.
+- Practical instruction showing how to use a Product belongs in Academy when delivered as video education.
+
+### Consequences
+
+- Content placement is determined by the role and format of the content, not merely by topic overlap.
+- Magazine and Academy may cover related subjects without being treated as interchangeable page families.
+- Magazine → Academy is a natural editorial-to-practical progression when relevant; the reverse relationship is optional and context-dependent.
