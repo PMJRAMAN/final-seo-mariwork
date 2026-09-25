@@ -391,3 +391,28 @@ Rules:
 - Final Mariwork brand spelling follows DEC-053.
 - Persian half-space usage is a writing and brand-consistency standard, not a standalone SEO requirement.
 - Do not perform bulk URL or content changes solely to normalize half-space usage.
+
+
+## DEC-009 — Medium / Additive Product Naming Standard
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / MEDIUMS / ADDITIVES
+
+### Accepted target state
+
+The canonical visible Product title/H1 pattern is:
+
+`[Exact Product Name] ماری ورک کد [NNN]`
+
+Rules:
+- Use the exact factual Product identity; do not force every product to include the generic term `مدیوم`.
+- Preserve specific Product identities such as glitter, varnish, glue, shine, base coat, fixative, or medium where factually appropriate.
+- Include the canonical Mariwork brand spelling.
+- End with the stable Product code.
+- Remove decorative separators such as `|` and `-` from the visible Product title/H1.
+- Use consistent Latin digits for Product codes.
+- Do not include volume in this family under any circumstance.
+- English technical terminology may be retained only when it is a genuine, useful Product name/synonym, not for keyword expansion.
+- Visible-title normalization must not trigger URL/slug changes.
+- SEO `<title>` behavior is governed separately by DEC-011.
+- Brand spelling and Persian half-space conventions follow DEC-053.
