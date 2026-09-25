@@ -1940,53 +1940,28 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 **Date:** 2026-09-25  
 **Scope:** SITEWIDE / STRUCTURED DATA / INFORMATION ARCHITECTURE
 
-### Decision
+### Accepted target state
 
-Breadcrumbs are applied only where a meaningful site hierarchy exists.
-
-Breadcrumb trails represent the typical user/navigation hierarchy rather than mechanically mirroring URL paths.
-
-Store hierarchy:
-- Shop → durable Product Category → Product.
+- Use breadcrumbs only where a meaningful site hierarchy exists.
+- Breadcrumb trails represent the typical user/navigation hierarchy rather than mechanically mirroring URL paths.
+- Store hierarchy: Shop → durable Product Category → Product.
 - Child Set categories preserve their approved category hierarchy.
 - Approved volume landing pages belong under the Store hierarchy; exact volume-page naming remains governed by DEC-116.
-
-Magazine hierarchy:
-- Magazine → durable primary Blog Category → Article.
-- The primary category must be real, durable and deliberate rather than a tag or legacy category.
-
-Current Academy guide hierarchy:
-- Academy → One-Minute Guides collection → individual Guide.
-- This must remain aligned with DEC-037.
-- The current guide collection must not be represented as Course/Lesson hierarchy.
-
-Future genuine Course hierarchy:
-- Academy → genuine Course → Lesson.
-
-Generic Static/Core pages, Homepage and utility/noindex pages do not receive artificial breadcrumbs solely for structured-data coverage.
-
-Pages with multiple possible parents must use one deliberate, stable primary hierarchy.
-
-Visible breadcrumb UI and structured-data hierarchy must agree.
-
-Duplicate breadcrumb emitters are acceptable only temporarily when they express the exact same factual trail. Conflicting duplicate trails must be eliminated and one owner established.
-
-### Evidence
-
-Current snapshot evidence showed BreadcrumbList coverage was inconsistent across page families, with Store/Product areas more consistently represented than Guides and many Articles. The accepted architecture follows the durable site hierarchy and the semantic distinction established in DEC-037.
+- Magazine hierarchy: Magazine → durable primary Blog Category → Article.
+- The Article primary category must be real, durable and deliberate rather than a tag or legacy category.
+- Current Academy guide hierarchy: Academy → One-Minute Guides collection → individual Guide.
+- Current Guide hierarchy must remain aligned with DEC-037 and must not be represented as Course/Lesson.
+- Future genuine Course hierarchy: Academy → genuine Course → Lesson.
+- Homepage, generic Static/Core pages without meaningful hierarchy, and utility/noindex endpoints do not receive artificial breadcrumbs solely for structured-data coverage.
+- Pages with multiple possible parents use one deliberate stable primary hierarchy.
+- Visible breadcrumb UI and structured-data hierarchy must agree.
+- Duplicate breadcrumb emitters are acceptable only temporarily when they express the exact same factual trail; conflicting duplicate trails must be eliminated and one owner established.
 
 ### Consequences
 
-- Store, Magazine, current Guide, and future Course templates require family-specific breadcrumb QA.
+- Validate representative Store, Magazine, Guide Collection/Guide and future Course templates in rendered output and Rich Results testing.
 - Product pages with multiple categories require a stable primary commercial hierarchy rather than arbitrary category selection.
 - Volume landing-page breadcrumb labels remain dependent on DEC-116.
-- Representative templates must be validated in rendered output and Rich Results testing.
-- Breadcrumb schema must not contradict visible navigation terminology.
-
-### Exceptions
-
-- Homepage has no breadcrumb requirement.
-- Generic static/support pages without meaningful depth do not require artificial breadcrumbs.
 - Utility/noindex endpoints such as Login, Cart, Checkout, My Account and Fast Buy are not breadcrumb SEO targets.
 
 
@@ -1995,40 +1970,23 @@ Current snapshot evidence showed BreadcrumbList coverage was inconsistent across
 **Date:** 2026-09-25  
 **Scope:** SITEWIDE / INTERNAL LINKING / INFORMATION ARCHITECTURE
 
-### Decision
+### Accepted target state
 
-Mariwork internal-link requirements use three rule classes:
-
-1. **CORE / MANDATORY** — links required across every relevant entity in a defined family.
-2. **FAMILY-SPECIFIC** — links required only for a defined product/content family.
-3. **CONTEXTUAL / OPTIONAL** — links used only when the source-page topic or user task makes them genuinely useful.
-
-Equivalent pages in the same family must not randomly differ in mandatory-link coverage.
-
-A missing mandatory link must either be corrected or recorded as an approved documented exception.
-
-The architecture may be bidirectional where useful:
-- Product → Academy / Article;
-- Category → Academy / Article;
-- Academy / Article → relevant Product;
-- Academy / Article → relevant Product Category.
-
-Commercial links from informational content must remain contextually useful rather than being forced merely to increase link count.
-
-### Evidence
-
-SR-005 §17 and the initial Internal Link Requirement Matrix established the need for consistent family-level coverage while preserving contextual relevance. The repository's internal-link architecture draft already separates mandatory, family-specific and optional relationships.
+- Internal-link requirements use three classes: CORE/MANDATORY, FAMILY-SPECIFIC and CONTEXTUAL/OPTIONAL.
+- CORE/MANDATORY links apply across every relevant entity in a defined family.
+- FAMILY-SPECIFIC links apply only to a defined product/content family.
+- CONTEXTUAL/OPTIONAL links are used only when genuinely useful to the source-page topic or user task.
+- Equivalent pages in the same family must not randomly differ in mandatory-link coverage.
+- A missing mandatory link must either be corrected or recorded as an approved documented exception.
+- The architecture may be bidirectional where useful: Product/Category → Academy/Article and Academy/Article → relevant Product/Category.
+- Commercial links from informational content must remain contextually useful rather than being forced merely to increase link count.
 
 ### Consequences
 
 - The Internal Link Requirement Matrix must classify approved relationships using these three classes.
 - QA must compare equivalent family members against mandatory-link requirements.
-- Exact mandatory parent/hub destinations are not decided by DEC-040 and remain governed by DEC-041.
+- Exact mandatory parent/hub destinations remain governed by DEC-041.
 - Product↔education, Article↔commercial and anchor-text rules remain governed by DEC-042 onward.
-
-### Exceptions
-
-A family member may omit an otherwise mandatory link only when a documented, approved exception explains why the relationship is not valid for that entity.
 
 
 ## DEC-041 — Mandatory Parent/Hub Links by Family
@@ -2036,32 +1994,21 @@ A family member may omit an otherwise mandatory link only when a documented, app
 **Date:** 2026-09-25  
 **Scope:** SITEWIDE / INTERNAL LINKING / INFORMATION ARCHITECTURE
 
-### Decision
+### Accepted target state
 
-Each durable page family must maintain crawlable internal-link access to its deliberate parent/hub hierarchy.
-
-Required hierarchy:
 - Product → stable primary Product Category → Shop.
 - Child Product Category → real parent Product Category → Shop.
 - Current Guide → One-Minute Guides collection → Academy.
 - Future Lesson → genuine Course → Academy.
 - Article → stable primary Blog Category → Magazine.
-
-When an entity has multiple possible taxonomy parents, one deliberate stable primary hierarchy must be used rather than random parent selection.
-
-The required parent/hub relationship may be supplied through breadcrumb UI, navigation, taxonomy UI, or another appropriate crawlable component. DEC-041 does not require artificial boilerplate parent links inside body copy when the relationship is already clearly and crawlably represented.
-
-### Evidence
-
-The Internal Link Requirement Matrix draft requires exact durable destinations for mandatory family-level relationships. DEC-037 and DEC-039 already establish the semantic distinction between current Guides and future genuine Courses and define the corresponding hierarchy.
+- Multi-parent entities use one deliberate stable primary hierarchy rather than random taxonomy selection.
+- The required parent/hub relationship may be supplied through breadcrumb UI, navigation, taxonomy UI or another appropriate crawlable component.
+- Do not force redundant boilerplate parent links into body copy when the hierarchy is already clearly and crawlably represented.
+- Cross-family educational/commercial links are not mandatory parent/hub links under this Decision and remain governed by DEC-042 through DEC-046.
 
 ### Consequences
 
 - Family-level QA must verify that required parent/hub relationships are crawlable and consistent.
 - Multi-parent Products and Articles require stable primary hierarchy selection.
 - Breadcrumb implementation may satisfy part of this requirement where its visible crawlable trail matches the accepted hierarchy.
-- Exact cross-family Product/Category ↔ Academy/Article relationships remain outside DEC-041.
 
-### Exceptions
-
-Cross-family educational/commercial links are not mandatory parent/hub links under this Decision and remain governed by DEC-042 through DEC-046.
