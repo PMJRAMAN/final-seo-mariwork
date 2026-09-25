@@ -1687,3 +1687,90 @@ Rank Math remains the primary Product schema owner.
 Do not add ProductGroup or nested component Product entities solely to model Bundle composition for Google Product structured data.
 
 Representative small, medium and large Bundle canaries are required before family rollout.
+
+
+## DEC-037 — Academy / LearnDash Schema Ownership and Canary
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** ACADEMY / LEARNDASH / SEMANTIC ROLE / STRUCTURED DATA / UI-SEO CONSISTENCY
+
+### Accepted semantic rule
+
+Academy SEO and structured data must follow the real semantic role presented to users, not the raw LearnDash post type alone.
+
+A LearnDash object may be technically stored as a Course while intentionally functioning as a different content type in the public product experience.
+
+### Current guide collection
+
+The current entity:
+
+- WP-32714 — `راهنماهای یک دقیقه‌ای ماری‌ورک`
+
+is not one coherent curriculum or a single-topic instructional Course.
+
+It is a broad collection of short independent guides around fabric painting, printing and related techniques.
+
+Mariwork already customizes this entity at the product/UI layer:
+- Mariwork Core intentionally uses the user-facing concept `راهنما` instead of `درس` for this collection;
+- count/summary language is guide-oriented, e.g. `شامل 37 راهنما`;
+- CTA/action language is guide-oriented, e.g. `دیدن راهنماها`, not `دیدن درس‌ها`.
+
+SEO/schema must mirror this semantic customization.
+
+Therefore:
+- WP-32714 uses collection semantics, targeting `CollectionPage` rather than `Course`;
+- its 37 child URLs are individual guide/watch pages;
+- those 37 URLs must not be treated as lessons of one coherent curriculum merely because LearnDash stores them under a Course-type object;
+- generic Article schema must not be applied to those guide pages.
+
+### Future real Courses
+
+Future Academy entities such as:
+- beginner course;
+- advanced course;
+- doll-painting course;
+- other coherent curricula with a defined instructional path;
+
+may use `Course` semantics only when their actual visible structure and content support that meaning.
+
+For a genuine Course:
+- UI language should reflect the actual course model;
+- count/summary language may use patterns such as `شامل N درس`;
+- child units may be represented as lessons/modules when that is the true visible structure;
+- Course schema eligibility and Google-specific rich-result eligibility must be checked at launch rather than assumed from LearnDash type alone.
+
+The semantic distinction between Guide Collection and Course must remain consistent across:
+- UI labels;
+- CTAs;
+- count summaries;
+- titles/meta where relevant;
+- structured data;
+- internal linking/hierarchy;
+- future breadcrumb behavior.
+
+### Ownership
+
+Rank Math remains the first schema owner where it can produce semantically correct output.
+
+Mariwork Core may fill unsupported Academy-specific nodes or semantics, but must not create a second conflicting graph.
+
+### Canary
+
+Current initial canary:
+1. WP-32714 guide collection;
+2. one practical guide/watch page;
+3. one informational/guidance guide/watch page.
+
+When the first genuine Course launches, it requires a separate Course-specific canary before any Course-family rollout.
+
+Validate:
+- semantic role matches visible UI;
+- no unwanted Course schema on the current guide collection;
+- no unwanted Article/Person schema on guide pages;
+- single schema ownership;
+- stable canonical/entity relationships;
+- Organization/WebSite reuse;
+- no duplicate JSON-LD.
+
+VideoObject policy remains under DEC-038.
+Breadcrumb policy remains under DEC-039.
