@@ -2299,3 +2299,46 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Earlier uses of `ماری ورک` or `ماریورک` in visible naming are non-canonical and should be normalized during the appropriate implementation/content pass without changing URLs solely for spelling normalization.
 - Exact social/contact identity is not authorized by DEC-053 and remains blocked on DEC-127.
 - Stores/location/NAP treatment remains governed by DEC-087.
+
+
+## DEC-054 — ALT Policy by Image Role
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** IMAGE SEO / ALT / ACCESSIBILITY / CONTENT FAMILIES
+
+### Accepted target state
+
+- ALT decisions are based on the actual role and context of an image, not on missing-ALT counts alone.
+- Informative images require concise, factual, context-appropriate ALT.
+- Truly decorative images use an empty ALT attribute.
+- Do not invent visual facts or use keyword-stuffed ALT.
+- Store/Product imagery generally defaults to informative unless an asset is genuinely decorative.
+- Academy instructional/explanatory imagery generally defaults to informative unless an asset is genuinely decorative.
+- Reused image files do not require identical ALT across pages. ALT may vary by page context and image role as long as every version remains factually accurate to the visible image and useful in that context.
+- Magazine/Article images that support understanding, identify an artwork/artist/product, explain a technique or otherwise carry meaning require ALT.
+- Meaningful featured/hero images require ALT.
+- Decorative textures, separators and ornamental graphics use empty ALT.
+- Historical, artwork and artist ALT may include identity facts only when verified; do not infer names, works or context from the image alone.
+- Homepage/Static/Category images that represent a Product, Category, Academy, Magazine, brand subject or other meaningful content require ALT.
+- Decorative backgrounds, patterns, shapes and UI ornament use empty ALT.
+- The primary logo uses concise brand ALT such as `ماری‌ورک`.
+- Icons next to equivalent visible text are generally decorative and should not create redundant ALT.
+- Representative Product Category images use factual, category-relevant ALT.
+- For linked images, ALT must make the image/link purpose understandable when the image is the meaningful link content. Where equivalent visible link text already communicates the destination, avoid redundant or inflated ALT.
+- Images containing meaningful text, infographics and instructional screenshots require concise purpose/meaning-oriented ALT rather than raw filenames, generic labels or automatic OCR dumps.
+- Essential information shown in a text-bearing image or infographic should also exist in surrounding HTML or a useful caption where appropriate instead of being available only inside the image.
+- ALT may be generated automatically from verified structured facts when the image role is deterministic, for example a primary Product image using the canonical Product identity or a representative Category image using the canonical Category identity.
+- Context-dependent Article, Academy, screenshot, infographic, artwork and similar imagery requires contextual judgment; page Title alone is not a sufficient universal ALT source.
+- Automation must never infer unsupported colors, techniques, artist identities, Product properties, uses or other visual facts.
+- Product-gallery-specific image behavior remains governed by DEC-056.
+
+### Google basis
+
+Google states that alt text is an important source of image metadata, uses it together with page context and computer vision to understand image subject matter, and may use image ALT as anchor text when an image is a link. Google recommends useful, information-rich ALT that fits the page context and warns against keyword stuffing.
+
+### Consequences
+
+- Missing ALT is a review candidate, not an automatic instruction to populate text.
+- Family-level QA must distinguish informative from decorative imagery.
+- Bulk ALT generation is allowed only when factual source data and image role make the output deterministic and accurate.
+- Implementation remains separate from this strategy decision.
