@@ -834,3 +834,16 @@ Rules:
 - Verified structured facts may generate ALT automatically when image role is deterministic; context-dependent imagery requires contextual judgment.
 - Automation must not invent unsupported visual facts or keyword-stuff ALT.
 - Product-gallery specifics remain DEC-056.
+
+
+## DEC-056 — Product Image / Gallery SEO Policy
+
+**Status:** ACCEPTED
+
+- Fabric-color Product primary image intentionally represents the 60 ml package/variant.
+- This merchandising decision is not overridden by SEO merely to create a variant-neutral primary image.
+- Selecting a volume variant changes the displayed image to the selected-volume image.
+- SEO does not require simultaneous display of all volume images when variant-image switching exposes the correct image.
+- Gallery count/diversity/composition/order are Product/design decisions, outside SEO unless a concrete discoverability, accessibility, factual-accuracy or Search issue exists.
+- ALT remains DEC-054.
+- SEO scope is primary/variant image consistency and technical discoverability, not gallery redesign.
