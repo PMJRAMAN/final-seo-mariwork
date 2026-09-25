@@ -68,8 +68,8 @@ After each discussion:
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
 | DEC-007 | Product Title Naming Standard — fabric colors | ACCEPTED | SR-004 SR-ST-002; current-title-h1-matrix | Accepted visible Product title/H1 pattern: `رنگ پارچه [Color Name] ماری ورک کد [NNN]`. Use exact factual color name, canonical Mariwork brand spelling, stable product code, Latin digits for code consistency, no decorative `|` or `-`, no 30/60/250 ml variant tokens in parent title, and no URL/slug changes solely from title normalization. SEO `<title>` behavior is DEC-011. Half-space usage is a writing/brand-consistency standard, not a standalone SEO requirement; do not bulk-edit URLs/content only for half-space normalization. |
-| DEC-008 | Product Title Naming Standard — sets/bundles | DISCUSSING | SR-004 SR-ST-002; bundle matrix | Decide count/type/volume order; move long composition clauses out of title |
-| DEC-009 | Product Title Naming Standard — mediums/additives | OPEN | SR-004 SR-ST-002 | Decide exact naming and code policy |
+| DEC-008 | Product Title Naming Standard — sets/bundles | DEFERRED | SR-004 SR-ST-002; bundle matrix | Owner paused this decision on 2026-09-25; return later. No target state accepted yet. |
+| DEC-009 | Product Title Naming Standard — mediums/additives | DISCUSSING | SR-004 SR-ST-002 | Decide exact naming and code policy |
 | DEC-010 | Product Title Naming Standard — tools/accessories | OPEN | SR-004 SR-ST-002 | Decide brand/code exceptions |
 | DEC-011 | Decide relationship between visible Product H1/title and Rank Math SEO title template | OPEN | SR-004 SR-ST-002; Rank Math ownership | Template decision must follow visible-title standard |
 | DEC-012 | Static/Core title and H1 policy | OPEN | SR-005 §5; current SEO output | Includes About, Contact, Stores, FAQ, Magazine, Why Mariwork |
