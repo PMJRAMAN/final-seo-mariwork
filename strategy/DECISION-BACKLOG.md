@@ -356,6 +356,14 @@ After each discussion:
 | DEC-124 | Content journey and coverage strategy by cluster | OPEN | DEC-121–123; DEC-040–050; DEC-088 | Define how each priority cluster is covered across awareness → understanding → instruction/comparison → product/use/care, with useful cross-family handoffs rather than repeated copy. |
 | DEC-125 | Product/brand claim evidence standard | OPEN | DEC-121; DEC-053; DEC-081/082/085; product instructions/tests/business facts | Define evidence required before claims such as economic/value, durability/stability, coverage/efficiency, compatibility, professional suitability, safety, performance or superiority can appear sitewide. Marketing attractiveness alone is insufficient evidence. |
 
+
+# Session 21 — Official social profiles and entity references
+
+| ID | Decision | Status | Primary evidence | Blocking / notes |
+|---|---|---|---|---|
+| DEC-127 | Official Mariwork social-profile registry and sameAs eligibility | NEEDS_TARGETED_EVIDENCE | owner-confirmed platforms; exact profile handles/URLs to be provided later | Confirmed official platforms: Instagram, YouTube, Telegram and Aparat. Collect and verify the exact official handle/URL for each before using it in Organization schema, `sameAs`, About/Contact content or other entity references. Do not infer profile URLs from brand-name similarity. |
+
+
 # Global constraints that apply to every decision
 
 1. Repository evidence is the source of truth.
