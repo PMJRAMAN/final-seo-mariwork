@@ -2499,3 +2499,26 @@ Google requires Product structured-data images to represent the marked-up Produc
 
 - Legacy migration review is value-prioritized rather than handled as an undifferentiated bulk list.
 - Prioritization changes review order only; it does not itself authorize redirect, restore, 404 or 410 outcomes.
+
+
+## DEC-064 — Legacy Product-Volume Mapping Disposition
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** LEGACY PRODUCT URLS / VOLUME VARIANTS / REDIRECT MAPPING
+
+### Accepted target state
+
+- When a historical volume-specific Product URL is proven to represent the same current variable Product and the historical volume still exists as a current purchasable variant, migrate the legacy URL to the current Product with that same volume preselected.
+- Do not infer Product identity from slug or name similarity alone.
+- If the historical volume no longer exists on the current Product, do not fabricate a variant-selection target; review the URL separately.
+- UNKNOWN mappings remain blocked from bulk redirect decisions until historical identity is verified.
+- Current evidence already shows many historical volume URLs returning 301 redirects to current parent Product URLs.
+- The current evidence does not prove the technical redirect owner for those routes; possible Nginx ownership must be verified during implementation rather than assumed.
+- Current evidence also does not prove that existing redirects preserve same-volume preselection.
+- Implementation must audit the existing redirect behavior first and preserve or correct it rather than recreating the migration blindly.
+
+### Consequences
+
+- Existing correct redirects should be retained rather than duplicated in a second redirect layer.
+- Where a proven legacy URL currently lands on the correct Product but loses the historical volume selection, implementation may refine the mapping to the approved same-volume preselection target.
+- Unproven mappings remain targeted migration work, not bulk automation.
