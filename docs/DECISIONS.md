@@ -1552,3 +1552,69 @@ Do not automatically add FAQ, HowTo, Video or other schema merely because relate
 Exact future author/reviewer/source governance remains under DEC-085.
 
 Rendered structured-data validation is required after rollout.
+
+
+## DEC-035 — Product Variation ProductGroup / Variant Schema Architecture
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / VARIABLE PRODUCT / STRUCTURED DATA / PRODUCTGROUP / RANK MATH
+
+### Accepted target state
+
+Mariwork variable WooCommerce Products use Google's single-page Product variant architecture.
+
+The canonical parent Product URL represents the single ProductGroup landing page.
+
+Each real purchasable variation is represented as a variant `Product` with its own factual `Offer`.
+
+Volume-based variants use the supported `size` property for package sizes such as `30 ml`, `60 ml`, and `250 ml`, with `variesBy` using `https://schema.org/size`.
+
+Products varying by another supported property use the actual property, such as `color` or `size`; do not force the volume model onto all variable Products.
+
+Each variant must have a distinct direct/preselection URL that resolves to the correct selected variation, price, availability and purchasable state. Variant selector query URLs are not independent canonical Search landing pages; the base Product URL remains the single canonical ProductGroup URL.
+
+Each variant Product carries its own factual Offer data.
+
+Do not use `AggregateOffer` as a substitute for explicit variant representation once the ProductGroup model is deployed.
+
+ProductGroup and variant identities must be stable and unique. Do not fabricate SKU, GTIN or MPN values; identifier governance remains coordinated with DEC-081.
+
+### Rank Math ownership and Free implementation
+
+Rank Math Free remains the primary schema owner.
+
+The project preference is NOT to purchase Rank Math PRO solely for Product variation schema.
+
+Where Rank Math Free does not natively emit the required ProductGroup/variant graph, extend the existing Rank Math JSON-LD output through supported server-side filters.
+
+Implementation requirement:
+- mutate, replace or extend the relevant existing Rank Math Product entity inside the existing Rank Math graph;
+- do not output a second independent Product/ProductGroup JSON-LD graph;
+- do not keep the legacy Product/AggregateOffer representation in parallel when it duplicates or conflicts with the new ProductGroup/variant representation;
+- preserve unrelated Rank Math graph entities such as WebSite/Organization/ItemPage as appropriate;
+- keep all schema generation server-rendered in the initial HTML where practical.
+
+If a clean single-owner graph cannot be produced through the supported Rank Math filter layer, stop and return for technical review rather than shipping duplicate/conflicting schema or automatically purchasing PRO.
+
+Rank Math PRO is not required solely for this accepted capability.
+
+### Canary / regression gate
+
+Before family rollout:
+1. implement one 30/60/250 variable Product canary;
+2. implement one 30/60 variable Product canary;
+3. separately verify the non-volume variable Product cases.
+
+Validate:
+- exactly one intended ProductGroup representation;
+- correct number and identity of variant Products;
+- supported `variesBy` properties;
+- per-variant Offers;
+- factual price/currency/availability;
+- direct variation preselection;
+- parent canonical;
+- no duplicate Product/ProductGroup entities or competing JSON-LD scripts;
+- no loss of unrelated Rank Math entities;
+- Google Rich Results / schema validation output.
+
+Re-run the schema regression suite after Rank Math or WooCommerce updates because filter/output internals may change.
