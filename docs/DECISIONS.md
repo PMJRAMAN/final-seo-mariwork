@@ -900,3 +900,49 @@ Static/Trust pages remain purpose-specific, people-first support and trust entit
 - Avoid duplicated content across Static, Magazine, Academy and Commerce families.
 - Exact factual claims remain subject to DEC-053.
 - FAQ content is created for user support, not for pursuing FAQ rich results.
+
+
+## DEC-018 Amendment — Article Fact-Check Requirement Closed
+**Status:** Accepted  
+**Date:** 2026-09-25
+
+The owner confirmed that the current Article fact-check work has already been completed. Therefore Article meta-description handling no longer includes a remaining `FACT-CHECK REQUIRED` state.
+
+Current Article meta classifications are:
+- `KEEP`
+- `SHORTEN / REFINE`
+- `REWRITE`
+
+All other DEC-018 rules remain unchanged.
+
+
+## DEC-023 — Article Update / Freshness Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MAGAZINE / ARTICLE CONTENT MAINTENANCE
+
+### Accepted target state
+
+Current Article fact-check has already been completed and is not a remaining workstream under this Decision.
+
+Article age alone is not a reason to update or rewrite content.
+
+Classify existing Articles as:
+- `KEEP / CURRENT` — still accurate, useful, sufficiently complete, and aligned with the intended informational/reference role.
+- `TARGETED UPDATE` — a specific section, example, source, fact, or recommendation has become outdated or incomplete.
+- `SUBSTANTIVE UPDATE / REWRITE` — material portions no longer adequately serve the intended user need.
+- `OVERLAP REVIEW` — the primary issue is same-intent/content overlap rather than freshness; governed by DEC-119.
+
+Rules:
+- Do not rewrite Articles merely because they are old.
+- Do not change publication/update dates merely to create an appearance of freshness.
+- Trigger review when information materially changes, examples or sources become obsolete, a factual error is discovered, relevant Product/method context changes, or the Article materially fails its intended user need.
+- Prefer targeted correction over unnecessary full-Article rewrites.
+- Preserve the original `datePublished`.
+- `dateModified` must reflect a real content modification and must not be manipulated for SEO freshness.
+- Visible “updated” treatment should correspond to meaningful content change rather than trivial editorial edits.
+- Magazine remains text-first explanatory/reference content; practical video demonstrations should route to Academy rather than be duplicated.
+- Meta-description handling remains governed by DEC-018.
+- Author/reviewer/source presentation remains governed by DEC-085.
+- Content overlap/cannibalization remains governed by DEC-119.
+- Detailed body-content review of each individual Article is an implementation-stage content QA task after strategy approval, constrained by DEC-013, DEC-018, DEC-023, DEC-044, DEC-045, DEC-049, DEC-050, DEC-085, DEC-119 and DEC-123. It does not require a new strategy Decision unless a new material policy choice emerges.
