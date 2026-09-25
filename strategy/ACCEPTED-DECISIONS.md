@@ -418,3 +418,17 @@ Rules:
 - If no meaningful commerce replacement exists, return a proper 404 or 410; standard 404 is the default unless deliberate 410 is operationally useful.
 - Preserve relevant historical evidence before deletion.
 - Remove internal remnants and QA redirects for chains/soft 404s.
+
+## DEC-028 — Blog Category Lifecycle Policy
+
+**Status:** ACCEPTED
+
+- Durable Magazine hubs: Educational Articles (71) and History (142).
+- Artists (18) is transitional migration infrastructure for the new Artists project, not an ordinary empty-category deletion target.
+- After the new Artists system is public/stable: identity-matched historical Artist URLs redirect one-to-one to new Artist profiles.
+- Historical Artist URLs with no matching new profile redirect to the main Artists landing page.
+- The old Artists category/archive consolidates to the main new Artists landing page.
+- Never redirect to draft/private/non-public Artist targets; identity matching must be real, not slug-only.
+- All other empty Blog Categories are approved for controlled deletion.
+- Retired non-Artist category URLs redirect only when a genuine semantic successor exists; otherwise they return 404.
+- Remove obsolete internal references and preserve relevant migration evidence before deletion.
