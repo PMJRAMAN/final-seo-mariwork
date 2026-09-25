@@ -284,7 +284,7 @@ Rules:
 
 ## DEC-019 — Academy Course / Lesson Meta Description Rule
 
-**Status:** ACCEPTED
+**Status:** REOPENED FOR AMENDMENT — previous acceptance is not the current final target
 
 - Course/Lesson metas are page-specific.
 - Course metas summarize educational scope/purpose.
@@ -327,3 +327,6 @@ Rules:
 - Use factual inventory/Product distinctions only.
 - Do not falsely brand third-party tools as Mariwork.
 - DEC-121–124 may later inform emphasis without artificial duplication.
+
+
+> DEC-019 amendment note (2026-09-25): Every Academy Lesson is video-first. The owner requires a durable Academy↔Magazine intent boundary. Revised wording is under discussion; do not treat the previous DEC-019 target as implementation-ready.
