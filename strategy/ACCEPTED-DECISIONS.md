@@ -717,3 +717,14 @@ Rules:
 - Related-content modules must not create random links solely from shared Category/Tag membership.
 - Automated and manual destinations follow the same relevance standard.
 - Approved relationships are governed by DEC-040 and the Internal Link Requirement Matrix.
+
+
+## DEC-046 — Category to Education / Reference Linking Rules
+
+**Status:** ACCEPTED
+
+- Listing-only Product Category archives are not required to contain Academy/Article links.
+- Category → education/reference links become appropriate when the Category is developed into a content-supported landing page.
+- Selected destinations must directly support understanding, selection, preparation, use, technique, or care for that Product Category.
+- Do not add generic sitewide education/reference links merely for internal-link coverage.
+- Category landing-page content structure and requirements require a separate content decision before implementation.
