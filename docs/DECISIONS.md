@@ -1077,3 +1077,38 @@ Do not delete first and decide URL disposition afterward.
 `pa_volume` is a separate taxonomy and is governed by DEC-026.
 
 Product Category visible-content policy remains governed by DEC-021; metadata by DEC-076; title/H1 by DEC-115.
+
+
+## DEC-026 — pa_volume Archive Role, Indexability and Sitemap Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT ATTRIBUTE / VOLUME / INDEXABILITY / SITEMAP
+
+### Accepted target state
+
+The current `pa_volume` terms `30ml`, `60ml`, and `250ml` are durable cross-family commercial browse landing pages.
+
+Their role is to let users browse Products that are genuinely purchasable in a specific volume across applicable Product families.
+
+Approved terms:
+- `TERM-pa_volume-1906` — 30 ml
+- `TERM-pa_volume-1907` — 60 ml
+- `TERM-pa_volume-1908` — 250 ml
+
+Target state:
+- HTTP 200;
+- `index,follow`;
+- self-canonical;
+- included in the appropriate XML sitemap;
+- reachable through deliberate crawlable navigation/internal links;
+- Product listings reflect actual current volume availability.
+
+The `pa_volume` landing pages are distinct from volume-specific Set Product Categories.
+
+Shop parameter states such as `?filter_volume=30ml` remain functional faceted/filter URLs and are not independent search landing pages.
+
+Where technically reliable, Product links from a volume landing page should preserve/preselect the relevant WooCommerce volume variation.
+
+Low relative Product count alone does not disqualify the 250 ml page while it retains genuine distinct browse value.
+
+Title/H1 policy is governed by DEC-116; visible landing content by DEC-117; parameter/facet handling remains separate.
