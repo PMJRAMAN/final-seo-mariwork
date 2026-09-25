@@ -766,3 +766,16 @@ Rules:
 - Third-party tools/accessories must not be described as Mariwork-manufactured merely because they appear in a Mariwork category.
 - Future semantic/value pillars from DEC-121–124 may inform Category emphasis, but must not create artificial or duplicated content.
 - Metadata remains governed by DEC-076; title/H1 by DEC-115; durable Category/indexability decisions by DEC-025.
+
+
+### DEC-019 amendment reopened — 2026-09-25
+
+Owner clarification materially changes the Academy metadata policy:
+
+- Every current Academy Lesson contains a video; there are no text-only Lessons in the Academy.
+- Academy must be treated as video-first practical/instructional content.
+- Magazine must remain text-first explanatory/reference/editorial content.
+- The revised DEC-019 must decide how video format is explicitly communicated in SEO title, meta description, and/or visible page context.
+- Unique metadata must describe the specific Lesson/video.
+- Metadata alone is not sufficient to resolve Academy↔Magazine overlap; visible-content differentiation is governed by DEC-024 and overlap/cannibalization policy by DEC-119.
+- The previously accepted DEC-019 wording is not the current final target until this amendment is approved by the owner.
