@@ -416,3 +416,33 @@ Rules:
 - Visible-title normalization must not trigger URL/slug changes.
 - SEO `<title>` behavior is governed separately by DEC-011.
 - Brand spelling and Persian half-space conventions follow DEC-053.
+
+
+## DEC-010 — Tools / Accessories Product Naming Standard
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / TOOLS / ACCESSORIES
+
+### Accepted target state
+
+Product naming must reflect the product's actual brand ownership.
+
+For third-party or generic tools/accessories:
+
+`[Exact Product Name] [Code if factually applicable]`
+
+For products genuinely branded/manufactured by Mariwork:
+
+`[Exact Product Name] ماری ورک کد [NNN]`
+
+Rules:
+- Do not append `ماری ورک` merely because the product is sold on mariwork.ir.
+- Include the Mariwork brand only when the product is factually Mariwork-branded or manufactured.
+- For third-party products, include the actual third-party brand only when it is a genuine part of the Product identity.
+- Include a code only when it is a real, stable Product identifier.
+- Never invent a brand or Product code for SEO purposes.
+- Remove decorative separators such as `|` and `-`.
+- Do not include volume in the visible Product title/H1.
+- Include model/size only when it identifies a genuinely distinct Product rather than an ordinary variation.
+- Visible-title normalization must not trigger URL/slug changes.
+- SEO `<title>` behavior is governed separately by DEC-011.
