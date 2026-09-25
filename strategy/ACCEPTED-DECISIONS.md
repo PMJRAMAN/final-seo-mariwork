@@ -500,3 +500,17 @@ Rules:
 - Normalize separators/digits consistently; no URL/slug changes.
 - Exact per-Set wording is finalized from current YITH/Woo bundle composition during implementation/content QA.
 - DEC-011 is no longer blocked by deferred DEC-008.
+
+
+## DEC-033 — Static/Core WordPress Page Schema Policy
+
+**Status:** ACCEPTED
+
+- Remove generic Article schema from WordPress Pages where the page is not actually an article.
+- Use role-appropriate page semantics, primarily WebPage for Static/Core pages.
+- Keep Magazine hub as CollectionPage.
+- FAQ-specific schema remains under DEC-086; Stores/local entity treatment under DEC-087.
+- Remove Article-derived Person author nodes from generic Static/Core pages unless independently justified.
+- Shared Organization/WebSite references must point to the authoritative site entities and must not create conflicting duplicates.
+- Rank Math remains the primary schema owner where supported.
+- Use representative canary rollout and rendered JSON-LD regression validation before family-wide application.
