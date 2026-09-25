@@ -295,3 +295,18 @@ Rules:
 - Avoid mechanical brand/keyword injection and fixed 150/160-character rules.
 - Verify technical/safety/performance claims before approval.
 - Visible content remains DEC-024; video/schema remains separate.
+
+
+## DEC-020 — Product-Page Visible Content Architecture
+
+**Status:** ACCEPTED
+
+- Product pages use a people-first, family-specific content architecture.
+- Shared family templates define structure, not duplicated prose.
+- Common core: Product identity, verified specs, variants, primary use, necessary usage/handling guidance, limitations/warnings where relevant, and useful contextual links.
+- Colors: verified color/surface/technique/volume/fixation/washing facts.
+- Mediums: function/use/verified ratios/compatibility/limitations.
+- Sets: Woo/YITH-backed composition/count/volume/use/differentiation.
+- Tools: factual identity/specs/use/compatibility without false Mariwork branding.
+- No fixed word count, filler SEO copy, mandatory FAQ, or unsupported claims.
+- Exact copy and visual layout remain implementation-level.
