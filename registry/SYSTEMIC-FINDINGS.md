@@ -1,8 +1,8 @@
 # Systemic Findings Registry
 
-**Round-1 scope:** A-013 + A-018/A-019/A-020 · **Lifecycle ceiling:** CODEX_AUDITED
+**Scope:** Round-1 + current reconciliation + ChatGPT Second Review · **Per-finding lifecycle applies**
 
-Only FAMILY and SITEWIDE findings belong here. All recommendations are INITIAL; none is Second Reviewed, Approved, Implementing or a Production instruction.
+Only FAMILY and SITEWIDE findings belong here. Round-1 findings preserve their historical lifecycle. Findings added by SR-005 are `SECOND_REVIEWED` but remain **human-approval pending** and are not Production instructions.
 
 ## Registry
 
@@ -175,6 +175,43 @@ google_basis: GOOGLE_RECOMMENDED · google_reference: https://developers.google.
 seo_owner_current: CONTENT/UNKNOWN_NEEDS_VERIFICATION
 seo_owner_target: CONTENT for image purpose and ALT; RANK_MATH only for supported metadata concerns
 rank_math_capability_checked: VERIFIED_INSTALLED_1.0.279 · rank_math_path_or_reason_not_used: ALT requires image/content judgment and no Production write is authorized.
+
+
+### SYS-016 — Generic WordPress Page schema is semantically over-broad
+
+id: SYS-016 · severity: P1 · scope: FAMILY · family: static/core WordPress pages · status: CONFIRMED · lifecycle: SECOND_REVIEWED · evidence_class: OBSERVED · confidence: HIGH
+source_refs: audits/second-review/sitewide/SR-005-CHATGPT-FULL-SITE-SECOND-REVIEW.md; audits/second-review/evidence/current-seo-output.jsonl.
+impact: Current output applies `Article`/`Person` structured data to generic static, support and utility WordPress Pages where article semantics are not consistently appropriate.
+recommendation: SECOND REVIEW — do not globally assign Article schema to the WordPress `page` post type. Use role-appropriate page semantics or generic `WebPage`; retain Article only where the visible content genuinely functions as an article. Preserve one Organization/WebSite owner.
+acceptance_criteria: A representative static-page canary proves one schema owner, semantically appropriate types, no duplicate graph, unchanged visible content/canonical/robots, and no regression to utility/system pages.
+google_basis: GOOGLE_CONSISTENT · google_reference: https://developers.google.com/search/docs/appearance/structured-data/article
+seo_owner_current: RANK_MATH for observed public schema output on affected pages
+seo_owner_target: RANK_MATH where supported; narrow extension only if a required semantic correction is unsupported
+rank_math_capability_checked: VERIFIED_INSTALLED_1.0.279 · rank_math_path_or_reason_not_used: Target configuration path must be confirmed in the implementation dossier; no Production write authorized.
+
+### SYS-017 — LearnDash schema ownership is not intentional yet
+
+id: SYS-017 · severity: P2 · scope: FAMILY · family: academy + LearnDash course/lessons · status: CONFIRMED · lifecycle: SECOND_REVIEWED · evidence_class: OBSERVED · confidence: HIGH
+source_refs: audits/second-review/sitewide/SR-005-CHATGPT-FULL-SITE-SECOND-REVIEW.md; audits/second-review/evidence/current-seo-output.jsonl; audits/second-review/reconciliation/current-academy-architecture.json.
+impact: The current course and 37 lesson URLs are indexable/self-canonical but current evidence shows no Rank Math public marker or JSON-LD on this family. Absence alone is not treated as a defect, but schema ownership is not intentional/documented.
+recommendation: SECOND REVIEW — establish one intentional owner first. Do not mass-apply Article schema. Evaluate one course plus two representative video lessons as a canary; use `VideoObject` only where the video is actually watchable and factual metadata/fetchability are verified. Breadcrumb may be considered when it matches visible hierarchy.
+acceptance_criteria: Canary records current/target owner, exact schema facts, video fetchability where applicable, no duplicate emitter, hierarchy consistency, and unchanged lesson/course navigation.
+google_basis: GOOGLE_CONSISTENT · google_reference: https://developers.google.com/search/docs/appearance/structured-data/video
+seo_owner_current: NONE_EVIDENCED_FOR_JSONLD on current course/lesson sample
+seo_owner_target: RANK_MATH where supported; otherwise one documented extension owner
+rank_math_capability_checked: VERIFIED_INSTALLED_1.0.279 · rank_math_path_or_reason_not_used: Implementation path is pending approved canary design.
+
+### SYS-018 — Closure coverage count mixes current and historical Static dossiers
+
+id: SYS-018 · severity: P3 · scope: SITEWIDE · family: repository coverage bookkeeping · status: CONFIRMED · lifecycle: SECOND_REVIEWED · evidence_class: MEASURED · confidence: HIGH
+source_refs: audits/sitewide/PRE-IMPLEMENTATION-COVERAGE-MATRIX.json; audits/second-review/reconciliation/current-entity-census.json; pages/static/WP-32689.md; pages/static/WP-34061.md; audits/second-review/sitewide/SR-005-CHATGPT-FULL-SITE-SECOND-REVIEW.md.
+impact: The closure matrix reports 10 current Static/Core editorial entities, but the current public census supports eight. WP-32689 and WP-34061 are historical 404 dossiers, not current public Pages. This can distort later coverage/internal-link counts if left unqualified.
+recommendation: SECOND REVIEW — preserve the original closure artifact as history, but use 8 current Static/Core pages + 2 historical 404 dossiers in all forward planning.
+acceptance_criteria: Future coverage reports and implementation queues distinguish current public entities from historical dossiers; no Production action is attached to this correction.
+google_basis: PROJECT_DECISION · google_reference: NOT_APPLICABLE_REPOSITORY_BOOKKEEPING
+seo_owner_current: NOT_APPLICABLE
+seo_owner_target: NOT_APPLICABLE
+rank_math_capability_checked: NOT_APPLICABLE · rank_math_path_or_reason_not_used: Documentation-only finding.
 
 ## Handoff
 
