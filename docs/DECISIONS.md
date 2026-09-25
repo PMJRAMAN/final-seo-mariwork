@@ -636,3 +636,34 @@ Initial page-specific direction:
 - Why Mariwork: describe the page's explanation of Mariwork fabric-paint features/use cases.
 - Stores: describe discovery of physical points of sale.
 - FAQ: describe answers to common Product and educational questions.
+
+
+## DEC-018 — Article Meta Description Update Rule
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** EDITORIAL / ARTICLE META DESCRIPTION
+
+### Accepted target state
+
+Existing Article meta descriptions must not be rewritten mechanically merely because they are old.
+
+Each Article meta is classified as:
+
+- `KEEP` — accurate, useful, page-specific and aligned with the Article.
+- `SHORTEN / REFINE` — factually sound but unnecessarily verbose, unfocused, or introduction-like.
+- `REWRITE` — materially weak, generic, duplicated, misleading, or insufficiently descriptive.
+- `FACT-CHECK REQUIRED` — contains factual, historical, scientific, safety, technical, or other claims that require validation before retention or rewriting.
+
+Rules:
+- Preserve existing meta descriptions when already accurate and useful.
+- Do not perform a blanket Article-meta rewrite.
+- Each Article should have meaningfully page-specific metadata.
+- Duplicate descriptions across distinct Articles should be resolved.
+- Very short descriptions that fail to explain the Article should be rewritten.
+- Long descriptions are not rejected by character count alone; refine them when they function as copied introduction paragraphs rather than concise summaries.
+- Do not impose a fixed 150/160-character limit.
+- Meta descriptions should summarize the Article rather than mechanically copy its first paragraph.
+- Avoid keyword stuffing, unsupported claims, and exaggerated promotional language.
+- Claims that require substantive source verification are escalated to DEC-023.
+- DEC-018 governs metadata only; it does not authorize substantive Article-content changes.
+- Article overlap/cannibalization remains governed separately by DEC-119.
