@@ -905,3 +905,14 @@ Rules:
 - Magazine Articles and durable Blog Categories remain the primary editorial discovery/index surfaces.
 - Current Articles use the Mariwork Organization rather than individual author entities under DEC-034, so Author archives do not receive separate SEO ownership.
 - Do not invent Author/Date archive URLs; verify actual route existence during implementation.
+
+
+## DEC-063 — Legacy URL Prioritization Rule
+
+**Status:** ACCEPTED
+
+- Review historically valuable Legacy URLs first.
+- Priority evidence includes meaningful GSC history, proven backlinks/internal links, identifiable high-value entities, and valuable URLs affected by 404s, bad redirects or redirect chains.
+- Low-evidence/unknown URLs receive lower review priority.
+- Age, slug similarity, traffic history or an existing redirect alone never proves semantic identity.
+- Every final redirect still requires a genuine evidence-backed semantic successor.
