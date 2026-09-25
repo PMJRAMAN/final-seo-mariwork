@@ -131,3 +131,29 @@ Rules:
 - Do not change URLs/slugs solely because visible titles are normalized.
 - SEO `<title>` is governed separately by DEC-011.
 - Brand spelling/half-space conventions follow DEC-053.
+
+
+## DEC-010 — Tools / Accessories Product Naming Standard
+
+**Status:** ACCEPTED
+
+Product naming must reflect the product's actual brand ownership.
+
+For third-party or generic tools/accessories:
+
+`[Exact Product Name] [Code if factually applicable]`
+
+For products genuinely branded/manufactured by Mariwork:
+
+`[Exact Product Name] ماری ورک کد [NNN]`
+
+Rules:
+- Do not append `ماری ورک` merely because the product is sold on mariwork.ir.
+- Include Mariwork only when the product is genuinely Mariwork-branded/manufactured.
+- Include a third-party brand only when it is genuinely part of the Product identity.
+- Include a code only when it is a real, stable identifier.
+- Never invent a brand or code for SEO.
+- No decorative separators such as `|` or `-`.
+- Do not include volume.
+- Include model/size only for genuinely distinct Products, not ordinary variations.
+- Do not change URLs/slugs solely because visible titles are normalized.
