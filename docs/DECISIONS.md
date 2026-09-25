@@ -1238,3 +1238,49 @@ For each retired category URL:
 - do not retain empty categories merely as SEO placeholders.
 
 Preserve relevant migration evidence before deletion and remove obsolete internal references.
+
+
+## DEC-029 — Blog Tags Decommission and Mapping Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MAGAZINE / BLOG TAG / DECOMMISSION / URL DISPOSITION
+
+### Accepted target state
+
+Blog Tags are not part of Mariwork's durable editorial SEO, navigation, or information architecture.
+
+Current evidence shows 54 Blog Tag terms. Six currently have assignments, representing 39 Article↔Tag relationships.
+
+All 54 current Blog Tag terms are approved for full controlled deletion.
+
+Rules:
+- remove all current Article↔Tag assignments before or together with term deletion;
+- Article content and durable Blog Category membership remain unaffected;
+- do not optimize, index, content-expand, expose in navigation, or include Blog Tag archives in XML sitemaps;
+- do not recreate Blog Tags as SEO landing pages.
+
+### Historical URL disposition
+
+Use a permanent redirect only when a genuine editorial successor exists.
+
+Allowed destination classes:
+- durable Magazine Category;
+- specific Magazine Article;
+- another durable Magazine editorial hub when genuinely equivalent.
+
+Do not redirect Blog Tag URLs to Store/Product destinations merely because the same keyword appears there.
+
+Do not infer mappings from tag name or slug similarity alone.
+
+When no meaningful editorial replacement exists, return a proper HTTP `404` or `410`; standard 404 is the default implementation.
+
+### Execution order
+
+1. freeze/export the Blog Tag term + URL + assignment inventory;
+2. preserve relevant historical evidence;
+3. verify durable Category ownership for affected Articles;
+4. remove all 39 current Article↔Tag assignments;
+5. establish only verified semantic redirects;
+6. delete all 54 Blog Tag terms;
+7. allow unmapped retired URLs to return proper 404/410;
+8. verify no Tag sitemap, navigation, internal-link remnants, redirect chains, or soft 404s remain.
