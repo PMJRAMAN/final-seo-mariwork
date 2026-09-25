@@ -107,8 +107,9 @@ These facts were confirmed directly by the owner during DEC-053 discussion. They
 - Do not call these outlets official representatives, exclusive representatives, authorized dealers, branches, or Mariwork-owned stores unless a specific location is separately verified to have that status.
 - Exact store/location/NAP treatment remains governed by DEC-087.
 
-### Official social platforms
+### Official social platforms and contact channels
 
 - Owner confirms official Mariwork presence on Instagram, YouTube, Telegram and Aparat.
-- Exact handles/URLs are intentionally deferred to DEC-127.
-- Do not infer or generate social-profile URLs from brand-name similarity.
+- Owner also confirms official brand contact channels exist for phone, email and WhatsApp.
+- Exact social handles/URLs and exact contact details are intentionally deferred to DEC-127.
+- Do not infer or generate social-profile URLs, phone numbers, email addresses or WhatsApp details from brand-name similarity, historical data or unverified site output.
