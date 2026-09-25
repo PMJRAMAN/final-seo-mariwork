@@ -1199,3 +1199,42 @@ All prior DEC-027 rules remain unchanged:
 - standard 404 remains the default unless deliberate 410 is operationally useful;
 - preserve historical evidence before deletion;
 - perform redirect/internal-link/sitemap regression QA.
+
+
+## DEC-028 — Blog Category Lifecycle Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MAGAZINE / BLOG CATEGORY / ARTISTS MIGRATION / LIFECYCLE
+
+### Durable Magazine categories
+
+The following remain durable editorial hubs:
+- `TERM-category-71` — Educational Articles
+- `TERM-category-142` — History
+
+Their detailed presentation/content treatment remains governed separately.
+
+### Artists migration exception
+
+`TERM-category-18` — Artists is not an ordinary empty-category cleanup target.
+
+A new Artists project is in development and is expected to become public shortly.
+
+Once the new Artists system is public and stable:
+- if a historical Artist entity can be confidently identity-matched to a new Artist profile, redirect the old Artist URL one-to-one to that new profile;
+- if a historical Artist entity has no matching profile in the new system, redirect that historical Artist URL to the main new Artists landing page;
+- the old Artists category/archive should consolidate to the main new Artists landing page;
+- do not redirect Artist URLs to draft, private, or otherwise non-public targets.
+
+Identity matching must be based on actual Artist identity, not slug similarity alone.
+
+### Other empty Blog Categories
+
+All other empty Blog Categories are approved for controlled deletion, including current empty Education/video, Cultural, Guides, Literature, Uncategorized variants, Free, General, Paid, and other empty non-Artist terms.
+
+For each retired category URL:
+- redirect only when a genuine semantic successor exists;
+- otherwise return a proper 404;
+- do not retain empty categories merely as SEO placeholders.
+
+Preserve relevant migration evidence before deletion and remove obsolete internal references.
