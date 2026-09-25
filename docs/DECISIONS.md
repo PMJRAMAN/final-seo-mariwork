@@ -1868,3 +1868,68 @@ Before broad VideoObject rollout:
 Video sitemap inclusion is limited to verified eligible watch pages and is finalized in the Video SEO implementation workstream.
 
 `Clip` / `SeekToAction` is not a default requirement and is considered only where useful and technically supported.
+
+
+## DEC-038 — VideoObject Eligibility and Ownership Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** VIDEO SEO / ACADEMY / WATCH PAGES / STRUCTURED DATA
+
+### Accepted policy
+
+Video structured data is applied by semantic and technical eligibility, not merely because a page contains a video.
+
+Current Mariwork guide pages have this visible pattern:
+- a cover/thumbnail;
+- a short explanatory text section before the video;
+- that text summarizes or overlaps the video topic while emphasizing key points;
+- the primary instructional video appears lower on the same page.
+
+This structure may still qualify as a video watch/guide page only when the video remains a primary and prominent purpose of the page rather than a minor secondary embed.
+
+The host page keeps `WebPage` semantics. An eligible primary video may be represented as its `mainEntity` `VideoObject`.
+
+### Eligibility/data requirements
+
+Use factual metadata only:
+- `name`;
+- stable crawlable `thumbnailUrl`;
+- factual `uploadDate`;
+- prefer stable fetchable `contentUrl`;
+- otherwise use a valid `embedUrl`;
+- factual `description`;
+- factual `duration` where available;
+- real creator identity.
+
+Do not fabricate upload dates, duration, creator identity, thumbnail, or source URLs to satisfy validation.
+
+Mariwork-produced videos may reuse the authoritative Mariwork Organization as creator.
+
+The video/player must be discoverable in Google's rendered HTML without requiring a click or other user interaction to create/load the only copy of the video element.
+
+The explanatory text before the video is allowed and can improve page usefulness. QA must nevertheless verify that the video remains prominent enough to represent the page's primary instructional media/purpose.
+
+### Boundaries
+
+- The current guide CollectionPage is not represented as a single VideoObject.
+- Future video-first Course lessons may use the same WebPage + VideoObject model when eligible.
+- Videos embedded as secondary content on Articles, Products or other non-watch pages remain in the video inventory but are not automatically treated as primary watch-page VideoObjects.
+- Clip/SeekToAction is not a default requirement.
+
+### Ownership and rollout
+
+Rank Math remains the first general schema owner.
+
+Mariwork Core may add unsupported Academy/video nodes only as part of one coherent graph, without duplicate VideoObject/WebPage entities.
+
+Before broad rollout:
+1. complete the M-program video inventory;
+2. run a two-guide canary;
+3. verify video prominence and host-page purpose;
+4. verify rendered discoverability;
+5. verify thumbnail/source fetchability;
+6. verify factual uploadDate/duration/creator data;
+7. validate rendered structured data;
+8. verify Search Console video indexing behavior where available.
+
+Video sitemap inclusion is limited to verified eligible watch pages and is finalized during Video SEO implementation.
