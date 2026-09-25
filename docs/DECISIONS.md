@@ -1346,3 +1346,57 @@ After each sitemap-affecting rollout, verify every emitted URL for:
 Also verify that every approved durable sitemap family is actually represented.
 
 Artists URLs enter sitemap only after the new Artists system is public/stable; historical Artist URLs that redirect must not remain in sitemap output.
+
+
+## DEC-031 — Attachment / Media Public and Index Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MEDIA / ATTACHMENT URLS / INDEXABILITY / CLEANUP SAFETY
+
+### Accepted target state
+
+WordPress Attachment HTML pages are not part of Mariwork's durable Search landing-page architecture.
+
+Media asset files and Attachment HTML pages are separate concerns.
+
+#### Media files
+- Public image/media asset URLs used by durable public content remain accessible and crawlable where required for page rendering, Google Images, and structured-data image references.
+- Do not block useful `/wp-content/uploads/` assets merely to suppress Attachment HTML pages.
+
+#### Attachment HTML pages
+- are not independent SEO landing pages;
+- must not be intentionally indexed;
+- must not be included in XML sitemaps;
+- do not receive standalone SEO-content expansion;
+- do not become navigation/hub entities.
+
+#### Disposition hierarchy
+1. If an attachment has a clear durable owning page, permanently redirect the Attachment HTML URL to that canonical page.
+2. If no single semantic owner exists but the media asset remains valid/public, the Attachment HTML URL may redirect to the actual media-file URL when technically reliable.
+3. If neither a meaningful owner nor a retained valid asset exists, return proper 404/410.
+4. Never mass-redirect Attachment pages to Homepage or unrelated destinations.
+
+This Decision does not authorize deleting Media Library records or physical media files.
+
+### Operational follow-up — unused/orphan media cleanup
+
+Mariwork has a large historical Media Library and the owner explicitly requires a later cleanup pass for media assets no longer used anywhere on the site.
+
+This cleanup is operational maintenance rather than a direct ranking-policy decision, but it is a required follow-up to DEC-031.
+
+Before deleting any media record or physical file, prove that the asset is not referenced by:
+- post/page body content or block data;
+- Product featured images or Product galleries;
+- Academy Course/Lesson content;
+- taxonomy or Static/Trust content;
+- featured-image relationships;
+- structured data or SEO/social metadata;
+- CSS, JS, theme, child-theme, plugin, shortcode or custom-field references;
+- reusable blocks/patterns/templates;
+- other runtime or migration dependencies.
+
+Deletion must be inventory-driven, backup/rollback-capable, and batch/canary verified. Filename presence or apparent non-use in rendered HTML alone is insufficient proof of orphan status.
+
+Current evidence reports 626 returned attachment IDs versus 845 advertised records. This discrepancy must be reconciled before any bulk media deletion or bulk attachment-URL change.
+
+Detailed image naming, ALT/context, image discovery/sitemap, duplicate/reuse policy and technical delivery remain governed by the dedicated image Decisions.
