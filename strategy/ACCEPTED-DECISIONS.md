@@ -602,3 +602,22 @@ Rules:
 - Rank Math remains first owner; Mariwork Core may fill unsupported video nodes only in one coherent non-duplicate graph.
 - Complete video inventory + two-guide canary before rollout.
 - Video sitemap only for verified eligible watch pages; Clip/SeekToAction is optional, not default.
+
+
+## DEC-038 — VideoObject Eligibility and Ownership Policy
+
+**Status:** ACCEPTED
+
+- VideoObject is eligibility-driven, not automatic.
+- Current guide pages have cover/thumbnail + explanatory text + primary instructional video on the same page.
+- This structure may qualify as a watch/guide page only when video remains a primary/prominent page purpose.
+- Host page remains WebPage; eligible primary video may be mainEntity VideoObject.
+- Use only factual name, stable thumbnailUrl, uploadDate, contentUrl/embedUrl, description, duration and creator data.
+- Do not fabricate metadata.
+- Video/player must be discoverable in rendered HTML without click-dependent loading.
+- Guide collection itself is not one VideoObject.
+- Secondary videos on Articles/Products are not automatically primary VideoObjects.
+- Rank Math remains first owner; Mariwork Core may fill missing nodes only within one coherent graph.
+- M-program inventory + two-guide canary required before rollout.
+- Verify prominence, fetchability, rendered visibility, schema and Search Console video indexing.
+- Video sitemap only for verified eligible watch pages.
