@@ -330,3 +330,20 @@ Rules:
 - Do not falsely brand third-party tools as Mariwork.
 - DEC-121–124 may later inform emphasis without artificial duplication.
 
+
+
+## DEC-022 — Static / Trust Page Visible Content Policy
+
+**Status:** ACCEPTED
+
+- Static/Trust pages remain purpose-specific people-first support/trust entities.
+- About = verified identity/history/people/activity (“Who is Mariwork?”).
+- Why Mariwork = verified user-relevant Product/brand differentiators.
+- Contact = verified actionable contact/support information.
+- Stores = verified physical purchase-location information.
+- FAQ = concise genuine answers plus routing: Academy for practical/video how-to, Magazine for explanatory/reference depth, Product/Category for commercial detail.
+- No fixed word count or generic SEO filler.
+- No unsupported superiority/safety/performance claims.
+- No invented local or inventory claims.
+- Avoid duplication across Static, Magazine, Academy and Commerce families.
+- Canonical factual claims remain governed by DEC-053.
