@@ -860,3 +860,14 @@ Rules:
 - Instructional imagery must match the actual content context, not act as generic filler.
 - Featured Images may represent Articles, but multiple in-body images are not required for SEO.
 - ALT remains governed by DEC-054.
+
+
+## DEC-059 — Store Facets / Sort / Display Parameter Policy
+
+**Status:** ACCEPTED
+
+- `filter_volume`, `orderby`, `per_page`, `per_row` and `shop_view` are Store UI states, not independent SEO landing pages.
+- They are not separate Search targets or sitemap entries and should consolidate canonically to the relevant base Shop page.
+- Durable `pa_volume` landing pages remain separate indexable SEO pages under DEC-026.
+- Product-level `attribute_pa_volume` URLs remain available for direct variant preselection and are not treated as Store facet URLs.
+- Avoid blanket robots blocking that could interfere with legitimate variant-selection behavior.
