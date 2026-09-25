@@ -2342,3 +2342,30 @@ Google states that alt text is an important source of image metadata, uses it to
 - Family-level QA must distinguish informative from decorative imagery.
 - Bulk ALT generation is allowed only when factual source data and image role make the output deterministic and accurate.
 - Implementation remains separate from this strategy decision.
+
+
+## DEC-056 — Product Image / Gallery SEO Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT IMAGE SEO / VARIANTS / GALLERY BOUNDARY
+
+### Accepted target state
+
+- For Mariwork fabric-color Products, the primary Product image intentionally represents the 60 ml package/variant.
+- This is a deliberate merchandising/commercial decision and must not be overridden by SEO merely to make the primary image variant-neutral.
+- For variable fabric-color Products, selecting a volume variant changes the displayed Product image to the image for that selected volume.
+- SEO does not require all volume images to be shown simultaneously in the gallery when the variant-image interaction already exposes the correct selected-volume image.
+- Gallery image count, diversity, composition and merchandising order are fixed Product/design decisions and are outside SEO strategy unless a specific technical discoverability, accessibility, factual-accuracy or Search issue is evidenced.
+- ALT behavior remains governed by DEC-054.
+- Product image behavior must remain factually aligned with the available variants and must not misrepresent the purchasable Product.
+- SEO scope is limited to primary/variant image consistency and technical image discoverability; DEC-056 does not authorize gallery redesign.
+
+### Google basis
+
+Google requires Product structured-data images to represent the marked-up Product and to be crawlable/indexable. Google also recommends clear representative Product imagery, but does not require Mariwork to change its merchandising choice of a 60 ml default image when the page accurately represents the variable Product and the selected variant image updates correctly.
+
+### Consequences
+
+- The 60 ml default image is preserved for fabric-color Products.
+- Variant-image switching remains part of the intended Product experience.
+- SEO QA may flag broken, inaccessible or factually mismatched Product images, but not gallery composition merely because a different merchandising arrangement might exist.
