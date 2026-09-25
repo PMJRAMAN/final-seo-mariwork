@@ -582,3 +582,23 @@ Rules:
 - Current canary: guide collection + two representative guide pages.
 - First future true Course requires a separate Course canary.
 - VideoObject remains under DEC-038; breadcrumbs under DEC-039.
+
+
+## DEC-038 — VideoObject Eligibility / Ownership Policy
+
+**Status:** ACCEPTED
+
+- Apply VideoObject by real eligibility, not automatically wherever a video exists.
+- Current primary-video guide pages are educational watch-page candidates: WebPage + eligible VideoObject.
+- Current guides already have dedicated covers and supporting text that mirrors/emphasizes key points from the video; this is companion educational content, not Article semantics.
+- Target layout: H1 + short context → primary video prominently near the top with stable cover/poster → expanded key points/supporting text.
+- Do not bury the primary video at the end of a long text block when watching it is the main page purpose.
+- Guide CollectionPage itself is not a VideoObject.
+- Require factual name, stable crawlable thumbnailUrl and uploadDate; prefer contentUrl, otherwise valid embedUrl; add factual description/duration/creator where available.
+- Never fabricate video metadata.
+- Mariwork-produced videos may reuse the authoritative Mariwork Organization as creator.
+- Player/video must be detectable in Google's rendered HTML without requiring a click to create the only representation.
+- Secondary videos on Articles/Products are inventoried but not automatically treated as watch pages.
+- Rank Math remains first owner; Mariwork Core may fill unsupported video nodes only in one coherent non-duplicate graph.
+- Complete video inventory + two-guide canary before rollout.
+- Video sitemap only for verified eligible watch pages; Clip/SeekToAction is optional, not default.
