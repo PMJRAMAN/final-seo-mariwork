@@ -202,3 +202,19 @@ Rules:
 - Rewrite only when materially vague, inaccurate, misleading, excessively verbose, or inconsistent with the content.
 - Do not change URLs/slugs solely because Article titles are normalized.
 - Cannibalization/overlap is governed separately by DEC-119.
+
+
+## DEC-014 — Academy Course / Lesson Title and H1 Convention
+
+**Status:** ACCEPTED
+
+- Course and Lesson titles describe the actual educational unit naturally.
+- Default: Course H1 = Course SEO `<title>`.
+- Default: Lesson H1 = Lesson SEO `<title>`.
+- Remove repetitive `- رنگ پارچه ماری ورک` suffixes.
+- Include Mariwork only when naturally part of the subject or Course identity.
+- Preserve sequence numbers only for genuine multi-part instructional series.
+- Retain existing titles when clear and accurate.
+- Rewrite only when materially vague, inaccurate, misleading, excessively verbose, or inconsistent with content.
+- Do not change URLs/slugs solely because titles are normalized.
+- Schema/video naming follows visible Lesson identity; schema ownership/eligibility remains DEC-037/038.
