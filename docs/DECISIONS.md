@@ -1618,3 +1618,72 @@ Validate:
 - Google Rich Results / schema validation output.
 
 Re-run the schema regression suite after Rank Math or WooCommerce updates because filter/output internals may change.
+
+
+## DEC-036 — Bundle / Set Schema and Visible Component Representation
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / YITH BUNDLE / SET / STRUCTURED DATA / VISIBLE COMPONENTS / AJAX DISCOVERABILITY
+
+### Accepted target state
+
+Each current Mariwork YITH Bundle/Set is a standalone fixed-volume purchasable `Product` with its own factual `Offer`.
+
+Bundles are not Product variant groups:
+- do not use `ProductGroup`;
+- do not use `hasVariant`;
+- do not use `isVariantOf` for Bundle components.
+
+Current Mariwork Bundles do not have internal volume variants and do not mix volumes:
+- a 30 ml Bundle contains the intended 30 ml component variations;
+- a 60 ml Bundle contains the intended 60 ml component variations;
+- a 250 ml Bundle contains the intended 250 ml component variations.
+
+Bundle volume is an intrinsic Product attribute, not a variation dimension.
+
+### Component source of truth
+
+Current YITH/Woo Bundle composition is the canonical source of truth for:
+- component identity;
+- component quantity;
+- selected component variation/volume.
+
+Visible Bundle content must reconcile with current YITH/Woo data.
+
+Long composition strings such as `شامل ...` belong in visible Product content rather than the primary title/H1, consistent with DEC-008.
+
+Where a component has a durable Product page, the visible component may link contextually to it. Where appropriate, the link may use the accepted direct variation-preselection URL architecture from DEC-035.
+
+Bundle price, currency and availability must represent the actual purchasable Bundle and must not be manually reconstructed from component totals.
+
+### AJAX / crawler discoverability requirement
+
+The existing component-list interaction is currently opened through a button and AJAX and must be audited before implementation acceptance.
+
+Search-visible Bundle component content must not require a user click or other user interaction to become available to crawlers.
+
+Preferred implementation:
+- server-render the factual component list in the initial HTML/DOM;
+- use the current button/accordion interaction only to visually show/hide that already-present content.
+
+An alternative automatically rendered client-side implementation is acceptable only if the component content appears in rendered DOM without any user action and is reliably retrievable by Google rendering.
+
+If the component list is fetched only after the user clicks the button, refactor the implementation before treating that component content as Search-visible.
+
+Required validation:
+- raw HTML inspection;
+- rendered DOM inspection before any manual interaction;
+- AJAX/network behavior;
+- component count/identity/volume reconciliation with YITH;
+- Google Search Console URL Inspection rendered output where available;
+- Rich Results/rendered structured-data checks where relevant.
+
+Sitewide JavaScript/AJAX crawlability remains additionally governed by DEC-080.
+
+### Schema ownership
+
+Rank Math remains the primary Product schema owner.
+
+Do not add ProductGroup or nested component Product entities solely to model Bundle composition for Google Product structured data.
+
+Representative small, medium and large Bundle canaries are required before family rollout.
