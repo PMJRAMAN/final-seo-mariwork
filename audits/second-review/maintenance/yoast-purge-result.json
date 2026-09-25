@@ -1,0 +1,77 @@
+{
+  "active_custom_code_yoast_dependency": "NONE",
+  "after": {
+    "confirmed_yoast_options": 0,
+    "confirmed_yoast_transients": 0,
+    "db_size_mb": 495.19,
+    "dedicated_yoast_tables": [],
+    "postmeta_rows": 0,
+    "termmeta_rows": 0,
+    "usermeta_rows": 0
+  },
+  "backup": {
+    "confirmed_targets_included": 0,
+    "created": true,
+    "path": "/home/mariwork/migration-audits/yoast-legacy-purge-20260925-114840/backup/yoast-owned-only.sql.gz",
+    "sha256": "f93fccba6819073ffa9ee4e23d7e26c5439e214ae8b8b888fba48f09bbfee383",
+    "size_bytes": 195
+  },
+  "before": {
+    "confirmed_yoast_options": 0,
+    "confirmed_yoast_transients": 0,
+    "db_size_mb": 495.19,
+    "dedicated_yoast_tables": [],
+    "postmeta_rows": 0,
+    "termmeta_rows": 0,
+    "usermeta_rows": 0
+  },
+  "cleanup": {
+    "delete_statements_executed": 0,
+    "drop_statements_executed": 0,
+    "manifest": "audits/second-review/maintenance/yoast-purge-plan.json",
+    "reason": "No confirmed Yoast-owned targets remained; reviewed manifest was empty.",
+    "rows_removed": {
+      "dedicated_tables": 0,
+      "options": 0,
+      "postmeta": 0,
+      "termmeta": 0,
+      "total": 0,
+      "transients": 0,
+      "usermeta": 0
+    }
+  },
+  "database": "mariwork_reco",
+  "head_before": "b82ee481e8e0458b44ce7bd54cd490f6d7fdb508",
+  "public_regression": {
+    "comparison": "status, redirect/final URL, title, meta description, canonical, robots and JSON-LD summary unchanged",
+    "representatives_checked": 8,
+    "result": "PASS"
+  },
+  "rank_math_data_modified": false,
+  "rank_math_rebuild_ready": true,
+  "rank_math_version": "1.0.279",
+  "remaining_traces": {
+    "AMBIGUOUS_RETAINED": 6,
+    "EXPECTED_NON_DB_REFERENCE": 4,
+    "UNEXPECTED_LEFTOVER": 0,
+    "details": "Six Reward Points option names contain wpseo capability suffixes; active code references are conditional compatibility/capability strings, not Yoast data ownership."
+  },
+  "safety": {
+    "learndash_data_deleted": false,
+    "mariwork_custom_data_deleted": false,
+    "orders_customers_accessed": false,
+    "production_content_modified": false,
+    "products_deleted": false,
+    "rank_math_data_deleted": false,
+    "secrets_or_pii_written": false,
+    "terms_deleted": false,
+    "users_affected": false,
+    "variations_deleted": false
+  },
+  "status": "COMPLETE",
+  "table_prefix": "wp_",
+  "task": "DB-SEO-001",
+  "yoast_extensions_present": false,
+  "yoast_plugin_active_before": false,
+  "yoast_plugin_files_present": false
+}

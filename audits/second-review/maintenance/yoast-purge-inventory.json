@@ -1,0 +1,100 @@
+{
+  "active_code_references": [
+    {
+      "active": true,
+      "classification": "EXPECTED_NON_DB_REFERENCE",
+      "dependency": "conditional compatibility branch; no Yoast runtime is active",
+      "file": "wp-content/themes/blocksy/inc/options/general/breadcrumbs.php",
+      "reference": "yoast_breadcrumb / Yoast provider"
+    },
+    {
+      "active": true,
+      "classification": "EXPECTED_NON_DB_REFERENCE",
+      "dependency": "conditional compatibility branch; no Yoast runtime is active",
+      "file": "wp-content/themes/blocksy/inc/components/breadcrumbs.php",
+      "reference": "WPSEO_Primary_Term / yoast_breadcrumb"
+    },
+    {
+      "active": true,
+      "classification": "EXPECTED_NON_DB_REFERENCE",
+      "dependency": "generic WordPress capability labels",
+      "file": "wp-content/plugins/duplicate-post/admin-functions.php",
+      "reference": "wpseo_manager / wpseo_editor capability strings"
+    },
+    {
+      "active": true,
+      "classification": "EXPECTED_NON_DB_REFERENCE",
+      "dependency": "generic capability allowlist; not Yoast data access",
+      "file": "wp-content/plugins/sfwd-lms/vendor-prefixed/trustedlogin/client/src/SupportRole.php",
+      "reference": "wpseo_manager / wpseo_editor capability strings"
+    }
+  ],
+  "ambiguous_options": [
+    {
+      "autoload": "yes",
+      "bytes": 0,
+      "option_name": "rewardpoints_userrole_menu_restrictionwpseo_editor",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; wpseo_editor is a capability suffix, not a Yoast-owned option namespace."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 0,
+      "option_name": "rewardpoints_userrole_menu_restrictionwpseo_manager",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; wpseo_manager is a capability suffix, not a Yoast-owned option namespace."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 3,
+      "option_name": "rs_reward_user_role_for_redeem_wpseo_editor",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; role capability suffix only."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 3,
+      "option_name": "rs_reward_user_role_for_redeem_wpseo_manager",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; role capability suffix only."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 3,
+      "option_name": "rs_reward_user_role_wpseo_editor",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; role capability suffix only."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 3,
+      "option_name": "rs_reward_user_role_wpseo_manager",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; role capability suffix only."
+    }
+  ],
+  "dedicated_tables": [],
+  "options_confirmed_yoast": [],
+  "postmeta": [],
+  "preflight": {
+    "database": "mariwork_reco",
+    "db_size_mb": 495.19,
+    "rank_math_version": "1.0.279",
+    "table_prefix": "wp_",
+    "yoast_plugin_active": false,
+    "yoast_plugin_files_present": false
+  },
+  "rank_math_data_counts": {
+    "options": 17,
+    "postmeta_rows": 133,
+    "termmeta_rows": 0
+  },
+  "remaining_trace_classification": {
+    "AMBIGUOUS_RETAINED": 6,
+    "EXPECTED_NON_DB_REFERENCE": 4,
+    "UNEXPECTED_LEFTOVER": 0
+  },
+  "termmeta": [],
+  "transients_confirmed_yoast": [],
+  "usermeta": []
+}

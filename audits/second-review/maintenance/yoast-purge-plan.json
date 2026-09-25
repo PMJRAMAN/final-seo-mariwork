@@ -1,0 +1,71 @@
+{
+  "ambiguous_retained": [
+    {
+      "autoload": "yes",
+      "bytes": 0,
+      "option_name": "rewardpoints_userrole_menu_restrictionwpseo_editor",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; wpseo_editor is a capability suffix, not a Yoast-owned option namespace."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 0,
+      "option_name": "rewardpoints_userrole_menu_restrictionwpseo_manager",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; wpseo_manager is a capability suffix, not a Yoast-owned option namespace."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 3,
+      "option_name": "rs_reward_user_role_for_redeem_wpseo_editor",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; role capability suffix only."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 3,
+      "option_name": "rs_reward_user_role_for_redeem_wpseo_manager",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; role capability suffix only."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 3,
+      "option_name": "rs_reward_user_role_wpseo_editor",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; role capability suffix only."
+    },
+    {
+      "autoload": "yes",
+      "bytes": 3,
+      "option_name": "rs_reward_user_role_wpseo_manager",
+      "ownership_confidence": "SKIP_UNKNOWN",
+      "reason": "Reward Points namespace; role capability suffix only."
+    }
+  ],
+  "database": "mariwork_reco",
+  "decision": "No confirmed Yoast-owned database targets remain after read-only inventory; no DELETE or DROP was executed. Ambiguous rows are retained.",
+  "dedicated_tables_to_drop": [],
+  "expected_row_counts": {
+    "dedicated_tables": 0,
+    "options": 0,
+    "postmeta": 0,
+    "termmeta": 0,
+    "total_confirmed_yoast_rows": 0,
+    "transients": 0,
+    "usermeta": 0
+  },
+  "generated_at": "2026-09-25T08:20:00Z",
+  "option_targets": [],
+  "postmeta_targets": [],
+  "safety": {
+    "all_targets_confirmed_yoast": true,
+    "destructive_sql_operations_required": false,
+    "forbidden_target_references": []
+  },
+  "table_prefix": "wp_",
+  "task": "DB-SEO-001",
+  "termmeta_targets": [],
+  "transient_targets": [],
+  "usermeta_targets": []
+}
