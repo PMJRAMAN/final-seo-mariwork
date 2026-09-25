@@ -501,3 +501,28 @@ Rules:
 - Avoid repetitive site-wide title boilerplate when the page title already carries sufficient brand/context.
 - Do not add keywords unrelated to the actual page purpose.
 - Canonical brand spelling remains governed by DEC-053.
+
+
+## DEC-013 — Article Title / H1 Convention
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** EDITORIAL / ARTICLES
+
+### Accepted target state
+
+Mariwork editorial Articles use natural, reader-facing titles based on the actual subject of each Article rather than a mechanical SEO keyword template.
+
+Default relationship:
+
+`Article H1 = Article SEO <title>`
+
+Rules:
+- Use one clear, descriptive primary H1.
+- By default, the SEO `<title>` uses the approved Article title without an automatic site-wide keyword suffix.
+- Remove the repetitive `- رنگ پارچه ماری ورک` suffix from the default Article title template.
+- Include terms such as `رنگ پارچه` or `ماری ورک` only when they naturally describe the Article's actual subject.
+- Do not mechanically inject keywords, brand terms, dates, “complete guide”, “best”, or similar modifiers merely for SEO.
+- Existing Article titles should be retained when accurate, clear and useful.
+- Rewrite a title only when materially vague, inaccurate, misleading, excessively verbose, or inconsistent with the Article content.
+- Visible title normalization must not trigger URL/slug changes.
+- Potential overlapping/cannibalizing Articles are governed separately by DEC-119.
