@@ -2036,3 +2036,25 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Equivalent Products must not randomly omit CORE/MANDATORY relationships.
 - Historical, inspirational, or broadly related Articles are not automatically Product-page link targets.
 - Reverse Academy/Article → Product/Category rules remain governed by DEC-043 and DEC-044.
+
+
+## DEC-043 — Academy / Lesson to Product / Category Linking Rules
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** ACADEMY / INTERNAL LINKING / COMMERCIAL DESTINATIONS
+
+### Accepted target state
+
+- Academy, Guide and Lesson pages link to a Product or Product Category only when the Product, material, tool, or Product family is actually used, required, or provides a direct useful next step for completing the instruction.
+- Prefer a specific Product destination when the instruction concerns a specific item.
+- Prefer the relevant Product Category when the user reasonably needs to choose among a family of suitable products.
+- Commercial links must remain useful in the instructional context.
+- Do not add generic, unrelated, or sitewide commercial links merely to increase SEO/internal-link volume.
+- Approved relationships remain subject to the DEC-040 classification model and the Internal Link Requirement Matrix.
+
+### Consequences
+
+- Academy-family QA must verify that commercial destinations match the actual instructional need.
+- Product-level links require real product-specific relevance.
+- Category-level links are preferred when the instructional need is category-wide or requires user choice.
+- Article → Product/Category rules remain governed separately by DEC-044.
