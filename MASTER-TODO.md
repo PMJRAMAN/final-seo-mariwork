@@ -2,7 +2,7 @@
 
 **Role:** مرجع اصلی ترتیب اجرا و پوشش کامل پروژه  
 **Framework:** v1.0  
-**Current program:** STORE-FIRST  
+**Current program:** STRATEGY / DECISION PHASE  
 **Rule:** هیچ URL/entity کشف‌شده نباید بدون disposition نهایی باقی بماند.
 
 ## 0. Coverage Contract
@@ -60,6 +60,24 @@ remain unchecked.
 blocker.md` records that the isolated runtime has not passed the no-write/no-
 credential deployment gate. This task used existing repository evidence and
 direct read-only checks; it did not resume autonomous execution.
+
+## 0.2 — Decision-to-Execution Gate
+
+After full-site Audit and ChatGPT Second Review, project work is governed by:
+
+- `strategy/DECISION-BACKLOG.md` — the canonical list of unresolved/accepted target-state decisions.
+- `tasks/EXECUTION-BACKLOG.md` — implementation packages unlocked only from accepted decisions.
+- `docs/DECISION-TO-EXECUTION-GOVERNANCE.md` — process law.
+
+**Important:** this MASTER-TODO remains the authority for complete-site coverage and program ordering, but no checkbox here independently authorizes a Production write.
+
+Before any implementation task:
+- all blocking Decision IDs must be `ACCEPTED`;
+- the linked Execution item must be `READY_FOR_TASK`;
+- exact target state/write scope must be known;
+- required change dossier/canary/rollback/QA gates must exist.
+
+Current strategy work is intentionally collaborative and may span multiple days. Findings and recommendations are converted into decisions first; execution tasks are generated later from the accepted decision set.
 
 ---
 
