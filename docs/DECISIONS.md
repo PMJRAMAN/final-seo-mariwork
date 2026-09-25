@@ -1508,3 +1508,47 @@ Shared Organization/WebSite references may remain when they use the authoritativ
 Rank Math remains the primary schema owner where supported.
 
 Roll out with representative canary pages and rendered JSON-LD regression validation before family-wide application.
+
+
+## DEC-034 — Article Schema Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** MAGAZINE / ARTICLE / STRUCTURED DATA / AUTHORSHIP
+
+### Accepted target state
+
+Mariwork Magazine Articles use `BlogPosting` as the default Article structured-data type.
+
+Do not convert normal Magazine Articles to `NewsArticle`.
+
+Each BlogPosting should use factual page-aligned data:
+- `headline` reflecting the approved Article identity;
+- a representative crawlable Article image;
+- original factual `datePublished`;
+- `dateModified` only for real content modifications;
+- coherent relationships to the canonical `WebPage`, `WebSite` and authoritative Mariwork `Organization` entity.
+
+### Author and publisher
+
+Current Mariwork Articles do not have individual named authors and are written on behalf of Mariwork.
+
+Therefore:
+- `author` must reference the authoritative Mariwork `Organization` entity;
+- `publisher` must reference that same authoritative Mariwork `Organization` entity;
+- do not fabricate, infer, or retain a default `Person` author merely to satisfy schema;
+- remove current Article-derived `Person` author nodes unless a future Article genuinely has an identified individual author;
+- if a future Article has a real individual author, that exception may use `Person` when the visible attribution and entity data genuinely support it.
+
+The Mariwork Organization identity must reuse the authoritative site entity rather than creating a separate Organization per Article.
+
+### Ownership and boundaries
+
+Rank Math remains the primary Article schema owner where supported.
+
+Do not introduce a second independent `BlogPosting` emitter.
+
+Do not automatically add FAQ, HowTo, Video or other schema merely because related elements occur inside an Article.
+
+Exact future author/reviewer/source governance remains under DEC-085.
+
+Rendered structured-data validation is required after rollout.
