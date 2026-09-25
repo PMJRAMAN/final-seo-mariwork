@@ -7,6 +7,21 @@
 **Status:** SECOND_REVIEWED — TARGET-STATE DECISIONS IN PROGRESS
 **Last framework review:** 2026-09-25
 
+## Decision Backlog coverage freeze
+
+Before the Decision Backlog is treated as exhaustive implementation governance, it must pass the P-program coverage freeze:
+
+- P-000 ChatGPT preliminary precheck: recorded.
+- P-001 independent Codex Decision Backlog coverage audit: pending.
+- P-002 ChatGPT review of P-001: pending.
+- P-003/P-004 reconciliation and coverage matrix closure: pending.
+- P-005 Decision Backlog v1 freeze: pending.
+
+Current authoritative Decision Backlog remains usable for discussion, but is **not yet frozen as exhaustive**.
+
+Task: `tasks/P-001-DECISION-BACKLOG-COVERAGE-AUDIT.md`  
+Precheck: `audits/strategy/P-000-CHATGPT-DECISION-BACKLOG-PRECHECK.md`
+
 ## Strategy / Decision Phase — 2026-09-25
 
 The project does not move directly from audit findings to Production.
