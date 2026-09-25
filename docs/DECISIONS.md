@@ -446,3 +446,32 @@ Rules:
 - Include model/size only when it identifies a genuinely distinct Product rather than an ordinary variation.
 - Visible-title normalization must not trigger URL/slug changes.
 - SEO `<title>` behavior is governed separately by DEC-011.
+
+
+## DEC-011 — Product Visible Title / H1 and SEO Title Relationship
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / TITLE TEMPLATE
+
+### Accepted target state
+
+The WooCommerce Product title / visible H1 is the primary source of Product identity.
+
+Default Rank Math Product SEO title template target:
+
+`%title%`
+
+instead of:
+
+`%title% %sep% %sitename%`
+
+Rules:
+- By default, Product SEO `<title>` should match the approved visible Product title/H1.
+- Do not automatically append the site name when the Product title already contains sufficient Product/brand identity.
+- Avoid repetitive family-wide boilerplate such as `Product Name - رنگ پارچه ماری ورک`.
+- A page-specific SEO title may differ only when a concise factual distinction materially improves clarity.
+- Do not use SEO-title exceptions for keyword expansion or artificial brand insertion.
+- Third-party/generic Products must not receive Mariwork branding merely through the SEO-title template.
+- Product title normalization must be completed before the global Rank Math Product title template is changed.
+- Global implementation remains blocked until deferred DEC-008 is resolved.
+- Template rollout requires regression checks for unique, descriptive titles and absence of unintended duplicate branding.
