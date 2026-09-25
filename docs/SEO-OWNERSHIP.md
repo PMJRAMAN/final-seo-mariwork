@@ -133,3 +133,16 @@ Sitewide baseline باید ثبت کند:
 ## Official implementation references
 
 مراجع رسمی Rank Math در `docs/REFERENCES.md` نگهداری می‌شوند و قبل از implementation حساس باید دوباره بررسی شوند.
+
+
+## Accepted exception — HTTP redirect ownership (DEC-067)
+
+HTTP redirects are a deliberate exception to the general Rank Math-first rule.
+
+- **Canonical owner:** Nginx.
+- Existing Mariwork migration and legacy redirects already implemented in Nginx remain there when correct.
+- New SEO/migration redirects should be added to the centralized, documented Nginx redirect layer unless a narrowly documented exception is explicitly approved.
+- Rank Math must not create or maintain a parallel redirect rule for the same source URL.
+- Before changing a redirect, verify the current Nginx rule, source URL, destination, HTTP status, chains/loops and conflicts.
+- A redirect-ownership change requires an explicit architecture decision and migration/regression plan.
+- The project's performance preference for Nginx is an architecture rationale; it must not be represented as a Google ranking requirement.
