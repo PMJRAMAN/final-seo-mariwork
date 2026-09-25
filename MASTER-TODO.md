@@ -543,6 +543,29 @@ baseline → Codex Audit → ChatGPT Review → disposition → implementation �
 
 ---
 
+# P. STRATEGY DECISION COVERAGE / FREEZE
+
+This program validates that the Decision Backlog is complete enough to govern Production implementation.
+
+- [ ] P-001 Independent Codex Decision Backlog coverage audit against the full repository; Production read-only
+- [ ] P-002 ChatGPT independent review of P-001 findings and candidate missing/over-broad decisions
+- [ ] P-003 Reconcile Decision Backlog: add/split/merge/reclassify decisions; preserve stable DEC IDs already referenced
+- [ ] P-004 Build decision-source/dependency coverage matrix with zero unexplained material gaps
+- [ ] P-005 Freeze Decision Backlog v1 for collaborative decision sessions
+- [ ] P-006 Reconcile Execution Backlog against the frozen Decision Backlog
+- [ ] P-007 Confirm every READY_FOR_TASK execution package is unlocked only by ACCEPTED decisions
+
+**Freeze invariant:** before the first broad Production implementation wave, every material current SEO/content/technical choice must either:
+- map to a Decision ID;
+- be an already accepted framework/process rule;
+- be explicitly classified as execution/QA-only rather than a strategy decision; or
+- be intentionally DEFERRED with a documented reason.
+
+No material audit finding, strategy TBD, current site family, technical-control domain, content/media workstream or migration policy may remain outside this classification.
+
+
+---
+
 # Task-writing rule
 
 ChatGPT هنگام نوشتن هر task Codex باید به این TODO استناد کند:
