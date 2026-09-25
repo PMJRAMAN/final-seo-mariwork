@@ -514,3 +514,18 @@ Rules:
 - Shared Organization/WebSite references must point to the authoritative site entities and must not create conflicting duplicates.
 - Rank Math remains the primary schema owner where supported.
 - Use representative canary rollout and rendered JSON-LD regression validation before family-wide application.
+
+
+## DEC-034 — Article Schema Policy
+
+**Status:** ACCEPTED
+
+- Magazine Articles retain `BlogPosting` as the default schema type.
+- Use factual headline, representative crawlable image, original datePublished and meaningful dateModified.
+- Current Mariwork Articles have no individual named authors: `author` is the authoritative Mariwork `Organization`, not a fabricated/default `Person`.
+- `publisher` is the same authoritative Mariwork Organization entity.
+- Remove current Article-derived Person author nodes unless a future Article genuinely has an identified individual author.
+- Reuse the authoritative Organization entity rather than creating per-Article duplicates.
+- Rank Math remains primary schema owner; no duplicate BlogPosting emitter.
+- Do not auto-add unrelated FAQ/HowTo/Video schema.
+- Validate rendered structured data after rollout.
