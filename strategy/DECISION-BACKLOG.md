@@ -219,7 +219,7 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-054 | ALT policy by image role | DISCUSSING | SYS-015; IMAGE-ALT-AUDIT-SUMMARY | Informative vs decorative first; no keyword stuffing |
+| DEC-054 | ALT policy by image role | DISCUSSING | SYS-015; IMAGE-ALT-AUDIT-SUMMARY; owner-approved principle 2026-09-25 | Partial owner-approved principle: ALT policy is role-based, not missing-ALT-count-based. Informative images require concise factual contextual ALT; truly decorative images use empty ALT; do not invent visual facts or keyword-stuff ALT. Family defaults may be strong where image purpose is consistently informative: Store/Product imagery generally defaults to informative, and Academy instructional/explanatory imagery generally defaults to informative, while genuinely decorative UI/ornamental assets remain exceptions. Exact per-family defaults and exceptions remain under discussion before DEC-054 acceptance. |
 | DEC-055 | SUPERSEDED — image sampling belongs to evidence/QA, not target-state strategy | SUPERSEDED | P-002; SR-005 §18 | Sampling remains required operationally; rollout governance is DEC-068 |
 | DEC-056 | Product image/gallery SEO policy | NEEDS_TARGETED_EVIDENCE | Store evidence + MASTER-TODO L | Requires visual/primary-image review |
 | DEC-057 | Article/Academy instructional image policy | NEEDS_TARGETED_EVIDENCE | SYS-010/011 | Visual-purpose review required |
