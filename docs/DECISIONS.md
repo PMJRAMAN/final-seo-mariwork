@@ -348,3 +348,20 @@ Later title/meta/content/schema/internal-link/indexability decisions must preser
 - If they are not operationally needed, cleanup may be handled separately.
 - Do not redirect these URLs to Academy or the current course without a proven semantic replacement.
 - If Mariwork later develops a real multi-course free/paid architecture, reopen the taxonomy strategy through a new decision.
+
+
+## DEC-006 — Durable vs Transitional Taxonomy Architecture
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SITEWIDE / TAXONOMY ARCHITECTURE
+
+### Accepted target state
+
+Mariwork taxonomy architecture is intentionally selective.
+
+- Only taxonomies with a durable, distinct user-facing browse or content role may become public SEO landing pages.
+- Durable Product Categories and useful populated Blog Categories form part of the final site architecture.
+- `pa_volume` remains conditional and is governed separately by DEC-026.
+- Product Tags, Blog Tags, migration-era Product Categories, empty LearnDash categories, and other transitional or empty taxonomies are not durable SEO entities.
+- Transitional or empty taxonomies must not be promoted through sitemap membership, navigation, or SEO content merely because they exist in WordPress.
+- Every taxonomy family requires its own lifecycle and indexability decision before implementation.
