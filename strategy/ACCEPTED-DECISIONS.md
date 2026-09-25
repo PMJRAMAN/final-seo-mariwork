@@ -762,3 +762,15 @@ Rules:
 - A technique or instructional tip does not by itself make Magazine content an Academy item.
 - Magazine may link to Academy as a practical video next step; Academy → Magazine is not mandatory.
 - Editorial product introduction belongs in Magazine; practical video instruction for product use belongs in Academy.
+
+
+## DEC-050 — Product vs Category vs Article Query / Content Role Boundary
+
+**Status:** ACCEPTED
+
+- Product owns specific-product intent.
+- Product Category/landing pages own product-family, browse, and choice intent.
+- Magazine Articles own informational/editorial intent where reading or understanding is primary.
+- Avoid assigning substantially the same primary intent across Product, Category, and Article without deliberate justification.
+- Ambiguous cases require later keyword/SERP research and explicit page ownership.
+- DEC-050 defines role boundaries only; research methodology, ownership mapping, conflict resolution, and implementation remain governed by later decisions.
