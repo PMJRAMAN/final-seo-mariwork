@@ -739,3 +739,15 @@ Rules:
 - Do not invent query-target anchors without supporting evidence.
 - Natural variation is allowed when the destination remains accurately described.
 - Avoid generic anchors when a meaningful descriptive phrase is naturally available.
+
+
+## DEC-048 — Orphan / Underlinked Thresholds and Approved Exceptions
+
+**Status:** ACCEPTED
+
+- Important indexable SEO/IA pages require a meaningful crawlable path from the internal site architecture.
+- Orphaned means no meaningful internal crawl path reaches the page.
+- Underlinked means required family/matrix relationships are missing.
+- Do not define adequate linking with one universal minimum inbound-link count.
+- Utility, noindex, temporary, and deliberately non-search-target pages may be documented exceptions.
+- Broken URLs/404s are a separate issue.
