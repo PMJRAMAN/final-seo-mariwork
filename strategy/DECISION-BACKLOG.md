@@ -155,8 +155,8 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-015 | Product meta-description strategy | DISCUSSING | SR-004 SR-ST-003 | Proposed: explicit factual descriptions; no Yoast reconstruction; prioritize broken/repeated/long descriptions |
-| DEC-016 | Shop metadata strategy | OPEN | SR-004 SR-ST-001; WP-30918 | Decide explicit title/meta source and template behavior for Shop only |
+| DEC-015 | Product meta-description strategy | ACCEPTED | SR-004 SR-ST-003 | Accepted as a general policy: `%excerpt%` is not the final Product meta-description strategy. Product metas must be page-specific, factual, concise, based on verified Product data, avoid generic/history copy, duplicate text, keyword stuffing, unsupported claims, artificial Mariwork branding, and arbitrary fixed character limits. Manual or programmatic generation is allowed if output is accurate, human-readable and meaningfully page-specific. Exact per-product copy is deferred to implementation/content QA; do not restore historical Yoast metadata by default. |
+| DEC-016 | Shop metadata strategy | DISCUSSING | SR-004 SR-ST-001; WP-30918 | Decide explicit title/meta source and template behavior for Shop only |
 | DEC-017 | Static/Core meta-description strategy | PROPOSED | SR-005 §5 | Magazine missing; several pages have weak generic descriptions |
 | DEC-018 | Article meta-description update rule | OPEN | current article output | Decide when to retain, shorten, fact-check or rewrite |
 | DEC-019 | Academy course/lesson meta-description rule | OPEN | current course/lesson output | Decide family template vs page-specific copy |
