@@ -940,3 +940,16 @@ Rules:
 - Verify the current redirect owner before implementation changes.
 - Remaining archive/pagination/feed UNKNOWNs are separate from Lesson mappings and require their own disposition.
 - Do not infer destinations from slug similarity alone.
+
+
+## DEC-066 — Historical Artist URL Disposition Timing
+
+**Status:** ACCEPTED
+
+- Final historical Artist URL disposition is deferred until the new `/artists/` system is public and stable.
+- Review legacy Artist URLs manually after launch.
+- Use 301 only where a genuine verified successor exists; otherwise a proper 404 remains an allowed outcome.
+- Do not precommit unmatched historical Artist URLs to the Artists hub.
+- Do not infer Artist identity from slug/name similarity.
+- This supersedes only the historical-Artist redirect fallback in DEC-028/DEC-052; other Artist architecture decisions remain unchanged.
+- Non-Artist removed-content disposition is separated into DEC-128.
