@@ -2146,3 +2146,24 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - Internal-link QA evaluates anchor relevance and clarity rather than exact-match consistency.
 - Equivalent links may use different natural anchor wording across different source contexts.
 - Keyword/query evidence may inform anchor language but does not create a requirement for repetitive exact-match anchors.
+
+
+## DEC-048 — Orphan / Underlinked Thresholds and Approved Exceptions
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SITEWIDE / INTERNAL LINKING / COVERAGE QA
+
+### Accepted target state
+
+- Important indexable pages with an assigned SEO or information-architecture role must have a meaningful crawlable path from the internal site architecture.
+- A page is considered orphaned when no meaningful internal crawl path reaches it.
+- A page is considered underlinked when required relationships defined for its page family or in the approved internal-link rules/matrix are missing.
+- Do not use a universal minimum inbound-link count as the definition of adequate internal linking.
+- Utility, noindex, temporary, or deliberately non-search-target pages may be documented exceptions.
+- Broken URLs and 404 links are a separate issue from orphan/underlinked coverage.
+
+### Consequences
+
+- Internal-link QA evaluates architectural coverage and required relationships rather than a generic link-count threshold.
+- Missing required family relationships must be corrected or documented as an approved exception.
+- Pages outside the intended search architecture do not require artificial links solely to avoid an orphan label.
