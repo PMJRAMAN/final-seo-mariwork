@@ -206,19 +206,19 @@ Rules:
 
 ## DEC-014 — Academy Course / Lesson Title and H1 Convention
 
-**Status:** ACCEPTED
+**Status:** ACCEPTED — AMENDED 2026-09-25
 
-- Course and Lesson titles describe the actual educational unit naturally.
-- Default: Course H1 = Course SEO `<title>`.
-- Default: Lesson H1 = Lesson SEO `<title>`.
-- Remove repetitive `- رنگ پارچه ماری ورک` suffixes.
-- Include Mariwork only when naturally part of the subject or Course identity.
+- Academy is video-first.
+- Course H1 remains the natural Course name.
+- Course SEO title should explicitly communicate video format where useful; current target example: `راهنماهای یک دقیقه‌ای ماری‌ورک | آموزش‌های ویدیویی`.
+- Lesson H1 remains the natural instructional title.
+- Default Lesson SEO title: `[Lesson H1] | آموزش ویدیویی`.
+- Example: H1 `چاپ سیلک اسکرین` → SEO title `چاپ سیلک اسکرین | آموزش ویدیویی`.
+- Remove the repetitive `- رنگ پارچه ماری ورک` suffix.
+- Include Mariwork only when naturally part of the subject/identity.
 - Preserve sequence numbers only for genuine multi-part instructional series.
-- Retain existing titles when clear and accurate.
-- Rewrite only when materially vague, inaccurate, misleading, excessively verbose, or inconsistent with content.
 - Do not change URLs/slugs solely because titles are normalized.
-- Schema/video naming follows visible Lesson identity; schema ownership/eligibility remains DEC-037/038.
-
+- Video/schema naming remains semantically consistent with the Lesson identity; DEC-037/038 govern schema ownership/eligibility.
 
 ## DEC-015 — Product Meta Description Strategy
 
@@ -282,20 +282,22 @@ Rules:
 - Cannibalization remains DEC-119.
 
 
-## DEC-019 — Academy Course / Lesson Meta Description Rule
+## DEC-019 — Academy Video-First Meta Description Rule
 
-**Status:** REOPENED FOR AMENDMENT — previous acceptance is not the current final target
+**Status:** ACCEPTED — AMENDED 2026-09-25
 
+- Every current Academy Lesson contains a primary video.
+- Academy = practical/demo/video-first intent.
+- Magazine = explanatory/reference/text-first intent.
 - Course/Lesson metas are page-specific.
-- Course metas summarize educational scope/purpose.
-- Lesson metas describe the specific technique/task/concept/learning outcome.
-- Classify existing metas as KEEP / REFINE / REWRITE / FACT-CHECK REQUIRED.
-- Resolve duplicate and mismatched metas.
-- Do not use a shared Academy family template or raw `%excerpt%` as the final strategy.
-- Avoid mechanical brand/keyword injection and fixed 150/160-character rules.
-- Verify technical/safety/performance claims before approval.
-- Visible content remains DEC-024; video/schema remains separate.
-
+- Lesson metas should explicitly communicate that the page is a video lesson and describe that Lesson's specific technique/task/concept/learning outcome.
+- Visible context near the primary video should also make the video format clear.
+- Classify existing metas as `KEEP`, `REFINE`, `REWRITE`, or `FACT-CHECK REQUIRED`.
+- Resolve duplicate and mismatched metadata.
+- Do not use raw `%excerpt%`, generic family metadata, mechanical brand/keyword injection, or fixed character limits.
+- Metadata alone does not solve substantial Academy↔Magazine overlap.
+- DEC-024 preserves the video-first visible-content architecture.
+- DEC-119 governs overlap/cannibalization and any differentiate/merge/redirect decision.
 
 ## DEC-020 — Product-Page Visible Content Architecture
 
@@ -328,5 +330,3 @@ Rules:
 - Do not falsely brand third-party tools as Mariwork.
 - DEC-121–124 may later inform emphasis without artificial duplication.
 
-
-> DEC-019 amendment note (2026-09-25): Every Academy Lesson is video-first. The owner requires a durable Academy↔Magazine intent boundary. Revised wording is under discussion; do not treat the previous DEC-019 target as implementation-ready.
