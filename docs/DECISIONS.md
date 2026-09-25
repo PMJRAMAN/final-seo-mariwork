@@ -1933,3 +1933,58 @@ Before broad rollout:
 8. verify Search Console video indexing behavior where available.
 
 Video sitemap inclusion is limited to verified eligible watch pages and is finalized during Video SEO implementation.
+
+
+## DEC-039 — Breadcrumb Structured-Data Policy Across Store, Academy and Content
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** SITEWIDE / STRUCTURED DATA / INFORMATION ARCHITECTURE
+
+### Decision
+
+Breadcrumbs are applied only where a meaningful site hierarchy exists.
+
+Breadcrumb trails represent the typical user/navigation hierarchy rather than mechanically mirroring URL paths.
+
+Store hierarchy:
+- Shop → durable Product Category → Product.
+- Child Set categories preserve their approved category hierarchy.
+- Approved volume landing pages belong under the Store hierarchy; exact volume-page naming remains governed by DEC-116.
+
+Magazine hierarchy:
+- Magazine → durable primary Blog Category → Article.
+- The primary category must be real, durable and deliberate rather than a tag or legacy category.
+
+Current Academy guide hierarchy:
+- Academy → One-Minute Guides collection → individual Guide.
+- This must remain aligned with DEC-037.
+- The current guide collection must not be represented as Course/Lesson hierarchy.
+
+Future genuine Course hierarchy:
+- Academy → genuine Course → Lesson.
+
+Generic Static/Core pages, Homepage and utility/noindex pages do not receive artificial breadcrumbs solely for structured-data coverage.
+
+Pages with multiple possible parents must use one deliberate, stable primary hierarchy.
+
+Visible breadcrumb UI and structured-data hierarchy must agree.
+
+Duplicate breadcrumb emitters are acceptable only temporarily when they express the exact same factual trail. Conflicting duplicate trails must be eliminated and one owner established.
+
+### Evidence
+
+Current snapshot evidence showed BreadcrumbList coverage was inconsistent across page families, with Store/Product areas more consistently represented than Guides and many Articles. The accepted architecture follows the durable site hierarchy and the semantic distinction established in DEC-037.
+
+### Consequences
+
+- Store, Magazine, current Guide, and future Course templates require family-specific breadcrumb QA.
+- Product pages with multiple categories require a stable primary commercial hierarchy rather than arbitrary category selection.
+- Volume landing-page breadcrumb labels remain dependent on DEC-116.
+- Representative templates must be validated in rendered output and Rich Results testing.
+- Breadcrumb schema must not contradict visible navigation terminology.
+
+### Exceptions
+
+- Homepage has no breadcrumb requirement.
+- Generic static/support pages without meaningful depth do not require artificial breadcrumbs.
+- Utility/noindex endpoints such as Login, Cart, Checkout, My Account and Fast Buy are not breadcrumb SEO targets.
