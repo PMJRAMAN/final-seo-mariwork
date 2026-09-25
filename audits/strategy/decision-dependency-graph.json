@@ -1,0 +1,1041 @@
+{
+  "artifact": "P-001 decision dependency graph",
+  "generated_at": "2026-09-25",
+  "production_writes": 0,
+  "decision_count": 73,
+  "nodes": [
+    {
+      "decision_id": "DEC-001",
+      "title": "Approve durable site-family roles: Homepage, Shop, Product Categories, Products, Academy, Magazine/Articles, durable Blog Categories, Static trust/support",
+      "current_status": "PROPOSED",
+      "prerequisites": [],
+      "family": "site roles / taxonomy",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-002",
+        "DEC-003",
+        "DEC-004",
+        "DEC-005",
+        "DEC-006",
+        "DEC-012",
+        "DEC-013",
+        "DEC-014",
+        "DEC-022",
+        "DEC-032",
+        "DEC-039",
+        "DEC-040",
+        "DEC-050",
+        "DEC-051",
+        "DEC-052",
+        "DEC-053",
+        "DEC-054",
+        "DEC-068",
+        "DEC-070"
+      ]
+    },
+    {
+      "decision_id": "DEC-002",
+      "title": "Decide final Homepage role and whether current title/H1/meta remain the baseline",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "site roles / taxonomy",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-003",
+      "title": "Decide Shop target state: H1, visible role, title/meta and relationship to Product Categories",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "site roles / taxonomy",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-007",
+        "DEC-008",
+        "DEC-009",
+        "DEC-010",
+        "DEC-015",
+        "DEC-016",
+        "DEC-059"
+      ]
+    },
+    {
+      "decision_id": "DEC-004",
+      "title": "Decide utility-page policy for Login, Fast Buy, Cart, Checkout and My Account",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "site roles / taxonomy",
+      "cross_family": false,
+      "dependency_issue": "Too broad across five system endpoint families; see CAND-028.",
+      "unlocks": [
+        "DEC-062"
+      ]
+    },
+    {
+      "decision_id": "DEC-005",
+      "title": "Decide public role of current LearnDash Course Categories currently returning 404",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "site roles / taxonomy",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-006",
+      "title": "Decide durable vs transitional taxonomy architecture at site level",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "site roles / taxonomy",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-016",
+        "DEC-021",
+        "DEC-025",
+        "DEC-026",
+        "DEC-027",
+        "DEC-028",
+        "DEC-029",
+        "DEC-031",
+        "DEC-040",
+        "DEC-059",
+        "DEC-062"
+      ]
+    },
+    {
+      "decision_id": "DEC-007",
+      "title": "Product Title Naming Standard — fabric colors",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-003"
+      ],
+      "family": "titles and naming",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-011",
+        "DEC-020"
+      ]
+    },
+    {
+      "decision_id": "DEC-008",
+      "title": "Product Title Naming Standard — sets/bundles",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-003"
+      ],
+      "family": "titles and naming",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-011",
+        "DEC-020",
+        "DEC-036"
+      ]
+    },
+    {
+      "decision_id": "DEC-009",
+      "title": "Product Title Naming Standard — mediums/additives",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-003"
+      ],
+      "family": "titles and naming",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-011",
+        "DEC-020"
+      ]
+    },
+    {
+      "decision_id": "DEC-010",
+      "title": "Product Title Naming Standard — tools/accessories",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-003"
+      ],
+      "family": "titles and naming",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-011",
+        "DEC-020"
+      ]
+    },
+    {
+      "decision_id": "DEC-011",
+      "title": "Decide relationship between visible Product H1/title and Rank Math SEO title template",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-007",
+        "DEC-008",
+        "DEC-009",
+        "DEC-010"
+      ],
+      "family": "titles and naming",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-035"
+      ]
+    },
+    {
+      "decision_id": "DEC-012",
+      "title": "Static/Core title and H1 policy",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "titles and naming",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-017",
+        "DEC-033"
+      ]
+    },
+    {
+      "decision_id": "DEC-013",
+      "title": "Article title/H1 conventions",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "titles and naming",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-018",
+        "DEC-023",
+        "DEC-034",
+        "DEC-049",
+        "DEC-050"
+      ]
+    },
+    {
+      "decision_id": "DEC-014",
+      "title": "Academy course/lesson title/H1 conventions",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "titles and naming",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-019",
+        "DEC-024",
+        "DEC-037",
+        "DEC-049",
+        "DEC-050"
+      ]
+    },
+    {
+      "decision_id": "DEC-015",
+      "title": "Product meta-description strategy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-003"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-016",
+      "title": "Product Category / Shop / volume landing meta strategy",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-003",
+        "DEC-006"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": true,
+      "dependency_issue": "Combines Shop, Product Category and pa_volume metadata; see CAND-029.",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-017",
+      "title": "Static/Core meta-description strategy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-012"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-018",
+      "title": "Article meta-description update rule",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-013"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-019",
+      "title": "Academy course/lesson meta-description rule",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-014"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-020",
+      "title": "Product-page visible content architecture by family",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-007",
+        "DEC-008",
+        "DEC-009",
+        "DEC-010"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-021",
+      "title": "Product Category visible intro/content policy",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-006"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-022",
+      "title": "Static/trust page content policy",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-023",
+      "title": "Article update/freshness/fact-check policy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-013"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-024",
+      "title": "Academy lesson/course content standard",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-014"
+      ],
+      "family": "metadata and visible content",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-025",
+      "title": "Durable Product Category set and sitemap/index policy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-006"
+      ],
+      "family": "taxonomies / sitemap / lifecycle",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-030"
+      ]
+    },
+    {
+      "decision_id": "DEC-026",
+      "title": "`pa_volume` 30/60/250 archive role, indexability and sitemap policy",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-006"
+      ],
+      "family": "taxonomies / sitemap / lifecycle",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-030"
+      ]
+    },
+    {
+      "decision_id": "DEC-027",
+      "title": "Product Tags decommission policy and mapping rule",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-006"
+      ],
+      "family": "taxonomies / sitemap / lifecycle",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-028",
+      "title": "Blog Categories lifecycle",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-006"
+      ],
+      "family": "taxonomies / sitemap / lifecycle",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-030",
+        "DEC-051"
+      ]
+    },
+    {
+      "decision_id": "DEC-029",
+      "title": "Blog Tags decommission policy and mapping rule",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-006"
+      ],
+      "family": "taxonomies / sitemap / lifecycle",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-030",
+      "title": "Sitewide sitemap membership policy by family",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-025",
+        "DEC-026",
+        "DEC-028"
+      ],
+      "family": "taxonomies / sitemap / lifecycle",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-031",
+      "title": "Attachment/media URL public/index policy",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-006"
+      ],
+      "family": "taxonomies / sitemap / lifecycle",
+      "cross_family": false,
+      "dependency_issue": "Attachment count/current route evidence remains incomplete.",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-032",
+      "title": "Homepage Organization/WebSite/WebPage schema target",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "structured data / technical ownership",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-033",
+      "title": "Static/Core WordPress Page schema policy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-012"
+      ],
+      "family": "structured data / technical ownership",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-034",
+      "title": "Article schema policy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-013"
+      ],
+      "family": "structured data / technical ownership",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-035",
+      "title": "Product variation ProductGroup/variant schema architecture",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-011"
+      ],
+      "family": "structured data / technical ownership",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-072"
+      ]
+    },
+    {
+      "decision_id": "DEC-036",
+      "title": "Bundle/set schema and visible component representation",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-008"
+      ],
+      "family": "structured data / technical ownership",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-037",
+      "title": "Academy/LearnDash schema owner and canary",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-014"
+      ],
+      "family": "structured data / technical ownership",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-038"
+      ]
+    },
+    {
+      "decision_id": "DEC-038",
+      "title": "VideoObject eligibility/ownership policy for lessons and other videos",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-037"
+      ],
+      "family": "structured data / technical ownership",
+      "cross_family": false,
+      "dependency_issue": "VideoObject ownership overlaps DEC-058; see CAND-037.",
+      "unlocks": [
+        "DEC-058"
+      ]
+    },
+    {
+      "decision_id": "DEC-039",
+      "title": "Breadcrumb structured-data policy across Store/Academy/content",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "structured data / technical ownership",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-040",
+      "title": "Approve CORE_MANDATORY / FAMILY_SPECIFIC / CONTEXTUAL_OPTIONAL model",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-001",
+        "DEC-006"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-041",
+        "DEC-042",
+        "DEC-043",
+        "DEC-044",
+        "DEC-045",
+        "DEC-046",
+        "DEC-047",
+        "DEC-048",
+        "DEC-070"
+      ]
+    },
+    {
+      "decision_id": "DEC-041",
+      "title": "Exact mandatory parent/hub links by family",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-040"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-042",
+      "title": "Product → Academy/Article rules",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-040",
+        "DEC-050"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-043",
+      "title": "Academy/Lesson → Product/Category rules",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-040",
+        "DEC-049"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-044",
+      "title": "Article → Product/Category rules",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-040",
+        "DEC-050"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-045",
+      "title": "Article → Article / Article → Academy relationship",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-040",
+        "DEC-049"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-046",
+      "title": "Category → education/reference links",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-040",
+        "DEC-050"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-047",
+      "title": "Anchor-text policy",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-040"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-048",
+      "title": "Orphan/underlinked thresholds and approved exceptions",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-040"
+      ],
+      "family": "internal links",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-049",
+      "title": "Article vs Academy intent boundary",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-013",
+        "DEC-014"
+      ],
+      "family": "content boundaries / brand",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-043",
+        "DEC-045",
+        "DEC-071"
+      ]
+    },
+    {
+      "decision_id": "DEC-050",
+      "title": "Product vs Category vs Article query/content role boundary",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001",
+        "DEC-013",
+        "DEC-014"
+      ],
+      "family": "content boundaries / brand",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-042",
+        "DEC-044",
+        "DEC-046",
+        "DEC-071"
+      ]
+    },
+    {
+      "decision_id": "DEC-051",
+      "title": "Magazine hub and Blog Category hierarchy",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001",
+        "DEC-028"
+      ],
+      "family": "content boundaries / brand",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-052",
+      "title": "History / Artists content strategy",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "content boundaries / brand",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-053",
+      "title": "Brand/trust content and canonical Mariwork facts",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "content boundaries / brand",
+      "cross_family": true,
+      "dependency_issue": "Brand facts, trust content, schema and branded search are bundled; see CAND-030.",
+      "unlocks": [
+        "DEC-073"
+      ]
+    },
+    {
+      "decision_id": "DEC-054",
+      "title": "ALT policy by image role",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "images / video",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-055",
+        "DEC-056",
+        "DEC-057",
+        "DEC-058"
+      ]
+    },
+    {
+      "decision_id": "DEC-055",
+      "title": "Family-level image sampling and rollout method",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-054"
+      ],
+      "family": "images / video",
+      "cross_family": false,
+      "dependency_issue": "Sampling is evidence/QA mixed with rollout; see CAND-031.",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-056",
+      "title": "Product image/gallery SEO policy",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-054"
+      ],
+      "family": "images / video",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-057",
+      "title": "Article/Academy instructional image policy",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-054"
+      ],
+      "family": "images / video",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-058",
+      "title": "Video inventory, transcript/summary, thumbnail and host-page policy",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-038",
+        "DEC-054"
+      ],
+      "family": "images / video",
+      "cross_family": true,
+      "dependency_issue": "Too broad and overlaps DEC-038; see CAND-032/CAND-037.",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-059",
+      "title": "Store facets/sort/display parameter policy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-003",
+        "DEC-006"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-060",
+        "DEC-061"
+      ]
+    },
+    {
+      "decision_id": "DEC-060",
+      "title": "Shop pagination and legacy `product-page` policy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-059"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-061",
+      "title": "Product search URL policy",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-059"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": false,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-062",
+      "title": "Author/date/feed/search/404 family policies",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-004",
+        "DEC-006"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": true,
+      "dependency_issue": "Five system/archive policies are bundled; see CAND-033.",
+      "unlocks": [
+        "DEC-063"
+      ]
+    },
+    {
+      "decision_id": "DEC-063",
+      "title": "Legacy URL prioritization rule",
+      "current_status": "PROPOSED",
+      "prerequisites": [
+        "DEC-062"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-064",
+        "DEC-065",
+        "DEC-066",
+        "DEC-067"
+      ]
+    },
+    {
+      "decision_id": "DEC-064",
+      "title": "Legacy product-volume mapping disposition",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-063"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": false,
+      "dependency_issue": "68 partial and 14 unknown mappings remain targeted evidence.",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-065",
+      "title": "Historical Education → Academy mappings",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-063"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": false,
+      "dependency_issue": "36 partial and 5 unknown Education mappings remain targeted evidence.",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-066",
+      "title": "Historical Artist/other removed-content URL disposition",
+      "current_status": "NEEDS_TARGETED_EVIDENCE",
+      "prerequisites": [
+        "DEC-063"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": false,
+      "dependency_issue": "Artist/removed-content identity remains unresolved; no slug inference.",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-067",
+      "title": "Redirect technical owner and implementation path",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-063"
+      ],
+      "family": "system URLs / migration",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-068",
+      "title": "Canary size and rollout rules by change class",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001"
+      ],
+      "family": "measurement / deferred programs",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-069",
+        "DEC-070"
+      ]
+    },
+    {
+      "decision_id": "DEC-069",
+      "title": "Monitoring windows and success metrics",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-068"
+      ],
+      "family": "measurement / deferred programs",
+      "cross_family": true,
+      "dependency_issue": "Cadence, metrics, interpretation and rollback are bundled; see CAND-034.",
+      "unlocks": [
+        "DEC-070"
+      ]
+    },
+    {
+      "decision_id": "DEC-070",
+      "title": "Strategy Lock scope for first implementation wave",
+      "current_status": "OPEN",
+      "prerequisites": [
+        "DEC-001",
+        "DEC-040",
+        "DEC-068",
+        "DEC-069"
+      ],
+      "family": "measurement / deferred programs",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": [
+        "DEC-071",
+        "DEC-072",
+        "DEC-073"
+      ]
+    },
+    {
+      "decision_id": "DEC-071",
+      "title": "External PR / advertorial strategy",
+      "current_status": "DEFERRED",
+      "prerequisites": [
+        "DEC-049",
+        "DEC-050",
+        "DEC-070"
+      ],
+      "family": "measurement / deferred programs",
+      "cross_family": true,
+      "dependency_issue": "",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-072",
+      "title": "Merchant Center / product feed program",
+      "current_status": "DEFERRED",
+      "prerequisites": [
+        "DEC-035",
+        "DEC-070"
+      ],
+      "family": "measurement / deferred programs",
+      "cross_family": true,
+      "dependency_issue": "Merchant Center and feed architecture are bundled; see CAND-035.",
+      "unlocks": []
+    },
+    {
+      "decision_id": "DEC-073",
+      "title": "Reviews/social-proof program",
+      "current_status": "DEFERRED",
+      "prerequisites": [
+        "DEC-053",
+        "DEC-070"
+      ],
+      "family": "measurement / deferred programs",
+      "cross_family": true,
+      "dependency_issue": "Review availability, collection/display and schema are bundled; see CAND-036.",
+      "unlocks": []
+    }
+  ]
+}

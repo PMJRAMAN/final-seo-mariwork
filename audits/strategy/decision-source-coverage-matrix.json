@@ -1,0 +1,2517 @@
+{
+  "artifact": "P-001 decision source coverage matrix",
+  "generated_at": "2026-09-25",
+  "framework_version": "v1.0",
+  "mode": "REPOSITORY AUDIT / PRODUCTION READ-ONLY",
+  "production_writes": 0,
+  "decision_count": 73,
+  "current_decision_status_counts": {
+    "OPEN": 32,
+    "PROPOSED": 27,
+    "NEEDS_TARGETED_EVIDENCE": 11,
+    "DEFERRED": 3,
+    "ACCEPTED": 0
+  },
+  "summary": {
+    "row_count": 173,
+    "classification_counts": {
+      "EVIDENCE_COLLECTION_ONLY": 1,
+      "COVERED_BY_ACCEPTED_RULE": 15,
+      "COVERED_BY_UMBRELLA_DECISION": 46,
+      "MISSING_DECISION": 31,
+      "COVERED_EXACT": 52,
+      "EXECUTION_ONLY": 1,
+      "QA_ONLY": 3,
+      "DECISION_TOO_BROAD": 18,
+      "INTENTIONALLY_DEFERRED": 3,
+      "HISTORICAL_SUPERSEDED": 3
+    },
+    "source_type_counts": {
+      "MASTER_TODO": 31,
+      "SYS_FINDING": 18,
+      "SECOND_REVIEW": 30,
+      "TECH_SPEC": 16,
+      "STRATEGY": 20,
+      "FAMILY": 28,
+      "OTHER": 30
+    }
+  },
+  "rows": [
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "A-009/A-009B",
+      "topic": "Autonomous runner deployment and low-consumption orchestration",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "EVIDENCE_COLLECTION_ONLY",
+      "reason": "Operational evidence/deployment gate, not a SEO target-state decision.",
+      "materiality": "P2",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "A-010–A-017",
+      "topic": "Inventory, technical baseline, ownership and GSC evidence",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-030",
+        "DEC-059",
+        "DEC-062"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Baseline/evidence collection is governed by the workflow and feeds the relevant family decisions.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "A-018/A-019",
+      "topic": "Query/intent map and content architecture",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-001",
+        "DEC-049",
+        "DEC-050"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Initial maps are candidates; target roles/boundaries remain decision gates and Page→Query is not proven.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "A-020",
+      "topic": "Systemic findings registry",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Findings are evidence and governance inputs, not independent target states.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B0-002/B7",
+      "topic": "Product/category/volume sitemap membership",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-025",
+        "DEC-026",
+        "DEC-030"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Family and sitewide sitemap decisions are both represented.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B0-005/B8-008",
+      "topic": "Product attribute archive inventory and disposition",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-026"
+      ],
+      "classification": "MISSING_DECISION",
+      "reason": "Attribute archive policy is not explicit beyond pa_volume; inventory is incomplete for a future implementation gate.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B0-010",
+      "topic": "Variant URL architecture",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-035",
+        "DEC-059"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Variant schema/preselection and parameter policy cover the target-state choice.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B0-012/B8/E0 migrations",
+      "topic": "Legacy product/tag URL mappings",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-027",
+        "DEC-029",
+        "DEC-063",
+        "DEC-064",
+        "DEC-065",
+        "DEC-066",
+        "DEC-067"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Family migration decisions and technical owner are represented; mappings remain targeted evidence.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B0-018/B0-020",
+      "topic": "Store mandatory-link coverage and approval",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-040",
+        "DEC-041",
+        "DEC-048"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Link classes, destinations, thresholds and approval gate exist; exact targets remain open.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B0-022/B0-023",
+      "topic": "Product title naming standard and brand-token consistency",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-007",
+        "DEC-008",
+        "DEC-009",
+        "DEC-010",
+        "DEC-011"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Four family standards plus the Rank Math relationship are represented.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B0-024/B0-025",
+      "topic": "Product-title normalization and regression",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "EXECUTION_ONLY",
+      "reason": "Write and regression work must follow accepted naming decisions; no new strategy ID required.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B1–B6",
+      "topic": "Product pilot, family audits, content, schema and QA",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-007",
+        "DEC-011",
+        "DEC-015",
+        "DEC-020",
+        "DEC-035",
+        "DEC-068"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Implementation/QA packages depend on family target states; no bulk write is authorized.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B8-001–B8-007/E0-007–E0-012",
+      "topic": "Tag inventory, mapping, migration and follow-up QA",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-027",
+        "DEC-029",
+        "DEC-063",
+        "DEC-067"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Family directions and migration ownership exist; individual mappings are execution/evidence.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B9",
+      "topic": "Store facets, filters and parameters",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-059",
+        "DEC-060",
+        "DEC-061"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "The current nine parameter families and variant exception are represented.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "B10",
+      "topic": "Store final regression",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-069"
+      ],
+      "classification": "QA_ONLY",
+      "reason": "Regression checks are QA, with monitoring interpretation separately gated.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "C",
+      "topic": "Homepage role, schema, content, links and monitoring",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-001",
+        "DEC-002",
+        "DEC-032",
+        "DEC-040",
+        "DEC-069"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Homepage direction is represented; brand/query/image details need candidate decisions.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "D",
+      "topic": "Static/core page roles, metadata, schema and utility exceptions",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-012",
+        "DEC-017",
+        "DEC-022",
+        "DEC-033",
+        "DEC-004"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Static policy exists but DEC-004/other broad items need exceptions and FAQ/location child policies.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "E",
+      "topic": "Article/category/tag architecture and article lifecycle",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-013",
+        "DEC-018",
+        "DEC-023",
+        "DEC-028",
+        "DEC-029",
+        "DEC-034",
+        "DEC-049"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Article role/schema/freshness and taxonomy lifecycle are mapped; provenance/CTA/image gaps remain.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "F",
+      "topic": "Academy/course/lesson hierarchy, content and schema",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-014",
+        "DEC-019",
+        "DEC-024",
+        "DEC-037",
+        "DEC-038",
+        "DEC-049"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Hierarchy and canary are represented; LearnDash ownership and video facts remain targeted.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "G",
+      "topic": "Artists/history/custom content",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-052",
+        "DEC-063",
+        "DEC-066"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Historical strategy and source-level migration rules exist; current identity is not inferred.",
+      "materiality": "P2",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "H",
+      "topic": "Taxonomies, archives and system URL spaces",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-004",
+        "DEC-005",
+        "DEC-006",
+        "DEC-031",
+        "DEC-062"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Coverage exists but system families are bundled and author/date routes remain targeted evidence.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "I-002/I-012",
+      "topic": "Entity dispositions and cannibalization",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-001",
+        "DEC-049",
+        "DEC-050",
+        "DEC-063"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Disposition/overlap decisions are represented; QA is not approval and Page→Query remains unavailable.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "I-003–I-016",
+      "topic": "Final technical/content/link/schema regression",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-030",
+        "DEC-039",
+        "DEC-068",
+        "DEC-069"
+      ],
+      "classification": "QA_ONLY",
+      "reason": "These are validation gates, not individual target decisions, except where policy gaps are identified in this audit.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "I-018–I-020",
+      "topic": "Image/video/Brand regression",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-038",
+        "DEC-054",
+        "DEC-058",
+        "DEC-053"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Regression scope is present but target rules are not fully atomic.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "J-001–J-009",
+      "topic": "Continuous monitoring and maintenance",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-069"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Monitoring is a real policy but cadence, interpretation and maintenance triggers are combined.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "K",
+      "topic": "External PR/advertorial workstream",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-071"
+      ],
+      "classification": "INTENTIONALLY_DEFERRED",
+      "reason": "Strategy explicitly starts after internal architecture stabilizes.",
+      "materiality": "P2",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "L",
+      "topic": "Visual/image/multimodal workstream",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-054",
+        "DEC-055",
+        "DEC-056",
+        "DEC-057"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "ALT/review exists; filename, gallery, context and delivery children are missing.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "M",
+      "topic": "Video SEO workstream",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-038",
+        "DEC-058"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "DEC-058 is too broad and overlaps the VideoObject decision.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "N",
+      "topic": "Brand/entity workstream",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-032",
+        "DEC-053"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Brand strategy is material but facts, naming, branded landing and off-site evidence are bundled.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "O",
+      "topic": "Merchant/feed/reviews expansion reviews",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-072",
+        "DEC-073"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Deferred umbrellas are acceptable only until program opening; child decisions are required before implementation.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "MASTER_TODO",
+      "source_ref": "P-001/P-002/P-003/P-004/P-005",
+      "topic": "Decision coverage and freeze program",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "This audit is P-001; P-002/P-003/P-004/P-005 remain later governance gates.",
+      "materiality": "P1",
+      "notes": "See proposed candidates where classification is MISSING_DECISION or DECISION_TOO_BROAD."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-001",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-032",
+        "DEC-033",
+        "DEC-035",
+        "DEC-037",
+        "DEC-067"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Current Store Rank Math evidence supersedes the stale broad unknown; redirect ownership remains separate.",
+      "materiality": "P1",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-002",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-027",
+        "DEC-029",
+        "DEC-063",
+        "DEC-067"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Product and Blog Tags are split by family and kept at migration-policy level.",
+      "materiality": "P1",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-003",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-063",
+        "DEC-064",
+        "DEC-065",
+        "DEC-066",
+        "DEC-067"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Source-level migration disposition is represented; identity remains unresolved where evidence is partial.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-004",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-012",
+        "DEC-013",
+        "DEC-014",
+        "DEC-015",
+        "DEC-017",
+        "DEC-018",
+        "DEC-019",
+        "DEC-033",
+        "DEC-034",
+        "DEC-037"
+      ],
+      "classification": "HISTORICAL_SUPERSEDED",
+      "reason": "Broad parser gap is superseded by current family evidence; specific target decisions remain.",
+      "materiality": "P1",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-005",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-059",
+        "DEC-060",
+        "DEC-061"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current Store parameter evidence maps to family policies.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-006",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-032",
+        "DEC-033",
+        "DEC-035",
+        "DEC-037",
+        "DEC-067"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Single-owner governance is accepted; current Store evidence resolves the stale broad risk.",
+      "materiality": "P1",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-007",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-049",
+        "DEC-050"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "The no-false-attribution rule is accepted; missing joined evidence is not a target-state decision.",
+      "materiality": "P1",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-008",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-007",
+        "DEC-008",
+        "DEC-009",
+        "DEC-010",
+        "DEC-040",
+        "DEC-041",
+        "DEC-042",
+        "DEC-043",
+        "DEC-044",
+        "DEC-045",
+        "DEC-046",
+        "DEC-047",
+        "DEC-048"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Naming and link architecture are represented, pending approval and exact destinations.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-009",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-025",
+        "DEC-030"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Family and sitewide sitemap/index decisions are present; current evidence is still an approval gate.",
+      "materiality": "P1",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-010",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-054",
+        "DEC-057"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Article ALT candidate is covered by role policy and family visual review.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-011",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-054",
+        "DEC-057"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Academy ALT candidate is covered by role policy and family visual review.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-012",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-028"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Empty-category lifecycle is explicitly a family decision.",
+      "materiality": "P1",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-013",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-004"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "System policy exists but the five endpoint families require explicit exceptions/splitting.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-014",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-031",
+        "DEC-059",
+        "DEC-060",
+        "DEC-061",
+        "DEC-062"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Bounded URL-space evidence is a process limitation with targeted policy rows.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-015",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-054",
+        "DEC-055",
+        "DEC-056",
+        "DEC-057"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "ALT and review are represented; sampling/rollout and missing image children remain.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-016",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-033"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Generic Page schema correction has a dedicated policy and canary gate.",
+      "materiality": "P1",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-017",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-037",
+        "DEC-038"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "LearnDash owner and VideoObject eligibility are represented; exact canary facts remain targeted.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SYS_FINDING",
+      "source_ref": "SYS-018",
+      "topic": "Systemic finding classification",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "HISTORICAL_SUPERSEDED",
+      "reason": "Documentation bookkeeping correction is not a new SEO target decision.",
+      "materiality": "P2",
+      "notes": "No Production change implied."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-001",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-003",
+        "DEC-016"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-002",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-007",
+        "DEC-008",
+        "DEC-009",
+        "DEC-010",
+        "DEC-011"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-003",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-015"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-004",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-035"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-005",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-036"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-006",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-016",
+        "DEC-025",
+        "DEC-030"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-007",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-016",
+        "DEC-026",
+        "DEC-030"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-008",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-059",
+        "DEC-060",
+        "DEC-061"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-009",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-040",
+        "DEC-042",
+        "DEC-043",
+        "DEC-044",
+        "DEC-046",
+        "DEC-047"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-010",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-027",
+        "DEC-029"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-ST-011",
+      "topic": "SR-004 Store target-state recommendation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-063",
+        "DEC-064",
+        "DEC-067"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Store recommendation has a target-state decision or explicit evidence/approval gate.",
+      "materiality": "P1",
+      "notes": "No Store discovery was repeated."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §4 Homepage",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-001",
+        "DEC-002",
+        "DEC-032"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §5 Static/Core",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-012",
+        "DEC-017",
+        "DEC-022",
+        "DEC-033"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §6 System commerce",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-004"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §7 Articles",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-013",
+        "DEC-018",
+        "DEC-023",
+        "DEC-034"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §8 Blog Categories",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-028"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §9 Blog Tags",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-029"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §10 Academy",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-014",
+        "DEC-019",
+        "DEC-024",
+        "DEC-037",
+        "DEC-038",
+        "DEC-049"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §11 LearnDash categories",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-005"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §12 Product Categories",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-025"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §13 pa_volume",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-026"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §14 Product Tags",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-027"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §15 Store",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-003",
+        "DEC-007",
+        "DEC-015",
+        "DEC-035",
+        "DEC-036"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §16 Facets",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-059",
+        "DEC-060",
+        "DEC-061"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §17 Links",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-040",
+        "DEC-041",
+        "DEC-042",
+        "DEC-043",
+        "DEC-044",
+        "DEC-045",
+        "DEC-046",
+        "DEC-047",
+        "DEC-048"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §18 Images",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-054",
+        "DEC-055",
+        "DEC-056",
+        "DEC-057"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 §19 Legacy",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-063",
+        "DEC-064",
+        "DEC-065",
+        "DEC-066",
+        "DEC-067"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 SYS-016",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-033"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 SYS-017",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-037",
+        "DEC-038"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "SECOND_REVIEW",
+      "source_ref": "SR-005 SYS-018",
+      "topic": "SR-005 section/target-state classification",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "HISTORICAL_SUPERSEDED",
+      "reason": "Material recommendation is mapped; broad sections retain explicit child gaps or historical correction.",
+      "materiality": "P1",
+      "notes": "Human approval remains pending."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "A",
+      "topic": "robots.txt/meta robots/X-Robots/blocked-indexable",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-004",
+        "DEC-059",
+        "DEC-062"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "A",
+      "topic": "preferred host/protocol and URL normalization",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P1",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "A/E",
+      "topic": "canonical architecture and duplicate URL targets",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P1",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "A",
+      "topic": "redirects, 4xx/5xx and soft-404",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-062",
+        "DEC-063",
+        "DEC-067"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "B",
+      "topic": "sitemap membership and lastmod",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-025",
+        "DEC-026",
+        "DEC-028",
+        "DEC-030",
+        "DEC-031"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "C/D",
+      "topic": "facets, parameters, pagination, search and feeds",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-059",
+        "DEC-060",
+        "DEC-061",
+        "DEC-062"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "C",
+      "topic": "attachments/media URL spaces",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-031"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "G",
+      "topic": "JS/AJAX critical content and crawlable links",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P1",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "H",
+      "topic": "structured data system",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-032",
+        "DEC-033",
+        "DEC-034",
+        "DEC-035",
+        "DEC-036",
+        "DEC-037",
+        "DEC-038",
+        "DEC-039"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "I",
+      "topic": "Woo product/variation/bundle architecture",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-035",
+        "DEC-036"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "H/I",
+      "topic": "identifier, price, currency, availability source",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P1",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "H",
+      "topic": "reviews/ratings and shipping/returns",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-073"
+      ],
+      "classification": "INTENTIONALLY_DEFERRED",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "J",
+      "topic": "images/media delivery",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-054",
+        "DEC-056",
+        "DEC-057"
+      ],
+      "classification": "MISSING_DECISION",
+      "reason": "Existing decisions cover only part of this material domain; the remaining target-state choice is a P-001 candidate.",
+      "materiality": "P1",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "K",
+      "topic": "mobile/CWV/page experience",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "QA_ONLY",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "L",
+      "topic": "Googlebot/OAI-SearchBot/GPTBot/ChatGPT-User access",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "TECH_SPEC",
+      "source_ref": "N",
+      "topic": "Rank Math ownership by concern",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-032",
+        "DEC-033",
+        "DEC-035",
+        "DEC-037",
+        "DEC-067"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Mapped to an explicit decision, accepted rule, or candidate gap.",
+      "materiality": "P2",
+      "notes": "See P-001 report for candidate IDs."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-RESEARCH-SPEC 1–3",
+      "topic": "intent/page role/query evidence",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-001",
+        "DEC-049",
+        "DEC-050"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Content policy is mapped only where the current backlog has an atomic or accepted rule.",
+      "materiality": "P2",
+      "notes": "Page→Query attribution remains unproven."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-RESEARCH-SPEC 4",
+      "topic": "cannibalization/overlap",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-049",
+        "DEC-050",
+        "DEC-063"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Content policy is mapped only where the current backlog has an atomic or accepted rule.",
+      "materiality": "P2",
+      "notes": "Page→Query attribution remains unproven."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-RESEARCH-SPEC 5–7",
+      "topic": "information gap, first-hand evidence and content architecture",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-020",
+        "DEC-021",
+        "DEC-024"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Content policy is mapped only where the current backlog has an atomic or accepted rule.",
+      "materiality": "P2",
+      "notes": "Page→Query attribution remains unproven."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-RESEARCH-SPEC 8–9",
+      "topic": "competitor observation and trust/provenance",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-023"
+      ],
+      "classification": "MISSING_DECISION",
+      "reason": "Content policy is mapped only where the current backlog has an atomic or accepted rule.",
+      "materiality": "P1",
+      "notes": "Page→Query attribution remains unproven."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-RESEARCH-SPEC 10",
+      "topic": "LLM/AI readability",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-001",
+        "DEC-020"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Content policy is mapped only where the current backlog has an atomic or accepted rule.",
+      "materiality": "P2",
+      "notes": "Page→Query attribution remains unproven."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-RESEARCH-SPEC 7",
+      "topic": "CTA/commerciality and useful links",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-042",
+        "DEC-043",
+        "DEC-044",
+        "DEC-046"
+      ],
+      "classification": "MISSING_DECISION",
+      "reason": "Content policy is mapped only where the current backlog has an atomic or accepted rule.",
+      "materiality": "P1",
+      "notes": "Page→Query attribution remains unproven."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-RESEARCH-SPEC FAQ",
+      "topic": "FAQ visible semantics and schema",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Content policy is mapped only where the current backlog has an atomic or accepted rule.",
+      "materiality": "P1",
+      "notes": "Page→Query attribution remains unproven."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-RESEARCH-SPEC location",
+      "topic": "Store/location content role",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Content policy is mapped only where the current backlog has an atomic or accepted rule.",
+      "materiality": "P1",
+      "notes": "Page→Query attribution remains unproven."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "CONTENT-ARCHITECTURE",
+      "topic": "family roles and durable page distinctions",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-001",
+        "DEC-049",
+        "DEC-050"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P2",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "QUERY-MAP",
+      "topic": "query/intent map limitations",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-049",
+        "DEC-050"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P2",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "INTERNAL-LINK-ARCHITECTURE",
+      "topic": "CORE/FAMILY/CONTEXTUAL model",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-040",
+        "DEC-041",
+        "DEC-042",
+        "DEC-043",
+        "DEC-044",
+        "DEC-045",
+        "DEC-046",
+        "DEC-047",
+        "DEC-048"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P2",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "VISUAL-IMAGE-SEO",
+      "topic": "image role/ALT",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-054",
+        "DEC-055",
+        "DEC-056",
+        "DEC-057"
+      ],
+      "classification": "MISSING_DECISION",
+      "reason": "Existing decisions cover only part of this material domain; the remaining target-state choice is a P-001 candidate.",
+      "materiality": "P1",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "VISUAL-IMAGE-SEO",
+      "topic": "filename/representative/context/technical delivery",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P1",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "VIDEO-SEO",
+      "topic": "video inventory/host/discovery/metadata/media/links",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-038",
+        "DEC-058"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P1",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "BRAND-ENTITY-SEARCH",
+      "topic": "brand facts, naming, schema and off-site references",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-032",
+        "DEC-053"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P1",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "EXTERNAL-PR-STRATEGY",
+      "topic": "external PR landing/link/measurement policy",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-071"
+      ],
+      "classification": "INTENTIONALLY_DEFERRED",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P2",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "MEASUREMENT-SPEC",
+      "topic": "baseline and change annotation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P1",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "MEASUREMENT-SPEC",
+      "topic": "monitoring interpretation and rollback",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P1",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "SEO-PLAYBOOK",
+      "topic": "accepted AI/readability/content automation/ownership rules",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P2",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "STRATEGY",
+      "source_ref": "SEO-OWNERSHIP",
+      "topic": "Rank Math-first technical ownership",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-032",
+        "DEC-033",
+        "DEC-035",
+        "DEC-037",
+        "DEC-067"
+      ],
+      "classification": "COVERED_BY_ACCEPTED_RULE",
+      "reason": "Strategy requirement is mapped to an existing decision/rule or a P-001 candidate.",
+      "materiality": "P2",
+      "notes": "No implementation authority."
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Homepage",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-001",
+        "DEC-002",
+        "DEC-032",
+        "DEC-040"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: image/brand/monitoring"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Shop",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-003",
+        "DEC-016",
+        "DEC-030",
+        "DEC-041"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: metadata and sitemap child split"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Fabric-color products",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-007",
+        "DEC-011",
+        "DEC-015",
+        "DEC-020",
+        "DEC-035"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: facts/lifecycle/image"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Sets/Bundles",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-008",
+        "DEC-020",
+        "DEC-036"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: facts/lifecycle/image"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Mediums/Additives",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-009",
+        "DEC-020"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: facts/lifecycle"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Tools/Accessories",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-010",
+        "DEC-020"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: facts/lifecycle"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Other Products",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-011",
+        "DEC-020"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: assignment/lifecycle"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Durable Product Categories",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-016",
+        "DEC-021",
+        "DEC-025",
+        "DEC-030"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: metadata split"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "pa_volume",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-016",
+        "DEC-026",
+        "DEC-030"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: evidence before index/sitemap"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Product Tags",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-027",
+        "DEC-063",
+        "DEC-067"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "COVERED with migration gap"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Magazine",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-012",
+        "DEC-017",
+        "DEC-051"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: metadata/provenance"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Articles",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-013",
+        "DEC-018",
+        "DEC-023",
+        "DEC-034",
+        "DEC-044",
+        "DEC-049"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: provenance/CTA/image"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Durable Blog Categories",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-028",
+        "DEC-051"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: empty lifecycle"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Blog Tags",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-029",
+        "DEC-063",
+        "DEC-067"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "COVERED with mapping gap"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Academy Course",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-014",
+        "DEC-019",
+        "DEC-024",
+        "DEC-037"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: owner/canary"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Academy Lessons",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-014",
+        "DEC-019",
+        "DEC-024",
+        "DEC-037",
+        "DEC-038"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: video facts"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "LearnDash taxonomies",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-005"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "COVERED with 404 lifecycle evidence"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "About / Why Mariwork",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-012",
+        "DEC-017",
+        "DEC-022",
+        "DEC-033",
+        "DEC-053"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: brand facts/schema"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Contact",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-012",
+        "DEC-017",
+        "DEC-022",
+        "DEC-033"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: provenance/location"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Stores address",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-012",
+        "DEC-017",
+        "DEC-022"
+      ],
+      "classification": "MISSING_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P1",
+      "notes": "MISSING_DECISION: location/NAP"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "FAQ",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-012",
+        "DEC-017",
+        "DEC-022",
+        "DEC-033"
+      ],
+      "classification": "MISSING_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P1",
+      "notes": "MISSING_DECISION: FAQ boundary"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Login / Fast Buy",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-004",
+        "DEC-062"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P1",
+      "notes": "DECISION_TOO_BROAD: system split"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Cart / Checkout / My Account",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-004"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P1",
+      "notes": "DECISION_TOO_BROAD: state/privacy split"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "system/archive/machine URL spaces",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-031",
+        "DEC-059",
+        "DEC-060",
+        "DEC-061",
+        "DEC-062"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: normalization/canonical"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "historical/legacy URLs",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-063",
+        "DEC-064",
+        "DEC-065",
+        "DEC-066",
+        "DEC-067"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "COVERED with targeted evidence"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Images",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-054",
+        "DEC-055",
+        "DEC-056",
+        "DEC-057"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: missing image children"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Videos",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-038",
+        "DEC-058"
+      ],
+      "classification": "DECISION_TOO_BROAD",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P1",
+      "notes": "DECISION_TOO_BROAD/overlap"
+    },
+    {
+      "source_type": "FAMILY",
+      "source_ref": "Brand/Entity",
+      "topic": "Applicable-dimension invariant",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-032",
+        "DEC-053"
+      ],
+      "classification": "COVERED_BY_UMBRELLA_DECISION",
+      "reason": "Role, indexability, URL, sitemap, content, schema, owner, links, media, lifecycle and QA dimensions were checked; applicable gaps are noted.",
+      "materiality": "P2",
+      "notes": "partial: facts/landing/off-site"
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-001",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-002",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-003",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-004",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-005",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-006",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-007",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-008",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-009",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-010",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-011",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-012",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-013",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-014",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-015",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-016",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-017",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-018",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-019",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-020",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-021",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-022",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-023",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-024",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-025",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-026",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-027",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-028",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [],
+      "classification": "MISSING_DECISION",
+      "reason": "Missing rollout/child decision dependency or over-broad dependency.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-029",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    },
+    {
+      "source_type": "OTHER",
+      "source_ref": "EXE-030",
+      "topic": "Execution dependency reconciliation",
+      "applicable": true,
+      "decision_ids": [
+        "DEC-068"
+      ],
+      "classification": "COVERED_EXACT",
+      "reason": "Current listed dependencies are directionally sufficient; item remains locked until all are ACCEPTED.",
+      "materiality": "P1",
+      "notes": "No EXE status changed."
+    }
+  ]
+}
