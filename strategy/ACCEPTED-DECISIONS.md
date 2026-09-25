@@ -639,3 +639,18 @@ Rules:
 - Visible breadcrumb UI and structured-data hierarchy must agree.
 - Duplicate emitters are only temporarily acceptable when they express the exact same factual trail; conflicting trails must be eliminated.
 - Validate representative Store, Magazine, Guide Collection/Guide and future Course templates through rendered output and Rich Results testing.
+
+
+## DEC-040 — Internal-Link Classification Model
+
+**Status:** ACCEPTED
+
+- Internal-link requirements use three classes: CORE/MANDATORY, FAMILY-SPECIFIC and CONTEXTUAL/OPTIONAL.
+- CORE/MANDATORY links apply across every relevant entity in a defined family.
+- FAMILY-SPECIFIC links apply only to the defined product/content family.
+- CONTEXTUAL/OPTIONAL links are added only when genuinely useful to the page topic or user task.
+- Equivalent pages must not randomly differ in mandatory-link coverage.
+- Missing mandatory links require correction or an approved documented exception.
+- Useful bidirectional Product/Category ↔ Academy/Article relationships are supported.
+- Commercial links from informational content must remain contextually justified and must not be forced to increase link count.
+- Exact destinations and family-level requirements remain governed by DEC-041 onward.
