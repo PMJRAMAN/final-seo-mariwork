@@ -332,3 +332,19 @@ Later title/meta/content/schema/internal-link/indexability decisions must preser
 - Do not introduce crawl blocking that would prevent the intended noindex directive from being seen.
 - Missing canonical on these noindex utility states is not, by itself, an implementation defect.
 - No Production change is required where current behavior already matches this policy.
+
+
+## DEC-005 — LearnDash Course Category Public Role
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** ACADEMY / LEARNDASH TAXONOMY
+
+### Accepted target state
+
+- Current `Free` and `Paid` LearnDash Course Categories are not durable public SEO entities.
+- Keep them out of index targets, sitemaps and deliberate Academy navigation.
+- Current public 404 behavior is acceptable while the terms are empty.
+- The terms may remain internally if LearnDash needs them operationally.
+- If they are not operationally needed, cleanup may be handled separately.
+- Do not redirect these URLs to Academy or the current course without a proven semantic replacement.
+- If Mariwork later develops a real multi-course free/paid architecture, reopen the taxonomy strategy through a new decision.
