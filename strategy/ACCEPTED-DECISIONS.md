@@ -953,3 +953,15 @@ Rules:
 - Do not infer Artist identity from slug/name similarity.
 - This supersedes only the historical-Artist redirect fallback in DEC-028/DEC-052; other Artist architecture decisions remain unchanged.
 - Non-Artist removed-content disposition is separated into DEC-128.
+
+
+## DEC-067 — Redirect Technical Owner and Implementation Path
+
+**Status:** ACCEPTED
+
+- Nginx is the canonical technical owner for Mariwork HTTP redirects, including migration/legacy redirects.
+- Preserve correct existing Nginx redirects.
+- Add new SEO/migration redirects to the centralized documented Nginx layer unless a narrow exception is explicitly approved.
+- Do not maintain duplicate redirect ownership in Rank Math or another layer for the same source URL.
+- Audit existing Nginx behavior before any redirect change.
+- Nginx ownership is a project architecture/performance preference, not a Google ranking requirement.
