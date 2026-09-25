@@ -196,7 +196,7 @@ After each discussion:
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
 | DEC-040 | Approve CORE_MANDATORY / FAMILY_SPECIFIC / CONTEXTUAL_OPTIONAL model | ACCEPTED | SR-005 §17; link matrix draft; owner approval 2026-09-25 | Accepted: internal links are governed by three classes: CORE/MANDATORY for links required across every relevant entity in a defined family; FAMILY-SPECIFIC for links required only for a defined family; CONTEXTUAL/OPTIONAL for links added only when genuinely useful to the page topic/user task. Equivalent pages must not randomly differ in mandatory-link coverage; missing mandatory links require correction or an approved documented exception. The model supports useful bidirectional Product/Category ↔ Academy/Article relationships without forcing irrelevant commercial links. Exact destinations and family rules remain for DEC-041 onward. |
-| DEC-041 | Exact mandatory parent/hub links by family | OPEN | INTERNAL-LINK-REQUIREMENT-MATRIX-DRAFT | Requires exact durable destinations |
+| DEC-041 | Exact mandatory parent/hub links by family | DISCUSSING | INTERNAL-LINK-REQUIREMENT-MATRIX-DRAFT | Requires exact durable destinations |
 | DEC-042 | Product → Academy/Article rules | OPEN | SR-004 SR-ST-009; current graph | Only real preparation/technique/care relevance |
 | DEC-043 | Academy/Lesson → Product/Category rules | OPEN | SR-004 SR-ST-009 | Only when material/tool is actually used |
 | DEC-044 | Article → Product/Category rules | OPEN | SR-005 §17 | Commercial next step only when useful/contextual |
