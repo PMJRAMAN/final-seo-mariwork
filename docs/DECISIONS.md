@@ -554,3 +554,28 @@ Rules:
 - Rewrite only when a title is materially vague, inaccurate, misleading, excessively verbose, or inconsistent with the instructional content.
 - Title normalization must not trigger URL/slug changes.
 - Video/schema naming should remain consistent with the approved visible Lesson identity, while schema ownership and eligibility are governed separately by DEC-037 and DEC-038.
+
+
+## DEC-015 — Product Meta Description Strategy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** PRODUCT / META DESCRIPTION
+
+### Accepted target state
+
+This is a general policy. Exact per-Product meta copy is not fixed by this Decision and remains subject to implementation-stage content QA.
+
+- Rank Math `%excerpt%` must not remain the final default Product meta-description strategy.
+- Product meta descriptions should be page-specific, factual, concise, and based on verified Product data.
+- Each description should summarize the specific purchasable Product and its primary factual purpose or differentiator.
+- Avoid generic educational/history copy that does not specifically describe the Product.
+- Avoid duplicate or near-duplicate descriptions across materially different Products.
+- Do not use keyword lists or mechanical keyword repetition.
+- Do not impose an arbitrary fixed 150/160-character rule; descriptions should be concise and sufficiently informative.
+- Avoid hard-coding volatile facts such as current price or stock status unless a deliberate reliable synchronization mechanism exists.
+- Do not introduce unsupported promotional, quality, safety, performance, or superiority claims.
+- Third-party Products must not be represented as Mariwork-branded products.
+- Meta descriptions may be written manually or generated programmatically from verified page-specific Product data. Programmatic output must remain human-readable, accurate, and meaningfully page-specific.
+- Do not reconstruct or restore historical Yoast descriptions merely because they previously existed.
+- Google may generate the search snippet from visible page content instead of the meta description; the meta description is an eligible descriptive source, not a guaranteed SERP snippet.
+- Final per-Product meta copy remains subject to the existing content-approval gate before Production.
