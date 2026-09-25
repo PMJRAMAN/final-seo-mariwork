@@ -2456,3 +2456,24 @@ Google requires Product structured-data images to represent the marked-up Produc
 
 - Internal search remains a UX/navigation feature rather than an indexable landing-page family.
 - Search-result query combinations do not become a scalable source of low-value indexable URLs.
+
+
+## DEC-062 — Author / Date Archive Public and Indexability Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** WORDPRESS ARCHIVES / AUTHOR / DATE / INDEXABILITY
+
+### Accepted target state
+
+- Author archives are not an independent SEO landing-page family for Mariwork.
+- Date archives are not an independent SEO landing-page family for Mariwork.
+- If these archive routes are publicly generated, keep them out of XML sitemaps and prevent them from becoming Search targets through the approved noindex/non-public implementation path.
+- Current Magazine Articles and durable Blog Categories remain the primary editorial discovery and index surfaces.
+- Current Mariwork Articles use the authoritative Mariwork Organization rather than individual named author entities under DEC-034; Author archives therefore do not receive separate SEO ownership.
+- Date archives do not receive independent Search targeting merely because WordPress can generate chronological archive routes.
+- Current evidence does not prove concrete public Author or Date archive routes; implementation must verify actual route existence and behavior rather than inventing URLs.
+
+### Consequences
+
+- Article and Category architecture remains the durable editorial search architecture.
+- Author/Date archive handling remains separate from feeds, internal search and general 404/error lifecycle decisions.
