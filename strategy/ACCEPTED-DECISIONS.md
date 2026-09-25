@@ -232,3 +232,15 @@ Rules:
 - Avoid hard-coded volatile price/stock facts without reliable synchronization.
 - Do not restore historical Yoast metadata by default.
 - Exact per-Product meta copy is deferred to implementation/content QA.
+
+
+## DEC-016 — Shop Metadata Strategy
+
+**Status:** ACCEPTED
+
+- `/shop/` uses explicit Shop-specific Rank Math metadata.
+- SEO title: `فروشگاه ماری‌ورک | رنگ پارچه، مدیوم، ست و ابزار`.
+- Meta: `فروشگاه ماری‌ورک؛ خرید رنگ پارچه، مدیوم‌ها، ست‌های رنگ و ابزارهای مرتبط برای نقاشی و چاپ روی پارچه.`
+- Do not derive Shop meta from archive templates or `%excerpt%`.
+- Avoid keyword stuffing and volatile counts/prices/discounts/stock.
+- Product Category metadata remains a separate decision domain.
