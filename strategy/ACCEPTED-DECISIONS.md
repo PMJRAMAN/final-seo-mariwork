@@ -390,3 +390,16 @@ Rules:
 - Remove 20/27 from SEO architecture/navigation/sitemap, preserve migration evidence, redirect/consolidate their historical URLs to the verified Fabric Colors Category, then delete the obsolete category terms after confirming no operational dependency.
 - Do not delete the legacy terms before URL disposition is secured.
 - `pa_volume` remains separate under DEC-026.
+
+
+## DEC-026 — pa_volume Archive Role, Indexability and Sitemap Policy
+
+**Status:** ACCEPTED
+
+- `30ml`, `60ml`, and `250ml` are durable cross-family commercial browse landing pages.
+- Target: 200, index/follow, self-canonical, sitemap inclusion and deliberate crawlable internal navigation.
+- Product listings must reflect real current availability in the selected volume.
+- These pages are distinct from volume-specific Set Product Categories.
+- `?filter_volume=` Shop states remain faceted/filter URLs, not search landing pages.
+- Where reliable, links from volume pages should preselect the relevant Product variation.
+- Title/H1 and visible page copy are decided later under DEC-116 and DEC-117.
