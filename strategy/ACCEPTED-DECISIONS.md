@@ -262,13 +262,12 @@ Rules:
 
 ## DEC-018 — Article Meta Description Update Rule
 
-**Status:** ACCEPTED
+**Status:** ACCEPTED — AMENDED 2026-09-25
 
 Classify each Article meta as:
 - `KEEP`
 - `SHORTEN / REFINE`
 - `REWRITE`
-- `FACT-CHECK REQUIRED`
 
 Rules:
 - Preserve accurate useful metas; do not blanket-rewrite all Articles.
@@ -277,10 +276,9 @@ Rules:
 - Refine verbose introduction-like descriptions.
 - No fixed 150/160-character rule.
 - Summarize the Article rather than copy paragraph one.
-- Claims needing substantive verification escalate to DEC-023.
+- Current Article fact-check has already been completed and is not a remaining metadata workflow.
 - This Decision governs metadata only, not substantive Article edits.
 - Cannibalization remains DEC-119.
-
 
 ## DEC-019 — Academy Video-First Meta Description Rule
 
@@ -347,3 +345,18 @@ Rules:
 - No invented local or inventory claims.
 - Avoid duplication across Static, Magazine, Academy and Commerce families.
 - Canonical factual claims remain governed by DEC-053.
+
+
+## DEC-023 — Article Update / Freshness Policy
+
+**Status:** ACCEPTED
+
+- Current Article fact-check has already been completed and is not a remaining workstream.
+- Article age alone is not a reason to update or rewrite.
+- Classify Articles as `KEEP / CURRENT`, `TARGETED UPDATE`, `SUBSTANTIVE UPDATE / REWRITE`, or `OVERLAP REVIEW`.
+- Trigger updates when information materially changes, examples/sources become obsolete, factual errors are discovered, relevant Product/method context changes, or the Article no longer adequately serves its intended need.
+- Prefer targeted correction over unnecessary full rewrites.
+- Preserve original `datePublished`; use `dateModified` only for real content changes.
+- Do not manipulate dates to create artificial freshness.
+- Magazine remains text-first explanatory/reference content; practical video demonstrations route to Academy.
+- Per-Article body-content review happens later as implementation-stage content QA under the accepted Article policies and related intent/linking/overlap Decisions.
