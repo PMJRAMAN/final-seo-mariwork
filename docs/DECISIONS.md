@@ -1774,3 +1774,97 @@ Validate:
 
 VideoObject policy remains under DEC-038.
 Breadcrumb policy remains under DEC-039.
+
+
+## DEC-038 — VideoObject Eligibility / Ownership Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** VIDEO / ACADEMY / GUIDE PAGES / STRUCTURED DATA / WATCH PAGE
+
+### Accepted principle
+
+Video structured data is applied by semantic and technical eligibility, not merely because a page contains a video.
+
+Current Mariwork guide pages whose primary purpose is watching one instructional video are treated as educational watch pages.
+
+The host document remains a `WebPage`. Where eligible, its primary instructional video may be represented as the page's `VideoObject` main entity.
+
+The guide CollectionPage itself must not be represented as one VideoObject.
+
+### Current guide-page content model
+
+Current guide pages already contain:
+- a dedicated video cover/poster image;
+- visible explanatory text about the guide;
+- text that substantially reflects the instructional content of the video while emphasizing selected important points;
+- one primary instructional video.
+
+This text is supporting/companion educational content. Its presence does not by itself convert the guide page into an Article.
+
+For pages intended to qualify clearly as watch pages, the target presentation is:
+1. descriptive H1;
+2. concise introductory/context text;
+3. primary video/player prominently near the top, using the stable guide cover/poster;
+4. expanded key points, supporting explanation and other useful instructional text after the video.
+
+Do not bury the primary video at the end of a long text block when watching that video is the principal reason for visiting the page.
+
+The text and video may overlap in subject matter, but the text should remain useful supporting context rather than mechanically duplicating a transcript solely for SEO.
+
+### VideoObject eligibility
+
+A VideoObject may be emitted only when factual metadata is available.
+
+Required/critical facts include:
+- unique factual `name`;
+- stable crawlable `thumbnailUrl`;
+- factual `uploadDate`.
+
+Prefer a stable fetchable `contentUrl`. Where unavailable, use a valid `embedUrl` as appropriate.
+
+Add factual:
+- `description`;
+- `duration`;
+- `creator`;
+
+where available.
+
+Do not fabricate upload dates, durations, creator identities, content URLs or embed URLs merely to satisfy validation.
+
+Current dedicated video covers are candidates for `thumbnailUrl`, subject to crawlability, stability and rendered-page verification.
+
+Mariwork-produced videos may reuse the authoritative Mariwork Organization entity as creator.
+
+### Discoverability and rendering
+
+The video/player must be discoverable in Google's rendered HTML without requiring a user click to instantiate the only video representation.
+
+Verify source/player/thumbnail accessibility and whether Google can fetch the relevant resource.
+
+### Other page families
+
+Videos embedded as secondary content on Articles, Products or other non-watch pages remain in the complete sitewide video inventory but are not automatically promoted to watch-page/VideoObject status.
+
+Future video-first lessons in genuine Courses may use the same WebPage + VideoObject model where eligible.
+
+### Ownership
+
+Rank Math remains the first general schema owner where supported.
+
+Mariwork Core may provide unsupported Academy/video-specific structured-data nodes only as part of one coherent graph. Do not create duplicate competing VideoObject/WebPage entities.
+
+### Rollout gate
+
+Before broad VideoObject rollout:
+- complete the M-program video inventory and host-page mapping;
+- run a two-guide canary;
+- verify raw HTML and rendered HTML;
+- verify stable cover/thumbnail;
+- verify factual uploadDate and duration;
+- verify contentUrl/embedUrl and fetchability;
+- verify schema validity and duplicate absence;
+- inspect the page in Search Console URL Inspection / video indexing where available.
+
+Video sitemap inclusion is limited to verified eligible watch pages and is finalized in the Video SEO implementation workstream.
+
+`Clip` / `SeekToAction` is not a default requirement and is considered only where useful and technically supported.
