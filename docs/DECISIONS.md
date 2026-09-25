@@ -475,3 +475,29 @@ Rules:
 - Product title normalization must be completed before the global Rank Math Product title template is changed.
 - Global implementation remains blocked until deferred DEC-008 is resolved.
 - Template rollout requires regression checks for unique, descriptive titles and absence of unintended duplicate branding.
+
+
+## DEC-012 — Static / Core Page Title and H1 Policy
+**Status:** Accepted  
+**Date:** 2026-09-25  
+**Scope:** STATIC / CORE PAGES
+
+### Accepted target state
+
+Static/Core pages use concise, page-specific SEO titles and clear visible H1s. Repetitive global suffixes such as `- رنگ پارچه ماری ورک` are not required when a shorter branded page title already identifies the page.
+
+Approved targets:
+- About: SEO title `درباره ماری‌ورک`; H1 `درباره ماری‌ورک`. Existing creative tagline may remain as supporting copy, not the sole H1.
+- Contact: SEO title `تماس با ماری‌ورک`; H1 `با ماری‌ورک در تماس باشید`.
+- Magazine: SEO title/H1 `مجله ماری‌ورک`.
+- Why Mariwork: SEO title `چرا ماری‌ورک؟`; H1 `چرا رنگ پارچه ماری‌ورک؟`.
+- Stores: SEO title `فروشگاه‌های ماری‌ورک`; H1 `فروشگاه‌های ماری‌ورک نزدیک شما`.
+- FAQ: SEO title `سوالات متداول ماری‌ورک`; H1 `سوالات متداول`.
+
+Rules:
+- SEO title and H1 do not need to be identical, but they must describe the same page role/topic.
+- Each page should have one clear primary H1.
+- A creative tagline should not replace a descriptive primary H1 when it obscures page identity.
+- Avoid repetitive site-wide title boilerplate when the page title already carries sufficient brand/context.
+- Do not add keywords unrelated to the actual page purpose.
+- Canonical brand spelling remains governed by DEC-053.
