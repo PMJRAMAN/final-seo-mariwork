@@ -320,9 +320,9 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-102 | Release isolation, change annotation and comparable measurement-baseline policy | DISCUSSING | MEASUREMENT-SPEC §§1–3 | Required before meaningful causal interpretation |
-| DEC-103 | Monitoring KEEP / ITERATE / ROLLBACK-CANDIDATE interpretation | OPEN | MEASUREMENT-SPEC §§4–7 | Separate from cadence and raw metrics |
-| DEC-104 | Maintenance triggers for updates, Google changes, new URLs/404s and freshness | OPEN | MASTER-TODO J-003–J-009 | Recurring triage policy |
+| DEC-102 | Release isolation, change annotation and comparable measurement-baseline policy | ACCEPTED | MEASUREMENT-SPEC §§1–3; owner approval 2026-09-26 | Accepted: before a material SEO implementation, record implementation date/time, exact scope, affected URLs/entities and relevant change references, plus a comparable pre-change baseline where practical. Avoid overlapping unrelated systemic changes on the same family/subsystem when doing so would make attribution ambiguous. Record material confounders such as stock/price changes, campaigns, migrations or other releases. Comparable before/after windows should be used where practical. |
+| DEC-103 | Monitoring KEEP / ITERATE / ROLLBACK-CANDIDATE interpretation | ACCEPTED | MEASUREMENT-SPEC §§4–7; owner approval 2026-09-26 | Accepted: monitoring outcomes may be classified as KEEP, ITERATE, ROLLBACK-CANDIDATE or INCONCLUSIVE. Short-term movement alone does not trigger automatic rollback. Interpretation must consider comparable windows, confounders, query/page mix and evidence strength; causal claims require evidence beyond simple temporal correlation. |
+| DEC-104 | Maintenance triggers for updates, Google changes, new URLs/404s and freshness | ACCEPTED | MASTER-TODO J-003–J-009; owner approval 2026-09-26 | Accepted: Mariwork SEO maintenance includes recurring triage for newly discovered URLs/entities, new 404/redirect issues, Rank Math/plugin/platform update regressions, relevant Google documentation changes, content freshness needs, price/schema consistency and new systemic findings. Each trigger enters review/triage first; it does not authorize an automatic Production change without the applicable decision/change-control path. |
 | DEC-105 | Product Feed identity/variant/data-contract architecture | DEFERRED | MASTER-TODO O-004–O-006; DEC-072 | Split further before implementation if one target state is still ambiguous |
 | DEC-106 | Review/rating structured-data eligibility and ownership | DEFERRED | MASTER-TODO O-007–O-009; DEC-073 | Requires genuine review data; no fabricated ratings |
 
@@ -330,7 +330,7 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-107 | Feed URL crawl/index policy | OPEN | SYSTEM-URL-SPACES-CLOSURE; H-007 | Separate from author/date archives and internal search |
+| DEC-107 | Feed URL crawl/index policy | DISCUSSING | SYSTEM-URL-SPACES-CLOSURE; H-007 | Separate from author/date archives and internal search |
 | DEC-108 | General internal-search result URL policy | PROPOSED | SYSTEM-URL-SPACES-CLOSURE; H-006 | Product Search remains DEC-061 |
 | DEC-109 | 404 / soft-404 / error-page lifecycle policy | OPEN | SYS-003; SYSTEM-URL-SPACES-CLOSURE; I-004 | Separate source-level migration mapping from general error behavior |
 | DEC-110 | Search-crawler access policy for Googlebot / OAI-SearchBot and training-crawler separation | NEEDS_TARGETED_EVIDENCE | SITEWIDE-TECHNICAL-AUDIT-SPEC L; I-014 | WAF/CDN/server evidence required; GPTBot and ChatGPT-User are separate concerns |
