@@ -3057,3 +3057,43 @@ Responsive image selection should match the rendered slot rather than serving on
 - Recurring SEO maintenance includes triage for new URLs/entities, new 404/redirect issues, Rank Math/plugin/platform update regressions, relevant Google documentation changes, content freshness needs, price/schema consistency and new systemic findings.
 - A maintenance trigger enters review/triage first.
 - It does not independently authorize a Production change without the applicable decision and change-control path.
+
+
+## DEC-072 — Merchant Center / Free Listings Program Entry and Eligibility
+**Status:** Deferred — current scope not relevant  
+**Amended:** 2026-09-26
+
+### Current project boundary
+- Merchant Center / Free Listings is not relevant to Mariwork's present Iran-market/site operating model.
+- Do not open a Merchant Center implementation program now.
+- Revisit only if target market, merchant/account eligibility or the commercial operating model materially changes.
+- This does not weaken ordinary Product data quality requirements.
+
+## DEC-105 — Product Feed Identity / Variant / Data-Contract Architecture
+**Status:** Deferred — current Google-shopping feed scope not relevant  
+**Date:** 2026-09-26
+
+### Deferred state
+- Do not design or implement a Google Merchant product-feed data contract for the current Mariwork operating model.
+- Reopen only if the market/eligibility context changes.
+- On-site Product identity, variant, schema and commercial-fact quality remain governed by their separate accepted decisions.
+
+## DEC-106 — Review/Rating Structured-Data Eligibility and Ownership
+**Status:** Deferred  
+**Date:** 2026-09-26
+
+### Deferred state
+- Do not implement review/rating structured-data ownership until genuine review/rating data exists and eligibility can be verified.
+- Do not fabricate ratings, counts or aggregate values.
+
+## DEC-107 — Feed URL Crawl / Index Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** WORDPRESS/RSS FEEDS / INDEXABILITY
+
+### Accepted target state
+- WordPress/RSS/feed URLs are machine/system distribution endpoints, not SEO landing pages.
+- Keep them out of XML sitemaps and do not optimize them as Search targets.
+- Do not disable or robots-block feed functionality solely for SEO without a separate technical reason.
+- Preserve required feed behavior where used.
+- This decision is separate from Merchant Center/Product Feed architecture.
