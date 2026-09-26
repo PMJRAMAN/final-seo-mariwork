@@ -1176,3 +1176,16 @@ Rules:
 - Establish the primary useful host/version first.
 - Consolidate/remove/de-emphasize/relink redundant or weak instances as appropriate.
 - No thin standalone SEO pages for media without a real user/Search role.
+
+
+## DEC-099 — Brand/Trust Site-Content and Entity-Supporting Page Strategy
+**Status:** ACCEPTED
+- Entity-supporting pages use only verified Mariwork facts.
+- Do not invent awards, credentials, partnerships, legal status, locations or other trust claims.
+
+## DEC-100 — Branded Query and Landing-Page Role Strategy
+**Status:** ACCEPTED WITH RESEARCH
+- Branded queries do not all default to Homepage.
+- Map meaningful branded query clusters to the most appropriate durable page using GSC/search evidence and page role.
+- Final query ownership is a later research deliverable.
+- Avoid intentional branded cannibalization.
