@@ -1281,3 +1281,32 @@ Rules:
 - Do not use bare 30ml/60ml/250ml as the complete H1/title.
 - Naming must state the relevant product family/intent.
 - Human-facing H1 and Search-oriented Title may differ where justified.
+
+
+## DEC-117 — pa_volume Visible Landing-Content Standard
+**Status:** ACCEPTED
+- Retained indexable pa_volume landings get a short useful distinct content block.
+- Explain the volume role and what users will find.
+- No artificial long SEO copy.
+- Follow DEC-130.
+
+## DEC-118 — Durable Blog Category Presentation / Content Standard
+**Status:** ACCEPTED
+- Durable indexable Blog Categories get deliberate Title/H1/Meta plus a short category-specific intro block.
+- Empty/temporary/noindex categories are excluded.
+- Follow DEC-130.
+
+## DEC-119 — Content Overlap / Cannibalization Resolution Policy
+**Status:** ACCEPTED
+- Topic similarity alone is not cannibalization.
+- Academy = video-first practical/demo intent.
+- Magazine = text-first explanatory/reference/editorial intent.
+- Differentiate/merge/redirect only when evidence shows substantial same-intent overlap.
+
+## DEC-130 — Durable Indexable Archive/Hub Visible Content-Block Standard
+**Status:** ACCEPTED
+- Every durable indexable archive/hub used as a Search/user destination gets a short, unique, useful visible content block.
+- Applies to Shop, Product Categories, pa_volume, Academy, Magazine, durable Blog Categories and future equivalent indexable archives.
+- Explain why the page exists, what users find there and its specific role.
+- Human-first, concise, SEO-aware; no filler, stuffing or duplicated intros.
+- Noindex/system/utility/empty/temporary archives are excluded.
