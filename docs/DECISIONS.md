@@ -3191,3 +3191,36 @@ The strategy decision must cover:
 - Merchant Center/feed use remains outside current scope under DEC-072/105.
 - On-site Search structured data may be considered only when the underlying policy is verified and supported.
 - Verify exact current business rules before implementation.
+
+
+## DEC-114 — Homepage Visible Content and CTA Structure
+**Status:** Accepted  
+**Date:** 2026-09-26
+
+### Accepted target state
+- Homepage remains the primary brand/entity gateway and cross-family navigation hub.
+- Keep the visible brand introduction concise and useful.
+- Use CTAs to guide users toward major durable destinations such as Shop, Academy and other approved hubs.
+- Do not expand the Homepage with long SEO-first filler sections.
+- Homepage title/H1/meta remain a separate concern and change only when query/search evidence gives a specific reason.
+
+## DEC-115 — Durable Product Category Title/H1 Naming Standard
+**Status:** Accepted  
+**Date:** 2026-09-26
+
+### Accepted target state
+- Each durable Product Category uses a concise, human-readable H1 based on the real category/family identity.
+- Brand tokens and extra modifiers are not mandatory in H1.
+- Title may later be more descriptive than H1 when keyword/search research supports it.
+- Preserve the stable core identity of the category.
+- Final exact wording is decided during later keyword/query ownership work.
+
+## DEC-116 — pa_volume Title/H1 Naming Standard
+**Status:** Accepted  
+**Date:** 2026-09-26
+
+### Accepted target state
+- Durable pa_volume landing pages must not use only a bare volume value such as 30ml/60ml/250ml as the complete H1/title.
+- Naming must clearly communicate which product family/intent the volume applies to.
+- Use a natural human-facing H1 and a Search-oriented Title aligned to the volume landing-page role.
+- Final wording is decided later through keyword/search research.
