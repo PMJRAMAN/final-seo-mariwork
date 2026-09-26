@@ -1092,3 +1092,23 @@ Rules:
 - Do not create artificial FAQs for SEO/schema.
 - Do not treat FAQ markup as a guaranteed rich-result tactic.
 - No hidden or fabricated FAQ content solely for markup.
+
+
+## DEC-087 — Stores / Location / NAP and Local-Trust Content Role
+**Status:** ACCEPTED
+- Use the canonical concept `فروشگاه‌های عرضه‌کننده محصولات ماری‌ورک`.
+- Do not imply official representation, exclusivity, branch status or Mariwork ownership without evidence.
+- Publish only verified store/address/contact facts.
+
+## DEC-088 — Informational Article / Academy Commercial CTA Policy
+**Status:** ACCEPTED
+- Commercial CTAs are optional and relevance-driven.
+- Add Product/Category purchase CTAs only when genuinely useful to the content.
+- No fixed CTA count and no mechanical SEO/conversion insertion.
+
+## DEC-089 — Image Filename and Media Naming Policy for New Assets
+**Status:** ACCEPTED
+- New filenames should be short, descriptive, stable and fact-based.
+- Prefer lowercase Latin + hyphens where practical.
+- No keyword stuffing or inferred facts.
+- No historical bulk rename merely for SEO.
