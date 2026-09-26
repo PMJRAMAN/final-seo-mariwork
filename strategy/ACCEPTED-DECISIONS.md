@@ -1236,3 +1236,27 @@ Rules:
 - Treat OAI-SearchBot Search eligibility separately from GPTBot training use and ChatGPT-User.
 - Verify robots/WAF/server access before implementation.
 - AI citation/content strategy is separately governed by DEC-129.
+
+
+## DEC-111 — Mobile / Core Web Vitals / Page Experience Remediation Policy
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- Prefer field evidence; use lab data for diagnostics.
+- Reference targets: LCP <= 2.5s, INP <= 200ms, CLS <= 0.1.
+- Evaluate mobile and major templates separately.
+- Fix evidenced bottlenecks; do not optimize for a perfect lab score.
+- No ranking/traffic guarantee from CWV changes alone.
+
+## DEC-112 — Concern-by-Concern SEO Technical Ownership
+**Status:** ACCEPTED
+- One primary owner per SEO concern.
+- Rank Math first for supported metadata/robots/canonical/sitemap/schema.
+- Nginx owns redirects under DEC-067.
+- WooCommerce owns authoritative Product commercial facts.
+- Custom code only when needed; no duplicate parallel owners.
+
+## DEC-113 — Shipping / Returns Source of Truth
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- Shipping/return facts come only from real business/WooCommerce rules.
+- No invented SEO values.
+- Visible policy and structured data must agree.
+- Verify actual rules before implementation.
