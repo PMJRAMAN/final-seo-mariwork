@@ -2651,3 +2651,40 @@ Google requires Product structured-data images to represent the marked-up Produc
 - Do not design or launch the planned external PR/advertorial program until internal query ownership, target landing pages, content architecture and internal-link architecture are sufficiently stable.
 - Ordinary earned mentions are not prohibited; the deferment applies to the planned paid/strategic external amplification program.
 - Reopen this decision after the internal architecture and target pages are stable.
+
+
+## DEC-072 — Merchant Center / Free Listings Program Entry and Eligibility
+**Status:** Deferred  
+**Date:** 2026-09-26  
+**Scope:** MERCHANT CENTER / FREE LISTINGS / PROGRAM ENTRY
+
+### Deferred state
+- Do not open a Merchant Center / Free Listings implementation program yet.
+- Revisit after Product data, variant identity, price/availability consistency, landing-page quality and feed architecture are sufficiently stable.
+- This decision concerns entry into the Merchant Center / Free Listings program, not the Product Feed data contract itself.
+
+## DEC-073 — Genuine Reviews / Social-Proof Collection and Display
+**Status:** Deferred  
+**Date:** 2026-09-26  
+**Scope:** REVIEWS / SOCIAL PROOF / COLLECTION / DISPLAY
+
+### Deferred state
+- Revisit genuine review/social-proof collection and display after the core SEO/content architecture is stable.
+- Use only genuine user/customer evidence.
+- Do not fabricate reviews, ratings or counts.
+- Structured-data eligibility and implementation remain a separate later decision.
+
+## DEC-074 — Login / My Account Authentication and Account-Page Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** LOGIN / MY ACCOUNT / UTILITY / PRIVACY / INDEXABILITY
+
+### Accepted target state
+- Login and My Account are user utility/account surfaces, not SEO landing pages.
+- Keep them out of XML sitemaps and prevent them from becoming Search targets through the approved noindex treatment.
+- Do not add SEO/editorial copy merely to optimize them.
+- Preserve authentication, account-state and privacy behavior.
+- Do not add canonicals solely because these noindex utility pages lack them.
+
+### Consequences
+- Account/authentication pages remain focused on user utility and privacy rather than Search acquisition.
