@@ -1036,3 +1036,13 @@ Rules:
 - Important SEO content and primary crawl/discovery links should not depend unnecessarily on JS/AJAX-only interaction when crawlable HTML is practical.
 - JS/AJAX remains allowed for UX/dynamic behavior.
 - Implementation changes require representative initial-HTML/rendered-DOM evidence first.
+
+
+## DEC-078 — Preferred Host / Protocol / Trailing-Slash and URL Normalization Policy
+**Status:** ACCEPTED
+- Preferred canonical host/protocol remains `https://www.mariwork.ir/`.
+- Do not introduce a non-www migration without a separate architecture decision.
+- Normalize HTTP/non-www alternatives to HTTPS + www.
+- Preserve the established trailing-slash convention for normal content URLs.
+- Do not change durable slugs merely for cosmetic normalization.
+- Nginx owns redirect normalization under DEC-067.
