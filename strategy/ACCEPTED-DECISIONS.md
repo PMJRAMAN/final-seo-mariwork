@@ -1189,3 +1189,23 @@ Rules:
 - Map meaningful branded query clusters to the most appropriate durable page using GSC/search evidence and page role.
 - Final query ownership is a later research deliverable.
 - Avoid intentional branded cannibalization.
+
+
+## DEC-102 — Release Isolation / Change Annotation / Comparable Baseline
+**Status:** ACCEPTED
+- Record implementation time, exact scope, affected URLs/entities and change references.
+- Capture comparable pre-change baselines where practical.
+- Avoid overlapping unrelated systemic changes when attribution would become ambiguous.
+- Record material confounders.
+
+## DEC-103 — Monitoring Outcome Interpretation
+**Status:** ACCEPTED
+- Allowed outcomes: KEEP / ITERATE / ROLLBACK-CANDIDATE / INCONCLUSIVE.
+- No automatic rollback from short-term movement alone.
+- Consider comparable windows, confounders and evidence strength.
+- Do not claim causality from timing alone.
+
+## DEC-104 — Ongoing SEO Maintenance Triggers
+**Status:** ACCEPTED
+- Triage new URLs/entities, 404/redirect issues, plugin/platform regressions, relevant Google changes, freshness, price/schema consistency and systemic findings.
+- Triage does not itself authorize Production changes.
