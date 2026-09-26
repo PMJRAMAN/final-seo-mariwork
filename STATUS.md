@@ -14,7 +14,7 @@ P-001 through P-005 are complete.
 - Decision coverage audit: completed by Codex.
 - ChatGPT P-002 independent review: complete.
 - Authoritative reconciliation: complete.
-- Canonical coverage matrix: **130 rows / zero unexplained material gaps**.
+- Canonical coverage matrix: **135 rows / zero unexplained material gaps**.
 - Decision Backlog: **129 decision records; highest ID DEC-130; DEC-126 is intentionally left unused and IDs are not renumbered**.
 - Existing Decision IDs renumbered: **0**.
 - Production writes: **0**.
@@ -215,7 +215,7 @@ Result: **PASS WITH NON-STRATEGY INPUT GATES**
 - intentionally deferred decisions: **6**
 - superseded traceability records: **2**
 - accepted policies requiring targeted evidence before affected execution: retained as explicit gates
-- canonical decision coverage: **130 rows / zero unexplained material gaps**
+- canonical decision coverage: **135 rows / zero unexplained material gaps**
 - DEC-028/052 Artist migration conflict: reconciled with DEC-066
 - internal-link draft conflict: replaced by canonical accepted matrix
 - Content Architecture / Visual / Video strategy files: reconciled with accepted decisions
