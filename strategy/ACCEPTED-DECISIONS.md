@@ -1209,3 +1209,10 @@ Rules:
 **Status:** ACCEPTED
 - Triage new URLs/entities, 404/redirect issues, plugin/platform regressions, relevant Google changes, freshness, price/schema consistency and systemic findings.
 - Triage does not itself authorize Production changes.
+
+
+## DEC-107 — Feed URL Crawl / Index Policy
+**Status:** ACCEPTED
+- WordPress/RSS/feed URLs are system distribution endpoints, not SEO landing pages.
+- Keep them out of XML sitemaps and do not optimize them as Search targets.
+- Do not disable or robots-block feed functionality solely for SEO without a separate technical reason.
