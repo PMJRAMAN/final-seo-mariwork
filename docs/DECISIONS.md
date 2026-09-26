@@ -2592,3 +2592,21 @@ Google requires Product structured-data images to represent the marked-up Produc
 - Redirect ownership is intentionally centralized at the server layer.
 - Rank Math remains the default SEO owner for supported metadata/schema/canonical/sitemap concerns, but redirects are an explicit Nginx-owned exception.
 - Future migration tasks must inspect current Nginx redirect state before proposing new redirect rules.
+
+
+## DEC-068 — Canary Size and Rollout Rules by Change Class
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** CANARY / ROLLOUT / FAMILY-LEVEL SEO CHANGES
+
+### Accepted target state
+- For repeatable family-level SEO changes, the default Canary is 5 representative URLs before wider rollout.
+- Canary URLs must be representative rather than random and should cover high-value, normal and edge-case behavior where applicable.
+- Wider rollout requires successful Codex QA and ChatGPT Final QA on the Canary.
+- If regression is found, stop rollout and correct or roll back the Canary before scaling.
+- Single-page changes do not require a separate Canary beyond normal page QA.
+- Five URLs is a default, not an inflexible rule; higher-risk changes may require a specially designed Canary.
+
+### Consequences
+- Broad changes are validated on a controlled representative sample before scaling.
+- Canary size can be adjusted when the change class or risk profile justifies it.
