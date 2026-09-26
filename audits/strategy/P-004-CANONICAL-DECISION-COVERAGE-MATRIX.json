@@ -1,10 +1,10 @@
 {
   "artifact": "P-004 canonical decision coverage matrix",
-  "generated_at": "2026-09-25",
+  "generated_at": "2026-09-26",
   "baseline": "strategy/DECISION-BACKLOG.md after P-003",
   "production_writes": 0,
   "verdict": "ZERO_UNEXPLAINED_MATERIAL_GAPS",
-  "decision_count": 120,
+  "decision_count": 129,
   "rows": [
     {
       "id": "P4-001",
@@ -1094,6 +1094,89 @@
       "authority_ref": "No current public policy pages in current census; revisit on discovery",
       "classification": "NOT_APPLICABLE_TO_CURRENT_SITE",
       "material_gap": false
+    },
+    {
+      "id": "P4-122",
+      "domain": "CONTENT_STRATEGY",
+      "topic": "Semantic positioning and Product value pillars",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-121; strategy/SEMANTIC-POSITIONING.md",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-123",
+      "domain": "CONTENT_STRATEGY",
+      "topic": "Topic/keyword cluster research and prioritization",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-122",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-124",
+      "domain": "CONTENT_STRATEGY",
+      "topic": "Cluster-to-page-family ownership",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-123",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-125",
+      "domain": "CONTENT_STRATEGY",
+      "topic": "Content journey and cluster coverage",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-124",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-126",
+      "domain": "CONTENT_STRATEGY",
+      "topic": "Product/brand claim evidence standard",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-125",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-127",
+      "domain": "BRAND",
+      "topic": "Official social-profile/contact registry policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-127",
+      "classification": "COVERED_EXACT",
+      "material_gap": false,
+      "notes": "Exact owner-supplied handles/URLs/contact values remain an implementation/input blocker, not an unresolved policy decision."
+    },
+    {
+      "id": "P4-128",
+      "domain": "LEGACY",
+      "topic": "Other removed-content legacy URL disposition",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-128",
+      "classification": "COVERED_EXACT",
+      "material_gap": false,
+      "notes": "Exact URL-level disposition may require owner/source identity evidence; policy is resolved."
+    },
+    {
+      "id": "P4-129",
+      "domain": "AI_DISCOVERABILITY",
+      "topic": "AI assistant/generative-answer discoverability and citation strategy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-129; strategy/AI-ASSISTANT-DISCOVERABILITY.md",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-130",
+      "domain": "ARCHIVE_CONTENT",
+      "topic": "Durable indexable archive/hub visible content-block standard",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-130",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
     }
   ],
   "unexplained_material_gaps": [],
@@ -1101,6 +1184,9 @@
     "DEFERRED rows are intentionally gated and cannot unlock implementation.",
     "SUPERSEDED DEC-055 and DEC-058 remain for traceability but do not unlock execution.",
     "Evidence/QA-only rows are intentionally not promoted to target-state decisions.",
-    "Current-site NOT_APPLICABLE classifications must be revisited if new entities are discovered."
+    "Current-site NOT_APPLICABLE classifications must be revisited if new entities are discovered.",
+    "Pre-Strategy-Lock refresh on 2026-09-26 added coverage for DEC-121–125 and DEC-127–130.",
+    "There is no DEC-126; the stable ID gap is preserved and decisions are not renumbered.",
+    "ACCEPTED_WITH_TARGETED_EVIDENCE and ACCEPTED_WITH_RESEARCH resolve policy but still require scoped evidence/research before affected execution items can become READY_FOR_TASK."
   ]
 }
