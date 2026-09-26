@@ -425,9 +425,10 @@ Rules:
 
 - Durable Magazine hubs: Educational Articles (71) and History (142).
 - Artists (18) is transitional migration infrastructure for the new Artists project, not an ordinary empty-category deletion target.
-- After the new Artists system is public/stable: identity-matched historical Artist URLs redirect one-to-one to new Artist profiles.
-- Historical Artist URLs with no matching new profile redirect to the main Artists landing page.
-- The old Artists category/archive consolidates to the main new Artists landing page.
+- After the new Artists system is public/stable, historical individual Artist URLs are reviewed manually under DEC-066.
+- Use 301 only when a genuine verified Artist-profile successor exists; otherwise proper 404 is allowed.
+- Do not precommit unmatched historical Artist URLs to the Artists hub and do not infer identity from slug/name similarity.
+- The old Artists category/archive may consolidate to the new Artists hub only when collection-level equivalence is verified.
 - Never redirect to draft/private/non-public Artist targets; identity matching must be real, not slug-only.
 - All other empty Blog Categories are approved for controlled deletion.
 - Retired non-Artist category URLs redirect only when a genuine semantic successor exists; otherwise they return 404.
@@ -795,8 +796,8 @@ Rules:
 - Relevant History content belongs to the Magazine editorial architecture.
 - Artist-focused Magazine Articles are editorial content, not Mariwork Artist profiles.
 - `/artists/` and its profiles represent the separate Mariwork Artists directory/project.
-- Historical Artist URL migration remains governed by DEC-028 and is not reopened by DEC-052.
-- Artist selection, publishing volume, and detailed History editorial planning remain later content-strategy decisions.
+- Historical individual Artist URL disposition is governed by DEC-066: manual post-launch review, verified one-to-one 301 only where a genuine successor exists, otherwise proper 404; no unmatched-Artist fallback to the hub.
+- Artist selection, publishing volume, and detailed History editorial planning remain later content-strategy work.
 
 
 ## DEC-053 — Canonical Mariwork Facts and Naming-Consistency Registry
