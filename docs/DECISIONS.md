@@ -2,6 +2,8 @@
 
 Accepted decisions override lower-level workflow/playbook text when applicable, but never override Manifest without formal Manifest change.
 
+**Current target-state authority note:** this file preserves historical proposals/amendments and may contain repeated headings for the same DEC ID. For machine parsing and current accepted target state, `strategy/DECISION-BACKLOG.md` and `strategy/ACCEPTED-DECISIONS.md` are authoritative.
+
 ## SEO-001 — Dual Audit Mandatory
 **Status:** Accepted  
 **Date:** 2026-09-24  
@@ -227,11 +229,11 @@ Detailed rule: `docs/DECISION-TO-EXECUTION-GOVERNANCE.md`.
 
 The **coverage/structure** of the Mariwork SEO Decision Backlog is frozen as v1 after P-001 through P-004 reconciliation.
 
-Canonical decision range:
+Historical canonical range at the P-004 freeze:
 
 `DEC-001`–`DEC-120`
 
-P-004 reports zero unexplained material decision-domain gaps.
+The current Decision Backlog later expanded through `DEC-130`; `DEC-126` remains an intentionally unused/reserved ID. P-004 reports zero unexplained material decision-domain gaps for its historical freeze scope.
 
 This freeze means the project may begin owner + ChatGPT decision sessions using the Decision Backlog as the canonical strategy queue.
 
