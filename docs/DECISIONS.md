@@ -2746,3 +2746,21 @@ Google requires Product structured-data images to represent the marked-up Produc
 - JS/AJAX remains allowed for UX and dynamic behavior.
 - Do not rewrite working dynamic components merely because they use JavaScript.
 - Exact implementation changes require representative initial-HTML and rendered-DOM evidence proving a discoverability issue.
+
+
+## DEC-078 — Preferred Host / Protocol / Trailing-Slash and URL Normalization Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** URL NORMALIZATION / HOST / HTTPS / TRAILING SLASH
+
+### Accepted target state
+- Preserve `https://www.mariwork.ir/` as Mariwork's preferred canonical host/protocol.
+- Do not introduce a new non-www migration without a separate evidence-backed architecture decision.
+- Equivalent HTTP and non-www variants should consolidate to the preferred HTTPS `www` form.
+- Preserve the site's established trailing-slash convention for normal content URLs and normalize equivalent alternate spellings consistently.
+- Do not change established durable slugs merely for cosmetic normalization.
+- Nginx remains the technical redirect owner under DEC-067.
+
+### Consequences
+- Mariwork avoids an unnecessary host migration with no separate SEO objective.
+- Future canonical/redirect QA uses the existing HTTPS + www URL form as the normalization baseline.
