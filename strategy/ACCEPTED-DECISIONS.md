@@ -1333,3 +1333,24 @@ Rules:
 - Group by intent/problem/topic, not keyword variants.
 - Prioritize with relevance, evidence, user value, GSC/SERP data and realistic opportunity.
 - Search demand refines expression/priorities; it does not invent positioning.
+
+
+## DEC-123 — Cluster-to-Page-Family Ownership Map
+**Status:** ACCEPTED
+- One primary durable owner per approved topic/query cluster.
+- Avoid duplicate ownership, doorway variants and parallel same-intent pages.
+- Supporting pages may contribute only with distinct roles.
+- Final mapping remains evidence-based.
+
+## DEC-124 — Content Journey and Coverage Strategy by Cluster
+**Status:** ACCEPTED
+- Build coherent content journeys, not isolated pages.
+- Cover awareness → understanding → instruction/comparison → product selection/use/care as relevant.
+- Distinct page roles and useful cross-family handoffs; no duplicated coverage for volume alone.
+
+## DEC-125 — Product/Brand Claim Evidence Standard
+**Status:** ACCEPTED
+- Product/brand claims require claim-appropriate evidence.
+- Verified specs/instructions, documented tests, reliable business data or credible sources may support claims.
+- Marketing attractiveness alone is not evidence.
+- Comparative/superiority and safety claims require especially strong support.
