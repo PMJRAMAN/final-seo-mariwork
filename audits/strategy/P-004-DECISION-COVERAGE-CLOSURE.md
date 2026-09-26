@@ -1,9 +1,9 @@
 # P-004 — Canonical Decision Coverage Closure
 
-**Date:** 2026-09-25  
+**Date:** 2026-09-26  
 **Production writes:** 0  
-**Decision Backlog count:** 120  
-**Coverage matrix:** 121 rows  
+**Decision Backlog count:** 129  
+**Coverage matrix:** 130 rows  
 **Verdict:** `ZERO_UNEXPLAINED_MATERIAL_GAPS`
 
 ## Result
@@ -50,7 +50,12 @@ The matrix explicitly covers:
 - Rank Math / technical owner matrix;
 - legacy migrations;
 - canary/measurement/monitoring/maintenance;
-- deferred External PR, Merchant/feed and Reviews programs.
+- deferred External PR, Merchant/feed and Reviews programs;
+- semantic positioning/value pillars and claim-evidence boundaries;
+- topic/cluster research, page-family ownership and journey strategy;
+- AI-assistant/generative-answer discoverability and citation strategy;
+- durable indexable archive/hub content-block standard;
+- verified social/contact registry policy and other removed-content legacy disposition.
 
 ## Explicit non-decision classifications
 
@@ -93,3 +98,22 @@ It does **not** mean:
 - the list can never change if future site discovery reveals a new material domain.
 
 Future newly discovered material choices must enter the backlog through the existing governance/change-control process.
+
+
+## Pre-Strategy-Lock refresh — 2026-09-26
+
+After owner + ChatGPT decision sessions:
+
+- all non-deferred target-state decisions are resolved;
+- DEC-121–125 and DEC-127–130 were added after the original v1 coverage freeze and are now included in the canonical matrix;
+- DEC-121 and DEC-129 are foundational strategy decisions;
+- DEC-127/128 have accepted policy with exact owner/source inputs still pending where applicable;
+- DEC-028/052 were reconciled with DEC-066 so unmatched historical Artist URLs are no longer precommitted to the Artists hub;
+- internal-link strategy/matrix were reconciled with DEC-040–048 and DEC-120;
+- Visual and Video strategy documents were promoted from planned/draft strategy to accepted frameworks with explicit evidence gates.
+
+The canonical coverage verdict remains:
+
+`ZERO_UNEXPLAINED_MATERIAL_GAPS`
+
+This does not make evidence/research inputs disappear. It means remaining unknowns are implementation/research inputs under accepted policy, not missing target-state decisions.
