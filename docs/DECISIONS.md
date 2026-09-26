@@ -1221,14 +1221,16 @@ Their detailed presentation/content treatment remains governed separately.
 A new Artists project is in development and is expected to become public shortly.
 
 Once the new Artists system is public and stable:
-- if a historical Artist entity can be confidently identity-matched to a new Artist profile, redirect the old Artist URL one-to-one to that new profile;
-- if a historical Artist entity has no matching profile in the new system, redirect that historical Artist URL to the main new Artists landing page;
-- the old Artists category/archive should consolidate to the main new Artists landing page;
+- historical individual Artist URLs are reviewed manually under DEC-066;
+- if a historical Artist entity can be confidently identity-matched to a genuine new Artist profile, redirect that old Artist URL one-to-one to the new profile;
+- if no genuine successor exists, a proper 404 is allowed;
+- do not precommit unmatched historical Artist URLs to the Artists hub;
+- the old Artists category/archive may consolidate to the main new Artists landing page only when the collection-level equivalence is verified;
 - do not redirect Artist URLs to draft, private, or otherwise non-public targets.
 
-Identity matching must be based on actual Artist identity, not slug similarity alone.
+Identity matching must be based on actual Artist identity, not slug or name similarity alone.
 
-**Amendment:** DEC-066 supersedes the fallback disposition for historical Artist URLs. Final per-URL disposition is deferred until the new `/artists/` system is public and stable; after launch, historical Artist URLs are reviewed manually and may receive a verified 301 or a proper 404. Unmatched Artist URLs are no longer precommitted to redirect to the Artists hub.
+**Amendment integrated:** DEC-066 supersedes only the historical individual-Artist fallback previously stated here.
 
 ### Other empty Blog Categories
 
@@ -2248,13 +2250,15 @@ Video sitemap inclusion is limited to verified eligible watch pages and is final
 - History content about art, fabric painting, hand printing, techniques, movements, and relevant artists belongs to the Magazine editorial architecture.
 - A Magazine Article about an artist is editorial content and is not an Artist profile merely because its subject is an artist.
 - The future `/artists/` hub and its profiles represent the separate Mariwork Artists directory/project.
-- Historical Artist URL migration remains governed by DEC-028: use one-to-one identity-matched redirects to new Artist profiles where a real match exists; otherwise use the main Artists hub as the approved fallback, and consolidate the old Artists archive to that hub after the new system is public and stable.
+- Historical Artist URL disposition is governed by DEC-066. After the new Artists system is public and stable, review historical individual Artist URLs manually: use a one-to-one 301 only when a genuine verified Artist-profile successor exists; otherwise a proper 404 is allowed.
+- Do not precommit unmatched historical Artist URLs to the Artists hub and do not infer Artist identity from slug/name similarity.
+- The old Artists category/archive may consolidate to the new Artists hub only after launch and only when the collection-level equivalence is verified.
 - DEC-052 does not define which artists must be covered, publishing volume, or a detailed History editorial calendar.
 
 ### Consequences
 
 - Magazine History/artist editorial content and Mariwork Artist profiles remain separate content families with separate roles.
-- DEC-052 does not supersede or reopen the Artists migration policy accepted in DEC-028.
+- DEC-066 supersedes the earlier unmatched-Artist fallback wording previously referenced by DEC-028/052.
 - Detailed History editorial planning remains a later content-strategy decision.
 
 
