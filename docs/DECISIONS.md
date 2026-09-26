@@ -2610,3 +2610,44 @@ Google requires Product structured-data images to represent the marked-up Produc
 ### Consequences
 - Broad changes are validated on a controlled representative sample before scaling.
 - Canary size can be adjusted when the change class or risk profile justifies it.
+
+
+## DEC-069 — Monitoring Windows and Core Success Metrics
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** MONITORING / MEASUREMENT / POST-CHANGE QA
+
+### Accepted target state
+- Use 28-day and 56-day post-change monitoring windows as default checkpoints.
+- Compare against appropriate comparable pre-change windows.
+- Core Search metrics: clicks, impressions, CTR and average position.
+- Add business conversion/revenue metrics only where tracking is reliable and attribution is meaningful for the reviewed change.
+- Seasonality, data volume or change class may justify a different window, but the exception must be documented.
+
+### Consequences
+- Changes are not judged from short-term noise alone.
+- Search and business metrics remain distinct and are combined only where measurement quality supports it.
+
+## DEC-070 — Strategy Lock Scope for Implementation Waves
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** GOVERNANCE / STRATEGY LOCK / EXECUTION WAVES
+
+### Accepted target state
+- Create a Strategy Lock per coherent implementation scope once all blocking decisions for that scope are accepted.
+- Mariwork does not need to wait for every Decision Backlog item sitewide before beginning execution.
+- A locked scope may generate its own ordered Execution Backlog and proceed through controlled implementation while unrelated scopes remain in strategy.
+- Scope boundaries and dependencies must be explicit so a rollout cannot silently depend on unresolved decisions outside its Strategy Lock.
+
+### Consequences
+- Strategy can advance to implementation in coherent waves rather than one sitewide all-or-nothing release.
+
+## DEC-071 — External PR / Advertorial Strategy
+**Status:** Deferred  
+**Date:** 2026-09-26  
+**Scope:** EXTERNAL PR / ADVERTORIAL / EXTERNAL AMPLIFICATION
+
+### Deferred state
+- Do not design or launch the planned external PR/advertorial program until internal query ownership, target landing pages, content architecture and internal-link architecture are sufficiently stable.
+- Ordinary earned mentions are not prohibited; the deferment applies to the planned paid/strategic external amplification program.
+- Reopen this decision after the internal architecture and target pages are stable.
