@@ -2875,3 +2875,39 @@ Google requires Product structured-data images to represent the marked-up Produc
 - Do not keyword-stuff filenames or encode inferred visual/Product facts.
 - Do not bulk-rename historical media merely for SEO.
 - Historical media renaming requires a separate justified migration need because file/URL changes create reference and migration risk.
+
+
+## DEC-090 — Primary / Representative Image, Gallery Consistency and Duplicate/Reuse Policy
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26  
+**Scope:** IMAGE REUSE / REPRESENTATIVE IMAGERY / GALLERY BOUNDARY
+
+### Accepted target state
+- SEO does not redefine Product gallery composition already governed by Product/design decisions under DEC-056.
+- Reusing the same image across multiple pages is allowed when the image is genuinely relevant and factually accurate for each context.
+- Image duplication alone is not an SEO defect.
+- Primary/representative Product imagery remains governed by approved Product-family rules.
+- Representative visual review is required before corrective implementation where factual mismatch, misleading reuse or discoverability issues are suspected.
+
+## DEC-091 — Image Context, Caption and Linked-Image Behavior Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** IMAGE CONTEXT / CAPTIONS / LINKED IMAGES
+
+### Accepted target state
+- Captions are optional and used only when they add useful context, identification or explanation.
+- Do not add captions mechanically for SEO.
+- Image links must have a relevant, intentional destination.
+- Do not link images merely to create extra internal links.
+- Linked-image ALT behavior remains governed by DEC-054.
+
+## DEC-092 — Image Discovery / Indexability / Sitemap Treatment
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26  
+**Scope:** IMAGE DISCOVERY / CRAWLABILITY / IMAGE SITEMAPS
+
+### Accepted target state
+- Important images on indexable pages should remain technically crawlable/loadable unless there is a deliberate reason to block them.
+- Do not mandate a separate image sitemap by default.
+- Evaluate dedicated image-discovery mechanisms only when later evidence shows a real coverage/discovery need or benefit.
+- Exact crawl/index implementation requires targeted technical evidence.
