@@ -1,6 +1,6 @@
 # AI Assistant / Generative-Answer Discoverability Strategy
 
-**Status:** DRAFT / DECISION PENDING  
+**Status:** ACCEPTED STRATEGY FRAMEWORK / IMPLEMENTATION RESEARCH PENDING  
 **Primary Decision:** DEC-129  
 **Created:** 2026-09-26  
 **Scope:** ChatGPT Search, Microsoft Copilot/Bing AI, Google generative Search features, and other evidence-backed AI answer surfaces.
@@ -156,9 +156,9 @@ No single metric should be treated as a universal AI ranking score.
 - DEC-071 / DEC-101: external PR/entity evidence, deferred.
 - DEC-129: governs the final AI-assistant / generative-answer content strategy.
 
-## Decision Work Still Required
+## Downstream Research and Implementation Work
 
-DEC-129 must later define and approve:
+DEC-129 is accepted. Downstream work must operationalize:
 1. priority AI platforms/surfaces for Mariwork;
 2. conversational-intent research method;
 3. AI-specific content quality checklist by page family;
@@ -168,4 +168,4 @@ DEC-129 must later define and approve:
 7. whether any platform-specific files/protocols are justified by documented support;
 8. canary and QA rules for AI-focused content changes.
 
-No Production implementation is authorized by this draft.
+No Production implementation is authorized until the accepted framework is converted into scoped Strategy Locks and Execution Backlog items.
