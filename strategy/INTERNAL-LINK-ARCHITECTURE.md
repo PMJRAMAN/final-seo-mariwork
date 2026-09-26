@@ -1,84 +1,75 @@
 # Internal Link Architecture
 
-**Status:** INITIAL / NOT APPROVED
-**Authority:** Round-1 evidence may propose rules; ChatGPT Second Review + human approval defines the target architecture before implementation.
+**Status:** ACCEPTED STRATEGY FRAMEWORK  
+**Authority:** DEC-040 through DEC-048, DEC-120  
+**Date:** 2026-09-26
 
 ## Purpose
 
-Create a consistent internal-link network across Mariwork so links are not added or omitted randomly between equivalent pages.
+Create a consistent crawlable internal-link system across Mariwork without forcing irrelevant links or link-count targets.
 
-The system must answer, for each content/product family:
-
-1. Which links are mandatory on every relevant page?
-2. Which links are required only for a specific family?
-3. Which links are contextual and should appear only when genuinely relevant?
-4. Which Academy/Article pages should link back to Products or Categories?
-5. Which pages are orphaned or underlinked?
-6. Which current links are irrelevant, duplicated or inconsistent?
-
-## Link Classes
+## Accepted link classes
 
 ### CORE / MANDATORY
-
-Links that every relevant entity in a defined family should contain.
-
-Example pattern:
-- if a fixation guide is a core instruction for all fabric-color products, every fabric-color product must link to it unless a documented exception exists.
+Links required across every applicable entity in a defined family. These are primarily durable parent/hub relationships and other explicitly approved structural links.
 
 ### FAMILY-SPECIFIC
-
-Links required only for a particular family.
-
-Examples:
-- medium products → usage guide for that medium/family;
-- printing tools → relevant printing technique;
-- sets → color-selection/mixing guidance where relevant.
+Links required only when a defined family condition is present.
 
 ### CONTEXTUAL / OPTIONAL
+Links added only when the page topic or user task makes them genuinely useful. They have no sitewide coverage quota.
 
-Links added only when the page topic or user task makes them useful.
+## Accepted hierarchy rules
 
-They must not be mass-added merely to increase link count.
+- Product → stable primary Product Category → Shop.
+- Child Product Category → real parent Product Category → Shop.
+- Current Guide → One-Minute Guides collection → Academy.
+- Future genuine Lesson → Course → Academy.
+- Article → stable primary Blog Category → Magazine.
+- Multi-parent entities use one deliberate stable primary hierarchy.
+- The relationship may be supplied by breadcrumb, navigation, taxonomy UI or another crawlable component; body-copy boilerplate is not required.
 
-## Bidirectional Architecture
+## Cross-family rules
 
-Where useful, relationships should work in both directions:
+- Product → Academy/Article only when the destination directly helps selection, preparation, use, application, fixation/cure, care or another real Product task.
+- Academy/Lesson → Product/Category only when the Product/material/tool is actually used, required or a direct useful next step.
+- Article → Product/Category only when the commercial destination genuinely supports the article topic.
+- Article → Article/Academy only for a real continuation, deeper detail, prerequisite, complementary reference or practical follow-up.
+- Product Category → Academy/Article becomes appropriate when the Category is developed into a content-supported landing page and the education/reference destination directly supports that Category.
+- No fixed number of cross-family links is required.
 
-- Product → Academy / Article
-- Category → Academy / Article
-- Academy / Article → relevant Product
-- Academy / Article → relevant Product Category
+## Global navigation
 
-Commercial links from informational content must be useful and contextually justified, not forced.
+Header/Footer/Navigation expose important durable hubs and essential user destinations only.
 
-## Required Deliverables
+Do not inflate global navigation with SEO-driven link inventories. Topic-, Product- and context-specific relationships remain body/context concerns.
 
-- family-level Internal Link Requirement Matrix;
-- list of mandatory destinations per family;
-- family-specific destination rules;
-- contextual-link candidates;
-- reverse-link rules from Academy/Articles;
-- missing-link coverage report;
-- orphan/underlinked page report;
-- documented exceptions;
-- implementation-ready target links for each approved page/family;
-- final regression against the approved matrix.
+## Anchor text
 
-## Example Matrix Structure
+Anchors are concise, natural, descriptive and accurate to the destination.
 
-| Source family | Link class | Target family/entity | Requirement | Notes |
-|---|---|---|---|---|
-| Fabric Colors | CORE/MANDATORY | Fixation guide | Required on every fabric-color product | Final target TBD after review |
-| Fabric Colors | FAMILY-SPECIFIC | Washing/care guide | Required if applicable to all products in family | Verify content scope |
-| Mediums | FAMILY-SPECIFIC | Matching medium guide | Required for that medium family | Avoid unrelated guides |
-| Any content | CONTEXTUAL/OPTIONAL | Related article/lesson/product | Only when semantically useful | No forced sitewide insertion |
+- no forced exact-match repetition;
+- no invented query-target anchors;
+- natural variation is allowed;
+- avoid generic anchors such as “click here” when a meaningful phrase is naturally available.
 
-## QA Rule
+## Orphan / underlinked definitions
 
-Equivalent pages in the same family must not randomly differ in mandatory-link coverage.
+- **Orphan:** an important indexable page with an assigned role has no meaningful crawlable path from the intended architecture.
+- **Underlinked:** the page is reachable but is missing a required relationship defined by the accepted family rules/matrix.
+- No universal minimum inbound-link count defines adequacy.
+- Utility, noindex, temporary and deliberate non-search pages may be documented exceptions.
 
-Any missing mandatory link must be either:
-- fixed; or
-- documented as an approved exception.
+## Canonical requirement matrix
 
-Final sitewide QA must validate the implemented network against this document and the approved matrix.
+The canonical family matrix is:
+
+`strategy/INTERNAL-LINK-REQUIREMENT-MATRIX.md`
+
+Exact destination URLs, anchors and page-level exceptions are implementation/research data, not new strategy decisions, provided they remain inside the accepted rules above.
+
+## QA
+
+Equivalent pages in the same family must not randomly differ in mandatory-link coverage. Any missing mandatory relationship must be fixed or documented as an approved exception.
+
+No Production write is authorized by this strategy file alone.
