@@ -1260,3 +1260,24 @@ Rules:
 - No invented SEO values.
 - Visible policy and structured data must agree.
 - Verify actual rules before implementation.
+
+
+## DEC-114 — Homepage Visible Content and CTA Structure
+**Status:** ACCEPTED
+- Homepage is the main brand/entity gateway and cross-family navigation hub.
+- Keep brand introduction concise and useful.
+- Use CTAs toward major durable hubs.
+- No long SEO-first filler sections.
+
+## DEC-115 — Durable Product Category Title/H1 Naming Standard
+**Status:** ACCEPTED
+- H1 is concise and based on the real category/family identity.
+- Brand and extra modifiers are not mandatory in H1.
+- Title may be more descriptive when research supports it.
+- Final wording comes later from keyword/query ownership.
+
+## DEC-116 — pa_volume Title/H1 Naming Standard
+**Status:** ACCEPTED
+- Do not use bare 30ml/60ml/250ml as the complete H1/title.
+- Naming must state the relevant product family/intent.
+- Human-facing H1 and Search-oriented Title may differ where justified.
