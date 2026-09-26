@@ -1216,3 +1216,23 @@ Rules:
 - WordPress/RSS/feed URLs are system distribution endpoints, not SEO landing pages.
 - Keep them out of XML sitemaps and do not optimize them as Search targets.
 - Do not disable or robots-block feed functionality solely for SEO without a separate technical reason.
+
+
+## DEC-108 — General Internal-Search Result URL Policy
+**Status:** ACCEPTED
+- Internal-search URLs are utility/noindex and excluded from XML sitemaps.
+- Preserve search functionality and allow crawlers to read noindex.
+
+## DEC-109 — 404 / Soft-404 / Error-Page Lifecycle Policy
+**Status:** ACCEPTED
+- No genuine successor: proper 404/410.
+- Verified semantic successor: permanent 301 via Nginx.
+- Helpful error UX must retain the correct HTTP error status.
+- No generic fallback redirects merely to eliminate 404s.
+
+## DEC-110 — Search-Crawler Access / Training-Crawler Separation
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- Keep public SEO targets accessible to legitimate Search crawlers including Googlebot and OAI-SearchBot.
+- Treat OAI-SearchBot Search eligibility separately from GPTBot training use and ChatGPT-User.
+- Verify robots/WAF/server access before implementation.
+- AI citation/content strategy is separately governed by DEC-129.
