@@ -3286,3 +3286,42 @@ This applies to:
 - empty or temporary archives;
 - non-search machine endpoints;
 - any archive explicitly retired or excluded by another accepted decision.
+
+
+## DEC-120 — Global Header/Footer/Navigation SEO Link Architecture
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Global Header/Footer/Navigation should expose important durable hubs and essential user destinations.
+- Do not inflate global navigation with large numbers of SEO-driven links.
+- Topic-, Product- and context-specific relationships remain contextual/body-link concerns under DEC-040–048.
+- Global exposure follows real site architecture, not keyword-count goals.
+
+## DEC-121 — Semantic Positioning and Product Value Pillars
+**Status:** Accepted — Foundational Content-Strategy Decision  
+**Date:** 2026-09-26
+
+### Foundation rule
+Mariwork's content strategy begins with an explicit semantic positioning and approved Product/brand value pillars. Keyword research, topic clustering, page ownership and content production are downstream from this foundation.
+
+Candidate/approved strategic directions include:
+- fabric suitability;
+- application quality;
+- durability/stability;
+- compatibility;
+- economic value.
+
+Economic value does not mean lowest price. The intended angle is value created by useful performance, quality, reduced waste/rework or other evidence-backed efficiency.
+
+### Evidence boundary
+- Exact mechanisms, technical explanations, durability/performance claims, comparative claims and superiority claims require evidence before publication.
+- Search demand may refine wording and prioritization, but it does not create or redefine Mariwork's factual positioning.
+- DEC-121 is upstream of DEC-122–125 and later content-planning decisions.
+
+## DEC-122 — Topic / Keyword Cluster Research and Prioritization
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Perform topic/keyword research after and within the semantic frame established by DEC-121.
+- Group demand by user intent/problem/topic clusters rather than isolated keyword variants.
+- Prioritize using Mariwork relevance, evidence, user value, GSC/search evidence and realistic opportunity.
+- Search data may refine phrasing and priority, but cannot override factual Product/brand boundaries or manufacture unsupported positioning.
+- Do not infer Page→Query ownership without joined evidence.
