@@ -2837,3 +2837,41 @@ Google requires Product structured-data images to represent the marked-up Produc
 - FAQ structured data must not be treated as a guaranteed rich-result strategy.
 - Semantic correctness and visible-content consistency come first.
 - Do not publish hidden or fabricated FAQ content solely for markup.
+
+
+## DEC-087 — Stores / Location / NAP and Local-Trust Content Role
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** STORES / LOCATION / NAP / LOCAL TRUST
+
+### Accepted target state
+- The Stores/location surface represents `فروشگاه‌های عرضه‌کننده محصولات ماری‌ورک`.
+- Do not describe these locations as official/exclusive representatives, branches or Mariwork-owned stores by default.
+- Publish only verified store/location/address/contact facts.
+- A stronger representation/ownership label requires separate evidence for that specific location.
+- Page naming and copy must avoid implying ownership or representation that has not been verified.
+
+## DEC-088 — Informational Article / Academy Commercial CTA Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** MAGAZINE / ACADEMY / COMMERCIAL CTA
+
+### Accepted target state
+- Commercial CTAs in Magazine and Academy content are optional and relevance-driven.
+- Add a Product/Category purchase CTA only when it is a genuinely useful next step for the specific content.
+- Do not impose fixed CTA counts.
+- Do not add commercial CTAs merely for SEO or conversion density.
+- Internal-link requirements remain governed separately by DEC-042–046.
+
+## DEC-089 — Image Filename and Media Naming Policy for New Assets
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** IMAGE FILENAMES / NEW MEDIA / NAMING
+
+### Accepted target state
+- New image/media filenames should be short, descriptive and stable.
+- Base filenames only on verified facts.
+- Prefer lowercase Latin words separated with hyphens where practical.
+- Do not keyword-stuff filenames or encode inferred visual/Product facts.
+- Do not bulk-rename historical media merely for SEO.
+- Historical media renaming requires a separate justified migration need because file/URL changes create reference and migration risk.
