@@ -1177,6 +1177,52 @@
       "authority_ref": "DEC-130",
       "classification": "COVERED_EXACT",
       "material_gap": false
+    },
+    {
+      "id": "P4-131",
+      "domain": "SITE_ARCHITECTURE",
+      "topic": "Durable site-family roles",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-001",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-132",
+      "domain": "TECHNICAL",
+      "topic": "Sitewide sitemap membership by family",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-030",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-133",
+      "domain": "EDITORIAL_ARTISTS",
+      "topic": "History / Artists content-family boundary",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-052; DEC-066",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-134",
+      "domain": "SYSTEM_ARCHIVES",
+      "topic": "Author/date archive public/indexability policy",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-062",
+      "classification": "COVERED_EXACT",
+      "material_gap": false
+    },
+    {
+      "id": "P4-135",
+      "domain": "VIDEO",
+      "topic": "Superseded broad video policy traceability",
+      "authority_type": "DEC",
+      "authority_ref": "DEC-058",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "material_gap": false,
+      "notes": "Superseded by atomic video decisions; retained only for traceability."
     }
   ],
   "unexplained_material_gaps": [],
@@ -1187,6 +1233,7 @@
     "Current-site NOT_APPLICABLE classifications must be revisited if new entities are discovered.",
     "Pre-Strategy-Lock refresh on 2026-09-26 added coverage for DEC-121–125 and DEC-127–130.",
     "There is no DEC-126; the stable ID gap is preserved and decisions are not renumbered.",
-    "ACCEPTED_WITH_TARGETED_EVIDENCE and ACCEPTED_WITH_RESEARCH resolve policy but still require scoped evidence/research before affected execution items can become READY_FOR_TASK."
+    "ACCEPTED_WITH_TARGETED_EVIDENCE and ACCEPTED_WITH_RESEARCH resolve policy but still require scoped evidence/research before affected execution items can become READY_FOR_TASK.",
+    "Every Decision Backlog record is now explicitly referenceable in the canonical coverage matrix; umbrella/range coverage is supplemented by direct rows where useful for machine traceability."
   ]
 }
