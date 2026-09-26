@@ -468,7 +468,7 @@ instead of:
 Rules:
 - By default, Product SEO `<title>` should match the approved visible Product title/H1.
 - Do not automatically append the site name when the Product title already contains sufficient Product/brand identity.
-- Avoid repetitive family-wide boilerplate such as `Product Name - رنگ پارچه ماری ورک`.
+- Avoid repetitive family-wide boilerplate such as the historical non-canonical `Product Name - رنگ پارچه ماری ورک`.
 - A page-specific SEO title may differ only when a concise factual distinction materially improves clarity.
 - Do not use SEO-title exceptions for keyword expansion or artificial brand insertion.
 - Third-party/generic Products must not receive Mariwork branding merely through the SEO-title template.
@@ -484,7 +484,7 @@ Rules:
 
 ### Accepted target state
 
-Static/Core pages use concise, page-specific SEO titles and clear visible H1s. Repetitive global suffixes such as `- رنگ پارچه ماری ورک` are not required when a shorter branded page title already identifies the page.
+Static/Core pages use concise, page-specific SEO titles and clear visible H1s. Repetitive global suffixes such as the historical non-canonical `- رنگ پارچه ماری ورک` are not required when a shorter branded page title already identifies the page.
 
 Approved targets:
 - About: SEO title `درباره ماری‌ورک`; H1 `درباره ماری‌ورک`. Existing creative tagline may remain as supporting copy, not the sole H1.
@@ -519,8 +519,8 @@ Default relationship:
 Rules:
 - Use one clear, descriptive primary H1.
 - By default, the SEO `<title>` uses the approved Article title without an automatic site-wide keyword suffix.
-- Remove the repetitive `- رنگ پارچه ماری ورک` suffix from the default Article title template.
-- Include terms such as `رنگ پارچه` or `ماری ورک` only when they naturally describe the Article's actual subject.
+- Remove the historical non-canonical `- رنگ پارچه ماری ورک` suffix from the default Article title template.
+- Include terms such as `رنگ پارچه` or canonical `ماری‌ورک` only when they naturally describe the Article's actual subject.
 - Do not mechanically inject keywords, brand terms, dates, “complete guide”, “best”, or similar modifiers merely for SEO.
 - Existing Article titles should be retained when accurate, clear and useful.
 - Rewrite a title only when materially vague, inaccurate, misleading, excessively verbose, or inconsistent with the Article content.
@@ -546,7 +546,7 @@ Default relationships:
 Rules:
 - Use one clear, descriptive primary H1 for every Course and Lesson.
 - Remove the repetitive default `- رنگ پارچه ماری ورک` suffix from Course/Lesson SEO titles.
-- Include `ماری ورک` only when it is naturally part of the actual educational subject or Course identity.
+- Include canonical `ماری‌ورک` only when it is naturally part of the actual educational subject or Course identity.
 - Do not automatically inject brand, product, or keyword terms into generic instructional lessons.
 - Preserve sequence numbers only when they represent a genuine multi-part instructional sequence.
 - Do not infer a sequence merely because legacy titles contain numeric suffixes.
@@ -801,7 +801,7 @@ Lesson:
 - Example: H1 `چاپ سیلک اسکرین`; SEO title `چاپ سیلک اسکرین | آموزش ویدیویی`.
 
 Rules:
-- Do not append the old repetitive `- رنگ پارچه ماری ورک` suffix.
+- Do not append the old historical non-canonical `- رنگ پارچه ماری ورک` suffix.
 - The `آموزش ویدیویی` qualifier is an Academy identity/search-intent signal, not a requirement imposed by Google.
 - Include `ماری‌ورک` only when it naturally belongs to the subject or Course identity.
 - Preserve numeric sequence only for genuine multi-part instructional sequences.
