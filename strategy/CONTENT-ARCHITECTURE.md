@@ -1,108 +1,118 @@
-# Content Architecture — Round 1
+# Content Architecture — Accepted Strategy Framework
 
-**Tasks:** A-018 / A-019 · **Status:** CODEX_AUDITED / PRE-IMPLEMENTATION CLOSURE · **Authority:** initial candidates and closure reconciliation only
-**Framework:** v1.0 · **Date:** 2026-09-24
+**Status:** ACCEPTED STRATEGY FRAMEWORK / IMPLEMENTATION RESEARCH PENDING  
+**Authority:** DEC-001, DEC-007–024, DEC-040–050, DEC-076–077, DEC-085, DEC-088, DEC-115–125, DEC-130  
+**Updated:** 2026-09-26
 
-## Evidence baseline
+## Purpose
 
-The compact foundation contains 555 inventory rows, 167 model-page candidates and 25 policy/system spaces. Evidence contains 501 entities: 440 HTTP 200, 58 HTTP 404 and 3 safety-skipped. Public census: 83 products, 12 posts, 37 Academy lessons, 2 Academy/course rows, 7 product categories, 3 product-volume attributes, 275 product tags and 53 post-tag rows. The GSC export is page-only; **Page-query relationship is not proven by the current export.**
+Define durable content roles so Mariwork does not create overlapping pages, filler content or random keyword-target pages.
 
 ## Durable page roles
 
-| Family | Role / decision | Keep distinct from | Useful modules only when verified |
+| Family | Primary role | Keep distinct from | Useful modules only when justified |
 |---|---|---|---|
-| Shop | commercial entry and discovery | product detail; generated facets | orientation, durable category links |
-| Product category | family comparison/navigation | product detail; tag archives | family definition, products, volume/set paths, education |
-| Fabric-color product | exact color/code/volume selection | generic article; sibling duplicates | decision summary, specs, volume, limitations, siblings, education |
-| Sets/bundles | multi-item selection | individual colors; tag archives | verified contents, volume comparison, components |
-| Mediums/tools | supporting-material selection | generic technique pages | verified function, limitations, relevant technique |
-| Academy/course/lesson | structured learning | product detail; generic article | prerequisites, steps, materials, next lesson |
-| Article | durable reference/comparison | same-intent lesson; tag archives | answer-first explanation, evidence, comparison, next decision |
-| Artists/trust | verified entity/context | product and technique intent | only verified profile/source material |
-| Product Tags / Blog Tags | transitional taxonomy spaces | categories/products/articles | migration evidence only; no per-tag content model |
+| Homepage | Brand/entity gateway + top-level navigation | Shop/category/article | concise brand intro, major hub CTAs |
+| Shop | Broad commercial discovery hub | Product detail; generated facets | orientation, durable category links, short archive content block |
+| Product Category | Family browse/comparison/selection | Product detail; tag archives | family definition, products, selection guidance, relevant education, short archive content block |
+| pa_volume | Cross-family commercial browse by genuine purchasable volume | volume filter parameter; old volume categories | volume role, eligible products, useful comparison, short archive content block |
+| Fabric-color Product | Exact color/code/variant selection | generic article; sibling duplicates | decision summary, verified specs, variant choice, limitations, relevant education |
+| Set/Bundle Product | Multi-item purchasable identity | individual colors; tag archives | verified contents, volume identity, components, use context |
+| Mediums/Tools | Supporting-material selection | generic technique pages | verified function, limitations, relevant technique |
+| Academy / Course / Guide / Lesson | Video-first practical/demo learning | text-first reference Article; Product detail | prerequisites, steps, materials, video context, learning progression |
+| Magazine Article | Text-first explanation/reference/editorial | same-intent Academy lesson; Product detail | answer-first explanation, evidence, comparison, next useful step |
+| Magazine hub | Editorial discovery hub | Article; Blog Category | category blocks, latest/reference discovery, short archive content block |
+| Durable Blog Category | Editorial topic hub | tag archives | category intro, current Articles, relevant cross-family handoff |
+| Artists | Separate Mariwork Artists directory/project when launched | Magazine artist/history Article | verified Artist identity/profile content only |
+| Static trust/support | Specific trust/support task | editorial/commerce duplication | only purpose-specific verified information |
+| Product/Blog Tags | Transitional migration spaces | durable Categories/Articles/Products | no durable content model |
 
-## Internal-link requirement candidates (not final)
+## Product title/H1 standards
 
-### CORE / MANDATORY candidates
+Accepted family rules are DEC-007 through DEC-011.
 
-| Source | Destination | Purpose |
-|---|---|---|
-| Product | Shop + relevant durable category | commercial parent and family context |
-| Product | Relevant Academy/article | answer real preparation/technique questions |
-| Category/Shop | Products + relevant education hub | discovery and decision support |
-| Academy/article | Relevant product/category | explicit commercial next step when justified |
-| Course/lesson | Parent course/Academy | preserve learning hierarchy |
-| Academy/article | Relevant sibling/hub | maintain learning navigation |
+- Fabric Colors: `رنگ پارچه [Color Name] ماری‌ورک کد [NNN]` using verified color/code; no parent-title volume token.
+- Sets/Bundles: concise purchasable identity + genuinely identifying count/type/volume where applicable; long component lists belong in body content.
+- Mediums/Additives: exact Product identity + Mariwork + real code; no forced generic “medium”; no volume in this family title.
+- Tools/Accessories: brand ownership must be factual; third-party items are not relabeled Mariwork.
+- Woo Product title/H1 is the primary visible identity; default Rank Math Product SEO title target is `%title%` unless a justified page exception exists.
+- Title normalization does not authorize URL/slug changes.
 
-### FAMILY-SPECIFIC candidates
+## Archive / hub content blocks
 
-- Fabric-color product: volume siblings, related colors, category, preparation/fixation/technique education.
-- Set/bundle: verified components, sibling volumes, set category and use education.
-- Medium: compatible product family and lessons that explicitly use it.
-- Tool/accessory: technique lesson/article only when genuinely relevant.
-- Academy lesson: required materials/category, next/previous lesson, related technique article.
-- Article: topic hub, distinct Academy lesson, durable category/product family.
-- Category: subfamily/volume paths and selected education hub; do not use tag archives as architecture.
+DEC-130 applies to every durable indexable archive/hub used as a Search/user destination.
 
-### CONTEXTUAL / OPTIONAL candidates
+Required characteristics:
+- short;
+- unique to that archive;
+- useful to a human;
+- explains what the page is, why it exists and what the user finds there;
+- informed by later query/topic research where relevant;
+- no filler, stuffing or mechanically duplicated intros.
 
-Color comparisons, individual siblings, article-paragraph links, store-address/about links and cross-family recommendations belong only where the visible topic and user decision justify them. Automated related links are not proof of relevance.
+Applies to Shop, durable Product Categories, pa_volume, Academy hub/archive, Magazine hub/archive, durable Blog Categories and equivalent future durable archives.
 
-## Bidirectional relationships
+## Academy ↔ Magazine boundary
 
-1. Product/Category → Academy/Article: exact lesson/article for preparation, technique, fixation, fabric choice or comparison.
-2. Academy/Article → Product/Category: durable family destination when a material/tool is actually named and sold/verified; do not invent availability.
-3. Category ↔ Academy/Article: education hubs for comparison/selection while keeping reference and lesson roles distinct.
-4. Sets ↔ components: only after bundle contents and identity are verified; variation/bundle completeness is currently blocked.
+- Academy = video-first practical/demo/instructional intent.
+- Magazine = text-first explanatory/reference/editorial intent.
+- Topic overlap alone is not cannibalization.
+- If two pages still serve substantially the same intent/content, resolve with evidence through differentiation, merge or redirect under DEC-119.
 
-## Architecture risks
+## Internal linking
 
-- Initial HTML reports 289 missing meta descriptions, 271 missing H1s and no parsed schema types; this is an output/ownership audit issue, not a reason to add repetitive copy.
-- Product pages show shared navigation and related blocks, but complete rendered link coverage and relevance are not proven.
-- Product tags contain redundant color/volume/brand/type dimensions; Blog Tags show separate behavior. Both are family-level decommission programs.
-- Historical /articles/ and /education/ sources coexist with current /mag/articles/ and /academy/ families; transport does not prove identity.
-- No content target, word count, FAQ volume or rewrite is approved.
+Canonical rules:
+- `strategy/INTERNAL-LINK-ARCHITECTURE.md`
+- `strategy/INTERNAL-LINK-REQUIREMENT-MATRIX.md`
 
-## Product Title Naming Standard — candidate only
+Key constraints:
+- durable parent/hub hierarchy is mandatory where applicable;
+- cross-family links are relevance-driven and are not mandatory by default;
+- no fixed internal-link counts;
+- no mass keyword auto-linking;
+- no Page→Query anchor inference without evidence.
 
-Observed patterns include:
+## Semantic positioning foundation
 
-- Fabric colors often use product type + color + Mariwork + code, but some H1s omit brand, some use a pipe before code, and Persian/Latin code digits vary.
-- Sets vary in count/description/volume ordering; “includes” clauses are inconsistent.
-- Mediums/tools use different type-first patterns; some titles include «ماری ورک» while H1s omit it.
-- Volume appears as 30 میل, 60 میل, 250 میل, 30ml or 30میل, with inconsistent placement.
-- Code forms vary: کد 105, کد ۱۰۵ and code-311. This is an observed consistency issue, not proof any code is wrong.
+DEC-121 is upstream of keyword/topic expansion.
 
-Candidate pattern for Second Review:
+Mariwork content strategy is built around approved semantic/value directions including:
+- fabric suitability;
+- application quality;
+- durability/stability;
+- compatibility;
+- economic value.
 
-[product type] [specific product/color/name] [brand token if required] [verified code] [size/volume when distinguishing the offer]
+“Economic value” means evidence-backed useful performance/quality/efficiency/reduced waste or rework, not “lowest price”.
 
-Review separately for fabric colors, sets/bundles, mediums and tools: determine whether «ماری ورک»/Mariwork is mandatory, optional or omitted; code/separator/numeral convention; volume placement; title/H1 relationship; exceptions; and legacy title history. No bulk rename is authorized. Rank Math title ownership is UNKNOWN_NEEDS_VERIFICATION.
+Exact mechanisms, superiority claims, safety claims and measurable performance claims require the evidence standard in DEC-125 before publication.
 
-**Google basis:** GOOGLE_CONSISTENT for useful accessible non-duplicative content and descriptive links; PROJECT_DECISION for family roles and title candidates. References: [people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), [SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), [structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data).
+## Topic / cluster workflow
 
-## Pre-implementation closure
+1. Start from DEC-121 semantic positioning.
+2. Research real user problems/intents and query clusters under DEC-122.
+3. Assign one primary durable page-family owner under DEC-123.
+4. Design the user journey/coverage across families under DEC-124.
+5. Apply claim evidence gates under DEC-125.
+6. Use internal links to connect genuinely complementary steps.
+7. Avoid doorway-like keyword variants and duplicate same-intent pages.
 
-The current Store graph and cross-family relationships are reconciled in
-`strategy/INTERNAL-LINK-REQUIREMENT-MATRIX-DRAFT.md`. That artifact separates
-`CORE_MANDATORY`, `FAMILY_SPECIFIC` and `CONTEXTUAL_OPTIONAL` candidates across
-Homepage, Shop, Categories, Products, Academy, Lessons, Articles, Blog
-Categories and Static/Trust pages.
+## Evidence boundaries
 
-The matrix is a draft only. It does not approve link destinations, query
-anchors, content rewrites, keyword auto-linking or Production changes.
+- Page+Query ownership is not inferred from independent Page and Query exports.
+- Search demand may refine wording and prioritization but cannot invent product/brand positioning.
+- Product facts, compatibility, durability, coverage, efficiency, safety or superiority are never invented.
+- Exact per-page copy remains implementation/content work under approved strategy and QA.
 
-| Durable family | Role | Current evidence | Target-state gate |
-|---|---|---|---|
-| Homepage | brand/entity gateway and family hub | `pages/homepage/WP-63.md` + current SEO output | Second Review |
-| Shop / Product Categories | commercial discovery and comparison | Store matrices and SR-004 | human approval |
-| Products / sets / bundles / tools | transactional decision pages | 84-product dossier set and Store matrices | canary + approval |
-| Academy / courses / lessons | structured instruction | Academy architecture and 39 dossiers | Second Review |
-| Magazine / Articles / Categories | durable reference and comparison | article/category dossiers and current schema output | Second Review |
-| Static trust/support | brand, communication and task support | grouped static dossiers | Second Review |
-| Product Tags / Blog Tags | transitional taxonomy spaces | tag reconciliation | migration decision |
-| Cart / Checkout / My Account | utility/system endpoints | system-policy dossiers | system-policy review |
+## Implementation gate
 
-No keyword target, word-count target, editorial rewrite or final disposition
-is invented by this closure. **Page-query relationship is not proven by the
-current export.**
+This strategy file authorizes no Production write by itself.
+
+A scoped implementation still requires:
+- accepted blocking decisions;
+- Strategy Lock;
+- Execution Backlog item;
+- exact entities/URLs;
+- evidence inputs;
+- change dossier/canary where applicable;
+- Codex QA and ChatGPT Final QA.
