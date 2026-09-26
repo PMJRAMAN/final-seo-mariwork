@@ -965,3 +965,15 @@ Rules:
 - Do not maintain duplicate redirect ownership in Rank Math or another layer for the same source URL.
 - Audit existing Nginx behavior before any redirect change.
 - Nginx ownership is a project architecture/performance preference, not a Google ranking requirement.
+
+
+## DEC-068 — Canary Size and Rollout Rules by Change Class
+
+**Status:** ACCEPTED
+
+- Default family-level Canary: 5 representative URLs.
+- Sample should cover high-value, normal and edge-case behavior where applicable.
+- Scale only after successful Codex QA + ChatGPT Final QA.
+- Stop and correct/rollback the Canary if regression appears.
+- Single-page changes use normal page QA rather than a separate Canary.
+- Five is a default, not an inflexible rule.
