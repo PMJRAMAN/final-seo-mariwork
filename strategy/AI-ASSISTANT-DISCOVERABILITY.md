@@ -50,8 +50,10 @@ Official references:
 
 Official references:
 - https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+- https://developers.google.com/search/docs/appearance/ai-features
 - https://developers.google.com/search/docs/essentials/spam-policies
 - https://developers.google.com/search/updates
+- https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc
 
 ## Strategy Pillars to Decide Under DEC-129
 
@@ -123,9 +125,12 @@ Existing DEC-054, DEC-089–098 and related visual/video decisions remain author
 Potential evidence sources include:
 - ChatGPT referral/citation evidence where observable;
 - Bing Webmaster Tools AI Performance: citations, cited pages and grounding queries;
-- Google Search Console generative-AI reporting where available;
+- Google Search Console Generative AI feature reporting where available;
+- Google Search Console multimodal-search reporting/filter where available, including image-led discovery surfaces;
 - server logs for crawler access diagnostics;
 - business/conversion outcomes where attribution is reliable.
+
+Google introduced dedicated web multimodal performance reporting in September 2026. Treat it as a measurement source when Mariwork has eligible data; do not create visual content merely to manufacture this metric.
 
 Measurement must distinguish:
 - citation/appearance;
