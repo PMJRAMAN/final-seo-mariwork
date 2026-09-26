@@ -3353,3 +3353,32 @@ Economic value does not mean lowest price. The intended angle is value created b
 - Marketing attractiveness alone is not evidence.
 - Comparative/superiority and safety claims require especially strong support.
 - Do not infer technical claims from general brand positioning.
+
+
+## DEC-127 — Official Mariwork Social-Profile and Contact-Channel Registry
+**Status:** Accepted — exact owner-supplied details pending  
+**Date:** 2026-09-26
+- Only owner-verified official social/profile/contact details may enter the canonical registry, Organization schema, sameAs, Contact/About content or other entity references.
+- Confirmed official platforms/channels: Instagram, YouTube, Telegram, Aparat, phone, email and WhatsApp.
+- Exact handles/URLs/numbers/addresses remain pending owner input.
+- Do not infer missing details from brand similarity, historical data or unverified site output.
+- Implementation is blocked until the exact details are supplied and verified.
+
+## DEC-128 — Other Removed-Content Legacy URL Disposition
+**Status:** Accepted — exact URL dispositions may require owner/source evidence  
+**Date:** 2026-09-26
+- For non-Artist removed legacy content, use 301 only when a genuine verified semantic successor exists.
+- Otherwise return proper 404/410 as appropriate.
+- Do not use generic fallback redirects to Homepage, Shop or unrelated Categories merely to eliminate 404s.
+- Exact URL-by-URL dispositions remain pending where identity/successor evidence is not yet known.
+
+## DEC-129 — AI Assistant / Generative-Answer Discoverability, Citation and Content Strategy
+**Status:** Accepted — Foundational  
+**Date:** 2026-09-26
+- AI-answer visibility and citation is a first-class Mariwork SEO/content objective.
+- Target evidence-backed AI answer surfaces including ChatGPT Search, Microsoft Copilot/Bing AI and Google generative Search features where available.
+- Separate crawler/search eligibility from content citation-worthiness.
+- Cover conversational intent ownership, answerable structure, first-hand evidence, provenance, entity consistency, multimodal support, freshness and citation/referral measurement.
+- Use platform-specific crawler controls only from current documented evidence.
+- Do not create thin FAQ/GEO pages, fabricate authority or rely on undocumented AI-specific tricks.
+- Platform-specific research and implementation details are downstream work and do not reopen the accepted foundation.
