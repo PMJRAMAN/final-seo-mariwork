@@ -1,7 +1,9 @@
 # External PR / Advertorial Strategy
 
-**Status:** PLANNED / NOT STARTED
+**Status:** DEFERRED — DEC-071 / DEC-101
 **Execution timing:** After Query Map, Content Architecture, Internal Link Architecture and priority landing pages are sufficiently stable.
+
+This program must not enter execution while DEC-071/101 remain deferred. The file is retained as future planning structure, not current authorization.
 **Scope:** Paid external articles, advertorials, sponsored editorial placements and broader digital PR opportunities.
 
 ## Purpose
