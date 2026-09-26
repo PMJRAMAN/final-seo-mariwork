@@ -1046,3 +1046,26 @@ Rules:
 - Preserve the established trailing-slash convention for normal content URLs.
 - Do not change durable slugs merely for cosmetic normalization.
 - Nginx owns redirect normalization under DEC-067.
+
+
+## DEC-081 — Product Identity Source of Truth
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- SKU/GTIN/MPN/brand must come from verified Product/WooCommerce data.
+- Never fabricate identifiers for SEO.
+- Use Mariwork as brand only for genuine Mariwork-branded/manufactured Products.
+- Third-party items retain their real brand.
+- Verify current field/source coverage before schema/feed implementation.
+
+## DEC-082 — Product Commercial-Fact Source of Truth
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- Price/currency/sale/availability must come from authoritative WooCommerce commercial state.
+- Do not maintain separate manual SEO copies.
+- Visible page, schema and feed must agree.
+- Verify hooks/edge cases before implementation.
+
+## DEC-083 — Out-of-Stock Versus Discontinued Product Lifecycle
+**Status:** ACCEPTED
+- Temporary Out of Stock and permanent Discontinued are separate states.
+- Temporary stockout normally keeps the Product page with accurate unavailable status.
+- Discontinued Products require successor/lifecycle review: preserve, verified redirect, or proper 404/410.
+- Do not bulk-redirect discontinued Products to generic destinations.
