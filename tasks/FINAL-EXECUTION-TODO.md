@@ -1,6 +1,6 @@
 # FINAL EXECUTION TODO — Mariwork SEO
 
-**Status:** P-009 COMPLETE — PRIORITY / WAVE PLAN FROZEN  
+**Status:** P-011 RECONCILED — PRIORITY / WAVE PLAN + EXECUTION BOUNDARIES  
 **Generated from:** `tasks/EXECUTION-BACKLOG.md` after P-007  
 **Date:** 2026-09-26  
 **Production writes authorized here:** NO  
@@ -23,9 +23,10 @@ Stage 5 assigns dependency-aware planning Waves and priorities. A Wave is a plan
 
 ## Coverage summary
 
-- Total execution packages: **57**
-- READY_FOR_TASK at Stage-4 freeze: **16**
-- BLOCKED at Stage-4 freeze: **41**
+- Current execution packages after P-011: **58**
+- Current READY_FOR_TASK: **17**
+- Current BLOCKED: **41**
+- Historical P-008 freeze before P-011: **57 packages / 16 READY / 41 BLOCKED**
 - Completed execution packages: **0**
 - Production writes in Stage 4: **0**
 
@@ -55,7 +56,8 @@ Priority means **planning/unlock priority**, not permission to write Production.
 - EXE-009 — crawler access controls
 - EXE-011 — sitemap reconciliation
 - EXE-049 — AI-search crawler eligibility verification
-- EXE-054 — Education → Academy redirect verification
+- EXE-054 — Education → Academy **read-only redirect verification**
+- EXE-058 — non-pa_volume Product-attribute archive inventory + decision dossier (**read-only**)
 
 These are currently READY_FOR_TASK, but task issuance remains Stage 6 and each task retains its stated preflight.
 
@@ -70,7 +72,7 @@ These are currently READY_FOR_TASK, but task issuance remains Stage 6 and each t
 - EXE-044–046 — image/media review and delivery-policy evidence
 - EXE-050 — AI answer/citation research framework after cluster evidence
 - EXE-053, EXE-056 — legacy identity/disposition mapping
-- EXE-013–015 specifically retain the canonical spelling consistency gate.
+- EXE-013–015 no longer carry the stale spelling gate; they remain blocked on verified identity/composition/code and named canary scope.
 
 ### Wave 3 — Content architecture and destination maps
 **Priority: P1/P2.** Build exact page-level content and linking targets after Wave-2 ownership/evidence is available.
@@ -80,14 +82,14 @@ These are currently READY_FOR_TASK, but task issuance remains Stage 6 and each t
 - EXE-039 — content-journey coverage map
 - EXE-041 — parent/hub mandatory-link source→destination matrix
 - EXE-042 — cross-family Product/Category ↔ Academy/Article destination map
-- EXE-034 — Academy/Guide + VideoObject canary evidence closure
+- EXE-034 — Academy/LearnDash schema-owner + host-eligibility canary evidence closure (**no VideoObject write**)
 
 ### Wave 4 — Controlled implementation / canaries / migrations
 **Priority: P2 implementation.** Only packages whose gates have closed and state has become READY_FOR_TASK may enter Stage 6 task issuance.
 
 - EXE-012–035 as applicable after their upstream evidence/copy/mapping gates close
 - EXE-041–046 after exact link/media implementation scopes close
-- EXE-048 — Video technical/schema implementation after EXE-047 and representative canary evidence
+- EXE-048 — **sole VideoObject write package** after EXE-047 and, for Academy hosts, EXE-034 owner/eligibility output
 - EXE-053, EXE-056 — legacy migrations after exact identity/disposition mapping
 - EXE-055 — Artist migration remains excluded from active implementation until the Artists system is public/stable and manual identity review is complete
 
@@ -110,6 +112,18 @@ These are currently READY_FOR_TASK, but task issuance remains Stage 6 and each t
 9. A BLOCKED item that closes early may move to READY_FOR_TASK, but Stage 6 still requires an exact separately written Codex task.
 10. No Wave is a bulk authorization for Production writes.
 
+### P-011 milestone boundary
+
+- Waves 2 and 3 are **blocker-closure / design / mapping lanes**, not implementation authorization for packages that remain BLOCKED.
+- A package may enter Wave 4 implementation only after its exact gate is closed, its state is explicitly reconciled to `READY_FOR_TASK` in both the Execution Backlog and this TODO, and its write owner/scope is unambiguous.
+- Evidence-only READY packages may receive read-only Stage-6 tasks without implying a later write is authorized.
+- EXE-009 owns robots/WAF/server crawler-control writes; EXE-049 never writes those controls.
+- EXE-034 never writes VideoObject; EXE-048 is the sole VideoObject write owner.
+- DEC-130 page-family write ownership: Shop=EXE-012, Product Category=EXE-019, pa_volume=EXE-020, Blog Category=EXE-030, residual Academy/Magazine/other hubs=EXE-035.
+- EXE-054 may verify before EXE-052 completes, but any redirect mutation waits for EXE-052 baseline plus URL-specific identity/disposition.
+- EXE-057 remains terminal and requires a versioned completed-package/Decision/Lock manifest.
+
+
 ## Final execution checklist
 
 | Done | ID | Execution package | Current state | Gate / preflight before or inside task | Strategy | MASTER | Owner |
@@ -118,22 +132,22 @@ These are currently READY_FOR_TASK, but task issuance remains Stage 6 and each t
 | [ ] | EXE-002 | Monitoring outcome register and 28/56-day review workflow | **READY_FOR_TASK** | metric availability by package | SL-000; DEC-069,102,103,104 | J-001–J-009 | REPOSITORY / PROCESS |
 | [ ] | EXE-003 | Preferred host/protocol/trailing-slash normalization verification | **READY_FOR_TASK** | current Production verification | SL-001; DEC-067,078,079 | I-004–I-007 | NGINX + RANK_MATH |
 | [ ] | EXE-004 | Store facet/sort/display + pagination normalization | **BLOCKED** | exact current generator/redirect evidence | SL-001/SL-002; DEC-059,060,061,067,079 | B9, H-008 | NGINX + RANK_MATH |
-| [ ] | EXE-005 | General internal-search / RSS-feed / utility indexability reconciliation | **READY_FOR_TASK** | current rendered robots/meta verification | SL-001; DEC-004,074,075,107,108 | H-006,H-007,H-009–H-012 | RANK_MATH / WORDPRESS |
+| [ ] | EXE-005 | General internal-search / RSS-feed / utility indexability evidence + reconciliation | **READY_FOR_TASK** | first task read-only rendered robots/meta/current-behavior evidence; mutation needs exact URL/family manifest + separate write authorization | SL-001; DEC-004,074,075,107,108 | H-006,H-007,H-009–H-012 | RANK_MATH / WORDPRESS |
 | [ ] | EXE-006 | Author/date archive indexability reconciliation | **READY_FOR_TASK** | route existence verification | SL-001/SL-003; DEC-062,079 | H-003,H-004 | RANK_MATH |
-| [ ] | EXE-007 | 404/soft-404/error-page technical behavior | **READY_FOR_TASK** | representative current response audit | SL-001/SL-006; DEC-109,067 | H-013,I-004 | NGINX + WORDPRESS |
+| [ ] | EXE-007 | 404/soft-404/error-page behavior evidence + reconciliation | **READY_FOR_TASK** | first task read-only representative evidence; mutation needs URL-level disposition + separate write authorization | SL-001/SL-006; DEC-109,067 | H-013,I-004 | NGINX + WORDPRESS |
 | [ ] | EXE-008 | JS/AJAX discoverability remediation candidates | **BLOCKED** | initial-HTML/rendered-DOM/network evidence | SL-001; DEC-080,036 | B0/B3, I | CUSTOM_CODE where needed |
-| [ ] | EXE-009 | Search crawler access: Googlebot/OAI-SearchBot vs GPTBot controls | **READY_FOR_TASK** | actual robots/WAF/server behavior and published-bot verification | SL-001/SL-005; DEC-110 | I-014 | NGINX / ROBOTS / WAF |
+| [ ] | EXE-009 | Search-crawler control evidence: Googlebot/OAI-SearchBot vs GPTBot | **READY_FOR_TASK** | sole robots/WAF/server write owner; first task read-only evidence; mutation needs exact control diff + separate write authorization | SL-001/SL-005; DEC-110 | I-014 | NGINX / ROBOTS / WAF |
 | [ ] | EXE-010 | Attachment HTML lifecycle + orphan-media safety reconciliation | **BLOCKED** | attachment/media dependency inventory | SL-001/SL-006; DEC-031,067,109 | H-005,L | WORDPRESS + NGINX |
-| [ ] | EXE-011 | Sitewide sitemap reconciliation | **READY_FOR_TASK** | exact current sitemap membership audit | SL-001; DEC-025,026,028,029,030,031,062,107,108 | B0-002,I-006 | RANK_MATH |
-| [ ] | EXE-012 | Shop landing H1/title/meta/content-block implementation | **BLOCKED** | current copy/placement recheck | SL-002; DEC-003,016,114,130 | B0-001,B10 | CONTENT + RANK_MATH |
-| [ ] | EXE-013 | Fabric-color Product title normalization canary | **BLOCKED** | **item-1 canonical spelling consistency fix still pending**; exact 5-URL canary | SL-002; DEC-007,011,053,068 | B0-022–025,B2 | WOO + RANK_MATH |
-| [ ] | EXE-014 | Set/Bundle Product title normalization canary | **BLOCKED** | item-1 spelling consistency fix; verified bundle identity | SL-002; DEC-008,011,053,068 | B0-022–025,B3 | WOO + RANK_MATH |
-| [ ] | EXE-015 | Medium/Additive Product title normalization canary | **BLOCKED** | item-1 spelling consistency fix; verified Product identity | SL-002; DEC-009,011,053,068 | B0-022–025,B4 | WOO + RANK_MATH |
+| [ ] | EXE-011 | Sitewide sitemap evidence + reconciliation | **READY_FOR_TASK** | first task read-only sitemap audit; mutation needs exact family/URL manifest + verified Rank Math ownership + separate write authorization | SL-001; DEC-025,026,028,029,030,031,062,107,108 | B0-002,I-006 | RANK_MATH |
+| [ ] | EXE-012 | Shop landing H1/title/meta/content-block implementation | **BLOCKED** | approved Shop copy/placement + current recheck; sole Shop content-block write owner | SL-002; DEC-003,016,114,130 | B0-001,B10 | CONTENT + RANK_MATH |
+| [ ] | EXE-013 | Fabric-color Product title normalization canary | **BLOCKED** | exact named 5-URL canary with verified color names/codes; spelling already resolved in Decisions | SL-002; DEC-007,011,053,068 | B0-022–025,B2 | WOO + RANK_MATH |
+| [ ] | EXE-014 | Set/Bundle Product title normalization canary | **BLOCKED** | verified bundle identity/composition + named canary; spelling already resolved in Decisions | SL-002; DEC-008,011,053,068 | B0-022–025,B3 | WOO + RANK_MATH |
+| [ ] | EXE-015 | Medium/Additive Product title normalization canary | **BLOCKED** | verified Product identity/name/code + named canary; spelling already resolved in Decisions | SL-002; DEC-009,011,053,068 | B0-022–025,B4 | WOO + RANK_MATH |
 | [ ] | EXE-016 | Tool/Accessory Product title normalization canary | **BLOCKED** | exact real brand/code mapping | SL-002; DEC-010,011,053,068,081 | B0-022–025,B5 | WOO + RANK_MATH |
 | [ ] | EXE-017 | Product meta-description remediation by family | **BLOCKED** | Product facts + copy QA | SL-002; DEC-015,068,121–125 | B2–B6 | CONTENT + RANK_MATH |
 | [ ] | EXE-018 | Product visible-content architecture remediation by family | **BLOCKED** | family evidence + exact page scope | SL-002; DEC-020,042,083,088,121–125 | B2–B6 | CONTENT |
-| [ ] | EXE-019 | Durable Product Category SEO package | **BLOCKED** | keyword/query research + exact copy | SL-002; DEC-021,025,030,046,076,115,121–125,130 | B7 | CONTENT + RANK_MATH |
-| [ ] | EXE-020 | pa_volume 30/60/250 durable landing package | **BLOCKED** | exact query research + preselection verification | SL-002; DEC-026,030,077,116,117,130 | B8,H | CONTENT + RANK_MATH + WOO |
+| [ ] | EXE-019 | Durable Product Category SEO package | **BLOCKED** | keyword/query research + approved exact copy; sole Product Category content-block write owner | SL-002; DEC-021,025,030,046,076,115,121–125,130 | B7 | CONTENT + RANK_MATH |
+| [ ] | EXE-020 | pa_volume 30/60/250 durable landing package | **BLOCKED** | exact query research + preselection verification + approved exact copy; sole pa_volume content-block write owner | SL-002; DEC-026,030,077,116,117,130 | B8,H | CONTENT + RANK_MATH + WOO |
 | [ ] | EXE-021 | ProductGroup/variant structured-data canary | **BLOCKED** | identifier/Offer field-source mapping | SL-002; DEC-035,039,068,081,082 | B0-010,B2/B4 | RANK_MATH FILTER + WOO |
 | [ ] | EXE-022 | Bundle/set schema + visible component discoverability canary | **BLOCKED** | raw/rendered/AJAX + YITH composition evidence | SL-002; DEC-036,068,080,081,082 | B0-011,B3 | RANK_MATH + WOO/YITH + CUSTOM_CODE if required |
 | [ ] | EXE-023 | Product commercial facts / identifiers consistency audit-to-fix | **BLOCKED** | targeted field mapping + actual shipping/returns rules | SL-002; DEC-081,082,083,113 | B2–B6,O-002 | WOO |
@@ -143,12 +157,12 @@ These are currently READY_FOR_TASK, but task issuance remains Stage 6 and each t
 | [ ] | EXE-027 | Homepage content/CTA + metadata/schema reconciliation | **BLOCKED** | branded-query evidence for any baseline change | SL-003; DEC-002,032,053,099,100,114 | C-003–C-013 | CONTENT + RANK_MATH |
 | [ ] | EXE-028 | Static/trust page metadata/content/schema package | **BLOCKED** | exact owner-supplied contact/social facts where used | SL-003; DEC-012,017,022,033,053,085,086,087,099,127 | D | CONTENT + RANK_MATH |
 | [ ] | EXE-029 | Canonical brand/entity consistency implementation | **BLOCKED** | exact official handles/contact values; branded query mapping | SL-003; DEC-053,099,100,127 | N-001–N-012 | CONTENT + RANK_MATH |
-| [ ] | EXE-030 | Durable Blog Category archive/content package | **BLOCKED** | final taxonomy/page-specific copy research | SL-003; DEC-028,030,051,118,121–125,130 | E0,H | CONTENT + RANK_MATH |
+| [ ] | EXE-030 | Durable Blog Category archive/content package | **BLOCKED** | final taxonomy/page-specific research + approved exact copy; sole Blog Category content-block write owner | SL-003; DEC-028,030,051,118,121–125,130 | E0,H | CONTENT + RANK_MATH |
 | [ ] | EXE-031 | Blog Tag controlled decommission | **BLOCKED** | URL-by-URL editorial successor map | SL-003/SL-006; DEC-029,063,067,109 | E0-007–012 | NGINX + WORDPRESS + RANK_MATH |
 | [ ] | EXE-032 | Article metadata/freshness/content pilot | **BLOCKED** | cluster ownership + article-level evidence/copy | SL-003; DEC-013,018,023,034,044,045,049,050,068,085,088,119,121–125 | E1 | CONTENT + RANK_MATH |
 | [ ] | EXE-033 | Academy Guide/Course metadata/content pilot | **BLOCKED** | current Guide vs future Course entity mapping | SL-003; DEC-014,019,024,037,043,049,068,085,088,121–125 | F0,F1 | CONTENT + RANK_MATH |
-| [ ] | EXE-034 | Academy/Guide schema + VideoObject host-page canary | **BLOCKED** | two-guide host/player/video evidence | SL-003/SL-005; DEC-037,038,039,068,094–098 | F,M | RANK_MATH + CUSTOM_CODE if unsupported |
-| [ ] | EXE-035 | Durable archive/hub content-block program | **BLOCKED** | exact archive list + research + copy approval | SL-002/SL-003/SL-004; DEC-021,051,117,118,130 | B0,B7,F,E,H | CONTENT |
+| [ ] | EXE-034 | Academy/LearnDash schema ownership + video-host eligibility canary (no VideoObject write) | **BLOCKED** | EXE-047 + two-guide host/player/fetchability evidence; output Academy host/schema-owner map; VideoObject writes excluded | SL-003/SL-005; DEC-037,038,039,068,094–098 | F,M | RANK_MATH + CUSTOM_CODE if unsupported |
+| [ ] | EXE-035 | Durable archive/hub content-block coordination + residual-hub implementation | **BLOCKED** | deduplicated roster + approved copy/placement; no Shop/Product Category/pa_volume/Blog Category writes; residual Academy/Magazine/other hubs only | SL-002/SL-003/SL-004; DEC-021,051,117,118,130 | B0,B7,F,E,H | CONTENT |
 | [ ] | EXE-036 | Semantic positioning evidence registry | **READY_FOR_TASK** | collect Product/spec/test/source evidence | SL-003; DEC-121,125,053 | A-018/A-019,N | RESEARCH / CONTENT |
 | [ ] | EXE-037 | Topic/query cluster research + prioritization | **READY_FOR_TASK** | direct Search/GSC evidence | SL-003; DEC-100,121,122 | A-018,E,F,N | RESEARCH |
 | [ ] | EXE-038 | Cluster → primary page-family ownership map | **BLOCKED** | joined/direct query evidence | SL-003; DEC-050,100,122,123 | A-018/A-019 | RESEARCH |
@@ -159,21 +173,22 @@ These are currently READY_FOR_TASK, but task issuance remains Stage 6 and each t
 | [ ] | EXE-043 | Header/Footer/global navigation reconciliation | **BLOCKED** | current menu inventory and exact approved hubs | SL-004; DEC-001,041,120 | C-007,I-008 | THEME/BLOCK |
 | [ ] | EXE-044 | Image ALT/context representative audit + correction pilot | **BLOCKED** | representative visual review | SL-005; DEC-054,056,057,090,091,068 | L-001–L-012 | CONTENT + MEDIA/TEMPLATE |
 | [ ] | EXE-045 | Responsive image delivery + LCP/CLS template canary | **BLOCKED** | mobile/desktop slot, DPR, bytes and field/lab evidence | SL-005; DEC-092,093,111,068 | C-008,L-009,I-013 | THEME/BLOCK + WP MEDIA |
-| [ ] | EXE-046 | New-media filename policy implementation in upload workflow | **BLOCKED** | choose non-destructive future-upload enforcement path | SL-005; DEC-089 | L-005,L-010 | MEDIA WORKFLOW |
+| [ ] | EXE-046 | New-media filename policy implementation in upload workflow | **BLOCKED** | owner-approved non-destructive enforcement design + owner + rollback; Codex cannot choose path | SL-005; DEC-089 | L-005,L-010 | MEDIA WORKFLOW |
 | [ ] | EXE-047 | Full public video inventory + metadata/thumbnail/lifecycle target map | **READY_FOR_TASK** | complete public video inventory | SL-005; DEC-038,094–098 | M-001–M-011 | RESEARCH / CONTENT |
-| [ ] | EXE-048 | Video technical/schema implementation after inventory | **BLOCKED** | EXE-047 + representative host/player canary | SL-005; DEC-038,094–098,068 | M-012–M-014 | RANK_MATH + CUSTOM_CODE if unsupported |
-| [ ] | EXE-049 | AI-search crawler eligibility technical verification | **READY_FOR_TASK** | actual crawler access evidence | SL-005; DEC-110,129 | I-014 | NGINX / ROBOTS / WAF |
+| [ ] | EXE-048 | VideoObject technical/schema implementation — sole VideoObject write owner | **BLOCKED** | EXE-047 + representative canary + EXE-034 Academy owner/eligibility output where relevant | SL-005; DEC-038,094–098,068 | M-012–M-014 | RANK_MATH + CUSTOM_CODE if unsupported |
+| [ ] | EXE-049 | AI-search eligibility verification (read-only; no robots/WAF writes) | **READY_FOR_TASK** | actual platform/crawler eligibility evidence; all crawler-control mutation belongs to EXE-009 | SL-005; DEC-110,129 | I-014 | RESEARCH / TECHNICAL SEO |
 | [ ] | EXE-050 | AI answer/citation content-research framework operationalization | **BLOCKED** | platform-specific current evidence + cluster map | SL-003/SL-005; DEC-121–125,129 | A-018/A-019,E,F,N,L,M | RESEARCH / CONTENT |
 | [ ] | EXE-051 | AI/multimodal measurement instrumentation and reporting plan | **READY_FOR_TASK** | available platform data and referral observability | SL-005/SL-000; DEC-069,102–104,129 | J,L-013,M-015,N-012 | MEASUREMENT |
 | [ ] | EXE-052 | Current Nginx redirect inventory + conflict/chain verification | **READY_FOR_TASK** | current server rule evidence | SL-006; DEC-063,067,109 | A-012,I-004 | NGINX |
 | [ ] | EXE-053 | Historical Product-volume migration batch | **BLOCKED** | identity + current-volume verification per URL | SL-006; DEC-063,064,067 | B0-012 | NGINX + WOO |
-| [ ] | EXE-054 | Historical Education → Academy verify-and-preserve batch | **READY_FOR_TASK** | current redirect rule verification incl archive/feed exceptions | SL-006; DEC-063,065,067 | F,H,I-004 | NGINX |
+| [ ] | EXE-054 | Historical Education → Academy verify-and-preserve batch | **READY_FOR_TASK** | initial task read-only; redirect mutation waits for EXE-052 baseline + URL-specific identity/disposition + separate write authorization | SL-006; DEC-063,065,067 | F,H,I-004 | NGINX |
 | [ ] | EXE-055 | Historical Artist URL migration — post-launch manual batch | **BLOCKED** | **blocked until new Artists system is public/stable** + manual identity review | SL-006; DEC-052,063,066,067 | G,I-004 | NGINX |
 | [ ] | EXE-056 | Other removed-content legacy URL disposition batch | **BLOCKED** | URL-level owner/source evidence where identity unclear | SL-006; DEC-063,067,109,128 | G,H,I-004 | NGINX |
-| [ ] | EXE-057 | Final sitewide technical/content/link/schema/media regression | **BLOCKED** | only after implemented packages reach QA | ALL ACTIVE LOCKS; all implemented-scope accepted DEC + DEC-069,102,103 | I-002–I-020 | QA |
+| [ ] | EXE-057 | Final sitewide technical/content/link/schema/media regression | **BLOCKED** | implemented packages at QA + frozen versioned completed-package/Decision/Lock regression manifest | ALL ACTIVE LOCKS; all implemented-scope accepted DEC + DEC-069,102,103 | I-002–I-020 | QA |
+| [ ] | EXE-058 | Non-pa_volume Product-attribute archive inventory + decision dossier (read-only) | **READY_FOR_TASK** | inventory attributes + robots/sitemap/internal-link/current-use evidence; no policy mutation before later accepted per-family decision | SL-002; DEC-006 | B8-008–B8-010 | RESEARCH / RANK_MATH EVIDENCE |
 
 ## Stage-6 handoff
 
 P-009 is complete. The next planning action is not bulk execution. For any individual package that is actually READY_FOR_TASK, Stage 6 writes a precise Codex task referencing its Program/Task ID, entity/batch, prerequisite status, expected dossier/change outputs, Google basis, SEO owner, acceptance criteria, rollback/canary requirements, and the next TODO item unlocked.
 
-Current Stage-5 freeze remains **16 READY_FOR_TASK / 41 BLOCKED**. P-009 itself changes no readiness state and performs no Production write.
+After P-011 reconciliation the current inventory is **58 packages: 17 READY_FOR_TASK / 41 BLOCKED**. The original P-009 freeze was 57 packages / 16 READY / 41 BLOCKED. P-011 performs no Production write and issues no Production implementation task.
