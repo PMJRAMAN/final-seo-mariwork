@@ -108,8 +108,8 @@ Current strategy work is intentionally collaborative and may span multiple days.
 - [x] B0-019 Define reverse links from Academy/Articles to relevant Product/Category destinations
 - [ ] B0-020 Approve target internal-link architecture before mass page implementation
 - [x] B0-021 Audit current product-title patterns across all Store families and identify inconsistencies
-- [ ] B0-022 Define approved Product Title Naming Standard by family: product type/name/color, «ماری ورک»/Mariwork, code, size/volume ordering, required/optional tokens and exceptions
-- [ ] B0-023 Verify consistent use of «ماری ورک» / Mariwork in product titles according to the approved family standard
+- [x] B0-022 Define approved Product Title Naming Standard by family — resolved by DEC-007–011 + DEC-053; canonical Persian brand spelling is `ماری‌ورک`
+- [ ] B0-023 Verify/implement consistent use of canonical `ماری‌ورک` / factual brand naming in Product titles through EXE-013–016; no URL/slug change solely for spelling normalization
 - [ ] B0-024 Normalize product titles only after ChatGPT Second Review + approval; preserve product identity, intent and legacy URL history
 - [ ] B0-025 Final product-title consistency regression across all published products
 
@@ -218,9 +218,9 @@ Batchها ابتدا ۵تایی و پس از ثبات process حداکثر طب�
 - [ ] B8-007 Crawl + sitemap + canonical + internal-link + GSC follow-up QA after decommission
 
 ### Product Attributes — separate decision
-- [ ] B8-008 Audit attribute archives independently for KEEP INDEXED / NOINDEX / REDIRECT / CANONICALIZE
-- [ ] B8-009 Verify Rank Math robots/sitemap ownership and internal-link policy for attributes
-- [ ] B8-010 Attribute archive QA
+- [ ] B8-008 Run EXE-058 read-only inventory of all non-`pa_volume` Product attribute archives; collect evidence only, do not choose KEEP INDEXED / NOINDEX / REDIRECT / CANONICALIZE without a later accepted per-family Decision
+- [ ] B8-009 Through EXE-058, verify current Rank Math robots/sitemap ownership, public usage and internal-link exposure for each discovered attribute family
+- [ ] B8-010 Close attribute discovery with a per-family decision dossier; implementation/QA opens only after the required Decision is accepted
 
 ## B9 — Store facets / filters / parameters
 
@@ -271,7 +271,7 @@ Batchها ابتدا ۵تایی و پس از ثبات process حداکثر طب�
 - [x] D-002 Contact / communication pages
 - [x] D-003 FAQ
 - [x] D-004 Stores address
-- [ ] D-005 policy/terms/privacy pages — indexability decision
+- [ ] D-005 policy/terms/privacy pages — **discovery trigger**: first establish whether a current public entity exists; if discovered, open/complete an explicit indexability Decision + EXE before any SEO mutation
 - [x] D-006 landing pages
 - [x] D-007 other WordPress Pages
 
@@ -554,11 +554,17 @@ This program validates that the Decision Backlog is complete enough to govern Pr
 - [x] P-005 Freeze Decision Backlog v1 for collaborative decision sessions
 - [x] P-005A Final ChatGPT pre-Strategy-Lock consistency audit after owner decisions; reconcile stale strategy docs and confirm zero unexplained material decision gaps
 - [x] P-006 Reconcile Execution Backlog against the frozen Decision Backlog
-- [x] P-007 Confirm every READY_FOR_TASK execution package is unlocked only by ACCEPTED decisions\n  - Result (2026-09-26): 57/57 packages validated; 16 `READY_FOR_TASK`; 41 `BLOCKED`; 0 Production writes. See `tasks/EXECUTION-BACKLOG.md`.
+- [x] P-007 Confirm every READY_FOR_TASK execution package is unlocked only by ACCEPTED decisions
+  - Result (2026-09-26): 57/57 packages validated at the P-007 snapshot; 16 `READY_FOR_TASK`; 41 `BLOCKED`; 0 Production writes. See `tasks/EXECUTION-BACKLOG.md`.
 - [x] P-008 Build final execution TODO from all 57 P-007-validated packages; preserve gates/readiness; no Wave/priority assignment and no Codex Production task
   - Result (2026-09-26): `tasks/FINAL-EXECUTION-TODO.md`; 57/57 packages represented; 16 `READY_FOR_TASK`; 41 `BLOCKED`; 0 Production writes.
 - [x] P-009 Prioritize and Wave-plan the final execution TODO without bypassing package gates
   - Result (2026-09-26): dependency-aware Waves 0–5 recorded in `tasks/FINAL-EXECUTION-TODO.md`; readiness unchanged at 16 `READY_FOR_TASK` / 41 `BLOCKED`; 0 Production writes; 0 Codex Production tasks.
+- [x] P-010 Final repository Decision → Lock → EXE → TODO → Wave integrity audit; repository-only/read-only
+  - Result (2026-09-26): `audits/strategy/P-010-FINAL-DECISION-TO-EXECUTION-INTEGRITY-AUDIT.md`; 129 real Decision rows through DEC-130 with DEC-126 unused; 57 EXEs at audit baseline; 0 accepted-Decision coverage gaps; verdict `FAIL_STAGE_6_NOT_SAFE` due to execution-boundary/readiness integrity findings.
+- [x] P-011 Reconcile P-010 findings in authoritative planning files without Production writes
+  - Result (2026-09-26): malformed Decision rows/range authority fixed; stale EXE-013–015 spelling blocker removed; crawler, VideoObject and archive-content write ownership deduplicated; evidence-first boundaries added to EXE-005/007/009/011/054; EXE-046/057 gates hardened; EXE-058 added for non-pa_volume attribute discovery. Current inventory: **58 EXEs / 17 READY_FOR_TASK / 41 BLOCKED**; 0 Production writes; 0 Production implementation tasks.
+- [ ] P-012 Independent post-P-011 integrity re-audit; must return PASS or PASS_WITH_NON_BLOCKING_FINDINGS before broad Stage-6 implementation task generation
 
 **Freeze invariant:** before the first broad Production implementation wave, every material current SEO/content/technical choice must either:
 - map to a Decision ID;
