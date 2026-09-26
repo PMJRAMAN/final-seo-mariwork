@@ -243,8 +243,8 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-068 | Canary size and rollout rules by change class | OPEN | M-15; change templates | Define practical samples for metadata/schema/content/link changes |
-| DEC-069 | Monitoring windows and core success metrics | OPEN | M-18; MEASUREMENT-SPEC; MASTER-TODO J | Define 28/56-day defaults, comparable windows and core search/business metrics |
+| DEC-068 | Canary size and rollout rules by change class | ACCEPTED | M-15; change templates; owner approval 2026-09-26 | Accepted: for repeatable family-level SEO changes, the default Canary is 5 representative URLs before wider rollout. The sample must include representative high-value/normal/edge-case pages rather than random URLs. A successful Codex QA + ChatGPT Final QA gate is required before scaling. If regression is found, stop rollout and correct or roll back the Canary first. Single-page changes do not require a separate Canary beyond normal page QA. Five URLs is the default, not an inflexible rule; higher-risk changes may require a narrower or specially designed Canary. |
+| DEC-069 | Monitoring windows and core success metrics | DISCUSSING | M-18; MEASUREMENT-SPEC; MASTER-TODO J | Define 28/56-day defaults, comparable windows and core search/business metrics |
 | DEC-070 | Strategy Lock scope for first implementation wave | OPEN | governance + accepted decisions | Decide which accepted decisions form first coherent rollout |
 | DEC-071 | External PR / advertorial strategy | DEFERRED | MASTER-TODO K | Decide after internal architecture/landing pages stabilize |
 | DEC-072 | Merchant Center / Free Listings program entry and eligibility | DEFERRED | MASTER-TODO O-001/O-003 | Keep separate from Product Feed architecture/data contract |
