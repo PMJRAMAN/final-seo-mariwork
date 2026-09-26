@@ -196,6 +196,21 @@ Before any Codex task with Production writes:
 
 If any blocking decision is still `OPEN`, `DISCUSSING`, `PROPOSED`, or `NEEDS_TARGETED_EVIDENCE`, Codex must not implement that scope.
 
+### Evidence-first READY packages
+
+A `READY_FOR_TASK` package may be ready only for a bounded **read-only evidence task** when current-state evidence is the package's immediate prerequisite.
+
+In that case:
+
+- the task must explicitly say `READ-ONLY / NO PRODUCTION MUTATION`;
+- Codex may collect current output, inventory, rendered behavior, configuration evidence and exact affected entities;
+- Codex must not convert the same task into an implementation task merely because the evidence reveals a fix;
+- any Production mutation requires an exact affected-entity manifest, one unambiguous write owner, capability/ownership verification, rollback/acceptance criteria, and a separately authorized write scope;
+- if evidence materially changes the implementation boundary or reveals a new strategy choice, reconcile the Execution Backlog state/gate before a write task is issued;
+- two EXEs must never be simultaneous write owners for the same output/concern. Shared evidence is allowed; write ownership must be singular and explicit.
+
+This rule preserves the distinction between `task-ready for evidence` and `authorized for mutation`.
+
 ## 9. Content gate
 
 Final visible text is a decision artifact.
