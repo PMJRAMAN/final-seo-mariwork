@@ -1133,3 +1133,26 @@ Rules:
 - Important images on indexable pages should remain crawlable/loadable unless deliberately blocked.
 - No mandatory separate image sitemap by default.
 - Add dedicated image-discovery mechanisms only when evidence supports a real need.
+
+
+## DEC-093 — Image Technical Delivery Policy
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- Responsive image delivery must match real component/slot needs on mobile and desktop.
+- Use correct responsive candidates plus `srcset`/`sizes`; avoid both materially oversized downloads and undersized/blurry delivery.
+- Preserve intrinsic dimensions/aspect ratio where applicable.
+- Lazy-load below-the-fold images; do not blindly lazy-load likely LCP/hero images.
+- Standardize by component/template and QA mobile/desktop, DPR, bytes, visual quality and LCP/CLS.
+- Performance claims require evidence.
+
+## DEC-094 — Video Host-Page / Fetchability / Prominence / Player Policy
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- Important videos need a genuine visible/playable and contextually relevant host page.
+- Required player/embed resources must be fetchable where Search discovery is intended.
+- VideoObject only when eligibility conditions are actually met.
+- Verify representative host/player behavior before broad rollout.
+
+## DEC-095 — Video Title / Description / Naming Standard
+**Status:** ACCEPTED
+- Use truthful, descriptive, subject-specific video titles/descriptions.
+- Avoid generic serial naming, stuffing and fabricated details.
+- Visible/contextual naming and eligible structured-data metadata must agree semantically.
