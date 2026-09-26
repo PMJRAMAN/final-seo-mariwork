@@ -3153,3 +3153,41 @@ The strategy decision must cover:
 - No scaled thin pages created only to target chatbot prompts.
 - No assumption that AI-specific files or tactics such as llms.txt improve visibility unless a target platform documents that effect.
 - No guarantee of inclusion or citation; optimize for usefulness, clarity, evidence and retrievability.
+
+
+## DEC-111 — Mobile / Core Web Vitals / Page Experience Remediation Policy
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26
+
+### Accepted target state
+- Use real-user/field evidence as the primary performance signal where available.
+- Use lab diagnostics to investigate and reproduce issues.
+- Use current Core Web Vitals thresholds as reference targets: LCP <= 2.5s, INP <= 200ms and CLS <= 0.1 for the relevant measured population.
+- Evaluate mobile and major templates separately.
+- Do not optimize for a perfect lab score as an end in itself.
+- Remediation must target evidenced bottlenecks and pass regression QA.
+- Do not claim guaranteed ranking/traffic gains from a CWV change alone.
+
+## DEC-112 — Concern-by-Concern SEO Technical-Owner Target Matrix
+**Status:** Accepted  
+**Date:** 2026-09-26
+
+### Accepted target state
+- Each SEO concern has one primary technical owner.
+- Rank Math is first owner for supported WordPress SEO concerns such as title/meta, robots, canonical, sitemap and eligible schema.
+- Nginx remains the redirect owner under DEC-067.
+- WooCommerce remains authoritative for Product commercial facts such as price, stock and availability.
+- Use custom code only where the primary supported owner cannot express the approved target state.
+- Avoid parallel generators/owners for the same concern.
+
+## DEC-113 — Shipping / Returns Source-of-Truth and Structured-Data Policy
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26
+
+### Accepted target state
+- Shipping cost, delivery timing/scope and return-policy facts must come only from real Mariwork/WooCommerce/business rules.
+- Do not invent or infer policy values for SEO.
+- Any structured-data representation must match the actual customer-facing policy.
+- Merchant Center/feed use remains outside current scope under DEC-072/105.
+- On-site Search structured data may be considered only when the underlying policy is verified and supported.
+- Verify exact current business rules before implementation.
