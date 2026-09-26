@@ -1310,3 +1310,26 @@ Rules:
 - Explain why the page exists, what users find there and its specific role.
 - Human-first, concise, SEO-aware; no filler, stuffing or duplicated intros.
 - Noindex/system/utility/empty/temporary archives are excluded.
+
+
+## DEC-120 — Global Header/Footer/Navigation SEO Link Architecture
+**Status:** ACCEPTED
+- Global navigation exposes durable hubs and essential destinations only.
+- No SEO-driven link inflation.
+- Contextual relationships remain body-link decisions.
+
+## DEC-121 — Semantic Positioning and Product Value Pillars
+**Status:** ACCEPTED — FOUNDATIONAL
+- This is the foundation of Mariwork's content strategy.
+- Define semantic positioning and approved value pillars before keyword/topic expansion.
+- Core directions include fabric suitability, application quality, durability/stability, compatibility and economic value.
+- Economic value does not mean lowest price; it means evidence-backed useful performance/quality/efficiency/reduced waste or rework.
+- Claims require evidence.
+- DEC-122–125 and later content planning must derive from this foundation.
+
+## DEC-122 — Topic / Keyword Cluster Research and Prioritization
+**Status:** ACCEPTED
+- Research clusters after and within DEC-121 positioning.
+- Group by intent/problem/topic, not keyword variants.
+- Prioritize with relevance, evidence, user value, GSC/SERP data and realistic opportunity.
+- Search demand refines expression/priorities; it does not invent positioning.
