@@ -2990,3 +2990,36 @@ Responsive image selection should match the rendered slot rather than serving on
 - Consolidate, remove, de-emphasize or relink redundant/weak instances as appropriate.
 - Do not create thin standalone SEO pages for media without a genuine user/Search role.
 - Cross-family linking remains governed by DEC-040–048.
+
+
+## DEC-099 — Brand/Trust Site-Content and Entity-Supporting Page Strategy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** BRAND / TRUST / ENTITY-SUPPORTING CONTENT
+
+### Accepted target state
+- Homepage, About, Why Mariwork, Contact and other entity-supporting trust surfaces use only verified Mariwork facts from the canonical brand/entity registry.
+- Founder, history, specialization, products and educational mission may be described only to the level supported by verified evidence.
+- Do not invent awards, credentials, partnerships, legal status, locations or other trust claims for SEO.
+
+## DEC-100 — Branded Query and Landing-Page Role Strategy
+**Status:** Accepted with research required for final mapping  
+**Date:** 2026-09-26  
+**Scope:** BRANDED QUERIES / LANDING-PAGE OWNERSHIP
+
+### Accepted target state
+- Branded queries do not all default to Homepage ownership.
+- Assign each meaningful branded query/query cluster to the most appropriate durable landing page based on GSC/search research and page role.
+- Candidate owners may include Homepage, Shop, Academy, Magazine, About/brand, Category, Product or another approved target.
+- Final query-to-page ownership is a later research deliverable.
+- Avoid intentional branded cannibalization across multiple pages.
+
+## DEC-101 — Verified Off-Site Entity-Reference and PR/Entity Evidence Boundary
+**Status:** Deferred  
+**Date:** 2026-09-26  
+**Scope:** OFF-SITE ENTITY EVIDENCE / PR
+
+### Deferred state
+- Off-site mentions, publisher references, partnerships, media coverage and external entity evidence may support Mariwork only when genuinely verifiable.
+- Do not create or imply external relationships, endorsements or authority signals for SEO.
+- Revisit operational PR/entity work together with DEC-071 after internal architecture and target landing pages stabilize.
