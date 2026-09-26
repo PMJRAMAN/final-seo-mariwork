@@ -1112,3 +1112,24 @@ Rules:
 - Prefer lowercase Latin + hyphens where practical.
 - No keyword stuffing or inferred facts.
 - No historical bulk rename merely for SEO.
+
+
+## DEC-090 — Primary / Representative Image, Gallery Consistency and Duplicate/Reuse Policy
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- SEO does not redesign Product galleries governed by DEC-056.
+- Image reuse is allowed when relevant and factually accurate.
+- Duplication alone is not an SEO defect.
+- Review suspected mismatch/misleading reuse before corrective implementation.
+
+## DEC-091 — Image Context, Caption and Linked-Image Behavior Policy
+**Status:** ACCEPTED
+- Captions are optional and usefulness-driven.
+- No mechanical captions for SEO.
+- Image links require a relevant intentional destination.
+- No image linking merely to create more internal links.
+
+## DEC-092 — Image Discovery / Indexability / Sitemap Treatment
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- Important images on indexable pages should remain crawlable/loadable unless deliberately blocked.
+- No mandatory separate image sitemap by default.
+- Add dedicated image-discovery mechanisms only when evidence supports a real need.
