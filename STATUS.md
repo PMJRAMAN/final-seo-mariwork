@@ -3,9 +3,9 @@
 **Project:** Final SEO Mariwork  
 **Framework:** v1.0  
 **Framework state:** FROZEN  
-**Phase:** STRATEGY / DECISION PHASE
-**Status:** DECISION BACKLOG V1 FROZEN — TARGET-STATE DECISIONS IN PROGRESS
-**Last framework review:** 2026-09-25
+**Phase:** PRE-STRATEGY-LOCK CONSISTENCY REVIEW
+**Status:** TARGET-STATE DECISIONS RESOLVED — PRE-LOCK CONSISTENCY PASSED; EXECUTION RECONCILIATION PENDING
+**Last framework review:** 2026-09-26
 
 ## Decision Backlog v1 coverage freeze — 2026-09-25
 
@@ -14,14 +14,14 @@ P-001 through P-005 are complete.
 - Decision coverage audit: completed by Codex.
 - ChatGPT P-002 independent review: complete.
 - Authoritative reconciliation: complete.
-- Canonical coverage matrix: **121 rows / zero unexplained material gaps**.
-- Decision Backlog authoritative range: **DEC-001 through DEC-120**.
+- Canonical coverage matrix: **130 rows / zero unexplained material gaps**.
+- Decision Backlog: **129 decision records; highest ID DEC-130; DEC-126 is intentionally left unused and IDs are not renumbered**.
 - Existing Decision IDs renumbered: **0**.
 - Production writes: **0**.
 
 The freeze applies to **decision-domain coverage**, not to the target states themselves.
 
-No OPEN / PROPOSED / NEEDS_TARGETED_EVIDENCE decision is considered approved merely because the backlog structure is frozen.
+Current Backlog has **zero OPEN / PROPOSED / DISCUSSING / NEEDS_TARGETED_EVIDENCE unresolved decisions**. Accepted-with-evidence/research decisions still carry their scoped evidence gates before execution.
 
 Execution remains locked. P-006/P-007 are intentionally pending until the Execution Backlog is reconciled against this frozen structure before any implementation package is promoted to READY_FOR_TASK.
 
@@ -52,7 +52,7 @@ Current planning authorities:
 - `tasks/EXECUTION-BACKLOG.md` — implementation packages unlocked only by accepted decisions.
 - `docs/DECISION-TO-EXECUTION-GOVERNANCE.md` — governing process.
 
-The Decision Backlog currently enumerates the target-state choices to work through incrementally, including titles/H1, metadata, taxonomies, sitemap, schema, internal links, content architecture, images/video, system URL policy and legacy migration.
+The Decision Backlog now records the resolved target-state strategy across titles/H1, metadata, taxonomies, sitemap, schema, internal links, content architecture, semantic positioning, images/video, AI-answer discoverability, system URL policy and legacy migration. Six future programs remain intentionally DEFERRED.
 
 The Execution Backlog is intentionally locked. No Production Codex implementation task may be generated until the blocking Decision IDs are `ACCEPTED` and the related execution item is `READY_FOR_TASK`.
 
@@ -75,7 +75,7 @@ Result:
 - SR-005 added systemic findings `SYS-016` through `SYS-018`;
 - Production writes during Second Review: **0**.
 
-Implementation remains **NOT AUTHORIZED** until the owner approves the target states.
+Target-state decisions are now owner-approved where required. Implementation remains **NOT AUTHORIZED** until Strategy Lock scopes are recorded, P-006/P-007 reconcile the Execution Backlog, and each scoped item satisfies its evidence/dependency gates.
 
 ## Full-site closure — 2026-09-25
 
@@ -89,7 +89,7 @@ Closure artifacts:
 - `audits/sitewide/PRE-IMPLEMENTATION-AUDIT-CLOSURE.md`
 - `audits/sitewide/SYSTEM-URL-SPACES-CLOSURE.md`
 - `audits/sitewide/IMAGE-ALT-AUDIT-SUMMARY.md`
-- `strategy/INTERNAL-LINK-REQUIREMENT-MATRIX-DRAFT.md`
+- `strategy/INTERNAL-LINK-REQUIREMENT-MATRIX.md`
 - `handoff/FULL-SITE-PRE-IMPLEMENTATION-SECOND-REVIEW-HANDOFF-2026-09-25.md`
 
 Three missing current system-page dossiers were added for WP-10 Checkout,
@@ -205,3 +205,21 @@ Rate-limit percentages are recorded only when the installed Codex CLI exposes th
 The first v2.3 A-013 attempt paused safely because the hardened systemd service allowed only AF_UNIX/AF_INET/AF_INET6 while Codex bubblewrap requires AF_NETLINK/NETLINK_ROUTE for local sandbox setup. The service policy now adds AF_NETLINK only. Codex model networking remains disabled, and Production/DB isolation is unchanged.
 
 The failed attempt must not be treated as an SEO failure or completed A-013 output; retry A-013 only after the updated service policy is deployed.
+
+
+## Pre-Strategy-Lock consistency review — 2026-09-26
+
+Result: **PASS WITH NON-STRATEGY INPUT GATES**
+
+- unresolved target-state decisions: **0**
+- intentionally deferred decisions: **6**
+- superseded traceability records: **2**
+- accepted policies requiring targeted evidence before affected execution: retained as explicit gates
+- canonical decision coverage: **130 rows / zero unexplained material gaps**
+- DEC-028/052 Artist migration conflict: reconciled with DEC-066
+- internal-link draft conflict: replaced by canonical accepted matrix
+- Content Architecture / Visual / Video strategy files: reconciled with accepted decisions
+- DEC-121 semantic positioning: promoted to a dedicated canonical foundation document
+- DEC-129 AI discoverability: retained as a foundational content/SEO objective
+
+Next governance step: Strategy Lock scope definition, then P-006/P-007 Execution Backlog reconciliation. No Production write is authorized by this review.
