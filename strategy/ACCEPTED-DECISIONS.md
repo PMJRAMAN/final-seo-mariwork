@@ -993,3 +993,14 @@ Rules:
 - Do not wait for every sitewide decision before executing an independent locked scope.
 - Each locked scope may generate its own ordered Execution Backlog.
 - Explicitly record cross-scope dependencies and unresolved blockers.
+
+
+## DEC-074 — Login / My Account Authentication and Account-Page Policy
+
+**Status:** ACCEPTED
+
+- Login and My Account are utility/account surfaces, not SEO landing pages.
+- Keep them out of XML sitemaps and noindex.
+- Do not add SEO/editorial copy just to optimize them.
+- Preserve authentication, account-state and privacy behavior.
+- Do not add canonicals solely because these noindex utility pages lack them.
