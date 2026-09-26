@@ -172,7 +172,7 @@ Rules:
 **Status:** ACCEPTED
 
 - Static/Core pages use concise, page-specific SEO titles and clear visible H1s.
-- Repetitive suffixes such as `- رنگ پارچه ماری ورک` are not required when the page is already clearly identified.
+- Historical non-canonical suffixes such as `- رنگ پارچه ماری ورک` are not required when the page is already clearly identified.
 - About: `درباره ماری‌ورک` / H1 same.
 - Contact: `تماس با ماری‌ورک` / H1 `با ماری‌ورک در تماس باشید`.
 - Magazine: `مجله ماری‌ورک` / H1 same.
@@ -189,8 +189,8 @@ Rules:
 
 - Article titles are natural, reader-facing and based on the actual subject.
 - Default relationship: approved Article H1/title = SEO `<title>`.
-- Remove the repetitive `- رنگ پارچه ماری ورک` suffix from the default Article title template.
-- Include `رنگ پارچه`, `ماری ورک` or other terms only when naturally relevant to the Article.
+- Remove the historical non-canonical `- رنگ پارچه ماری ورک` suffix from the default Article title template.
+- Include `رنگ پارچه`, canonical `ماری‌ورک`, or other terms only when naturally relevant to the Article.
 - Do not mechanically inject keywords, dates, “best”, “complete guide”, or similar modifiers for SEO.
 - Retain existing titles when accurate and useful.
 - Rewrite only when materially vague, inaccurate, misleading, excessively verbose, or inconsistent with the content.
@@ -208,7 +208,7 @@ Rules:
 - Lesson H1 remains the natural instructional title.
 - Default Lesson SEO title: `[Lesson H1] | آموزش ویدیویی`.
 - Example: H1 `چاپ سیلک اسکرین` → SEO title `چاپ سیلک اسکرین | آموزش ویدیویی`.
-- Remove the repetitive `- رنگ پارچه ماری ورک` suffix.
+- Remove the historical non-canonical `- رنگ پارچه ماری ورک` suffix.
 - Include Mariwork only when naturally part of the subject/identity.
 - Preserve sequence numbers only for genuine multi-part instructional series.
 - Do not change URLs/slugs solely because titles are normalized.
