@@ -3325,3 +3325,31 @@ Economic value does not mean lowest price. The intended angle is value created b
 - Prioritize using Mariwork relevance, evidence, user value, GSC/search evidence and realistic opportunity.
 - Search data may refine phrasing and priority, but cannot override factual Product/brand boundaries or manufacture unsupported positioning.
 - Do not infer Page→Query ownership without joined evidence.
+
+
+## DEC-123 — Cluster-to-Page-Family Ownership Map
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Every approved topic/query cluster has one primary durable page-family owner chosen by intent and page role.
+- Candidate owners include Product, Product Category, Magazine Article, Academy, FAQ, Why Mariwork, Homepage and other approved durable families.
+- Avoid duplicate primary ownership, keyword-variant doorway pages and parallel same-intent pages.
+- Supporting pages may participate when their role is genuinely distinct.
+- Final cluster-to-page mapping remains an evidence-based research deliverable.
+
+## DEC-124 — Content Journey and Coverage Strategy by Cluster
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Priority clusters should be covered as coherent user journeys rather than isolated pages.
+- Coverage may span awareness → understanding → instruction/comparison → product selection/use/care.
+- Each page family contributes a distinct role with useful cross-family handoffs.
+- Do not duplicate substantially the same content across multiple pages merely to increase coverage.
+- Journey depth depends on real user need, approved page ownership and evidence.
+
+## DEC-125 — Product/Brand Claim Evidence Standard
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Claims such as economic value, durability/stability, coverage/efficiency, compatibility, professional suitability, safety, performance or superiority require claim-appropriate evidence before broad publication.
+- Evidence may include verified product specifications/instructions, documented first-hand tests, reliable business/product data or credible external sources where relevant.
+- Marketing attractiveness alone is not evidence.
+- Comparative/superiority and safety claims require especially strong support.
+- Do not infer technical claims from general brand positioning.
