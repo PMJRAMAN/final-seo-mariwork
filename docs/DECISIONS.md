@@ -473,7 +473,7 @@ Rules:
 - Do not use SEO-title exceptions for keyword expansion or artificial brand insertion.
 - Third-party/generic Products must not receive Mariwork branding merely through the SEO-title template.
 - Product title normalization must be completed before the global Rank Math Product title template is changed.
-- Global implementation remains blocked until deferred DEC-008 is resolved.
+- DEC-008 is accepted; global Product-title template rollout is no longer blocked by that decision and remains subject to normal canary/regression gates.
 - Template rollout requires regression checks for unique, descriptive titles and absence of unintended duplicate branding.
 
 
