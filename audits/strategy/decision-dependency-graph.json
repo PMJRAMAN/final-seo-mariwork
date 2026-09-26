@@ -1037,5 +1037,9 @@
       "dependency_issue": "Review availability, collection/display and schema are bundled; see CAND-036.",
       "unlocks": []
     }
-  ]
+  ],
+  "lifecycle": "HISTORICAL_P001_SNAPSHOT",
+  "superseded_by": "audits/strategy/P-004-CANONICAL-DECISION-COVERAGE-MATRIX.json",
+  "do_not_use_for_current_decision_status": true,
+  "snapshot_note": "Retained for P-001 traceability. Current decision status/coverage is governed by strategy/DECISION-BACKLOG.md and the P-004 canonical matrix."
 }
