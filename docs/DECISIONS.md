@@ -376,7 +376,7 @@ Mariwork taxonomy architecture is intentionally selective.
 
 The canonical visible Product title/H1 pattern for Mariwork fabric-color products is:
 
-`رنگ پارچه [Color Name] ماری ورک کد [NNN]`
+`رنگ پارچه [Color Name] ماری‌ورک کد [NNN]`
 
 Rules:
 - Start with the product type `رنگ پارچه`.
@@ -388,9 +388,9 @@ Rules:
 - Do not add 30/60/250 ml volume tokens to the parent Product title when those volumes are variants of the same Product.
 - Visible-title normalization must not trigger mass Product URL/slug changes.
 - SEO `<title>` template behavior is governed separately by DEC-011.
-- Final Mariwork brand spelling follows DEC-053.
-- Persian half-space usage is a writing and brand-consistency standard, not a standalone SEO requirement.
-- Do not perform bulk URL or content changes solely to normalize half-space usage.
+- Final Mariwork brand spelling follows DEC-053: `ماری‌ورک`.
+- Normalize visible Product naming to the canonical spelling when that Product content is touched under the approved rollout.
+- Do not change Product URLs/slugs solely for spelling normalization.
 
 
 ## DEC-009 — Medium / Additive Product Naming Standard
@@ -402,7 +402,7 @@ Rules:
 
 The canonical visible Product title/H1 pattern is:
 
-`[Exact Product Name] ماری ورک کد [NNN]`
+`[Exact Product Name] ماری‌ورک کد [NNN]`
 
 Rules:
 - Use the exact factual Product identity; do not force every product to include the generic term `مدیوم`.
@@ -433,10 +433,10 @@ For third-party or generic tools/accessories:
 
 For products genuinely branded/manufactured by Mariwork:
 
-`[Exact Product Name] ماری ورک کد [NNN]`
+`[Exact Product Name] ماری‌ورک کد [NNN]`
 
 Rules:
-- Do not append `ماری ورک` merely because the product is sold on mariwork.ir.
+- Do not append `ماری‌ورک` merely because the product is sold on mariwork.ir.
 - Include the Mariwork brand only when the product is factually Mariwork-branded or manufactured.
 - For third-party products, include the actual third-party brand only when it is a genuine part of the Product identity.
 - Include a code only when it is a real, stable Product identifier.
@@ -1464,7 +1464,7 @@ Rules:
 - include the genuine Set/Bundle identity;
 - include count/type when it materially identifies the Set;
 - include volume when it materially distinguishes the Set identity;
-- use `ماری ورک` only for genuinely Mariwork-branded Sets;
+- use `ماری‌ورک` only for genuinely Mariwork-branded Sets;
 - do not force a Product code unless a real stable code exists;
 - long composition strings such as `شامل ...` belong in visible Product content, not the primary title/H1;
 - do not use decorative separator-heavy title construction;
