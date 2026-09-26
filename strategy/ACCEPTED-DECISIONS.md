@@ -1354,3 +1354,23 @@ Rules:
 - Verified specs/instructions, documented tests, reliable business data or credible sources may support claims.
 - Marketing attractiveness alone is not evidence.
 - Comparative/superiority and safety claims require especially strong support.
+
+
+## DEC-127 — Official Social/Profile and Contact Registry
+**Status:** ACCEPTED — OWNER DETAILS PENDING
+- Only owner-verified official profile/contact details may be used.
+- Confirmed channels: Instagram, YouTube, Telegram, Aparat, phone, email and WhatsApp.
+- Exact values remain pending owner input; no inference is allowed.
+
+## DEC-128 — Other Removed-Content Legacy URL Disposition
+**Status:** ACCEPTED — URL-LEVEL EVIDENCE MAY BE PENDING
+- Verified semantic successor → 301.
+- No genuine successor → proper 404/410.
+- No generic fallback redirects to unrelated destinations.
+
+## DEC-129 — AI Assistant / Generative-Answer Discoverability, Citation and Content Strategy
+**Status:** ACCEPTED — FOUNDATIONAL
+- AI-answer discoverability and citation is a first-class Mariwork SEO/content objective.
+- Separate crawl eligibility from citation-worthiness.
+- Optimize around conversational intent, answerable structure, first-hand evidence, provenance, entity consistency, multimodal support, freshness and measurable citation/referral evidence.
+- No thin GEO/FAQ scaling, fabricated authority or undocumented AI tricks.
