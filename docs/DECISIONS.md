@@ -3097,3 +3097,59 @@ Responsive image selection should match the rendered slot rather than serving on
 - Do not disable or robots-block feed functionality solely for SEO without a separate technical reason.
 - Preserve required feed behavior where used.
 - This decision is separate from Merchant Center/Product Feed architecture.
+
+
+## DEC-108 — General Internal-Search Result URL Policy
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Internal-search result URLs are user utilities, not SEO landing pages.
+- Keep them out of XML sitemaps and noindex.
+- Preserve internal search functionality.
+- Do not robots-block them in a way that prevents crawlers from reading the noindex directive.
+- Product Search remains governed by DEC-061.
+
+## DEC-109 — 404 / Soft-404 / Error-Page Lifecycle Policy
+**Status:** Accepted  
+**Date:** 2026-09-26
+- A truly removed URL without a genuine semantic successor returns proper 404 or 410.
+- A verified semantic successor may receive a permanent 301 through the Nginx redirect layer.
+- Error pages may provide helpful navigation but must preserve the correct HTTP error status.
+- Do not redirect unrelated missing URLs to generic destinations merely to avoid 404s.
+
+## DEC-110 — Search-Crawler Access and Training-Crawler Separation
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26
+- Public SEO-target pages should remain accessible to legitimate Search crawlers such as Googlebot and OAI-SearchBot unless a deliberate page-level exclusion applies.
+- OAI-SearchBot Search eligibility is separate from GPTBot model-training use.
+- ChatGPT-User is a separate user-triggered access pattern.
+- Search discoverability policy and model-training policy are independent.
+- Verify robots/WAF/server/CDN behavior and published crawler-IP access before implementation.
+- This is a technical prerequisite only; AI-assistant/content citation strategy is handled separately by DEC-129.
+
+## DEC-129 — AI Assistant / Generative-Answer Discoverability, Citation and Content Strategy
+**Status:** Proposed  
+**Created:** 2026-09-26
+
+### Decision scope
+Treat visibility and citation in AI-generated answers as a first-class Mariwork SEO objective, separate from but connected to classic search rankings.
+
+The strategy decision must cover:
+- ChatGPT Search / OAI-SearchBot eligibility and citation-oriented content;
+- Microsoft Copilot / Bing AI citation and grounding visibility;
+- Google generative Search features where available;
+- other AI answer surfaces only where reliable evidence and measurement exist;
+- conversational/query-intent ownership and mapping to durable Mariwork pages;
+- clear, answerable content structure without thin FAQ/GEO-page proliferation;
+- first-hand evidence, unique data, real examples, comparisons and practical instruction;
+- factual provenance, sources, dates, author/reviewer identity where genuinely applicable;
+- strong brand/entity consistency across text, schema, images and video;
+- freshness and factual maintenance;
+- citation/referral/AI-visibility measurement where platforms expose reliable data;
+- technical crawler eligibility as a prerequisite, not the whole strategy;
+- explicit separation between Search visibility controls and model-training controls.
+
+### Guardrails
+- No fabricated authority, citations, expertise, reviews or external relationships.
+- No scaled thin pages created only to target chatbot prompts.
+- No assumption that AI-specific files or tactics such as llms.txt improve visibility unless a target platform documents that effect.
+- No guarantee of inclusion or citation; optimize for usefulness, clarity, evidence and retrievability.
