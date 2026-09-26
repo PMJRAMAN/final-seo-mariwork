@@ -1069,3 +1069,26 @@ Rules:
 - Temporary stockout normally keeps the Product page with accurate unavailable status.
 - Discontinued Products require successor/lifecycle review: preserve, verified redirect, or proper 404/410.
 - Do not bulk-redirect discontinued Products to generic destinations.
+
+
+## DEC-084 — Future Product URL/Slug Change and History-Preservation Policy
+**Status:** ACCEPTED
+- Preserve old Product URLs when slugs change.
+- 301 old URLs via Nginx to the same Product's new canonical URL.
+- Update internal links, canonical and sitemap references.
+- Do not reuse old Product slugs for different entities.
+- Avoid cosmetic-only Product slug changes.
+
+## DEC-085 — Editorial Provenance Policy
+**Status:** ACCEPTED
+- Use real dates and evidence-based sources where provenance is materially useful.
+- Use named authors/reviewers only when verified.
+- Never invent credentials, expertise or reviewer identities.
+- Mariwork Organization remains the default author unless a genuine approved attribution requirement exists.
+
+## DEC-086 — FAQ Visible-Content / Structured-Data Boundary
+**Status:** ACCEPTED
+- FAQs must be genuinely useful and visibly present.
+- Do not create artificial FAQs for SEO/schema.
+- Do not treat FAQ markup as a guaranteed rich-result tactic.
+- No hidden or fabricated FAQ content solely for markup.
