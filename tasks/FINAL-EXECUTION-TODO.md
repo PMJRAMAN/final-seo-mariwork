@@ -1,6 +1,6 @@
 # FINAL EXECUTION TODO — Mariwork SEO
 
-**Status:** P-008 COMPLETE — EXECUTION TODO FROZEN FOR WAVE PLANNING  
+**Status:** P-009 COMPLETE — PRIORITY / WAVE PLAN FROZEN  
 **Generated from:** `tasks/EXECUTION-BACKLOG.md` after P-007  
 **Date:** 2026-09-26  
 **Production writes authorized here:** NO  
@@ -10,7 +10,7 @@
 
 This is the final execution-control TODO derived from the 57 validated execution packages. It does not replace the Execution Backlog, Decision Backlog, Strategy Locks, or MASTER-TODO. It provides one operational checklist for the remaining planning and execution lifecycle.
 
-Stage 4 deliberately does **not** assign priority, Wave, or execution order. Those belong to Stage 5. A checked box here means the execution package itself has ultimately completed its governed lifecycle; READY_FOR_TASK is not completion.
+Stage 5 assigns dependency-aware planning Waves and priorities. A Wave is a planning lane, not permission to execute. A checked box here means the execution package itself has ultimately completed its governed lifecycle; READY_FOR_TASK is not completion.
 
 ## State contract
 
@@ -18,7 +18,8 @@ Stage 4 deliberately does **not** assign priority, Wave, or execution order. Tho
 - **BLOCKED**: a real prerequisite must be closed before task issuance.
 - No Codex Production task is created by this document.
 - No Production write is authorized until a specific package is READY_FOR_TASK and its exact Codex task is separately written under repository governance.
-- Stage 5 may add Wave/priority metadata but must not silently change decisions, gates, or package scope.
+- Wave/priority metadata must not silently change decisions, gates, readiness, or package scope.
+- A BLOCKED package may be assigned to a future Wave, but cannot receive a Production task until its gate closes and readiness is reconciled.
 
 ## Coverage summary
 
@@ -27,6 +28,87 @@ Stage 4 deliberately does **not** assign priority, Wave, or execution order. Tho
 - BLOCKED at Stage-4 freeze: **41**
 - Completed execution packages: **0**
 - Production writes in Stage 4: **0**
+
+## P-009 priority and Wave plan
+
+Priority means **planning/unlock priority**, not permission to write Production.
+
+### Wave 0 — Control plane / execution safety
+**Priority: P0 foundation.** Establish the measurement, annotation, review and change-control layer before broad implementation.
+
+- EXE-001 — Change annotation + baseline + canary framework
+- EXE-002 — Monitoring outcome register / 28–56 day review workflow
+- EXE-051 — AI/multimodal measurement and reporting plan
+
+### Wave 1 — Evidence, discovery and system baselines
+**Priority: P0/P1 unlockers.** Run evidence-producing packages that define current state or unlock many downstream scopes.
+
+- EXE-036 — Semantic positioning evidence registry
+- EXE-037 — Topic/query cluster research
+- EXE-040 — Product/brand claim-evidence matrix
+- EXE-047 — Full public video inventory
+- EXE-052 — Nginx redirect inventory / chain-conflict verification
+- EXE-003 — host/protocol/trailing-slash verification
+- EXE-005 — utility/search/feed indexability verification
+- EXE-006 — author/date archive verification
+- EXE-007 — 404/soft-404 behavior
+- EXE-009 — crawler access controls
+- EXE-011 — sitemap reconciliation
+- EXE-049 — AI-search crawler eligibility verification
+- EXE-054 — Education → Academy redirect verification
+
+These are currently READY_FOR_TASK, but task issuance remains Stage 6 and each task retains its stated preflight.
+
+### Wave 2 — Architecture maps and blocker closure
+**Priority: P1.** Convert Wave-1 evidence plus owner inputs into exact mappings, scopes and approved target data. Most items are currently BLOCKED and stay blocked until their stated gate closes.
+
+- EXE-004, EXE-008, EXE-010 — technical evidence/mapping closure
+- EXE-012–018, EXE-021–023, EXE-026 — Product/store facts, identities, copy scope and structured-data field mapping
+- EXE-027–029, EXE-033 — brand/static/Academy facts and entity mapping
+- EXE-038 — cluster → primary page-family ownership
+- EXE-043 — approved global navigation/hub map
+- EXE-044–046 — image/media review and delivery-policy evidence
+- EXE-050 — AI answer/citation research framework after cluster evidence
+- EXE-053, EXE-056 — legacy identity/disposition mapping
+- EXE-013–015 specifically retain the canonical spelling consistency gate.
+
+### Wave 3 — Content architecture and destination maps
+**Priority: P1/P2.** Build exact page-level content and linking targets after Wave-2 ownership/evidence is available.
+
+- EXE-019, EXE-020 — durable Product Category / volume landing targets
+- EXE-030, EXE-032, EXE-035 — Blog/archive/article content targets
+- EXE-039 — content-journey coverage map
+- EXE-041 — parent/hub mandatory-link source→destination matrix
+- EXE-042 — cross-family Product/Category ↔ Academy/Article destination map
+- EXE-034 — Academy/Guide + VideoObject canary evidence closure
+
+### Wave 4 — Controlled implementation / canaries / migrations
+**Priority: P2 implementation.** Only packages whose gates have closed and state has become READY_FOR_TASK may enter Stage 6 task issuance.
+
+- EXE-012–035 as applicable after their upstream evidence/copy/mapping gates close
+- EXE-041–046 after exact link/media implementation scopes close
+- EXE-048 — Video technical/schema implementation after EXE-047 and representative canary evidence
+- EXE-053, EXE-056 — legacy migrations after exact identity/disposition mapping
+- EXE-055 — Artist migration remains excluded from active implementation until the Artists system is public/stable and manual identity review is complete
+
+### Wave 5 — Sitewide regression and outcome handoff
+**Priority: terminal QA.**
+
+- EXE-057 — final sitewide technical/content/link/schema/media regression, only after implemented packages reach QA
+- EXE-002 monitoring workflow continues into post-change 28/56-day outcome review.
+
+### Dependency rules
+
+1. Wave number never overrides a package gate or state.
+2. Wave 0 control-plane work precedes broad Production implementation.
+3. EXE-037 feeds EXE-038; EXE-037 + EXE-038 feed EXE-039; EXE-038/039 feed EXE-042.
+4. EXE-036/040 evidence feeds Product/brand/content claims and copy scopes where relevant.
+5. EXE-047 precedes EXE-048.
+6. EXE-052 is the redirect baseline for legacy migration work; exact per-URL identity/disposition gates still apply.
+7. EXE-055 is event-gated by the public/stable Artists system, not by Wave completion.
+8. EXE-057 is terminal and cannot be pulled forward.
+9. A BLOCKED item that closes early may move to READY_FOR_TASK, but Stage 6 still requires an exact separately written Codex task.
+10. No Wave is a bulk authorization for Production writes.
 
 ## Final execution checklist
 
@@ -90,10 +172,8 @@ Stage 4 deliberately does **not** assign priority, Wave, or execution order. Tho
 | [ ] | EXE-056 | Other removed-content legacy URL disposition batch | **BLOCKED** | URL-level owner/source evidence where identity unclear | SL-006; DEC-063,067,109,128 | G,H,I-004 | NGINX |
 | [ ] | EXE-057 | Final sitewide technical/content/link/schema/media regression | **BLOCKED** | only after implemented packages reach QA | ALL ACTIVE LOCKS; all implemented-scope accepted DEC + DEC-069,102,103 | I-002–I-020 | QA |
 
-## Stage-5 handoff
+## Stage-6 handoff
 
-Stage 5 must take this exact 57-package checklist and add dependency-aware priority/Wave planning. It must preserve the 16/41 readiness classification unless new evidence closes a blocker or reveals a new blocker. Any readiness change must also be reconciled back to `tasks/EXECUTION-BACKLOG.md`.
+P-009 is complete. The next planning action is not bulk execution. For any individual package that is actually READY_FOR_TASK, Stage 6 writes a precise Codex task referencing its Program/Task ID, entity/batch, prerequisite status, expected dossier/change outputs, Google basis, SEO owner, acceptance criteria, rollback/canary requirements, and the next TODO item unlocked.
 
-Stage 5 must distinguish foundation/process work, evidence/research packages that unlock later packages, independent technical scopes, content/entity/link/media packages with upstream dependencies, legacy migrations with exact mapping gates, and terminal final regression.
-
-No Codex Production execution begins merely because a package is placed in a Wave.
+Current Stage-5 freeze remains **16 READY_FOR_TASK / 41 BLOCKED**. P-009 itself changes no readiness state and performs no Production write.
