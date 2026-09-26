@@ -312,15 +312,15 @@ After each discussion:
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-099 | Brand/trust site-content and entity-supporting page strategy | DISCUSSING | BRAND-ENTITY-SEARCH; Homepage/About/Why/Contact | Uses verified facts from DEC-053 |
-| DEC-100 | Branded query and landing-page role strategy | OPEN | BRAND-ENTITY-SEARCH; N-002/N-007 | Query ownership requires joined evidence or direct research |
-| DEC-101 | Verified off-site entity-reference and PR/entity evidence boundary | DEFERRED | BRAND-ENTITY-SEARCH; EXTERNAL-PR-STRATEGY | No invented relationships; coordinate with DEC-071 |
+| DEC-099 | Brand/trust site-content and entity-supporting page strategy | ACCEPTED | BRAND-ENTITY-SEARCH; Homepage/About/Why/Contact; DEC-053; owner approval 2026-09-26 | Accepted: Homepage/About/Why Mariwork/Contact and other entity-supporting trust surfaces must use only verified Mariwork facts from the canonical brand/entity registry. They may explain the founder, history, specialization, products and educational mission only to the level supported by verified evidence. Do not invent awards, credentials, partnerships, legal status, locations or other trust claims for SEO. |
+| DEC-100 | Branded query and landing-page role strategy | ACCEPTED_WITH_RESEARCH | BRAND-ENTITY-SEARCH; N-002/N-007; owner approval 2026-09-26 | Accepted principle: branded queries do not all default to Homepage ownership. Assign each meaningful branded query/query-cluster to the most appropriate durable landing page (Homepage, Shop, Academy, Magazine, About/brand, Category, Product or other approved target) based on joined GSC/search research and page role. Final query-to-page ownership requires evidence and is a later research deliverable. Avoid intentional branded cannibalization across multiple pages. |
+| DEC-101 | Verified off-site entity-reference and PR/entity evidence boundary | DEFERRED | BRAND-ENTITY-SEARCH; EXTERNAL-PR-STRATEGY; DEC-071; owner confirmation 2026-09-26 | Confirmed deferred with boundary accepted: off-site mentions, publisher references, partnerships, media coverage and external entity evidence may support Mariwork only when genuinely verifiable. Do not create or imply external relationships, endorsements or authority signals for SEO. Revisit operational PR/entity work together with DEC-071 after internal architecture and target landing pages stabilize. |
 
 # Session 17 — Measurement, maintenance and deferred expansion
 
 | ID | Decision | Status | Primary evidence | Blocking / notes |
 |---|---|---|---|---|
-| DEC-102 | Release isolation, change annotation and comparable measurement-baseline policy | OPEN | MEASUREMENT-SPEC §§1–3 | Required before meaningful causal interpretation |
+| DEC-102 | Release isolation, change annotation and comparable measurement-baseline policy | DISCUSSING | MEASUREMENT-SPEC §§1–3 | Required before meaningful causal interpretation |
 | DEC-103 | Monitoring KEEP / ITERATE / ROLLBACK-CANDIDATE interpretation | OPEN | MEASUREMENT-SPEC §§4–7 | Separate from cadence and raw metrics |
 | DEC-104 | Maintenance triggers for updates, Google changes, new URLs/404s and freshness | OPEN | MASTER-TODO J-003–J-009 | Recurring triage policy |
 | DEC-105 | Product Feed identity/variant/data-contract architecture | DEFERRED | MASTER-TODO O-004–O-006; DEC-072 | Split further before implementation if one target state is still ambiguous |
