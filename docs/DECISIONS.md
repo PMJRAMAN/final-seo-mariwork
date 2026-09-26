@@ -2911,3 +2911,47 @@ Google requires Product structured-data images to represent the marked-up Produc
 - Do not mandate a separate image sitemap by default.
 - Evaluate dedicated image-discovery mechanisms only when later evidence shows a real coverage/discovery need or benefit.
 - Exact crawl/index implementation requires targeted technical evidence.
+
+
+## DEC-093 — Image Technical Delivery Policy: Dimensions, Formats, Responsive Sizing, Lazy Loading and LCP
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26  
+**Scope:** IMAGE DELIVERY / RESPONSIVE IMAGES / MOBILE / DESKTOP / LCP / CLS
+
+### Accepted target state
+- Image delivery is template- and slot-aware across mobile and desktop.
+- Provide appropriately sized responsive candidates and correct `srcset` / `sizes` behavior so the browser does not routinely download images materially larger than the rendered need.
+- Also avoid undersized/blurry image delivery, including on higher-density displays.
+- Preserve explicit intrinsic dimensions/aspect ratio where applicable to reduce layout shift.
+- Below-the-fold images may use lazy loading.
+- Likely LCP/hero images must not be blindly lazy-loaded; prioritization is evidence-driven.
+- Standardize image sizing/delivery rules by component/template so equivalent slots behave consistently.
+- Representative QA must cover mobile and desktop slot size, DPR behavior, transferred bytes, visual quality and LCP/CLS impact.
+- Do not claim performance improvement without lab/field evidence.
+
+### Rationale
+Responsive image selection should match the rendered slot rather than serving one desktop-scale asset everywhere. Correct `srcset` and `sizes` allow the browser to choose an efficient candidate while maintaining sufficient source resolution for visual quality.
+
+## DEC-094 — Video Host-Page, Fetchability, Prominence and Player/Embed Policy
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26  
+**Scope:** VIDEO HOST PAGE / PLAYER / FETCHABILITY / PROMINENCE
+
+### Accepted target state
+- Important/indexable videos require a genuine watchable host-page relationship.
+- The video must be visibly available/playable, contextually relevant and sufficiently prominent for the page's role.
+- Player/embed and required video resources must be technically fetchable where Search discovery is intended.
+- Apply VideoObject only when eligibility conditions are actually met.
+- Do not manufacture video markup for hidden, incidental or non-watchable media.
+- Verify representative host/player behavior before broad rollout.
+
+## DEC-095 — Video Title / Description / Reusable Naming Standard
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** VIDEO TITLES / DESCRIPTIONS / NAMING
+
+### Accepted target state
+- Public Mariwork videos use truthful, descriptive titles and descriptions aligned to their real subject and host-page context.
+- Avoid generic serial naming, keyword stuffing and fabricated details.
+- Visible/contextual video naming and eligible structured-data metadata remain semantically consistent with the actual video.
+- Final wording may vary by family/topic rather than forcing one identical template.
