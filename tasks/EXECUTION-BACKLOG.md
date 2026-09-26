@@ -82,15 +82,15 @@ Only `READY_FOR_TASK` may become a Production Codex task.
 
 | ID | Package | Strategy Lock | Decisions | MASTER refs | Primary owner | Remaining gate | State |
 |---|---|---|---|---|---|---|---|
-| EXE-027 | Homepage content/CTA + metadata/schema reconciliation | SL-003 | DEC-002,032,053,099,100,114 | C-003–C-013 | CONTENT + RANK_MATH | branded-query evidence for any baseline change | BLOCKED |
-| EXE-028 | Static/trust page metadata/content/schema package | SL-003 | DEC-012,017,022,033,053,085,086,087,099,127 | D | CONTENT + RANK_MATH | exact owner-supplied contact/social facts where used | BLOCKED |
-| EXE-029 | Canonical brand/entity consistency implementation | SL-003 | DEC-053,099,100,127 | N-001–N-012 | CONTENT + RANK_MATH | exact official handles/contact values; branded query mapping | BLOCKED |
+| EXE-027 | Homepage content/CTA + metadata + WebSite/WebPage schema reconciliation (**shared Organization entity excluded**) | SL-003 | DEC-002,032,053,099,100,114 | C-003–C-013 | CONTENT + RANK_MATH | branded-query evidence for any baseline change; **sole write owner for Homepage visible content, SEO metadata and Homepage WebSite/WebPage outputs**; consume verified canonical brand/entity facts from EXE-029; **must not write the canonical/shared Organization/sameAs/contact registry or shared Organization entity facts/schema owned by EXE-029** | BLOCKED |
+| EXE-028 | Static/trust page content + metadata + page-local schema package (**shared Organization entity excluded**) | SL-003 | DEC-012,017,022,033,053,085,086,087,099,127 | D | CONTENT + RANK_MATH | exact owner-supplied contact/social facts where used; consume the verified EXE-029 registry; **sole write owner for Static/Trust visible content, SEO metadata and role-appropriate page-local schema**; **must not write the canonical/shared Organization/sameAs/contact registry or shared Organization entity facts/schema owned by EXE-029** | BLOCKED |
+| EXE-029 | Canonical brand/entity registry + shared Organization/sameAs consistency implementation | SL-003 | DEC-053,099,100,127 | N-001–N-012 | BRAND REGISTRY + RANK_MATH SHARED ENTITY | exact official handles/contact values; branded query mapping; **sole write owner for the canonical brand/entity registry and shared Organization/sameAs/contact-channel entity facts/schema**; may supply verified facts to EXE-027/028 but **must not edit Homepage or Static/Trust visible content, H1, page SEO metadata, or page-local WebSite/WebPage/CollectionPage content/schema owned by those packages** | BLOCKED |
 | EXE-030 | Durable Blog Category archive/content package | SL-003 | DEC-028,030,051,118,121–125,130 | E0,H | CONTENT + RANK_MATH | final taxonomy/page-specific research + approved exact copy; **sole Blog Category content-block write owner under DEC-130** | BLOCKED |
 | EXE-031 | Blog Tag controlled decommission | SL-003/SL-006 | DEC-029,063,067,109 | E0-007–012 | NGINX + WORDPRESS + RANK_MATH | URL-by-URL editorial successor map | BLOCKED |
 | EXE-032 | Article metadata/freshness/content pilot | SL-003 | DEC-013,018,023,034,044,045,049,050,068,085,088,119,121–125 | E1 | CONTENT + RANK_MATH | cluster ownership + article-level evidence/copy | BLOCKED |
-| EXE-033 | Academy Guide/Course metadata/content pilot | SL-003 | DEC-014,019,024,037,043,049,068,085,088,121–125 | F0,F1 | CONTENT + RANK_MATH | current Guide vs future Course entity mapping | BLOCKED |
+| EXE-033 | Academy Guide/Course entity metadata/content pilot (**DEC-130 hub block excluded**) | SL-003 | DEC-014,019,024,037,043,049,068,085,088,121–125 | F0,F1 | CONTENT + RANK_MATH | current Guide vs future Course entity mapping; owns Guide/Course entity identity, metadata and non-DEC-130 supporting content; **must not write the Academy archive/Guide-collection DEC-130 visible hub block owned by EXE-035** | BLOCKED |
 | EXE-034 | Academy/LearnDash schema ownership + video-host eligibility canary (**no VideoObject write**) | SL-003/SL-005 | DEC-037,038,039,068,094–098 | F,M | RANK_MATH + CUSTOM_CODE if unsupported | EXE-047 inventory + two-guide host/player/fetchability evidence; output exact Academy host/schema-owner map; **VideoObject mutation is excluded and handed to EXE-048** | BLOCKED |
-| EXE-035 | Durable archive/hub content-block coordination + residual-hub implementation | SL-002/SL-003/SL-004 | DEC-021,051,117,118,130 | B0,B7,F,E,H | CONTENT | deduplicated archive roster + approved copy/placement; **must not write Shop/Product Category/pa_volume/Blog Category blocks owned by EXE-012/019/020/030**; owns only Academy/Magazine/other residual durable hubs not assigned elsewhere | BLOCKED |
+| EXE-035 | Durable archive/hub DEC-130 content-block coordination + residual-hub implementation | SL-002/SL-003/SL-004 | DEC-021,051,117,118,130 | B0,B7,F,E,H | CONTENT | deduplicated archive roster + approved copy/placement; **must not write Shop/Product Category/pa_volume/Blog Category blocks owned by EXE-012/019/020/030**; **sole write owner for the DEC-130 visible hub block on Academy archive/Guide collection, Magazine archive, and other residual durable hubs not assigned elsewhere**; must not write Guide/Course entity metadata or non-hub supporting content owned by EXE-033 | BLOCKED |
 
 # E. Content-strategy research packages
 
@@ -212,3 +212,16 @@ Reconciled after `audits/strategy/P-010-FINAL-DECISION-TO-EXECUTION-INTEGRITY-AU
 - DEC-130 content-block ownership is deduplicated: Shop→EXE-012; Product Category→EXE-019; pa_volume→EXE-020; Blog Category→EXE-030; Academy/Magazine/other residual durable hubs→EXE-035.
 - EXE-058 closes the MASTER B8-008–010 traceability gap as evidence-only discovery. It cannot choose index/noindex/redirect/canonical policy; any such change requires a later accepted per-family Decision.
 - EXE-057 remains BLOCKED and additionally requires a frozen versioned regression manifest at activation.
+
+
+# P-013 reconciliation result
+
+Reconciled after `P-012` identified three remaining duplicate write-owner pairs.
+
+- **Academy hub boundary:** EXE-033 owns Guide/Course entity identity, metadata and non-DEC-130 supporting content; EXE-035 is the sole owner of the DEC-130 visible hub block on Academy archive/Guide collection and residual durable hubs.
+- **Homepage / brand boundary:** EXE-027 owns Homepage visible content, SEO metadata and Homepage WebSite/WebPage outputs; it consumes shared verified brand/entity facts from EXE-029 and cannot write the canonical/shared Organization entity registry.
+- **Static / brand boundary:** EXE-028 owns Static/Trust visible content, SEO metadata and page-local schema; it consumes shared verified brand/entity facts from EXE-029 and cannot write the canonical/shared Organization entity registry.
+- **Shared entity boundary:** EXE-029 is the sole owner of the canonical brand/entity registry and shared Organization/sameAs/contact-channel entity facts/schema; it cannot write Homepage/Static visible content, H1, page SEO metadata or page-local schema owned by EXE-027/028.
+- All five affected packages remain **BLOCKED** on their pre-existing factual/content/research gates; P-013 does not promote readiness.
+- Current inventory remains **58 EXEs / 17 READY_FOR_TASK / 41 BLOCKED**.
+- Production writes: **0**. Production implementation tasks issued: **0**.
