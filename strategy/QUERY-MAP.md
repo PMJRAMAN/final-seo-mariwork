@@ -1,6 +1,8 @@
 # Query / Intent Map — Round 1
 
-**Task:** A-018 · **Status:** CODEX_AUDITED · **Authority:** evidence and initial recommendations only
+This file is not an unresolved strategy decision. It is the working evidence map used to operationalize accepted DEC-122/123. Candidate targets remain non-authoritative until supported by joined Page+Query evidence or direct Search research.
+
+**Task:** A-018 · **Status:** RESEARCH WORKSPACE / INITIAL EVIDENCE — FINAL OWNERSHIP PENDING RESEARCH · **Authority:** DEC-122/123 + joined/direct query evidence
 **Framework:** v1.0 · **Date:** 2026-09-24
 
 ## Evidence contract
