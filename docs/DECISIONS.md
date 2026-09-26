@@ -3224,3 +3224,65 @@ The strategy decision must cover:
 - Naming must clearly communicate which product family/intent the volume applies to.
 - Use a natural human-facing H1 and a Search-oriented Title aligned to the volume landing-page role.
 - Final wording is decided later through keyword/search research.
+
+
+## DEC-117 — pa_volume Visible Landing-Content Standard
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Retained indexable pa_volume landing pages require a short, useful, distinct visible content block.
+- The block should explain the volume-specific role, what the archive contains and when that volume is relevant.
+- Do not add artificial long-form text merely for SEO.
+- Exact copy remains a later keyword/content task and follows DEC-130.
+
+## DEC-118 — Durable Blog Category Presentation / Content Standard
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Each durable indexable Blog Category acts as a topic hub.
+- Use deliberate Title/H1/Meta plus a short visible category-specific content block explaining purpose and scope.
+- Empty, temporary or noindex categories are excluded.
+- Exact copy remains a later content/keyword task and follows DEC-130.
+
+## DEC-119 — Content Overlap / Cannibalization Resolution Policy
+**Status:** Accepted  
+**Date:** 2026-09-26
+- Topic similarity alone is not cannibalization.
+- Academy owns video-first practical/demo intent.
+- Magazine owns text-first explanatory/reference/editorial intent.
+- If two durable pages still serve substantially the same intent/content, use evidence to differentiate, merge or redirect.
+- Do not infer Page→Query ownership without joined GSC/search evidence.
+
+## DEC-130 — Durable Indexable Archive/Hub Visible Content-Block Standard
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** STORE / PRODUCT CATEGORY / PA_VOLUME / ACADEMY / MAGAZINE / BLOG CATEGORY / FUTURE DURABLE ARCHIVES
+
+### Accepted target state
+Every durable indexable archive or hub that functions as a Search/user destination must include a short, unique and useful visible content block.
+
+The block should explain:
+- why the page exists;
+- what users will find there;
+- the page's specific topic, product-family or content-family role.
+
+This applies to:
+- Shop/archive surfaces;
+- durable Product Categories;
+- retained pa_volume landing pages;
+- Academy archive/hub;
+- Magazine archive/hub;
+- durable Blog Categories;
+- future equivalent durable indexable archive families unless separately exempted.
+
+### Content rules
+- SEO-aware but human-first.
+- Concise rather than long-form by default.
+- Unique to the archive/hub and its intent.
+- No filler, keyword stuffing or mechanically duplicated intros.
+- Exact copy should use later keyword/query research where relevant.
+- Exact placement and length may vary by template/family.
+
+### Exclusions
+- noindex system/utility archives;
+- empty or temporary archives;
+- non-search machine endpoints;
+- any archive explicitly retired or excluded by another accepted decision.
