@@ -3023,3 +3023,37 @@ Responsive image selection should match the rendered slot rather than serving on
 - Off-site mentions, publisher references, partnerships, media coverage and external entity evidence may support Mariwork only when genuinely verifiable.
 - Do not create or imply external relationships, endorsements or authority signals for SEO.
 - Revisit operational PR/entity work together with DEC-071 after internal architecture and target landing pages stabilize.
+
+
+## DEC-102 — Release Isolation, Change Annotation and Comparable Measurement-Baseline Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** MEASUREMENT / RELEASE ISOLATION / BASELINE
+
+### Accepted target state
+- Before a material SEO implementation, record implementation date/time, exact scope, affected URLs/entities and relevant change references.
+- Capture a comparable pre-change baseline where practical.
+- Avoid overlapping unrelated systemic changes on the same family/subsystem when that would make attribution ambiguous.
+- Record material confounders such as stock/price changes, campaigns, migrations and other releases.
+- Use comparable before/after windows where practical.
+
+## DEC-103 — Monitoring KEEP / ITERATE / ROLLBACK-CANDIDATE Interpretation
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** MONITORING / INTERPRETATION
+
+### Accepted target state
+- Monitoring outcomes may be classified as KEEP, ITERATE, ROLLBACK-CANDIDATE or INCONCLUSIVE.
+- Short-term movement alone does not trigger automatic rollback.
+- Interpretation must consider comparable windows, confounders, query/page mix and evidence strength.
+- Causal claims require evidence beyond simple temporal correlation.
+
+## DEC-104 — Maintenance Triggers for Updates, Google Changes, New URLs/404s and Freshness
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** ONGOING SEO MAINTENANCE / TRIAGE
+
+### Accepted target state
+- Recurring SEO maintenance includes triage for new URLs/entities, new 404/redirect issues, Rank Math/plugin/platform update regressions, relevant Google documentation changes, content freshness needs, price/schema consistency and new systemic findings.
+- A maintenance trigger enters review/triage first.
+- It does not independently authorize a Production change without the applicable decision and change-control path.
