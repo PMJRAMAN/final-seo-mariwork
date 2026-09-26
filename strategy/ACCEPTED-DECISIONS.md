@@ -1004,3 +1004,22 @@ Rules:
 - Do not add SEO/editorial copy just to optimize them.
 - Preserve authentication, account-state and privacy behavior.
 - Do not add canonicals solely because these noindex utility pages lack them.
+
+
+## DEC-075 — Fast Buy Utility / Landing-Page Policy
+**Status:** ACCEPTED
+- Fast Buy remains a utility/conversion surface, not an SEO landing page.
+- Keep it noindex and out of XML sitemaps.
+- Do not add SEO/editorial copy merely for optimization.
+
+## DEC-076 — Durable Product Category Metadata Strategy
+**Status:** ACCEPTED
+- Durable Product Categories receive deliberate category-specific metadata.
+- Do not reuse Shop metadata or force one identical template across all categories.
+- Final wording is decided later through keyword/search ownership.
+
+## DEC-077 — pa_volume Metadata Strategy
+**Status:** ACCEPTED
+- Durable 30ml/60ml/250ml landing pages receive their own Title/Meta/H1.
+- Keep their metadata distinct from Product Categories and filter parameter states.
+- Final wording is decided later through keyword/search ownership.
