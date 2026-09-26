@@ -977,3 +977,19 @@ Rules:
 - Stop and correct/rollback the Canary if regression appears.
 - Single-page changes use normal page QA rather than a separate Canary.
 - Five is a default, not an inflexible rule.
+
+
+## DEC-069 — Monitoring Windows and Core Success Metrics
+**Status:** ACCEPTED
+- Default monitoring checkpoints: 28 and 56 days.
+- Compare against appropriate comparable pre-change windows.
+- Core Search metrics: clicks, impressions, CTR and average position.
+- Add business conversion/revenue metrics only where tracking and attribution are reliable.
+- Document justified exceptions for seasonality, low volume or change class.
+
+## DEC-070 — Strategy Lock Scope for Implementation Waves
+**Status:** ACCEPTED
+- Create Strategy Locks per coherent implementation scope once its blocking decisions are accepted.
+- Do not wait for every sitewide decision before executing an independent locked scope.
+- Each locked scope may generate its own ordered Execution Backlog.
+- Explicitly record cross-scope dependencies and unresolved blockers.
