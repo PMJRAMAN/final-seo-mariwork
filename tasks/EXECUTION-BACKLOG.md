@@ -171,7 +171,9 @@ They require explicit reactivation before any execution package is created.
 5. Historical P-006 note: canonical Persian spelling cleanup was then still pending. **P-011 supersedes this blocker:** DEC-007–009/053 now carry canonical `ماری‌ورک`; EXE-013–015 remain BLOCKED only on their factual identity/canary gates.
 6. No package is promoted to `READY_FOR_TASK` during P-006.
 
-# P-007 validation result
+# P-007 validation result — HISTORICAL SNAPSHOT ONLY
+
+> These counters describe the P-007 snapshot and are **not the current execution inventory**. Current authoritative counts are derived from the live EXE rows and the latest reconciliation footer.
 
 Validated: 2026-09-26.
 
