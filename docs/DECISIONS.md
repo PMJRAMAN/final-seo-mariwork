@@ -2955,3 +2955,38 @@ Responsive image selection should match the rendered slot rather than serving on
 - Avoid generic serial naming, keyword stuffing and fabricated details.
 - Visible/contextual video naming and eligible structured-data metadata remain semantically consistent with the actual video.
 - Final wording may vary by family/topic rather than forcing one identical template.
+
+
+## DEC-096 — Video Thumbnail Quality, Uniqueness and Representative-Thumbnail Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** VIDEO THUMBNAILS / REPRESENTATION / QUALITY
+
+### Accepted target state
+- Video thumbnails must be factual, visually clear and representative of the actual video.
+- Do not use misleading thumbnails or one generic thumbnail across unrelated videos.
+- Thumbnail uniqueness is preferred where it improves identification, but do not manufacture arbitrary differences solely for SEO.
+- Preserve adequate display quality and truthful subject representation.
+
+## DEC-097 — Video Transcript / Summary / Key-Text Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** VIDEO TEXT SUPPORT / TRANSCRIPTS / SUMMARIES
+
+### Accepted target state
+- A full transcript is not mandatory for every video.
+- Add a transcript, summary, steps or key-text only when it materially improves user understanding, accessibility, context or Search usefulness.
+- Do not generate filler text merely to increase page length.
+- Supporting text must accurately reflect the actual video.
+
+## DEC-098 — Duplicate / Orphan / Weak-Context Video Lifecycle
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** VIDEO LIFECYCLE / DUPLICATION / ORPHANS / HOST CONTEXT
+
+### Accepted target state
+- A media file does not receive independent SEO treatment merely because it exists.
+- For duplicate, orphan or weak-context videos, first establish the primary useful version/host context.
+- Consolidate, remove, de-emphasize or relink redundant/weak instances as appropriate.
+- Do not create thin standalone SEO pages for media without a genuine user/Search role.
+- Cross-family linking remains governed by DEC-040–048.
