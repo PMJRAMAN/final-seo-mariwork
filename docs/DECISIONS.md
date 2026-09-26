@@ -2688,3 +2688,37 @@ Google requires Product structured-data images to represent the marked-up Produc
 
 ### Consequences
 - Account/authentication pages remain focused on user utility and privacy rather than Search acquisition.
+
+
+## DEC-075 — Fast Buy Utility / Landing-Page Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** FAST BUY / UTILITY / INDEXABILITY
+
+### Accepted target state
+- Fast Buy remains a user utility/conversion surface, not an independent SEO landing page.
+- Keep it out of XML sitemaps and noindex.
+- Do not add SEO/editorial copy merely to optimize it.
+- Preserve its purchase-flow purpose and functionality.
+
+## DEC-076 — Durable Product Category Metadata Strategy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** PRODUCT CATEGORY / TITLE / META / H1
+
+### Accepted target state
+- Each durable Product Category receives deliberate metadata appropriate to its own category/search role.
+- Do not reuse Shop metadata as the category strategy.
+- Do not force one identical metadata template across all Product Categories.
+- Final Title/Meta/H1 wording remains a later keyword/search-ownership task.
+
+## DEC-077 — pa_volume Metadata Strategy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** PA_VOLUME / TITLE / META / H1
+
+### Accepted target state
+- Approved durable `pa_volume` landing pages such as 30ml, 60ml and 250ml receive deliberate Title/Meta/H1 aligned to their specific volume intent.
+- Keep `pa_volume` metadata distinct from Product Category metadata.
+- Keep durable `pa_volume` landing pages distinct from non-indexable `filter_volume` parameter states.
+- Final wording remains subject to later keyword/search-ownership decisions.
