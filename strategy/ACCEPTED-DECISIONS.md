@@ -88,7 +88,7 @@
 
 Canonical visible Product title/H1 pattern:
 
-`رنگ پارچه [Color Name] ماری ورک کد [NNN]`
+`رنگ پارچه [Color Name] ماری‌ورک کد [NNN]`
 
 Rules:
 - Start with `رنگ پارچه`.
@@ -100,15 +100,9 @@ Rules:
 - Do not add 30/60/250 ml volume tokens to the parent Product title when those are variants of the same Product.
 - Visible-title normalization must not trigger Product URL/slug changes.
 - SEO `<title>` behavior is governed by DEC-011.
-- Final brand spelling follows DEC-053.
-- Persian half-space usage is a writing/brand-consistency standard, not a standalone SEO requirement.
-- Do not bulk-edit URLs/content solely to normalize half-space usage.
-
----
-
-## Deferred / paused decisions
-
-- `DEC-008` — Set / Bundle Product Naming Standard — **DEFERRED by owner on 2026-09-25; return later.**
+- Final brand spelling follows DEC-053: `ماری‌ورک`.
+- Normalize visible Product naming to the canonical spelling when touched under the approved rollout.
+- Do not change URLs/slugs solely for spelling normalization.
 
 
 ## DEC-009 — Medium / Additive Product Naming Standard
@@ -117,7 +111,7 @@ Rules:
 
 Canonical visible Product title/H1 pattern:
 
-`[Exact Product Name] ماری ورک کد [NNN]`
+`[Exact Product Name] ماری‌ورک کد [NNN]`
 
 Rules:
 - Use the exact factual Product identity.
@@ -145,10 +139,10 @@ For third-party or generic tools/accessories:
 
 For products genuinely branded/manufactured by Mariwork:
 
-`[Exact Product Name] ماری ورک کد [NNN]`
+`[Exact Product Name] ماری‌ورک کد [NNN]`
 
 Rules:
-- Do not append `ماری ورک` merely because the product is sold on mariwork.ir.
+- Do not append `ماری‌ورک` merely because the product is sold on mariwork.ir.
 - Include Mariwork only when the product is genuinely Mariwork-branded/manufactured.
 - Include a third-party brand only when it is genuinely part of the Product identity.
 - Include a code only when it is a real, stable identifier.
@@ -169,7 +163,7 @@ Rules:
 - Do not automatically append site-name boilerplate when Product identity is already sufficient.
 - Page-specific SEO title exceptions require concise factual clarity and must not be used for keyword expansion or artificial branding.
 - Third-party/generic Products must not receive Mariwork branding through the SEO-title template.
-- Global template implementation remains blocked until DEC-008 is resolved.
+- DEC-008 is accepted; global template rollout is no longer blocked by that decision and remains subject to normal canary/regression gates.
 - Rollout requires regression checks for uniqueness, descriptiveness and duplicate-brand removal.
 
 
