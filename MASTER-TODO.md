@@ -557,7 +557,8 @@ This program validates that the Decision Backlog is complete enough to govern Pr
 - [x] P-007 Confirm every READY_FOR_TASK execution package is unlocked only by ACCEPTED decisions\n  - Result (2026-09-26): 57/57 packages validated; 16 `READY_FOR_TASK`; 41 `BLOCKED`; 0 Production writes. See `tasks/EXECUTION-BACKLOG.md`.
 - [x] P-008 Build final execution TODO from all 57 P-007-validated packages; preserve gates/readiness; no Wave/priority assignment and no Codex Production task
   - Result (2026-09-26): `tasks/FINAL-EXECUTION-TODO.md`; 57/57 packages represented; 16 `READY_FOR_TASK`; 41 `BLOCKED`; 0 Production writes.
-- [ ] P-009 Prioritize and Wave-plan the final execution TODO without bypassing package gates
+- [x] P-009 Prioritize and Wave-plan the final execution TODO without bypassing package gates
+  - Result (2026-09-26): dependency-aware Waves 0–5 recorded in `tasks/FINAL-EXECUTION-TODO.md`; readiness unchanged at 16 `READY_FOR_TASK` / 41 `BLOCKED`; 0 Production writes; 0 Codex Production tasks.
 
 **Freeze invariant:** before the first broad Production implementation wave, every material current SEO/content/technical choice must either:
 - map to a Decision ID;
