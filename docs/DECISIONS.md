@@ -545,7 +545,7 @@ Default relationships:
 
 Rules:
 - Use one clear, descriptive primary H1 for every Course and Lesson.
-- Remove the repetitive default `- رنگ پارچه ماری ورک` suffix from Course/Lesson SEO titles.
+- Remove the historical non-canonical default `- رنگ پارچه ماری ورک` suffix from Course/Lesson SEO titles.
 - Include canonical `ماری‌ورک` only when it is naturally part of the actual educational subject or Course identity.
 - Do not automatically inject brand, product, or keyword terms into generic instructional lessons.
 - Preserve sequence numbers only when they represent a genuine multi-part instructional sequence.
