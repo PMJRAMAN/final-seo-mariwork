@@ -72,10 +72,10 @@ Only `READY_FOR_TASK` may become a Production Codex task.
 | EXE-020 | pa_volume 30/60/250 durable landing package | SL-002 | DEC-026,030,077,116,117,130 | B8,H | CONTENT + RANK_MATH + WOO | exact query research + preselection verification + approved exact copy; **sole pa_volume content-block write owner under DEC-130** | BLOCKED |
 | EXE-021 | ProductGroup/variant structured-data canary | SL-002 | DEC-035,039,068,081,082 | B0-010,B2/B4 | RANK_MATH FILTER + WOO | identifier/Offer field-source mapping | BLOCKED |
 | EXE-022 | Bundle/set schema + visible component discoverability canary — **sole Bundle component-render writer** | SL-002 | DEC-036,068,080,081,082 | B0-011,B3 | RANK_MATH + WOO/YITH + CUSTOM_CODE if required | raw/rendered/AJAX + YITH composition evidence; **EXE-022 exclusively owns any Bundle/set component-list rendering change in initial HTML/rendered DOM**; consume EXE-008 diagnosis where applicable | BLOCKED |
-| EXE-023 | Product commercial facts / identifiers consistency audit-to-fix | SL-002 | DEC-081,082,083,113 | B2–B6,O-002 | WOO | targeted field mapping + actual shipping/returns rules | BLOCKED |
+| EXE-023 | Product commercial facts / identifiers consistency audit-to-fix — **sole factual Woo commercial-field writer** | SL-002 | DEC-081,082,083,113 | B2–B6,O-002 | WOO | targeted field mapping + actual shipping/returns rules; **sole writer for factual Woo price/sale/currency/stock/availability fields and their authoritative mappings**; lifecycle packages may consume/request verified facts but must not independently rewrite those fields | BLOCKED |
 | EXE-024 | Product Tag controlled decommission | SL-002/SL-006 | DEC-027,063,067,109 | B8-001–007 | NGINX + WOO + RANK_MATH | URL-by-URL successor map + rollback; owns Product Tag assignments/term decommission + URL disposition/redirect work; **must not mutate XML sitemap membership — supply final Product Tag disposition to EXE-011 and verify removal there** | BLOCKED |
 | EXE-025 | Obsolete Product Categories 20/27 decommission | SL-002/SL-006 | DEC-025,063,067 | B7/B8 | NGINX + WOO + RANK_MATH | operational dependency check + mapping verification; owns category dependency/term decommission + URL consolidation/redirect work; **must not mutate XML sitemap membership — supply final category disposition to EXE-011 and verify removal there** | BLOCKED |
-| EXE-026 | Out-of-stock/discontinued lifecycle implementation rules | SL-002 | DEC-083,109 | B2–B6 | WOO + CONTENT | identify genuinely discontinued Products | BLOCKED |
+| EXE-026 | Out-of-stock/discontinued lifecycle disposition implementation | SL-002 | DEC-083,109 | B2–B6 | CONTENT + NGINX as applicable | identify genuinely discontinued Products; owns lifecycle disposition after verified classification (retain page / genuine-successor redirect / 404-410 / supporting content state); **must not directly write factual Woo price/sale/currency/stock/availability fields owned by EXE-023**; any required commercial-field correction is handed to EXE-023 | BLOCKED |
 | EXE-058 | Non-pa_volume Product-attribute archive inventory + decision dossier (**read-only**) | SL-002 | DEC-006 | B8-008–B8-010 | RESEARCH / RANK_MATH EVIDENCE | inventory all public/nonpublic Product attribute archives except pa_volume; record robots/sitemap/internal-link/current-use evidence and produce per-attribute decision dossier; **no indexability/redirect/canonical mutation until a later accepted per-family decision** | READY_FOR_TASK |
 
 # D. Homepage / brand / static / editorial / Academy packages
@@ -226,4 +226,16 @@ Reconciled after `P-012` identified three remaining duplicate write-owner pairs.
 - **Shared entity boundary:** EXE-029 is the sole owner of the canonical brand/entity registry and shared Organization/sameAs/contact-channel entity facts/schema; it cannot write Homepage/Static visible content, H1, page SEO metadata or page-local schema owned by EXE-027/028.
 - All five affected packages remain **BLOCKED** on their pre-existing factual/content/research gates; P-013 does not promote readiness.
 - Current inventory remains **58 EXEs / 17 READY_FOR_TASK / 41 BLOCKED**.
+- Production writes: **0**. Production implementation tasks issued: **0**.
+
+
+# P-015 reconciliation result
+
+Reconciled after P-014 identified three HIGH duplicate write-owner conflicts and one MEDIUM field-boundary ambiguity.
+
+- **XML sitemap membership:** EXE-011 is the sole sitemap membership writer. EXE-024/025/031 own family decommission/URL disposition and hand final family state to EXE-011.
+- **Bundle component rendering:** EXE-008 is evidence/diagnosis only for Bundle rendering; EXE-022 is the sole Bundle component-list render writer.
+- **Contextual body links:** EXE-042 owns link mapping/approval/QA and performs no page-body insertion. Source-family writers are Product→EXE-018, Product Category→EXE-019, Article→EXE-032, Guide/Course→EXE-033. Global/navigation/component links remain under EXE-041/043.
+- **Woo commercial facts vs lifecycle:** EXE-023 is the sole factual Woo price/sale/currency/stock/availability writer. EXE-026 owns lifecycle disposition and must hand any factual commercial-field correction to EXE-023.
+- No readiness state changed. Current inventory remains **58 EXEs / 17 READY_FOR_TASK / 41 BLOCKED**.
 - Production writes: **0**. Production implementation tasks issued: **0**.
