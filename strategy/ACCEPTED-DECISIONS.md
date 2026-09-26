@@ -1156,3 +1156,23 @@ Rules:
 - Use truthful, descriptive, subject-specific video titles/descriptions.
 - Avoid generic serial naming, stuffing and fabricated details.
 - Visible/contextual naming and eligible structured-data metadata must agree semantically.
+
+
+## DEC-096 — Video Thumbnail Policy
+**Status:** ACCEPTED
+- Thumbnails must be factual, clear and representative.
+- No misleading thumbnails or one generic thumbnail across unrelated videos.
+- Prefer uniqueness when it improves identification; do not create arbitrary SEO-only differences.
+
+## DEC-097 — Video Transcript / Summary / Key-Text Policy
+**Status:** ACCEPTED
+- Full transcripts are not mandatory for every video.
+- Add transcript/summary/steps/key-text only when materially useful.
+- No filler text; supporting text must accurately reflect the video.
+
+## DEC-098 — Duplicate / Orphan / Weak-Context Video Lifecycle
+**Status:** ACCEPTED
+- Media does not get independent SEO treatment merely because it exists.
+- Establish the primary useful host/version first.
+- Consolidate/remove/de-emphasize/relink redundant or weak instances as appropriate.
+- No thin standalone SEO pages for media without a real user/Search role.
