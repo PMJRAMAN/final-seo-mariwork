@@ -1023,3 +1023,16 @@ Rules:
 - Durable 30ml/60ml/250ml landing pages receive their own Title/Meta/H1.
 - Keep their metadata distinct from Product Categories and filter parameter states.
 - Final wording is decided later through keyword/search ownership.
+
+
+## DEC-079 — Sitewide Canonical and Duplicate-URL Architecture
+**Status:** ACCEPTED
+- One intended canonical URL per durable content/entity page.
+- Alternate/duplicate spaces must not compete as separate Search targets.
+- Use the family-specific approved mechanism rather than a blanket canonical/noindex/redirect rule.
+
+## DEC-080 — Critical JS/AJAX Content and Crawlable-Link Discoverability Policy
+**Status:** ACCEPTED WITH TARGETED EVIDENCE
+- Important SEO content and primary crawl/discovery links should not depend unnecessarily on JS/AJAX-only interaction when crawlable HTML is practical.
+- JS/AJAX remains allowed for UX/dynamic behavior.
+- Implementation changes require representative initial-HTML/rendered-DOM evidence first.
