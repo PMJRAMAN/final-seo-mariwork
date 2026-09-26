@@ -2722,3 +2722,27 @@ Google requires Product structured-data images to represent the marked-up Produc
 - Keep `pa_volume` metadata distinct from Product Category metadata.
 - Keep durable `pa_volume` landing pages distinct from non-indexable `filter_volume` parameter states.
 - Final wording remains subject to later keyword/search-ownership decisions.
+
+
+## DEC-079 — Sitewide Canonical and Duplicate-URL Architecture
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** CANONICAL / DUPLICATE URLS / SITEWIDE ARCHITECTURE
+
+### Accepted target state
+- Each durable content/entity page has one intended canonical URL.
+- Duplicate or alternate URL spaces must not compete as separate Search targets.
+- Use the approved family-specific mechanism—canonical, redirect, noindex or retirement—rather than one blanket rule.
+- Canonical targets must resolve to valid intended URLs.
+- Family-specific exceptions remain governed by their dedicated decisions.
+
+## DEC-080 — Critical JS/AJAX Content and Crawlable-Link Discoverability Policy
+**Status:** Accepted with targeted evidence required for implementation  
+**Date:** 2026-09-26  
+**Scope:** JAVASCRIPT / AJAX / INITIAL HTML / CRAWLABLE LINKS
+
+### Accepted target state
+- Important SEO content and primary crawl/discovery links should not depend unnecessarily on user interaction or JS/AJAX-only execution when a crawlable HTML representation is practical.
+- JS/AJAX remains allowed for UX and dynamic behavior.
+- Do not rewrite working dynamic components merely because they use JavaScript.
+- Exact implementation changes require representative initial-HTML and rendered-DOM evidence proving a discoverability issue.
