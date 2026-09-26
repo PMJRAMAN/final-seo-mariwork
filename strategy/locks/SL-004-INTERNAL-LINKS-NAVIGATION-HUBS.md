@@ -2,7 +2,8 @@
 
 **Status:** STRATEGY_LOCKED  
 **Locked:** 2026-09-26  
-**Baseline repository HEAD:** `486abc31d66910d8b0f7323b25954b79d49134e6`
+**Lock refresh:** 2026-09-26 after final Product-naming/DEC-008 consistency amendment  
+**Baseline repository HEAD:** `aa9116930ee5703b8b62e40dc55e97a32174ea6e`
 
 ## Accepted Decision IDs
 
