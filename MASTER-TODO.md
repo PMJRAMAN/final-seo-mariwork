@@ -568,7 +568,11 @@ This program validates that the Decision Backlog is complete enough to govern Pr
   - Result (2026-09-26): 129 Decisions; 58 EXEs; 17 READY / 41 BLOCKED; 0 accepted-Decision coverage gaps; 0 Backlog↔TODO semantic drift; 3 duplicate write-owner pairs remained; verdict `FAIL_STAGE_6_NOT_SAFE`. Recovered provenance record: `audits/strategy/P-012-POST-P011-INTEGRITY-REAUDIT.md`.
 - [x] P-013 Reconcile remaining P-012 execution ownership/provenance findings without Production writes
   - Result (2026-09-26): EXE-033/035 Academy DEC-130 ownership separated; EXE-027/028/029 Homepage/Static/shared-Organization ownership separated; P-010 and P-012 provenance paths restored on `main` as explicit recovered records; P-007 counters labelled historical. Current inventory unchanged at **58 EXEs / 17 READY / 41 BLOCKED**; 0 Production writes; 0 Production implementation tasks.
-- [ ] P-014 Independent post-P-013 integrity re-audit; must return `PASS` or `PASS_WITH_NON_BLOCKING_FINDINGS` before broad Stage-6 Production implementation task generation
+- [x] P-014 Independent post-P-013 integrity re-audit
+  - Result (2026-09-26): 129 Decisions; 58 EXEs; 17 READY / 41 BLOCKED; 0 accepted-Decision coverage gaps; 0 Backlog↔TODO semantic drift; 3 duplicate write-owner conflicts and 1 field-boundary ambiguity remained; verdict `FAIL_STAGE_6_NOT_SAFE`. See `audits/strategy/P-014-FINAL-POST-P013-INTEGRITY-GATE.md`.
+- [x] P-015 Reconcile P-014 sitemap / Bundle-render / contextual-link / Woo-field ownership without Production writes
+  - Result (2026-09-26): sitemap membership→EXE-011 sole writer; Bundle component rendering→EXE-022 sole writer with EXE-008 diagnosis-only for Bundle; EXE-042 mapping/QA-only with source-family body-link writers EXE-018/019/032/033; factual Woo price/sale/currency/stock/availability→EXE-023 sole writer while EXE-026 owns lifecycle disposition. Current inventory unchanged at **58 EXEs / 17 READY_FOR_TASK / 41 BLOCKED**; 0 Production writes; 0 Production implementation tasks.
+- [ ] P-016 Independent post-P-015 full integrity re-audit; must return `PASS` or `PASS_WITH_NON_BLOCKING_FINDINGS` before broad Stage-6 Production implementation task generation
 
 **Freeze invariant:** before the first broad Production implementation wave, every material current SEO/content/technical choice must either:
 - map to a Decision ID;
