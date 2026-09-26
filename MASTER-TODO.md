@@ -564,7 +564,11 @@ This program validates that the Decision Backlog is complete enough to govern Pr
   - Result (2026-09-26): `audits/strategy/P-010-FINAL-DECISION-TO-EXECUTION-INTEGRITY-AUDIT.md`; 129 real Decision rows through DEC-130 with DEC-126 unused; 57 EXEs at audit baseline; 0 accepted-Decision coverage gaps; verdict `FAIL_STAGE_6_NOT_SAFE` due to execution-boundary/readiness integrity findings.
 - [x] P-011 Reconcile P-010 findings in authoritative planning files without Production writes
   - Result (2026-09-26): malformed Decision rows/range authority fixed; stale EXE-013–015 spelling blocker removed; crawler, VideoObject and archive-content write ownership deduplicated; evidence-first boundaries added to EXE-005/007/009/011/054; EXE-046/057 gates hardened; EXE-058 added for non-pa_volume attribute discovery. Current inventory: **58 EXEs / 17 READY_FOR_TASK / 41 BLOCKED**; 0 Production writes; 0 Production implementation tasks.
-- [ ] P-012 Independent post-P-011 integrity re-audit; must return PASS or PASS_WITH_NON_BLOCKING_FINDINGS before broad Stage-6 implementation task generation
+- [x] P-012 Independent post-P-011 integrity re-audit
+  - Result (2026-09-26): 129 Decisions; 58 EXEs; 17 READY / 41 BLOCKED; 0 accepted-Decision coverage gaps; 0 Backlog↔TODO semantic drift; 3 duplicate write-owner pairs remained; verdict `FAIL_STAGE_6_NOT_SAFE`. Recovered provenance record: `audits/strategy/P-012-POST-P011-INTEGRITY-REAUDIT.md`.
+- [x] P-013 Reconcile remaining P-012 execution ownership/provenance findings without Production writes
+  - Result (2026-09-26): EXE-033/035 Academy DEC-130 ownership separated; EXE-027/028/029 Homepage/Static/shared-Organization ownership separated; P-010 and P-012 provenance paths restored on `main` as explicit recovered records; P-007 counters labelled historical. Current inventory unchanged at **58 EXEs / 17 READY / 41 BLOCKED**; 0 Production writes; 0 Production implementation tasks.
+- [ ] P-014 Independent post-P-013 integrity re-audit; must return `PASS` or `PASS_WITH_NON_BLOCKING_FINDINGS` before broad Stage-6 Production implementation task generation
 
 **Freeze invariant:** before the first broad Production implementation wave, every material current SEO/content/technical choice must either:
 - map to a Decision ID;
