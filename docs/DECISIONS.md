@@ -2764,3 +2764,38 @@ Google requires Product structured-data images to represent the marked-up Produc
 ### Consequences
 - Mariwork avoids an unnecessary host migration with no separate SEO objective.
 - Future canonical/redirect QA uses the existing HTTPS + www URL form as the normalization baseline.
+
+
+## DEC-081 — Product Identity Source of Truth for SKU / GTIN / MPN / Brand
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26  
+**Scope:** PRODUCT IDENTITY / SKU / GTIN / MPN / BRAND / FEED / SCHEMA
+
+### Accepted target state
+- Product identity fields used in schema, feed and Search output must come only from verified Product/WooCommerce source data.
+- Do not infer or fabricate SKU, GTIN, MPN, brand or other identifiers for SEO.
+- Use `Mariwork` as brand only for Products actually manufactured/branded by Mariwork.
+- Third-party Products retain their real brand/identity and must not be relabeled as Mariwork merely because they are sold on mariwork.ir.
+- Verify exact current field coverage and source mapping before ProductGroup/Offer/feed implementation.
+
+## DEC-082 — Product Commercial-Fact Source of Truth
+**Status:** Accepted with targeted evidence required  
+**Date:** 2026-09-26  
+**Scope:** PRICE / CURRENCY / SALE / AVAILABILITY / WOO / SCHEMA / FEED
+
+### Accepted target state
+- Price, sale price, currency and availability exposed in schema/feed derive from the same authoritative WooCommerce commercial state that drives the visible Product purchase experience.
+- Do not maintain independent manually curated SEO copies of these commercial facts.
+- Visible Product page, structured data and feed outputs must agree.
+- Verify exact hooks, ownership, discount logic and availability edge cases before implementation.
+
+## DEC-083 — Out-of-Stock Versus Discontinued Product Lifecycle
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** PRODUCT LIFECYCLE / STOCK / DISCONTINUED / INDEXABILITY
+
+### Accepted target state
+- Temporary Out of Stock and permanent Discontinued are separate Product states.
+- Temporarily out-of-stock Products normally retain their Product page and expose accurate unavailability rather than being removed solely because stock is zero.
+- Permanently discontinued Products require an evidence-based lifecycle decision: preserve, redirect to a genuine semantic successor, or return a proper 404/410 as appropriate.
+- Do not bulk-redirect discontinued Products to generic Shop or Category pages merely to avoid 404s.
