@@ -2799,3 +2799,41 @@ Google requires Product structured-data images to represent the marked-up Produc
 - Temporarily out-of-stock Products normally retain their Product page and expose accurate unavailability rather than being removed solely because stock is zero.
 - Permanently discontinued Products require an evidence-based lifecycle decision: preserve, redirect to a genuine semantic successor, or return a proper 404/410 as appropriate.
 - Do not bulk-redirect discontinued Products to generic Shop or Category pages merely to avoid 404s.
+
+
+## DEC-084 — Future Product URL/Slug Change and History-Preservation Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** PRODUCT URLS / SLUG HISTORY / REDIRECTS
+
+### Accepted target state
+- When a durable Product slug/URL changes, preserve the old URL as migration history.
+- Redirect the old URL with a permanent 301 through the Nginx redirect layer to the same Product's new canonical URL.
+- Update internal links, canonical output and sitemap references to the new URL.
+- Do not reuse an old Product slug for a different Product/entity.
+- Do not change Product slugs merely for cosmetic normalization.
+- Variant-preselection behavior remains governed separately.
+
+## DEC-085 — Editorial Author / Reviewer / Date / Source / Citation Provenance Policy
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** EDITORIAL PROVENANCE / AUTHORS / REVIEWERS / DATES / SOURCES
+
+### Accepted target state
+- Factual, technical, educational and historical content should use real publication/update dates and evidence-based sources where provenance is materially useful.
+- Use named authors/reviewers only when the real person and role are verified.
+- Never invent credentials, expertise, reviewer identities or source relationships.
+- The current Mariwork Organization author policy remains the default unless a specific content item has a genuine approved attribution requirement.
+
+## DEC-086 — FAQ Visible-Content Versus Structured-Data Boundary
+**Status:** Accepted  
+**Date:** 2026-09-26  
+**Scope:** FAQ / VISIBLE CONTENT / STRUCTURED DATA
+
+### Accepted target state
+- FAQ content exists only when genuinely useful to users.
+- FAQ questions and answers must be visibly available on the page.
+- Do not add artificial FAQs merely for SEO or schema.
+- FAQ structured data must not be treated as a guaranteed rich-result strategy.
+- Semantic correctness and visible-content consistency come first.
+- Do not publish hidden or fabricated FAQ content solely for markup.
